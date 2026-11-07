@@ -1,0 +1,41 @@
+== neuranox ==
+
+  [NeuralMemory] causality max|delta| = 1.732e+00 -> FAIL
+
+  [MAC] perturb pos   3: max|delta| on earlier positions = 7.019e-02
+  [MAC] perturb pos   7: max|delta| on earlier positions = 7.756e-02
+  [MAC] perturb pos   8: max|delta| on earlier positions = 0.000e+00
+  [MAC] perturb pos  20: max|delta| on earlier positions = 9.838e-02
+  [MAC] perturb pos  50: max|delta| on earlier positions = 2.235e-01
+  [MAC] causality: FAIL (future information leaks backwards)
+
+  [MAC] perturb pos 2, max|delta| at positions >= 120: 0.000e+00 -> NO long-range effect (memory not carrying state)
+
+  [MAG] perturb pos   3: max|delta| on earlier positions = 2.895e-01
+  [MAG] perturb pos   7: max|delta| on earlier positions = 9.977e-02
+  [MAG] perturb pos   8: max|delta| on earlier positions = 1.206e-01
+  [MAG] perturb pos  20: max|delta| on earlier positions = 3.304e-01
+  [MAG] perturb pos  50: max|delta| on earlier positions = 1.612e-01
+  [MAG] causality: FAIL (future information leaks backwards)
+
+  [MAG] perturb pos 2, max|delta| at positions >= 120: 0.000e+00 -> NO long-range effect (memory not carrying state)
+
+  [MAL] perturb pos   3: max|delta| on earlier positions = 4.026e-01
+  [MAL] perturb pos   7: max|delta| on earlier positions = 1.241e-01
+  [MAL] perturb pos   8: max|delta| on earlier positions = 2.799e-01
+  [MAL] perturb pos  20: max|delta| on earlier positions = 3.402e-01
+  [MAL] perturb pos  50: max|delta| on earlier positions = 4.321e-01
+  [MAL] causality: FAIL (future information leaks backwards)
+
+  [MAL] perturb pos 2, max|delta| at positions >= 120: 1.459e-01 -> memory carries information forward
+
+  [LMM] perturb pos   3: max|delta| on earlier positions = 2.938e-01
+  [LMM] perturb pos   7: max|delta| on earlier positions = 2.815e-01
+  [LMM] perturb pos   8: max|delta| on earlier positions = 1.469e-01
+  [LMM] perturb pos  20: max|delta| on earlier positions = 3.943e-01
+  [LMM] perturb pos  50: max|delta| on earlier positions = 1.604e-01
+  [LMM] causality: FAIL (future information leaks backwards)
+
+  [LMM] perturb pos 2, max|delta| at positions >= 120: 5.960e-08 -> NO long-range effect (memory not carrying state)
+
+  [scan] CUDA not available; skipped GPU scan check
