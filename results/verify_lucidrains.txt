@@ -1,0 +1,22 @@
+== lucidrains ==
+
+  [NeuralMemory] causality max|delta| = 0.000e+00 -> PASS
+
+  [MAC-default (memory residual + segmented attn)] perturb pos   3: max|delta| on earlier positions = 0.000e+00
+  [MAC-default (memory residual + segmented attn)] perturb pos  15: max|delta| on earlier positions = 0.000e+00
+  [MAC-default (memory residual + segmented attn)] perturb pos  16: max|delta| on earlier positions = 0.000e+00
+  [MAC-default (memory residual + segmented attn)] perturb pos  40: max|delta| on earlier positions = 0.000e+00
+  [MAC-default (memory residual + segmented attn)] perturb pos  70: max|delta| on earlier positions = 0.000e+00
+  [MAC-default (memory residual + segmented attn)] causality: PASS (causal)
+
+  [MAC-default (memory residual + segmented attn)] perturb pos 2, max|delta| at positions >= 120: 4.442e-02 -> memory carries information forward
+
+  [MAG-like (gate attn output, sliding window)] perturb pos   3: max|delta| on earlier positions = 0.000e+00
+  [MAG-like (gate attn output, sliding window)] perturb pos  15: max|delta| on earlier positions = 0.000e+00
+  [MAG-like (gate attn output, sliding window)] perturb pos  16: max|delta| on earlier positions = 0.000e+00
+  [MAG-like (gate attn output, sliding window)] perturb pos  40: max|delta| on earlier positions = 0.000e+00
+  [MAG-like (gate attn output, sliding window)] perturb pos  70: max|delta| on earlier positions = 0.000e+00
+  [MAG-like (gate attn output, sliding window)] causality: PASS (causal)
+
+  [MAG-like (gate attn output, sliding window)] perturb pos 2, max|delta| at positions >= 120: 1.957e-03 -> memory carries information forward
+
