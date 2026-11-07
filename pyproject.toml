@@ -71,11 +71,12 @@ dev-dependencies = []
 allow-direct-references = true
 
 [tool.hatch.build.targets.wheel]
-packages = ["titans_pytorch"]
+packages = ["titans_pytorch", "clmm"]
 
 [tool.hatch.build.targets.sdist]
 include = [
     "titans_pytorch",
+    "clmm",
     "README.md",
     "LICENSE",
     "pyproject.toml",
