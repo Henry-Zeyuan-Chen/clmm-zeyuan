@@ -32,6 +32,19 @@ This register lists every choice the paper leaves open or underspecified, in fou
 | A12 | Multi-head memory | Not mentioned | Supported, default 1 head / single head | 1 head; multi-head as a variant | |
 | A13 | Clipping or normalizing the surprise | Not mentioned | Optional soft clamp and spectral norm (on in `train_mac.py`) / none | Off | |
 
+### Open choices for the reference implementation
+
+The Phase 2 reference accepts projected queries, keys, values, and gate values for one stream. These are test configurations. The team can record its baseline choices in the table above after review.
+
+| Row | What the reference makes explicit | What the team needs to settle |
+| --- | --- | --- |
+| A1 | `gradient_refresh_interval` counts tokens between snapshots of the weights used to evaluate gradients. The fast weights used for retrieval can change inside that interval. | Choose the baseline refresh interval (`batch_size` in `NeuralMemory`). |
+| A2 | `update_chunk_size=1` applies momentum and forgetting per token. Larger chunks sum the per-token, learning-rate-weighted gradients at the snapshot, then apply momentum and forgetting once. Reads during an incomplete chunk use the most recent completed state. | Choose per-token or grouped updates for the baseline. Record both intervals and how grouped gate values are obtained. |
+| A4 | `before_write` reads the state before consuming the query token. `after_write` includes a write completed by that token. At the last token of a chunk these can return different values even when neither reads a future token. | Choose the boundary read for the baseline. Keep this choice separate from causal attention masking in MAC. |
+| A9 | The reference sums squared error over features (eq. 12). Switching to mean error scales the gradient by the inverse of the output dimension. | Choose sum or mean and the corresponding learning-rate scale before comparing results across configurations. |
+
+The reference uses the caller's initial model weights (A6) and already-transformed gates (A7). Upstream comparisons disable the residual/norm wrapper (A8) and surprise clipping (A13) to isolate the update equations. These settings do not settle the architecture or initialization for training.
+
 ## B: q, k, v, output and persistent memory
 
 §4.4 names these components but not their exact form, and §3.3 defines persistent memory only as tokens prepended to the input (eq. 19).
