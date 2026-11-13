@@ -132,3 +132,52 @@ def test_query_detects_mutating_reader():
 
     with pytest.raises(AssertionError, match="mutated"):
         read_frozen(MutatingReader(), (torch.tensor([0]),), {"weight": torch.zeros(1)})
+
+
+class DecayRecordingMemory(CountingMemory):
+    def __init__(self, fail_at=None):
+        super().__init__()
+        self.to_decay_factor = nn.Linear(1, 1)
+        with torch.no_grad():
+            self.to_decay_factor.weight.zero_()
+            self.to_decay_factor.bias.fill_(1)
+        self.decays = []
+        self.fail_at = fail_at
+
+    def store_memories(self, fact, **kwargs):
+        self.decays.append(self.to_decay_factor(fact[0]).sigmoid().clone())
+        if kwargs["seq_index"] == self.fail_at:
+            raise RuntimeError("injected write failure")
+        return super().store_memories(fact, **kwargs)
+
+
+@pytest.mark.parametrize("algorithm", ALGORITHMS)
+@pytest.mark.parametrize("scale", (0, 1))
+def test_replay_decay_control_preserves_observation_gates_and_slow_weights(algorithm, scale):
+    reader = CountingReader()
+    reader.memory = DecayRecordingMemory()
+    gate = reader.memory.to_decay_factor
+    snapshot = {name: tensor.clone() for name, tensor in gate.state_dict().items()}
+    keys, values = make_episodes(2, 31)
+    evaluate_batch(reader, keys, values, algorithm, replay_decay_scale=scale)
+    events = [("observation", i) for i in range(8)]
+    for block in range(1, 9):
+        events.extend(block_events(algorithm, block)[1])
+    assert len(reader.memory.decays) == len(events)
+    for (kind, _), actual in zip(events, reader.memory.decays):
+        expected = 0.0 if kind == "replay" and scale == 0 else torch.sigmoid(torch.tensor(1.)).item()
+        torch.testing.assert_close(actual, torch.full_like(actual, expected))
+    assert not gate._forward_hooks
+    assert all(torch.equal(snapshot[name], tensor) for name, tensor in gate.state_dict().items())
+
+
+def test_replay_decay_hook_is_removed_when_write_raises():
+    reader = CountingReader()
+    # First continuous replay follows the 8 prefill and 1 observation writes.
+    reader.memory = DecayRecordingMemory(fail_at=9)
+    keys, values = make_episodes(1, 32)
+    with pytest.raises(RuntimeError, match="injected write failure"):
+        evaluate_batch(reader, keys, values, "continuous", replay_decay_scale=0)
+    assert torch.all(reader.memory.decays[-1] == 0)
+    assert not reader.memory.to_decay_factor._forward_hooks
+    torch.testing.assert_close(reader.memory.to_decay_factor(torch.zeros(1, 1)), torch.ones(1, 1))

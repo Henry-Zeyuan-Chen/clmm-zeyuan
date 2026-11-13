@@ -95,8 +95,10 @@ def read_frozen(model, queries, fast):
 
 
 @torch.no_grad()
-def evaluate_batch(model, keys, values, algorithm):
+def evaluate_batch(model, keys, values, algorithm, *, replay_decay_scale=1):
     """Evaluate one paired stream batch, resetting fast weights for this arm."""
+    if replay_decay_scale not in (0, 1):
+        raise ValueError("replay_decay_scale must be 0 or 1")
     if keys.shape != values.shape or keys.shape[1] != PREFILL + BLOCKS * BLOCK_SIZE:
         raise ValueError("Expected matching [batch,72] key/value streams")
     fast = model.memory.init_weights(keys.shape[0])
@@ -109,9 +111,20 @@ def evaluate_batch(model, keys, values, algorithm):
         nonlocal fast, past, writes, replays, observations
         fact = torch.stack((model.key(keys[:, index:index + 1]),
                             model.value(values[:, index:index + 1])))
-        _, returned = model.memory.store_memories(
-            fact, weights=fast, past_state=past, seq_index=writes,
-            return_surprises=False)
+        hook = None
+        if kind == "replay" and replay_decay_scale == 0:
+            # to_decay_factor emits logits; sigmoid(-inf) = 0 disables only
+            # this replay write's multiplicative forgetting. Slow weights and
+            # observation-write gates remain untouched.
+            hook = model.memory.to_decay_factor.register_forward_hook(
+                lambda _module, _inputs, output: torch.full_like(output, -torch.inf))
+        try:
+            _, returned = model.memory.store_memories(
+                fact, weights=fast, past_state=past, seq_index=writes,
+                return_surprises=False)
+        finally:
+            if hook is not None:
+                hook.remove()
         past = returned.states
         fast = past[0]
         writes += 1
@@ -284,7 +297,8 @@ def run(args):
                 for algorithm in ALGORITHMS:
                     synchronize(device)
                     arm_start = time.perf_counter()
-                    rows = evaluate_batch(model, k, v, algorithm)
+                    rows = evaluate_batch(model, k, v, algorithm,
+                                          replay_decay_scale=args.replay_decay_scale)
                     synchronize(device)
                     elapsed_by_arm[algorithm] += time.perf_counter() - arm_start
                     for row in rows:
@@ -350,6 +364,9 @@ def run(args):
         evaluator_holds_full_stream=True,
         model_reads="Query key embedding and fast memory weights only; no local attention, bank or FIFO access",
         replay_selection="All previous 8 observations, chronological order, once per block",
+        replay_decay_scale=args.replay_decay_scale,
+        replay_decay_intervention=("standard learned decay on all writes" if args.replay_decay_scale == 1
+                                  else "replay writes only: decay logits forced to -inf, sigmoid decay=0; observation decay unchanged"),
         no_checkpoint_training=True, checkpoints=checkpoint_reports,
         process_peak_rss_bytes=process_peak_rss_bytes(),
         elapsed_seconds_including_setup_io=time.perf_counter() - start,
@@ -376,6 +393,8 @@ def parse_args():
     parser.add_argument("--batch-size", type=int, default=128)
     parser.add_argument("--device", default="cpu")
     parser.add_argument("--threads", type=int, default=1)
+    parser.add_argument("--replay-decay-scale", type=int, choices=(0, 1), default=1,
+                        help="1: standard decay; 0: disable forgetting on replay writes only")
     return parser.parse_args()
 
 
