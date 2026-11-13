@@ -532,7 +532,7 @@ def run(args):
                   "Latest-observed mode: schedules retain identical replay keys/order/counts, but available labels may differ; replay examples are not matched."),
                  "Block1 snapshot includes both old and new target facts; later snapshots contain neither target.",
                  "Delays count future observations, not replay updates: revised19/35/67, stable22/38/70.",
-                 "Longer streams and repeated keys extend beyond the original short unique-key pilot training distribution.",
+                 "Probe horizons and update schedules may differ from training; consult each checkpoint's training metadata.",
                  "Identical replay keys do not imply identical gradients; latest-observed labels may differ across schedules.",
                  "Last target replay occurs at different memory-update ages in the two replay schedules.",
                  "Whole-process peak RSS includes imports, evaluator data and output records; not model-only storage."])
