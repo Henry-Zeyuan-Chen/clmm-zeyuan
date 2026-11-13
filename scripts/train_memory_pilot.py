@@ -10,6 +10,7 @@ from datetime import datetime, timezone
 import hashlib
 import importlib.metadata
 import json
+import math
 from pathlib import Path
 import platform
 import shutil
@@ -134,7 +135,8 @@ def run(args):
         torch.backends.cuda.matmul.allow_tf32 = False
         torch.cuda.reset_peak_memory_stats(device)
 
-    config = {"dim": args.dim, "depth": args.depth, "expansion_factor": args.expansion_factor}
+    config = {"dim": args.dim, "depth": args.depth,
+              "expansion_factor": args.expansion_factor, "max_inner_lr": args.max_inner_lr}
     model = Reader(**config).to(device)
     optimizer = torch.optim.AdamW(model.parameters(), lr=args.lr, weight_decay=args.weight_decay)
     generator = torch.Generator().manual_seed(args.train_seed)
@@ -153,6 +155,7 @@ def run(args):
         "protocol": "Independent uniform keys and values with replacement. Uniform distinct observed query key. Latest matching value is the target. Each episode resets fast state.",
         "inner_update": {"loss": "mean squared error over features", "heads": 1,
                          "write_chunk": 1, "gradient_refresh": 1, "momentum": False,
+                         "max_inner_lr": args.max_inner_lr,
                          "step_and_decay": "learned", "memory_residual_wrapper": False},
         "registered_parameters": sum(parameter.numel() for parameter in model.parameters()),
         "fast_state_parameters_per_episode": sum(parameter.numel() for parameter in model.memory.memory_model_parameters),
@@ -236,6 +239,8 @@ def parse_args():
     parser.add_argument("--batch-size", type=int, default=128)
     parser.add_argument("--episode-length", type=int, default=16)
     parser.add_argument("--lr", type=float, default=0.003)
+    parser.add_argument("--max-inner-lr", type=float, default=1.0,
+                        help="Upper bound of the learned sigmoid-scaled inner write step")
     parser.add_argument("--weight-decay", type=float, default=0.01)
     parser.add_argument("--clip", type=float, default=1.0)
     parser.add_argument("--init-seed", type=int, default=41101)
@@ -252,6 +257,8 @@ def parse_args():
                 args.max_seconds, args.threads, args.log_every)
     if min(positive) <= 0 or args.weight_decay < 0:
         parser.error("Dimensions, budgets, learning rate and clip must be positive; weight decay must be nonnegative")
+    if not math.isfinite(args.max_inner_lr) or args.max_inner_lr <= 0:
+        parser.error("--max-inner-lr must be finite and positive")
     if args.batch_size < 2 or args.eval_episodes % args.batch_size == 1:
         parser.error("Held-out batches need at least two episodes for the rolled-memory control")
     return args
