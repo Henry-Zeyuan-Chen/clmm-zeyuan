@@ -1,7 +1,9 @@
 """Frozen-reader replay timing diagnostic; no training or checkpoint modification.
 
-Both replay arms consume the identical ordered snapshot once per block.  The
-snapshot is the preceding eight *observations*, never previous replay writes.
+Both replay arms consume the identical ordered snapshot keys once per block.
+Stored values also match by default; the optional latest-observed correction
+may supply different values because observations arrive at different times.
+The snapshot is the preceding eight *observations*, never previous replay writes.
 Only memory weights are available to the reader at the evaluated boundaries.
 """
 
@@ -121,13 +123,32 @@ def select_recent(keys, values, observations, count=4):
                  for data in (selected_keys, selected_values, selected_indices))
 
 
+def latest_available_sources(keys, bank, observations, replay_index):
+    """Resolve a bank key only within the bank and current arrivals (<=16 pairs)."""
+    bank = tuple(bank)
+    if len(bank) != BLOCK_SIZE or bank != tuple(range(bank[0], bank[0] + BLOCK_SIZE)):
+        raise ValueError("Expected one chronological eight-observation bank")
+    start = bank[-1] + 1
+    if replay_index not in bank or not start <= observations <= start + BLOCK_SIZE:
+        raise ValueError("Replay key or arrived-observation boundary is outside the block")
+    available = bank + tuple(range(start, observations))
+    assert len(available) <= 2 * BLOCK_SIZE
+    indices = keys.new_tensor(available)
+    matches = keys[:, list(available)] == keys[:, replay_index:replay_index + 1]
+    # The original bank entry guarantees at least one match for every episode.
+    return torch.where(matches, indices[None, :], -1).amax(dim=1)
+
+
 @torch.no_grad()
-def evaluate_batch(model, keys, values, algorithm, *, replay_decay_scale=1, recent_queries=0):
+def evaluate_batch(model, keys, values, algorithm, *, replay_decay_scale=1, recent_queries=0,
+                   replay_value_source="stored", replay_diagnostics=None):
     """Evaluate one paired stream batch, resetting fast weights for this arm."""
     if replay_decay_scale not in (0, 1):
         raise ValueError("replay_decay_scale must be 0 or 1")
     if recent_queries not in (0, 4):
         raise ValueError("recent_queries must be 0 or 4")
+    if replay_value_source not in ("stored", "latest-observed"):
+        raise ValueError("Unknown replay value source")
     if keys.shape != values.shape or keys.shape[1] != PREFILL + BLOCKS * BLOCK_SIZE:
         raise ValueError("Expected matching [batch,72] key/value streams")
     fast = model.memory.init_weights(keys.shape[0])
@@ -140,10 +161,12 @@ def evaluate_batch(model, keys, values, algorithm, *, replay_decay_scale=1, rece
         last_key_source = torch.full_like(last_key_write, -1)
     rows = []
 
-    def write(index, kind):
+    def write(index, kind, value_indices=None):
         nonlocal fast, past, writes, replays, observations
+        written_values = (values[:, index:index + 1] if value_indices is None
+                          else values.gather(1, value_indices[:, None]))
         fact = torch.stack((model.key(keys[:, index:index + 1]),
-                            model.value(values[:, index:index + 1])))
+                            model.value(written_values)))
         hook = None
         if kind == "replay" and replay_decay_scale == 0:
             # to_decay_factor emits logits; sigmoid(-inf) = 0 disables only
@@ -165,7 +188,10 @@ def evaluate_batch(model, keys, values, algorithm, *, replay_decay_scale=1, rece
         observations += kind == "observation"
         if recent_queries:
             last_key_write.scatter_(1, keys[:, index:index + 1], writes - 1)
-            last_key_source.scatter_(1, keys[:, index:index + 1], index)
+            if value_indices is None:
+                last_key_source.scatter_(1, keys[:, index:index + 1], index)
+            else:
+                last_key_source.scatter_(1, keys[:, index:index + 1], value_indices[:, None])
         if index in (0, 4):
             last_target_write["revised"] = writes - 1
         elif index == 1:
@@ -180,10 +206,34 @@ def evaluate_batch(model, keys, values, algorithm, *, replay_decay_scale=1, rece
         pending = [i for kind, i in events if kind == "replay"]
         replayed = []
         for kind, index in events:
-            write(index, kind)
+            value_indices = None
+            if kind == "replay" and (replay_value_source == "latest-observed" or replay_diagnostics is not None):
+                latest_sources = latest_available_sources(keys, bank, observations, index)
+                if replay_value_source == "latest-observed":
+                    value_indices = latest_sources
+            write(index, kind, value_indices)
             if kind == "replay":
                 assert pending.pop(0) == index
                 replayed.append(index)
+                if replay_diagnostics is not None:
+                    actual_sources = (torch.full_like(latest_sources, index)
+                                      if value_indices is None else value_indices)
+                    latest_values = values.gather(1, latest_sources[:, None])[:, 0]
+                    actual_values = values.gather(1, actual_sources[:, None])[:, 0]
+                    diagnostics = torch.stack((keys[:, index], values[:, index], latest_values,
+                                               actual_values, latest_sources, actual_sources), dim=1).tolist()
+                    for episode, (key, stored, latest, used, latest_source, used_source) in enumerate(diagnostics):
+                        replay_diagnostics.append(dict(
+                            episode=episode, algorithm=algorithm, block=block,
+                            replay_rank=len(replayed) - 1, memory_write_index=writes - 1,
+                            observed_count=observations, key=key, stored_observation_index=index,
+                            stored_value=stored, latest_available_observation_index=latest_source,
+                            latest_available_value=latest, used_observation_index=used_source,
+                            used_value=used, stored_value_stale=int(stored != latest),
+                            value_substituted=int(stored != used), source_substituted=int(index != used_source),
+                            replay_value_source=replay_value_source,
+                            bank_first_observation_index=bank[0], bank_last_observation_index=bank[-1],
+                            available_pair_count=BLOCK_SIZE + observations - bank[-1] - 1))
         assert replayed == ([] if algorithm == "online" else list(bank))
         assert observations == PREFILL + block * BLOCK_SIZE
         assert replays == (0 if algorithm == "online" else block * BLOCK_SIZE)
@@ -327,7 +377,7 @@ def run(args):
                     repo / "titans_pytorch" / "memory_models.py"]
     sources = {str(path): sha256(path) for path in source_paths}
     out.mkdir(parents=True, exist_ok=True)
-    for name in ("predictions.csv", "recent_predictions.csv", "episodes.csv", "summary.csv", "metadata.json"):
+    for name in ("predictions.csv", "recent_predictions.csv", "replay_values.csv", "episodes.csv", "summary.csv", "metadata.json"):
         if (out / name).exists():
             raise FileExistsError(f"Refusing to overwrite {out / name}")
     with (out / "episodes.csv").open("w", newline="", encoding="utf8") as handle:
@@ -340,6 +390,8 @@ def run(args):
     with (out / "predictions.csv").open("w", newline="", encoding="utf8") as handle, ExitStack() as stack:
         writer = None
         recent_writer = None
+        replay_writer = None
+        replay_handle = stack.enter_context((out / "replay_values.csv").open("w", newline="", encoding="utf8"))
         recent_handle = (stack.enter_context((out / "recent_predictions.csv").open(
             "w", newline="", encoding="utf8")) if args.recent_queries else None)
         for checkpoint_index, path in enumerate(args.checkpoints):
@@ -367,9 +419,12 @@ def run(args):
                 for algorithm in ALGORITHMS:
                     synchronize(device)
                     arm_start = time.perf_counter()
+                    replay_diagnostics = []
                     rows = evaluate_batch(model, k, v, algorithm,
                                           replay_decay_scale=args.replay_decay_scale,
-                                          recent_queries=args.recent_queries)
+                                          recent_queries=args.recent_queries,
+                                          replay_value_source=args.replay_value_source,
+                                          replay_diagnostics=replay_diagnostics)
                     synchronize(device)
                     elapsed_by_arm[algorithm] += time.perf_counter() - arm_start
                     for row in rows:
@@ -392,7 +447,18 @@ def run(args):
                         count["n"] += 1
                         count["correct"] += row["correct"]
                         count["stale_old"] += row["stale_old"] if row["condition"] == "revised" else 0
+                    assert len(replay_diagnostics) == (0 if algorithm == "online" else k.shape[0] * BLOCKS * BLOCK_SIZE)
+                    for row in replay_diagnostics:
+                        row["episode"] += offset
+                        row.update(checkpoint_index=checkpoint_index, checkpoint_sha256=checkpoint_hash,
+                                   init_seed=checkpoint.get("init_seed", ""),
+                                   train_seed=checkpoint.get("train_seed", ""), eval_seed=args.seed)
+                        if replay_writer is None:
+                            replay_writer = csv.DictWriter(replay_handle, fieldnames=list(row))
+                            replay_writer.writeheader()
+                        replay_writer.writerow(row)
                 handle.flush()
+                replay_handle.flush()
                 if recent_handle is not None:
                     recent_handle.flush()
             synchronize(device)
@@ -443,6 +509,13 @@ def run(args):
         evaluator_holds_full_stream=True,
         model_reads="Query key embedding and fast memory weights only; no local attention, bank or FIFO access",
         replay_selection="All previous 8 observations, chronological order, once per block",
+        replay_value_source=args.replay_value_source,
+        replay_value_resolution=("Original immutable bank value; latest-available candidates logged only"
+                                 if args.replay_value_source == "stored" else
+                                 "Latest observed occurrence among immutable bank plus current-block observations already arrived; at most 16 pairs"),
+        replay_values_guaranteed_matched_between_schedules=args.replay_value_source == "stored",
+        replay_value_diagnostics="replay_values.csv",
+        latest_observed_intervention_purpose="Diagnostic correction of outdated replay labels; not a proposed final sleep algorithm",
         replay_decay_scale=args.replay_decay_scale,
         replay_decay_intervention=("standard learned decay on all writes" if args.replay_decay_scale == 1
                                   else "replay writes only: decay logits forced to -inf, sigmoid decay=0; observation decay unchanged"),
@@ -454,11 +527,13 @@ def run(args):
         process_peak_rss_bytes=process_peak_rss_bytes(),
         elapsed_seconds_including_setup_io=time.perf_counter() - start,
         caveats=["Online has fewer memory updates; replay-vs-online is not compute matched.",
-                 "Continuous vs periodic differ only in interleaving at evaluated block boundaries.",
+                 ("Stored mode: continuous vs periodic differ only in interleaving at evaluated block boundaries."
+                  if args.replay_value_source == "stored" else
+                  "Latest-observed mode: schedules retain identical replay keys/order/counts, but available labels may differ; replay examples are not matched."),
                  "Block1 snapshot includes both old and new target facts; later snapshots contain neither target.",
                  "Delays count future observations, not replay updates: revised19/35/67, stable22/38/70.",
                  "Longer streams and repeated keys extend beyond the original short unique-key pilot training distribution.",
-                 "Same ordered replay inputs do not imply identical gradients or decay effects.",
+                 "Identical replay keys do not imply identical gradients; latest-observed labels may differ across schedules.",
                  "Last target replay occurs at different memory-update ages in the two replay schedules.",
                  "Whole-process peak RSS includes imports, evaluator data and output records; not model-only storage."])
     (out / "metadata.json").write_text(json.dumps(metadata, indent=2) + "\n", encoding="utf8")
@@ -480,6 +555,8 @@ def parse_args():
                         help="1: standard decay; 0: disable forgetting on replay writes only")
     parser.add_argument("--recent-queries", type=int, choices=(0, 4), default=0,
                         help="4: also query four most recent distinct non-target keys; 0: disabled")
+    parser.add_argument("--replay-value-source", choices=("stored", "latest-observed"), default="stored",
+                        help="Replay stored labels, or resolve each key from bank plus current arrivals only")
     return parser.parse_args()
 
 

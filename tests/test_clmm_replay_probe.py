@@ -8,7 +8,7 @@ from torch import nn
 
 from scripts.replay_probe import (
     ALGORITHMS, EVAL_BLOCKS, assert_evicted, block_events, evaluate_batch,
-    make_episodes, read_frozen, select_recent,
+    make_episodes, read_frozen, select_recent, latest_available_sources,
 )
 
 
@@ -229,3 +229,76 @@ def test_recent_readout_preserves_target_rows_and_audits_latest_write(algorithm,
         assert row["target_absent_from_bank"] == (key not in keys[episode, list(bank)].tolist())
         assert row["target_absent_from_fifo"] == (key not in keys[episode, end - 8:end].tolist())
     assert len(reader.memory.calls) == len(baseline_reader.memory.calls)
+
+
+def test_replay_label_resolution_respects_causal_arrivals_and_bank_capacity():
+    # The bank already contains a target revision at4. Key2 is revised at12,
+    # which continuous rank2 has not observed yet but periodic rank2 has.
+    keys = torch.tensor([[0, 1, 2, 3, 0, 4, 5, 6, 7, 3, 8, 9, 2, 4, 5, 6]])
+    values = torch.tensor([[0, 1, 2, 3, 4, 5, 6, 7, 1, 2, 3, 4, 7, 6, 5, 4]])
+    bank = tuple(range(8))
+    assert latest_available_sources(keys, bank, observations=11, replay_index=2).tolist() == [2]
+    assert latest_available_sources(keys, bank, observations=16, replay_index=2).tolist() == [12]
+    source = latest_available_sources(keys, bank, observations=9, replay_index=0)
+    assert source.tolist() == [4] and values.gather(1, source[:, None]).item() == 4
+    changed = keys.clone()
+    changed[:, 11:] = 2  # Still unseen when only 11 observations have arrived.
+    assert latest_available_sources(changed, bank, observations=11, replay_index=2).tolist() == [2]
+    with pytest.raises(ValueError, match="boundary"):
+        latest_available_sources(keys, bank, observations=17, replay_index=2)
+    with pytest.raises(ValueError, match="eight-observation"):
+        latest_available_sources(keys, tuple(range(9)), observations=16, replay_index=2)
+
+
+@pytest.mark.parametrize("algorithm", ALGORITHMS)
+@pytest.mark.parametrize("mode", ("stored", "latest-observed"))
+def test_replay_value_intervention_preserves_keys_counts_and_records_actual_sources(algorithm, mode):
+    keys, values = make_episodes(3, 101)
+    reader = CountingReader()
+    diagnostics = []
+    rows = evaluate_batch(reader, keys, values, algorithm, recent_queries=4,
+                          replay_value_source=mode, replay_diagnostics=diagnostics)
+    assert len(reader.memory.calls) == (72 if algorithm == "online" else 136)
+    assert len(diagnostics) == (0 if algorithm == "online" else 3 * 64)
+    recorded = {(row["episode"], row["memory_write_index"]): row for row in diagnostics}
+    events = [("observation", i, ()) for i in range(8)]
+    for block in range(1, 9):
+        bank, block_schedule = block_events(algorithm, block)
+        arrivals = []
+        for kind, source in block_schedule:
+            if kind == "observation":
+                arrivals.append(source)
+            events.append((kind, source, tuple(bank) + tuple(arrivals)))
+    actual_sources = []
+    for write_index, ((kind, source, available), (written_keys, written_values)) in enumerate(
+            zip(events, reader.memory.calls)):
+        assert torch.equal(written_keys, keys[:, source].float())
+        chosen = []
+        for episode in range(len(keys)):
+            key = int(keys[episode, source])
+            latest = max(i for i in available if keys[episode, i] == key) if kind == "replay" else source
+            expected_source = latest if kind == "replay" and mode == "latest-observed" else source
+            chosen.append(expected_source)
+            assert written_values[episode] == values[episode, expected_source]
+            if kind == "replay":
+                row = recorded[episode, write_index]
+                assert 8 <= row["available_pair_count"] == len(available) <= 16
+                assert row["latest_available_observation_index"] == latest < row["observed_count"]
+                assert row["used_observation_index"] == expected_source < row["observed_count"]
+                assert row["used_value"] == values[episode, expected_source]
+                assert row["stored_value"] == values[episode, source]
+                assert row["stored_value_stale"] == int(values[episode, source] != values[episode, latest])
+                assert row["value_substituted"] == int(values[episode, source] != values[episode, expected_source])
+        actual_sources.append(chosen)
+    # Recent-probe audit must follow the value source actually used, not the
+    # original queue entry when that entry received a corrected value.
+    for row in rows:
+        if row["condition"] != "recent":
+            continue
+        episode, write_index = row["episode"], row["last_target_memory_write_index"]
+        source = actual_sources[write_index][episode]
+        assert row["last_memory_write_source_observation_index"] == source
+        assert row["last_memory_write_value"] == values[episode, source]
+    if mode == "stored":
+        baseline = evaluate_batch(CountingReader(), keys, values, algorithm, recent_queries=4)
+        assert rows == baseline
