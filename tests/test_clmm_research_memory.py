@@ -1,6 +1,8 @@
 """Vocabulary and checkpoint regressions for the standalone memory pilot."""
 
 from pathlib import Path
+import csv
+import json
 import sys
 
 import pytest
@@ -12,7 +14,7 @@ from torch.nn import functional as F
 # These files also serve as directly executable scripts.
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 from research_memory import Reader, mean_squared_memory_loss
-from train_memory_pilot import make_episodes, parse_args
+from train_memory_pilot import episode_length_for_step, make_episodes, parse_args, parse_curriculum, run
 from titans_pytorch import NeuralMemory
 
 
@@ -107,3 +109,47 @@ def test_empty_vocabulary_is_rejected(invalid):
         Reader(dim=8, **invalid)
     with pytest.raises(ValueError, match="Vocabulary sizes"):
         make_episodes(torch.Generator(), 2, 3, **invalid)
+
+
+def test_curriculum_boundaries_and_unchanged_default():
+    schedule = parse_curriculum("16:100,64:100,256:200", 400, 256)
+    assert [episode_length_for_step(schedule, step) for step in (1, 100, 101, 200, 201, 400)] == [16, 16, 64, 64, 256, 256]
+    default = parse_curriculum("", 4, 16)
+    assert [episode_length_for_step(default, step) for step in range(1, 5)] == [16] * 4
+    with pytest.raises(ValueError):
+        episode_length_for_step(schedule, 401)
+
+
+@pytest.mark.parametrize("specification", ["16:0,64:400", "0:400", "16:-1,64:401",
+                                           "16:100,64:100", "16x400", "16:400,"])
+def test_invalid_curriculum_is_rejected(specification):
+    with pytest.raises(ValueError):
+        parse_curriculum(specification, 400, 256)
+
+
+def test_curriculum_logging_and_fixed_heldout_length(tmp_path, monkeypatch):
+    destination = tmp_path / "curriculum"
+    monkeypatch.setattr(sys, "argv", [
+        "train_memory_pilot.py", "--out", str(destination), "--steps", "3",
+        "--batch-size", "2", "--dim", "4", "--depth", "1",
+        "--nkeys", "8", "--nvals", "3", "--episode-length", "5",
+        "--curriculum", "2:1,4:2", "--eval-episodes", "4", "--max-inner-lr", "0.01",
+    ])
+    # Other tests may have initialized the inter-op pool in this process.
+    monkeypatch.setattr(torch, "set_num_interop_threads", lambda _: None)
+    run(parse_args())
+    with (destination / "training.csv").open(newline="") as handle:
+        trace = list(csv.DictReader(handle))
+    assert [int(row["episode_length"]) for row in trace] == [2, 4, 4]
+    assert [int(row["observation_writes_seen"]) for row in trace] == [4, 12, 20]
+    metadata = json.loads((destination / "metadata.json").read_text())
+    checkpoint = torch.load(destination / "checkpoint.pt", weights_only=True)
+    assert metadata["status"] == "succeeded"
+    assert metadata["training_schedule"] == checkpoint["training_schedule"] == [
+        {"episode_length": 2, "steps": 1}, {"episode_length": 4, "steps": 2}]
+    assert metadata["training_observation_writes_planned"] == metadata["training_observation_writes_completed"] == 20
+    assert checkpoint["observation_writes_seen"] == 20
+    with (destination / "heldout.csv").open(newline="") as handle:
+        heldout = list(csv.DictReader(handle))
+    assert len(heldout) == 4
+    assert all(len(json.loads(row["keys"])) == 5 for row in heldout)

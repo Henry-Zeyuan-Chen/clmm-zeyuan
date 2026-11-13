@@ -24,6 +24,37 @@ from torch.nn import functional as F
 from research_memory import NKEYS, NVALS, REPOSITORY, Reader
 
 
+def parse_curriculum(specification, steps, default_length):
+    """Resolve length:step-count stages without changing the held-out length."""
+    if steps < 1 or default_length < 1:
+        raise ValueError("Training steps and episode length must be positive")
+    if not specification.strip():
+        return [{"episode_length": default_length, "steps": steps}]
+    schedule = []
+    try:
+        for stage in specification.split(","):
+            length, count = map(int, stage.split(":"))
+            schedule.append({"episode_length": length, "steps": count})
+    except ValueError as error:
+        raise ValueError("Curriculum must contain comma-separated length:steps stages") from error
+    if any(stage["episode_length"] < 1 or stage["steps"] < 1 for stage in schedule):
+        raise ValueError("Curriculum lengths and stage steps must be positive")
+    if sum(stage["steps"] for stage in schedule) != steps:
+        raise ValueError("Curriculum stage steps must sum to --steps")
+    return schedule
+
+
+def episode_length_for_step(schedule, step):
+    if step < 1:
+        raise ValueError("Training step must be positive")
+    boundary = 0
+    for stage in schedule:
+        boundary += stage["steps"]
+        if step <= boundary:
+            return stage["episode_length"]
+    raise ValueError("Training step exceeds curriculum length")
+
+
 def make_episodes(generator, batch_size, writes, nkeys=NKEYS, nvals=NVALS):
     """Sample repeated keys, then a uniform distinct observed key's latest value."""
     if nkeys < 1 or nvals < 1:
@@ -120,6 +151,7 @@ def evaluate(model, args, device, deadline):
 
 
 def run(args):
+    schedule = parse_curriculum(args.curriculum, args.steps, args.episode_length)
     args.out = args.out.resolve()
     args.out.mkdir(parents=True, exist_ok=True)
     if any(args.out.iterdir()):
@@ -151,6 +183,8 @@ def run(args):
         "command": [sys.executable, *sys.argv], "repository_commit": version.stdout.strip(),
         "configuration": {**vars(args), "out": str(args.out)}, "model_config": model.config,
         "nkeys": args.nkeys, "nvals": args.nvals, "expected_uniform_chance": 1 / args.nvals,
+        "training_schedule": schedule,
+        "training_observation_writes_planned": args.batch_size * sum(stage["episode_length"] * stage["steps"] for stage in schedule),
         "sources_sha256": capture_sources(args.out),
         "environment": {"python": sys.version, "platform": platform.platform(),
                         "torch": torch.__version__, "cuda_runtime": torch.version.cuda,
@@ -174,17 +208,20 @@ def run(args):
     start = time.perf_counter()
     deadline = start + args.max_seconds
     completed_steps = 0
+    observation_writes_seen = 0
     active_parameters = set()
     try:
         model.train()
         with (args.out / "training.csv").open("w", newline="", encoding="utf-8") as handle:
             writer = csv.writer(handle)
             writer.writerow(["step", "episodes_seen", "loss", "accuracy", "gradient_norm",
-                             "mean_query_delay", "revised_query_fraction", "elapsed_seconds"])
+                             "mean_query_delay", "revised_query_fraction", "elapsed_seconds",
+                             "episode_length", "observation_writes_seen"])
             for step in range(1, args.steps + 1):
                 if time.perf_counter() >= deadline:
                     break
-                episode = make_episodes(generator, args.batch_size, args.episode_length,
+                episode_length = episode_length_for_step(schedule, step)
+                episode = make_episodes(generator, args.batch_size, episode_length,
                                         nkeys=args.nkeys, nvals=args.nvals)
                 inputs = {name: tensor.to(device) for name, tensor in episode.items()}
                 optimizer.zero_grad(set_to_none=True)
@@ -199,10 +236,12 @@ def run(args):
                 optimizer.step()
                 synchronize(device)
                 completed_steps = step
+                observation_writes_seen += args.batch_size * episode_length
                 accuracy = float((logits.argmax(-1) == inputs["target"]).float().mean())
                 writer.writerow([step, step * args.batch_size, float(loss.detach()), accuracy,
                                  float(gradient_norm), float(episode["delay"].float().mean()),
-                                 float(episode["revised"].float().mean()), time.perf_counter() - start])
+                                 float(episode["revised"].float().mean()), time.perf_counter() - start,
+                                 episode_length, observation_writes_seen])
                 handle.flush()
                 if step == 1 or step % args.log_every == 0 or step == args.steps:
                     print(f"step {step}/{args.steps}, loss {float(loss.detach()):.4f}, accuracy {accuracy:.3f}, elapsed {time.perf_counter() - start:.1f}s", flush=True)
@@ -211,6 +250,7 @@ def run(args):
             "state_dict": {name: tensor.detach().cpu() for name, tensor in model.state_dict().items()},
             "config": model.config, "steps": completed_steps,
             "init_seed": args.init_seed, "train_seed": args.train_seed,
+            "training_schedule": schedule, "observation_writes_seen": observation_writes_seen,
         }
         torch.save(checkpoint, args.out / "checkpoint.pt")
         metadata["training_seconds"] = time.perf_counter() - start
@@ -224,6 +264,7 @@ def run(args):
         raise
     finally:
         metadata["steps_completed"] = completed_steps
+        metadata["training_observation_writes_completed"] = observation_writes_seen
         metadata["elapsed_seconds"] = time.perf_counter() - start
         metadata["outer_gradient_parameters"] = sorted(active_parameters)
         metadata["finished_utc"] = datetime.now(timezone.utc).isoformat()
@@ -246,6 +287,8 @@ def parse_args():
     parser.add_argument("--steps", type=int, default=400)
     parser.add_argument("--batch-size", type=int, default=128)
     parser.add_argument("--episode-length", type=int, default=16)
+    parser.add_argument("--curriculum", default="",
+                        help="Optional training length:steps stages, e.g. 16:100,64:100,256:200; evaluation uses --episode-length")
     parser.add_argument("--lr", type=float, default=0.003)
     parser.add_argument("--max-inner-lr", type=float, default=1.0,
                         help="Upper bound of the learned sigmoid-scaled inner write step")
@@ -270,6 +313,10 @@ def parse_args():
         parser.error("--max-inner-lr must be finite and positive")
     if args.batch_size < 2 or args.eval_episodes % args.batch_size == 1:
         parser.error("Held-out batches need at least two episodes for the rolled-memory control")
+    try:
+        parse_curriculum(args.curriculum, args.steps, args.episode_length)
+    except ValueError as error:
+        parser.error(str(error))
     return args
 
 
