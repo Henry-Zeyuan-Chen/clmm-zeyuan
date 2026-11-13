@@ -24,12 +24,14 @@ from torch.nn import functional as F
 from research_memory import NKEYS, NVALS, REPOSITORY, Reader
 
 
-def make_episodes(generator, batch_size, writes):
+def make_episodes(generator, batch_size, writes, nkeys=NKEYS, nvals=NVALS):
     """Sample repeated keys, then a uniform distinct observed key's latest value."""
-    keys = torch.randint(NKEYS, (batch_size, writes), generator=generator)
-    values = torch.randint(NVALS, (batch_size, writes), generator=generator)
-    observed = (keys[:, :, None] == torch.arange(NKEYS)).any(dim=1)
-    query_scores = torch.rand(batch_size, NKEYS, generator=generator)
+    if nkeys < 1 or nvals < 1:
+        raise ValueError("Vocabulary sizes must be positive")
+    keys = torch.randint(nkeys, (batch_size, writes), generator=generator)
+    values = torch.randint(nvals, (batch_size, writes), generator=generator)
+    observed = (keys[:, :, None] == torch.arange(nkeys)).any(dim=1)
+    query_scores = torch.rand(batch_size, nkeys, generator=generator)
     query = query_scores.masked_fill(~observed, -1).argmax(dim=1)
     matches = keys == query[:, None]
     positions = torch.arange(writes).expand(batch_size, writes)
@@ -78,7 +80,8 @@ def evaluate(model, args, device, deadline):
         writer.writeheader()
         while totals["episodes"] < args.eval_episodes and time.perf_counter() < deadline:
             count = min(args.batch_size, args.eval_episodes - totals["episodes"])
-            episode = make_episodes(generator, count, args.episode_length)
+            episode = make_episodes(generator, count, args.episode_length,
+                                    nkeys=args.nkeys, nvals=args.nvals)
             inputs = {name: tensor.to(device) for name, tensor in episode.items()}
             fast = model.write(inputs["keys"], inputs["values"])
             snapshot = {name: weights.clone() for name, weights in fast.items()}
@@ -136,7 +139,8 @@ def run(args):
         torch.cuda.reset_peak_memory_stats(device)
 
     config = {"dim": args.dim, "depth": args.depth,
-              "expansion_factor": args.expansion_factor, "max_inner_lr": args.max_inner_lr}
+              "expansion_factor": args.expansion_factor, "max_inner_lr": args.max_inner_lr,
+              "nkeys": args.nkeys, "nvals": args.nvals}
     model = Reader(**config).to(device)
     optimizer = torch.optim.AdamW(model.parameters(), lr=args.lr, weight_decay=args.weight_decay)
     generator = torch.Generator().manual_seed(args.train_seed)
@@ -146,6 +150,7 @@ def run(args):
         "status": "running", "started_utc": datetime.now(timezone.utc).isoformat(),
         "command": [sys.executable, *sys.argv], "repository_commit": version.stdout.strip(),
         "configuration": {**vars(args), "out": str(args.out)}, "model_config": model.config,
+        "nkeys": args.nkeys, "nvals": args.nvals, "expected_uniform_chance": 1 / args.nvals,
         "sources_sha256": capture_sources(args.out),
         "environment": {"python": sys.version, "platform": platform.platform(),
                         "torch": torch.__version__, "cuda_runtime": torch.version.cuda,
@@ -179,7 +184,8 @@ def run(args):
             for step in range(1, args.steps + 1):
                 if time.perf_counter() >= deadline:
                     break
-                episode = make_episodes(generator, args.batch_size, args.episode_length)
+                episode = make_episodes(generator, args.batch_size, args.episode_length,
+                                        nkeys=args.nkeys, nvals=args.nvals)
                 inputs = {name: tensor.to(device) for name, tensor in episode.items()}
                 optimizer.zero_grad(set_to_none=True)
                 fast = model.write(inputs["keys"], inputs["values"])
@@ -235,6 +241,8 @@ def parse_args():
     parser.add_argument("--dim", type=int, default=64)
     parser.add_argument("--depth", type=int, default=2)
     parser.add_argument("--expansion-factor", type=float, default=2.0)
+    parser.add_argument("--nkeys", type=int, default=NKEYS)
+    parser.add_argument("--nvals", type=int, default=NVALS)
     parser.add_argument("--steps", type=int, default=400)
     parser.add_argument("--batch-size", type=int, default=128)
     parser.add_argument("--episode-length", type=int, default=16)
@@ -252,11 +260,12 @@ def parse_args():
     parser.add_argument("--threads", type=int, default=1)
     parser.add_argument("--log-every", type=int, default=25)
     args = parser.parse_args()
-    positive = (args.dim, args.depth, args.expansion_factor, args.steps, args.batch_size,
+    positive = (args.dim, args.depth, args.expansion_factor, args.nkeys, args.nvals,
+                args.steps, args.batch_size,
                 args.episode_length, args.lr, args.clip, args.eval_episodes,
                 args.max_seconds, args.threads, args.log_every)
     if min(positive) <= 0 or args.weight_decay < 0:
-        parser.error("Dimensions, budgets, learning rate and clip must be positive; weight decay must be nonnegative")
+        parser.error("Dimensions, vocabulary sizes, budgets, learning rate and clip must be positive; weight decay must be nonnegative")
     if not math.isfinite(args.max_inner_lr) or args.max_inner_lr <= 0:
         parser.error("--max-inner-lr must be finite and positive")
     if args.batch_size < 2 or args.eval_episodes % args.batch_size == 1:
