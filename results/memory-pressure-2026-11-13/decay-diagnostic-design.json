@@ -1,0 +1,11 @@
+{
+  "status": "Posthoc diagnostic, not the prespecified fresh-stream confirmation",
+  "motivation": "The weaker checkpoint48103 loses recent-key recall under auxiliary updates. The original primary two-seed continuation criterion failed and remains failed.",
+  "checkpoint": "train-curriculum-48103/checkpoint.pt",
+  "facts": [64], "delays": [0,256], "episodes": 256, "eval_seed": 58111,
+  "change": "Set aux_decay_scale to1 for repeat, continuous and periodic auxiliary writes. Ordinary observation writes stay unchanged. All three auxiliary arms still use identical update counts.",
+  "hypothesis": "The recent-recall deficit may partly reflect fast-state drift when auxiliary writes omit forgetting. Restoring auxiliary decay may trade retention for recent recall. This tests one setting rather than tuning or selecting a winning variant.",
+  "controls": "Same frozen checkpoint and original development-stream prefixes. Verify observations, replay samples and membership are identical through delay256, and online predictions are exactly unchanged.",
+  "analysis": "Separate within-checkpoint paired episode comparisons of decay1 versus decay0 for recent and old-target recall, plus matched-arm contrasts. Preserve all original outcomes and decision. This follow-up cannot establish generalization to a fresh dataset or an isolated cause of training weakness.",
+  "resource_stop": "Launch only after the third grid completes with at least two minutes left in the existing allocation. Otherwise leave it planned and state that it was not run."
+}

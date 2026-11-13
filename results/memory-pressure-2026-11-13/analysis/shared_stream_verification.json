@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "same_stream_files_across_three_checkpoints": true,
+  "sha256_by_fact_count": {
+    "16": "7b18237ce10d18ad800357d0aeaac0f11e5a5aa6da8c5ca1419879eb2bf345fb",
+    "64": "518fd93e1a3e8a704f8029be734bbd17a9ba364649feb910f13b05a79662ef0f",
+    "256": "14a3ee1e0fb66aacb839d763cc9b7a8881bd6e98cb67bb37bed3db9a828e20e5"
+  },
+  "note": "Pairing is across arms/checkpoints within each K, not across different K streams."
+}

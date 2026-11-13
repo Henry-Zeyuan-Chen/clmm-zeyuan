@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "base_design_unchanged": true,
+  "amendment_parent_validated": true,
+  "original_two_fail_retained": true,
+  "passing_third_cannot_replace_original": true,
+  "duplicate_seed_cannot_trigger": true,
+  "archived_sources_unchanged": true,
+  "analysis_script_sha256": "e89c3198b0f0ab4580ad1c2740686f08c4e02314c6600ed884f3b04617a1a542",
+  "amendment_sha256": "37b0dadcac37911fd2f52bd6dc6c4ac9a668c30f11e5088f9fa870e9853d9329"
+}

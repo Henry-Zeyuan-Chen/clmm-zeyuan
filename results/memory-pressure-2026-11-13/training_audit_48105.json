@@ -1,0 +1,1735 @@
+{
+  "status": "passed",
+  "run": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-pressure-2026-11-13\\train-curriculum-48105",
+  "repository_commit": "d93ac37dbdc7345cf8fc1434d42589cafef544e8",
+  "configuration": {
+    "out": "/insomnia001/depts/edu/users/zc2819/clmm/pressure-2026-11-13/train-curriculum-48105",
+    "device": "cuda",
+    "dim": 64,
+    "depth": 2,
+    "expansion_factor": 2.0,
+    "nkeys": 256,
+    "nvals": 8,
+    "steps": 400,
+    "batch_size": 64,
+    "episode_length": 256,
+    "curriculum": "16:100,64:100,256:200",
+    "lr": 0.003,
+    "max_inner_lr": 0.01,
+    "weight_decay": 0.01,
+    "clip": 1.0,
+    "init_seed": 48105,
+    "train_seed": 48106,
+    "eval_seed": 58105,
+    "eval_episodes": 1024,
+    "max_seconds": 900.0,
+    "threads": 1,
+    "log_every": 25
+  },
+  "model_config": {
+    "dim": 64,
+    "depth": 2,
+    "expansion_factor": 2.0,
+    "init_adaptive_step_bias": 1.0,
+    "init_decay_bias": -4.0,
+    "max_inner_lr": 0.01,
+    "nkeys": 256,
+    "nvals": 8
+  },
+  "training_environment": {
+    "python": "3.11.5 (main, Sep 11 2023, 13:54:46) [GCC 11.2.0]",
+    "platform": "Linux-5.14.0-570.12.1.el9_6.x86_64-x86_64-with-glibc2.34",
+    "torch": "2.11.0+cu128",
+    "cuda_runtime": "12.8",
+    "device": "cuda",
+    "dtype": "float32",
+    "device_name": "NVIDIA RTX A6000",
+    "packages": {
+      "einops": "0.8.2",
+      "einx": "0.4.3",
+      "tensordict": "0.15.6",
+      "x-transformers": "2.31.20",
+      "assoc-scan": "0.0.6"
+    }
+  },
+  "training_steps": 400,
+  "training_writes": 3788800,
+  "training_schedule": [
+    {
+      "episode_length": 16,
+      "steps": 100
+    },
+    {
+      "episode_length": 64,
+      "steps": 100
+    },
+    {
+      "episode_length": 256,
+      "steps": 200
+    }
+  ],
+  "first25_mean_loss": 2.0906577110290527,
+  "last25_mean_loss": 0.44119558572769163,
+  "training_seconds": 307.35160913001164,
+  "elapsed_seconds": 318.2577723180002,
+  "registered_parameters": 62730,
+  "fast_state_parameters_per_episode": 16384,
+  "heldout_counts": {
+    "episodes": 1024,
+    "matched": 883,
+    "rolled": 136,
+    "initial": 105
+  },
+  "heldout_accuracy_percent": {
+    "matched": 86.23046875,
+    "rolled": 13.28125,
+    "initial": 10.25390625
+  },
+  "heldout_by_delay": {
+    "77": {
+      "episodes": 10,
+      "matched": 9,
+      "rolled": 2,
+      "initial": 1
+    },
+    "209": {
+      "episodes": 2,
+      "matched": 2,
+      "rolled": 0,
+      "initial": 1
+    },
+    "32": {
+      "episodes": 9,
+      "matched": 8,
+      "rolled": 1,
+      "initial": 0
+    },
+    "141": {
+      "episodes": 5,
+      "matched": 4,
+      "rolled": 3,
+      "initial": 0
+    },
+    "119": {
+      "episodes": 4,
+      "matched": 4,
+      "rolled": 1,
+      "initial": 0
+    },
+    "230": {
+      "episodes": 3,
+      "matched": 2,
+      "rolled": 0,
+      "initial": 0
+    },
+    "156": {
+      "episodes": 7,
+      "matched": 7,
+      "rolled": 0,
+      "initial": 0
+    },
+    "224": {
+      "episodes": 5,
+      "matched": 5,
+      "rolled": 0,
+      "initial": 0
+    },
+    "31": {
+      "episodes": 5,
+      "matched": 4,
+      "rolled": 1,
+      "initial": 0
+    },
+    "193": {
+      "episodes": 5,
+      "matched": 3,
+      "rolled": 0,
+      "initial": 0
+    },
+    "8": {
+      "episodes": 7,
+      "matched": 6,
+      "rolled": 1,
+      "initial": 2
+    },
+    "68": {
+      "episodes": 3,
+      "matched": 3,
+      "rolled": 1,
+      "initial": 1
+    },
+    "188": {
+      "episodes": 2,
+      "matched": 2,
+      "rolled": 0,
+      "initial": 1
+    },
+    "237": {
+      "episodes": 4,
+      "matched": 3,
+      "rolled": 0,
+      "initial": 1
+    },
+    "60": {
+      "episodes": 6,
+      "matched": 4,
+      "rolled": 0,
+      "initial": 0
+    },
+    "127": {
+      "episodes": 3,
+      "matched": 3,
+      "rolled": 1,
+      "initial": 1
+    },
+    "12": {
+      "episodes": 8,
+      "matched": 8,
+      "rolled": 2,
+      "initial": 0
+    },
+    "38": {
+      "episodes": 7,
+      "matched": 6,
+      "rolled": 0,
+      "initial": 1
+    },
+    "96": {
+      "episodes": 1,
+      "matched": 1,
+      "rolled": 0,
+      "initial": 0
+    },
+    "157": {
+      "episodes": 4,
+      "matched": 2,
+      "rolled": 0,
+      "initial": 1
+    },
+    "169": {
+      "episodes": 3,
+      "matched": 3,
+      "rolled": 0,
+      "initial": 1
+    },
+    "205": {
+      "episodes": 3,
+      "matched": 3,
+      "rolled": 1,
+      "initial": 1
+    },
+    "14": {
+      "episodes": 10,
+      "matched": 10,
+      "rolled": 1,
+      "initial": 3
+    },
+    "27": {
+      "episodes": 5,
+      "matched": 5,
+      "rolled": 0,
+      "initial": 0
+    },
+    "245": {
+      "episodes": 3,
+      "matched": 2,
+      "rolled": 0,
+      "initial": 0
+    },
+    "99": {
+      "episodes": 3,
+      "matched": 3,
+      "rolled": 0,
+      "initial": 0
+    },
+    "84": {
+      "episodes": 2,
+      "matched": 2,
+      "rolled": 0,
+      "initial": 0
+    },
+    "166": {
+      "episodes": 5,
+      "matched": 2,
+      "rolled": 2,
+      "initial": 0
+    },
+    "83": {
+      "episodes": 4,
+      "matched": 4,
+      "rolled": 0,
+      "initial": 1
+    },
+    "28": {
+      "episodes": 5,
+      "matched": 5,
+      "rolled": 2,
+      "initial": 0
+    },
+    "71": {
+      "episodes": 6,
+      "matched": 5,
+      "rolled": 1,
+      "initial": 0
+    },
+    "2": {
+      "episodes": 6,
+      "matched": 5,
+      "rolled": 3,
+      "initial": 0
+    },
+    "24": {
+      "episodes": 4,
+      "matched": 4,
+      "rolled": 0,
+      "initial": 0
+    },
+    "52": {
+      "episodes": 5,
+      "matched": 4,
+      "rolled": 0,
+      "initial": 0
+    },
+    "177": {
+      "episodes": 5,
+      "matched": 3,
+      "rolled": 1,
+      "initial": 0
+    },
+    "219": {
+      "episodes": 3,
+      "matched": 2,
+      "rolled": 2,
+      "initial": 0
+    },
+    "165": {
+      "episodes": 2,
+      "matched": 1,
+      "rolled": 0,
+      "initial": 1
+    },
+    "208": {
+      "episodes": 1,
+      "matched": 1,
+      "rolled": 1,
+      "initial": 0
+    },
+    "97": {
+      "episodes": 8,
+      "matched": 7,
+      "rolled": 2,
+      "initial": 4
+    },
+    "158": {
+      "episodes": 3,
+      "matched": 2,
+      "rolled": 0,
+      "initial": 0
+    },
+    "139": {
+      "episodes": 4,
+      "matched": 4,
+      "rolled": 0,
+      "initial": 0
+    },
+    "88": {
+      "episodes": 2,
+      "matched": 2,
+      "rolled": 0,
+      "initial": 0
+    },
+    "122": {
+      "episodes": 3,
+      "matched": 3,
+      "rolled": 0,
+      "initial": 0
+    },
+    "74": {
+      "episodes": 6,
+      "matched": 6,
+      "rolled": 1,
+      "initial": 0
+    },
+    "40": {
+      "episodes": 10,
+      "matched": 9,
+      "rolled": 1,
+      "initial": 0
+    },
+    "147": {
+      "episodes": 4,
+      "matched": 3,
+      "rolled": 1,
+      "initial": 0
+    },
+    "233": {
+      "episodes": 4,
+      "matched": 3,
+      "rolled": 0,
+      "initial": 0
+    },
+    "186": {
+      "episodes": 4,
+      "matched": 3,
+      "rolled": 0,
+      "initial": 0
+    },
+    "89": {
+      "episodes": 4,
+      "matched": 3,
+      "rolled": 1,
+      "initial": 0
+    },
+    "135": {
+      "episodes": 11,
+      "matched": 10,
+      "rolled": 1,
+      "initial": 0
+    },
+    "36": {
+      "episodes": 7,
+      "matched": 6,
+      "rolled": 1,
+      "initial": 1
+    },
+    "67": {
+      "episodes": 8,
+      "matched": 7,
+      "rolled": 1,
+      "initial": 0
+    },
+    "121": {
+      "episodes": 1,
+      "matched": 1,
+      "rolled": 0,
+      "initial": 0
+    },
+    "51": {
+      "episodes": 6,
+      "matched": 6,
+      "rolled": 0,
+      "initial": 1
+    },
+    "226": {
+      "episodes": 3,
+      "matched": 3,
+      "rolled": 0,
+      "initial": 0
+    },
+    "41": {
+      "episodes": 9,
+      "matched": 9,
+      "rolled": 2,
+      "initial": 0
+    },
+    "9": {
+      "episodes": 5,
+      "matched": 5,
+      "rolled": 1,
+      "initial": 0
+    },
+    "187": {
+      "episodes": 5,
+      "matched": 3,
+      "rolled": 0,
+      "initial": 1
+    },
+    "129": {
+      "episodes": 7,
+      "matched": 5,
+      "rolled": 0,
+      "initial": 1
+    },
+    "53": {
+      "episodes": 5,
+      "matched": 4,
+      "rolled": 2,
+      "initial": 0
+    },
+    "20": {
+      "episodes": 7,
+      "matched": 7,
+      "rolled": 0,
+      "initial": 1
+    },
+    "200": {
+      "episodes": 2,
+      "matched": 2,
+      "rolled": 0,
+      "initial": 0
+    },
+    "10": {
+      "episodes": 7,
+      "matched": 7,
+      "rolled": 0,
+      "initial": 2
+    },
+    "17": {
+      "episodes": 9,
+      "matched": 9,
+      "rolled": 2,
+      "initial": 3
+    },
+    "240": {
+      "episodes": 1,
+      "matched": 0,
+      "rolled": 0,
+      "initial": 1
+    },
+    "183": {
+      "episodes": 3,
+      "matched": 2,
+      "rolled": 1,
+      "initial": 0
+    },
+    "163": {
+      "episodes": 2,
+      "matched": 2,
+      "rolled": 0,
+      "initial": 0
+    },
+    "49": {
+      "episodes": 7,
+      "matched": 7,
+      "rolled": 1,
+      "initial": 0
+    },
+    "1": {
+      "episodes": 7,
+      "matched": 7,
+      "rolled": 1,
+      "initial": 0
+    },
+    "201": {
+      "episodes": 5,
+      "matched": 4,
+      "rolled": 0,
+      "initial": 1
+    },
+    "212": {
+      "episodes": 5,
+      "matched": 2,
+      "rolled": 1,
+      "initial": 0
+    },
+    "91": {
+      "episodes": 2,
+      "matched": 1,
+      "rolled": 1,
+      "initial": 0
+    },
+    "39": {
+      "episodes": 5,
+      "matched": 4,
+      "rolled": 1,
+      "initial": 0
+    },
+    "65": {
+      "episodes": 6,
+      "matched": 6,
+      "rolled": 1,
+      "initial": 0
+    },
+    "207": {
+      "episodes": 4,
+      "matched": 4,
+      "rolled": 0,
+      "initial": 0
+    },
+    "37": {
+      "episodes": 5,
+      "matched": 5,
+      "rolled": 2,
+      "initial": 1
+    },
+    "194": {
+      "episodes": 2,
+      "matched": 2,
+      "rolled": 1,
+      "initial": 0
+    },
+    "30": {
+      "episodes": 8,
+      "matched": 8,
+      "rolled": 1,
+      "initial": 0
+    },
+    "15": {
+      "episodes": 6,
+      "matched": 5,
+      "rolled": 1,
+      "initial": 0
+    },
+    "34": {
+      "episodes": 9,
+      "matched": 9,
+      "rolled": 1,
+      "initial": 2
+    },
+    "81": {
+      "episodes": 8,
+      "matched": 7,
+      "rolled": 0,
+      "initial": 1
+    },
+    "79": {
+      "episodes": 3,
+      "matched": 3,
+      "rolled": 1,
+      "initial": 0
+    },
+    "85": {
+      "episodes": 6,
+      "matched": 4,
+      "rolled": 1,
+      "initial": 0
+    },
+    "93": {
+      "episodes": 2,
+      "matched": 2,
+      "rolled": 1,
+      "initial": 0
+    },
+    "120": {
+      "episodes": 2,
+      "matched": 2,
+      "rolled": 0,
+      "initial": 0
+    },
+    "143": {
+      "episodes": 5,
+      "matched": 4,
+      "rolled": 0,
+      "initial": 0
+    },
+    "175": {
+      "episodes": 4,
+      "matched": 3,
+      "rolled": 1,
+      "initial": 0
+    },
+    "47": {
+      "episodes": 8,
+      "matched": 7,
+      "rolled": 1,
+      "initial": 1
+    },
+    "73": {
+      "episodes": 8,
+      "matched": 7,
+      "rolled": 1,
+      "initial": 2
+    },
+    "58": {
+      "episodes": 5,
+      "matched": 5,
+      "rolled": 2,
+      "initial": 0
+    },
+    "22": {
+      "episodes": 5,
+      "matched": 4,
+      "rolled": 3,
+      "initial": 0
+    },
+    "180": {
+      "episodes": 6,
+      "matched": 5,
+      "rolled": 0,
+      "initial": 1
+    },
+    "63": {
+      "episodes": 8,
+      "matched": 7,
+      "rolled": 2,
+      "initial": 0
+    },
+    "90": {
+      "episodes": 4,
+      "matched": 4,
+      "rolled": 0,
+      "initial": 0
+    },
+    "7": {
+      "episodes": 5,
+      "matched": 5,
+      "rolled": 0,
+      "initial": 0
+    },
+    "5": {
+      "episodes": 7,
+      "matched": 6,
+      "rolled": 0,
+      "initial": 0
+    },
+    "197": {
+      "episodes": 5,
+      "matched": 4,
+      "rolled": 1,
+      "initial": 0
+    },
+    "50": {
+      "episodes": 4,
+      "matched": 4,
+      "rolled": 0,
+      "initial": 1
+    },
+    "86": {
+      "episodes": 7,
+      "matched": 6,
+      "rolled": 1,
+      "initial": 0
+    },
+    "82": {
+      "episodes": 3,
+      "matched": 2,
+      "rolled": 0,
+      "initial": 1
+    },
+    "95": {
+      "episodes": 5,
+      "matched": 5,
+      "rolled": 1,
+      "initial": 0
+    },
+    "102": {
+      "episodes": 4,
+      "matched": 4,
+      "rolled": 2,
+      "initial": 2
+    },
+    "57": {
+      "episodes": 6,
+      "matched": 5,
+      "rolled": 0,
+      "initial": 0
+    },
+    "162": {
+      "episodes": 1,
+      "matched": 1,
+      "rolled": 0,
+      "initial": 0
+    },
+    "211": {
+      "episodes": 3,
+      "matched": 2,
+      "rolled": 0,
+      "initial": 0
+    },
+    "248": {
+      "episodes": 2,
+      "matched": 0,
+      "rolled": 0,
+      "initial": 0
+    },
+    "115": {
+      "episodes": 3,
+      "matched": 2,
+      "rolled": 0,
+      "initial": 1
+    },
+    "225": {
+      "episodes": 3,
+      "matched": 2,
+      "rolled": 0,
+      "initial": 1
+    },
+    "223": {
+      "episodes": 2,
+      "matched": 2,
+      "rolled": 0,
+      "initial": 0
+    },
+    "251": {
+      "episodes": 4,
+      "matched": 0,
+      "rolled": 0,
+      "initial": 1
+    },
+    "172": {
+      "episodes": 2,
+      "matched": 1,
+      "rolled": 0,
+      "initial": 1
+    },
+    "168": {
+      "episodes": 4,
+      "matched": 3,
+      "rolled": 0,
+      "initial": 0
+    },
+    "128": {
+      "episodes": 4,
+      "matched": 4,
+      "rolled": 0,
+      "initial": 1
+    },
+    "234": {
+      "episodes": 1,
+      "matched": 0,
+      "rolled": 0,
+      "initial": 0
+    },
+    "19": {
+      "episodes": 6,
+      "matched": 6,
+      "rolled": 0,
+      "initial": 0
+    },
+    "222": {
+      "episodes": 2,
+      "matched": 2,
+      "rolled": 0,
+      "initial": 0
+    },
+    "130": {
+      "episodes": 4,
+      "matched": 4,
+      "rolled": 1,
+      "initial": 1
+    },
+    "189": {
+      "episodes": 3,
+      "matched": 3,
+      "rolled": 2,
+      "initial": 0
+    },
+    "35": {
+      "episodes": 8,
+      "matched": 8,
+      "rolled": 1,
+      "initial": 2
+    },
+    "220": {
+      "episodes": 3,
+      "matched": 3,
+      "rolled": 1,
+      "initial": 1
+    },
+    "148": {
+      "episodes": 4,
+      "matched": 3,
+      "rolled": 0,
+      "initial": 0
+    },
+    "112": {
+      "episodes": 3,
+      "matched": 3,
+      "rolled": 0,
+      "initial": 0
+    },
+    "13": {
+      "episodes": 6,
+      "matched": 6,
+      "rolled": 0,
+      "initial": 0
+    },
+    "161": {
+      "episodes": 6,
+      "matched": 5,
+      "rolled": 2,
+      "initial": 1
+    },
+    "33": {
+      "episodes": 4,
+      "matched": 4,
+      "rolled": 1,
+      "initial": 1
+    },
+    "11": {
+      "episodes": 6,
+      "matched": 5,
+      "rolled": 0,
+      "initial": 1
+    },
+    "66": {
+      "episodes": 8,
+      "matched": 7,
+      "rolled": 0,
+      "initial": 0
+    },
+    "64": {
+      "episodes": 6,
+      "matched": 5,
+      "rolled": 1,
+      "initial": 0
+    },
+    "98": {
+      "episodes": 9,
+      "matched": 9,
+      "rolled": 2,
+      "initial": 2
+    },
+    "124": {
+      "episodes": 4,
+      "matched": 4,
+      "rolled": 0,
+      "initial": 0
+    },
+    "142": {
+      "episodes": 9,
+      "matched": 6,
+      "rolled": 1,
+      "initial": 0
+    },
+    "252": {
+      "episodes": 1,
+      "matched": 1,
+      "rolled": 0,
+      "initial": 1
+    },
+    "46": {
+      "episodes": 5,
+      "matched": 5,
+      "rolled": 1,
+      "initial": 0
+    },
+    "106": {
+      "episodes": 3,
+      "matched": 3,
+      "rolled": 1,
+      "initial": 1
+    },
+    "23": {
+      "episodes": 8,
+      "matched": 7,
+      "rolled": 0,
+      "initial": 0
+    },
+    "159": {
+      "episodes": 6,
+      "matched": 6,
+      "rolled": 0,
+      "initial": 1
+    },
+    "255": {
+      "episodes": 3,
+      "matched": 3,
+      "rolled": 2,
+      "initial": 0
+    },
+    "126": {
+      "episodes": 5,
+      "matched": 3,
+      "rolled": 1,
+      "initial": 0
+    },
+    "221": {
+      "episodes": 4,
+      "matched": 4,
+      "rolled": 0,
+      "initial": 0
+    },
+    "59": {
+      "episodes": 6,
+      "matched": 6,
+      "rolled": 1,
+      "initial": 0
+    },
+    "184": {
+      "episodes": 6,
+      "matched": 5,
+      "rolled": 1,
+      "initial": 3
+    },
+    "108": {
+      "episodes": 3,
+      "matched": 2,
+      "rolled": 0,
+      "initial": 0
+    },
+    "6": {
+      "episodes": 5,
+      "matched": 4,
+      "rolled": 0,
+      "initial": 0
+    },
+    "104": {
+      "episodes": 5,
+      "matched": 5,
+      "rolled": 1,
+      "initial": 0
+    },
+    "117": {
+      "episodes": 6,
+      "matched": 5,
+      "rolled": 1,
+      "initial": 0
+    },
+    "191": {
+      "episodes": 4,
+      "matched": 4,
+      "rolled": 1,
+      "initial": 0
+    },
+    "198": {
+      "episodes": 3,
+      "matched": 2,
+      "rolled": 0,
+      "initial": 0
+    },
+    "25": {
+      "episodes": 4,
+      "matched": 4,
+      "rolled": 1,
+      "initial": 0
+    },
+    "70": {
+      "episodes": 4,
+      "matched": 4,
+      "rolled": 1,
+      "initial": 0
+    },
+    "101": {
+      "episodes": 4,
+      "matched": 4,
+      "rolled": 0,
+      "initial": 1
+    },
+    "114": {
+      "episodes": 3,
+      "matched": 2,
+      "rolled": 0,
+      "initial": 0
+    },
+    "80": {
+      "episodes": 7,
+      "matched": 7,
+      "rolled": 1,
+      "initial": 0
+    },
+    "78": {
+      "episodes": 6,
+      "matched": 5,
+      "rolled": 1,
+      "initial": 0
+    },
+    "62": {
+      "episodes": 6,
+      "matched": 6,
+      "rolled": 2,
+      "initial": 1
+    },
+    "153": {
+      "episodes": 4,
+      "matched": 3,
+      "rolled": 0,
+      "initial": 0
+    },
+    "241": {
+      "episodes": 1,
+      "matched": 1,
+      "rolled": 0,
+      "initial": 1
+    },
+    "0": {
+      "episodes": 6,
+      "matched": 6,
+      "rolled": 0,
+      "initial": 1
+    },
+    "18": {
+      "episodes": 8,
+      "matched": 7,
+      "rolled": 1,
+      "initial": 0
+    },
+    "109": {
+      "episodes": 3,
+      "matched": 3,
+      "rolled": 0,
+      "initial": 0
+    },
+    "45": {
+      "episodes": 1,
+      "matched": 1,
+      "rolled": 0,
+      "initial": 0
+    },
+    "250": {
+      "episodes": 3,
+      "matched": 2,
+      "rolled": 0,
+      "initial": 1
+    },
+    "249": {
+      "episodes": 2,
+      "matched": 2,
+      "rolled": 0,
+      "initial": 1
+    },
+    "107": {
+      "episodes": 4,
+      "matched": 3,
+      "rolled": 1,
+      "initial": 0
+    },
+    "167": {
+      "episodes": 7,
+      "matched": 7,
+      "rolled": 1,
+      "initial": 1
+    },
+    "215": {
+      "episodes": 4,
+      "matched": 3,
+      "rolled": 2,
+      "initial": 1
+    },
+    "195": {
+      "episodes": 4,
+      "matched": 2,
+      "rolled": 1,
+      "initial": 0
+    },
+    "203": {
+      "episodes": 2,
+      "matched": 0,
+      "rolled": 0,
+      "initial": 0
+    },
+    "174": {
+      "episodes": 2,
+      "matched": 2,
+      "rolled": 0,
+      "initial": 0
+    },
+    "103": {
+      "episodes": 3,
+      "matched": 2,
+      "rolled": 0,
+      "initial": 0
+    },
+    "100": {
+      "episodes": 5,
+      "matched": 5,
+      "rolled": 1,
+      "initial": 2
+    },
+    "242": {
+      "episodes": 2,
+      "matched": 1,
+      "rolled": 0,
+      "initial": 1
+    },
+    "150": {
+      "episodes": 5,
+      "matched": 4,
+      "rolled": 0,
+      "initial": 0
+    },
+    "116": {
+      "episodes": 3,
+      "matched": 3,
+      "rolled": 0,
+      "initial": 0
+    },
+    "76": {
+      "episodes": 5,
+      "matched": 5,
+      "rolled": 1,
+      "initial": 1
+    },
+    "56": {
+      "episodes": 4,
+      "matched": 4,
+      "rolled": 0,
+      "initial": 1
+    },
+    "229": {
+      "episodes": 3,
+      "matched": 2,
+      "rolled": 0,
+      "initial": 1
+    },
+    "160": {
+      "episodes": 3,
+      "matched": 3,
+      "rolled": 1,
+      "initial": 0
+    },
+    "105": {
+      "episodes": 3,
+      "matched": 2,
+      "rolled": 0,
+      "initial": 1
+    },
+    "146": {
+      "episodes": 4,
+      "matched": 2,
+      "rolled": 1,
+      "initial": 0
+    },
+    "231": {
+      "episodes": 3,
+      "matched": 2,
+      "rolled": 0,
+      "initial": 1
+    },
+    "133": {
+      "episodes": 3,
+      "matched": 3,
+      "rolled": 0,
+      "initial": 0
+    },
+    "136": {
+      "episodes": 6,
+      "matched": 5,
+      "rolled": 1,
+      "initial": 0
+    },
+    "164": {
+      "episodes": 4,
+      "matched": 3,
+      "rolled": 1,
+      "initial": 0
+    },
+    "138": {
+      "episodes": 1,
+      "matched": 0,
+      "rolled": 0,
+      "initial": 0
+    },
+    "151": {
+      "episodes": 4,
+      "matched": 3,
+      "rolled": 2,
+      "initial": 1
+    },
+    "254": {
+      "episodes": 2,
+      "matched": 2,
+      "rolled": 0,
+      "initial": 0
+    },
+    "110": {
+      "episodes": 4,
+      "matched": 3,
+      "rolled": 2,
+      "initial": 1
+    },
+    "179": {
+      "episodes": 4,
+      "matched": 3,
+      "rolled": 0,
+      "initial": 1
+    },
+    "111": {
+      "episodes": 3,
+      "matched": 3,
+      "rolled": 0,
+      "initial": 0
+    },
+    "155": {
+      "episodes": 3,
+      "matched": 3,
+      "rolled": 1,
+      "initial": 1
+    },
+    "199": {
+      "episodes": 6,
+      "matched": 5,
+      "rolled": 0,
+      "initial": 0
+    },
+    "202": {
+      "episodes": 2,
+      "matched": 2,
+      "rolled": 0,
+      "initial": 0
+    },
+    "144": {
+      "episodes": 1,
+      "matched": 1,
+      "rolled": 0,
+      "initial": 0
+    },
+    "137": {
+      "episodes": 6,
+      "matched": 4,
+      "rolled": 1,
+      "initial": 1
+    },
+    "218": {
+      "episodes": 1,
+      "matched": 1,
+      "rolled": 0,
+      "initial": 0
+    },
+    "48": {
+      "episodes": 4,
+      "matched": 3,
+      "rolled": 0,
+      "initial": 2
+    },
+    "227": {
+      "episodes": 2,
+      "matched": 2,
+      "rolled": 0,
+      "initial": 0
+    },
+    "152": {
+      "episodes": 3,
+      "matched": 3,
+      "rolled": 2,
+      "initial": 1
+    },
+    "246": {
+      "episodes": 2,
+      "matched": 2,
+      "rolled": 0,
+      "initial": 1
+    },
+    "232": {
+      "episodes": 2,
+      "matched": 1,
+      "rolled": 1,
+      "initial": 0
+    },
+    "55": {
+      "episodes": 6,
+      "matched": 5,
+      "rolled": 0,
+      "initial": 0
+    },
+    "26": {
+      "episodes": 5,
+      "matched": 4,
+      "rolled": 0,
+      "initial": 1
+    },
+    "132": {
+      "episodes": 7,
+      "matched": 4,
+      "rolled": 1,
+      "initial": 1
+    },
+    "235": {
+      "episodes": 4,
+      "matched": 4,
+      "rolled": 3,
+      "initial": 1
+    },
+    "72": {
+      "episodes": 4,
+      "matched": 3,
+      "rolled": 1,
+      "initial": 1
+    },
+    "216": {
+      "episodes": 1,
+      "matched": 1,
+      "rolled": 0,
+      "initial": 0
+    },
+    "94": {
+      "episodes": 3,
+      "matched": 3,
+      "rolled": 0,
+      "initial": 1
+    },
+    "123": {
+      "episodes": 2,
+      "matched": 2,
+      "rolled": 0,
+      "initial": 0
+    },
+    "92": {
+      "episodes": 2,
+      "matched": 1,
+      "rolled": 0,
+      "initial": 0
+    },
+    "43": {
+      "episodes": 3,
+      "matched": 3,
+      "rolled": 0,
+      "initial": 0
+    },
+    "253": {
+      "episodes": 1,
+      "matched": 1,
+      "rolled": 1,
+      "initial": 0
+    },
+    "217": {
+      "episodes": 6,
+      "matched": 4,
+      "rolled": 1,
+      "initial": 0
+    },
+    "75": {
+      "episodes": 2,
+      "matched": 2,
+      "rolled": 0,
+      "initial": 0
+    },
+    "176": {
+      "episodes": 3,
+      "matched": 2,
+      "rolled": 0,
+      "initial": 1
+    },
+    "154": {
+      "episodes": 2,
+      "matched": 2,
+      "rolled": 0,
+      "initial": 1
+    },
+    "61": {
+      "episodes": 3,
+      "matched": 3,
+      "rolled": 0,
+      "initial": 1
+    },
+    "178": {
+      "episodes": 1,
+      "matched": 1,
+      "rolled": 0,
+      "initial": 0
+    },
+    "181": {
+      "episodes": 2,
+      "matched": 2,
+      "rolled": 0,
+      "initial": 0
+    },
+    "149": {
+      "episodes": 3,
+      "matched": 1,
+      "rolled": 1,
+      "initial": 0
+    },
+    "185": {
+      "episodes": 3,
+      "matched": 2,
+      "rolled": 0,
+      "initial": 0
+    },
+    "131": {
+      "episodes": 3,
+      "matched": 3,
+      "rolled": 1,
+      "initial": 0
+    },
+    "213": {
+      "episodes": 2,
+      "matched": 2,
+      "rolled": 1,
+      "initial": 0
+    },
+    "171": {
+      "episodes": 2,
+      "matched": 2,
+      "rolled": 0,
+      "initial": 1
+    },
+    "173": {
+      "episodes": 2,
+      "matched": 2,
+      "rolled": 0,
+      "initial": 1
+    },
+    "4": {
+      "episodes": 1,
+      "matched": 1,
+      "rolled": 1,
+      "initial": 0
+    },
+    "145": {
+      "episodes": 1,
+      "matched": 1,
+      "rolled": 0,
+      "initial": 0
+    },
+    "29": {
+      "episodes": 2,
+      "matched": 2,
+      "rolled": 0,
+      "initial": 0
+    },
+    "113": {
+      "episodes": 2,
+      "matched": 1,
+      "rolled": 0,
+      "initial": 0
+    },
+    "42": {
+      "episodes": 2,
+      "matched": 2,
+      "rolled": 0,
+      "initial": 0
+    },
+    "210": {
+      "episodes": 3,
+      "matched": 3,
+      "rolled": 0,
+      "initial": 0
+    },
+    "214": {
+      "episodes": 1,
+      "matched": 1,
+      "rolled": 0,
+      "initial": 0
+    },
+    "69": {
+      "episodes": 4,
+      "matched": 4,
+      "rolled": 0,
+      "initial": 2
+    },
+    "206": {
+      "episodes": 1,
+      "matched": 1,
+      "rolled": 0,
+      "initial": 0
+    },
+    "192": {
+      "episodes": 1,
+      "matched": 1,
+      "rolled": 1,
+      "initial": 0
+    },
+    "3": {
+      "episodes": 6,
+      "matched": 5,
+      "rolled": 0,
+      "initial": 1
+    },
+    "140": {
+      "episodes": 5,
+      "matched": 4,
+      "rolled": 0,
+      "initial": 0
+    },
+    "44": {
+      "episodes": 2,
+      "matched": 2,
+      "rolled": 0,
+      "initial": 0
+    },
+    "118": {
+      "episodes": 3,
+      "matched": 3,
+      "rolled": 0,
+      "initial": 0
+    },
+    "54": {
+      "episodes": 2,
+      "matched": 2,
+      "rolled": 0,
+      "initial": 0
+    },
+    "238": {
+      "episodes": 1,
+      "matched": 0,
+      "rolled": 0,
+      "initial": 0
+    },
+    "182": {
+      "episodes": 1,
+      "matched": 0,
+      "rolled": 0,
+      "initial": 0
+    },
+    "243": {
+      "episodes": 3,
+      "matched": 3,
+      "rolled": 0,
+      "initial": 1
+    },
+    "16": {
+      "episodes": 3,
+      "matched": 3,
+      "rolled": 0,
+      "initial": 0
+    },
+    "247": {
+      "episodes": 1,
+      "matched": 0,
+      "rolled": 0,
+      "initial": 1
+    },
+    "228": {
+      "episodes": 1,
+      "matched": 1,
+      "rolled": 0,
+      "initial": 0
+    },
+    "21": {
+      "episodes": 1,
+      "matched": 1,
+      "rolled": 1,
+      "initial": 0
+    },
+    "134": {
+      "episodes": 1,
+      "matched": 1,
+      "rolled": 0,
+      "initial": 0
+    },
+    "170": {
+      "episodes": 1,
+      "matched": 1,
+      "rolled": 0,
+      "initial": 0
+    },
+    "190": {
+      "episodes": 2,
+      "matched": 2,
+      "rolled": 0,
+      "initial": 0
+    },
+    "87": {
+      "episodes": 1,
+      "matched": 1,
+      "rolled": 0,
+      "initial": 0
+    }
+  },
+  "heldout_by_revised_query": {
+    "False": {
+      "episodes": 624,
+      "matched": 539,
+      "rolled": 78,
+      "initial": 68
+    },
+    "True": {
+      "episodes": 400,
+      "matched": 344,
+      "rolled": 58,
+      "initial": 37
+    }
+  },
+  "observed_key_coverage": 256,
+  "queried_key_coverage": 251,
+  "source_snapshot_sha256": {
+    "scripts/train_memory_pilot.py": "9fd565ceedadf852b86d5462b3423324166009934fcebb439ad6aded018a0669",
+    "scripts/research_memory.py": "c129ff991eea1f6bf215eb8116f1b0e8b9b1f65c76b8f8988afc8a235bdd27ac",
+    "titans_pytorch/__init__.py": "b154ceb9152468861a6c513174b63ab35a979b55301c7cff275f47f1957e5fbe",
+    "titans_pytorch/implicit_mlp_attention.py": "a5ec0c11005f447fb3697f13cfa4f967ff342712fa154c1bc5e848490ef2f40c",
+    "titans_pytorch/mac_transformer.py": "3ba521375e92f661542792b7e04196e89c3a668ec5329eb8b31d4a5c2f96f38d",
+    "titans_pytorch/memory_models.py": "c271fd8bd9144a8559844594963f0ba4149b078d342fd90bb75ccff023b8e504",
+    "titans_pytorch/nested_attention.py": "361102a81ccd3f080f0d8f3401af1a3383cc28a3b34326daf7c740cbcc6894da",
+    "titans_pytorch/neural_memory.py": "c4a756d8d8257500d2da6e94473a0cd13e5ae4b517826cdd761dc500de468804",
+    "pyproject.toml": "daa0c8b7d63238c7439a50b0c5dc152d203bfb15b445aa8c0aebbd1b2d6d512b",
+    "requirements-lock.txt": "0021fd959cc013c08f41735d2d3d8b43e3f261dae8c0069f56d345a413340e17"
+  },
+  "input_sha256": {
+    "metadata.json": "e28c69a1e71232ac4ade94a8e1fe9aaf268179a522c273bcd39faecad989a1d8",
+    "training.csv": "9798e24e23ce5f9526fbb47c169f5ec4885fa6def9eaf2fae59379ca7169b22f",
+    "heldout.csv": "8c52fdd9e23d2eb2b3cdb57a864c6f1f625a4c01a5cb2624f31eb4f56d41e197",
+    "checkpoint.pt": "5aa4f8064c52d022415c9458f9ab4481acd6831195bfcb402b92e3f1d9c27b9b"
+  },
+  "model_inference_reexecuted": false,
+  "checks": [
+    "Prospective design and seed tuple match",
+    "Source and checkpoint hashes match",
+    "Checkpoint configuration, shapes, finite tensors and parameter counts match",
+    "Complete finite training trace and explicit curriculum/write-count agreement",
+    "Latest-value targets, delays and revision flags reconstructed",
+    "Own, rolled and initial-state prediction counts recomputed"
+  ],
+  "limits": [
+    "Saved control predictions are rescored; their forward passes are not rerun.",
+    "Passing the artifact audit establishes internal consistency, not adequate task learning or replay efficacy."
+  ],
+  "design_path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-pressure-2026-11-13\\design.json",
+  "design_sha256": "3ac06a68c113b932ef8061aff8777d088cac0072243588bad939fe156ae41da8",
+  "design_amendment_path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-pressure-2026-11-13\\training-amendment-2.json",
+  "design_amendment_sha256": "37b0dadcac37911fd2f52bd6dc6c4ac9a668c30f11e5088f9fa870e9853d9329",
+  "design_amendment": {
+    "parent_design": "design.json",
+    "amendment": "Add one unchanged-recipe training seed to measure initialization sensitivity",
+    "observed_failure": {
+      "run": "train-48101",
+      "status": "failed",
+      "last_finite_step": 139,
+      "error": "Nonfinite loss at step 140",
+      "context": "Loss remained around2.07 and accuracy around chance through step139; the failed run cannot establish replay efficacy. Its source, metadata, training trace and stderr are preserved."
+    },
+    "revised_training": {
+      "max_inner_lr": 0.01,
+      "curriculum": "16:100,64:100,256:200",
+      "steps": 400,
+      "batch_size": 64,
+      "heldout_episode_length": 256,
+      "nkeys": 256,
+      "nvals": 8,
+      "dim": 64,
+      "depth": 2,
+      "seeds": [
+        [
+          48101,
+          48102,
+          58101
+        ],
+        [
+          48103,
+          48104,
+          58103
+        ],
+        [
+          48105,
+          48106,
+          58105
+        ]
+      ],
+      "unchanged": "AdamW lr0.003, weight_decay0.01, outer_gradient_clip1, final checkpoint only, reset fast memory each episode",
+      "maximum_seconds_each": 900,
+      "selection": "Apply the same revised recipe to all three seeds. Retain both earlier checkpoints and all failures. The third seed does not replace a weak result or alter the original primary comparison."
+    },
+    "interpretation": "This amendment adds a third initialization to characterize training variability. Its recipe is identical to amendment1; it does not retest the causes of numerical instability. First-grid replay outcomes were already available, but second-grid pressure outcomes had not been inspected. The original two-seed continuation rule remains unchanged.",
+    "extension_context": "Seed 48101 completed with 88.28% heldout recall; seed 48103 had 35.9% training-batch accuracy at step350 when this extension was proposed and subsequently completed with34.77% heldout. Both are retained. Additional seed48105 uses the same400steps and3,788,800 training writes within the existing one-hour allocation.",
+    "created_utc": "2026-11-13T05:36:21.7023881Z",
+    "supersedes": "training-amendment-1.json",
+    "wording_corrected_before_third_launch": "2026-11-13T05:38:27.8886100Z"
+  },
+  "effective_training_design": {
+    "nkeys": 256,
+    "nvals": 8,
+    "dim": 64,
+    "depth": 2,
+    "expansion_factor": 2,
+    "max_inner_lr": 0.01,
+    "steps": 400,
+    "batch_size": 64,
+    "episode_length": 256,
+    "optimizer": "AdamW",
+    "lr": 0.003,
+    "weight_decay": 0.01,
+    "outer_gradient_clip": 1.0,
+    "seeds": [
+      [
+        48101,
+        48102,
+        58101
+      ],
+      [
+        48103,
+        48104,
+        58103
+      ],
+      [
+        48105,
+        48106,
+        58105
+      ]
+    ],
+    "heldout_episodes": 1024,
+    "max_seconds_per_run": 900,
+    "selection": "Final fixed-step checkpoint, no best-checkpoint selection. Preserve all failures. Shortest-pressure delay0 and heldout rolled/reset-memory controls diagnose training adequacy. If the first model is essentially untrained, record an explicit amendment before further training rather than interpreting replay efficacy.",
+    "curriculum": "16:100,64:100,256:200"
+  },
+  "audit_script_sha256": "a602dd8d96f991cb13826c403074b297cca88bc41d27dfbb8ed9f508b92c4e0f",
+  "audit_command": [
+    "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-test-env\\Scripts\\python.exe",
+    "outputs/clmm-pressure-2026-11-13/analysis/training_audit.py",
+    "--run",
+    "outputs/clmm-pressure-2026-11-13/train-curriculum-48105",
+    "--design-amendment",
+    "outputs/clmm-pressure-2026-11-13/training-amendment-2.json",
+    "--out",
+    "outputs/clmm-pressure-2026-11-13/analysis/training_audit_48105.json"
+  ]
+}

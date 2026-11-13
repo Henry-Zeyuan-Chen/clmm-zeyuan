@@ -1,0 +1,14 @@
+........................................................................ [ 79%]
+...................                                                      [100%]
+=============================== warnings summary ===============================
+../../depts/edu/users/zc2819/clmm/replay-2026-11-12/venv/lib/python3.11/site-packages/torch/jit/_script.py:1488
+../../depts/edu/users/zc2819/clmm/replay-2026-11-12/venv/lib/python3.11/site-packages/torch/jit/_script.py:1488
+  /insomnia001/depts/edu/users/zc2819/clmm/replay-2026-11-12/venv/lib/python3.11/site-packages/torch/jit/_script.py:1488: DeprecationWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+    warnings.warn(
+
+../../depts/edu/users/zc2819/clmm/replay-2026-11-12/venv/lib/python3.11/site-packages/torch/jit/_script.py:365: 14 warnings
+  /insomnia001/depts/edu/users/zc2819/clmm/replay-2026-11-12/venv/lib/python3.11/site-packages/torch/jit/_script.py:365: DeprecationWarning: `torch.jit.script_method` is deprecated. Please switch to `torch.compile` or `torch.export`.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+91 passed, 16 warnings in 19.07s

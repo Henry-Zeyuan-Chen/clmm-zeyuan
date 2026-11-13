@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "metadata_rows_compared_to_recording_reader": 1152,
+  "fact_counts": [
+    8,
+    16,
+    64,
+    256
+  ],
+  "arms": [
+    "online",
+    "repeat",
+    "continuous",
+    "periodic"
+  ],
+  "future_source_corruption_rejected": true,
+  "bootstrap_zero_denominators_checked": true,
+  "bootstrap_ratio_of_sums_checked": true,
+  "subgroup_ratio_of_sums_end_to_end_checked": true,
+  "neural_inference_or_training": false,
+  "analyzer_sha256": "f9fe919e83dfbc722e197c930cd79535ade546cfa8e2145c716aa969f7a6b49e"
+}

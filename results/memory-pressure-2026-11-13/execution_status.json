@@ -1,0 +1,18 @@
+{
+  "experiment": "memory-pressure-2026-11-13",
+  "completed_grids": [48101, 48103, 48105],
+  "preserved_failed_training": "train-48101: nonfinite loss at step 140",
+  "completed_training": ["train-curriculum-48101", "train-curriculum-48103", "train-curriculum-48105"],
+  "source_commit": "d93ac37dbdc7345cf8fc1434d42589cafef544e8",
+  "original_two_seed_continuation": "not met; third seed is supplementary and cannot replace an original seed",
+  "fresh_stream_confirmation": "not triggered; not run",
+  "auxiliary_decay_diagnostic": "planned but not run before allocation expired; no diagnostic results claimed",
+  "slurm_allocation": 13890691,
+  "allocation_final_state": "TIMEOUT after 01:00:10; third grid step completed with exit 0 before expiration",
+  "allocation_renewed": false,
+  "unrelated_jobs_modified": false,
+  "cluster_accounting": "cluster/slurm-accounting.txt",
+  "independent_prediction_reconstruction": "analysis/all-three/verification.json: passed for 294912 prediction rows",
+  "targeted_tests": "91 passed locally and on Insomnia; these are not the entire upstream tests/ suite",
+  "publication": "local task branch; no push, PR, or merge"
+}

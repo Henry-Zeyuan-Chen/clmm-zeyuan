@@ -1,0 +1,208 @@
+{
+  "status": "passed",
+  "runs": [
+    {
+      "run": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-pressure-2026-11-13\\grid-48101",
+      "status": "passed",
+      "prediction_rows_verified": 98304,
+      "trace_audits": [
+        {
+          "facts": 16,
+          "episodes": 256,
+          "observations_verified": 266752,
+          "sampled_pairs_verified": 262144,
+          "maximum_logical_pairs": 40
+        },
+        {
+          "facts": 64,
+          "episodes": 256,
+          "observations_verified": 279040,
+          "sampled_pairs_verified": 262144,
+          "maximum_logical_pairs": 40
+        },
+        {
+          "facts": 256,
+          "episodes": 256,
+          "observations_verified": 328192,
+          "sampled_pairs_verified": 262144,
+          "maximum_logical_pairs": 40
+        }
+      ],
+      "bootstrap_indices_sha256": "faa3bb019b0ad906f925c583c8583e711e71a4ed847a6a35c662087bcb94dfb9",
+      "repo_commit": "d93ac37dbdc7345cf8fc1434d42589cafef544e8",
+      "checkpoints": [
+        {
+          "index": 0,
+          "path": "/insomnia001/depts/edu/users/zc2819/clmm/pressure-2026-11-13/train-curriculum-48101/checkpoint.pt",
+          "sha256": "2e599d199ada31470ae14727e9a48608d8e52d56d7e41c33eb74047700478918",
+          "config": {
+            "dim": 64,
+            "depth": 2,
+            "expansion_factor": 2.0,
+            "init_adaptive_step_bias": 1.0,
+            "init_decay_bias": -4.0,
+            "max_inner_lr": 0.01,
+            "nkeys": 256,
+            "nvals": 8
+          },
+          "init_seed": 48101,
+          "train_seed": 48102,
+          "steps": 400,
+          "parameters": 62730,
+          "checkpoint_parameters_and_buffers_unchanged": true,
+          "cuda_peak_allocated_bytes": 115331072,
+          "cuda_peak_reserved_bytes": 136314880
+        }
+      ],
+      "input_sha256": {
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-pressure-2026-11-13\\grid-48101\\metadata.json": "0a3cb4d6608098523f3d4cba8d203cd30256f0295725b55e2b57d1141b640df1",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-pressure-2026-11-13\\grid-48101\\predictions.csv": "49457942b4b1c8ad2737f348d2aa068f2c94bd043af4ba116be5569d817348a4",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-pressure-2026-11-13\\grid-48101\\summary.csv": "ff5ad223ff514e49ee817bcdc29985e8f85a5dd434f8d92e323ec5e594256a42",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-pressure-2026-11-13\\grid-48101\\streams_K16.npz": "7b18237ce10d18ad800357d0aeaac0f11e5a5aa6da8c5ca1419879eb2bf345fb",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-pressure-2026-11-13\\grid-48101\\streams_K256.npz": "14a3ee1e0fb66aacb839d763cc9b7a8881bd6e98cb67bb37bed3db9a828e20e5",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-pressure-2026-11-13\\grid-48101\\streams_K64.npz": "518fd93e1a3e8a704f8029be734bbd17a9ba364649feb910f13b05a79662ef0f"
+      }
+    },
+    {
+      "run": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-pressure-2026-11-13\\grid-48103",
+      "status": "passed",
+      "prediction_rows_verified": 98304,
+      "trace_audits": [
+        {
+          "facts": 16,
+          "episodes": 256,
+          "observations_verified": 266752,
+          "sampled_pairs_verified": 262144,
+          "maximum_logical_pairs": 40
+        },
+        {
+          "facts": 64,
+          "episodes": 256,
+          "observations_verified": 279040,
+          "sampled_pairs_verified": 262144,
+          "maximum_logical_pairs": 40
+        },
+        {
+          "facts": 256,
+          "episodes": 256,
+          "observations_verified": 328192,
+          "sampled_pairs_verified": 262144,
+          "maximum_logical_pairs": 40
+        }
+      ],
+      "bootstrap_indices_sha256": "faa3bb019b0ad906f925c583c8583e711e71a4ed847a6a35c662087bcb94dfb9",
+      "repo_commit": "d93ac37dbdc7345cf8fc1434d42589cafef544e8",
+      "checkpoints": [
+        {
+          "index": 0,
+          "path": "/insomnia001/depts/edu/users/zc2819/clmm/pressure-2026-11-13/train-curriculum-48103/checkpoint.pt",
+          "sha256": "eb9297269a75858e07f219f65fd99454145eedf77abea8918a4537cd669e19fc",
+          "config": {
+            "dim": 64,
+            "depth": 2,
+            "expansion_factor": 2.0,
+            "init_adaptive_step_bias": 1.0,
+            "init_decay_bias": -4.0,
+            "max_inner_lr": 0.01,
+            "nkeys": 256,
+            "nvals": 8
+          },
+          "init_seed": 48103,
+          "train_seed": 48104,
+          "steps": 400,
+          "parameters": 62730,
+          "checkpoint_parameters_and_buffers_unchanged": true,
+          "cuda_peak_allocated_bytes": 115183616,
+          "cuda_peak_reserved_bytes": 136314880
+        }
+      ],
+      "input_sha256": {
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-pressure-2026-11-13\\grid-48103\\metadata.json": "7c21733a0fb55ce09b7175b65d3a62e9c2b07206efc8727ace1ff19de7e1a40c",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-pressure-2026-11-13\\grid-48103\\predictions.csv": "1f00980115e804ecbaeac9d1bd51729d3d042b8263c45eab8f3754e3af679d67",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-pressure-2026-11-13\\grid-48103\\summary.csv": "d481c02335d9539fa98bf8fb64cef05ea96d7d99a21734075cca1304e709735c",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-pressure-2026-11-13\\grid-48103\\streams_K16.npz": "7b18237ce10d18ad800357d0aeaac0f11e5a5aa6da8c5ca1419879eb2bf345fb",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-pressure-2026-11-13\\grid-48103\\streams_K256.npz": "14a3ee1e0fb66aacb839d763cc9b7a8881bd6e98cb67bb37bed3db9a828e20e5",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-pressure-2026-11-13\\grid-48103\\streams_K64.npz": "518fd93e1a3e8a704f8029be734bbd17a9ba364649feb910f13b05a79662ef0f"
+      }
+    },
+    {
+      "run": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-pressure-2026-11-13\\grid-48105",
+      "status": "passed",
+      "prediction_rows_verified": 98304,
+      "trace_audits": [
+        {
+          "facts": 16,
+          "episodes": 256,
+          "observations_verified": 266752,
+          "sampled_pairs_verified": 262144,
+          "maximum_logical_pairs": 40
+        },
+        {
+          "facts": 64,
+          "episodes": 256,
+          "observations_verified": 279040,
+          "sampled_pairs_verified": 262144,
+          "maximum_logical_pairs": 40
+        },
+        {
+          "facts": 256,
+          "episodes": 256,
+          "observations_verified": 328192,
+          "sampled_pairs_verified": 262144,
+          "maximum_logical_pairs": 40
+        }
+      ],
+      "bootstrap_indices_sha256": "faa3bb019b0ad906f925c583c8583e711e71a4ed847a6a35c662087bcb94dfb9",
+      "repo_commit": "d93ac37dbdc7345cf8fc1434d42589cafef544e8",
+      "checkpoints": [
+        {
+          "index": 0,
+          "path": "/insomnia001/depts/edu/users/zc2819/clmm/pressure-2026-11-13/train-curriculum-48105/checkpoint.pt",
+          "sha256": "5aa4f8064c52d022415c9458f9ab4481acd6831195bfcb402b92e3f1d9c27b9b",
+          "config": {
+            "dim": 64,
+            "depth": 2,
+            "expansion_factor": 2.0,
+            "init_adaptive_step_bias": 1.0,
+            "init_decay_bias": -4.0,
+            "max_inner_lr": 0.01,
+            "nkeys": 256,
+            "nvals": 8
+          },
+          "init_seed": 48105,
+          "train_seed": 48106,
+          "steps": 400,
+          "parameters": 62730,
+          "checkpoint_parameters_and_buffers_unchanged": true,
+          "cuda_peak_allocated_bytes": 115183616,
+          "cuda_peak_reserved_bytes": 136314880
+        }
+      ],
+      "input_sha256": {
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-pressure-2026-11-13\\grid-48105\\metadata.json": "0eaf5074e11c3c6878289f671531643929406c46e3435645dde86d4c83abf792",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-pressure-2026-11-13\\grid-48105\\predictions.csv": "6850cf24d88e98951ac1b734a3311d35bb4a485ebefa556a24388257b99333c9",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-pressure-2026-11-13\\grid-48105\\summary.csv": "d9acf59038412e1f6961308da1001417aadbf82baa7650316d15f47b11b0cfa9",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-pressure-2026-11-13\\grid-48105\\streams_K16.npz": "7b18237ce10d18ad800357d0aeaac0f11e5a5aa6da8c5ca1419879eb2bf345fb",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-pressure-2026-11-13\\grid-48105\\streams_K256.npz": "14a3ee1e0fb66aacb839d763cc9b7a8881bd6e98cb67bb37bed3db9a828e20e5",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-pressure-2026-11-13\\grid-48105\\streams_K64.npz": "518fd93e1a3e8a704f8029be734bbd17a9ba364649feb910f13b05a79662ef0f"
+      }
+    }
+  ],
+  "design_sha256": "3ac06a68c113b932ef8061aff8777d088cac0072243588bad939fe156ae41da8",
+  "training_amendment_path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-pressure-2026-11-13\\training-amendment-2.json",
+  "training_amendment_sha256": "37b0dadcac37911fd2f52bd6dc6c4ac9a668c30f11e5088f9fa870e9853d9329",
+  "analysis_script_sha256": "e89c3198b0f0ab4580ad1c2740686f08c4e02314c6600ed884f3b04617a1a542",
+  "numpy": "2.5.4",
+  "bootstrap_seed": 78111,
+  "bootstrap_draws": 5000,
+  "bootstrap_unit": "Paired episode; resampled numerator sum divided by eligible-query denominator sum.",
+  "empty_denominator_handling": "Point estimate undefined when no eligible queries. Bootstrap draws with zero eligibility remain undefined; counts of valid/empty draws are saved.",
+  "interval": "Percentile95%, conditional on each checkpoint, unadjusted exploratory comparisons.",
+  "limitations": [
+    "Logical reservoir capacity40; evaluator traces are outside the model query path.",
+    "Residency and prior selection are descriptive shared strata.",
+    "Stable/revised initial ticket multiplicities differ.",
+    "Shared episodes are not pooled across checkpoints.",
+    "Trace and metric reconstruction does not rerun neural inference."
+  ]
+}

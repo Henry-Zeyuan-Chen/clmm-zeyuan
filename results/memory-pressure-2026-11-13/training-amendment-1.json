@@ -1,0 +1,20 @@
+{
+  "parent_design": "design.json",
+  "amendment": "numerical and training-adequacy recovery before pressure outcomes",
+  "observed_failure": {
+    "run": "train-48101", "status": "failed", "last_finite_step": 139,
+    "error": "Nonfinite loss at step 140",
+    "context": "Loss remained around2.07 and accuracy around chance through step139; the failed run cannot establish replay efficacy. Its source, metadata, training trace and stderr are preserved."
+  },
+  "revised_training": {
+    "max_inner_lr": 0.01,
+    "curriculum": "16:100,64:100,256:200",
+    "steps": 400, "batch_size": 64, "heldout_episode_length": 256,
+    "nkeys": 256, "nvals": 8, "dim": 64, "depth": 2,
+    "seeds": [[48101,48102,58101],[48103,48104,58103]],
+    "unchanged": "AdamW lr0.003, weight_decay0.01, outer_gradient_clip1, final checkpoint only, reset fast memory each episode",
+    "maximum_seconds_each": 900,
+    "selection": "Apply the same revised recipe to both seeds. Do not select a best intermediate checkpoint. Retain the initial failed recipe as a separate run."
+  },
+  "interpretation": "This changes both the cap and training curriculum to obtain a usable baseline. It is not an isolated test of why instability occurred. Within-checkpoint replay comparisons retain the original observation/update budget matching. No pressure results were available when this amendment was made."
+}

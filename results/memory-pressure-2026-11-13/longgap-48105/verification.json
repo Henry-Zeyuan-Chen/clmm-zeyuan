@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "analysis_status": "posthoc exploratory",
+  "run": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-pressure-2026-11-13\\grid-48105",
+  "source_audit_sha256": "87526ed30e90760da0f6d0bb94e6c379c6d2992652a5ad2ce0093bc977f35f8d",
+  "source_predictions_sha256": "6850cf24d88e98951ac1b734a3311d35bb4a485ebefa556a24388257b99333c9",
+  "analysis_script_sha256": "6b0ed78e0b7b22f376cb64eeaf204c74306868c582b0f721599ed7b18419eab5",
+  "posthoc_design_sha256": "115dd7acc023b82117bdd5619f70be9ab0353502119b59e482c36c235cd0d8b0",
+  "bootstrap_draws": 5000,
+  "bootstrap_seed": 78111,
+  "bootstrap_indices_sha256": "faa3bb019b0ad906f925c583c8583e711e71a4ed847a6a35c662087bcb94dfb9",
+  "same_eligible_query_set_and_gaps_across_arms": true,
+  "original_primary_untouched": true,
+  "interpretation": "At least64 observations since the end of the last block selecting the target; this is a shared selection-history stratum.",
+  "limitations": [
+    "Subgroup was chosen after observing the original primary result.",
+    "Selection history is descriptive and correlated with target/episode properties.",
+    "Intervals are fixed-checkpoint paired episode percentiles and are unadjusted."
+  ]
+}

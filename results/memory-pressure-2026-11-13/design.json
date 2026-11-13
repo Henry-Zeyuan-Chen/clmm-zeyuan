@@ -1,0 +1,44 @@
+{
+  "experiment_id": "memory-pressure-2026-11-13",
+  "stage": "prospective exploratory pilot; written before training or pressure outcomes",
+  "question": "Does bounded replay improve old-fact retention over spending the same auxiliary update budget on the current observation?",
+  "training": {
+    "nkeys": 256, "nvals": 8, "dim": 64, "depth": 2, "expansion_factor": 2,
+    "max_inner_lr": 0.1, "steps": 400, "batch_size": 64, "episode_length": 256,
+    "optimizer": "AdamW", "lr": 0.003, "weight_decay": 0.01, "outer_gradient_clip": 1.0,
+    "seeds": [[48101, 48102, 58101], [48103, 48104, 58103]],
+    "heldout_episodes": 1024, "max_seconds_per_run": 900,
+    "selection": "Final fixed-step checkpoint, no best-checkpoint selection. Preserve all failures. Shortest-pressure delay0 and heldout rolled/reset-memory controls diagnose training adequacy. If the first model is essentially untrained, record an explicit amendment before further training rather than interpreting replay efficacy."
+  },
+  "evaluation": {
+    "facts": [16, 64, 256], "delays": [0, 64, 256, 1024],
+    "episodes_per_fact_count_per_checkpoint": 256, "seed": 58111, "batch_size": 64,
+    "prefill": "K distinct uniformly sampled keys with random values. The last four are two stable and two revised targets. Append a different value for each revised key. Every arm receives identical K+2 ordinary prefill writes.",
+    "delay_stream": "Uniform draws from the other K-4 keys with fixed final labels. All K facts are already observed; this isolates pressure and rehearsal from stale-label conflicts. Recent-key recall is not new-fact acquisition.",
+    "queries": "Two stable, two revised targets, and four most recent distinct non-target keys; reads consume only fast weights. Query after clearing pending snapshot. Track actual observation/update age, residency, auxiliary exposure, and shared replay selection history.",
+    "reservoir": "Algorithm R over observation events, 32 working pairs; update all resident copies of a key on its observation. Before each block of 8 new observations sample 8 distinct slots. Both replay schedules use the same frozen tuples. The explicit maximum logical capacity is 40 pairs (32 working plus 8 snapshot), with no snapshot retained at queries.",
+    "paired_schedule": "Admission and sample decisions generated on CPU independently of model outputs and shared across arms/checkpoints. Online and repeat have identical shadow reservoir residency for subgroup comparisons.",
+    "arms": {
+      "online": "One ordinary write per observation; unmatched lower-update anchor",
+      "repeat": "One ordinary write plus an immediate auxiliary write of the same newest fact",
+      "continuous": "One ordinary write plus one sampled reservoir auxiliary write per observation",
+      "periodic": "Eight ordinary writes followed by the same eight sampled reservoir auxiliary writes"
+    },
+    "aux_decay_scale": 0,
+    "budget": "The three auxiliary arms have identical observation access, model, 32+8-pair allowance, and K+2+2*delay neural-memory updates. All auxiliary writes disable decay; observation writes use learned decay. This is update-count matching, not equal measured wall-clock time."
+  },
+  "analysis": {
+    "primary_cell": {"facts": 64, "delay": 256},
+    "primary_comparison": "periodic minus repeat, old targets that are nonresident at query but selected earlier by the shared replay schedule",
+    "secondary": "Stable/revised and all-old retention, recent-key recall, other grid cells, continuous-vs-repeat and periodic-vs-continuous, resident/nonresident-never-selected strata",
+    "unit": "Paired episode; resample whole episodes and recompute numerator/eligible-query denominator for subgroups. Keep fixed-checkpoint intervals separate; no pooling training seeds as independent query rows.",
+    "interval": "5000 paired episode bootstrap draws, seed 78111; descriptive 95% intervals, exploratory comparisons rather than family-wise-confirmatory significance claims",
+    "continuation_signal": "At least 5 percentage points primary retention gain with positive paired interval and recent-key recall loss at most 2 points. Seek consistency across both fixed checkpoints. If present, run a fresh 512-episode confirmation at the primary cell (seed58121), preserving all original grid outcomes. No silent replacement of a failed primary cell with a best-looking cell.",
+    "interpretation": "A resident-only gain indicates rehearsal. A gain against online that disappears against repeat does not establish value from replay selection. Nonresident selected/never-selected strata describe replay history; they are not randomized causal mechanisms. Revised targets have two initial observation events, stable targets one, so their raw gap does not isolate revision difficulty."
+  },
+  "resources": {
+    "cluster": "Insomnia", "allocation": 13890691, "maximum": "one GPU, four CPUs, 16GB RAM, one hour; preserve unrelated job13890629",
+    "environment": "/insomnia001/depts/edu/users/zc2819/clmm/replay-2026-11-12/venv",
+    "failure_stop": "Nonfinite values, failed invariant, or incomplete training budget: preserve run and diagnose before interpreting. Do not renew allocation automatically."
+  }
+}

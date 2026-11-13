@@ -1,0 +1,17 @@
+JobID|JobName|State|Elapsed|ExitCode|AllocTRES
+13890691|codex-dev-gpu|TIMEOUT|01:00:10|0:0|billing=4,cpu=4,gres/gpu:a6000=1,gres/gpu=1,mem=16G,node=1
+13890691.batch|batch|CANCELLED|01:00:10|0:15|cpu=4,gres/gpu:a6000=1,gres/gpu=1,mem=16G,node=1
+13890691.extern|extern|COMPLETED|01:00:10|0:0|billing=4,cpu=4,gres/gpu:a6000=1,gres/gpu=1,mem=16G,node=1
+13890691.0|python|FAILED|00:06:21|1:0|cpu=4,gres/gpu:a6000=1,gres/gpu=1,mem=16G,node=1
+13890691.1|ps|COMPLETED|00:00:00|0:0|cpu=1,gres/gpu:a6000=1,gres/gpu=1,mem=16G,node=1
+13890691.2|nvidia-smi|COMPLETED|00:00:00|0:0|cpu=1,gres/gpu:a6000=1,gres/gpu=1,mem=16G,node=1
+13890691.3|ps|COMPLETED|00:00:00|0:0|cpu=1,gres/gpu:a6000=1,gres/gpu=1,mem=16G,node=1
+13890691.4|ps|COMPLETED|00:00:00|0:0|cpu=1,gres/gpu:a6000=1,gres/gpu=1,mem=16G,node=1
+13890691.5|python|COMPLETED|00:05:41|0:0|cpu=4,gres/gpu:a6000=1,gres/gpu=1,mem=16G,node=1
+13890691.6|python|COMPLETED|00:00:24|0:0|cpu=1,gres/gpu:a6000=1,gres/gpu=1,mem=16G,node=1
+13890691.7|bash|COMPLETED|00:05:19|0:0|cpu=4,gres/gpu:a6000=1,gres/gpu=1,mem=16G,node=1
+13890691.8|bash|COMPLETED|00:00:09|0:0|cpu=1,gres/gpu:a6000=1,gres/gpu=1,mem=16G,node=1
+13890691.9|python|COMPLETED|00:05:37|0:0|cpu=4,gres/gpu:a6000=1,gres/gpu=1,mem=16G,node=1
+13890691.10|bash|COMPLETED|00:05:13|0:0|cpu=4,gres/gpu:a6000=1,gres/gpu=1,mem=16G,node=1
+13890691.11|python|COMPLETED|00:05:30|0:0|cpu=4,gres/gpu:a6000=1,gres/gpu=1,mem=16G,node=1
+13890691.12|bash|COMPLETED|00:05:04|0:0|cpu=4,gres/gpu:a6000=1,gres/gpu=1,mem=16G,node=1

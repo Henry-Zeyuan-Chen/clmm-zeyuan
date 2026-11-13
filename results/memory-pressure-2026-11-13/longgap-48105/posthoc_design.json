@@ -1,0 +1,33 @@
+{
+  "status": "posthoc exploratory check requested after viewing original grid primary",
+  "recorded_utc": "2026-11-13T16:44:01.424360+00:00",
+  "run": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-pressure-2026-11-13\\grid-48105",
+  "cases": [
+    {
+      "facts": 64,
+      "delay": 256
+    },
+    {
+      "facts": 16,
+      "delay": 1024
+    },
+    {
+      "facts": 64,
+      "delay": 1024
+    },
+    {
+      "facts": 256,
+      "delay": 1024
+    }
+  ],
+  "eligibility": "Old target; working_resident=False; shadow_ever_selected_for_replay=True; delay-(last_shadow_selection_block+1)*block_size >=64.",
+  "minimum_observations_since_last_selected_block": 64,
+  "comparisons": [
+    "periodic-repeat",
+    "periodic-online"
+  ],
+  "bootstrap_draws": 5000,
+  "bootstrap_seed": 78111,
+  "unit": "Paired episode ratio of correct/eligible query sums",
+  "original_primary": "Original primary definition, results and continuation signal remain unchanged."
+}

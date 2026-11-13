@@ -1,0 +1,47 @@
+{
+  "parent_design": "design.json",
+  "amendment": "Add one unchanged-recipe training seed to measure initialization sensitivity",
+  "observed_failure": {
+    "run": "train-48101",
+    "status": "failed",
+    "last_finite_step": 139,
+    "error": "Nonfinite loss at step 140",
+    "context": "Loss remained around2.07 and accuracy around chance through step139; the failed run cannot establish replay efficacy. Its source, metadata, training trace and stderr are preserved."
+  },
+  "revised_training": {
+    "max_inner_lr": 0.01,
+    "curriculum": "16:100,64:100,256:200",
+    "steps": 400,
+    "batch_size": 64,
+    "heldout_episode_length": 256,
+    "nkeys": 256,
+    "nvals": 8,
+    "dim": 64,
+    "depth": 2,
+    "seeds": [
+      [
+        48101,
+        48102,
+        58101
+      ],
+      [
+        48103,
+        48104,
+        58103
+      ],
+      [
+        48105,
+        48106,
+        58105
+      ]
+    ],
+    "unchanged": "AdamW lr0.003, weight_decay0.01, outer_gradient_clip1, final checkpoint only, reset fast memory each episode",
+    "maximum_seconds_each": 900,
+    "selection": "Apply the same revised recipe to all three seeds. Retain both earlier checkpoints and all failures. The third seed does not replace a weak result or alter the original primary comparison."
+  },
+  "interpretation": "This amendment adds a third initialization to characterize training variability. Its recipe is identical to amendment1; it does not retest the causes of numerical instability. First-grid replay outcomes were already available, but second-grid pressure outcomes had not been inspected. The original two-seed continuation rule remains unchanged.",
+  "extension_context": "Seed 48101 completed with 88.28% heldout recall; seed 48103 had 35.9% training-batch accuracy at step350 when this extension was proposed and subsequently completed with34.77% heldout. Both are retained. Additional seed48105 uses the same400steps and3,788,800 training writes within the existing one-hour allocation.",
+  "created_utc": "2026-11-13T05:36:21.7023881Z",
+  "supersedes": "training-amendment-1.json",
+  "wording_corrected_before_third_launch": "2026-11-13T05:38:27.8886100Z"
+}

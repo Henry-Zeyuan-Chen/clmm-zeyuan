@@ -8,6 +8,8 @@ We build on lucidrains' [titans-pytorch](https://github.com/lucidrains/titans-py
 
 We are working through [docs/ROADMAP.md](docs/ROADMAP.md). Until the `paper-baseline-v1` tag exists, the paper-style models are in progress.
 
+Local exploratory evidence on this branch: [memory-pressure experiments](docs/MEMORY_PRESSURE.md) extend the [replay pilot](docs/REPLAY_PILOT.md) with matched update budgets, three training seeds, and longer retention delays. These experiments do not mark the paper-style baseline complete.
+
 ## Getting started
 
 Follow [SETUP.md](SETUP.md). After pulling a change to `pyproject.toml`, rerun `pip install -e ".[test]"`.

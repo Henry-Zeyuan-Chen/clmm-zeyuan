@@ -1,0 +1,8 @@
+{
+  "status": "Posthoc exploratory addition after inspecting grid48101; original primary unchanged",
+  "reason": "A target absent from the working reservoir at query might have been replayed from the just-discarded snapshot. Buffer absence alone does not establish a long retention gap after rehearsal.",
+  "stratum": "Old target is nonresident, was selected earlier by the shared shadow replay schedule, and delay-(last_shadow_selection_block+1)*block_size >=64 observations.",
+  "cases": [{"facts":64,"delay":256},{"facts":16,"delay":1024},{"facts":64,"delay":1024},{"facts":256,"delay":1024}],
+  "analysis": "Report eligible queries and episodes; same paired episode ratio bootstrap as primary, each checkpoint separately. Compare periodic with repeat and online, and show continuous where available.",
+  "confirmation": "If the original two-seed continuation rule triggers a fresh-stream confirmation, assess this as a declared secondary endpoint on those unseen streams. It does not replace the original primary endpoint or change its trigger."
+}
