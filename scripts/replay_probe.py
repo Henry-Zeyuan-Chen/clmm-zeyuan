@@ -16,6 +16,7 @@ import subprocess
 import sys
 import time
 from collections import defaultdict
+from contextlib import ExitStack
 from pathlib import Path
 
 import torch
@@ -94,17 +95,49 @@ def read_frozen(model, queries, fast):
     return predictions
 
 
+def select_recent(keys, values, observations, count=4):
+    """Latest distinct non-target keys and labels, using the observed prefix only."""
+    if not 0 < observations <= keys.shape[1] or count < 1:
+        raise ValueError("Invalid observation boundary or recent-query count")
+    selected_keys, selected_values, selected_indices = [], [], []
+    for episode_keys, episode_values in zip(
+            keys[:, :observations].tolist(), values[:, :observations].tolist()):
+        excluded = {episode_keys[0], episode_keys[1]}
+        positions = []
+        for index in range(observations - 1, -1, -1):
+            key = episode_keys[index]
+            if key in excluded:
+                continue
+            excluded.add(key)
+            positions.append(index)
+            if len(positions) == count:
+                break
+        if len(positions) != count:
+            raise ValueError("Observed prefix has fewer than four distinct non-target keys")
+        selected_keys.append([episode_keys[index] for index in positions])
+        selected_values.append([episode_values[index] for index in positions])
+        selected_indices.append(positions)
+    return tuple(torch.tensor(data, device=keys.device, dtype=torch.long)
+                 for data in (selected_keys, selected_values, selected_indices))
+
+
 @torch.no_grad()
-def evaluate_batch(model, keys, values, algorithm, *, replay_decay_scale=1):
+def evaluate_batch(model, keys, values, algorithm, *, replay_decay_scale=1, recent_queries=0):
     """Evaluate one paired stream batch, resetting fast weights for this arm."""
     if replay_decay_scale not in (0, 1):
         raise ValueError("replay_decay_scale must be 0 or 1")
+    if recent_queries not in (0, 4):
+        raise ValueError("recent_queries must be 0 or 4")
     if keys.shape != values.shape or keys.shape[1] != PREFILL + BLOCKS * BLOCK_SIZE:
         raise ValueError("Expected matching [batch,72] key/value streams")
     fast = model.memory.init_weights(keys.shape[0])
     past = None
     writes = replays = observations = 0
     last_target_write = {}
+    if recent_queries:
+        last_key_write = torch.full((keys.shape[0], model.key.num_embeddings), -1,
+                                    dtype=torch.long, device=keys.device)
+        last_key_source = torch.full_like(last_key_write, -1)
     rows = []
 
     def write(index, kind):
@@ -130,6 +163,9 @@ def evaluate_batch(model, keys, values, algorithm, *, replay_decay_scale=1):
         writes += 1
         replays += kind == "replay"
         observations += kind == "observation"
+        if recent_queries:
+            last_key_write.scatter_(1, keys[:, index:index + 1], writes - 1)
+            last_key_source.scatter_(1, keys[:, index:index + 1], index)
         if index in (0, 4):
             last_target_write["revised"] = writes - 1
         elif index == 1:
@@ -179,6 +215,37 @@ def evaluate_batch(model, keys, values, algorithm, *, replay_decay_scale=1):
                     future_memory_writes_since_last_target=writes - 1 - last_target_write[condition],
                     target_absent_from_fifo=True, target_absent_from_bank=True,
                     pending_replays=0, local_attention_tokens=0))
+        if recent_queries:
+            query, target, observed_index = select_recent(keys, values, observations, recent_queries)
+            latest_write = last_key_write.gather(1, query)
+            latest_source = last_key_source.gather(1, query)
+            latest_written_value = values.gather(1, latest_source)
+            in_bank = (query[:, :, None] == keys[:, None, list(bank)]).any(dim=-1)
+            in_fifo = (query[:, :, None] == keys[:, None, observations - BLOCK_SIZE:observations]).any(dim=-1)
+            predicted = torch.stack(read_frozen(model, query.unbind(dim=1), fast), dim=1)
+            assert writes == before_read
+            query, target, observed_index, latest_write, latest_source, latest_written_value, in_bank, in_fifo, predicted = (
+                tensor.tolist() for tensor in (query, target, observed_index, latest_write,
+                                              latest_source, latest_written_value, in_bank, in_fifo, predicted))
+            for episode in range(keys.shape[0]):
+                for rank in range(recent_queries):
+                    rows.append(dict(
+                        episode=episode, algorithm=algorithm, block=block, condition="recent",
+                        query_rank=rank, target_key=query[episode][rank],
+                        target_value=target[episode][rank], old_value="",
+                        prediction=predicted[episode][rank],
+                        correct=int(predicted[episode][rank] == target[episode][rank]), stale_old="",
+                        future_observations=observations - 1 - observed_index[episode][rank],
+                        total_observations=observations, total_memory_writes=writes,
+                        total_replay_writes=replays,
+                        last_target_observation_index=observed_index[episode][rank],
+                        last_target_memory_write_index=latest_write[episode][rank],
+                        future_memory_writes_since_last_target=writes - 1 - latest_write[episode][rank],
+                        last_memory_write_source_observation_index=latest_source[episode][rank],
+                        last_memory_write_value=latest_written_value[episode][rank],
+                        target_absent_from_fifo=not in_fifo[episode][rank],
+                        target_absent_from_bank=not in_bank[episode][rank],
+                        pending_replays=0, local_attention_tokens=0))
     return rows
 
 
@@ -260,7 +327,7 @@ def run(args):
                     repo / "titans_pytorch" / "memory_models.py"]
     sources = {str(path): sha256(path) for path in source_paths}
     out.mkdir(parents=True, exist_ok=True)
-    for name in ("predictions.csv", "episodes.csv", "summary.csv", "metadata.json"):
+    for name in ("predictions.csv", "recent_predictions.csv", "episodes.csv", "summary.csv", "metadata.json"):
         if (out / name).exists():
             raise FileExistsError(f"Refusing to overwrite {out / name}")
     with (out / "episodes.csv").open("w", newline="", encoding="utf8") as handle:
@@ -270,8 +337,11 @@ def run(args):
             writer.writerow((episode, args.seed, " ".join(map(str, k)), " ".join(map(str, v))))
     counts = defaultdict(lambda: dict(n=0, correct=0, stale_old=0))
     checkpoint_reports = []
-    with (out / "predictions.csv").open("w", newline="", encoding="utf8") as handle:
+    with (out / "predictions.csv").open("w", newline="", encoding="utf8") as handle, ExitStack() as stack:
         writer = None
+        recent_writer = None
+        recent_handle = (stack.enter_context((out / "recent_predictions.csv").open(
+            "w", newline="", encoding="utf8")) if args.recent_queries else None)
         for checkpoint_index, path in enumerate(args.checkpoints):
             path = path.resolve()
             checkpoint = torch.load(path, map_location="cpu", weights_only=True)
@@ -298,7 +368,8 @@ def run(args):
                     synchronize(device)
                     arm_start = time.perf_counter()
                     rows = evaluate_batch(model, k, v, algorithm,
-                                          replay_decay_scale=args.replay_decay_scale)
+                                          replay_decay_scale=args.replay_decay_scale,
+                                          recent_queries=args.recent_queries)
                     synchronize(device)
                     elapsed_by_arm[algorithm] += time.perf_counter() - arm_start
                     for row in rows:
@@ -307,15 +378,23 @@ def run(args):
                                    checkpoint_path=str(path), checkpoint_sha256=checkpoint_hash,
                                    init_seed=checkpoint.get("init_seed", ""),
                                    train_seed=checkpoint.get("train_seed", ""), eval_seed=args.seed)
-                        if writer is None:
-                            writer = csv.DictWriter(handle, fieldnames=list(row))
-                            writer.writeheader()
-                        writer.writerow(row)
+                        if row["condition"] == "recent":
+                            if recent_writer is None:
+                                recent_writer = csv.DictWriter(recent_handle, fieldnames=list(row))
+                                recent_writer.writeheader()
+                            recent_writer.writerow(row)
+                        else:
+                            if writer is None:
+                                writer = csv.DictWriter(handle, fieldnames=list(row))
+                                writer.writeheader()
+                            writer.writerow(row)
                         count = counts[(checkpoint_index, algorithm, row["block"], row["condition"])]
                         count["n"] += 1
                         count["correct"] += row["correct"]
                         count["stale_old"] += row["stale_old"] if row["condition"] == "revised" else 0
                 handle.flush()
+                if recent_handle is not None:
+                    recent_handle.flush()
             synchronize(device)
             assert all(torch.equal(frozen_state[name], tensor) for name, tensor in model.state_dict().items()), (
                 "Evaluation mutated a checkpoint parameter or buffer")
@@ -338,7 +417,7 @@ def run(args):
         writer.writerow(("checkpoint_index", "algorithm", "block", "condition", "n",
                          "correct", "accuracy", "stale_old", "stale_rate"))
         for (checkpoint_index, algorithm, block, condition), count in sorted(counts.items()):
-            assert count["n"] == args.episodes
+            assert count["n"] == args.episodes * (args.recent_queries if condition == "recent" else 1)
             revised = condition == "revised"
             writer.writerow((checkpoint_index, algorithm, block, condition, count["n"],
                              count["correct"], count["correct"] / count["n"],
@@ -367,6 +446,10 @@ def run(args):
         replay_decay_scale=args.replay_decay_scale,
         replay_decay_intervention=("standard learned decay on all writes" if args.replay_decay_scale == 1
                                   else "replay writes only: decay logits forced to -inf, sigmoid decay=0; observation decay unchanged"),
+        recent_queries_per_episode=args.recent_queries,
+        recent_query_selection="Reverse observed prefix; four latest distinct keys excluding revised and stable targets; label is latest observed value",
+        recent_query_output="recent_predictions.csv" if args.recent_queries else None,
+        recent_query_inference_unit="Episode, not individual probe; four correlated probes per episode",
         no_checkpoint_training=True, checkpoints=checkpoint_reports,
         process_peak_rss_bytes=process_peak_rss_bytes(),
         elapsed_seconds_including_setup_io=time.perf_counter() - start,
@@ -395,6 +478,8 @@ def parse_args():
     parser.add_argument("--threads", type=int, default=1)
     parser.add_argument("--replay-decay-scale", type=int, choices=(0, 1), default=1,
                         help="1: standard decay; 0: disable forgetting on replay writes only")
+    parser.add_argument("--recent-queries", type=int, choices=(0, 4), default=0,
+                        help="4: also query four most recent distinct non-target keys; 0: disabled")
     return parser.parse_args()
 
 

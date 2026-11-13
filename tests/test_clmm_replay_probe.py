@@ -8,7 +8,7 @@ from torch import nn
 
 from scripts.replay_probe import (
     ALGORITHMS, EVAL_BLOCKS, assert_evicted, block_events, evaluate_batch,
-    make_episodes, read_frozen,
+    make_episodes, read_frozen, select_recent,
 )
 
 
@@ -181,3 +181,51 @@ def test_replay_decay_hook_is_removed_when_write_raises():
     assert torch.all(reader.memory.decays[-1] == 0)
     assert not reader.memory.to_decay_factor._forward_hooks
     torch.testing.assert_close(reader.memory.to_decay_factor(torch.zeros(1, 1)), torch.ones(1, 1))
+
+
+def test_recent_selection_uses_latest_observed_labels_excludes_targets_and_future():
+    keys = torch.tensor([[0, 1, 2, 3, 0, 4, 2, 5, 3, 2, 1, 0, 6, 7]])
+    values = torch.tensor([[0, 1, 2, 3, 4, 5, 6, 7, 1, 2, 3, 4, 5, 6]])
+    query, target, observed_index = select_recent(keys, values, observations=12)
+    assert query.tolist() == [[2, 3, 5, 4]]
+    assert target.tolist() == [[2, 1, 7, 5]]
+    assert observed_index.tolist() == [[9, 8, 7, 5]]
+    # Unseen future changes must have no effect on query selection or labels.
+    keys[:, 12:], values[:, 12:] = 2, 0
+    repeated = select_recent(keys, values, observations=12)
+    for actual, expected in zip(repeated, (query, target, observed_index)):
+        assert torch.equal(actual, expected)
+
+
+@pytest.mark.parametrize("algorithm", ALGORITHMS)
+@pytest.mark.parametrize("scale", (0, 1))
+def test_recent_readout_preserves_target_rows_and_audits_latest_write(algorithm, scale):
+    keys, values = make_episodes(3, 61)
+    baseline_reader, reader = CountingReader(), CountingReader()
+    baseline_reader.memory, reader.memory = DecayRecordingMemory(), DecayRecordingMemory()
+    baseline = evaluate_batch(baseline_reader, keys, values, algorithm, replay_decay_scale=scale)
+    rows = evaluate_batch(reader, keys, values, algorithm, replay_decay_scale=scale, recent_queries=4)
+    assert [row for row in rows if row["condition"] != "recent"] == baseline
+    recent = [row for row in rows if row["condition"] == "recent"]
+    assert len(recent) == 3 * len(EVAL_BLOCKS) * 4
+    assert len({(row["episode"], row["block"], row["query_rank"]) for row in recent}) == len(recent)
+    for row in recent:
+        episode, key, end = row["episode"], row["target_key"], row["total_observations"]
+        assert key not in (int(keys[episode, 0]), int(keys[episode, 1]))
+        last_observed = max(i for i in range(end) if keys[episode, i] == key)
+        assert row["target_value"] == values[episode, last_observed]
+        assert row["last_target_observation_index"] == last_observed
+        assert row["future_observations"] == end - 1 - last_observed
+        events = [("observation", i) for i in range(8)]
+        for block in range(1, row["block"] + 1):
+            events.extend(block_events(algorithm, block)[1])
+        last_write = max(i for i, (_, source) in enumerate(events) if keys[episode, source] == key)
+        source = events[last_write][1]
+        assert row["last_target_memory_write_index"] == last_write
+        assert row["last_memory_write_source_observation_index"] == source
+        assert row["last_memory_write_value"] == values[episode, source]
+        assert row["future_memory_writes_since_last_target"] == len(events) - 1 - last_write
+        bank = block_events(algorithm, row["block"])[0]
+        assert row["target_absent_from_bank"] == (key not in keys[episode, list(bank)].tolist())
+        assert row["target_absent_from_fifo"] == (key not in keys[episode, end - 8:end].tolist())
+    assert len(reader.memory.calls) == len(baseline_reader.memory.calls)
