@@ -1,0 +1,16 @@
+{
+  "scope": "Targeted reference, replay, symbolic-memory, pressure, shared-byte-model and runner checks; not the exhaustive upstream parametrized suite",
+  "adapter_and_existing_checks": {
+    "command": "python -m pytest tests/test_clmm_reference.py tests/test_clmm_replay_probe.py tests/test_clmm_research_memory.py tests/test_clmm_memory_pressure.py tests/test_clmm_pretrain.py -q",
+    "passed": 99, "seconds": 14.75, "log": "pytest-local.log"
+  },
+  "runner_checks": {
+    "command": "python -m pytest tests/test_clmm_pretrain_runner.py -q",
+    "passed": 3, "seconds": 11.25,
+    "capture": "Observed tool stdout; checks deadline stopping, finite-logit/infinite-loss rejection, and byte-weighted aggregation"
+  },
+  "cpu_smoke": "smoke-cpu-gzip completed two steps and all seven evaluation groups; exact reload and zero prefix leakage",
+  "preserved_initial_smoke_failure": "smoke-cpu failed before training because the initial loader expected an uncompressed corpus; raw/gzip support and a regression test were then added",
+  "source": "8cc20ac adds the tested adapter and runner; the final source-snapshot hash check was tightened before this commit without changing model computation",
+  "diagnostic_limits": "Passing checks establishes implementation contracts, not language or memory performance"
+}

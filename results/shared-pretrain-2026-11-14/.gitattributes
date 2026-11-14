@@ -1,0 +1,4 @@
+# Preserve recorded hashes across platforms.
+* -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+# Generated vector artwork retains the exact Matplotlib output bytes.
+*.svg -diff

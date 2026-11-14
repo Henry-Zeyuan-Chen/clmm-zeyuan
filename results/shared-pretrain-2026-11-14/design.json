@@ -1,0 +1,52 @@
+{
+  "experiment_id": "shared-pretrain-2026-11-14",
+  "stage": "prospective integration and feasibility pilot, written before new training outcomes",
+  "meeting_interpretation": "Use one small common lucidrains backbone and evaluation contract for sleep and Hebbian development. Defer reproducing every paper architecture. Speaker assignments and changed deadlines are unverified in the noisy transcript.",
+  "purpose": "Produce a reloadable complete sequence-model checkpoint and check whether its neural memory contributes useful context, separately from the earlier symbolic Reader mechanism experiments.",
+  "model": {
+    "implementation": "vendored lucidrains MemoryAsContextTransformer, unmodified; not claimed paper-faithful MAC",
+    "num_tokens": 256, "dim": 128, "depth": 2, "heads": 4, "dim_head": 32,
+    "segment_len": 32, "num_persist_mem_tokens": 4, "num_longterm_mem_tokens": 0,
+    "num_residual_streams": 1, "neural_memory_layers": [1,2],
+    "neural_memory_segment_len": 8, "neural_memory_batch_size": 32,
+    "memory_heads": 4, "memory_dim_head": 32, "memory_depth": 2,
+    "momentum": true, "qk_rmsnorm": true, "max_inner_lr": 0.01,
+    "implementation_choices": "Segmented attention; no accelerated scan/flex attention, weight residual, different layer views, lookahead values or spectral normalization. Exact resolved defaults are saved with each run."
+  },
+  "data": {
+    "source": "Existing repository data/enwik8.gz; full content hash recorded at load",
+    "tokenizer": "bytes 0..255, no external tokenizer",
+    "train_range": [0,90000000], "dev_range": [90000000,95000000], "reserved_test_range": [95000000,100000000],
+    "sampling": "Training start offsets sampled with replacement within train only. Dev:128 distinct nonoverlapping 1025-byte blocks on a seeded grid; 256-byte evaluation uses identical prefixes.",
+    "test_policy": "Reserved test region is not evaluated in this pilot. The dev region is development data, not an untouched final test."
+  },
+  "training": {
+    "initialization_seeds": [68101,68105], "shared_training_seed": 68102,
+    "steps": 400, "batch_size": 16, "sequence_length": 256,
+    "predicted_training_bytes_each": 1638400,
+    "optimizer": "AdamW", "lr": 0.0003, "weight_decay": 0.01, "gradient_clip": 1.0,
+    "schedule": "constant learning rate; no checkpoint selection by dev scores",
+    "selection": "Fixed final checkpoint; seed68101 is the primary candidate,68105 is a sensitivity run. Preserve all seeds/failures. No selecting the best of two.",
+    "fast_state": "Reset between independent windows, updated causally within each window; outer training differentiates through the implementation's memory updates. No cross-session carry claim."
+  },
+  "evaluation": {
+    "dev_seed": 68103, "windows": 128, "batch_size": 8, "lengths": [256,1024],
+    "metrics": "Per-window next-byte NLL sums and bytes, mean NLL, bits per byte; late positions256..1023 separately at length1024.",
+    "conditions": ["normal", "zero_memory_output", "reset_memory_at_segments"],
+    "initial": "Normal condition at length256 before training; same fixed development windows.",
+    "controls": "Zero read output is an inference ablation, not a separately trained attention baseline. Segment-reset keeps within-segment memory computation but removes memory from previous segments. Both preserve outer weights.",
+    "uncertainty": "5000 paired window bootstrap draws, seed68104, conditional on each fixed checkpoint and sampled corpus blocks; not training-seed or corpus-level uncertainty.",
+    "acceptance": "Complete finite fixed training budget, causal suffix checks, finite memory gradients, exact checkpoint reload predictions, dev256 NLL improvement>=0.2nats/byte. Memory-context usefulness additionally requires lower normal NLL than segment-reset on late long-window positions with positive paired95% lower bound for reset-minus-normal.",
+    "interpretation": "Falling language loss alone does not establish memory usefulness, factual retention, sleep benefits, or a fair comparison to a separately adapted Hebbian model. Do not scale if validity checks fail."
+  },
+  "separate_followup": {
+    "id": "weak-checkpoint auxiliary-decay sensitivity",
+    "protocol": "Run the unchanged previously recorded decay-diagnostic-design.json from November13 on checkpoint48103 using exact original development-stream prefixes and source commitd93ac37. This cannot change the original failed two-seed criterion."
+  },
+  "resources": {
+    "cluster": "Insomnia", "maximum": "one newly requested GPU allocation for at most one hour; release promptly after jobs; do not renew automatically",
+    "job": 13905404, "preserve_unrelated_job": 13905360,
+    "run_limit_seconds": 1200, "maximum_training_attempts": 2,
+    "stop": "Preserve failures on nonfinite values, invalid causality or split/checkpoint invariants, allocation expiry, or per-run deadline. A tiny smoke run checks feasibility before the fixed pilots."
+  }
+}

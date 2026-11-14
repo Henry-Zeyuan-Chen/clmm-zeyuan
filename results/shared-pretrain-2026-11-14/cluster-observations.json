@@ -1,0 +1,39 @@
+{
+  "job_id": 13905404,
+  "unrelated_job_preserved": 13905360,
+  "allocated": "one GPU, 4 CPUs, 16 GB, one hour; observed RUNNING on ins093",
+  "desktop_target_changed": false,
+  "attempts": [
+    {
+      "step": "13905404.0",
+      "output_directory": "decay-diagnostic-48103",
+      "observed_status": "interrupted",
+      "reason": "Observed filesystem I/O wait cxiWaitEventWait while loading Python bytecode; stopped this step after prolonged startup. Source snapshots and stream file exist, predictions.csv is empty. Original metadata still says running because the process was killed; it is not a completed run.",
+      "sacct_observed": "CANCELLED; start2026-11-14T01:05:54 end2026-11-14T01:11:16; exit0:9 (cluster local timestamps)",
+      "remote_log": "decay-startup-blocked.log"
+    },
+    {
+      "step": "13905404.5",
+      "observed_status": "failed before evaluation",
+      "reason": "Fresh node-local Python cache passed startup, but output-directory collision was correctly rejected. It did not overwrite the interrupted first attempt.",
+      "remote_log": "decay-diagnostic-48103.log"
+    },
+    {
+      "output_directory": "decay-diagnostic-48103-retry",
+      "observed_status": "unknown after SSH disconnect",
+      "runtime_limit": "External timeout900seconds plus30second termination grace",
+      "environment_adjustment": "PYTHONPYCACHEPREFIX=/tmp/clmm-13905404-pycache; same interpreter and model sources",
+      "remote_log": "decay-diagnostic-48103-retry.log"
+    }
+  ],
+  "connectivity": "SSH connection reset, followed by repeated 8-second connection timeouts; no remote completion or release inferred",
+  "language_model_pilots": "Neither full LM training seed was launched on the cluster; both use the recorded CPU execution amendment",
+  "final_allocation_status": "Unverified: the final reconnect attempt timed out. No successful cancellation or release was observed. The allocation was submitted with a one-hour Slurm wall-time limit; no extension was requested.",
+  "final_reconnect_check": {
+    "recorded_utc": "2026-11-14T10:31:13.636647+00:00",
+    "exit_code": 1,
+    "error": "ssh: connect to host 128.59.206.199 port 22: Connection timed out",
+    "remote_status_observed": false
+  },
+  "local_language_model_outcome": "Both fixed CPU pilots completed all 400 steps and passed the independent saved-artifact audit. Remote diagnostic results are excluded."
+}

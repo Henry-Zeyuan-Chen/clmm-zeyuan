@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "check": "training target crosses split",
+      "rejected": true,
+      "message": "Training target crosses a split"
+    },
+    {
+      "check": "summary sum disagrees with raw rows",
+      "rejected": true,
+      "message": "summary.json.nll_sum: 2895.743814229965 != 2894.743814229965"
+    },
+    {
+      "check": "nonfinite checkpoint with updated matching hash",
+      "rejected": true,
+      "message": "Nonfinite checkpoint state"
+    },
+    {
+      "check": "captured source hash changed",
+      "rejected": true,
+      "message": "Captured source hash mismatch: scripts/train_shared_byte_lm.py"
+    }
+  ],
+  "restored_fixture_valid": true,
+  "fixture": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-shared-pretrain-2026-11-14\\analysis\\negative-fixture-c862f72d",
+  "fixture_note": "Copy of two-step smoke retained only for negative-check reproducibility; not a training run.",
+  "analyzer_sha256": "dc2dcf621c1806d290b359c5efff931ab5ab51029ba30ddfad69e0f0d96b0c02",
+  "test_script_sha256": "dc08080b6e876e015aa783ac35e273cfc0c972c7f5fce9c0fa0c87e797604deb",
+  "neural_inference_rerun": false
+}

@@ -2,6 +2,8 @@
 
 **Goal.** Before we start our modification, we will have a tested, paper-faithful set of Titans models (MAC, MAG, MAL, LMM) and same-codebase baselines, frozen under the tag `paper-baseline-v1`, with every deviation from the paper written down. We compare all of our modification results against that tag.
 
+**Current working scope, November 14.** Following the supplied group-sync discussion, the immediate local milestone is one small, tested lucidrains-based sequence model and shared training/evaluation contract for both modification tracks. See [SHARED_PRETRAIN.md](SHARED_PRETRAIN.md). Full paper-style MAC/MAG/MAL/LMM reproduction below is deferred; these checkboxes and the `paper-baseline-v1` tag are not claimed complete. Experimental defaults remain distinct from reviewed team decisions in the ambiguity register.
+
 **Principle.** We follow the paper wherever it is explicit, use our [ambiguity register](ambiguity-register.md) decisions wherever it is silent, and depart from the literal equations only where they would let a token see later tokens. We record every departure in `docs/DEVIATIONS.md` with its register row ID.
 
 **How we use this file.** Each unchecked task gets a GitHub Issue with one owner. We work on the branch named in parentheses, and tick the box in the pull request that finishes the task.

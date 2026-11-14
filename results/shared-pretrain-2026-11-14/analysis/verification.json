@@ -1,0 +1,182 @@
+{
+  "status": "passed",
+  "mode": "full pilot",
+  "runs": [
+    {
+      "run": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-shared-pretrain-2026-11-14\\lm-68101",
+      "init_seed": 68101,
+      "status": "passed",
+      "analysis_mode": "full pilot",
+      "completed_steps": 400,
+      "predicted_training_bytes": 1638400,
+      "dev_windows": 128,
+      "dev_rows": 896,
+      "checkpoint_sha256": "a07762534f0b6311ec68c08b0d9f9c0ce74ec71577138eb13279a4a5dffbb24d",
+      "source_commit": "8cc20aca061bae5bcbe85e5740e62d39a88a7572",
+      "decoded_corpus_and_window_tokens_verified": true,
+      "all_saved_training_and_eval_offsets_exclude_test": true,
+      "saved_sources_and_checkpoint_tensors_verified": true,
+      "raw_summary_recomputation_passed": true,
+      "runtime_reported_checks": {
+        "exact_reload": 0.0,
+        "suffix_causality": 0.0,
+        "outer_parameters_unchanged": true,
+        "memory_gradient_observed": true
+      },
+      "runtime_checks_independently_rerun": false,
+      "sampling_reconstruction": "Offset bounds/grid/content verified; CPU RNG sequence not regenerated across Torch versions. Shared saved arrays are compared across runs.",
+      "training_environment": {
+        "python": "3.13.3 (tags/v3.13.3:6280bb5, Apr  8 2025, 14:47:33) [MSC v.1943 64 bit (AMD64)]",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "torch": "2.15.0+cpu",
+        "cuda": null,
+        "device": "cpu",
+        "device_name": "AMD64 Family 25 Model 117 Stepping 2, AuthenticAMD",
+        "numpy": "2.5.4",
+        "dtype": "float32",
+        "deterministic_algorithms": true,
+        "tf32": false,
+        "cublas_workspace_config": ":4096:8",
+        "packages": {
+          "einops": "0.8.2",
+          "einx": "0.4.3",
+          "tensordict": "0.15.5",
+          "x-transformers": "2.31.12",
+          "assoc-scan": "0.0.6",
+          "hyper-connections": "0.4.11"
+        }
+      },
+      "input_sha256": {
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-shared-pretrain-2026-11-14\\lm-68101\\metadata.json": "056ade95d73d946319e38b2034cbfaaff48dd15e4dde30354d14125e23611e4e",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-shared-pretrain-2026-11-14\\lm-68101\\design.json": "7275dab943328c5c8445219719b8a825492d29377c7f658ce8e9894152dd2a1c",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-shared-pretrain-2026-11-14\\lm-68101\\training.csv": "2f88fe9ac1d57abecf5229beca87c79e7ec214e37e595a1d2f35071bb974fd88",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-shared-pretrain-2026-11-14\\lm-68101\\training_offsets.npy": "b95a3657a8b50ce33a7e4bdd4454a1b881594673ff98f00f7f730f0e9df71558",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-shared-pretrain-2026-11-14\\lm-68101\\dev_windows.npz": "9df6e251058f6f598998a1e6f34a5b9e8a55ddac344cfd46d81630007d1904af",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-shared-pretrain-2026-11-14\\lm-68101\\checkpoint.pt": "a07762534f0b6311ec68c08b0d9f9c0ce74ec71577138eb13279a4a5dffbb24d",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-shared-pretrain-2026-11-14\\lm-68101\\optimizer.pt": "b1a5bd10762b55f9f66e6895f248bfb4a3b1973b8e1d159fb8075ffa0c31e0d7",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-shared-pretrain-2026-11-14\\lm-68101\\evaluation.csv": "a5cc8afd0cf5fd46de12bafe131cc677b82f9c925154f51022ac7c8d1c63421f",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-shared-pretrain-2026-11-14\\lm-68101\\summary.json": "2eb3fbb2644dee41dc71c9a6cef370424c55b52266aebe790e3dfd9167c6fdb2",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-shared-pretrain-2026-11-14\\lm-68101\\sources\\clmm\\pretrain\\__init__.py": "3684561d02ad25bba9fe0673da2241b976031fb4ab98a891da8c081490eae526",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-shared-pretrain-2026-11-14\\lm-68101\\sources\\clmm\\pretrain\\byte_lm.py": "b41de6f729bb4bc18f1d17ce6a449deb4c90eafea550271d32f01866f3b4feea",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-shared-pretrain-2026-11-14\\lm-68101\\sources\\titans_pytorch\\__init__.py": "9b3be9e16d55d7108bcecb048e3a05428b508f632dca9d90e69653175a343c78",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-shared-pretrain-2026-11-14\\lm-68101\\sources\\titans_pytorch\\implicit_mlp_attention.py": "de0d5554ffe5814d490de5f1e4dde007087e9304510d9f9a1af666df9ff522f5",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-shared-pretrain-2026-11-14\\lm-68101\\sources\\titans_pytorch\\mac_transformer.py": "e879c0d830fc2a3daef31aaea3966f5af9bb214ab7f84f7ae816ab239cf0487e",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-shared-pretrain-2026-11-14\\lm-68101\\sources\\titans_pytorch\\memory_models.py": "840064caa4a849ee91c26b1dcf93f2f8a8ead3abc1245bb5d3326ac46431697c",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-shared-pretrain-2026-11-14\\lm-68101\\sources\\titans_pytorch\\nested_attention.py": "c463433b41b506dff5d5ca5667a4d7b5e63468be14ab2413c9dc375a9e0801a8",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-shared-pretrain-2026-11-14\\lm-68101\\sources\\titans_pytorch\\neural_memory.py": "f32bba441df47d79379d2b1831ac012d4f268b35257e3e828119cea814519483",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-shared-pretrain-2026-11-14\\lm-68101\\sources\\clmm\\__init__.py": "19574fe82dbeb4beb2bdd854142fbbc5f6a0fe692ae68018bf9e241e64fb759a",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-shared-pretrain-2026-11-14\\lm-68101\\sources\\scripts\\train_shared_byte_lm.py": "06e7dce0041b84f5759c7d2c0a9f129c1f159bc73e6945cebd8f7b6f1eabfd78",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-shared-pretrain-2026-11-14\\lm-68101\\sources\\pyproject.toml": "ffe8b04d359dd4bc2599778c14aa08a57523424ac4bfaa3342a2608ef097854f",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-shared-pretrain-2026-11-14\\lm-68101\\sources\\requirements-lock.txt": "4308f2773c1f90d8de25dc486514401a805c3528ce8e639bec8ef8f60a1d2a47"
+      }
+    },
+    {
+      "run": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-shared-pretrain-2026-11-14\\lm-68105",
+      "init_seed": 68105,
+      "status": "passed",
+      "analysis_mode": "full pilot",
+      "completed_steps": 400,
+      "predicted_training_bytes": 1638400,
+      "dev_windows": 128,
+      "dev_rows": 896,
+      "checkpoint_sha256": "c3c4b5f49fa3116f348720b8215e2a97a8b166587d22c5c1c9ab1f72cccf8a55",
+      "source_commit": "8cc20aca061bae5bcbe85e5740e62d39a88a7572",
+      "decoded_corpus_and_window_tokens_verified": true,
+      "all_saved_training_and_eval_offsets_exclude_test": true,
+      "saved_sources_and_checkpoint_tensors_verified": true,
+      "raw_summary_recomputation_passed": true,
+      "runtime_reported_checks": {
+        "exact_reload": 0.0,
+        "suffix_causality": 0.0,
+        "outer_parameters_unchanged": true,
+        "memory_gradient_observed": true
+      },
+      "runtime_checks_independently_rerun": false,
+      "sampling_reconstruction": "Offset bounds/grid/content verified; CPU RNG sequence not regenerated across Torch versions. Shared saved arrays are compared across runs.",
+      "training_environment": {
+        "python": "3.13.3 (tags/v3.13.3:6280bb5, Apr  8 2025, 14:47:33) [MSC v.1943 64 bit (AMD64)]",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "torch": "2.15.0+cpu",
+        "cuda": null,
+        "device": "cpu",
+        "device_name": "AMD64 Family 25 Model 117 Stepping 2, AuthenticAMD",
+        "numpy": "2.5.4",
+        "dtype": "float32",
+        "deterministic_algorithms": true,
+        "tf32": false,
+        "cublas_workspace_config": ":4096:8",
+        "packages": {
+          "einops": "0.8.2",
+          "einx": "0.4.3",
+          "tensordict": "0.15.5",
+          "x-transformers": "2.31.12",
+          "assoc-scan": "0.0.6",
+          "hyper-connections": "0.4.11"
+        }
+      },
+      "input_sha256": {
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-shared-pretrain-2026-11-14\\lm-68105\\metadata.json": "3e7cbbccfe3c81bde39a3308cd0528d8d88f9777735a80746ecbf089249039f1",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-shared-pretrain-2026-11-14\\lm-68105\\design.json": "7275dab943328c5c8445219719b8a825492d29377c7f658ce8e9894152dd2a1c",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-shared-pretrain-2026-11-14\\lm-68105\\training.csv": "cab65ee53ad7c1efc32b6350d046abcb2e6d6ef10e3492de502602336504b81d",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-shared-pretrain-2026-11-14\\lm-68105\\training_offsets.npy": "b95a3657a8b50ce33a7e4bdd4454a1b881594673ff98f00f7f730f0e9df71558",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-shared-pretrain-2026-11-14\\lm-68105\\dev_windows.npz": "9df6e251058f6f598998a1e6f34a5b9e8a55ddac344cfd46d81630007d1904af",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-shared-pretrain-2026-11-14\\lm-68105\\checkpoint.pt": "c3c4b5f49fa3116f348720b8215e2a97a8b166587d22c5c1c9ab1f72cccf8a55",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-shared-pretrain-2026-11-14\\lm-68105\\optimizer.pt": "159bbd52de40a674e43329253ee92d42e3d0a58e53927e700429ef3747094e9e",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-shared-pretrain-2026-11-14\\lm-68105\\evaluation.csv": "e1dca0901162de9533ad2da911808d817b67cd5f03128e3da112c3e1cbe6adc6",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-shared-pretrain-2026-11-14\\lm-68105\\summary.json": "e97ea21c2b3f27a39462d2f2003c60acdead2d9c20e3ce34f45a11b023929947",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-shared-pretrain-2026-11-14\\lm-68105\\sources\\clmm\\pretrain\\__init__.py": "3684561d02ad25bba9fe0673da2241b976031fb4ab98a891da8c081490eae526",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-shared-pretrain-2026-11-14\\lm-68105\\sources\\clmm\\pretrain\\byte_lm.py": "b41de6f729bb4bc18f1d17ce6a449deb4c90eafea550271d32f01866f3b4feea",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-shared-pretrain-2026-11-14\\lm-68105\\sources\\titans_pytorch\\__init__.py": "9b3be9e16d55d7108bcecb048e3a05428b508f632dca9d90e69653175a343c78",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-shared-pretrain-2026-11-14\\lm-68105\\sources\\titans_pytorch\\implicit_mlp_attention.py": "de0d5554ffe5814d490de5f1e4dde007087e9304510d9f9a1af666df9ff522f5",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-shared-pretrain-2026-11-14\\lm-68105\\sources\\titans_pytorch\\mac_transformer.py": "e879c0d830fc2a3daef31aaea3966f5af9bb214ab7f84f7ae816ab239cf0487e",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-shared-pretrain-2026-11-14\\lm-68105\\sources\\titans_pytorch\\memory_models.py": "840064caa4a849ee91c26b1dcf93f2f8a8ead3abc1245bb5d3326ac46431697c",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-shared-pretrain-2026-11-14\\lm-68105\\sources\\titans_pytorch\\nested_attention.py": "c463433b41b506dff5d5ca5667a4d7b5e63468be14ab2413c9dc375a9e0801a8",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-shared-pretrain-2026-11-14\\lm-68105\\sources\\titans_pytorch\\neural_memory.py": "f32bba441df47d79379d2b1831ac012d4f268b35257e3e828119cea814519483",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-shared-pretrain-2026-11-14\\lm-68105\\sources\\clmm\\__init__.py": "19574fe82dbeb4beb2bdd854142fbbc5f6a0fe692ae68018bf9e241e64fb759a",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-shared-pretrain-2026-11-14\\lm-68105\\sources\\scripts\\train_shared_byte_lm.py": "06e7dce0041b84f5759c7d2c0a9f129c1f159bc73e6945cebd8f7b6f1eabfd78",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-shared-pretrain-2026-11-14\\lm-68105\\sources\\pyproject.toml": "ffe8b04d359dd4bc2599778c14aa08a57523424ac4bfaa3342a2608ef097854f",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-shared-pretrain-2026-11-14\\lm-68105\\sources\\requirements-lock.txt": "4308f2773c1f90d8de25dc486514401a805c3528ce8e639bec8ef8f60a1d2a47"
+      }
+    }
+  ],
+  "local_corpus": {
+    "path": "C:\\Users\\henry\\Documents\\Codex\\clmm-replay\\data\\enwik8.gz",
+    "compressed_sha256": "d52ea2118b505f79007e084b2f49acef9fd0e45fb481f84b2cab0a7191a7ef60",
+    "raw_sha256": "2b49720ec4d78c3c9fabaee6e4179a5e997302b3a70029f30f2d582218c024a8",
+    "bytes": 100000000
+  },
+  "design_sha256": "7275dab943328c5c8445219719b8a825492d29377c7f658ce8e9894152dd2a1c",
+  "analyzer_sha256": "dc2dcf621c1806d290b359c5efff931ab5ab51029ba30ddfad69e0f0d96b0c02",
+  "execution_amendment_path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-shared-pretrain-2026-11-14\\execution-amendment-1.json",
+  "execution_amendment_sha256": "b4c057e8e27fb62672fcb6432486e726ecd4459ff9b8072bbbefc723ea03574e",
+  "execution_amendment": {
+    "parent_design": "design.json",
+    "timing": "Recorded before either full 400-step language-model pilot began",
+    "reason": "Insomnia showed multi-minute shared-filesystem waits during the separate auxiliary-decay diagnostic, followed by SSH connection reset and connection timeout. Neither shared-LM seed was launched remotely.",
+    "change": "Execute both fixed shared-LM seeds locally on CPU, in the already tested Python3.13/Torch2.15 environment, with two CPU threads and the same maximum1200 seconds per run. Keep architecture, seed identities,400steps,batch16,sequence256,optimizer,paired data and evaluation criteria unchanged.",
+    "selection": "No substitution or best-seed selection. Seed68101 remains primary,68105 sensitivity. This is a prospective execution-environment change, not a rescue after pilot outcomes.",
+    "limits": "At most the two planned full training attempts. GPU-run auxiliary diagnostic remains separate; incomplete remote files are not counted as results.",
+    "cluster": "Job13905404 is bounded to one hour. Attempt to reconnect, inspect actual step state, collect outputs and cancel this task's allocation; preserve unrelated job13905360. Do not assert release until verified."
+  },
+  "analysis_environment": {
+    "python": "3.13.3 (tags/v3.13.3:6280bb5, Apr  8 2025, 14:47:33) [MSC v.1943 64 bit (AMD64)]",
+    "numpy": "2.5.4",
+    "torch": "2.15.0+cpu"
+  },
+  "bootstrap_seed": 68104,
+  "bootstrap_draws": 5000,
+  "bootstrap_indices_sha256": {
+    "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-shared-pretrain-2026-11-14\\lm-68101": "6173c5751fd6950b40dc96dd73344a9446b04960d4d75b4707d9a2c1d1019555",
+    "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-shared-pretrain-2026-11-14\\lm-68105": "6173c5751fd6950b40dc96dd73344a9446b04960d4d75b4707d9a2c1d1019555"
+  },
+  "bootstrap_unit": "Paired whole windows; ratio of summed loss and summed predicted-byte counts. No seed pooling.",
+  "shared_arrays_status": "verified identical across supplied runs",
+  "limitations": [
+    "Per-byte logits/loss vectors are not saved: raw window-sum arithmetic is verified, neural NLL is not recomputed.",
+    "Reload, suffix causality, nonzero memory gradients and evaluation weight immutability are runner-reported checks, not independent inference.",
+    "Offset bounds prove saved training/evaluation windows exclude test; loading/hash checking reads the complete corpus.",
+    "Development windows and fixed checkpoints do not establish unseen-corpus or training-seed generalization.",
+    "Zero-read and segment-reset are inference interventions, not separately trained architecture baselines.",
+    "A nonpositive interval is lack of this gate evidence, not equivalence."
+  ]
+}

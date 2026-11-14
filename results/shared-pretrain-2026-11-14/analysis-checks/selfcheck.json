@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "unplanned_seed_rejected": true,
+  "ratio_of_sums_checked": true,
+  "paired_identity_and_constant_effect_checked": true,
+  "smoke_cannot_certify_pilot": true,
+  "source_sha256": "dc2dcf621c1806d290b359c5efff931ab5ab51029ba30ddfad69e0f0d96b0c02"
+}

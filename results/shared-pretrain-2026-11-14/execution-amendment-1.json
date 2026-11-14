@@ -1,0 +1,9 @@
+{
+  "parent_design": "design.json",
+  "timing": "Recorded before either full 400-step language-model pilot began",
+  "reason": "Insomnia showed multi-minute shared-filesystem waits during the separate auxiliary-decay diagnostic, followed by SSH connection reset and connection timeout. Neither shared-LM seed was launched remotely.",
+  "change": "Execute both fixed shared-LM seeds locally on CPU, in the already tested Python3.13/Torch2.15 environment, with two CPU threads and the same maximum1200 seconds per run. Keep architecture, seed identities,400steps,batch16,sequence256,optimizer,paired data and evaluation criteria unchanged.",
+  "selection": "No substitution or best-seed selection. Seed68101 remains primary,68105 sensitivity. This is a prospective execution-environment change, not a rescue after pilot outcomes.",
+  "limits": "At most the two planned full training attempts. GPU-run auxiliary diagnostic remains separate; incomplete remote files are not counted as results.",
+  "cluster": "Job13905404 is bounded to one hour. Attempt to reconnect, inspect actual step state, collect outputs and cancel this task's allocation; preserve unrelated job13905360. Do not assert release until verified."
+}

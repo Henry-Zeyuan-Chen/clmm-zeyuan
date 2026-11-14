@@ -1,0 +1,21 @@
+{
+  "source_sha256": {
+    "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-shared-pretrain-2026-11-14\\analysis\\final\\verification.json": "87026daacb6ba50d65e724bbdf9f7cfb488e4a2e905a87dc04ab41f658c7d54f",
+    "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-shared-pretrain-2026-11-14\\analysis\\final\\estimates.csv": "becec1b43a72e152e712db4558e58b8bb5554f9df261178ecccdfa1dde25b15d",
+    "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-shared-pretrain-2026-11-14\\analysis\\final\\contrasts.csv": "68413484f16a487671b2df79f74c278a03d82f9f0fc5f157b4e017076c27a0d9",
+    "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-shared-pretrain-2026-11-14\\analysis\\final\\decisions.json": "fbe39b94d42b80d163e58669dd6adc33a178edc71e3d9496ce3a8b2caeae0cde",
+    "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-shared-pretrain-2026-11-14\\lm-68101\\training.csv": "2f88fe9ac1d57abecf5229beca87c79e7ec214e37e595a1d2f35071bb974fd88",
+    "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-shared-pretrain-2026-11-14\\lm-68105\\training.csv": "cab65ee53ad7c1efc32b6350d046abcb2e6d6ef10e3492de502602336504b81d"
+  },
+  "plot_script_sha256": "f85ed2cf5d6d1a3f4160e02c907e29f551f694708a866a2dd88e02412abaec3e",
+  "figure_description": "Separate fixed-seed panels; per-condition window CIs with explicitly paired reset-minus-normal differences.",
+  "outputs_sha256": {
+    "plot_shared_lm.py": "f85ed2cf5d6d1a3f4160e02c907e29f551f694708a866a2dd88e02412abaec3e",
+    "shared_lm_pilot.pdf": "86957a504e7f098809511deea57689d6dabbe4f77f7da680a5ff100d7fdb614d",
+    "shared_lm_pilot.png": "2088fabb7faa0ad5fb692fe79398d522c3825756f129ebcab483880a6424fdd9",
+    "shared_lm_pilot.svg": "ce497123b30cc3fbba1acb5f44568161dc21fe3ac2968b06f95ca7da21aa851e",
+    "source_contrasts.csv": "68413484f16a487671b2df79f74c278a03d82f9f0fc5f157b4e017076c27a0d9",
+    "source_estimates.csv": "a9cfe993f9f75cf3b037bf293b76fae5d6ca9f98e387542205d11325d39eba9b",
+    "source_training.csv": "09dcdf286fb152199928f4908fceb52921dd2cb0315dcbaac9bf0baae334f7fb"
+  }
+}

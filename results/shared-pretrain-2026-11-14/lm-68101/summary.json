@@ -1,0 +1,93 @@
+[
+  {
+    "stage": "initial",
+    "condition": "normal",
+    "length": 256,
+    "windows": 128,
+    "bytes": 32768,
+    "nll_sum": 190642.28220248222,
+    "late_bytes": 0,
+    "late_nll_sum": 0.0,
+    "nll_per_byte": 5.817940741042548,
+    "bits_per_byte": 8.393514255287945,
+    "late_nll_per_byte": null
+  },
+  {
+    "stage": "final",
+    "condition": "normal",
+    "length": 256,
+    "windows": 128,
+    "bytes": 32768,
+    "nll_sum": 77572.21358921006,
+    "late_bytes": 0,
+    "late_nll_sum": 0.0,
+    "nll_per_byte": 2.3673160885379048,
+    "bits_per_byte": 3.4153151811502935,
+    "late_nll_per_byte": null
+  },
+  {
+    "stage": "final",
+    "condition": "zero_memory_output",
+    "length": 256,
+    "windows": 128,
+    "bytes": 32768,
+    "nll_sum": 78931.94072503224,
+    "late_bytes": 0,
+    "late_nll_sum": 0.0,
+    "nll_per_byte": 2.4088116676340405,
+    "bits_per_byte": 3.475180647331104,
+    "late_nll_per_byte": null
+  },
+  {
+    "stage": "final",
+    "condition": "reset_memory_at_segments",
+    "length": 256,
+    "windows": 128,
+    "bytes": 32768,
+    "nll_sum": 77855.38619956747,
+    "late_bytes": 0,
+    "late_nll_sum": 0.0,
+    "nll_per_byte": 2.375957830797347,
+    "bits_per_byte": 3.4277825798526314,
+    "late_nll_per_byte": null
+  },
+  {
+    "stage": "final",
+    "condition": "normal",
+    "length": 1024,
+    "windows": 128,
+    "bytes": 131072,
+    "nll_sum": 326662.12919555977,
+    "late_bytes": 98304,
+    "late_nll_sum": 249089.9156063497,
+    "nll_per_byte": 2.4922342620510847,
+    "bits_per_byte": 3.5955340105946654,
+    "late_nll_per_byte": 2.5338736532221446
+  },
+  {
+    "stage": "final",
+    "condition": "zero_memory_output",
+    "length": 1024,
+    "windows": 128,
+    "bytes": 131072,
+    "nll_sum": 332779.1926709749,
+    "late_bytes": 98304,
+    "late_nll_sum": 253847.25194594264,
+    "nll_per_byte": 2.538903752677726,
+    "bits_per_byte": 3.6628638532825346,
+    "late_nll_per_byte": 2.582267781025621
+  },
+  {
+    "stage": "final",
+    "condition": "reset_memory_at_segments",
+    "length": 1024,
+    "windows": 128,
+    "bytes": 131072,
+    "nll_sum": 328256.4151736386,
+    "late_bytes": 98304,
+    "late_nll_sum": 250401.02897407115,
+    "nll_per_byte": 2.504397698773488,
+    "bits_per_byte": 3.6130821404342433,
+    "late_nll_per_byte": 2.5472109880988683
+  }
+]
