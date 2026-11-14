@@ -65,7 +65,8 @@ def test_control_changes_only_geometry_and_preserves_all_initial_tensors(parent)
         assert config.memory_segment_len == 8 and config.memory_batch_size == 32
         assert metadata["initial_state_tensors_identical"]
         assert metadata["parameter_count"] == metadata["parent_parameter_count"]
-        assert metadata["trained_source_block_size"] == segment_len
+        assert metadata["attention_segment_len"] == segment_len
+        assert metadata["record_bytes"] == 32
         assert metadata["record_bytes"] == 32 and metadata["training_input_length"] == 95
         assert metadata["local_attention_contains_entire_training_example"] == (segment_len == 128)
         for name, value in original.state_dict().items():
@@ -147,7 +148,8 @@ def test_two_step_training_saves_full_inputs_optimizer_and_exact_final_checkpoin
     assert all(int(state["step"]) == 2 for state in optimizer["state"].values())
     restored, restored_config, payload = load_checkpoint(out / "checkpoint.pt")
     assert restored_config == config
-    assert payload["training_info"]["source_block_size"] == segment_len
+    assert payload["training_info"]["attention_segment_len"] == segment_len
+    assert payload["training_info"]["record_bytes"] == 32
     assert payload["training_info"]["parent_checkpoint_sha256"] == control.common.sha256(path)
     assert payload["training_info"]["fixed_final_checkpoint"] is True
     assert payload["training_info"]["answer_vocabulary"] == 256

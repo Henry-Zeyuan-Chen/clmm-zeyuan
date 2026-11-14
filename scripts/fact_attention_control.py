@@ -258,6 +258,9 @@ def run(args):
         common.before_deadline(deadline)
         model, config, initialization = build_control_model(args.checkpoint, args.segment_len, device)
         meta.update(initialization)
+        torch.save({name: value.detach().cpu().clone() for name, value in model.state_dict().items()},
+                   out / "initial_state.pt")
+        meta["initial_state_sha256"] = common.sha256(out / "initial_state.pt")
         common.json_file(out / "metadata.json", meta)
         training_data = make_training_inputs(args.steps, args.batch_size, args.train_seed, deadline=deadline)
         source_info = dict(repo_commit=meta["source_commit"], source_sha256=meta["source_sha256"],
