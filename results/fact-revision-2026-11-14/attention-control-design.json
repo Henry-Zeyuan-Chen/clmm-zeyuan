@@ -1,0 +1,33 @@
+{
+  "experiment_id": "fact-acquisition-attention-control-v1",
+  "recorded_local_date": "2026-11-14",
+  "selection_context": "Supplementary diagnostic specified after observing weak v1 training batches, before any control training or evaluation. It does not replace the fixed two-seed1600step experiment.",
+  "launch_condition": "Run if the primary adapted checkpoint fails the v1 two-fact acquisition gate, within the existing one-hour GPU allocation.",
+  "question": "Under a simpler matched two-fact-only training distribution, does direct local-attention access to the fact records resolve acquisition difficulty?",
+  "parent": {
+    "fixed_seed": 68101,
+    "sha256": "a07762534f0b6311ec68c08b0d9f9c0ce74ec71577138eb13279a4a5dffbb24d",
+    "reason": "Already designated primary before the experiments; not selected as the better performer. No inference about training-seed variance from this one-parent diagnostic."
+  },
+  "arms": [
+    {"name":"attention32","segment_len":32,"interpretation":"Facts and query require cross-record neural memory."},
+    {"name":"attention128","segment_len":128,"interpretation":"All95 input bytes fit in one attention segment; neural memory still exists. This is a task-learnability control, not a fair replay-method baseline."}
+  ],
+  "matched": "Same initial learned tensor values and count, training episodes, input bytes, target labels, query ranks, final-step rule, optimizer and update budget. Only local attention geometry differs between these two controls.",
+  "training": {
+    "steps":1000,"batch_size":16,"train_seed":78122,"facts":2,"delay":0,"revision_fraction":0,
+    "lr":0.0005,"optimizer":"AdamW","weight_decay":0.01,"clip_norm":1,
+    "objective":"Full256-way answer-position cross-entropy. Both controls start from the original shared checkpoint, not a selected adapted checkpoint."
+  },
+  "evaluation": {
+    "dev_seed":78123,"episodes":64,"suite":"gate","primary_cell":"acquire_k2/seen/online",
+    "namespace":"Fresh heldout-key development assignments; reserved test keys excluded.",
+    "memory_reset":"At segment128 all short inputs fit in one segment, so segment reset should be a no-op. Do not apply the v1 normal-minus-reset gate to this control."
+  },
+  "analysis": {
+    "unit":"Paired whole episodes; keep the two K2 query outcomes together.",
+    "bootstrap_draws":5000,"bootstrap_seed":78124,
+    "criterion":"Report full-vocabulary accuracy and paired attention128-minus-attention32 interval, plus legal-answer mass and last-value heuristic. >=80% is the same descriptive acquisition target. This exploratory diagnostic does not rescue a failed v1 replay comparison."
+  },
+  "resources":{"max_seconds_each":600,"device":"cuda","allocation":13911359,"automatic_renewal":false}
+}

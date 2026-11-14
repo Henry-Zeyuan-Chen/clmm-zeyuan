@@ -1,0 +1,58 @@
+{
+  "status": "verified",
+  "main_certified": true,
+  "evidence_scope": "Saved-artifact reconstruction and independent statistics; no neural inference or training rerun.",
+  "canonical_runs": [
+    "before-68101",
+    "adapt-68101",
+    "after-68101",
+    "before-68105",
+    "adapt-68105",
+    "after-68105"
+  ],
+  "expected_commit": "646c6702b6bba57279a9a095eb10a1dbfc877092",
+  "training_steps_per_checkpoint": 1600,
+  "supervised_answers_per_checkpoint": 25600,
+  "training_input_canonical_sha256": "1602223525ee79fe9a3da633ddd88f8144c93893280418804bb104908b83a4c7",
+  "estimates": 2184,
+  "contrasts": 392,
+  "bootstrap_draws": 5000,
+  "bootstrap_unit": "episode, paired questions and arms",
+  "tolerances": {
+    "float32_metric_absolute": 3e-05
+  },
+  "output_sha256": {
+    "estimates.csv": "6d8270febcc3d4f9fe5e42fe92eef9226d3bcd99ac3eb41d28606c782360eb88",
+    "contrasts.csv": "5868a7dc5eab31acd30e45519c25b874585c7c7fbf15c0e201bbf58519042774",
+    "decisions.json": "0da0f88944cfd60ebada6f482596521b2a46936ec4dd01b626aa56d37b98c33c",
+    "source-manifest.json": "a5b8ca39b9d04fcb668f2eb046f68eeb45e9f19cea3b0d7044857e785828e42b"
+  },
+  "checks": [
+    "complete fixed budgets and final checkpoint lineage",
+    "finite checkpoint tensors",
+    "source and artifact hashes",
+    "disjoint hashed key namespaces",
+    "training bytes/targets/plan identical",
+    "online-only answer reconstruction",
+    "label-independent isolated query prefixes",
+    "causal replay source and schedule reconstruction",
+    "matched continuous/periodic content and repeat counts",
+    "semantic CSV/logit correspondence",
+    "independently recomputed full/forced metrics and summaries",
+    "within/between-checkpoint data pairing",
+    "counterfactual relabeling",
+    "whole-episode paired bootstrap and prospective continuation rule"
+  ],
+  "analyzer_sha256": "3718b7b68a3f766c350c241599c9a88363b00d85d0b6171598fef08274bbf025",
+  "audited_utc": "2026-11-14T22:55:20.369616+00:00",
+  "command": [
+    "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-test-env\\Scripts\\python.exe",
+    "analysis/analyze_fact_revision.py",
+    "--root",
+    ".",
+    "--out",
+    "analysis/final",
+    "--expected-commit",
+    "646c6702b6bba57279a9a095eb10a1dbfc877092"
+  ]
+}

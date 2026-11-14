@@ -1,0 +1,14 @@
+{
+  "source_analysis": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-fact-revision-2026-11-14\\analysis\\final",
+  "source_sha256": {
+    "verification.json": "ab3faf0024fe2a8bd2112de593951ab29942b20f06779f1ce1fc085b15bd8e02",
+    "estimates.csv": "6d8270febcc3d4f9fe5e42fe92eef9226d3bcd99ac3eb41d28606c782360eb88",
+    "contrasts.csv": "5868a7dc5eab31acd30e45519c25b874585c7c7fbf15c0e201bbf58519042774",
+    "decisions.json": "0da0f88944cfd60ebada6f482596521b2a46936ec4dd01b626aa56d37b98c33c"
+  },
+  "script_sha256": "aee34e8b3a9b0eb475d3c6d67f1b845b1fed620812f91e7e5b4a14ea95fb0efc",
+  "outputs": [
+    "fact_revision_pilot.png",
+    "fact_revision_pilot.pdf"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "status": "selfchecks_passed",
+  "supplemental_certified": false,
+  "main_v1_certified": false,
+  "fixture_scope": "Synthetic fixtures only",
+  "checks": [
+    "128 short logits must be exactly paired under reset",
+    "even small 128 no-op violation",
+    "32 geometry does not falsely require no-op",
+    "K2 two-query paired contrast clusters whole episodes",
+    "mismatched control query identity",
+    "canonical control training hash includes target labels",
+    "control label copied from last unrelated fact",
+    "control query answer fed into input"
+  ],
+  "count": 8
+}

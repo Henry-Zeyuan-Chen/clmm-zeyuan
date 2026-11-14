@@ -1,0 +1,30 @@
+{
+  "script_path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-fact-revision-2026-11-14\\analysis\\analyze_attention_shortcuts.py",
+  "script_sha256": "a76680bfe935b9a015d66ba3bd143b162b0a3c74f6406698902071a8c0a3adbf",
+  "source_tables": {
+    "query_rank_summary.csv": {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-fact-revision-2026-11-14\\analysis\\control-behavior\\query_rank_summary.csv",
+      "sha256": "ebe9661efd67dcbb711f7e8b98f759fe07ef8b12287c936ebab757a38932a5e3"
+    },
+    "source_alignment.csv": {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-fact-revision-2026-11-14\\analysis\\control-behavior\\source_alignment.csv",
+      "sha256": "cd5e87128c7e91bad9009f0e2eb419a70e8c3b4158fca0ffa2c2588699e87743"
+    },
+    "episode_response_summary.csv": {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-fact-revision-2026-11-14\\analysis\\control-behavior\\episode_response_summary.csv",
+      "sha256": "a1a571cb3878bc7be1033ef8abadfcb6af3ecd194a11f860afeacf32d4c55ba3"
+    },
+    "report.json": {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-fact-revision-2026-11-14\\analysis\\control-behavior\\report.json",
+      "sha256": "bbc8e0a7b2235d81770620bd08938b525fbcf0dfdd03fa3c96cad3c0cf54fee5"
+    }
+  },
+  "certified_estimates": {
+    "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-fact-revision-2026-11-14\\analysis\\control-final\\estimates.csv",
+    "sha256": "cb8471eca32c7311f3989001903860403547bbf1b551e0a6e33eab81d0e79750"
+  },
+  "outputs": {
+    "attention_controls_diagnostics.png": "eb010f2353eebb9ea149d91bfe8851f15c731b9baff3f25dde20d4177ed0b383",
+    "attention_controls_diagnostics.pdf": "93055d350da40220ac83163f1ee6d8b02f868cc2b4971e210be77f80f045a5be"
+  }
+}

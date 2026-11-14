@@ -1,0 +1,82 @@
+[
+  {
+    "cell": "acquire_k1",
+    "family": "seen",
+    "attention_segment_len": 32,
+    "input_lengths": [
+      63
+    ],
+    "reset_expected_noop": false,
+    "interpretation": "Crosses attention segments: memory reset removes cross-segment memory state."
+  },
+  {
+    "cell": "acquire_k2",
+    "family": "seen",
+    "attention_segment_len": 32,
+    "input_lengths": [
+      95
+    ],
+    "reset_expected_noop": false,
+    "interpretation": "Crosses attention segments: memory reset removes cross-segment memory state."
+  },
+  {
+    "cell": "revise_k1",
+    "family": "seen",
+    "attention_segment_len": 32,
+    "input_lengths": [
+      95
+    ],
+    "reset_expected_noop": false,
+    "interpretation": "Crosses attention segments: memory reset removes cross-segment memory state."
+  },
+  {
+    "cell": "counterfactual_k2",
+    "family": "seen",
+    "attention_segment_len": 32,
+    "input_lengths": [
+      95
+    ],
+    "reset_expected_noop": false,
+    "interpretation": "Crosses attention segments: memory reset removes cross-segment memory state."
+  },
+  {
+    "cell": "acquire_k1",
+    "family": "heldout",
+    "attention_segment_len": 32,
+    "input_lengths": [
+      63
+    ],
+    "reset_expected_noop": false,
+    "interpretation": "Crosses attention segments: memory reset removes cross-segment memory state."
+  },
+  {
+    "cell": "acquire_k2",
+    "family": "heldout",
+    "attention_segment_len": 32,
+    "input_lengths": [
+      95
+    ],
+    "reset_expected_noop": false,
+    "interpretation": "Crosses attention segments: memory reset removes cross-segment memory state."
+  },
+  {
+    "cell": "revise_k1",
+    "family": "heldout",
+    "attention_segment_len": 32,
+    "input_lengths": [
+      95
+    ],
+    "reset_expected_noop": false,
+    "interpretation": "Crosses attention segments: memory reset removes cross-segment memory state."
+  },
+  {
+    "cell": "counterfactual_k2",
+    "family": "heldout",
+    "attention_segment_len": 32,
+    "input_lengths": [
+      95
+    ],
+    "reset_expected_noop": false,
+    "interpretation": "Crosses attention segments: memory reset removes cross-segment memory state."
+  }
+]

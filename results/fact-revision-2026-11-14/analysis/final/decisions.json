@@ -1,0 +1,140 @@
+{
+  "main_certified": true,
+  "evidence_scope": "Saved-artifact reconstruction and independent statistics; no neural inference or training rerun.",
+  "acquisition": {
+    "68101": {
+      "before": {
+        "accuracy": 0.0,
+        "accuracy_threshold": 0.8,
+        "normal_minus_reset": {
+          "checkpoint_seed": "68101",
+          "stage": "before",
+          "cell": "acquire_k2",
+          "family": "seen",
+          "category": "stable",
+          "left": "online",
+          "right": "reset_memory",
+          "metric": "correct",
+          "role": "acquisition_gate",
+          "estimate": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "episodes": 64,
+          "queries": 128
+        },
+        "passed": false
+      },
+      "after": {
+        "accuracy": 0.046875,
+        "accuracy_threshold": 0.8,
+        "normal_minus_reset": {
+          "checkpoint_seed": "68101",
+          "stage": "after",
+          "cell": "acquire_k2",
+          "family": "seen",
+          "category": "stable",
+          "left": "online",
+          "right": "reset_memory",
+          "metric": "correct",
+          "role": "acquisition_gate",
+          "estimate": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "episodes": 64,
+          "queries": 128
+        },
+        "passed": false
+      }
+    },
+    "68105": {
+      "before": {
+        "accuracy": 0.0,
+        "accuracy_threshold": 0.8,
+        "normal_minus_reset": {
+          "checkpoint_seed": "68105",
+          "stage": "before",
+          "cell": "acquire_k2",
+          "family": "seen",
+          "category": "stable",
+          "left": "online",
+          "right": "reset_memory",
+          "metric": "correct",
+          "role": "acquisition_gate",
+          "estimate": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "episodes": 64,
+          "queries": 128
+        },
+        "passed": false
+      },
+      "after": {
+        "accuracy": 0.046875,
+        "accuracy_threshold": 0.8,
+        "normal_minus_reset": {
+          "checkpoint_seed": "68105",
+          "stage": "after",
+          "cell": "acquire_k2",
+          "family": "seen",
+          "category": "stable",
+          "left": "online",
+          "right": "reset_memory",
+          "metric": "correct",
+          "role": "acquisition_gate",
+          "estimate": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "episodes": 64,
+          "queries": 128
+        },
+        "passed": false
+      }
+    }
+  },
+  "primary": {
+    "68101": {
+      "checkpoint_seed": "68101",
+      "stage": "after",
+      "cell": "pressure_k8_d8",
+      "family": "seen",
+      "category": "stable",
+      "left": "periodic",
+      "right": "continuous",
+      "metric": "correct",
+      "role": "primary",
+      "estimate": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "episodes": 128,
+      "queries": 128
+    },
+    "68105": {
+      "checkpoint_seed": "68105",
+      "stage": "after",
+      "cell": "pressure_k8_d8",
+      "family": "seen",
+      "category": "stable",
+      "left": "periodic",
+      "right": "continuous",
+      "metric": "correct",
+      "role": "primary",
+      "estimate": -0.0234375,
+      "ci_low": -0.0546875,
+      "ci_high": 0.0,
+      "episodes": 128,
+      "queries": 128
+    }
+  },
+  "both_acquisition_pass": false,
+  "useful_timing_pilot_lead": false,
+  "conclusion": "acquisition gate failed; pressure results are floor diagnostics",
+  "interpretation_limits": [
+    "Intervals are conditional on each fixed checkpoint and sampled development episodes.",
+    "Seeds are not pooled and two parents do not estimate training-procedure variability.",
+    "Unmarked stale replays are conflicting-input diagnostics, not isolated consolidation failures.",
+    "Raw-record replay is a reference schedule, not a sleep-specific module.",
+    "K4 periodic partial blocks prevent literal serialized-prefix comparisons across delays.",
+    "Development results are not untouched test results; reserved key namespace was not evaluated.",
+    "Saved logits and tensors were checked; model inference and training were not independently rerun."
+  ]
+}

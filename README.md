@@ -12,6 +12,8 @@ Local exploratory evidence on this branch: [memory-pressure experiments](docs/ME
 
 Following the group sync, [shared pretraining](docs/SHARED_PRETRAIN.md) adds a compact sequence model, common checkpoint format, disjoint data splits, and memory-context diagnostics under `clmm/pretrain`.
 
+Member C's [fact/revision evaluation](docs/FACT_REVISION.md) adapts the shared checkpoints and compares causal continuous/periodic replay schedules with matched record budgets, alongside acquisition and revision diagnostics. Both main adaptations fail the acquisition gate; the saved results motivate fixing key-specific recall before drawing retention conclusions.
+
 ## Getting started
 
 Follow [SETUP.md](SETUP.md). After pulling a change to `pyproject.toml`, rerun `pip install -e ".[test]"`.

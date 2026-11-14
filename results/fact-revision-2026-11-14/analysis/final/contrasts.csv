@@ -1,0 +1,393 @@
+checkpoint_seed,stage,cell,family,category,left,right,metric,role,estimate,ci_low,ci_high,episodes,queries
+68101,before,acquire_k1,seen,stable,online,reset_memory,correct,diagnostic,0.0,0.0,0.0,64,64
+68101,before,acquire_k1,seen,stable,online,reset_memory,nll,diagnostic,-0.046649332885623965,-0.08436253449844952,-0.010089649631667036,64,64
+68101,before,acquire_k2,seen,stable,online,reset_memory,correct,acquisition_gate,0.0,0.0,0.0,64,128
+68101,before,acquire_k2,seen,stable,online,reset_memory,nll,diagnostic,-0.0997271996686259,-0.11632997683763142,-0.08278040386935907,64,128
+68101,before,revise_k1,seen,revised,online,reset_memory,correct,diagnostic,0.0,0.0,0.0,64,64
+68101,before,revise_k1,seen,revised,online,reset_memory,nll,diagnostic,-0.09478713552477283,-0.11605480710199921,-0.0733230599115782,64,64
+68101,before,counterfactual_k2,seen,stable,online,reset_memory,correct,diagnostic,0.0,0.0,0.0,64,128
+68101,before,counterfactual_k2,seen,stable,online,reset_memory,nll,diagnostic,-0.08888609805712122,-0.10648798679354546,-0.071568284354036,64,128
+68101,before,acquire_k1,heldout,stable,online,reset_memory,correct,diagnostic,0.0,0.0,0.0,64,64
+68101,before,acquire_k1,heldout,stable,online,reset_memory,nll,diagnostic,-0.03803267652882404,-0.06379789621218214,-0.011749104996560567,64,64
+68101,before,acquire_k2,heldout,stable,online,reset_memory,correct,diagnostic,0.0,0.0,0.0,64,128
+68101,before,acquire_k2,heldout,stable,online,reset_memory,nll,diagnostic,-0.04903271252970888,-0.06349953653838747,-0.034316809006720156,64,128
+68101,before,revise_k1,heldout,revised,online,reset_memory,correct,diagnostic,0.0,0.0,0.0,64,64
+68101,before,revise_k1,heldout,revised,online,reset_memory,nll,diagnostic,-0.046912412884967586,-0.06951236573410735,-0.02485211273010332,64,64
+68101,before,counterfactual_k2,heldout,stable,online,reset_memory,correct,diagnostic,0.0,0.0,0.0,64,128
+68101,before,counterfactual_k2,heldout,stable,online,reset_memory,nll,diagnostic,-0.04102700109879928,-0.058687639939734325,-0.022739246185187537,64,128
+68101,after,acquire_k1,seen,stable,online,reset_memory,correct,diagnostic,0.0,0.0,0.0,64,64
+68101,after,acquire_k1,seen,stable,online,reset_memory,nll,diagnostic,-0.019505415386625452,-0.039551792572394384,0.00020586243135835527,64,64
+68101,after,acquire_k2,seen,stable,online,reset_memory,correct,acquisition_gate,0.0,0.0,0.0,64,128
+68101,after,acquire_k2,seen,stable,online,reset_memory,nll,diagnostic,0.00588735260051753,-0.005515524808795956,0.01741838753536332,64,128
+68101,after,revise_k1,seen,revised,online,reset_memory,correct,diagnostic,0.0,0.0,0.0,64,64
+68101,after,revise_k1,seen,revised,online,reset_memory,nll,diagnostic,0.0030106065970446905,-0.014266662101613441,0.020368910719443918,64,64
+68101,after,counterfactual_k2,seen,stable,online,reset_memory,correct,diagnostic,0.0,0.0,0.0,64,128
+68101,after,counterfactual_k2,seen,stable,online,reset_memory,nll,diagnostic,-0.008277946267716545,-0.020788825313416918,0.0038114495635029407,64,128
+68101,after,acquire_k1,heldout,stable,online,reset_memory,correct,diagnostic,0.0,0.0,0.0,64,64
+68101,after,acquire_k1,heldout,stable,online,reset_memory,nll,diagnostic,-0.01948832047079252,-0.038739153443130545,-2.3641041179752506e-05,64,64
+68101,after,acquire_k2,heldout,stable,online,reset_memory,correct,diagnostic,0.0,0.0,0.0,64,128
+68101,after,acquire_k2,heldout,stable,online,reset_memory,nll,diagnostic,0.00529482326609064,-0.006096198745629091,0.016834194802433984,64,128
+68101,after,revise_k1,heldout,revised,online,reset_memory,correct,diagnostic,0.0,0.0,0.0,64,64
+68101,after,revise_k1,heldout,revised,online,reset_memory,nll,diagnostic,0.003633381162180406,-0.013933650400649132,0.021222065867893596,64,64
+68101,after,counterfactual_k2,heldout,stable,online,reset_memory,correct,diagnostic,0.0,0.0,0.0,64,128
+68101,after,counterfactual_k2,heldout,stable,online,reset_memory,nll,diagnostic,-0.008509526505011356,-0.02119284485577011,0.0043760940771349075,64,128
+68101,after,pressure_k4_d0,seen,stable,periodic,continuous,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k4_d0,seen,stable,periodic,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k4_d0,seen,stable,continuous,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k4_d0,seen,stable,periodic,online,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k4_d0,seen,revised,periodic,continuous,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k4_d0,seen,revised,periodic,continuous,obsolete,stale-input diagnostic,0.0,0.0,0.0,32,32
+68101,after,pressure_k4_d0,seen,revised,periodic,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k4_d0,seen,revised,periodic,repeat_current,obsolete,stale-input diagnostic,0.0,0.0,0.0,32,32
+68101,after,pressure_k4_d0,seen,revised,continuous,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k4_d0,seen,revised,continuous,repeat_current,obsolete,stale-input diagnostic,0.0,0.0,0.0,32,32
+68101,after,pressure_k4_d0,seen,revised,periodic,online,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k4_d0,seen,revised,periodic,online,obsolete,stale-input diagnostic,0.0,0.0,0.0,32,32
+68101,after,pressure_k4_d8,seen,stable,periodic,continuous,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k4_d8,seen,stable,periodic,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k4_d8,seen,stable,continuous,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k4_d8,seen,stable,periodic,online,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k4_d8,seen,revised,periodic,continuous,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k4_d8,seen,revised,periodic,continuous,obsolete,stale-input diagnostic,0.0,0.0,0.0,32,32
+68101,after,pressure_k4_d8,seen,revised,periodic,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k4_d8,seen,revised,periodic,repeat_current,obsolete,stale-input diagnostic,0.0,0.0,0.0,32,32
+68101,after,pressure_k4_d8,seen,revised,continuous,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k4_d8,seen,revised,continuous,repeat_current,obsolete,stale-input diagnostic,0.0,0.0,0.0,32,32
+68101,after,pressure_k4_d8,seen,revised,periodic,online,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k4_d8,seen,revised,periodic,online,obsolete,stale-input diagnostic,0.0,0.0,0.0,32,32
+68101,after,pressure_k4_d8,seen,recent,periodic,continuous,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k4_d8,seen,recent,periodic,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k4_d8,seen,recent,continuous,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k4_d8,seen,recent,periodic,online,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k4_d32,seen,stable,periodic,continuous,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k4_d32,seen,stable,periodic,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k4_d32,seen,stable,continuous,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k4_d32,seen,stable,periodic,online,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k4_d32,seen,revised,periodic,continuous,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k4_d32,seen,revised,periodic,continuous,obsolete,stale-input diagnostic,0.0,0.0,0.0,32,32
+68101,after,pressure_k4_d32,seen,revised,periodic,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k4_d32,seen,revised,periodic,repeat_current,obsolete,stale-input diagnostic,0.0,0.0,0.0,32,32
+68101,after,pressure_k4_d32,seen,revised,continuous,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k4_d32,seen,revised,continuous,repeat_current,obsolete,stale-input diagnostic,0.0,0.0,0.0,32,32
+68101,after,pressure_k4_d32,seen,revised,periodic,online,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k4_d32,seen,revised,periodic,online,obsolete,stale-input diagnostic,0.0,0.0,0.0,32,32
+68101,after,pressure_k4_d32,seen,recent,periodic,continuous,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k4_d32,seen,recent,periodic,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k4_d32,seen,recent,continuous,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k4_d32,seen,recent,periodic,online,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k8_d0,seen,stable,periodic,continuous,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k8_d0,seen,stable,periodic,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k8_d0,seen,stable,continuous,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k8_d0,seen,stable,periodic,online,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k8_d0,seen,revised,periodic,continuous,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k8_d0,seen,revised,periodic,continuous,obsolete,stale-input diagnostic,0.0,0.0,0.0,32,32
+68101,after,pressure_k8_d0,seen,revised,periodic,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k8_d0,seen,revised,periodic,repeat_current,obsolete,stale-input diagnostic,0.0,0.0,0.0,32,32
+68101,after,pressure_k8_d0,seen,revised,continuous,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k8_d0,seen,revised,continuous,repeat_current,obsolete,stale-input diagnostic,0.0,0.0,0.0,32,32
+68101,after,pressure_k8_d0,seen,revised,periodic,online,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k8_d0,seen,revised,periodic,online,obsolete,stale-input diagnostic,0.0,0.0,0.0,32,32
+68101,after,pressure_k8_d8,seen,stable,periodic,continuous,correct,primary,0.0,0.0,0.0,128,128
+68101,after,pressure_k8_d8,seen,stable,periodic,repeat_current,correct,exploratory,0.0,0.0,0.0,128,128
+68101,after,pressure_k8_d8,seen,stable,continuous,repeat_current,correct,exploratory,0.0,0.0,0.0,128,128
+68101,after,pressure_k8_d8,seen,stable,periodic,online,correct,exploratory,0.0,0.0,0.0,128,128
+68101,after,pressure_k8_d8,seen,revised,periodic,continuous,correct,exploratory,0.0,0.0,0.0,128,128
+68101,after,pressure_k8_d8,seen,revised,periodic,continuous,obsolete,stale-input diagnostic,0.0,0.0,0.0,128,128
+68101,after,pressure_k8_d8,seen,revised,periodic,repeat_current,correct,exploratory,0.0,0.0,0.0,128,128
+68101,after,pressure_k8_d8,seen,revised,periodic,repeat_current,obsolete,stale-input diagnostic,0.0,0.0,0.0,128,128
+68101,after,pressure_k8_d8,seen,revised,continuous,repeat_current,correct,exploratory,0.0,0.0,0.0,128,128
+68101,after,pressure_k8_d8,seen,revised,continuous,repeat_current,obsolete,stale-input diagnostic,0.0,0.0,0.0,128,128
+68101,after,pressure_k8_d8,seen,revised,periodic,online,correct,exploratory,0.0,0.0,0.0,128,128
+68101,after,pressure_k8_d8,seen,revised,periodic,online,obsolete,stale-input diagnostic,0.0,0.0,0.0,128,128
+68101,after,pressure_k8_d8,seen,recent,periodic,continuous,correct,exploratory,0.0,0.0,0.0,128,128
+68101,after,pressure_k8_d8,seen,recent,periodic,repeat_current,correct,exploratory,0.0,0.0,0.0,128,128
+68101,after,pressure_k8_d8,seen,recent,continuous,repeat_current,correct,exploratory,0.0,0.0,0.0,128,128
+68101,after,pressure_k8_d8,seen,recent,periodic,online,correct,exploratory,0.0,0.0,0.0,128,128
+68101,after,pressure_k8_d32,seen,stable,periodic,continuous,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k8_d32,seen,stable,periodic,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k8_d32,seen,stable,continuous,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k8_d32,seen,stable,periodic,online,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k8_d32,seen,revised,periodic,continuous,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k8_d32,seen,revised,periodic,continuous,obsolete,stale-input diagnostic,0.0,0.0,0.0,32,32
+68101,after,pressure_k8_d32,seen,revised,periodic,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k8_d32,seen,revised,periodic,repeat_current,obsolete,stale-input diagnostic,0.0,0.0,0.0,32,32
+68101,after,pressure_k8_d32,seen,revised,continuous,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k8_d32,seen,revised,continuous,repeat_current,obsolete,stale-input diagnostic,0.0,0.0,0.0,32,32
+68101,after,pressure_k8_d32,seen,revised,periodic,online,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k8_d32,seen,revised,periodic,online,obsolete,stale-input diagnostic,0.0,0.0,0.0,32,32
+68101,after,pressure_k8_d32,seen,recent,periodic,continuous,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k8_d32,seen,recent,periodic,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k8_d32,seen,recent,continuous,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k8_d32,seen,recent,periodic,online,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k16_d0,seen,stable,periodic,continuous,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k16_d0,seen,stable,periodic,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k16_d0,seen,stable,continuous,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k16_d0,seen,stable,periodic,online,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k16_d0,seen,revised,periodic,continuous,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k16_d0,seen,revised,periodic,continuous,obsolete,stale-input diagnostic,0.0,0.0,0.0,32,32
+68101,after,pressure_k16_d0,seen,revised,periodic,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k16_d0,seen,revised,periodic,repeat_current,obsolete,stale-input diagnostic,0.0,0.0,0.0,32,32
+68101,after,pressure_k16_d0,seen,revised,continuous,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k16_d0,seen,revised,continuous,repeat_current,obsolete,stale-input diagnostic,0.0,0.0,0.0,32,32
+68101,after,pressure_k16_d0,seen,revised,periodic,online,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k16_d0,seen,revised,periodic,online,obsolete,stale-input diagnostic,0.0,0.0,0.0,32,32
+68101,after,pressure_k16_d8,seen,stable,periodic,continuous,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k16_d8,seen,stable,periodic,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k16_d8,seen,stable,continuous,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k16_d8,seen,stable,periodic,online,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k16_d8,seen,revised,periodic,continuous,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k16_d8,seen,revised,periodic,continuous,obsolete,stale-input diagnostic,0.0,0.0,0.0,32,32
+68101,after,pressure_k16_d8,seen,revised,periodic,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k16_d8,seen,revised,periodic,repeat_current,obsolete,stale-input diagnostic,0.0,0.0,0.0,32,32
+68101,after,pressure_k16_d8,seen,revised,continuous,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k16_d8,seen,revised,continuous,repeat_current,obsolete,stale-input diagnostic,0.0,0.0,0.0,32,32
+68101,after,pressure_k16_d8,seen,revised,periodic,online,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k16_d8,seen,revised,periodic,online,obsolete,stale-input diagnostic,0.0,0.0,0.0,32,32
+68101,after,pressure_k16_d8,seen,recent,periodic,continuous,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k16_d8,seen,recent,periodic,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k16_d8,seen,recent,continuous,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k16_d8,seen,recent,periodic,online,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k16_d32,seen,stable,periodic,continuous,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k16_d32,seen,stable,periodic,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k16_d32,seen,stable,continuous,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k16_d32,seen,stable,periodic,online,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k16_d32,seen,revised,periodic,continuous,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k16_d32,seen,revised,periodic,continuous,obsolete,stale-input diagnostic,0.0,0.0,0.0,32,32
+68101,after,pressure_k16_d32,seen,revised,periodic,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k16_d32,seen,revised,periodic,repeat_current,obsolete,stale-input diagnostic,0.0,0.0,0.0,32,32
+68101,after,pressure_k16_d32,seen,revised,continuous,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k16_d32,seen,revised,continuous,repeat_current,obsolete,stale-input diagnostic,0.0,0.0,0.0,32,32
+68101,after,pressure_k16_d32,seen,revised,periodic,online,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k16_d32,seen,revised,periodic,online,obsolete,stale-input diagnostic,0.0,0.0,0.0,32,32
+68101,after,pressure_k16_d32,seen,recent,periodic,continuous,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k16_d32,seen,recent,periodic,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k16_d32,seen,recent,continuous,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after,pressure_k16_d32,seen,recent,periodic,online,correct,exploratory,0.0,0.0,0.0,32,32
+68101,after_minus_before,acquire_k1,seen,stable,online,online,correct,adaptation diagnostic,0.046875,0.0,0.109375,64,64
+68101,after_minus_before,acquire_k1,seen,stable,online,online,nll,adaptation diagnostic,-2.0539279615525765,-2.293179815051271,-1.809518597949586,64,64
+68101,after_minus_before,acquire_k1,seen,stable,reset_memory,reset_memory,correct,adaptation diagnostic,0.046875,0.0,0.109375,64,64
+68101,after_minus_before,acquire_k1,seen,stable,reset_memory,reset_memory,nll,adaptation diagnostic,-2.081071879051575,-2.339867400456045,-1.8302891279285216,64,64
+68101,after_minus_before,acquire_k1,heldout,stable,online,online,correct,adaptation diagnostic,0.046875,0.0,0.109375,64,64
+68101,after_minus_before,acquire_k1,heldout,stable,online,online,nll,adaptation diagnostic,-1.7909562643513681,-2.0710726699193587,-1.5375530508672466,64,64
+68101,after_minus_before,acquire_k1,heldout,stable,reset_memory,reset_memory,correct,adaptation diagnostic,0.046875,0.0,0.09414062499999432,64,64
+68101,after_minus_before,acquire_k1,heldout,stable,reset_memory,reset_memory,nll,adaptation diagnostic,-1.8095006204093995,-2.0804211361675056,-1.5534048293281844,64,64
+68101,after_minus_before,acquire_k2,seen,stable,online,online,correct,adaptation diagnostic,0.046875,0.0078125,0.09375,64,128
+68101,after_minus_before,acquire_k2,seen,stable,online,online,nll,adaptation diagnostic,-2.221334702760757,-2.4240263318437036,-2.0278520492241783,64,128
+68101,after_minus_before,acquire_k2,seen,stable,reset_memory,reset_memory,correct,adaptation diagnostic,0.046875,0.0078125,0.09375,64,128
+68101,after_minus_before,acquire_k2,seen,stable,reset_memory,reset_memory,nll,adaptation diagnostic,-2.3269492550299002,-2.515779496946533,-2.1425057692218465,64,128
+68101,after_minus_before,acquire_k2,heldout,stable,online,online,correct,adaptation diagnostic,0.046875,0.0078125,0.09375,64,128
+68101,after_minus_before,acquire_k2,heldout,stable,online,online,nll,adaptation diagnostic,-2.004976070613694,-2.2102321353901306,-1.8122715230393627,64,128
+68101,after_minus_before,acquire_k2,heldout,stable,reset_memory,reset_memory,correct,adaptation diagnostic,0.046875,0.015429687500000067,0.09375,64,128
+68101,after_minus_before,acquire_k2,heldout,stable,reset_memory,reset_memory,nll,adaptation diagnostic,-2.0593036064094936,-2.271505346101765,-1.8644612081682244,64,128
+68101,after_minus_before,revise_k1,seen,revised,online,online,correct,adaptation diagnostic,0.09375,0.03125,0.171875,64,64
+68101,after_minus_before,revise_k1,seen,revised,online,online,nll,adaptation diagnostic,-2.054820602579028,-2.349205602316263,-1.7728474606120435,64,64
+68101,after_minus_before,revise_k1,seen,revised,reset_memory,reset_memory,correct,adaptation diagnostic,0.09375,0.03125,0.171875,64,64
+68101,after_minus_before,revise_k1,seen,revised,reset_memory,reset_memory,nll,adaptation diagnostic,-2.1526183447008456,-2.447518140011428,-1.8678298162133873,64,64
+68101,after_minus_before,revise_k1,heldout,revised,online,online,correct,adaptation diagnostic,0.09375,0.03125,0.171875,64,64
+68101,after_minus_before,revise_k1,heldout,revised,online,online,nll,adaptation diagnostic,-1.8278415113615842,-2.142873154789135,-1.5335705079840825,64,64
+68101,after_minus_before,revise_k1,heldout,revised,reset_memory,reset_memory,correct,adaptation diagnostic,0.09375,0.03125,0.171875,64,64
+68101,after_minus_before,revise_k1,heldout,revised,reset_memory,reset_memory,nll,adaptation diagnostic,-1.878387305408732,-2.185139528433004,-1.6013611901305649,64,64
+68101,after_minus_before,counterfactual_k2,seen,stable,online,online,correct,adaptation diagnostic,0.0703125,0.03125,0.1171875,64,128
+68101,after_minus_before,counterfactual_k2,seen,stable,online,online,nll,adaptation diagnostic,-2.101013639407113,-2.3261226035736824,-1.898680565678176,64,128
+68101,after_minus_before,counterfactual_k2,seen,stable,reset_memory,reset_memory,correct,adaptation diagnostic,0.0703125,0.0234375,0.125,64,128
+68101,after_minus_before,counterfactual_k2,seen,stable,reset_memory,reset_memory,nll,adaptation diagnostic,-2.181621791196518,-2.3990721947814655,-1.9786325367438429,64,128
+68101,after_minus_before,counterfactual_k2,heldout,stable,online,online,correct,adaptation diagnostic,0.0703125,0.0234375,0.125,64,128
+68101,after_minus_before,counterfactual_k2,heldout,stable,online,online,nll,adaptation diagnostic,-1.873785139027413,-2.1073230370980633,-1.654089122032173,64,128
+68101,after_minus_before,counterfactual_k2,heldout,stable,reset_memory,reset_memory,correct,adaptation diagnostic,0.0703125,0.03125,0.125,64,128
+68101,after_minus_before,counterfactual_k2,heldout,stable,reset_memory,reset_memory,nll,adaptation diagnostic,-1.9063026136212007,-2.138546952575006,-1.6897123525432034,64,128
+68105,before,acquire_k1,seen,stable,online,reset_memory,correct,diagnostic,0.0,0.0,0.0,64,64
+68105,before,acquire_k1,seen,stable,online,reset_memory,nll,diagnostic,-0.03022498438669955,-0.052479631048318535,-0.007184010006109588,64,64
+68105,before,acquire_k2,seen,stable,online,reset_memory,correct,acquisition_gate,0.0,0.0,0.0,64,128
+68105,before,acquire_k2,seen,stable,online,reset_memory,nll,diagnostic,0.14492176623770184,0.12624561918950244,0.16460318594054837,64,128
+68105,before,revise_k1,seen,revised,online,reset_memory,correct,diagnostic,0.0,0.0,0.0,64,64
+68105,before,revise_k1,seen,revised,online,reset_memory,nll,diagnostic,0.13400296862418254,0.1065437597307706,0.1625840960725433,64,64
+68105,before,counterfactual_k2,seen,stable,online,reset_memory,correct,diagnostic,0.0,0.0,0.0,64,128
+68105,before,counterfactual_k2,seen,stable,online,reset_memory,nll,diagnostic,0.15282961282071555,0.13047986499485606,0.17698292802235965,64,128
+68105,before,acquire_k1,heldout,stable,online,reset_memory,correct,diagnostic,0.0,0.0,0.0,64,64
+68105,before,acquire_k1,heldout,stable,online,reset_memory,nll,diagnostic,-0.06536597594943368,-0.09522663796247131,-0.0367213690150358,64,64
+68105,before,acquire_k2,heldout,stable,online,reset_memory,correct,diagnostic,0.0,0.0,0.0,64,128
+68105,before,acquire_k2,heldout,stable,online,reset_memory,nll,diagnostic,0.12636432828568966,0.1082409520478518,0.14538119214081255,64,128
+68105,before,revise_k1,heldout,revised,online,reset_memory,correct,diagnostic,0.0,0.0,0.0,64,64
+68105,before,revise_k1,heldout,revised,online,reset_memory,nll,diagnostic,0.1172869159014866,0.09448357123247388,0.1417064751689396,64,64
+68105,before,counterfactual_k2,heldout,stable,online,reset_memory,correct,diagnostic,0.0,0.0,0.0,64,128
+68105,before,counterfactual_k2,heldout,stable,online,reset_memory,nll,diagnostic,0.14148720688786806,0.1213312159209487,0.1629000714304905,64,128
+68105,after,acquire_k1,seen,stable,online,reset_memory,correct,diagnostic,0.0,0.0,0.0,64,64
+68105,after,acquire_k1,seen,stable,online,reset_memory,nll,diagnostic,-0.002433514004064913,-0.006119380837106797,0.00149617738635937,64,64
+68105,after,acquire_k2,seen,stable,online,reset_memory,correct,acquisition_gate,0.0,0.0,0.0,64,128
+68105,after,acquire_k2,seen,stable,online,reset_memory,nll,diagnostic,0.0010876434272668878,-0.003252438716615765,0.005246357518309825,64,128
+68105,after,revise_k1,seen,revised,online,reset_memory,correct,diagnostic,0.0,0.0,0.0,64,64
+68105,after,revise_k1,seen,revised,online,reset_memory,nll,diagnostic,-0.0002956053294641686,-0.0063127265049005826,0.005985872897667045,64,64
+68105,after,counterfactual_k2,seen,stable,online,reset_memory,correct,diagnostic,0.0,0.0,0.0,64,128
+68105,after,counterfactual_k2,seen,stable,online,reset_memory,nll,diagnostic,-0.0032767310185330308,-0.0075069283927675584,0.0009907446595620892,64,128
+68105,after,acquire_k1,heldout,stable,online,reset_memory,correct,diagnostic,0.0,0.0,0.0,64,64
+68105,after,acquire_k1,heldout,stable,online,reset_memory,nll,diagnostic,-0.002345960947414849,-0.00638865064989126,0.0017960813069480826,64,64
+68105,after,acquire_k2,heldout,stable,online,reset_memory,correct,diagnostic,0.0,0.0,0.0,64,128
+68105,after,acquire_k2,heldout,stable,online,reset_memory,nll,diagnostic,0.0010440381392257496,-0.0038668395982362947,0.005873777478477479,64,128
+68105,after,revise_k1,heldout,revised,online,reset_memory,correct,diagnostic,0.0,0.0,0.0,64,64
+68105,after,revise_k1,heldout,revised,online,reset_memory,nll,diagnostic,-6.696560703252363e-05,-0.006781833752819886,0.007037015804578819,64,64
+68105,after,counterfactual_k2,heldout,stable,online,reset_memory,correct,diagnostic,0.0,0.0,0.0,64,128
+68105,after,counterfactual_k2,heldout,stable,online,reset_memory,nll,diagnostic,-0.0034722905138431896,-0.008223219482944275,0.0013993654737083944,64,128
+68105,after,pressure_k4_d0,seen,stable,periodic,continuous,correct,exploratory,0.0,0.0,0.0,32,32
+68105,after,pressure_k4_d0,seen,stable,periodic,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68105,after,pressure_k4_d0,seen,stable,continuous,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68105,after,pressure_k4_d0,seen,stable,periodic,online,correct,exploratory,0.0,0.0,0.0,32,32
+68105,after,pressure_k4_d0,seen,revised,periodic,continuous,correct,exploratory,0.0,0.0,0.0,32,32
+68105,after,pressure_k4_d0,seen,revised,periodic,continuous,obsolete,stale-input diagnostic,0.0,0.0,0.0,32,32
+68105,after,pressure_k4_d0,seen,revised,periodic,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68105,after,pressure_k4_d0,seen,revised,periodic,repeat_current,obsolete,stale-input diagnostic,0.0,0.0,0.0,32,32
+68105,after,pressure_k4_d0,seen,revised,continuous,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68105,after,pressure_k4_d0,seen,revised,continuous,repeat_current,obsolete,stale-input diagnostic,0.0,0.0,0.0,32,32
+68105,after,pressure_k4_d0,seen,revised,periodic,online,correct,exploratory,0.0,0.0,0.0,32,32
+68105,after,pressure_k4_d0,seen,revised,periodic,online,obsolete,stale-input diagnostic,0.0,0.0,0.0,32,32
+68105,after,pressure_k4_d8,seen,stable,periodic,continuous,correct,exploratory,0.0,0.0,0.0,32,32
+68105,after,pressure_k4_d8,seen,stable,periodic,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68105,after,pressure_k4_d8,seen,stable,continuous,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68105,after,pressure_k4_d8,seen,stable,periodic,online,correct,exploratory,0.0,0.0,0.0,32,32
+68105,after,pressure_k4_d8,seen,revised,periodic,continuous,correct,exploratory,0.0,0.0,0.0,32,32
+68105,after,pressure_k4_d8,seen,revised,periodic,continuous,obsolete,stale-input diagnostic,0.0,0.0,0.0,32,32
+68105,after,pressure_k4_d8,seen,revised,periodic,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68105,after,pressure_k4_d8,seen,revised,periodic,repeat_current,obsolete,stale-input diagnostic,0.0,0.0,0.0,32,32
+68105,after,pressure_k4_d8,seen,revised,continuous,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68105,after,pressure_k4_d8,seen,revised,continuous,repeat_current,obsolete,stale-input diagnostic,0.0,0.0,0.0,32,32
+68105,after,pressure_k4_d8,seen,revised,periodic,online,correct,exploratory,0.0,0.0,0.0,32,32
+68105,after,pressure_k4_d8,seen,revised,periodic,online,obsolete,stale-input diagnostic,0.0,0.0,0.0,32,32
+68105,after,pressure_k4_d8,seen,recent,periodic,continuous,correct,exploratory,0.0,0.0,0.0,32,32
+68105,after,pressure_k4_d8,seen,recent,periodic,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68105,after,pressure_k4_d8,seen,recent,continuous,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68105,after,pressure_k4_d8,seen,recent,periodic,online,correct,exploratory,0.0,0.0,0.0,32,32
+68105,after,pressure_k4_d32,seen,stable,periodic,continuous,correct,exploratory,0.0,-0.09375,0.09375,32,32
+68105,after,pressure_k4_d32,seen,stable,periodic,repeat_current,correct,exploratory,0.03125,0.0,0.09375,32,32
+68105,after,pressure_k4_d32,seen,stable,continuous,repeat_current,correct,exploratory,0.03125,0.0,0.09375,32,32
+68105,after,pressure_k4_d32,seen,stable,periodic,online,correct,exploratory,-0.0625,-0.15625,0.0,32,32
+68105,after,pressure_k4_d32,seen,revised,periodic,continuous,correct,exploratory,0.0,0.0,0.0,32,32
+68105,after,pressure_k4_d32,seen,revised,periodic,continuous,obsolete,stale-input diagnostic,0.0,0.0,0.0,32,32
+68105,after,pressure_k4_d32,seen,revised,periodic,repeat_current,correct,exploratory,0.03125,0.0,0.09375,32,32
+68105,after,pressure_k4_d32,seen,revised,periodic,repeat_current,obsolete,stale-input diagnostic,0.0,0.0,0.0,32,32
+68105,after,pressure_k4_d32,seen,revised,continuous,repeat_current,correct,exploratory,0.03125,0.0,0.09375,32,32
+68105,after,pressure_k4_d32,seen,revised,continuous,repeat_current,obsolete,stale-input diagnostic,0.0,0.0,0.0,32,32
+68105,after,pressure_k4_d32,seen,revised,periodic,online,correct,exploratory,-0.03125,-0.125,0.0625,32,32
+68105,after,pressure_k4_d32,seen,revised,periodic,online,obsolete,stale-input diagnostic,0.03125,-0.09375,0.1875,32,32
+68105,after,pressure_k4_d32,seen,recent,periodic,continuous,correct,exploratory,0.0,0.0,0.0,32,32
+68105,after,pressure_k4_d32,seen,recent,periodic,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68105,after,pressure_k4_d32,seen,recent,continuous,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68105,after,pressure_k4_d32,seen,recent,periodic,online,correct,exploratory,-0.09375,-0.21875,0.0,32,32
+68105,after,pressure_k8_d0,seen,stable,periodic,continuous,correct,exploratory,0.0,0.0,0.0,32,32
+68105,after,pressure_k8_d0,seen,stable,periodic,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68105,after,pressure_k8_d0,seen,stable,continuous,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68105,after,pressure_k8_d0,seen,stable,periodic,online,correct,exploratory,0.0,0.0,0.0,32,32
+68105,after,pressure_k8_d0,seen,revised,periodic,continuous,correct,exploratory,0.0,0.0,0.0,32,32
+68105,after,pressure_k8_d0,seen,revised,periodic,continuous,obsolete,stale-input diagnostic,0.0,0.0,0.0,32,32
+68105,after,pressure_k8_d0,seen,revised,periodic,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68105,after,pressure_k8_d0,seen,revised,periodic,repeat_current,obsolete,stale-input diagnostic,0.0,0.0,0.0,32,32
+68105,after,pressure_k8_d0,seen,revised,continuous,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68105,after,pressure_k8_d0,seen,revised,continuous,repeat_current,obsolete,stale-input diagnostic,0.0,0.0,0.0,32,32
+68105,after,pressure_k8_d0,seen,revised,periodic,online,correct,exploratory,0.0,0.0,0.0,32,32
+68105,after,pressure_k8_d0,seen,revised,periodic,online,obsolete,stale-input diagnostic,0.0,0.0,0.0,32,32
+68105,after,pressure_k8_d8,seen,stable,periodic,continuous,correct,primary,-0.0234375,-0.0546875,0.0,128,128
+68105,after,pressure_k8_d8,seen,stable,periodic,repeat_current,correct,exploratory,-0.0234375,-0.0625,0.0078125,128,128
+68105,after,pressure_k8_d8,seen,stable,continuous,repeat_current,correct,exploratory,0.0,-0.03125,0.03125,128,128
+68105,after,pressure_k8_d8,seen,stable,periodic,online,correct,exploratory,-0.015625,-0.0390625,0.0,128,128
+68105,after,pressure_k8_d8,seen,revised,periodic,continuous,correct,exploratory,0.0,-0.0390625,0.0390625,128,128
+68105,after,pressure_k8_d8,seen,revised,periodic,continuous,obsolete,stale-input diagnostic,0.0,-0.0390625,0.0390625,128,128
+68105,after,pressure_k8_d8,seen,revised,periodic,repeat_current,correct,exploratory,0.0234375,-0.015625,0.0625,128,128
+68105,after,pressure_k8_d8,seen,revised,periodic,repeat_current,obsolete,stale-input diagnostic,0.0,-0.03125,0.03125,128,128
+68105,after,pressure_k8_d8,seen,revised,continuous,repeat_current,correct,exploratory,0.0234375,-0.0078125,0.0625,128,128
+68105,after,pressure_k8_d8,seen,revised,continuous,repeat_current,obsolete,stale-input diagnostic,0.0,-0.0390625,0.0390625,128,128
+68105,after,pressure_k8_d8,seen,revised,periodic,online,correct,exploratory,-0.015625,-0.046875,0.015625,128,128
+68105,after,pressure_k8_d8,seen,revised,periodic,online,obsolete,stale-input diagnostic,-0.015625,-0.046875,0.015625,128,128
+68105,after,pressure_k8_d8,seen,recent,periodic,continuous,correct,exploratory,-0.0078125,-0.0390625,0.015625,128,128
+68105,after,pressure_k8_d8,seen,recent,periodic,repeat_current,correct,exploratory,0.0,-0.03125,0.03125,128,128
+68105,after,pressure_k8_d8,seen,recent,continuous,repeat_current,correct,exploratory,0.0078125,-0.0234375,0.0390625,128,128
+68105,after,pressure_k8_d8,seen,recent,periodic,online,correct,exploratory,0.015625,0.0,0.0390625,128,128
+68105,after,pressure_k8_d32,seen,stable,periodic,continuous,correct,exploratory,0.0,0.0,0.0,32,32
+68105,after,pressure_k8_d32,seen,stable,periodic,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68105,after,pressure_k8_d32,seen,stable,continuous,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68105,after,pressure_k8_d32,seen,stable,periodic,online,correct,exploratory,0.125,-0.03125,0.3125,32,32
+68105,after,pressure_k8_d32,seen,revised,periodic,continuous,correct,exploratory,0.0,0.0,0.0,32,32
+68105,after,pressure_k8_d32,seen,revised,periodic,continuous,obsolete,stale-input diagnostic,0.0,0.0,0.0,32,32
+68105,after,pressure_k8_d32,seen,revised,periodic,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68105,after,pressure_k8_d32,seen,revised,periodic,repeat_current,obsolete,stale-input diagnostic,0.0,0.0,0.0,32,32
+68105,after,pressure_k8_d32,seen,revised,continuous,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68105,after,pressure_k8_d32,seen,revised,continuous,repeat_current,obsolete,stale-input diagnostic,0.0,0.0,0.0,32,32
+68105,after,pressure_k8_d32,seen,revised,periodic,online,correct,exploratory,0.0,-0.125,0.125,32,32
+68105,after,pressure_k8_d32,seen,revised,periodic,online,obsolete,stale-input diagnostic,0.03125,0.0,0.09375,32,32
+68105,after,pressure_k8_d32,seen,recent,periodic,continuous,correct,exploratory,0.0,0.0,0.0,32,32
+68105,after,pressure_k8_d32,seen,recent,periodic,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68105,after,pressure_k8_d32,seen,recent,continuous,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68105,after,pressure_k8_d32,seen,recent,periodic,online,correct,exploratory,-0.0625,-0.1875,0.0625,32,32
+68105,after,pressure_k16_d0,seen,stable,periodic,continuous,correct,exploratory,0.0,0.0,0.0,32,32
+68105,after,pressure_k16_d0,seen,stable,periodic,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68105,after,pressure_k16_d0,seen,stable,continuous,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68105,after,pressure_k16_d0,seen,stable,periodic,online,correct,exploratory,0.03125,-0.0625,0.15625,32,32
+68105,after,pressure_k16_d0,seen,revised,periodic,continuous,correct,exploratory,0.0,0.0,0.0,32,32
+68105,after,pressure_k16_d0,seen,revised,periodic,continuous,obsolete,stale-input diagnostic,0.0,0.0,0.0,32,32
+68105,after,pressure_k16_d0,seen,revised,periodic,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68105,after,pressure_k16_d0,seen,revised,periodic,repeat_current,obsolete,stale-input diagnostic,0.0,0.0,0.0,32,32
+68105,after,pressure_k16_d0,seen,revised,continuous,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68105,after,pressure_k16_d0,seen,revised,continuous,repeat_current,obsolete,stale-input diagnostic,0.0,0.0,0.0,32,32
+68105,after,pressure_k16_d0,seen,revised,periodic,online,correct,exploratory,-0.03125,-0.125,0.0625,32,32
+68105,after,pressure_k16_d0,seen,revised,periodic,online,obsolete,stale-input diagnostic,0.0,-0.09375,0.09375,32,32
+68105,after,pressure_k16_d8,seen,stable,periodic,continuous,correct,exploratory,-0.03125,-0.09375,0.0,32,32
+68105,after,pressure_k16_d8,seen,stable,periodic,repeat_current,correct,exploratory,0.03125,0.0,0.09375,32,32
+68105,after,pressure_k16_d8,seen,stable,continuous,repeat_current,correct,exploratory,0.0625,0.0,0.15625,32,32
+68105,after,pressure_k16_d8,seen,stable,periodic,online,correct,exploratory,0.03125,-0.0625,0.125,32,32
+68105,after,pressure_k16_d8,seen,revised,periodic,continuous,correct,exploratory,0.0,0.0,0.0,32,32
+68105,after,pressure_k16_d8,seen,revised,periodic,continuous,obsolete,stale-input diagnostic,0.0,0.0,0.0,32,32
+68105,after,pressure_k16_d8,seen,revised,periodic,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68105,after,pressure_k16_d8,seen,revised,periodic,repeat_current,obsolete,stale-input diagnostic,0.0,0.0,0.0,32,32
+68105,after,pressure_k16_d8,seen,revised,continuous,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68105,after,pressure_k16_d8,seen,revised,continuous,repeat_current,obsolete,stale-input diagnostic,0.0,0.0,0.0,32,32
+68105,after,pressure_k16_d8,seen,revised,periodic,online,correct,exploratory,-0.03125,-0.125,0.0625,32,32
+68105,after,pressure_k16_d8,seen,revised,periodic,online,obsolete,stale-input diagnostic,0.0,-0.09375,0.09375,32,32
+68105,after,pressure_k16_d8,seen,recent,periodic,continuous,correct,exploratory,-0.09375,-0.21875,0.0,32,32
+68105,after,pressure_k16_d8,seen,recent,periodic,repeat_current,correct,exploratory,-0.03125,-0.125,0.0625,32,32
+68105,after,pressure_k16_d8,seen,recent,continuous,repeat_current,correct,exploratory,0.0625,0.0,0.15625,32,32
+68105,after,pressure_k16_d8,seen,recent,periodic,online,correct,exploratory,0.15625,0.0625,0.28125,32,32
+68105,after,pressure_k16_d32,seen,stable,periodic,continuous,correct,exploratory,0.0,0.0,0.0,32,32
+68105,after,pressure_k16_d32,seen,stable,periodic,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68105,after,pressure_k16_d32,seen,stable,continuous,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68105,after,pressure_k16_d32,seen,stable,periodic,online,correct,exploratory,0.0,-0.125,0.125,32,32
+68105,after,pressure_k16_d32,seen,revised,periodic,continuous,correct,exploratory,0.0,0.0,0.0,32,32
+68105,after,pressure_k16_d32,seen,revised,periodic,continuous,obsolete,stale-input diagnostic,0.0,0.0,0.0,32,32
+68105,after,pressure_k16_d32,seen,revised,periodic,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68105,after,pressure_k16_d32,seen,revised,periodic,repeat_current,obsolete,stale-input diagnostic,0.0,0.0,0.0,32,32
+68105,after,pressure_k16_d32,seen,revised,continuous,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68105,after,pressure_k16_d32,seen,revised,continuous,repeat_current,obsolete,stale-input diagnostic,0.0,0.0,0.0,32,32
+68105,after,pressure_k16_d32,seen,revised,periodic,online,correct,exploratory,0.0,-0.09375,0.09375,32,32
+68105,after,pressure_k16_d32,seen,revised,periodic,online,obsolete,stale-input diagnostic,0.0,-0.09375,0.09375,32,32
+68105,after,pressure_k16_d32,seen,recent,periodic,continuous,correct,exploratory,0.0,0.0,0.0,32,32
+68105,after,pressure_k16_d32,seen,recent,periodic,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68105,after,pressure_k16_d32,seen,recent,continuous,repeat_current,correct,exploratory,0.0,0.0,0.0,32,32
+68105,after,pressure_k16_d32,seen,recent,periodic,online,correct,exploratory,0.0625,0.0,0.15625,32,32
+68105,after_minus_before,acquire_k1,seen,stable,online,online,correct,adaptation diagnostic,0.046875,0.0,0.109375,64,64
+68105,after_minus_before,acquire_k1,seen,stable,online,online,nll,adaptation diagnostic,-1.6772833609344349,-1.9114669652163392,-1.4521670370062933,64,64
+68105,after_minus_before,acquire_k1,seen,stable,reset_memory,reset_memory,correct,adaptation diagnostic,0.046875,0.0,0.109375,64,64
+68105,after_minus_before,acquire_k1,seen,stable,reset_memory,reset_memory,nll,adaptation diagnostic,-1.7050748313170696,-1.937092802925802,-1.478874686346247,64,64
+68105,after_minus_before,acquire_k1,heldout,stable,online,online,correct,adaptation diagnostic,0.046875,0.0,0.109375,64,64
+68105,after_minus_before,acquire_k1,heldout,stable,online,online,nll,adaptation diagnostic,-1.5657372640696248,-1.8031640483402354,-1.3402032993450892,64,64
+68105,after_minus_before,acquire_k1,heldout,stable,reset_memory,reset_memory,correct,adaptation diagnostic,0.046875,0.0,0.109375,64,64
+68105,after_minus_before,acquire_k1,heldout,stable,reset_memory,reset_memory,nll,adaptation diagnostic,-1.6287572790716436,-1.8671062293755243,-1.3995691121721978,64,64
+68105,after_minus_before,acquire_k2,seen,stable,online,online,correct,adaptation diagnostic,0.046875,0.0078125,0.09375,64,128
+68105,after_minus_before,acquire_k2,seen,stable,online,online,nll,adaptation diagnostic,-2.0556133048465783,-2.2275804514150903,-1.8826084116897408,64,128
+68105,after_minus_before,acquire_k2,seen,stable,reset_memory,reset_memory,correct,adaptation diagnostic,0.046875,0.0078125,0.09375,64,128
+68105,after_minus_before,acquire_k2,seen,stable,reset_memory,reset_memory,nll,adaptation diagnostic,-1.9117791820361432,-2.0934894935902464,-1.7350403464858097,64,128
+68105,after_minus_before,acquire_k2,heldout,stable,online,online,correct,adaptation diagnostic,0.046875,0.0078125,0.09375,64,128
+68105,after_minus_before,acquire_k2,heldout,stable,online,online,nll,adaptation diagnostic,-1.9372959892499217,-2.112568958236343,-1.7638883092668853,64,128
+68105,after_minus_before,acquire_k2,heldout,stable,reset_memory,reset_memory,correct,adaptation diagnostic,0.046875,0.0078125,0.09375,64,128
+68105,after_minus_before,acquire_k2,heldout,stable,reset_memory,reset_memory,nll,adaptation diagnostic,-1.8119756991034581,-2.000239518740621,-1.6368019478589062,64,128
+68105,after_minus_before,revise_k1,seen,revised,online,online,correct,adaptation diagnostic,0.09375,0.03125,0.171875,64,64
+68105,after_minus_before,revise_k1,seen,revised,online,online,nll,adaptation diagnostic,-1.9851208112491614,-2.235380993282223,-1.7544657385289706,64,64
+68105,after_minus_before,revise_k1,seen,revised,reset_memory,reset_memory,correct,adaptation diagnostic,0.09375,0.03125,0.171875,64,64
+68105,after_minus_before,revise_k1,seen,revised,reset_memory,reset_memory,nll,adaptation diagnostic,-1.8508222372955148,-2.094490040336322,-1.6124784008895554,64,64
+68105,after_minus_before,revise_k1,heldout,revised,online,online,correct,adaptation diagnostic,0.09375,0.03125,0.171875,64,64
+68105,after_minus_before,revise_k1,heldout,revised,online,online,nll,adaptation diagnostic,-1.842744867942713,-2.1085548459374484,-1.5962525584024194,64,64
+68105,after_minus_before,revise_k1,heldout,revised,reset_memory,reset_memory,correct,adaptation diagnostic,0.09375,0.03125,0.171875,64,64
+68105,after_minus_before,revise_k1,heldout,revised,reset_memory,reset_memory,nll,adaptation diagnostic,-1.725390986434194,-1.9848803095789485,-1.4741030759247307,64,64
+68105,after_minus_before,counterfactual_k2,seen,stable,online,online,correct,adaptation diagnostic,0.0703125,0.03125,0.125,64,128
+68105,after_minus_before,counterfactual_k2,seen,stable,online,online,nll,adaptation diagnostic,-2.015005498500324,-2.1902184895815084,-1.8410660409061672,64,128
+68105,after_minus_before,counterfactual_k2,seen,stable,reset_memory,reset_memory,correct,adaptation diagnostic,0.0703125,0.03125,0.125,64,128
+68105,after_minus_before,counterfactual_k2,seen,stable,reset_memory,reset_memory,nll,adaptation diagnostic,-1.8588991546610756,-2.0382426823695585,-1.6806714206134497,64,128
+68105,after_minus_before,counterfactual_k2,heldout,stable,online,online,correct,adaptation diagnostic,0.0703125,0.0234375,0.125,64,128
+68105,after_minus_before,counterfactual_k2,heldout,stable,online,online,nll,adaptation diagnostic,-1.9002239510023582,-2.0850621243066465,-1.727183314914105,64,128
+68105,after_minus_before,counterfactual_k2,heldout,stable,reset_memory,reset_memory,correct,adaptation diagnostic,0.0703125,0.03125,0.1171875,64,128
+68105,after_minus_before,counterfactual_k2,heldout,stable,reset_memory,reset_memory,nll,adaptation diagnostic,-1.755264453600647,-1.9443415255738694,-1.5798347401906372,64,128

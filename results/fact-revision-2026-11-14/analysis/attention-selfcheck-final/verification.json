@@ -1,0 +1,26 @@
+{
+  "status": "selfchecks_passed",
+  "supplemental_certified": false,
+  "main_v1_certified": false,
+  "fixture_scope": "Synthetic fixtures only",
+  "checks": [
+    "128 short logits must be exactly paired under reset",
+    "even small 128 no-op violation",
+    "32 geometry does not falsely require no-op",
+    "K2 two-query paired contrast clusters whole episodes",
+    "mismatched control query identity",
+    "canonical control training hash includes target labels",
+    "control label copied from last unrelated fact",
+    "control query answer fed into input"
+  ],
+  "count": 8,
+  "auditor_sha256": "6dcff402bef03c031b351da928cdaa485d8ce6a3c62c20242873afebe85d3d86",
+  "main_helper_sha256": "3718b7b68a3f766c350c241599c9a88363b00d85d0b6171598fef08274bbf025",
+  "command": [
+    "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-test-env\\Scripts\\python.exe",
+    "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-fact-revision-2026-11-14\\analysis\\analyze_attention_control.py",
+    "--selfcheck",
+    "--out",
+    "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-fact-revision-2026-11-14\\analysis\\attention-selfcheck-final"
+  ]
+}

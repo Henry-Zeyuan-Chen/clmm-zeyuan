@@ -1,0 +1,18 @@
+{
+  "status": "smoke_verified",
+  "main_certified": false,
+  "smoke_run": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-fact-revision-2026-11-14\\smoke-cpu-eval",
+  "evidence_scope": "Saved-artifact reconstruction and independent statistics; no neural inference or training rerun.",
+  "queries": 240,
+  "canonical_data_sha256": "9237be1cf217fa084f1ae8557cdf5879c4bc28cf698f846820d023502584276a",
+  "analyzer_sha256": "3718b7b68a3f766c350c241599c9a88363b00d85d0b6171598fef08274bbf025",
+  "audited_utc": "2026-11-14T22:36:42.666046+00:00",
+  "command": [
+    "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-test-env\\Scripts\\python.exe",
+    "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-fact-revision-2026-11-14\\analysis\\analyze_fact_revision.py",
+    "--smoke-run",
+    "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-fact-revision-2026-11-14\\smoke-cpu-eval",
+    "--out",
+    "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-fact-revision-2026-11-14\\analysis\\smoke-eval-final"
+  ]
+}

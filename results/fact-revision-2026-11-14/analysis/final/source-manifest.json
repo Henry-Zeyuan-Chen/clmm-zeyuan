@@ -1,0 +1,513 @@
+{
+  "design_sha256": "004ea844f8f35e8b707db2c92f7a46580b3618e81d954b100ec5197c6057f7fc",
+  "expected_commit": "646c6702b6bba57279a9a095eb10a1dbfc877092",
+  "analyzer_sha256": "3718b7b68a3f766c350c241599c9a88363b00d85d0b6171598fef08274bbf025",
+  "parents": {
+    "68101": {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-shared-pretrain-2026-11-14\\lm-68101\\checkpoint.pt",
+      "sha256": "a07762534f0b6311ec68c08b0d9f9c0ce74ec71577138eb13279a4a5dffbb24d"
+    },
+    "68105": {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-shared-pretrain-2026-11-14\\lm-68105\\checkpoint.pt",
+      "sha256": "c3c4b5f49fa3116f348720b8215e2a97a8b166587d22c5c1c9ab1f72cccf8a55"
+    }
+  },
+  "artifacts": {
+    "before-68101/answer_logits.npy": {
+      "bytes": 1572992,
+      "sha256": "ac265bae7c91d73f9e2b7d32d7ac8406566f8ea158e3a461c571e152cc7fbf14"
+    },
+    "before-68101/design.json": {
+      "bytes": 6810,
+      "sha256": "004ea844f8f35e8b707db2c92f7a46580b3618e81d954b100ec5197c6057f7fc"
+    },
+    "before-68101/evaluation_data.jsonl.gz": {
+      "bytes": 152072,
+      "sha256": "4a5bf5412d6463cce17c3b57e6c592e36c7ffa7b040c324e4de8ce928b5b6dcc"
+    },
+    "before-68101/evaluation_data_canonical.sha256": {
+      "bytes": 65,
+      "sha256": "7ffcbd44b535fe5952fd0c2952901726bf7ff328bdbf91de0bcc1d40bc8f7597"
+    },
+    "before-68101/metadata.json": {
+      "bytes": 4816,
+      "sha256": "bb75b7dfefcc3ac92ba767a3ed2484c03d15b4d6dbd70947d540be781d95072f"
+    },
+    "before-68101/predictions.csv": {
+      "bytes": 365273,
+      "sha256": "bd17a005f73e1ffd7bee008cd4f93a56abf0b6f4911eb78e30b554e68df8c920"
+    },
+    "before-68101/runtime.csv": {
+      "bytes": 955,
+      "sha256": "e5288c0cd701027988d3d15423112a7b22208d4b63caf70977c77a52741ffe46"
+    },
+    "before-68101/sources/clmm/__init__.py": {
+      "bytes": 92,
+      "sha256": "cb8d9ffaff4a6d144592b0f7cb041683f7e79fc7accc73647ff020070647d652"
+    },
+    "before-68101/sources/clmm/pretrain/__init__.py": {
+      "bytes": 606,
+      "sha256": "3684561d02ad25bba9fe0673da2241b976031fb4ab98a891da8c081490eae526"
+    },
+    "before-68101/sources/clmm/pretrain/byte_lm.py": {
+      "bytes": 17523,
+      "sha256": "b41de6f729bb4bc18f1d17ce6a449deb4c90eafea550271d32f01866f3b4feea"
+    },
+    "before-68101/sources/clmm/pretrain/fact_streams.py": {
+      "bytes": 24716,
+      "sha256": "32637fe0388ffa132b061ce1d8dab4e9a7e64324606e9ade49d29024214ac7f3"
+    },
+    "before-68101/sources/pyproject.toml": {
+      "bytes": 1600,
+      "sha256": "daa0c8b7d63238c7439a50b0c5dc152d203bfb15b445aa8c0aebbd1b2d6d512b"
+    },
+    "before-68101/sources/requirements-lock.txt": {
+      "bytes": 577,
+      "sha256": "0021fd959cc013c08f41735d2d3d8b43e3f261dae8c0069f56d345a413340e17"
+    },
+    "before-68101/sources/scripts/fact_revision_experiment.py": {
+      "bytes": 24078,
+      "sha256": "018301da2035fbb3c6af331e33b8d174589f924d6b8022d59d9e61609053955d"
+    },
+    "before-68101/sources/titans_pytorch/__init__.py": {
+      "bytes": 338,
+      "sha256": "b154ceb9152468861a6c513174b63ab35a979b55301c7cff275f47f1957e5fbe"
+    },
+    "before-68101/sources/titans_pytorch/implicit_mlp_attention.py": {
+      "bytes": 4525,
+      "sha256": "a5ec0c11005f447fb3697f13cfa4f967ff342712fa154c1bc5e848490ef2f40c"
+    },
+    "before-68101/sources/titans_pytorch/mac_transformer.py": {
+      "bytes": 26999,
+      "sha256": "3ba521375e92f661542792b7e04196e89c3a668ec5329eb8b31d4a5c2f96f38d"
+    },
+    "before-68101/sources/titans_pytorch/memory_models.py": {
+      "bytes": 5835,
+      "sha256": "c271fd8bd9144a8559844594963f0ba4149b078d342fd90bb75ccff023b8e504"
+    },
+    "before-68101/sources/titans_pytorch/nested_attention.py": {
+      "bytes": 3331,
+      "sha256": "361102a81ccd3f080f0d8f3401af1a3383cc28a3b34326daf7c740cbcc6894da"
+    },
+    "before-68101/sources/titans_pytorch/neural_memory.py": {
+      "bytes": 36426,
+      "sha256": "c4a756d8d8257500d2da6e94473a0cd13e5ae4b517826cdd761dc500de468804"
+    },
+    "before-68101/summary.csv": {
+      "bytes": 1685,
+      "sha256": "9db17b57aad9190b5fff84b3e5fef420f54266a5c7ea4ecf4c127bfb71770510"
+    },
+    "adapt-68101/checkpoint.pt": {
+      "bytes": 3384893,
+      "sha256": "23c938811185ac3589ecc205a3655ddc940ec7c6982b94cb76e2c41b42b43624"
+    },
+    "adapt-68101/design.json": {
+      "bytes": 6810,
+      "sha256": "004ea844f8f35e8b707db2c92f7a46580b3618e81d954b100ec5197c6057f7fc"
+    },
+    "adapt-68101/metadata.json": {
+      "bytes": 4761,
+      "sha256": "6c755b6b69576ded1bac7a89695959bbe1c224528f5b58330fcd93359f54156c"
+    },
+    "adapt-68101/optimizer.pt": {
+      "bytes": 6707915,
+      "sha256": "56932445e0b97bc16f855f72b97ed990847c0a9d19352e365b7911deef1adcc1"
+    },
+    "adapt-68101/sources/clmm/__init__.py": {
+      "bytes": 92,
+      "sha256": "cb8d9ffaff4a6d144592b0f7cb041683f7e79fc7accc73647ff020070647d652"
+    },
+    "adapt-68101/sources/clmm/pretrain/__init__.py": {
+      "bytes": 606,
+      "sha256": "3684561d02ad25bba9fe0673da2241b976031fb4ab98a891da8c081490eae526"
+    },
+    "adapt-68101/sources/clmm/pretrain/byte_lm.py": {
+      "bytes": 17523,
+      "sha256": "b41de6f729bb4bc18f1d17ce6a449deb4c90eafea550271d32f01866f3b4feea"
+    },
+    "adapt-68101/sources/clmm/pretrain/fact_streams.py": {
+      "bytes": 24716,
+      "sha256": "32637fe0388ffa132b061ce1d8dab4e9a7e64324606e9ade49d29024214ac7f3"
+    },
+    "adapt-68101/sources/pyproject.toml": {
+      "bytes": 1600,
+      "sha256": "daa0c8b7d63238c7439a50b0c5dc152d203bfb15b445aa8c0aebbd1b2d6d512b"
+    },
+    "adapt-68101/sources/requirements-lock.txt": {
+      "bytes": 577,
+      "sha256": "0021fd959cc013c08f41735d2d3d8b43e3f261dae8c0069f56d345a413340e17"
+    },
+    "adapt-68101/sources/scripts/fact_revision_experiment.py": {
+      "bytes": 24078,
+      "sha256": "018301da2035fbb3c6af331e33b8d174589f924d6b8022d59d9e61609053955d"
+    },
+    "adapt-68101/sources/titans_pytorch/__init__.py": {
+      "bytes": 338,
+      "sha256": "b154ceb9152468861a6c513174b63ab35a979b55301c7cff275f47f1957e5fbe"
+    },
+    "adapt-68101/sources/titans_pytorch/implicit_mlp_attention.py": {
+      "bytes": 4525,
+      "sha256": "a5ec0c11005f447fb3697f13cfa4f967ff342712fa154c1bc5e848490ef2f40c"
+    },
+    "adapt-68101/sources/titans_pytorch/mac_transformer.py": {
+      "bytes": 26999,
+      "sha256": "3ba521375e92f661542792b7e04196e89c3a668ec5329eb8b31d4a5c2f96f38d"
+    },
+    "adapt-68101/sources/titans_pytorch/memory_models.py": {
+      "bytes": 5835,
+      "sha256": "c271fd8bd9144a8559844594963f0ba4149b078d342fd90bb75ccff023b8e504"
+    },
+    "adapt-68101/sources/titans_pytorch/nested_attention.py": {
+      "bytes": 3331,
+      "sha256": "361102a81ccd3f080f0d8f3401af1a3383cc28a3b34326daf7c740cbcc6894da"
+    },
+    "adapt-68101/sources/titans_pytorch/neural_memory.py": {
+      "bytes": 36426,
+      "sha256": "c4a756d8d8257500d2da6e94473a0cd13e5ae4b517826cdd761dc500de468804"
+    },
+    "adapt-68101/training.csv": {
+      "bytes": 136598,
+      "sha256": "510272a8042674e00808b00dbb6eb65e07175974f44adb14e035e567dde4304c"
+    },
+    "adapt-68101/training_inputs.npz": {
+      "bytes": 844431,
+      "sha256": "2bb3fe343bcfd9aa38493e05aa2c8aa7feb1f9de208665281e1facbfe1ca45c0"
+    },
+    "adapt-68101/training_plan.json": {
+      "bytes": 934764,
+      "sha256": "caf98758a615c764cfc8085144e783e3928e51679847d62e8c7c1f2eb811c55d"
+    },
+    "after-68101/answer_logits.npy": {
+      "bytes": 5898368,
+      "sha256": "770bb7e56ff9e7beb5d2a5b16494d54b79b2ee9477e00560e1724b7100affa16"
+    },
+    "after-68101/design.json": {
+      "bytes": 6810,
+      "sha256": "004ea844f8f35e8b707db2c92f7a46580b3618e81d954b100ec5197c6057f7fc"
+    },
+    "after-68101/evaluation_data.jsonl.gz": {
+      "bytes": 2750550,
+      "sha256": "82a3e452a845d7ebca1c9d7b403c17b24cbb71d1e940b0d628d593e83c252bbe"
+    },
+    "after-68101/evaluation_data_canonical.sha256": {
+      "bytes": 65,
+      "sha256": "dd76deb2c07b1d4136a68d9b43f0ae8525a14828f8397c30ee2813b9e2aea215"
+    },
+    "after-68101/metadata.json": {
+      "bytes": 4801,
+      "sha256": "79d02ad5061d35eaafb060ec4e1a690076b9010a4598bab38d4840bd98bfba42"
+    },
+    "after-68101/predictions.csv": {
+      "bytes": 1409030,
+      "sha256": "6736ad23b2cf3a5a471130422f3e416ec140cf326a3b92d4c68f52e827a75c33"
+    },
+    "after-68101/runtime.csv": {
+      "bytes": 3060,
+      "sha256": "11a4d6656f6bcfa2a684fda795ee8a1efdc055dfdbbb09271297428a2a2ae824"
+    },
+    "after-68101/sources/clmm/__init__.py": {
+      "bytes": 92,
+      "sha256": "cb8d9ffaff4a6d144592b0f7cb041683f7e79fc7accc73647ff020070647d652"
+    },
+    "after-68101/sources/clmm/pretrain/__init__.py": {
+      "bytes": 606,
+      "sha256": "3684561d02ad25bba9fe0673da2241b976031fb4ab98a891da8c081490eae526"
+    },
+    "after-68101/sources/clmm/pretrain/byte_lm.py": {
+      "bytes": 17523,
+      "sha256": "b41de6f729bb4bc18f1d17ce6a449deb4c90eafea550271d32f01866f3b4feea"
+    },
+    "after-68101/sources/clmm/pretrain/fact_streams.py": {
+      "bytes": 24716,
+      "sha256": "32637fe0388ffa132b061ce1d8dab4e9a7e64324606e9ade49d29024214ac7f3"
+    },
+    "after-68101/sources/pyproject.toml": {
+      "bytes": 1600,
+      "sha256": "daa0c8b7d63238c7439a50b0c5dc152d203bfb15b445aa8c0aebbd1b2d6d512b"
+    },
+    "after-68101/sources/requirements-lock.txt": {
+      "bytes": 577,
+      "sha256": "0021fd959cc013c08f41735d2d3d8b43e3f261dae8c0069f56d345a413340e17"
+    },
+    "after-68101/sources/scripts/fact_revision_experiment.py": {
+      "bytes": 24078,
+      "sha256": "018301da2035fbb3c6af331e33b8d174589f924d6b8022d59d9e61609053955d"
+    },
+    "after-68101/sources/titans_pytorch/__init__.py": {
+      "bytes": 338,
+      "sha256": "b154ceb9152468861a6c513174b63ab35a979b55301c7cff275f47f1957e5fbe"
+    },
+    "after-68101/sources/titans_pytorch/implicit_mlp_attention.py": {
+      "bytes": 4525,
+      "sha256": "a5ec0c11005f447fb3697f13cfa4f967ff342712fa154c1bc5e848490ef2f40c"
+    },
+    "after-68101/sources/titans_pytorch/mac_transformer.py": {
+      "bytes": 26999,
+      "sha256": "3ba521375e92f661542792b7e04196e89c3a668ec5329eb8b31d4a5c2f96f38d"
+    },
+    "after-68101/sources/titans_pytorch/memory_models.py": {
+      "bytes": 5835,
+      "sha256": "c271fd8bd9144a8559844594963f0ba4149b078d342fd90bb75ccff023b8e504"
+    },
+    "after-68101/sources/titans_pytorch/nested_attention.py": {
+      "bytes": 3331,
+      "sha256": "361102a81ccd3f080f0d8f3401af1a3383cc28a3b34326daf7c740cbcc6894da"
+    },
+    "after-68101/sources/titans_pytorch/neural_memory.py": {
+      "bytes": 36426,
+      "sha256": "c4a756d8d8257500d2da6e94473a0cd13e5ae4b517826cdd761dc500de468804"
+    },
+    "after-68101/summary.csv": {
+      "bytes": 11667,
+      "sha256": "825330509073d65e5514f1aafd3dbd09ea4742d3fae7e327c7d0fb7afa556a0b"
+    },
+    "before-68105/answer_logits.npy": {
+      "bytes": 1572992,
+      "sha256": "7c4d3666af9007344f56d2d8bdaaacf175567155fc7a99dfcb038ba9ffb1eb77"
+    },
+    "before-68105/design.json": {
+      "bytes": 6810,
+      "sha256": "004ea844f8f35e8b707db2c92f7a46580b3618e81d954b100ec5197c6057f7fc"
+    },
+    "before-68105/evaluation_data.jsonl.gz": {
+      "bytes": 152072,
+      "sha256": "4a5bf5412d6463cce17c3b57e6c592e36c7ffa7b040c324e4de8ce928b5b6dcc"
+    },
+    "before-68105/evaluation_data_canonical.sha256": {
+      "bytes": 65,
+      "sha256": "7ffcbd44b535fe5952fd0c2952901726bf7ff328bdbf91de0bcc1d40bc8f7597"
+    },
+    "before-68105/metadata.json": {
+      "bytes": 4816,
+      "sha256": "9bfead27368542c7f340c5923023533d1198b149622f4c830b48e5ec1b3eb9b9"
+    },
+    "before-68105/predictions.csv": {
+      "bytes": 365216,
+      "sha256": "82012578c68382f94cee06919c69702ede7d71a279c6196eb8147c1e765402c9"
+    },
+    "before-68105/runtime.csv": {
+      "bytes": 955,
+      "sha256": "9957def41b79bd15b6c13f55593a0d8eae085d077f20ed8cd3a57c54ea633142"
+    },
+    "before-68105/sources/clmm/__init__.py": {
+      "bytes": 92,
+      "sha256": "cb8d9ffaff4a6d144592b0f7cb041683f7e79fc7accc73647ff020070647d652"
+    },
+    "before-68105/sources/clmm/pretrain/__init__.py": {
+      "bytes": 606,
+      "sha256": "3684561d02ad25bba9fe0673da2241b976031fb4ab98a891da8c081490eae526"
+    },
+    "before-68105/sources/clmm/pretrain/byte_lm.py": {
+      "bytes": 17523,
+      "sha256": "b41de6f729bb4bc18f1d17ce6a449deb4c90eafea550271d32f01866f3b4feea"
+    },
+    "before-68105/sources/clmm/pretrain/fact_streams.py": {
+      "bytes": 24716,
+      "sha256": "32637fe0388ffa132b061ce1d8dab4e9a7e64324606e9ade49d29024214ac7f3"
+    },
+    "before-68105/sources/pyproject.toml": {
+      "bytes": 1600,
+      "sha256": "daa0c8b7d63238c7439a50b0c5dc152d203bfb15b445aa8c0aebbd1b2d6d512b"
+    },
+    "before-68105/sources/requirements-lock.txt": {
+      "bytes": 577,
+      "sha256": "0021fd959cc013c08f41735d2d3d8b43e3f261dae8c0069f56d345a413340e17"
+    },
+    "before-68105/sources/scripts/fact_revision_experiment.py": {
+      "bytes": 24078,
+      "sha256": "018301da2035fbb3c6af331e33b8d174589f924d6b8022d59d9e61609053955d"
+    },
+    "before-68105/sources/titans_pytorch/__init__.py": {
+      "bytes": 338,
+      "sha256": "b154ceb9152468861a6c513174b63ab35a979b55301c7cff275f47f1957e5fbe"
+    },
+    "before-68105/sources/titans_pytorch/implicit_mlp_attention.py": {
+      "bytes": 4525,
+      "sha256": "a5ec0c11005f447fb3697f13cfa4f967ff342712fa154c1bc5e848490ef2f40c"
+    },
+    "before-68105/sources/titans_pytorch/mac_transformer.py": {
+      "bytes": 26999,
+      "sha256": "3ba521375e92f661542792b7e04196e89c3a668ec5329eb8b31d4a5c2f96f38d"
+    },
+    "before-68105/sources/titans_pytorch/memory_models.py": {
+      "bytes": 5835,
+      "sha256": "c271fd8bd9144a8559844594963f0ba4149b078d342fd90bb75ccff023b8e504"
+    },
+    "before-68105/sources/titans_pytorch/nested_attention.py": {
+      "bytes": 3331,
+      "sha256": "361102a81ccd3f080f0d8f3401af1a3383cc28a3b34326daf7c740cbcc6894da"
+    },
+    "before-68105/sources/titans_pytorch/neural_memory.py": {
+      "bytes": 36426,
+      "sha256": "c4a756d8d8257500d2da6e94473a0cd13e5ae4b517826cdd761dc500de468804"
+    },
+    "before-68105/summary.csv": {
+      "bytes": 1687,
+      "sha256": "7d5ff444bbb5a346f0fd962790a4d319c11a69781f73756e6ad1b8049748b281"
+    },
+    "adapt-68105/checkpoint.pt": {
+      "bytes": 3384893,
+      "sha256": "f6c982ef658e7d2e5c764b3d37684b6eb9b425fd62bc150092d9c02c12155f5a"
+    },
+    "adapt-68105/design.json": {
+      "bytes": 6810,
+      "sha256": "004ea844f8f35e8b707db2c92f7a46580b3618e81d954b100ec5197c6057f7fc"
+    },
+    "adapt-68105/metadata.json": {
+      "bytes": 4761,
+      "sha256": "cc7d5ab73df17a9457d0c9fc4868c5b886748fa465853906a8c231e3defc20af"
+    },
+    "adapt-68105/optimizer.pt": {
+      "bytes": 6707915,
+      "sha256": "d392faa349936d56d15b887b871e41ebb7c23084a4bf63d36233d99899e4076a"
+    },
+    "adapt-68105/sources/clmm/__init__.py": {
+      "bytes": 92,
+      "sha256": "cb8d9ffaff4a6d144592b0f7cb041683f7e79fc7accc73647ff020070647d652"
+    },
+    "adapt-68105/sources/clmm/pretrain/__init__.py": {
+      "bytes": 606,
+      "sha256": "3684561d02ad25bba9fe0673da2241b976031fb4ab98a891da8c081490eae526"
+    },
+    "adapt-68105/sources/clmm/pretrain/byte_lm.py": {
+      "bytes": 17523,
+      "sha256": "b41de6f729bb4bc18f1d17ce6a449deb4c90eafea550271d32f01866f3b4feea"
+    },
+    "adapt-68105/sources/clmm/pretrain/fact_streams.py": {
+      "bytes": 24716,
+      "sha256": "32637fe0388ffa132b061ce1d8dab4e9a7e64324606e9ade49d29024214ac7f3"
+    },
+    "adapt-68105/sources/pyproject.toml": {
+      "bytes": 1600,
+      "sha256": "daa0c8b7d63238c7439a50b0c5dc152d203bfb15b445aa8c0aebbd1b2d6d512b"
+    },
+    "adapt-68105/sources/requirements-lock.txt": {
+      "bytes": 577,
+      "sha256": "0021fd959cc013c08f41735d2d3d8b43e3f261dae8c0069f56d345a413340e17"
+    },
+    "adapt-68105/sources/scripts/fact_revision_experiment.py": {
+      "bytes": 24078,
+      "sha256": "018301da2035fbb3c6af331e33b8d174589f924d6b8022d59d9e61609053955d"
+    },
+    "adapt-68105/sources/titans_pytorch/__init__.py": {
+      "bytes": 338,
+      "sha256": "b154ceb9152468861a6c513174b63ab35a979b55301c7cff275f47f1957e5fbe"
+    },
+    "adapt-68105/sources/titans_pytorch/implicit_mlp_attention.py": {
+      "bytes": 4525,
+      "sha256": "a5ec0c11005f447fb3697f13cfa4f967ff342712fa154c1bc5e848490ef2f40c"
+    },
+    "adapt-68105/sources/titans_pytorch/mac_transformer.py": {
+      "bytes": 26999,
+      "sha256": "3ba521375e92f661542792b7e04196e89c3a668ec5329eb8b31d4a5c2f96f38d"
+    },
+    "adapt-68105/sources/titans_pytorch/memory_models.py": {
+      "bytes": 5835,
+      "sha256": "c271fd8bd9144a8559844594963f0ba4149b078d342fd90bb75ccff023b8e504"
+    },
+    "adapt-68105/sources/titans_pytorch/nested_attention.py": {
+      "bytes": 3331,
+      "sha256": "361102a81ccd3f080f0d8f3401af1a3383cc28a3b34326daf7c740cbcc6894da"
+    },
+    "adapt-68105/sources/titans_pytorch/neural_memory.py": {
+      "bytes": 36426,
+      "sha256": "c4a756d8d8257500d2da6e94473a0cd13e5ae4b517826cdd761dc500de468804"
+    },
+    "adapt-68105/training.csv": {
+      "bytes": 136878,
+      "sha256": "204ca9f9f5586d37a0ee1c7cd149fc5e870060891f1d6f1272e3116b896caabd"
+    },
+    "adapt-68105/training_inputs.npz": {
+      "bytes": 844431,
+      "sha256": "2bb3fe343bcfd9aa38493e05aa2c8aa7feb1f9de208665281e1facbfe1ca45c0"
+    },
+    "adapt-68105/training_plan.json": {
+      "bytes": 934764,
+      "sha256": "caf98758a615c764cfc8085144e783e3928e51679847d62e8c7c1f2eb811c55d"
+    },
+    "after-68105/answer_logits.npy": {
+      "bytes": 5898368,
+      "sha256": "a2b4280b96dabe4ae5baa7e9f58a058406fd8facb47c3616550a52c5b03c9140"
+    },
+    "after-68105/design.json": {
+      "bytes": 6810,
+      "sha256": "004ea844f8f35e8b707db2c92f7a46580b3618e81d954b100ec5197c6057f7fc"
+    },
+    "after-68105/evaluation_data.jsonl.gz": {
+      "bytes": 2750550,
+      "sha256": "82a3e452a845d7ebca1c9d7b403c17b24cbb71d1e940b0d628d593e83c252bbe"
+    },
+    "after-68105/evaluation_data_canonical.sha256": {
+      "bytes": 65,
+      "sha256": "dd76deb2c07b1d4136a68d9b43f0ae8525a14828f8397c30ee2813b9e2aea215"
+    },
+    "after-68105/metadata.json": {
+      "bytes": 4800,
+      "sha256": "026118bb813bfa4b0ee93fb386753eb5b02d2f3ccd0f204757c5d634feff544b"
+    },
+    "after-68105/predictions.csv": {
+      "bytes": 1409184,
+      "sha256": "d317116b2a1fde9289f2616e6126ff6205a6d341e1599fb8d2525d269c82bf69"
+    },
+    "after-68105/runtime.csv": {
+      "bytes": 3049,
+      "sha256": "2ae3006272c4b7286a754acc67c5e002b2faf04008d4f5a933e80b350513f123"
+    },
+    "after-68105/sources/clmm/__init__.py": {
+      "bytes": 92,
+      "sha256": "cb8d9ffaff4a6d144592b0f7cb041683f7e79fc7accc73647ff020070647d652"
+    },
+    "after-68105/sources/clmm/pretrain/__init__.py": {
+      "bytes": 606,
+      "sha256": "3684561d02ad25bba9fe0673da2241b976031fb4ab98a891da8c081490eae526"
+    },
+    "after-68105/sources/clmm/pretrain/byte_lm.py": {
+      "bytes": 17523,
+      "sha256": "b41de6f729bb4bc18f1d17ce6a449deb4c90eafea550271d32f01866f3b4feea"
+    },
+    "after-68105/sources/clmm/pretrain/fact_streams.py": {
+      "bytes": 24716,
+      "sha256": "32637fe0388ffa132b061ce1d8dab4e9a7e64324606e9ade49d29024214ac7f3"
+    },
+    "after-68105/sources/pyproject.toml": {
+      "bytes": 1600,
+      "sha256": "daa0c8b7d63238c7439a50b0c5dc152d203bfb15b445aa8c0aebbd1b2d6d512b"
+    },
+    "after-68105/sources/requirements-lock.txt": {
+      "bytes": 577,
+      "sha256": "0021fd959cc013c08f41735d2d3d8b43e3f261dae8c0069f56d345a413340e17"
+    },
+    "after-68105/sources/scripts/fact_revision_experiment.py": {
+      "bytes": 24078,
+      "sha256": "018301da2035fbb3c6af331e33b8d174589f924d6b8022d59d9e61609053955d"
+    },
+    "after-68105/sources/titans_pytorch/__init__.py": {
+      "bytes": 338,
+      "sha256": "b154ceb9152468861a6c513174b63ab35a979b55301c7cff275f47f1957e5fbe"
+    },
+    "after-68105/sources/titans_pytorch/implicit_mlp_attention.py": {
+      "bytes": 4525,
+      "sha256": "a5ec0c11005f447fb3697f13cfa4f967ff342712fa154c1bc5e848490ef2f40c"
+    },
+    "after-68105/sources/titans_pytorch/mac_transformer.py": {
+      "bytes": 26999,
+      "sha256": "3ba521375e92f661542792b7e04196e89c3a668ec5329eb8b31d4a5c2f96f38d"
+    },
+    "after-68105/sources/titans_pytorch/memory_models.py": {
+      "bytes": 5835,
+      "sha256": "c271fd8bd9144a8559844594963f0ba4149b078d342fd90bb75ccff023b8e504"
+    },
+    "after-68105/sources/titans_pytorch/nested_attention.py": {
+      "bytes": 3331,
+      "sha256": "361102a81ccd3f080f0d8f3401af1a3383cc28a3b34326daf7c740cbcc6894da"
+    },
+    "after-68105/sources/titans_pytorch/neural_memory.py": {
+      "bytes": 36426,
+      "sha256": "c4a756d8d8257500d2da6e94473a0cd13e5ae4b517826cdd761dc500de468804"
+    },
+    "after-68105/summary.csv": {
+      "bytes": 11652,
+      "sha256": "4904f80f3dbc6fc760f3843bd802831a3be2d19638a69779e61f84f446662450"
+    }
+  }
+}

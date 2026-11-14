@@ -1,0 +1,79 @@
+{
+  "experiment_id": "shared-byte-fact-revision-v1",
+  "recorded_local_date": "2026-11-14",
+  "owner_role": "Zeyuan is Member C: pretraining and common evaluation, explicitly clarified by the user. Sleep and Hebbian implementations remain separate team tracks.",
+  "scope": "Task adaptation of both shared checkpoints and a raw-record replay reference evaluation. No claim of a novel sleep implementation or natural-language factual memory.",
+  "parents": {
+    "68101": "a07762534f0b6311ec68c08b0d9f9c0ce74ec71577138eb13279a4a5dffbb24d",
+    "68105": "c3c4b5f49fa3116f348720b8215e2a97a8b166587d22c5c1c9ab1f72cccf8a55"
+  },
+  "data": {
+    "generator": "clmm/pretrain/fact_streams.py",
+    "keys": "Hash-sort all 1000 three-digit keys by SHA256(clmm.fact.keys.v1:+key); first600 train,next200 dev,last200 reserved test. Whole-key namespaces disjoint; all digits occur at all positions.",
+    "values": "Uniform letters a-p; revisions choose a different value.",
+    "records": "32 ASCII bytes per fact/revision/distractor, left padded. Final query prefix31 bytes in its own attention segment; next answer byte is never fed to model.",
+    "templates": "Two seen training templates; two heldout templates evaluated separately on development episodes.",
+    "delays": "Number of novel-key distractor records after initial facts and revisions, not seconds or subword tokens.",
+    "paired_delays": "Identical online fact/revision histories and distractor prefixes at fixed seed/K. Partial periodic blocks can change replay placement: K4,D0 is not a serialized schedule prefix of longer delays.",
+    "test_policy": "Reserved test namespace is not generated or evaluated by the experiment runner. Development results may inform later work and are not a final test."
+  },
+  "adaptation": {
+    "steps": 1600,
+    "batch_size": 16,
+    "train_seed": 78102,
+    "optimizer": "AdamW",
+    "lr": 0.0005,
+    "weight_decay": 0.01,
+    "clip_norm": 1.0,
+    "objective": "Full256-vocabulary cross-entropy at the one answer position; all outer model weights adapted. Every prefix begins from the learned memory initialization.",
+    "curriculum": "First20% K1,D0,no revisions; next20% K1/2,D0/2,revision_fraction0/.5; final60% K1/2/4/8 with probabilities.15/.25/.35/.25,D0/4/8,revision_fraction.5. Online-only training, fresh per-example assignments.",
+    "selection": "Both fixed parents receive the same steps, example seeds, query indices and input bytes. Keep final checkpoints, no best-seed or best-development checkpoint selection.",
+    "budget_basis": "1600 chosen before task accuracy was observed, using timing-only GPU profile (16 examples,63-671bytes); discarded random-input profile weights.",
+    "max_seconds_per_training_run": 1200
+  },
+  "evaluation": {
+    "dev_seed": 78103,
+    "gate_episodes": 64,
+    "short_cells": ["acquire_k1", "acquire_k2", "revise_k1", "counterfactual_k2"],
+    "short_conditions": ["online", "reset_memory"],
+    "before_after": "Run short cells for both parent and adapted checkpoints; run pressure grid only on final adapted checkpoints.",
+    "pressure_facts": [4,8,16],
+    "pressure_delays": [0,8,32],
+    "pressure_revision_fraction": 0.5,
+    "grid_episodes": 32,
+    "primary_cell": "pressure_k8_d8 / seen templates / stable initial facts",
+    "primary_episodes": 128,
+    "pressure_queries": "One seed-selected query per available stable/revised/recent category and episode, identical across arms. Short cells query all initial facts.",
+    "metrics": ["full256 answer accuracy", "full256 answer NLL", "forced16-way accuracy and NLL", "probability mass on legal16 answers", "obsolete-answer rate", "last-observed-value heuristic", "paired counterfactual response"],
+    "recorded_covariates": ["target online age", "last occurrence age", "replay and obsolete-replay counts", "buffer residency", "last-presented key value"],
+    "state": "Frozen outer weights, causal within-prefix neural memory, complete prefix recomputed independently for each query. This is not persistent-state deployment.",
+    "max_seconds_per_evaluation_run": 900
+  },
+  "replay": {
+    "block_records": 4,
+    "buffer_keys": 8,
+    "policy": "Latest-per-key FIFO with recency refresh by real online observations only. At each block start sample len(block) records with replacement from its snapshot; first empty snapshot adds none.",
+    "arms": ["online", "repeat_current", "continuous", "periodic"],
+    "paired_content": "Continuous and periodic use identical sampled source records, values, order, total record/byte counts and final query position. Continuous interleaves after each online record; periodic emits them at block end.",
+    "repeat_control": "Same extra-record slots/count as continuous, but repeat the current online record. Online has fewer updates and is explicitly unmatched.",
+    "memory_budget": "At most8 buffered32-byte records plus up to4 snapshot selections. Bookkeeping and full evaluator traces are recorded separately, not claimed as bounded process memory.",
+    "stale_semantics": "Replay is unmarked and can reintroduce an obsolete assertion after a real revision. Revised-category errors are conflicting-input diagnostics, not isolated consolidation failures. Stable old facts are primary."
+  },
+  "analysis": {
+    "bootstrap_seed": 78104,
+    "bootstrap_draws": 5000,
+    "unit": "Whole episodes jointly resampled across arms; recompute query-level ratios inside resampled episodes. Conditional intervals per fixed checkpoint, never pool the two seeds.",
+    "acquisition_gate": "Each adapted checkpoint separately: >=80% full256 accuracy on acquire_k2/seen/online AND positive lower95% paired interval for online-minus-reset accuracy. Report K1 and short revisions separately.",
+    "primary_contrast": "Periodic minus continuous full256 stable-fact accuracy at K8,D8,seen templates.",
+    "secondary": "Replay versus repeat-current; delay/capacity grid; obsolete answers; heldout-template transfer; counterfactual responses. Exploratory unless explicitly covered by primary contrast.",
+    "continuation": "Treat periodic advantage as a useful pilot lead only if both checkpoints pass acquisition, each primary paired interval is positive and each point improvement is at least5percentagepoints. Otherwise report inconclusive or negative evidence with exact intervals. Failed acquisition makes pressure results floor diagnostics, not replay-efficacy evidence."
+  },
+  "resources": {
+    "cluster_job": 13911359,
+    "allocation": "One GPU,4CPUs,16GB system RAM,one hour; no automatic renewal.",
+    "threads": 2,
+    "training_order": [68101,68105],
+    "precision": "float32; deterministic algorithms; TF32 disabled",
+    "stopping": "Hard per-run bounds plus allocation limit; preserve failures/partial artifacts. No unrelated jobs modified."
+  }
+}

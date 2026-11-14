@@ -1,0 +1,52 @@
+{
+  "source_commit": "646c6702b6bba57279a9a095eb10a1dbfc877092",
+  "focused_tests": {
+    "passed": 170,
+    "seconds": 18.27,
+    "log": "pytest-focused.log",
+    "scope": "Reference, replay, symbolic pressure, shared pretraining, fact streams and fact experiment runner; not the exhaustive upstream parametrized suite."
+  },
+  "cpu_smoke": {
+    "training": "smoke-cpu-train:2steps,batch2; exact checkpoint reload",
+    "evaluation": "smoke-cpu-eval:240queries over every configured cell/arm with2episodes; completed115.73seconds, unchanged outer weights",
+    "interpretation": "Execution check only, not efficacy evidence."
+  },
+  "independent_audit_checks": {
+    "selfchecks": 21,
+    "smoke_training": "passed",
+    "smoke_evaluation_queries": 240,
+    "main_certified_by_smoke": false
+  },
+  "main_run_source": "Frozen Git bundle646c670; GPU run source snapshots and final hash checks stored per invocation.",
+  "supplemental_control_tests": {
+    "passed": 21,
+    "seconds": 15.18,
+    "source_commit": "ed2a8dce3ab1eded7165a32034f7df311a594df9",
+    "log": "pytest-attention-control-source-final.log",
+    "previous_failure": "pytest-attention-control.log: three assertions referenced removed ambiguous metadata names; tests corrected to canonical fields and rerun."
+  },
+  "independent_control_audit": {
+    "selfchecks": 8,
+    "evidence": "analysis/attention-selfcheck-final",
+    "final_audit": "analysis/control-final/verification.json"
+  },
+  "main_artifact_audit": "analysis/final/verification.json",
+  "gpu_inference_recheck": {
+    "queries": 128,
+    "full_logits_exact": true,
+    "evidence": "analysis/gpu-recheck/verification.json",
+    "training_rerun": false
+  },
+  "cpu_inference_recheck": {
+    "queries": 32,
+    "prediction_mismatches": 0,
+    "logit_tolerance_failed": true,
+    "evidence": "analysis/cpu-recheck/verification.json",
+    "note": "Device, Torch version and batch geometry differ; tolerance was not relaxed."
+  },
+  "training_trajectory": {
+    "evidence": "analysis/trajectory/summary.json",
+    "scope": "Post-hoc descriptive training batches, not intermediate validation checkpoints.",
+    "analysis_development_fix": "Initial selector required nominal revision_fraction=0 and selected no late batches. Fixed to actual floor(K*fraction)=0; recomputed results exactly match the earlier diagnostic."
+  }
+}

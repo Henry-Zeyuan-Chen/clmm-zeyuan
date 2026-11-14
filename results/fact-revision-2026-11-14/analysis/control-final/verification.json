@@ -1,0 +1,46 @@
+{
+  "status": "verified_supplement",
+  "supplemental_certified": true,
+  "main_v1_certified": false,
+  "replaces_main_v1": false,
+  "evidence_scope": "Single fixed-parent exploratory attention-access diagnostic; saved evidence audited, no training or inference rerun; does not rescue main v1.",
+  "expected_commit": "ed2a8dce3ab1eded7165a32034f7df311a594df9",
+  "steps_per_arm": 1000,
+  "answers_per_arm": 16000,
+  "evaluation_queries_per_arm": 1536,
+  "training_canonical_sha256": "7f5f7d3436807bbec517caf87c1d760c2ef39df08461adde268dd76959b01f74",
+  "evaluation_canonical_sha256": "90d752b1b52dad3447df78ea7d28dbcc6a4d730bd759106715c833b215b6cb6a",
+  "reset_diagnostic": {
+    "attention32": {
+      "paired_questions": 768,
+      "max_abs_logit_difference": 8.310975790023804,
+      "exact_noop_verified": false,
+      "expected_noop": false
+    },
+    "attention128": {
+      "paired_questions": 768,
+      "max_abs_logit_difference": 0.0,
+      "exact_noop_verified": true,
+      "expected_noop": true
+    }
+  },
+  "initialization_evidence": "Every saved initial tensor independently compared exactly with the original parent and the other control, including shape, dtype, and finite values.",
+  "output_sha256": {
+    "estimates.csv": "cb8471eca32c7311f3989001903860403547bbf1b551e0a6e33eab81d0e79750",
+    "contrasts.csv": "0400a34fb7b018369fedff432a518ddeb7690696a0e2dfff0dcd5fc91948767b",
+    "decisions.json": "9477ba8b92cf27e9c9b7867ee7ce36ce99aafe4f8b5a6cac1516f494d1888ca3",
+    "source-manifest.json": "d0feb306554d2d9169c63ec5b8c5d39408bcb8ab79c9883e1fd706ea45ed1cd9"
+  },
+  "auditor_sha256": "6dcff402bef03c031b351da928cdaa485d8ce6a3c62c20242873afebe85d3d86",
+  "main_helper_sha256": "3718b7b68a3f766c350c241599c9a88363b00d85d0b6171598fef08274bbf025",
+  "command": [
+    "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-test-env\\Scripts\\python.exe",
+    "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-fact-revision-2026-11-14\\analysis\\analyze_attention_control.py",
+    "--root",
+    "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-fact-revision-2026-11-14",
+    "--out",
+    "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-fact-revision-2026-11-14\\analysis\\control-final",
+    "--expected-commit",
+    "ed2a8dce3ab1eded7165a32034f7df311a594df9"
+  ]
+}

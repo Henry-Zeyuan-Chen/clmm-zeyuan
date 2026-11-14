@@ -1,0 +1,78 @@
+{
+  "status": "passed",
+  "queries": 128,
+  "results": [
+    {
+      "seed": 68101,
+      "cell": "acquire_k2",
+      "condition": "online",
+      "queries": 16,
+      "max_abs_logit_difference": 0.0,
+      "prediction_mismatches": 0
+    },
+    {
+      "seed": 68101,
+      "cell": "acquire_k2",
+      "condition": "reset_memory",
+      "queries": 16,
+      "max_abs_logit_difference": 0.0,
+      "prediction_mismatches": 0
+    },
+    {
+      "seed": 68101,
+      "cell": "pressure_k8_d8",
+      "condition": "continuous",
+      "queries": 16,
+      "max_abs_logit_difference": 0.0,
+      "prediction_mismatches": 0
+    },
+    {
+      "seed": 68101,
+      "cell": "pressure_k8_d8",
+      "condition": "periodic",
+      "queries": 16,
+      "max_abs_logit_difference": 0.0,
+      "prediction_mismatches": 0
+    },
+    {
+      "seed": 68105,
+      "cell": "acquire_k2",
+      "condition": "online",
+      "queries": 16,
+      "max_abs_logit_difference": 0.0,
+      "prediction_mismatches": 0
+    },
+    {
+      "seed": 68105,
+      "cell": "acquire_k2",
+      "condition": "reset_memory",
+      "queries": 16,
+      "max_abs_logit_difference": 0.0,
+      "prediction_mismatches": 0
+    },
+    {
+      "seed": 68105,
+      "cell": "pressure_k8_d8",
+      "condition": "continuous",
+      "queries": 16,
+      "max_abs_logit_difference": 0.0,
+      "prediction_mismatches": 0
+    },
+    {
+      "seed": 68105,
+      "cell": "pressure_k8_d8",
+      "condition": "periodic",
+      "queries": 16,
+      "max_abs_logit_difference": 0.0,
+      "prediction_mismatches": 0
+    }
+  ],
+  "absolute_tolerance": 1e-06,
+  "torch": "2.11.0+cu128",
+  "python": "3.11.5 (main, Sep 11 2023, 13:54:46) [GCC 11.2.0]",
+  "device": "NVIDIA RTX A6000",
+  "batch_size": 16,
+  "seed": 78102,
+  "elapsed_seconds": 7.801379991986323,
+  "scope": "128 answers rerun in original environment/batch geometry; no second training run."
+}

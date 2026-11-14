@@ -1,0 +1,49 @@
+{
+  "scope": "Post-hoc training-log description; no intermediate validation or causal attribution.",
+  "compared_to_original_diagnostic": true,
+  "sources": [
+    {
+      "path": "adapt-68101\\training.csv",
+      "sha256": "510272a8042674e00808b00dbb6eb65e07175974f44adb14e035e567dde4304c"
+    },
+    {
+      "path": "adapt-68105\\training.csv",
+      "sha256": "204ca9f9f5586d37a0ee1c7cd149fc5e870060891f1d6f1272e3116b896caabd"
+    }
+  ],
+  "rows": [
+    {
+      "seed": 68101,
+      "phase": "warmup_last100",
+      "batches": 100,
+      "mean_accuracy": 1.0,
+      "mean_loss": 0.005740583601873368,
+      "max_gradient_norm": 0.05009479820728302
+    },
+    {
+      "seed": 68101,
+      "phase": "later_k1d0",
+      "batches": 44,
+      "mean_accuracy": 0.17755681818181818,
+      "mean_loss": 2.51861461116509,
+      "max_gradient_norm": 31.082569122314453
+    },
+    {
+      "seed": 68105,
+      "phase": "warmup_last100",
+      "batches": 100,
+      "mean_accuracy": 1.0,
+      "mean_loss": 0.0041274137957952916,
+      "max_gradient_norm": 0.028356632217764854
+    },
+    {
+      "seed": 68105,
+      "phase": "later_k1d0",
+      "batches": 44,
+      "mean_accuracy": 0.11647727272727272,
+      "mean_loss": 2.6839983097531577,
+      "max_gradient_norm": 14.689229011535645
+    }
+  ],
+  "plot_smoothing": "Trailing 25 observed K1/D0 batches, not 25 optimizer steps."
+}

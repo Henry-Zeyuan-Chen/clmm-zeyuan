@@ -1,0 +1,252 @@
+{
+  "expected_commit": "ed2a8dce3ab1eded7165a32034f7df311a594df9",
+  "design_sha256": "2d897b61194c0d5bb6ef4d110e9a6500baef5bbaa58a556201fd6f03202fc025",
+  "auditor_sha256": "6dcff402bef03c031b351da928cdaa485d8ce6a3c62c20242873afebe85d3d86",
+  "main_helper_sha256": "3718b7b68a3f766c350c241599c9a88363b00d85d0b6171598fef08274bbf025",
+  "parent": {
+    "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-shared-pretrain-2026-11-14\\lm-68101\\checkpoint.pt",
+    "sha256": "a07762534f0b6311ec68c08b0d9f9c0ce74ec71577138eb13279a4a5dffbb24d"
+  },
+  "artifacts": {
+    "attention32/answer_logits.npy": {
+      "bytes": 1572992,
+      "sha256": "89a43ebccbe3f653114902c68e66e50b5a260fd11f6fdf7bd642adc70b8b7937"
+    },
+    "attention32/checkpoint.pt": {
+      "bytes": 3386365,
+      "sha256": "97666d3259a6d0485af7508845b53e2b6d191acd1dbdfd20ee53a93c80be385f"
+    },
+    "attention32/design.json": {
+      "bytes": 2750,
+      "sha256": "2d897b61194c0d5bb6ef4d110e9a6500baef5bbaa58a556201fd6f03202fc025"
+    },
+    "attention32/evaluation_data.jsonl.gz": {
+      "bytes": 152879,
+      "sha256": "36e29cdad892b00a84c13e6e08d19ac5462551cdbb4cbd1d550a8d1f6fa0738b"
+    },
+    "attention32/evaluation_data_canonical.sha256": {
+      "bytes": 65,
+      "sha256": "f383bcf2c8c915e19c1a2851c5497036a068ff83e5c307327507ae3727ee53fe"
+    },
+    "attention32/initial_state.pt": {
+      "bytes": 3382007,
+      "sha256": "948827968a53a5aecb9217b1db24aae24fea5e0842f589d64a8663e82181e8f5"
+    },
+    "attention32/metadata.json": {
+      "bytes": 9948,
+      "sha256": "5036f631319d17f3f4cb83143db52d28dbd22ede96a0eb4ccf13773669948178"
+    },
+    "attention32/optimizer.pt": {
+      "bytes": 6707915,
+      "sha256": "84aac951c373de4514d40dab6ed903743ba2f7e293839dbe3964db758e5e6952"
+    },
+    "attention32/predictions.csv": {
+      "bytes": 367285,
+      "sha256": "1d3fd9f9d3020bf844394292034f8bfeee76abf157c434287c6fb9c04341ba3e"
+    },
+    "attention32/reset_diagnostic.json": {
+      "bytes": 2139,
+      "sha256": "071cb51f441fb5fec74f834c58b384851d082f693bd8dd74d7031e8bca076268"
+    },
+    "attention32/runtime.csv": {
+      "bytes": 955,
+      "sha256": "f5813801224981c4edaca759e101daa1770962ecf478534e9ca16e96a84c75ba"
+    },
+    "attention32/sources/clmm/__init__.py": {
+      "bytes": 92,
+      "sha256": "cb8d9ffaff4a6d144592b0f7cb041683f7e79fc7accc73647ff020070647d652"
+    },
+    "attention32/sources/clmm/pretrain/__init__.py": {
+      "bytes": 606,
+      "sha256": "3684561d02ad25bba9fe0673da2241b976031fb4ab98a891da8c081490eae526"
+    },
+    "attention32/sources/clmm/pretrain/byte_lm.py": {
+      "bytes": 17523,
+      "sha256": "b41de6f729bb4bc18f1d17ce6a449deb4c90eafea550271d32f01866f3b4feea"
+    },
+    "attention32/sources/clmm/pretrain/fact_streams.py": {
+      "bytes": 24716,
+      "sha256": "32637fe0388ffa132b061ce1d8dab4e9a7e64324606e9ade49d29024214ac7f3"
+    },
+    "attention32/sources/pyproject.toml": {
+      "bytes": 1600,
+      "sha256": "daa0c8b7d63238c7439a50b0c5dc152d203bfb15b445aa8c0aebbd1b2d6d512b"
+    },
+    "attention32/sources/requirements-lock.txt": {
+      "bytes": 577,
+      "sha256": "0021fd959cc013c08f41735d2d3d8b43e3f261dae8c0069f56d345a413340e17"
+    },
+    "attention32/sources/scripts/fact_attention_control.py": {
+      "bytes": 18954,
+      "sha256": "bd8606c3f9f0bc48e1026f7f4d9b71b15520607d39b27275790981d73c32b60b"
+    },
+    "attention32/sources/scripts/fact_revision_experiment.py": {
+      "bytes": 24078,
+      "sha256": "018301da2035fbb3c6af331e33b8d174589f924d6b8022d59d9e61609053955d"
+    },
+    "attention32/sources/titans_pytorch/__init__.py": {
+      "bytes": 338,
+      "sha256": "b154ceb9152468861a6c513174b63ab35a979b55301c7cff275f47f1957e5fbe"
+    },
+    "attention32/sources/titans_pytorch/implicit_mlp_attention.py": {
+      "bytes": 4525,
+      "sha256": "a5ec0c11005f447fb3697f13cfa4f967ff342712fa154c1bc5e848490ef2f40c"
+    },
+    "attention32/sources/titans_pytorch/mac_transformer.py": {
+      "bytes": 26999,
+      "sha256": "3ba521375e92f661542792b7e04196e89c3a668ec5329eb8b31d4a5c2f96f38d"
+    },
+    "attention32/sources/titans_pytorch/memory_models.py": {
+      "bytes": 5835,
+      "sha256": "c271fd8bd9144a8559844594963f0ba4149b078d342fd90bb75ccff023b8e504"
+    },
+    "attention32/sources/titans_pytorch/nested_attention.py": {
+      "bytes": 3331,
+      "sha256": "361102a81ccd3f080f0d8f3401af1a3383cc28a3b34326daf7c740cbcc6894da"
+    },
+    "attention32/sources/titans_pytorch/neural_memory.py": {
+      "bytes": 36426,
+      "sha256": "c4a756d8d8257500d2da6e94473a0cd13e5ae4b517826cdd761dc500de468804"
+    },
+    "attention32/summary.csv": {
+      "bytes": 1751,
+      "sha256": "3bbbdfffe32f45e629f0f4ea334485b58ab511d99fbdbecc636061cd1ebbd98e"
+    },
+    "attention32/training.csv": {
+      "bytes": 91264,
+      "sha256": "d75da3cd5d7dbafcb7bc78b282371ad74c28604185fc835c6829b86ee34835c0"
+    },
+    "attention32/training_inputs.npz": {
+      "bytes": 289024,
+      "sha256": "f887d767fea5648e20b1057fabfac33b52ca622cdf847e49d4293c009c67ebde"
+    },
+    "attention32/training_plan.json": {
+      "bytes": 632124,
+      "sha256": "8c17abd044e6667284be44c7b49ccc78cb1e83d191759b28ad75e9d96f3b559e"
+    },
+    "attention32/training_progress.json": {
+      "bytes": 95,
+      "sha256": "1bdf0d04fb550e240e9d5141380888874d28a1344d9238c091b2d15025f2bbea"
+    },
+    "attention128/answer_logits.npy": {
+      "bytes": 1572992,
+      "sha256": "f9060e397d334f2d3bc0b5220f84af235d36d8d5b8158197318525327d9370a5"
+    },
+    "attention128/checkpoint.pt": {
+      "bytes": 3386365,
+      "sha256": "1d493695a2b55299112feb2c38f8c91b7192c3c3b17787e4e441ca750846169d"
+    },
+    "attention128/design.json": {
+      "bytes": 2750,
+      "sha256": "2d897b61194c0d5bb6ef4d110e9a6500baef5bbaa58a556201fd6f03202fc025"
+    },
+    "attention128/evaluation_data.jsonl.gz": {
+      "bytes": 152879,
+      "sha256": "36e29cdad892b00a84c13e6e08d19ac5462551cdbb4cbd1d550a8d1f6fa0738b"
+    },
+    "attention128/evaluation_data_canonical.sha256": {
+      "bytes": 65,
+      "sha256": "f383bcf2c8c915e19c1a2851c5497036a068ff83e5c307327507ae3727ee53fe"
+    },
+    "attention128/initial_state.pt": {
+      "bytes": 3382007,
+      "sha256": "948827968a53a5aecb9217b1db24aae24fea5e0842f589d64a8663e82181e8f5"
+    },
+    "attention128/metadata.json": {
+      "bytes": 9917,
+      "sha256": "ec0e409880ce0db14931ea8dd80ed6bbe92ceefa8200f88d7111c04de96483fa"
+    },
+    "attention128/optimizer.pt": {
+      "bytes": 6707915,
+      "sha256": "0c3f1105aee415322e541162eceaec8c1849e12763b5052020ad6bb2048c5034"
+    },
+    "attention128/predictions.csv": {
+      "bytes": 368686,
+      "sha256": "c50df64770f174b33ef8d0c7a15864ef6f4d4b39e26bfcee45d9c575e4e64b38"
+    },
+    "attention128/reset_diagnostic.json": {
+      "bytes": 2083,
+      "sha256": "d8d0f56ce685f7ad36fdd28beb32f28141c747001dd9e7e655419f32aafcacb8"
+    },
+    "attention128/runtime.csv": {
+      "bytes": 957,
+      "sha256": "58c8106a40df4cc672e82ac12d8c7544d5542f1ee830007a8c501eb852556929"
+    },
+    "attention128/sources/clmm/__init__.py": {
+      "bytes": 92,
+      "sha256": "cb8d9ffaff4a6d144592b0f7cb041683f7e79fc7accc73647ff020070647d652"
+    },
+    "attention128/sources/clmm/pretrain/__init__.py": {
+      "bytes": 606,
+      "sha256": "3684561d02ad25bba9fe0673da2241b976031fb4ab98a891da8c081490eae526"
+    },
+    "attention128/sources/clmm/pretrain/byte_lm.py": {
+      "bytes": 17523,
+      "sha256": "b41de6f729bb4bc18f1d17ce6a449deb4c90eafea550271d32f01866f3b4feea"
+    },
+    "attention128/sources/clmm/pretrain/fact_streams.py": {
+      "bytes": 24716,
+      "sha256": "32637fe0388ffa132b061ce1d8dab4e9a7e64324606e9ade49d29024214ac7f3"
+    },
+    "attention128/sources/pyproject.toml": {
+      "bytes": 1600,
+      "sha256": "daa0c8b7d63238c7439a50b0c5dc152d203bfb15b445aa8c0aebbd1b2d6d512b"
+    },
+    "attention128/sources/requirements-lock.txt": {
+      "bytes": 577,
+      "sha256": "0021fd959cc013c08f41735d2d3d8b43e3f261dae8c0069f56d345a413340e17"
+    },
+    "attention128/sources/scripts/fact_attention_control.py": {
+      "bytes": 18954,
+      "sha256": "bd8606c3f9f0bc48e1026f7f4d9b71b15520607d39b27275790981d73c32b60b"
+    },
+    "attention128/sources/scripts/fact_revision_experiment.py": {
+      "bytes": 24078,
+      "sha256": "018301da2035fbb3c6af331e33b8d174589f924d6b8022d59d9e61609053955d"
+    },
+    "attention128/sources/titans_pytorch/__init__.py": {
+      "bytes": 338,
+      "sha256": "b154ceb9152468861a6c513174b63ab35a979b55301c7cff275f47f1957e5fbe"
+    },
+    "attention128/sources/titans_pytorch/implicit_mlp_attention.py": {
+      "bytes": 4525,
+      "sha256": "a5ec0c11005f447fb3697f13cfa4f967ff342712fa154c1bc5e848490ef2f40c"
+    },
+    "attention128/sources/titans_pytorch/mac_transformer.py": {
+      "bytes": 26999,
+      "sha256": "3ba521375e92f661542792b7e04196e89c3a668ec5329eb8b31d4a5c2f96f38d"
+    },
+    "attention128/sources/titans_pytorch/memory_models.py": {
+      "bytes": 5835,
+      "sha256": "c271fd8bd9144a8559844594963f0ba4149b078d342fd90bb75ccff023b8e504"
+    },
+    "attention128/sources/titans_pytorch/nested_attention.py": {
+      "bytes": 3331,
+      "sha256": "361102a81ccd3f080f0d8f3401af1a3383cc28a3b34326daf7c740cbcc6894da"
+    },
+    "attention128/sources/titans_pytorch/neural_memory.py": {
+      "bytes": 36426,
+      "sha256": "c4a756d8d8257500d2da6e94473a0cd13e5ae4b517826cdd761dc500de468804"
+    },
+    "attention128/summary.csv": {
+      "bytes": 1777,
+      "sha256": "f8ae0a551899c8106c9dc56ceb4f1f31ea3ed0cdcc009d2b4f0f712147bee6d3"
+    },
+    "attention128/training.csv": {
+      "bytes": 92441,
+      "sha256": "3d6b6d3580f78f1e2337d57b47e10fe15867e8dfef00c4ccfda33f865da8554d"
+    },
+    "attention128/training_inputs.npz": {
+      "bytes": 289024,
+      "sha256": "f887d767fea5648e20b1057fabfac33b52ca622cdf847e49d4293c009c67ebde"
+    },
+    "attention128/training_plan.json": {
+      "bytes": 632124,
+      "sha256": "8c17abd044e6667284be44c7b49ccc78cb1e83d191759b28ad75e9d96f3b559e"
+    },
+    "attention128/training_progress.json": {
+      "bytes": 95,
+      "sha256": "1bdf0d04fb550e240e9d5141380888874d28a1344d9238c091b2d15025f2bbea"
+    }
+  }
+}

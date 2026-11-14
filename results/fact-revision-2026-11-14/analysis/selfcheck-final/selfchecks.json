@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "main_certified": false,
+  "fixture_scope": "Synthetic analyzer fixtures; no model result certification",
+  "checks": [
+    "paired identical arms have exactly zero interval despite varied outcomes",
+    "two correlated queries cluster together rather than increasing independent sample size",
+    "unequal-denominator bootstrap estimates ratio of sums",
+    "missing paired question",
+    "duplicate paired question",
+    "altered paired target",
+    "independent full/forced softmax metrics match analytic uniform probabilities",
+    "nonfinite saved logits",
+    "illegal answer byte",
+    "answer byte appended to model prefix",
+    "wrong saved training target",
+    "dev key leaked into training",
+    "nonfinite checkpoint tensor",
+    "corrupted source/artifact hash",
+    "real saved periodic sample independently reconstructs before mutation",
+    "future replay source index in saved execution plan",
+    "corrupted replay update budget",
+    "answer appended to saved evaluation input",
+    "corrupted saved evaluation target",
+    "reserved test key in development history",
+    "full synthetic aggregation and continuation rule; one weak checkpoint cannot be rescued"
+  ],
+  "count": 21
+}

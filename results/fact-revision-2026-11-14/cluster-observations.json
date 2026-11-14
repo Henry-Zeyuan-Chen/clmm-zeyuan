@@ -1,0 +1,159 @@
+{
+  "recorded_utc": "2026-11-14T23:11:08.458074+00:00",
+  "allocation": {
+    "job_id": 13911359,
+    "node": "ins080",
+    "gpu": "NVIDIA RTX A6000",
+    "requested": {
+      "gpus": 1,
+      "cpus": 4,
+      "memory_gb": 16,
+      "hours": 1
+    },
+    "elapsed": "00:55:19",
+    "allocated_gpu_hours": 0.9219444444444445,
+    "final_state": "CANCELLED by 564221",
+    "reason": "Intentional release after successful main and supplemental runs, GPU recheck and artifact retrieval.",
+    "user_queue_empty_after_release": true,
+    "no_automatic_renewal": true
+  },
+  "main_runs": [
+    {
+      "name": "before-68101",
+      "status": "succeeded",
+      "seconds": 66.00326883699745
+    },
+    {
+      "name": "before-68105",
+      "status": "succeeded",
+      "seconds": 13.245236689981539
+    },
+    {
+      "name": "adapt-68101",
+      "status": "succeeded",
+      "seconds": 498.1764174969867
+    },
+    {
+      "name": "after-68101",
+      "status": "succeeded",
+      "seconds": 238.02826326800277
+    },
+    {
+      "name": "adapt-68105",
+      "status": "succeeded",
+      "seconds": 531.0097563710297
+    },
+    {
+      "name": "after-68105",
+      "status": "succeeded",
+      "seconds": 271.25448356597917
+    }
+  ],
+  "control_runs": [
+    {
+      "name": "attention32",
+      "status": "succeeded",
+      "seconds": 183.6942302470561
+    },
+    {
+      "name": "attention128",
+      "status": "succeeded",
+      "seconds": 149.7674900079728
+    }
+  ],
+  "inference_recheck": {
+    "status": "passed",
+    "queries": 128,
+    "results": [
+      {
+        "seed": 68101,
+        "cell": "acquire_k2",
+        "condition": "online",
+        "queries": 16,
+        "max_abs_logit_difference": 0.0,
+        "prediction_mismatches": 0
+      },
+      {
+        "seed": 68101,
+        "cell": "acquire_k2",
+        "condition": "reset_memory",
+        "queries": 16,
+        "max_abs_logit_difference": 0.0,
+        "prediction_mismatches": 0
+      },
+      {
+        "seed": 68101,
+        "cell": "pressure_k8_d8",
+        "condition": "continuous",
+        "queries": 16,
+        "max_abs_logit_difference": 0.0,
+        "prediction_mismatches": 0
+      },
+      {
+        "seed": 68101,
+        "cell": "pressure_k8_d8",
+        "condition": "periodic",
+        "queries": 16,
+        "max_abs_logit_difference": 0.0,
+        "prediction_mismatches": 0
+      },
+      {
+        "seed": 68105,
+        "cell": "acquire_k2",
+        "condition": "online",
+        "queries": 16,
+        "max_abs_logit_difference": 0.0,
+        "prediction_mismatches": 0
+      },
+      {
+        "seed": 68105,
+        "cell": "acquire_k2",
+        "condition": "reset_memory",
+        "queries": 16,
+        "max_abs_logit_difference": 0.0,
+        "prediction_mismatches": 0
+      },
+      {
+        "seed": 68105,
+        "cell": "pressure_k8_d8",
+        "condition": "continuous",
+        "queries": 16,
+        "max_abs_logit_difference": 0.0,
+        "prediction_mismatches": 0
+      },
+      {
+        "seed": 68105,
+        "cell": "pressure_k8_d8",
+        "condition": "periodic",
+        "queries": 16,
+        "max_abs_logit_difference": 0.0,
+        "prediction_mismatches": 0
+      }
+    ],
+    "absolute_tolerance": 1e-06,
+    "torch": "2.11.0+cu128",
+    "python": "3.11.5 (main, Sep 11 2023, 13:54:46) [GCC 11.2.0]",
+    "device": "NVIDIA RTX A6000",
+    "batch_size": 16,
+    "seed": 78102,
+    "elapsed_seconds": 7.801379991986323,
+    "scope": "128 answers rerun in original environment/batch geometry; no second training run."
+  },
+  "earlier_allocation": {
+    "job_id": 13905404,
+    "final_state": "TIMEOUT",
+    "elapsed": "01:00:26",
+    "auxiliary_diagnostic_status": "complete",
+    "evidence": "prior-allocation-diagnostic-metadata.json and cluster-sacct.txt",
+    "scope": "Resolves the earlier unknown scheduler status; old diagnostic metrics are not analyzed or pooled here."
+  },
+  "evidence": [
+    "pipeline.json",
+    "attention-pipeline.json",
+    "cluster-sacct.txt",
+    "cluster-squeue-final.txt",
+    "environment-insomnia.json"
+  ],
+  "timestamp_note": "Pipeline timestamps have UTC offsets. Raw Slurm timestamps retain scheduler formatting without an explicit timezone.",
+  "operations": "Only allocation 13911359 was cancelled in this task. Desktop helper target was not changed."
+}

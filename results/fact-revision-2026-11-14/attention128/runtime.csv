@@ -1,0 +1,17 @@
+cell,family,condition,samples,input_length,elapsed_seconds
+acquire_k1,seen,online,64,63,0.15563448797911406
+acquire_k1,seen,reset_memory,64,63,0.15525457897456363
+acquire_k2,seen,online,128,95,0.4219908619998023
+acquire_k2,seen,reset_memory,128,95,0.4252743059769273
+revise_k1,seen,online,64,95,0.21299157803878188
+revise_k1,seen,reset_memory,64,95,0.2123206090182066
+counterfactual_k2,seen,online,128,95,0.3927918029949069
+counterfactual_k2,seen,reset_memory,128,95,0.3941431710263714
+acquire_k1,heldout,online,64,63,0.14155155298067257
+acquire_k1,heldout,reset_memory,64,63,0.14190185198094696
+acquire_k2,heldout,online,128,95,0.3924184640054591
+acquire_k2,heldout,reset_memory,128,95,0.3928880330058746
+revise_k1,heldout,online,64,95,0.19658667600015178
+revise_k1,heldout,reset_memory,64,95,0.19703663600375876
+counterfactual_k2,heldout,online,128,95,0.40148859802866355
+counterfactual_k2,heldout,reset_memory,128,95,0.41598478303058073

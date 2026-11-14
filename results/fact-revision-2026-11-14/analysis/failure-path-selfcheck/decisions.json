@@ -1,0 +1,6 @@
+{
+  "main_certified": false,
+  "conclusion": "Artifact audit failed; no scientific decision is certified.",
+  "error_type": "FileNotFoundError",
+  "error": "[Errno 2] No such file or directory: 'C:\\\\Users\\\\henry\\\\Documents\\\\Codex\\\\2026-10-22\\\\i\\\\outputs\\\\clmm-fact-revision-2026-11-14\\\\analysis\\\\deliberately-missing-fixture\\\\metadata.json'"
+}

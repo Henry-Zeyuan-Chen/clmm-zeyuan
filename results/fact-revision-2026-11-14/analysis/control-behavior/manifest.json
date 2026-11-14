@@ -1,0 +1,42 @@
+{
+  "script_sha256": "a76680bfe935b9a015d66ba3bd143b162b0a3c74f6406698902071a8c0a3adbf",
+  "audit_verification_sha256": "d474dcafe9bdbf397c636ac186f74527e5949966dfc61fb0f6d14458a510d1f1",
+  "audited_inputs": {
+    "attention32/predictions.csv": {
+      "bytes": 367285,
+      "sha256": "1d3fd9f9d3020bf844394292034f8bfeee76abf157c434287c6fb9c04341ba3e"
+    },
+    "attention32/evaluation_data.jsonl.gz": {
+      "bytes": 152879,
+      "sha256": "36e29cdad892b00a84c13e6e08d19ac5462551cdbb4cbd1d550a8d1f6fa0738b"
+    },
+    "attention32/answer_logits.npy": {
+      "bytes": 1572992,
+      "sha256": "89a43ebccbe3f653114902c68e66e50b5a260fd11f6fdf7bd642adc70b8b7937"
+    },
+    "attention128/predictions.csv": {
+      "bytes": 368686,
+      "sha256": "c50df64770f174b33ef8d0c7a15864ef6f4d4b39e26bfcee45d9c575e4e64b38"
+    },
+    "attention128/evaluation_data.jsonl.gz": {
+      "bytes": 152879,
+      "sha256": "36e29cdad892b00a84c13e6e08d19ac5462551cdbb4cbd1d550a8d1f6fa0738b"
+    },
+    "attention128/answer_logits.npy": {
+      "bytes": 1572992,
+      "sha256": "f9060e397d334f2d3bc0b5220f84af235d36d8d5b8158197318525327d9370a5"
+    }
+  },
+  "outputs": {
+    "episode_responses.csv": "e44b13cc11ed0f68b550021134307b9db6dc2463ec89be73ce43eca900cc726f",
+    "episode_response_summary.csv": "a1a571cb3878bc7be1033ef8abadfcb6af3ecd194a11f860afeacf32d4c55ba3",
+    "query_details.csv": "0755c0d173d208430cd524596fd2ca79e87caac06314ed54aec1d1377778ce69",
+    "query_rank_summary.csv": "ebe9661efd67dcbb711f7e8b98f759fe07ef8b12287c936ebab757a38932a5e3",
+    "query_template_source_choices.csv": "74c67125cde461a0096b1f42cce5a42effb1c502d7191f80e6f3888151276267",
+    "report.json": "bbc8e0a7b2235d81770620bd08938b525fbcf0dfdd03fa3c96cad3c0cf54fee5",
+    "report.md": "c5a4d718ddcfacc6a8c6ffa79fb9faf3cf32444fd955ea048b869f481921269b",
+    "source_alignment.csv": "cd5e87128c7e91bad9009f0e2eb419a70e8c3b4158fca0ffa2c2588699e87743"
+  },
+  "figures_directory": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-fact-revision-2026-11-14\\analysis\\control-figures",
+  "figure_manifest_sha256": "55743d1024630caa73dc7dbe5db7de22c3393b35ce0c33ee54089860a1a2424d"
+}

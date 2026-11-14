@@ -1,0 +1,40 @@
+{
+  "status": "passed",
+  "main_certified": false,
+  "fixture_scope": "Synthetic analyzer fixtures; no model result certification",
+  "checks": [
+    "paired identical arms have exactly zero interval despite varied outcomes",
+    "two correlated queries cluster together rather than increasing independent sample size",
+    "unequal-denominator bootstrap estimates ratio of sums",
+    "missing paired question",
+    "duplicate paired question",
+    "altered paired target",
+    "independent full/forced softmax metrics match analytic uniform probabilities",
+    "nonfinite saved logits",
+    "illegal answer byte",
+    "answer byte appended to model prefix",
+    "wrong saved training target",
+    "dev key leaked into training",
+    "nonfinite checkpoint tensor",
+    "corrupted source/artifact hash",
+    "real saved periodic sample independently reconstructs before mutation",
+    "future replay source index in saved execution plan",
+    "corrupted replay update budget",
+    "answer appended to saved evaluation input",
+    "corrupted saved evaluation target",
+    "reserved test key in development history",
+    "full synthetic aggregation and continuation rule; one weak checkpoint cannot be rescued"
+  ],
+  "count": 21,
+  "analyzer_sha256": "3718b7b68a3f766c350c241599c9a88363b00d85d0b6171598fef08274bbf025",
+  "audited_utc": "2026-11-14T22:37:19.306621+00:00",
+  "command": [
+    "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-test-env\\Scripts\\python.exe",
+    "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-fact-revision-2026-11-14\\analysis\\analyze_fact_revision.py",
+    "--selfcheck",
+    "--selfcheck-data",
+    "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-fact-revision-2026-11-14\\smoke-cpu-eval",
+    "--out",
+    "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-fact-revision-2026-11-14\\analysis\\selfcheck-final"
+  ]
+}

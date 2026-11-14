@@ -1,0 +1,172 @@
+{
+  "status": "complete",
+  "command": [
+    "/insomnia001/depts/edu/users/zc2819/clmm/pressure-2026-11-13/repo/scripts/memory_pressure_probe.py",
+    "--checkpoints",
+    "/insomnia001/depts/edu/users/zc2819/clmm/pressure-2026-11-13/train-curriculum-48103/checkpoint.pt",
+    "--out",
+    "/insomnia001/depts/edu/users/zc2819/clmm/shared-pretrain-2026-11-14/decay-diagnostic-48103-retry",
+    "--device",
+    "cuda",
+    "--facts",
+    "64",
+    "--delays",
+    "0",
+    "256",
+    "--episodes",
+    "256",
+    "--batch-size",
+    "64",
+    "--seed",
+    "58111",
+    "--aux-decay-scale",
+    "1",
+    "--buffer-size",
+    "32",
+    "--block-size",
+    "8",
+    "--design",
+    "/insomnia001/depts/edu/users/zc2819/clmm/pressure-2026-11-13/decay-diagnostic-design.json"
+  ],
+  "started_utc": "2026-11-14T06:17:05.389097+00:00",
+  "checkpoints": [
+    {
+      "index": 0,
+      "path": "/insomnia001/depts/edu/users/zc2819/clmm/pressure-2026-11-13/train-curriculum-48103/checkpoint.pt",
+      "sha256": "eb9297269a75858e07f219f65fd99454145eedf77abea8918a4537cd669e19fc",
+      "config": {
+        "dim": 64,
+        "depth": 2,
+        "expansion_factor": 2.0,
+        "init_adaptive_step_bias": 1.0,
+        "init_decay_bias": -4.0,
+        "max_inner_lr": 0.01,
+        "nkeys": 256,
+        "nvals": 8
+      },
+      "init_seed": 48103,
+      "train_seed": 48104,
+      "steps": 400,
+      "parameters": 62730,
+      "checkpoint_parameters_and_buffers_unchanged": true,
+      "cuda_peak_allocated_bytes": 113414144,
+      "cuda_peak_reserved_bytes": 134217728
+    }
+  ],
+  "runtime_by_arm": [
+    {
+      "checkpoint_index": 0,
+      "facts": 64,
+      "arm": "online",
+      "elapsed_seconds": 3.8177821740391664,
+      "episodes": 256,
+      "observation_writes": 82432,
+      "auxiliary_writes": 0,
+      "total_memory_writes": 82432
+    },
+    {
+      "checkpoint_index": 0,
+      "facts": 64,
+      "arm": "repeat",
+      "elapsed_seconds": 6.471178359002806,
+      "episodes": 256,
+      "observation_writes": 82432,
+      "auxiliary_writes": 65536,
+      "total_memory_writes": 147968
+    },
+    {
+      "checkpoint_index": 0,
+      "facts": 64,
+      "arm": "continuous",
+      "elapsed_seconds": 6.486919555987697,
+      "episodes": 256,
+      "observation_writes": 82432,
+      "auxiliary_writes": 65536,
+      "total_memory_writes": 147968
+    },
+    {
+      "checkpoint_index": 0,
+      "facts": 64,
+      "arm": "periodic",
+      "elapsed_seconds": 6.479643718921579,
+      "episodes": 256,
+      "observation_writes": 82432,
+      "auxiliary_writes": 65536,
+      "total_memory_writes": 147968
+    }
+  ],
+  "datasets": [
+    {
+      "facts": 64,
+      "path": "/insomnia001/depts/edu/users/zc2819/clmm/shared-pretrain-2026-11-14/decay-diagnostic-48103-retry/streams_K64.npz",
+      "sha256": "d06ec7fb4cb273a5c34101eff485d9e9a33fad7e9eccb66ffb72155968eb509a"
+    }
+  ],
+  "repo": "/insomnia001/depts/edu/users/zc2819/clmm/pressure-2026-11-13/repo",
+  "repo_commit": "d93ac37dbdc7345cf8fc1434d42589cafef544e8",
+  "source_sha256": {
+    "/insomnia001/depts/edu/users/zc2819/clmm/pressure-2026-11-13/repo/scripts/memory_pressure_probe.py": "53ef1684b81fade61b6dfe2dce5829f5443ed2a9c0cb4a3162992ed6faf1196c",
+    "/insomnia001/depts/edu/users/zc2819/clmm/pressure-2026-11-13/repo/scripts/research_memory.py": "c129ff991eea1f6bf215eb8116f1b0e8b9b1f65c76b8f8988afc8a235bdd27ac",
+    "/insomnia001/depts/edu/users/zc2819/clmm/pressure-2026-11-13/repo/scripts/replay_probe.py": "7c9e9ca0cb79ff59ef527237bf2424d52c9a2956754784d1027702f782bb5424",
+    "/insomnia001/depts/edu/users/zc2819/clmm/pressure-2026-11-13/repo/titans_pytorch/neural_memory.py": "c4a756d8d8257500d2da6e94473a0cd13e5ae4b517826cdd761dc500de468804",
+    "/insomnia001/depts/edu/users/zc2819/clmm/pressure-2026-11-13/repo/titans_pytorch/memory_models.py": "c271fd8bd9144a8559844594963f0ba4149b078d342fd90bb75ccff023b8e504"
+  },
+  "design_sha256": "ba5a2013b8b5ee97cd7c69d2f9a2f340758db25f713b7548a0b4867260ef2949",
+  "eval_seed": 58111,
+  "episodes": 256,
+  "batch_size": 64,
+  "facts": [
+    64
+  ],
+  "delays": [
+    0,
+    256
+  ],
+  "nkeys": 256,
+  "nvals": 8,
+  "device": "cuda",
+  "device_name": "NVIDIA RTX A6000",
+  "torch": "2.11.0+cu128",
+  "numpy": "2.4.6",
+  "python": "3.11.5 (main, Sep 11 2023, 13:54:46) [GCC 11.2.0]",
+  "threads": 1,
+  "interop_threads": 1,
+  "deterministic_algorithms": true,
+  "cuda_tf32": false,
+  "cublas_workspace_config": ":4096:8",
+  "aux_decay_scale": 1,
+  "arms": [
+    "online",
+    "repeat",
+    "continuous",
+    "periodic"
+  ],
+  "working_capacity": 32,
+  "snapshot_capacity": 8,
+  "logical_pair_capacity": 40,
+  "capacity_measurement": "Logical policy capacity only; no claim that process RSS is limited to 40 pairs",
+  "simulator_trace_access": "Evaluator preloads full observations and future sampled indices; source-index checks enforce strict causal replay access, and Reader.read receives only query keys and fast weights",
+  "expected_uniform_chance": 0.125,
+  "target_positions": "Stable K-4,K-3; old revised K-2,K-1; replacement writes K,K+1",
+  "fixed_post_prefill_labels": true,
+  "auxiliary_writes_during_prefill": 0,
+  "snapshot_discarded_before_query": true,
+  "replay_tuple_matching": "Continuous and periodic use identical frozen sampled slots, keys, values and order",
+  "reservoir": "Algorithm R over observation events; update all resident copies of observed key before admission",
+  "raw_trace": "NPZ contains observations, active/final labels, Algorithm R draws, sampled slot and source indices, query-time working slots",
+  "source_index_meaning": "sample_sources is admitted event/key; sample_value_sources includes resident-label refreshes",
+  "auxiliary_definition": "repeat and both replay arms add exactly one write per delay observation; online is unmatched",
+  "ever_replayed_definition": "Reservoir replay only; ever_aux_written additionally includes immediate repetition",
+  "shadow_selection": "Identical precomputed reservoir samples for all arms; unused samples remain evaluator-only",
+  "query_access": "Reader.read sees query key and fast weights only; no reservoir or local-attention access",
+  "inference_unit": "Episode; two stable, two revised, four recent probes are correlated",
+  "caveats": [
+    "Working residency is descriptive, not randomly assigned treatment.",
+    "Revised targets have two observation tickets, stable targets one; raw type differences are not causal revision effects.",
+    "Target observation ages match across fact counts; recent-query ages need not.",
+    "All pretrained checkpoint parameters remain fixed; fast weights update online.",
+    "Saved evaluator traces exceed the logical model reservoir budget and are never available to query retrieval."
+  ],
+  "process_peak_rss_bytes": 1149231104,
+  "elapsed_seconds_including_setup_io": 25.975043577956967
+}

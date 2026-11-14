@@ -1,0 +1,182 @@
+{
+  "supplemental_certified": true,
+  "main_v1_certified": false,
+  "replaces_main_v1": false,
+  "evidence_scope": "Single fixed-parent exploratory attention-access diagnostic; saved evidence audited, no training or inference rerun; does not rescue main v1.",
+  "primary_contrast": {
+    "cell": "acquire_k2",
+    "family": "seen",
+    "category": "stable",
+    "condition": "online",
+    "left": "attention128",
+    "right": "attention32",
+    "metric": "correct",
+    "estimate": -0.015625,
+    "ci_low": -0.0546875,
+    "ci_high": 0.0234375,
+    "episodes": 64,
+    "queries": 128,
+    "role": "supplemental primary diagnostic"
+  },
+  "descriptive_acquisition": {
+    "attention32": [
+      {
+        "cell": "acquire_k1",
+        "family": "seen",
+        "category": "stable",
+        "full256_accuracy": 0.0,
+        "descriptive_threshold": 0.8,
+        "threshold_met": false,
+        "v1_normal_minus_reset_gate_applied": false
+      },
+      {
+        "cell": "acquire_k2",
+        "family": "seen",
+        "category": "stable",
+        "full256_accuracy": 0.5234375,
+        "descriptive_threshold": 0.8,
+        "threshold_met": false,
+        "v1_normal_minus_reset_gate_applied": false
+      },
+      {
+        "cell": "revise_k1",
+        "family": "seen",
+        "category": "revised",
+        "full256_accuracy": 0.484375,
+        "descriptive_threshold": 0.8,
+        "threshold_met": false,
+        "v1_normal_minus_reset_gate_applied": false
+      },
+      {
+        "cell": "counterfactual_k2",
+        "family": "seen",
+        "category": "stable",
+        "full256_accuracy": 0.4921875,
+        "descriptive_threshold": 0.8,
+        "threshold_met": false,
+        "v1_normal_minus_reset_gate_applied": false
+      },
+      {
+        "cell": "acquire_k1",
+        "family": "heldout",
+        "category": "stable",
+        "full256_accuracy": 0.0,
+        "descriptive_threshold": 0.8,
+        "threshold_met": false,
+        "v1_normal_minus_reset_gate_applied": false
+      },
+      {
+        "cell": "acquire_k2",
+        "family": "heldout",
+        "category": "stable",
+        "full256_accuracy": 0.484375,
+        "descriptive_threshold": 0.8,
+        "threshold_met": false,
+        "v1_normal_minus_reset_gate_applied": false
+      },
+      {
+        "cell": "revise_k1",
+        "family": "heldout",
+        "category": "revised",
+        "full256_accuracy": 0.546875,
+        "descriptive_threshold": 0.8,
+        "threshold_met": false,
+        "v1_normal_minus_reset_gate_applied": false
+      },
+      {
+        "cell": "counterfactual_k2",
+        "family": "heldout",
+        "category": "stable",
+        "full256_accuracy": 0.5,
+        "descriptive_threshold": 0.8,
+        "threshold_met": false,
+        "v1_normal_minus_reset_gate_applied": false
+      }
+    ],
+    "attention128": [
+      {
+        "cell": "acquire_k1",
+        "family": "seen",
+        "category": "stable",
+        "full256_accuracy": 1.0,
+        "descriptive_threshold": 0.8,
+        "threshold_met": true,
+        "v1_normal_minus_reset_gate_applied": false
+      },
+      {
+        "cell": "acquire_k2",
+        "family": "seen",
+        "category": "stable",
+        "full256_accuracy": 0.5078125,
+        "descriptive_threshold": 0.8,
+        "threshold_met": false,
+        "v1_normal_minus_reset_gate_applied": false
+      },
+      {
+        "cell": "revise_k1",
+        "family": "seen",
+        "category": "revised",
+        "full256_accuracy": 0.484375,
+        "descriptive_threshold": 0.8,
+        "threshold_met": false,
+        "v1_normal_minus_reset_gate_applied": false
+      },
+      {
+        "cell": "counterfactual_k2",
+        "family": "seen",
+        "category": "stable",
+        "full256_accuracy": 0.515625,
+        "descriptive_threshold": 0.8,
+        "threshold_met": false,
+        "v1_normal_minus_reset_gate_applied": false
+      },
+      {
+        "cell": "acquire_k1",
+        "family": "heldout",
+        "category": "stable",
+        "full256_accuracy": 0.921875,
+        "descriptive_threshold": 0.8,
+        "threshold_met": true,
+        "v1_normal_minus_reset_gate_applied": false
+      },
+      {
+        "cell": "acquire_k2",
+        "family": "heldout",
+        "category": "stable",
+        "full256_accuracy": 0.515625,
+        "descriptive_threshold": 0.8,
+        "threshold_met": false,
+        "v1_normal_minus_reset_gate_applied": false
+      },
+      {
+        "cell": "revise_k1",
+        "family": "heldout",
+        "category": "revised",
+        "full256_accuracy": 0.328125,
+        "descriptive_threshold": 0.8,
+        "threshold_met": false,
+        "v1_normal_minus_reset_gate_applied": false
+      },
+      {
+        "cell": "counterfactual_k2",
+        "family": "heldout",
+        "category": "stable",
+        "full256_accuracy": 0.4765625,
+        "descriptive_threshold": 0.8,
+        "threshold_met": false,
+        "v1_normal_minus_reset_gate_applied": false
+      }
+    ]
+  },
+  "pattern": "Neither control meets the descriptive acquisition target; learnability remains unresolved.",
+  "uncertainty": "5000 whole-episode bootstrap draws; both K2 questions clustered; one fixed parent",
+  "initialization_evidence": "Every saved initial tensor independently compared exactly with the original parent and the other control, including shape, dtype, and finite values.",
+  "limits": [
+    "No inference about training-seed variability from one parent.",
+    "This diagnostic was selected after the main experiment's acquisition failure and cannot rescue its replay comparison.",
+    "Attention128 retains neural memory but supplies direct attention to all short inputs; it is not an independently trained memory-free model.",
+    "The normal-minus-reset v1 gate is not applied; reset must be exactly a no-op for attention128 short inputs.",
+    "32-byte raw-data record indices describe serialization units, not the attention128 model's actual attention boundaries.",
+    "Training and inference were not rerun by this auditor."
+  ]
+}
