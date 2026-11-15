@@ -1,0 +1,46 @@
+[
+  {
+    "family": "seen",
+    "condition": "online",
+    "queries": 256,
+    "episodes": 128,
+    "accuracy": 0.5,
+    "first_accuracy": 0.4453125,
+    "second_accuracy": 0.5546875,
+    "both_correct": 0.015625,
+    "prediction_changes": 0.03125
+  },
+  {
+    "family": "seen",
+    "condition": "reset_memory",
+    "queries": 256,
+    "episodes": 128,
+    "accuracy": 0.1171875,
+    "first_accuracy": 0.125,
+    "second_accuracy": 0.109375,
+    "both_correct": 0.0,
+    "prediction_changes": 0.5234375
+  },
+  {
+    "family": "heldout",
+    "condition": "online",
+    "queries": 256,
+    "episodes": 128,
+    "accuracy": 0.40234375,
+    "first_accuracy": 0.2890625,
+    "second_accuracy": 0.515625,
+    "both_correct": 0.015625,
+    "prediction_changes": 0.0703125
+  },
+  {
+    "family": "heldout",
+    "condition": "reset_memory",
+    "queries": 256,
+    "episodes": 128,
+    "accuracy": 0.06640625,
+    "first_accuracy": 0.0625,
+    "second_accuracy": 0.0703125,
+    "both_correct": 0.0,
+    "prediction_changes": 0.0625
+  }
+]

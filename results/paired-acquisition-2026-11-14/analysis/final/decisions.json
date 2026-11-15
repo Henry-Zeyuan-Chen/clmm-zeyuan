@@ -1,0 +1,7 @@
+{
+  "pressure_continuation_qualified": false,
+  "useful_pairing_lead": false,
+  "auxiliary128_is_memory_baseline": false,
+  "final_step_primary": 1600,
+  "inference_scope": "Fixed parents and sampled dev episodes only; no pooled training-seed uncertainty."
+}

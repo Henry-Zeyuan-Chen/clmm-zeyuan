@@ -1,0 +1,7 @@
+parent,step,primary_endpoint,metric,comparison,episodes,left,right,difference,lower,upper,bootstrap_draws,bootstrap_seed
+68101,200,False,strict_seen_both_correct,paired_minus_duplicate,128,0.0,0.0,0.0,0.0,0.0,5000,89104
+68101,1200,False,strict_seen_both_correct,paired_minus_duplicate,128,0.0078125,0.0078125,0.0,-0.0234375,0.0234375,5000,89104
+68101,1600,True,strict_seen_both_correct,paired_minus_duplicate,128,0.0078125,0.0,0.0078125,0.0,0.0234375,5000,89104
+68105,200,False,strict_seen_both_correct,paired_minus_duplicate,128,0.0,0.0,0.0,0.0,0.0,5000,89104
+68105,1200,False,strict_seen_both_correct,paired_minus_duplicate,128,0.015625,0.0078125,0.0078125,-0.015625,0.0390625,5000,89104
+68105,1600,True,strict_seen_both_correct,paired_minus_duplicate,128,0.0078125,0.0,0.0078125,0.0,0.0234375,5000,89104

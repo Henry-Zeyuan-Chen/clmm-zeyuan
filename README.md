@@ -14,6 +14,8 @@ Following the group sync, [shared pretraining](docs/SHARED_PRETRAIN.md) adds a c
 
 Member C's [fact/revision evaluation](docs/FACT_REVISION.md) adapts the shared checkpoints and compares causal continuous/periodic replay schedules with matched record budgets, alongside acquisition and revision diagnostics. Both main adaptations fail the acquisition gate; the saved results motivate fixing key-specific recall before drawing retention conclusions.
 
+The follow-up [paired-key acquisition diagnostic](docs/PAIRED_ACQUISITION.md) tests balanced supervision against a matched duplicate-query control and saves fixed curriculum-stage checkpoints for both shared parents. Single-fact recall and revisions succeed, while two-key selection remains unresolved even with the wider attention control.
+
 ## Getting started
 
 Follow [SETUP.md](SETUP.md). After pulling a change to `pyproject.toml`, rerun `pip install -e ".[test]"`.

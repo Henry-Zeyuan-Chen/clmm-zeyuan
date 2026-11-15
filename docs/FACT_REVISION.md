@@ -96,6 +96,8 @@ Allocation 13911359 was cancelled deliberately after all work and output retriev
 
 Team choices to record are the ultimate tokenizer/corpus, the target state/read/write interface, version-aware versus unmarked replay, and the exact Hebbian/sleep adapters. These do not prevent Member C from repairing and validating common acquisition now.
 
+**Follow-up:** The [paired-key acquisition diagnostic](PAIRED_ACQUISITION.md) has now run both-query supervision against a matched duplicate-query control for both original parents, with fixed stage checkpoints and a wide-attention auxiliary. Single-fact recall and revisions work under the narrower recipe, but key-specific two-fact recall remains unqualified. The proposed curriculum diagnostic above was tested; it did not establish a successful multi-key baseline.
+
 ## Integration handoff
 
 Member A can replace the reference replay execution with its memory-only sleep implementation while consuming the saved causal stream and selection plan. Member B can use the same prompts, queries, parent/adapted checkpoints and metrics with an explicitly compatible memory adapter. Frozen replacement measures transfer; a fair learned-method comparison also needs matched adaptation. Neither track should silently change label visibility, query context, replay exposure or checkpoint-selection budget.

@@ -1,0 +1,30 @@
+test_128_noop_checks_every_logit_not_only_argmax (__main__.CorruptionSelfchecks.test_128_noop_checks_every_logit_not_only_argmax) ... ok
+test_bootstrap_constant_positive_difference (__main__.CorruptionSelfchecks.test_bootstrap_constant_positive_difference) ... ok
+test_bootstrap_preserves_complete_episode_differences (__main__.CorruptionSelfchecks.test_bootstrap_preserves_complete_episode_differences) ... ok
+test_context_switch_rejected (__main__.CorruptionSelfchecks.test_context_switch_rejected) ... ok
+test_duplicate_query_identity_is_not_silently_deduplicated (__main__.CorruptionSelfchecks.test_duplicate_query_identity_is_not_silently_deduplicated) ... ok
+test_forced_choice_and_obsolete_corruption_detected (__main__.CorruptionSelfchecks.test_forced_choice_and_obsolete_corruption_detected) ... ok
+test_forged_correct_field_detected (__main__.CorruptionSelfchecks.test_forged_correct_field_detected) ... ok
+test_illegal_target_and_incorrect_shape_rejected (__main__.CorruptionSelfchecks.test_illegal_target_and_incorrect_shape_rejected) ... ok
+test_incomplete_main_download_fails_without_certification_or_output_directory (__main__.CorruptionSelfchecks.test_incomplete_main_download_fails_without_certification_or_output_directory) ... ok
+test_incomplete_pair_rejected (__main__.CorruptionSelfchecks.test_incomplete_pair_rejected) ... ok
+test_initial_or_stage_tensor_mutation_detected (__main__.CorruptionSelfchecks.test_initial_or_stage_tensor_mutation_detected) ... ok
+test_invalid_full_vocabulary_prediction_is_not_hidden_by_forced_choice (__main__.CorruptionSelfchecks.test_invalid_full_vocabulary_prediction_is_not_hidden_by_forced_choice) ... ok
+test_key_only_pair_is_valid (__main__.CorruptionSelfchecks.test_key_only_pair_is_valid) ... ok
+test_logit_row_permutation_detected (__main__.CorruptionSelfchecks.test_logit_row_permutation_detected) ... ok
+test_nonfinite_logits_rejected (__main__.CorruptionSelfchecks.test_nonfinite_logits_rejected) ... ok
+test_one_seen_value_does_not_count_as_both_correct (__main__.CorruptionSelfchecks.test_one_seen_value_does_not_count_as_both_correct) ... ok
+test_pairing_joins_by_episode_identity_after_reordering (__main__.CorruptionSelfchecks.test_pairing_joins_by_episode_identity_after_reordering) ... ok
+test_pairing_rejects_missing_episode (__main__.CorruptionSelfchecks.test_pairing_rejects_missing_episode) ... ok
+test_pairing_rejects_same_ids_with_different_semantics (__main__.CorruptionSelfchecks.test_pairing_rejects_same_ids_with_different_semantics) ... ok
+test_prefix_extra_answer_or_changed_context_detected (__main__.CorruptionSelfchecks.test_prefix_extra_answer_or_changed_context_detected) ... ok
+test_query_wording_switch_rejected (__main__.CorruptionSelfchecks.test_query_wording_switch_rejected) ... ok
+test_shifted_labels_detected (__main__.CorruptionSelfchecks.test_shifted_labels_detected) ... ok
+test_source_corruption_and_incomplete_status_rejected (__main__.CorruptionSelfchecks.test_source_corruption_and_incomplete_status_rejected) ... ok
+test_uniform_logits_have_known_nll_and_mass (__main__.CorruptionSelfchecks.test_uniform_logits_have_known_nll_and_mass) ... ok
+test_wrong_commit_and_unsafe_source_path_rejected (__main__.CorruptionSelfchecks.test_wrong_commit_and_unsafe_source_path_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 25 tests in 9.563s
+
+OK

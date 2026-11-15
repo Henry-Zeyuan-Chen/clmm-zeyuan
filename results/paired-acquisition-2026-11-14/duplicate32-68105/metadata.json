@@ -1,0 +1,286 @@
+{
+  "status": "succeeded",
+  "mode": "paired_acquisition",
+  "started_utc": "2026-11-14T23:56:53.469008+00:00",
+  "command": [
+    "/insomnia001/depts/edu/users/zc2819/clmm/replay-2026-11-12/venv/bin/python",
+    "/insomnia001/depts/edu/users/zc2819/clmm/paired-acquisition-2026-11-14/repo/scripts/fact_paired_acquisition.py",
+    "--checkpoint",
+    "/insomnia001/depts/edu/users/zc2819/clmm/fact-revision-2026-11-14/shared-checkpoints/lm-68105.pt",
+    "--out",
+    "/insomnia001/depts/edu/users/zc2819/clmm/paired-acquisition-2026-11-14/duplicate32-68105",
+    "--design",
+    "/insomnia001/depts/edu/users/zc2819/clmm/paired-acquisition-2026-11-14/design.json",
+    "--arm",
+    "duplicate",
+    "--segment-len",
+    "32",
+    "--steps",
+    "1600",
+    "--batch-size",
+    "16",
+    "--eval-batch-size",
+    "16",
+    "--train-seed",
+    "89102",
+    "--dev-seed",
+    "89103",
+    "--gate-episodes",
+    "64",
+    "--strict-episodes",
+    "128",
+    "--lr",
+    "0.0003",
+    "--device",
+    "cuda",
+    "--threads",
+    "2",
+    "--max-seconds",
+    "600"
+  ],
+  "repo_commit": "d82030974596207a37044ba3951fbbbe242e2d00",
+  "source_sha256": {
+    "clmm/pretrain/__init__.py": "3684561d02ad25bba9fe0673da2241b976031fb4ab98a891da8c081490eae526",
+    "clmm/pretrain/byte_lm.py": "b41de6f729bb4bc18f1d17ce6a449deb4c90eafea550271d32f01866f3b4feea",
+    "clmm/pretrain/fact_streams.py": "32637fe0388ffa132b061ce1d8dab4e9a7e64324606e9ade49d29024214ac7f3",
+    "titans_pytorch/__init__.py": "b154ceb9152468861a6c513174b63ab35a979b55301c7cff275f47f1957e5fbe",
+    "titans_pytorch/implicit_mlp_attention.py": "a5ec0c11005f447fb3697f13cfa4f967ff342712fa154c1bc5e848490ef2f40c",
+    "titans_pytorch/mac_transformer.py": "3ba521375e92f661542792b7e04196e89c3a668ec5329eb8b31d4a5c2f96f38d",
+    "titans_pytorch/memory_models.py": "c271fd8bd9144a8559844594963f0ba4149b078d342fd90bb75ccff023b8e504",
+    "titans_pytorch/nested_attention.py": "361102a81ccd3f080f0d8f3401af1a3383cc28a3b34326daf7c740cbcc6894da",
+    "titans_pytorch/neural_memory.py": "c4a756d8d8257500d2da6e94473a0cd13e5ae4b517826cdd761dc500de468804",
+    "clmm/__init__.py": "cb8d9ffaff4a6d144592b0f7cb041683f7e79fc7accc73647ff020070647d652",
+    "scripts/fact_revision_experiment.py": "018301da2035fbb3c6af331e33b8d174589f924d6b8022d59d9e61609053955d",
+    "pyproject.toml": "daa0c8b7d63238c7439a50b0c5dc152d203bfb15b445aa8c0aebbd1b2d6d512b",
+    "requirements-lock.txt": "0021fd959cc013c08f41735d2d3d8b43e3f261dae8c0069f56d345a413340e17",
+    "scripts/fact_paired_acquisition.py": "a488c241b25dbd6532e433ae883d2da074cd7b677833f9b24a8b2832ce880bb3"
+  },
+  "checkpoint_path": "/insomnia001/depts/edu/users/zc2819/clmm/fact-revision-2026-11-14/shared-checkpoints/lm-68105.pt",
+  "checkpoint_sha256": "c3c4b5f49fa3116f348720b8215e2a97a8b166587d22c5c1c9ab1f72cccf8a55",
+  "args": {
+    "checkpoint": "/insomnia001/depts/edu/users/zc2819/clmm/fact-revision-2026-11-14/shared-checkpoints/lm-68105.pt",
+    "out": "/insomnia001/depts/edu/users/zc2819/clmm/paired-acquisition-2026-11-14/duplicate32-68105",
+    "design": "/insomnia001/depts/edu/users/zc2819/clmm/paired-acquisition-2026-11-14/design.json",
+    "arm": "duplicate",
+    "segment_len": 32,
+    "steps": 1600,
+    "batch_size": 16,
+    "eval_batch_size": 16,
+    "train_seed": 89102,
+    "dev_seed": 89103,
+    "gate_episodes": 64,
+    "strict_episodes": 128,
+    "lr": 0.0003,
+    "threads": 2,
+    "device": "cuda",
+    "max_seconds": 600,
+    "mode": "paired_acquisition",
+    "suite": "gate",
+    "grid_episodes": 32,
+    "primary_episodes": 128,
+    "block_size": 4,
+    "buffer_size": 8
+  },
+  "key_pool_sha256": {
+    "train": "02b74ed398e6de24c519562f950f8f88c082038b1d0129ae923c090bf594d0e7",
+    "dev": "81d76631943cac82152174c895b95c6cf8cc7b66477b9ae6b179d455a0915dbd",
+    "test": "37a4a000aa3a8c94cf5e34757a7ca2b4aab31eff9397355e39c438b32379fc89"
+  },
+  "environment": {
+    "python": "3.11.5 (main, Sep 11 2023, 13:54:46) [GCC 11.2.0]",
+    "torch": "2.11.0+cu128",
+    "numpy": "2.4.6",
+    "platform": "Linux-5.14.0-362.8.1.el9_3.x86_64-x86_64-with-glibc2.34",
+    "device": "cuda",
+    "device_name": "NVIDIA RTX A6000",
+    "dtype": "float32",
+    "deterministic_algorithms": true,
+    "tf32": false
+  },
+  "interpretation": "Synthetic byte association; raw-record replay reference, not a sleep module or natural-language benchmark.",
+  "design_sha256": "bef6dc071cf1bc0f98fee16588584433f36e2d536d9d292dfaf966a6f70d967b",
+  "parent_init_seed": 68105,
+  "parameter_count": 839248,
+  "checkpoints": [
+    {
+      "step": 200,
+      "checkpoint_sha256": "c8fe8036fe0b399aa34aae5e51c52ee31c6a6848175e9ac1e4cdbb03fea56607",
+      "evaluation": {
+        "evaluation_queries": 1536,
+        "checkpoint_unchanged": true,
+        "evaluation_data_sha256": "7483d1d65e5db92b5c4046c4d02b26fd1416ee88a183ac9c166043794334cd99",
+        "evaluation_data_canonical_sha256": "1216c106280ad7bd2fe0da7ee62f27224cab53189198161cbe2319a442e41f46",
+        "answer_logits_sha256": "381753b5b1566e2412bcae1d7eb8bca724c9c1469463dd2ed118353d308a2a72",
+        "predictions_sha256": "d14df4544c371a1e6159c2f2e5d72933a9c37d31fdd766b1b970c4399da33b1e"
+      },
+      "strict_summary": [
+        {
+          "family": "seen",
+          "condition": "online",
+          "queries": 256,
+          "episodes": 128,
+          "accuracy": 0.03515625,
+          "first_accuracy": 0.0234375,
+          "second_accuracy": 0.046875,
+          "both_correct": 0.0,
+          "prediction_changes": 0.1015625
+        },
+        {
+          "family": "seen",
+          "condition": "reset_memory",
+          "queries": 256,
+          "episodes": 128,
+          "accuracy": 0.08984375,
+          "first_accuracy": 0.1171875,
+          "second_accuracy": 0.0625,
+          "both_correct": 0.0,
+          "prediction_changes": 0.0078125
+        },
+        {
+          "family": "heldout",
+          "condition": "online",
+          "queries": 256,
+          "episodes": 128,
+          "accuracy": 0.03125,
+          "first_accuracy": 0.0234375,
+          "second_accuracy": 0.0390625,
+          "both_correct": 0.0,
+          "prediction_changes": 0.0
+        },
+        {
+          "family": "heldout",
+          "condition": "reset_memory",
+          "queries": 256,
+          "episodes": 128,
+          "accuracy": 0.03125,
+          "first_accuracy": 0.0234375,
+          "second_accuracy": 0.0390625,
+          "both_correct": 0.0,
+          "prediction_changes": 0.21875
+        }
+      ]
+    },
+    {
+      "step": 1200,
+      "checkpoint_sha256": "4841cbd8b794248bbf61da80ea20ae4230dcddd2869066952cc00d50012b7106",
+      "evaluation": {
+        "evaluation_queries": 1536,
+        "checkpoint_unchanged": true,
+        "evaluation_data_sha256": "7483d1d65e5db92b5c4046c4d02b26fd1416ee88a183ac9c166043794334cd99",
+        "evaluation_data_canonical_sha256": "1216c106280ad7bd2fe0da7ee62f27224cab53189198161cbe2319a442e41f46",
+        "answer_logits_sha256": "42547b096896240af5c48b6acd8723596a0e21b1e4b5985e20aea152a845baa1",
+        "predictions_sha256": "b392acdc1d81099eb2b85ad0f3984e0cf3de4ff51880a91efd3b22bcf10f5e3b"
+      },
+      "strict_summary": [
+        {
+          "family": "seen",
+          "condition": "online",
+          "queries": 256,
+          "episodes": 128,
+          "accuracy": 0.4765625,
+          "first_accuracy": 0.5078125,
+          "second_accuracy": 0.4453125,
+          "both_correct": 0.0078125,
+          "prediction_changes": 0.015625
+        },
+        {
+          "family": "seen",
+          "condition": "reset_memory",
+          "queries": 256,
+          "episodes": 128,
+          "accuracy": 0.05859375,
+          "first_accuracy": 0.0859375,
+          "second_accuracy": 0.03125,
+          "both_correct": 0.0,
+          "prediction_changes": 0.0
+        },
+        {
+          "family": "heldout",
+          "condition": "online",
+          "queries": 256,
+          "episodes": 128,
+          "accuracy": 0.2578125,
+          "first_accuracy": 0.3046875,
+          "second_accuracy": 0.2109375,
+          "both_correct": 0.0078125,
+          "prediction_changes": 0.0859375
+        },
+        {
+          "family": "heldout",
+          "condition": "reset_memory",
+          "queries": 256,
+          "episodes": 128,
+          "accuracy": 0.05859375,
+          "first_accuracy": 0.0859375,
+          "second_accuracy": 0.03125,
+          "both_correct": 0.0,
+          "prediction_changes": 0.0
+        }
+      ]
+    },
+    {
+      "step": 1600,
+      "checkpoint_sha256": "14397c0c883451e2c9394eee52d6c2723f47d34b250154d9ac738f8b6b406c6e",
+      "evaluation": {
+        "evaluation_queries": 1536,
+        "checkpoint_unchanged": true,
+        "evaluation_data_sha256": "7483d1d65e5db92b5c4046c4d02b26fd1416ee88a183ac9c166043794334cd99",
+        "evaluation_data_canonical_sha256": "1216c106280ad7bd2fe0da7ee62f27224cab53189198161cbe2319a442e41f46",
+        "answer_logits_sha256": "77d80bbaf365b085aad6b377530ba7d1ec08221cb45a57ddfaabf9aa9feae826",
+        "predictions_sha256": "17c85c7b01ad0442c1c8380f8f56b9fa0acf00772a5293f3eb21f3f4706c189c"
+      },
+      "strict_summary": [
+        {
+          "family": "seen",
+          "condition": "online",
+          "queries": 256,
+          "episodes": 128,
+          "accuracy": 0.5,
+          "first_accuracy": 0.0546875,
+          "second_accuracy": 0.9453125,
+          "both_correct": 0.0,
+          "prediction_changes": 0.0
+        },
+        {
+          "family": "seen",
+          "condition": "reset_memory",
+          "queries": 256,
+          "episodes": 128,
+          "accuracy": 0.06640625,
+          "first_accuracy": 0.0625,
+          "second_accuracy": 0.0703125,
+          "both_correct": 0.0,
+          "prediction_changes": 0.0
+        },
+        {
+          "family": "heldout",
+          "condition": "online",
+          "queries": 256,
+          "episodes": 128,
+          "accuracy": 0.33984375,
+          "first_accuracy": 0.171875,
+          "second_accuracy": 0.5078125,
+          "both_correct": 0.015625,
+          "prediction_changes": 0.078125
+        },
+        {
+          "family": "heldout",
+          "condition": "reset_memory",
+          "queries": 256,
+          "episodes": 128,
+          "accuracy": 0.05859375,
+          "first_accuracy": 0.078125,
+          "second_accuracy": 0.0390625,
+          "both_correct": 0.0,
+          "prediction_changes": 0.0
+        }
+      ]
+    }
+  ],
+  "completed_steps": 1600,
+  "input_bytes": 2331136,
+  "supervised_answers": 25600,
+  "ended_utc": "2026-11-15T00:00:46.853662+00:00",
+  "elapsed_seconds": 233.27373214700492,
+  "peak_cuda_allocated_bytes": 569762304
+}

@@ -1,0 +1,12 @@
+{
+  "report": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-paired-acquisition-2026-11-14\\analysis\\final",
+  "verification_sha256": "14acab68cedb246a782d6df8126c0b65f792f9e31cb200fab3945ad9c5b147ce",
+  "pressure_continuation_qualified": false,
+  "useful_pairing_lead": false,
+  "scope": "All plotted values come from completed independent audit tables; stage points are descriptive.",
+  "source_tables": [
+    "strict_metrics.csv",
+    "gate_metrics.csv",
+    "primary_differences.csv"
+  ]
+}

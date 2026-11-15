@@ -1,0 +1,11 @@
+{
+  "status": "verified",
+  "scope": "saved artifacts only",
+  "main_run_count": 5,
+  "stages_per_run": 3,
+  "source_commit": "d82030974596207a37044ba3951fbbbe242e2d00",
+  "audit_sha256": "804de480b6adf7b2f80a02472b2776f1cba63165718e654b1e6fc808326e3c31",
+  "artifact_inventory_sha256": "a520f1bec5e8bc128820a94221590179cf6f913e8266fbfdfe5102088c58630b",
+  "model_execution_performed": false,
+  "training_reproduced": false
+}

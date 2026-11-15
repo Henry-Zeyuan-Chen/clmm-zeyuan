@@ -1,0 +1,57 @@
+{
+  "checkpoint_sha256": "58add17b35e280980704ef568a60fb1edfa34fe686c9529a7c11ada02074e123",
+  "step": 1600,
+  "evaluation_queries": 1536,
+  "checkpoint_unchanged": true,
+  "evaluation_data_sha256": "7483d1d65e5db92b5c4046c4d02b26fd1416ee88a183ac9c166043794334cd99",
+  "evaluation_data_canonical_sha256": "1216c106280ad7bd2fe0da7ee62f27224cab53189198161cbe2319a442e41f46",
+  "answer_logits_sha256": "b00add65fb67259ce7da36d7cbdae464c3f1b70d54377dca9129471a48478d3e",
+  "predictions_sha256": "c451fcef3e059f1ee71ec60431d2df07e32e62bb6a730793f602eaeb7d378c1e",
+  "strict_summary": [
+    {
+      "family": "seen",
+      "condition": "online",
+      "queries": 256,
+      "episodes": 128,
+      "accuracy": 0.50390625,
+      "first_accuracy": 0.0390625,
+      "second_accuracy": 0.96875,
+      "both_correct": 0.0078125,
+      "prediction_changes": 0.0078125
+    },
+    {
+      "family": "seen",
+      "condition": "reset_memory",
+      "queries": 256,
+      "episodes": 128,
+      "accuracy": 0.08203125,
+      "first_accuracy": 0.078125,
+      "second_accuracy": 0.0859375,
+      "both_correct": 0.0,
+      "prediction_changes": 0.0
+    },
+    {
+      "family": "heldout",
+      "condition": "online",
+      "queries": 256,
+      "episodes": 128,
+      "accuracy": 0.4140625,
+      "first_accuracy": 0.2109375,
+      "second_accuracy": 0.6171875,
+      "both_correct": 0.0,
+      "prediction_changes": 0.0078125
+    },
+    {
+      "family": "heldout",
+      "condition": "reset_memory",
+      "queries": 256,
+      "episodes": 128,
+      "accuracy": 0.08203125,
+      "first_accuracy": 0.078125,
+      "second_accuracy": 0.0859375,
+      "both_correct": 0.0,
+      "prediction_changes": 0.0
+    }
+  ],
+  "selection": "Fixed stage endpoint; no best-checkpoint selection."
+}

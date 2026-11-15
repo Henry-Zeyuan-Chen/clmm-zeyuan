@@ -1,0 +1,57 @@
+{
+  "recorded_utc": "2026-11-15T00:12:44.791427+00:00",
+  "allocation": {
+    "job_id": 13911789,
+    "node": "ins083",
+    "gpu": "NVIDIA RTX A6000",
+    "requested": {
+      "hours": 1,
+      "gpus": 1,
+      "cpus": 4,
+      "system_ram_gb": 16
+    },
+    "actual_state": "CANCELLED by 564221",
+    "elapsed": "00:26:25",
+    "start_scheduler": "2026-11-14T18:44:44",
+    "end_scheduler": "2026-11-14T19:11:09",
+    "release_reason": "Intentional cancellation after all five runs, same-environment GPU inference recheck and output retrieval.",
+    "present_in_final_queue": false,
+    "automatic_renewal": false
+  },
+  "runs": [
+    {
+      "name": "duplicate32-68101",
+      "status": "succeeded",
+      "elapsed_seconds": 407.6381176849827
+    },
+    {
+      "name": "paired32-68101",
+      "status": "succeeded",
+      "elapsed_seconds": 256.6097984259832
+    },
+    {
+      "name": "duplicate32-68105",
+      "status": "succeeded",
+      "elapsed_seconds": 243.08101927296957
+    },
+    {
+      "name": "paired32-68105",
+      "status": "succeeded",
+      "elapsed_seconds": 260.68066572997486
+    },
+    {
+      "name": "paired128-68101",
+      "status": "succeeded",
+      "elapsed_seconds": 264.11934969900176
+    }
+  ],
+  "unrelated_job": {
+    "job_id": 13911744,
+    "untouched": true
+  },
+  "desktop_selection_changed": false,
+  "environment": "analysis/gpu-recheck/verification.json and gpu-driver.txt",
+  "timing_note": "Pipeline timestamps explicitly UTC; raw scheduler timestamps preserve Slurm formatting without an explicit timezone.",
+  "inspection_step_failure": "Slurm step .2 returned exit2 from an inspection of an optional missing old /tmp cache directory. It did not run training. Main pipeline .0 and GPU recheck .4 completed with exit0.",
+  "startup": "First Python child waited on shared-filesystem reads before training; first end-to-end pipeline duration includes that wait. Internal run timing begins after initialization."
+}

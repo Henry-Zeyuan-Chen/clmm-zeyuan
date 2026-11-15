@@ -1,0 +1,43 @@
+{
+  "experiment_id": "paired-key-acquisition-v1",
+  "recorded_date": "2026-11-14",
+  "context": "Prospective acquisition repair after the fact-revision main experiment failed. Prior outcomes are preserved; no claim that paired CE changes the population objective.",
+  "question": "Does supervising both keys per context improve key-conditioned recall compared with duplicating one uniformly sampled key at the same context, byte, answer and update budget?",
+  "parents": {
+    "68101": "a07762534f0b6311ec68c08b0d9f9c0ce74ec71577138eb13279a4a5dffbb24d",
+    "68105": "c3c4b5f49fa3116f348720b8215e2a97a8b166587d22c5c1c9ab1f72cccf8a55"
+  },
+  "runs": [
+    {"parent":68101,"arm":"duplicate","segment_len":32},
+    {"parent":68101,"arm":"paired","segment_len":32},
+    {"parent":68105,"arm":"duplicate","segment_len":32},
+    {"parent":68105,"arm":"paired","segment_len":32},
+    {"parent":68101,"arm":"paired","segment_len":128,"role":"separate attention-access diagnostic, not a memory-dependent baseline"}
+  ],
+  "training": {
+    "steps":1600,"answers_per_batch":16,"unique_contexts_per_batch":8,
+    "train_seed":89102,"lr":0.0003,"optimizer":"AdamW","weight_decay":0.01,"gradient_clip":1,
+    "objective":"Unmodified full256 answer-position cross entropy; no auxiliary or contrastive loss",
+    "stages":[{"end_step":200,"distribution":"K1, no revisions"},{"end_step":1200,"distribution":"K2, no revisions"},{"end_step":1600,"distribution":"Uniform batchwise choice of K1, K2, revised K1, K2 with one revised key"}],
+    "data":"Existing byte serialization and train/dev key namespaces. Reject two-fact episodes with equal initial values; tie query wording across keys. K2 revision can make final values coincide. No distractors in this acquisition diagnostic.",
+    "matching":"Same original parent, initial tensors, optimizer settings, real contexts and candidate sampling, steps, answers, byte counts. Paired uses both queries; duplicate repeats one seeded uniform query twice. Query text/target exposure necessarily differs, defining the intervention.",
+    "checkpoints":[200,1200,1600],
+    "selection":"Save and evaluate every fixed stage checkpoint; final step1600 primary. Intermediate scores are descriptive stage trajectories, never a replacement for failed final results. No best seed or best checkpoint selection."
+  },
+  "evaluation": {
+    "dev_seed":89103,"gate_episodes":64,"strict_episodes":128,"families":["seen","heldout"],
+    "gate":"Existing K1, K2, revision and counterfactual diagnostics; ordinary/reset-memory; full256 predictions",
+    "strict":"Fresh dev episodes, distinct initial values, same wording apart from requested key; both ranks tested independently under ordinary/reset-memory inference.",
+    "primary":"Final-step strict seen-template both-queries-correct, paired minus duplicate, separately for each fixed parent",
+    "secondary":"Per-query accuracy, first/second rank, prediction changes, ordinary-minus-reset, revision current/obsolete rates and stage trajectories",
+    "test_policy":"Reserved test namespace is not evaluated. New dev seed reduces overlap but uses the already development-exposed dev key namespace."
+  },
+  "analysis": {
+    "bootstrap_draws":5000,"bootstrap_seed":89104,"unit":"paired complete semantic episodes",
+    "uncertainty_scope":"Each fixed checkpoint and sampled dev episodes; do not pool two parents into training-seed uncertainty",
+    "useful_pairing_lead":"Both parent final-step primary advantages >=5 percentage points and both paired95% lower bounds >0",
+    "pressure_continuation":"Both paired32 final checkpoints must have natural K2 accuracy >=80%, strict seen both-correct >=80%, positive lower95% ordinary-minus-reset K2 interval, and revision seen accuracy >=80%. Only then consider replay rerun; passing128 alone is insufficient.",
+    "negative_result":"If gates fail, preserve failures and narrow next diagnostic; no replay rerun from an unqualified checkpoint."
+  },
+  "resources":{"gpu_allocations":1,"max_gpu_hours":1,"max_seconds_per_run":600,"automatic_renewal":false,"unrelated_job_to_preserve":13911744}
+}

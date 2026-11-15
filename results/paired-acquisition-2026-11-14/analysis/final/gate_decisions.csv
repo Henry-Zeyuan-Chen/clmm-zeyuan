@@ -1,0 +1,3 @@
+parent,run,step,natural_k2_accuracy,strict_seen_both_correct,k2_ablation_lower,revision_seen_accuracy,natural_k2_pass,strict_pass,ablation_pass,revision_pass,all_pass
+68101,paired32-68101,1600,0.515625,0.0078125,0.3984375,0.953125,False,False,True,True,False
+68105,paired32-68105,1600,0.5234375,0.0078125,0.390625,0.984375,False,False,True,True,False

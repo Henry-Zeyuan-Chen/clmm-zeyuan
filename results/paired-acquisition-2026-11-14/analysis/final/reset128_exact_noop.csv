@@ -1,0 +1,4 @@
+run,step,gate_query_pairs,strict_query_pairs
+paired128-68101,200,768,512
+paired128-68101,1200,768,512
+paired128-68101,1600,768,512

@@ -1,0 +1,59 @@
+{
+  "status": "passed",
+  "design_sha256": "bef6dc071cf1bc0f98fee16588584433f36e2d536d9d292dfaf966a6f70d967b",
+  "expected_commit": "d82030974596207a37044ba3951fbbbe242e2d00",
+  "source_commits": [
+    "d82030974596207a37044ba3951fbbbe242e2d00"
+  ],
+  "source_manifest": {
+    "clmm/pretrain/__init__.py": "3684561d02ad25bba9fe0673da2241b976031fb4ab98a891da8c081490eae526",
+    "clmm/pretrain/byte_lm.py": "b41de6f729bb4bc18f1d17ce6a449deb4c90eafea550271d32f01866f3b4feea",
+    "clmm/pretrain/fact_streams.py": "32637fe0388ffa132b061ce1d8dab4e9a7e64324606e9ade49d29024214ac7f3",
+    "titans_pytorch/__init__.py": "b154ceb9152468861a6c513174b63ab35a979b55301c7cff275f47f1957e5fbe",
+    "titans_pytorch/implicit_mlp_attention.py": "a5ec0c11005f447fb3697f13cfa4f967ff342712fa154c1bc5e848490ef2f40c",
+    "titans_pytorch/mac_transformer.py": "3ba521375e92f661542792b7e04196e89c3a668ec5329eb8b31d4a5c2f96f38d",
+    "titans_pytorch/memory_models.py": "c271fd8bd9144a8559844594963f0ba4149b078d342fd90bb75ccff023b8e504",
+    "titans_pytorch/nested_attention.py": "361102a81ccd3f080f0d8f3401af1a3383cc28a3b34326daf7c740cbcc6894da",
+    "titans_pytorch/neural_memory.py": "c4a756d8d8257500d2da6e94473a0cd13e5ae4b517826cdd761dc500de468804",
+    "clmm/__init__.py": "cb8d9ffaff4a6d144592b0f7cb041683f7e79fc7accc73647ff020070647d652",
+    "scripts/fact_revision_experiment.py": "018301da2035fbb3c6af331e33b8d174589f924d6b8022d59d9e61609053955d",
+    "pyproject.toml": "daa0c8b7d63238c7439a50b0c5dc152d203bfb15b445aa8c0aebbd1b2d6d512b",
+    "requirements-lock.txt": "0021fd959cc013c08f41735d2d3d8b43e3f261dae8c0069f56d345a413340e17",
+    "scripts/fact_paired_acquisition.py": "a488c241b25dbd6532e433ae883d2da074cd7b677833f9b24a8b2832ce880bb3"
+  },
+  "runs": 5,
+  "stages_per_run": 3,
+  "total_training_answers": 128000,
+  "gate_queries": 23040,
+  "strict_queries": 15360,
+  "strong_k1_tensor_equality_parents": [
+    68101,
+    68105
+  ],
+  "parent_paths": {
+    "68101": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-shared-pretrain-2026-11-14\\lm-68101\\checkpoint.pt",
+    "68105": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-shared-pretrain-2026-11-14\\lm-68105\\checkpoint.pt"
+  },
+  "reset128_noop_checks": [
+    {
+      "run": "paired128-68101",
+      "step": 200,
+      "gate_query_pairs": 768,
+      "strict_query_pairs": 512
+    },
+    {
+      "run": "paired128-68101",
+      "step": 1200,
+      "gate_query_pairs": 768,
+      "strict_query_pairs": 512
+    },
+    {
+      "run": "paired128-68101",
+      "step": 1600,
+      "gate_query_pairs": 768,
+      "strict_query_pairs": 512
+    }
+  ],
+  "analysis_sha256": "6997b7d1f2c27d13739a5b5976450079e8c7c0e1acd64ce6d07414f95034ea55",
+  "limitations": "Saved-artifact integrity and independent scoring; no model forward, training rerun, or reproduction claim."
+}

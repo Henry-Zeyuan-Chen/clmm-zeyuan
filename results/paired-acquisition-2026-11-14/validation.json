@@ -1,0 +1,40 @@
+{
+  "source_commit": "d82030974596207a37044ba3951fbbbe242e2d00",
+  "focused_tests": {
+    "passed": 122,
+    "seconds": 16.18,
+    "log": "pytest-focused.log",
+    "scope": "Fact streams, original fact experiment, attention control and 33 new paired-acquisition data tests; not exhaustive upstream tests."
+  },
+  "cpu_smoke": {
+    "steps": 8,
+    "batch_size": 2,
+    "gate_episodes": 2,
+    "strict_episodes": 2,
+    "elapsed_seconds": 5.253604099998483,
+    "status": "succeeded",
+    "scope": "Reduced end-to-end execution with three stage saves/evaluations. Prefreeze source snapshots preserved; not efficacy evidence."
+  },
+  "code_review": {
+    "role": "Read-only separate agent; source semantics and matching review",
+    "finding": "No demonstrated answer-position, causal-boundary or arm-matching bug; hardening suggestions incorporated before frozen commit."
+  },
+  "audit_selfchecks": {
+    "passed": 25,
+    "log": "analysis/selfchecks/synthetic-selfchecks.log",
+    "scope": "Synthetic input/logit/source/tensor/pairing corruption and incomplete-download rejection"
+  },
+  "independent_artifact_audit": {
+    "status": "verified",
+    "scope": "Saved-artifact reconstruction/scoring, no training or model inference rerun",
+    "evidence": "analysis/final/audit.json",
+    "gate_queries": 23040,
+    "strict_queries": 15360
+  },
+  "gpu_inference_recheck": {
+    "queries": 160,
+    "evidence": "analysis/gpu-recheck/verification.json",
+    "scope": "Same-environment final checkpoint reload; no second training run"
+  },
+  "final_model_selection": "No seed or checkpoint selection; fixed final step1600 primary for all five runs"
+}
