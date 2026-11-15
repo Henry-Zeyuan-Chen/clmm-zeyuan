@@ -1,0 +1,63 @@
+{
+  "question": "Does causal bounded refresh prevent obsolete replay damage at matched storage and writes?",
+  "status": "prospective before model efficacy",
+  "parent_commit": "159314d6bb5ff9ef86914e15f82c302e4da544a2",
+  "checkpoint_source_commit": "c9f5c153f786f1b82ac383d01c1d18c6c595946b",
+  "models": {
+    "count": 12,
+    "parents": [90511,90515],
+    "routes": ["content","random90701","random90702","random90703","random90704","random90705"],
+    "rule": "local_delta with protected inactive traces",
+    "checkpoint": "All existing terminal step1200 weights, unchanged; no new optimizer or model/map selection"
+  },
+  "data": {
+    "main_seed": 91223,
+    "histories_per_cell": 128,
+    "eval_batch": 16,
+    "generator": "clmm.sleep.multirevision.make_datasets, unchanged geometry",
+    "facts": 16,
+    "genuine_changes_per_revised_key": 3,
+    "phases": [0,2],
+    "final_tails": [0,64,128],
+    "targets": "Two early stable, two initially FIFO-eligible stable, two revised; plus recent distractor for positive tails",
+    "gates": "Three old short cells and neutral K16 gate; no replay in common prefill",
+    "exclusions": "Actual training90502/90802 plus all prior numericKV episode signatures including91123 and engineering; freeze full signature union before main"
+  },
+  "arms": ["online","repeat","continuous","periodic","continuous_bounded","periodic_bounded"],
+  "control": {
+    "literal": "Original frozen source/key/value replay",
+    "bounded": "After current real arrival updates FIFO, resolve sampled key from live FIFO if present; otherwise retain original sampled record",
+    "sampling": "Same original four frozen records and PCG64 draw stream; do not mutate snapshot or refresh FIFO from extras",
+    "matched": "All four replay policies have identical candidate(source,key,value) draw order, key order, real arrivals, weights, route, write count and retained record capacity",
+    "content": "Bounded actual source/value may differ across schedules because available observations differ; do not call that identical-content timing intervention",
+    "storage": "64KiB adaptive tensor per stream, FIFO8 plus snapshot4 literal records. Bounded config adds fixed version/freshness metadata, not a growing version map; serialized controller bytes need not be identical",
+    "D128_writes": {"online":200,"repeat":384,"continuous":384,"periodic":384,"continuous_bounded":384,"periodic_bounded":384},
+    "fallback": "Original literal sample, never discard a write or look up future/query labels",
+    "observer_fields": ["sampled_source","sampled_value","refreshed","fallback"],
+    "value_vs_source": "Report actual value changes separately from source-only refreshes"
+  },
+  "measurement": {
+    "primary": ["D128 stable accuracy bounded minus literal","D128 revised accuracy bounded minus literal"],
+    "aggregation": "Within each base history average both schedules and phases and both fixed parents; equally weight content and mean(all five random maps)",
+    "bootstrap": "5000 paired whole-history PCG64 draws seed91204, retain all arms/phases/tails/models jointly",
+    "primary_intervals": "Two-sided97.5 percentile intervals, Bonferroni for two endpoints",
+    "secondary": "D0 revised repair, per-schedule/family/map/phase/delay results, timing-by-freshness interaction, repeat/online anchors, obsolete versions, refresh/fallback/staleness and stable early/eligible groups; nominal95 descriptive intervals",
+    "gates": "Same short gates and blocked rolled-state checks as previous protocol; neutral K16 allsixcorrect>=.8; ownD0 allsixcorrect>=.8 separately for every arm/phase/model; keep failures/all models",
+    "interpretation": "Any ownD0 failure remains a revision/interference diagnostic. Zero stale writes in this capacity8/block4 grid does not imply a universal freshness guarantee after arbitrary eviction",
+    "conditioning": "Fixed checkpoints/maps and typed64-key16-value codebook; not population training uncertainty or full Titans efficacy"
+  },
+  "execution": {
+    "engineering": "Seed91203,N16; two prospective representatives90511content/90515random90701, sequential then concurrent, runtime-only no efficacy consulted",
+    "main": "Two local CPU workers, one Torch thread each, no new training",
+    "continuation": "Full12models N128 only if concurrent engineering wall*8*6*1.25<=3600 seconds; otherwise preflight only, no efficacy-based grid changes",
+    "pipeline_hard_seconds": 4200,
+    "per_case_seconds": 1500,
+    "GPU": "Insomnia only if needed; inspect state first, no automatic renewal. Previous GPU proof blocked in kernel I/O; CPU is an appropriate backend for small matrices"
+  },
+  "model_size_decision": {
+    "current": "Retain81921 slow parameters and65536 adaptive bytes for the isolated mechanism comparison; neutral acquisition previously100percent",
+    "next_architecture": "Integrate into existing839248-parameter complete byte-sequence approximation and qualify held-out assignment/template acquisition before retention. Profile a few-million-parameter second capacity only if diagnosis supports it; size alone is not an established repair",
+    "paper_reference": "Titans v1 section5.1 uses170M/340M/400M/760M and15B/30B FineWeb-Edu tokens, https://arxiv.org/html/2501.00663v1#S5.SS1",
+    "scope": "Component scale is adequate for a controlled replay diagnostic; architectural and held-out generalization coverage matter before making full project claims"
+  }
+}

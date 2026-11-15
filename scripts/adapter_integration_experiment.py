@@ -36,7 +36,8 @@ def datasets(args,seen,phase):
 
 
 @torch.no_grad()
-def evaluate(model,args,out,seen,deadline,phase='comparison',*,data_override=None,pressure_arms_override=None):
+def evaluate(model,args,out,seen,deadline,phase='comparison',*,data_override=None,pressure_arms_override=None,
+             session_factory=None,plan_factory=None):
     out.mkdir()
     model.eval()
     device=next(model.buffers()).device
@@ -56,7 +57,8 @@ def evaluate(model,args,out,seen,deadline,phase='comparison',*,data_override=Non
                 tick=time.perf_counter()
                 batch=episodes[start:start+args.eval_batch_size]
                 size=len(batch)
-                session=SleepSession(model,size,arm if pressure else 'online',[ep['seed'] for ep in batch])
+                make_session=SleepSession if session_factory is None else session_factory
+                session=make_session(model,size,arm if pressure else 'online',[ep['seed'] for ep in batch])
                 emitted=[[] for _ in batch]
                 queries=torch.tensor([[q['key'] for q in ep['queries']] for ep in batch],device=device)
                 peak=physical_state_bytes(session.state)
@@ -103,7 +105,8 @@ def evaluate(model,args,out,seen,deadline,phase='comparison',*,data_override=Non
                             torch.save(payload,out/f'example_{point}_session.pt')
                 terminal=session.finish()
                 for b,items in enumerate(terminal):emitted[b].extend(items)
-                expected=[replay_plan(ep,arm if pressure else 'online') for ep in batch]
+                make_plan=replay_plan if plan_factory is None else plan_factory
+                expected=[make_plan(ep,arm if pressure else 'online') for ep in batch]
                 assert all(got==want['events'] for got,want in zip(emitted,expected))
                 query_state=session.state
                 if arm=='reset':query_state=model.initial_state(size)

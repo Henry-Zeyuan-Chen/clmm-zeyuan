@@ -26,16 +26,18 @@ class SleepSession:
                "arm", "capacity", "block_size", "episode_seeds", "prime_count",
                "delay_count", "replay_count", "closed", "model_state", "policies"}
 
-    def __init__(self, model, batch_size, arm, episode_seeds, capacity=8, block_size=4):
+    def __init__(self, model, batch_size, arm, episode_seeds, capacity=8, block_size=4,
+                 freshness="literal"):
         if type(batch_size) is not int or batch_size < 1:
             raise ValueError("batch_size must be a positive integer")
         if not isinstance(episode_seeds, (list, tuple)) or len(episode_seeds) != batch_size:
             raise ValueError("episode_seeds must contain one integer seed per stream")
         self.model, self.batch_size = model, batch_size
         self.arm, self.capacity, self.block_size = arm, capacity, block_size
+        self.freshness = freshness
         self.episode_seeds = list(episode_seeds)
         self.policies = [StreamingReplay(arm, seed, capacity, block_size,
-                                        model.config.nkeys, model.config.nvalues)
+                                        model.config.nkeys, model.config.nvalues, freshness=freshness)
                          for seed in episode_seeds]
         self.state = model.initial_state(batch_size)
         self.prime_count = self.delay_count = self.replay_count = 0
@@ -44,6 +46,8 @@ class SleepSession:
 
     def _check_coherence(self):
         if (type(self.arm) is not str or self.arm not in StreamingReplay._arms
+                or type(self.freshness) is not str or self.freshness not in ("literal", "bounded")
+                or self.freshness == "bounded" and self.arm not in ("continuous", "periodic")
                 or type(self.capacity) is not int or not 1 <= self.capacity <= 8
                 or type(self.block_size) is not int or not 1 <= self.block_size <= 4
                 or type(self.episode_seeds) is not list or len(self.episode_seeds) != self.batch_size
@@ -60,6 +64,8 @@ class SleepSession:
             expected = dict(arm=self.arm, seed=seed, capacity=self.capacity,
                             block_size=self.block_size, nkeys=self.model.config.nkeys,
                             nvalues=self.model.config.nvalues)
+            if self.freshness == "bounded":
+                expected["freshness"] = self.freshness
             if (payload["config"] != expected
                     or payload["next_source"] != self.prime_count + self.delay_count
                     or payload["closed"] != self.closed
@@ -165,7 +171,7 @@ class SleepSession:
     def budget(self):
         """Per-stream opportunities and literal records; tensor bytes separate."""
         self._check_coherence()
-        return dict(batch_size=self.batch_size, arm=self.arm, prime_writes=self.prime_count,
+        budget = dict(batch_size=self.batch_size, arm=self.arm, prime_writes=self.prime_count,
                     delay_observations=self.delay_count, online_observations=self.prime_count + self.delay_count,
                     replay_writes=self.replay_count, total_writes=self.state.write_count,
                     buffer_pairs=[policy.logical_counts()["buffer_pairs"] for policy in self.policies],
@@ -173,22 +179,32 @@ class SleepSession:
                     fast_tensor_bytes=physical_state_bytes(self.state),
                     per_stream_fast_tensor_bytes=physical_state_bytes(self.state) / self.batch_size,
                     closed=self.closed)
+        if self.freshness == "bounded":
+            budget["freshness"] = self.freshness
+        return budget
 
     def export_state(self):
         self._check_coherence()
-        return dict(schema_version=1, model_method=self.model.method,
+        payload = dict(schema_version=2 if self.freshness == "bounded" else 1,
+                    model_method=self.model.method,
                     model_config_fingerprint=self.model.config.fingerprint, batch_size=self.batch_size,
                     arm=self.arm, capacity=self.capacity, block_size=self.block_size,
                     episode_seeds=list(self.episode_seeds), prime_count=self.prime_count,
                     delay_count=self.delay_count, replay_count=self.replay_count, closed=self.closed,
                     model_state=self.model.export_state(self.state),
                     policies=[policy.export_state() for policy in self.policies])
+        if self.freshness == "bounded":
+            payload["freshness"] = self.freshness
+        return payload
 
     @classmethod
     def from_state(cls, model, payload):
         """Prepare/validate a complete paused session without changing the model."""
-        if (type(payload) is not dict or set(payload) != cls._fields
-                or type(payload["schema_version"]) is not int or payload["schema_version"] != 1
+        if (type(payload) is not dict
+                or type(payload.get("schema_version")) is not int or payload["schema_version"] not in (1, 2)
+                or set(payload) != (cls._fields if payload["schema_version"] == 1
+                                    else cls._fields | {"freshness"})
+                or payload["schema_version"] == 2 and payload["freshness"] != "bounded"
                 or payload["model_method"] != model.method
                 or payload["model_config_fingerprint"] != model.config.fingerprint):
             raise ValueError("Sleep-session schema or model identity mismatch")
@@ -202,6 +218,7 @@ class SleepSession:
             raise ValueError("Invalid batched policies, seeds or lifecycle")
         session = cls.__new__(cls)
         session.model = model
+        session.freshness = payload.get("freshness", "literal")
         for name in ("batch_size", "arm", "capacity", "block_size", "prime_count",
                      "delay_count", "replay_count", "closed"):
             setattr(session, name, payload[name])

@@ -12,16 +12,21 @@ class StreamingReplay:
 
     Only real arrivals refresh the latest-per-key FIFO. Continuous and periodic
     policies draw a frozen block snapshot before its first arrival. Online and
-    repeat policies retain neither a FIFO nor a snapshot.
+    repeat policies retain neither a FIFO nor a snapshot. Bounded freshness
+    resolves each frozen sample against the live FIFO only when replayed.
     """
     _arms = ("online", "repeat", "continuous", "periodic")
     _config_keys = {"arm", "seed", "capacity", "block_size", "nkeys", "nvalues"}
     _state_keys = {"schema_version", "config", "config_fingerprint", "next_source",
                    "buffer", "snapshot", "in_block", "rng", "started", "closed"}
 
-    def __init__(self, arm, seed, capacity=8, block_size=4, nkeys=64, nvalues=16):
+    def __init__(self, arm, seed, capacity=8, block_size=4, nkeys=64, nvalues=16,
+                 freshness="literal"):
         if type(arm) is not str or arm not in self._arms:
             raise ValueError("Unknown replay arm")
+        if (type(freshness) is not str or freshness not in ("literal", "bounded")
+                or freshness == "bounded" and arm not in ("continuous", "periodic")):
+            raise ValueError("Bounded freshness requires continuous or periodic replay")
         for name, value in (("seed", seed), ("capacity", capacity), ("block_size", block_size),
                             ("nkeys", nkeys), ("nvalues", nvalues)):
             if type(value) is not int or value < (0 if name == "seed" else 1):
@@ -30,6 +35,9 @@ class StreamingReplay:
             raise ValueError("Live replay is bounded to eight FIFO and four snapshot records")
         self.config = dict(arm=arm, seed=seed, capacity=capacity, block_size=block_size,
                            nkeys=nkeys, nvalues=nvalues)
+        # Literal policies keep their original v1 configuration and fingerprint.
+        if freshness == "bounded":
+            self.config["freshness"] = freshness
         self._rng = np.random.default_rng(np.random.SeedSequence([seed, 77]))
         self._buffer = OrderedDict()
         self._snapshot = []
@@ -37,6 +45,10 @@ class StreamingReplay:
         self._in_block = 0
         self._started = False
         self._closed = False
+
+    @property
+    def freshness(self):
+        return self.config.get("freshness", "literal")
 
     @staticmethod
     def _fingerprint(config):
@@ -62,6 +74,16 @@ class StreamingReplay:
     def _event(record, kind, after_online):
         source, key, value = record
         return dict(source=source, key=key, value=value, kind=kind, after_online=after_online)
+
+    def _extra_event(self, sampled, after_online):
+        if self.freshness == "literal":
+            return self._event(sampled, "extra", after_online)
+        current = self._buffer.get(sampled[1])
+        actual = sampled if current is None else current
+        event = self._event(actual, "extra", after_online)
+        event.update(sampled_source=sampled[0], sampled_value=sampled[2],
+                     refreshed=actual != sampled, fallback=current is None)
+        return event
 
     def prime(self, key, value):
         """Accept one pre-delay arrival. Priming closes at the first step."""
@@ -91,11 +113,11 @@ class StreamingReplay:
             events.append(self._event(record, "extra", record[0]))
         elif arm in ("continuous", "periodic"):
             if arm == "continuous":
-                events.append(self._event(self._snapshot[self._in_block], "extra", record[0]))
+                events.append(self._extra_event(self._snapshot[self._in_block], record[0]))
             self._in_block += 1
             if self._in_block == self.config["block_size"]:
                 if arm == "periodic":
-                    events.extend(self._event(item, "extra", record[0]) for item in self._snapshot)
+                    events.extend(self._extra_event(item, record[0]) for item in self._snapshot)
                 self._snapshot = []
                 self._in_block = 0
         return events
@@ -106,7 +128,7 @@ class StreamingReplay:
             return []
         events = []
         if self.config["arm"] == "periodic" and self._in_block:
-            events = [self._event(record, "extra", self._next_source - 1)
+            events = [self._extra_event(record, self._next_source - 1)
                       for record in self._snapshot[:self._in_block]]
         self._snapshot = []
         self._in_block = 0
@@ -117,7 +139,8 @@ class StreamingReplay:
         return dict(buffer_pairs=len(self._buffer), snapshot_pairs=len(self._snapshot))
 
     def export_state(self):
-        return dict(schema_version=1, config=dict(self.config), config_fingerprint=self._fingerprint(self.config),
+        return dict(schema_version=2 if self.freshness == "bounded" else 1,
+                    config=dict(self.config), config_fingerprint=self._fingerprint(self.config),
                     next_source=self._next_source, buffer=[list(item) for item in self._buffer.values()],
                     snapshot=[list(item) for item in self._snapshot], in_block=self._in_block,
                     rng=deepcopy(self._rng.bit_generator.state), started=self._started, closed=self._closed)
@@ -125,8 +148,11 @@ class StreamingReplay:
     @classmethod
     def from_state(cls, payload):
         if (type(payload) is not dict or set(payload) != cls._state_keys
-                or type(payload["schema_version"]) is not int or payload["schema_version"] != 1
-                or type(payload["config"]) is not dict or set(payload["config"]) != cls._config_keys
+                or type(payload["schema_version"]) is not int or payload["schema_version"] not in (1, 2)
+                or type(payload["config"]) is not dict
+                or set(payload["config"]) != (cls._config_keys if payload["schema_version"] == 1
+                                               else cls._config_keys | {"freshness"})
+                or payload["schema_version"] == 2 and payload["config"]["freshness"] != "bounded"
                 or payload["config_fingerprint"] != cls._fingerprint(payload["config"])):
             raise ValueError("Invalid or mismatched replay-state schema/configuration")
         config = payload["config"]
