@@ -1,0 +1,53 @@
+{
+  "status": "passed",
+  "audit_scope": "Saved traces/scores/provenance and internal consistency; no retraining or learned-checkpoint inference",
+  "runs": [
+    {
+      "run": "smoke-delta-cpu",
+      "evaluation_stage": "evaluation",
+      "status": "passed",
+      "source_files": 17,
+      "training_observations": 44,
+      "training_answers": 32,
+      "training_unique_histories": 4,
+      "training_key_ids": 31,
+      "evaluation_cells": 12,
+      "audited_plan_writes": 5754,
+      "prediction_rows": 468,
+      "summary_rows": 186,
+      "state_roundtrip_batches": 54
+    },
+    {
+      "run": "smoke-neural-cpu",
+      "evaluation_stage": "evaluation",
+      "status": "passed",
+      "source_files": 17,
+      "training_observations": 44,
+      "training_answers": 32,
+      "training_unique_histories": 4,
+      "training_key_ids": 31,
+      "evaluation_cells": 3,
+      "audited_plan_writes": 54,
+      "prediction_rows": 48,
+      "summary_rows": 21,
+      "state_roundtrip_batches": 9
+    },
+    {
+      "run": "smoke-neural-cpu",
+      "evaluation_stage": "initial-evaluation",
+      "status": "passed",
+      "source_files": 17,
+      "training_observations": 44,
+      "training_answers": 32,
+      "training_unique_histories": 4,
+      "training_key_ids": 31,
+      "evaluation_cells": 3,
+      "audited_plan_writes": 54,
+      "prediction_rows": 48,
+      "summary_rows": 21,
+      "state_roundtrip_batches": 9
+    }
+  ],
+  "total_prediction_rows": 564,
+  "total_audited_plan_writes": 5862
+}

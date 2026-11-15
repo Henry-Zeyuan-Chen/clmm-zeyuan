@@ -1,0 +1,129 @@
+{
+  "status": "passed",
+  "scope": "Exact event equality, all saved main, smoke and supplemental plans; post-run implementation, no model reruns",
+  "frozen_evaluator_commit": "ff62df0f85ff7cbf62f3209755ea066959aa7085",
+  "scheduler_sha256": "8c082b77871adfa08264507f5e37f9b78cded0d5c3b4798f599801d5c06923dd",
+  "auditor_sha256": "9caedefb10029d4b0dbe8ba2701129adad8e68ebaa4fa383949b0197243fc8ff",
+  "plans": 17424,
+  "writes": 405222,
+  "resumed_policies": 3900,
+  "runs": [
+    {
+      "run": "confirm-s05-90301",
+      "stage": "evaluation",
+      "plans": 1152,
+      "writes": 3456,
+      "resumed_policies": 0,
+      "episodes_sha256": "4e7af389c95abe465b8e1a72f2ee04dcd6919aa240b70ed77325ef91841877b8",
+      "plans_sha256": "070e6a6582933dfc1d1d01627dc807260c76397cba1e44971f703a24860f9ce2"
+    },
+    {
+      "run": "confirm-s05-90305",
+      "stage": "evaluation",
+      "plans": 1152,
+      "writes": 3456,
+      "resumed_policies": 0,
+      "episodes_sha256": "4e7af389c95abe465b8e1a72f2ee04dcd6919aa240b70ed77325ef91841877b8",
+      "plans_sha256": "070e6a6582933dfc1d1d01627dc807260c76397cba1e44971f703a24860f9ce2"
+    },
+    {
+      "run": "delta-full",
+      "stage": "evaluation",
+      "plans": 2592,
+      "writes": 94656,
+      "resumed_policies": 960,
+      "episodes_sha256": "d52b8976b8574e2f7466b953b4b357161958226dd4307c8f1512c4477f2777e1",
+      "plans_sha256": "a70c11abf29bab1c878571eded6439d56ff2527322f83c8aa4f3d82ceacdc3e2"
+    },
+    {
+      "run": "dense-calibration",
+      "stage": "evaluation",
+      "plans": 2592,
+      "writes": 94656,
+      "resumed_policies": 960,
+      "episodes_sha256": "08e1153d965cd870444d7da1504ab6f01376cd069b5e7ba061fb5247605debbe",
+      "plans_sha256": "01e4a6a01d8a6b23038f49517a11a96614ff4d9d690bb60654d46e49b6ce86c0"
+    },
+    {
+      "run": "pressure-s05-90301",
+      "stage": "evaluation",
+      "plans": 2592,
+      "writes": 94656,
+      "resumed_policies": 960,
+      "episodes_sha256": "d52b8976b8574e2f7466b953b4b357161958226dd4307c8f1512c4477f2777e1",
+      "plans_sha256": "a70c11abf29bab1c878571eded6439d56ff2527322f83c8aa4f3d82ceacdc3e2"
+    },
+    {
+      "run": "pressure-s05-90305",
+      "stage": "evaluation",
+      "plans": 2592,
+      "writes": 94656,
+      "resumed_policies": 960,
+      "episodes_sha256": "d52b8976b8574e2f7466b953b4b357161958226dd4307c8f1512c4477f2777e1",
+      "plans_sha256": "a70c11abf29bab1c878571eded6439d56ff2527322f83c8aa4f3d82ceacdc3e2"
+    },
+    {
+      "run": "s05-90301",
+      "stage": "evaluation",
+      "plans": 1152,
+      "writes": 3456,
+      "resumed_policies": 0,
+      "episodes_sha256": "92dc4ed3161d5ebf1db9956ab9060520938083230692318aac9c453882e87814",
+      "plans_sha256": "a0d62704495f7aeadaa3a09d441ea86559ae3c07cbdb45a974a1f07482ea6073"
+    },
+    {
+      "run": "s05-90301",
+      "stage": "initial-evaluation",
+      "plans": 1152,
+      "writes": 3456,
+      "resumed_policies": 0,
+      "episodes_sha256": "92dc4ed3161d5ebf1db9956ab9060520938083230692318aac9c453882e87814",
+      "plans_sha256": "a0d62704495f7aeadaa3a09d441ea86559ae3c07cbdb45a974a1f07482ea6073"
+    },
+    {
+      "run": "s05-90305",
+      "stage": "evaluation",
+      "plans": 1152,
+      "writes": 3456,
+      "resumed_policies": 0,
+      "episodes_sha256": "92dc4ed3161d5ebf1db9956ab9060520938083230692318aac9c453882e87814",
+      "plans_sha256": "a0d62704495f7aeadaa3a09d441ea86559ae3c07cbdb45a974a1f07482ea6073"
+    },
+    {
+      "run": "s05-90305",
+      "stage": "initial-evaluation",
+      "plans": 1152,
+      "writes": 3456,
+      "resumed_policies": 0,
+      "episodes_sha256": "92dc4ed3161d5ebf1db9956ab9060520938083230692318aac9c453882e87814",
+      "plans_sha256": "a0d62704495f7aeadaa3a09d441ea86559ae3c07cbdb45a974a1f07482ea6073"
+    },
+    {
+      "run": "smoke-delta-cpu",
+      "stage": "evaluation",
+      "plans": 108,
+      "writes": 5754,
+      "resumed_policies": 60,
+      "episodes_sha256": "16b2fe87a5d74fba9f0747cba7a5360fa81cdc56a24f4bdc5347a7002ab77ff1",
+      "plans_sha256": "3a7b9754426f43e8e7717c78238cb85d191adac22cf9240a08253696c03ffe4c"
+    },
+    {
+      "run": "smoke-neural-cpu",
+      "stage": "evaluation",
+      "plans": 18,
+      "writes": 54,
+      "resumed_policies": 0,
+      "episodes_sha256": "999820a9b9f6672f410f08c054d57e225571477522023ea9c4a5f1a358f8913e",
+      "plans_sha256": "f6073a7df5a11ca76a291d416b66d1af1e4bc229caae5b2d052da7cea7748222"
+    },
+    {
+      "run": "smoke-neural-cpu",
+      "stage": "initial-evaluation",
+      "plans": 18,
+      "writes": 54,
+      "resumed_policies": 0,
+      "episodes_sha256": "999820a9b9f6672f410f08c054d57e225571477522023ea9c4a5f1a358f8913e",
+      "plans_sha256": "f6073a7df5a11ca76a291d416b66d1af1e4bc229caae5b2d052da7cea7748222"
+    }
+  ]
+}

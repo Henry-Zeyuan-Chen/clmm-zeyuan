@@ -1,0 +1,64 @@
+{
+  "status": "passed",
+  "scope": "Selected final-checkpoint answers only; CPU versus saved runtime scores, not retraining",
+  "torch": "2.15.0+cpu",
+  "runs": [
+    {
+      "run": "delta-full",
+      "checkpoint_sha256": "81d851a125dd07604366382f32087a336242ab9bd08c49b943e87e7656544b02",
+      "device": "cpu",
+      "answers_reloaded": 148,
+      "batches": 19,
+      "max_absolute_score_error": 0.0,
+      "argmax_matches": true,
+      "offline_changed_state_dict_entries": null
+    },
+    {
+      "run": "pressure-s05-90301",
+      "checkpoint_sha256": "03ee37da2cdf230b7a41758a02517f849f3d10c1ca4ded4c24d3d9eb6312630f",
+      "device": "cpu",
+      "answers_reloaded": 148,
+      "batches": 19,
+      "max_absolute_score_error": 3.5762786865234375e-07,
+      "argmax_matches": true,
+      "offline_changed_state_dict_entries": null
+    },
+    {
+      "run": "pressure-s05-90305",
+      "checkpoint_sha256": "3410341050c6009edb5478e49603fc8a7435bfe64f5b21a0fc59b3e7419e4ce6",
+      "device": "cpu",
+      "answers_reloaded": 148,
+      "batches": 19,
+      "max_absolute_score_error": 3.5762786865234375e-07,
+      "argmax_matches": true,
+      "offline_changed_state_dict_entries": null
+    },
+    {
+      "run": "s05-90301",
+      "checkpoint_sha256": "03ee37da2cdf230b7a41758a02517f849f3d10c1ca4ded4c24d3d9eb6312630f",
+      "device": "cpu",
+      "answers_reloaded": 48,
+      "batches": 9,
+      "max_absolute_score_error": 2.384185791015625e-07,
+      "argmax_matches": true,
+      "offline_changed_state_dict_entries": [
+        "engine.memory_model_parameters.0",
+        "engine.memory_model_parameters.1"
+      ]
+    },
+    {
+      "run": "s05-90305",
+      "checkpoint_sha256": "3410341050c6009edb5478e49603fc8a7435bfe64f5b21a0fc59b3e7419e4ce6",
+      "device": "cpu",
+      "answers_reloaded": 48,
+      "batches": 9,
+      "max_absolute_score_error": 2.384185791015625e-07,
+      "argmax_matches": true,
+      "offline_changed_state_dict_entries": [
+        "engine.memory_model_parameters.0",
+        "engine.memory_model_parameters.1"
+      ]
+    }
+  ],
+  "total_answers": 540
+}

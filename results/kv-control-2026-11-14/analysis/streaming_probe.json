@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "scheduler_sha256": "8c082b77871adfa08264507f5e37f9b78cded0d5c3b4798f599801d5c06923dd",
+  "checks": [
+    "Mid-block genuine revision preserves frozen old snapshot literals",
+    "Real-arrival FIFO retains the new revised value; replay does not refresh it",
+    "JSON resume preserves the complete remaining event stream",
+    "Next block samples the then-latest buffer values"
+  ],
+  "scope": "One independent literal-record edge probe; full saved-plan parity and test rerun owned by root/implementer"
+}

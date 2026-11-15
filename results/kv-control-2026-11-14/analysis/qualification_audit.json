@@ -1,0 +1,59 @@
+{
+  "status": "reconstructed_from_raw_predictions",
+  "selected": "s05",
+  "confirmed": true,
+  "candidates": [
+    {
+      "tag": "s05",
+      "gates": [
+        {
+          "run": "s05-90301",
+          "stage": "evaluation",
+          "acquire2": 1.0,
+          "acquire4": 1.0,
+          "revise2": 1.0,
+          "normal_minus_rolled": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "passed": true
+        },
+        {
+          "run": "s05-90305",
+          "stage": "evaluation",
+          "acquire2": 1.0,
+          "acquire4": 1.0,
+          "revise2": 1.0,
+          "normal_minus_rolled": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "passed": true
+        }
+      ]
+    }
+  ],
+  "confirmation": [
+    {
+      "run": "confirm-s05-90301",
+      "stage": "evaluation",
+      "acquire2": 1.0,
+      "acquire4": 1.0,
+      "revise2": 1.0,
+      "normal_minus_rolled": 0.9921875,
+      "ci_low": 0.9765625,
+      "ci_high": 1.0,
+      "passed": true
+    },
+    {
+      "run": "confirm-s05-90305",
+      "stage": "evaluation",
+      "acquire2": 1.0,
+      "acquire4": 1.0,
+      "revise2": 1.0,
+      "normal_minus_rolled": 0.984375,
+      "ci_low": 0.9609375,
+      "ci_high": 1.0,
+      "passed": true
+    }
+  ],
+  "interval_scope": "Fixed checkpoint(s) and sampled episodes; not training-procedure uncertainty"
+}

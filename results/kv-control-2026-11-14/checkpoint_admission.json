@@ -1,0 +1,122 @@
+{
+  "scope": "Member C typed memory-component initializers; not byte-LM checkpoint compatibility",
+  "checkpoints": [
+    {
+      "id": "kv-neural-s05-90301",
+      "checkpoint": "s05-90301/checkpoint.pt",
+      "sha256": "03ee37da2cdf230b7a41758a02517f849f3d10c1ca4ded4c24d3d9eb6312630f",
+      "source_commit": "ff62df0f85ff7cbf62f3209755ea066959aa7085",
+      "format": "clmm.kv.control.v1",
+      "config": {
+        "nkeys": 64,
+        "nvalues": 16,
+        "dim": 64,
+        "hidden": 128,
+        "step_size": 0.5
+      },
+      "parameters": {
+        "registered": 32898,
+        "trainable": 16384
+      },
+      "offline_updates": 1200,
+      "offline_observations": 278112,
+      "offline_supervised_answers": 177728,
+      "qualified_for": [
+        "typed closed-vocabulary fresh-history acquisition",
+        "genuine short revision",
+        "persistent fast-state save/load/continue under this API"
+      ],
+      "fresh_confirmation": {
+        "acquire2": "128/128",
+        "acquire4": "128/128",
+        "revise2": "128/128"
+      },
+      "initial_checkpoint": "s05-90301/initial_checkpoint.pt",
+      "initial_sha256": "f34df96014c081d822fc8f6851c7f7a46fdadf254596fb9debd4d9b014c31c58",
+      "initial_short_accuracy_already_perfect": true,
+      "informative_main_pressure": false,
+      "pressure_reason": "All ordinary orthogonal arms and cells at 100% accuracy",
+      "not_qualified_for": [
+        "complete byte/sequence-model retention",
+        "unseen keys or atomic bindings",
+        "language transfer",
+        "sleep or Hebbian efficacy"
+      ],
+      "boundary_state": "pressure-s05-90301/evaluation/example_boundary_state.pt",
+      "final_state": "pressure-s05-90301/evaluation/example_final_state.pt",
+      "example_state_scope": "Batch16 online K8,D16, corresponding recorded episodes; requires matching slow checkpoint"
+    },
+    {
+      "id": "kv-neural-s05-90305",
+      "checkpoint": "s05-90305/checkpoint.pt",
+      "sha256": "3410341050c6009edb5478e49603fc8a7435bfe64f5b21a0fc59b3e7419e4ce6",
+      "source_commit": "ff62df0f85ff7cbf62f3209755ea066959aa7085",
+      "format": "clmm.kv.control.v1",
+      "config": {
+        "nkeys": 64,
+        "nvalues": 16,
+        "dim": 64,
+        "hidden": 128,
+        "step_size": 0.5
+      },
+      "parameters": {
+        "registered": 32898,
+        "trainable": 16384
+      },
+      "offline_updates": 1200,
+      "offline_observations": 278112,
+      "offline_supervised_answers": 177728,
+      "qualified_for": [
+        "typed closed-vocabulary fresh-history acquisition",
+        "genuine short revision",
+        "persistent fast-state save/load/continue under this API"
+      ],
+      "fresh_confirmation": {
+        "acquire2": "128/128",
+        "acquire4": "128/128",
+        "revise2": "128/128"
+      },
+      "initial_checkpoint": "s05-90305/initial_checkpoint.pt",
+      "initial_sha256": "e6aae870258373a1e8d29b2762375e7b70ffa03357ace85f246d8ad801af4ea9",
+      "initial_short_accuracy_already_perfect": true,
+      "informative_main_pressure": false,
+      "pressure_reason": "All ordinary orthogonal arms and cells at 100% accuracy",
+      "not_qualified_for": [
+        "complete byte/sequence-model retention",
+        "unseen keys or atomic bindings",
+        "language transfer",
+        "sleep or Hebbian efficacy"
+      ],
+      "boundary_state": "pressure-s05-90305/evaluation/example_boundary_state.pt",
+      "final_state": "pressure-s05-90305/evaluation/example_final_state.pt",
+      "example_state_scope": "Batch16 online K8,D16, corresponding recorded episodes; requires matching slow checkpoint"
+    }
+  ],
+  "delta": {
+    "checkpoint": "delta-full/checkpoint.pt",
+    "sha256": "81d851a125dd07604366382f32087a336242ab9bd08c49b943e87e7656544b02",
+    "scope": "Analytic orthogonal plumbing control, no offline learning"
+  },
+  "dense": {
+    "checkpoint": "dense-calibration/checkpoint.pt",
+    "sha256": "1db9dc73590686bae0b28a0d7cd1e9cedf548a7ab595cff4d78480177870a235",
+    "adapter": "launch/calibrate_dense.py",
+    "scope": "Separate untrained correlated-key linear instrument",
+    "eligible": true,
+    "primary": {
+      "cell": "pressure_k8_d64",
+      "category": "stable",
+      "contrast": "periodic_minus_continuous",
+      "paired_episodes": 32,
+      "difference": 0.046875,
+      "ci_low": 0.0,
+      "ci_high": 0.109375,
+      "continuous_correct": 17,
+      "periodic_correct": 20,
+      "queries_per_arm": 64,
+      "bootstrap_seed": 90404,
+      "bootstrap_draws": 5000,
+      "uncertainty_scope": "Sampled episodes for one fixed key codebook; not codebook-seed variability"
+    }
+  }
+}

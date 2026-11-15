@@ -1,0 +1,10 @@
+run,stage,acquire2,acquire4,revise2,normal_minus_rolled,ci_low,ci_high,passed
+confirm-s05-90301,evaluation,1.0,1.0,1.0,0.9921875,0.9765625,1.0,True
+confirm-s05-90305,evaluation,1.0,1.0,1.0,0.984375,0.9609375,1.0,True
+delta-full,evaluation,1.0,1.0,1.0,1.0,1.0,1.0,True
+pressure-s05-90301,evaluation,1.0,1.0,1.0,0.9921875,0.9765625,1.0,True
+pressure-s05-90305,evaluation,1.0,1.0,1.0,1.0,1.0,1.0,True
+s05-90301,evaluation,1.0,1.0,1.0,1.0,1.0,1.0,True
+s05-90301,initial-evaluation,1.0,1.0,1.0,1.0,1.0,1.0,True
+s05-90305,evaluation,1.0,1.0,1.0,1.0,1.0,1.0,True
+s05-90305,initial-evaluation,1.0,1.0,1.0,1.0,1.0,1.0,True

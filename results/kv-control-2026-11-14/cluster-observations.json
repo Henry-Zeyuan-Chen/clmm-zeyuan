@@ -1,0 +1,32 @@
+{
+  "job_id": 13914162,
+  "node": "ins093",
+  "gpu": "NVIDIA RTX A6000",
+  "requested": {
+    "gpus": 1,
+    "cpus": 4,
+    "system_memory": "16G",
+    "time_limit": "01:00:00"
+  },
+  "observed_allocation_elapsed": "00:15:55",
+  "allocated_gpu_hours": 0.2652777777777778,
+  "final_state": "CANCELLED by user after successful retrieval and verification",
+  "task_allocation_released": true,
+  "unrelated_jobs_preserved": true,
+  "desktop_helper_selection_changed": false,
+  "records": [
+    "cluster-sacct.txt",
+    "cluster-squeue-final.txt",
+    "gpu-driver.txt"
+  ],
+  "steps": {
+    "attempt1": "FAILED exit1: NumPy bool JSON launcher error after two successful model runs",
+    "resumed_pipeline": "COMPLETED exit0, validated reuse without retraining",
+    "gpu_recheck": "COMPLETED exit0"
+  },
+  "dense": {
+    "device": "local CPU",
+    "elapsed_seconds": 20.930313599994406,
+    "new_gpu_allocation": false
+  }
+}

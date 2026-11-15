@@ -1,0 +1,64 @@
+{
+  "candidates": [
+    {
+      "tag": "s05",
+      "step_size": 0.5,
+      "runs": [
+        "s05-90301",
+        "s05-90305"
+      ],
+      "gates": [
+        {
+          "acquire2": 1.0,
+          "acquire4": 1.0,
+          "revise2": 1.0,
+          "normal_minus_rolled": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "bootstrap_unit": "8 cyclic-roll blocks of16 episodes",
+          "passed": true
+        },
+        {
+          "acquire2": 1.0,
+          "acquire4": 1.0,
+          "revise2": 1.0,
+          "normal_minus_rolled": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "bootstrap_unit": "8 cyclic-roll blocks of16 episodes",
+          "passed": true
+        }
+      ]
+    }
+  ],
+  "selected": "s05",
+  "confirmed": true,
+  "confirmation": [
+    {
+      "run": "confirm-s05-90301",
+      "gate": {
+        "acquire2": 1.0,
+        "acquire4": 1.0,
+        "revise2": 1.0,
+        "normal_minus_rolled": 0.9921875,
+        "ci_low": 0.9765625,
+        "ci_high": 1.0,
+        "bootstrap_unit": "8 cyclic-roll blocks of16 episodes",
+        "passed": true
+      }
+    },
+    {
+      "run": "confirm-s05-90305",
+      "gate": {
+        "acquire2": 1.0,
+        "acquire4": 1.0,
+        "revise2": 1.0,
+        "normal_minus_rolled": 0.984375,
+        "ci_low": 0.9609375,
+        "ci_high": 1.0,
+        "bootstrap_unit": "8 cyclic-roll blocks of16 episodes",
+        "passed": true
+      }
+    }
+  ]
+}

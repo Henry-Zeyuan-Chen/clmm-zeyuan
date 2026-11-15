@@ -1,0 +1,40 @@
+{
+  "status": "passed",
+  "scope": "Separate untrained single-codebook instrument; no neural selection or training claim",
+  "prediction_rows": 9792,
+  "audited_plan_writes": 94656,
+  "serialization_batches": 162,
+  "all_predictions_independently_replayed": true,
+  "max_absolute_replayed_score_error": 0.0,
+  "codebook_sha256": "c5893861dccd3048e54b45983b36c9e6e89f797a3196e20bb7e91206c60bea72",
+  "adapter_source_sha256": "a8728254ff472e42817c2d98cddd99f07262c82ac71a3af67c62631e63ba0573",
+  "offline_training": false,
+  "exclusion_only_histories": 38395,
+  "gate_all_correct": {
+    "acquire2": 1.0,
+    "acquire4": 1.0,
+    "revise2": 1.0
+  },
+  "k8_d0_four_target_all_correct": 0.96875,
+  "eligible": true,
+  "primary": {
+    "cell": "pressure_k8_d64",
+    "category": "stable",
+    "contrast": "periodic_minus_continuous",
+    "paired_episodes": 32,
+    "difference": 0.046875,
+    "ci_low": 0.0,
+    "ci_high": 0.109375,
+    "continuous_correct": 17,
+    "periodic_correct": 20,
+    "queries_per_arm": 64,
+    "bootstrap_seed": 90404,
+    "bootstrap_draws": 5000,
+    "uncertainty_scope": "Sampled episodes for one fixed key codebook; not codebook-seed variability"
+  },
+  "warnings": [
+    "Representation geometry and state dimension both differ from the orthogonal control.",
+    "Calibration was specified after the main ceiling; it is a supplemental diagnostic.",
+    "Low-D0 larger-K cells cannot isolate delay retention."
+  ]
+}

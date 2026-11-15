@@ -1,0 +1,31 @@
+{"completed": "acquire2", "arm": "online"}
+{"completed": "acquire2", "arm": "reset"}
+{"completed": "acquire2", "arm": "rolled"}
+{"completed": "acquire4", "arm": "online"}
+{"completed": "acquire4", "arm": "reset"}
+{"completed": "acquire4", "arm": "rolled"}
+{"completed": "revise2", "arm": "online"}
+{"completed": "revise2", "arm": "reset"}
+{"completed": "revise2", "arm": "rolled"}
+{"step": 1, "observations": 256, "answers": 256, "loss": 0.04346815496683121, "accuracy": 1.0, "gradient_norm": 0.005747901275753975, "elapsed_seconds": 6.7386666079983115}
+{"step": 100, "observations": 384, "answers": 256, "loss": 0.01642267033457756, "accuracy": 1.0, "gradient_norm": 0.004862257279455662, "elapsed_seconds": 10.260244598030113}
+{"step": 200, "observations": 64, "answers": 64, "loss": 0.0008730272529646754, "accuracy": 1.0, "gradient_norm": 0.0018469135975465178, "elapsed_seconds": 13.760459743032698}
+{"step": 300, "observations": 64, "answers": 64, "loss": 0.00012205642997287214, "accuracy": 1.0, "gradient_norm": 0.0004085601249244064, "elapsed_seconds": 17.967535345989745}
+{"step": 400, "observations": 192, "answers": 64, "loss": 0.0007882864447310567, "accuracy": 1.0, "gradient_norm": 0.0011582894949242473, "elapsed_seconds": 21.48363369901199}
+{"step": 500, "observations": 160, "answers": 128, "loss": 0.000493194384034723, "accuracy": 1.0, "gradient_norm": 0.0006276199128478765, "elapsed_seconds": 25.023028828029055}
+{"step": 600, "observations": 448, "answers": 256, "loss": 0.0010505198733881116, "accuracy": 1.0, "gradient_norm": 0.0008373504970222712, "elapsed_seconds": 28.595971842994913}
+{"step": 700, "observations": 256, "answers": 128, "loss": 0.00039942373405210674, "accuracy": 1.0, "gradient_norm": 0.0006490114610642195, "elapsed_seconds": 32.25229896901874}
+{"step": 800, "observations": 192, "answers": 64, "loss": 0.00017271420801989734, "accuracy": 1.0, "gradient_norm": 0.0005533505463972688, "elapsed_seconds": 35.75279679102823}
+{"step": 900, "observations": 160, "answers": 128, "loss": 0.00018837903917301446, "accuracy": 1.0, "gradient_norm": 0.00036984620965085924, "elapsed_seconds": 39.450232212024275}
+{"step": 1000, "observations": 64, "answers": 64, "loss": 1.9472201529424638e-05, "accuracy": 1.0, "gradient_norm": 0.0002599864383228123, "elapsed_seconds": 43.1623979859869}
+{"step": 1100, "observations": 128, "answers": 128, "loss": 2.4357894290005788e-05, "accuracy": 1.0, "gradient_norm": 0.0002155580441467464, "elapsed_seconds": 46.89195759303402}
+{"step": 1200, "observations": 320, "answers": 256, "loss": 0.00014344672672450542, "accuracy": 1.0, "gradient_norm": 0.0002623871841933578, "elapsed_seconds": 50.37071088299854}
+{"completed": "acquire2", "arm": "online"}
+{"completed": "acquire2", "arm": "reset"}
+{"completed": "acquire2", "arm": "rolled"}
+{"completed": "acquire4", "arm": "online"}
+{"completed": "acquire4", "arm": "reset"}
+{"completed": "acquire4", "arm": "rolled"}
+{"completed": "revise2", "arm": "online"}
+{"completed": "revise2", "arm": "reset"}
+{"completed": "revise2", "arm": "rolled"}

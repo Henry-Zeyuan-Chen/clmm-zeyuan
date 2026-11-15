@@ -1,0 +1,8 @@
+..................                                                       [100%]
+============================== warnings summary ===============================
+work/clmm-kv-control/test_dense_calibration.py::test_fixed_codebook_is_reproducible_normalized_distinct_and_not_orthogonal
+  C:\Users\henry\Documents\Codex\2026-10-22\i\work\clmm-test-env\Lib\site-packages\torch\jit\_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+18 passed, 1 warning in 12.76s

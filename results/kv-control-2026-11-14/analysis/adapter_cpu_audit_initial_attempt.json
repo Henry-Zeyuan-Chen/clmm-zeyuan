@@ -1,0 +1,8 @@
+{
+  "status": "reviewer_assertion_corrected",
+  "exit_code": 1,
+  "failed_assertion": "physical_state_bytes(restored) == physical_state_bytes(adaptive)",
+  "reason": "The audit incorrectly assumed serialization must preserve unused backing storage behind active tensor views. Export clones compactly; bit-identical values and continuation are required, equal unused storage is not.",
+  "model_failure": false,
+  "rerun": "adapter_cpu_audit.json"
+}

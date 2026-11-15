@@ -1,0 +1,70 @@
+{"starting": "delta-full"}
+{"name": "delta-full", "command": ["/insomnia001/depts/edu/users/zc2819/clmm/replay-2026-11-12/venv/bin/python", "-B", "/insomnia001/depts/edu/users/zc2819/clmm/kv-control-2026-11-14/repo/scripts/kv_representation_control.py", "evaluate", "--out", "/insomnia001/depts/edu/users/zc2819/clmm/kv-control-2026-11-14/delta-full", "--design", "/insomnia001/depts/edu/users/zc2819/clmm/kv-control-2026-11-14/design.json", "--method", "delta", "--step-size", "0.5", "--init-seed", "90301", "--train-seed", "90302", "--dev-seed", "90323", "--steps", "1200", "--batch-size", "32", "--eval-episodes", "128", "--pressure-episodes", "32", "--eval-batch-size", "16", "--suite", "full", "--device", "cuda", "--threads", "2", "--max-seconds", "900"], "status": "succeeded", "started_utc": "2026-11-15T05:02:41.778241+00:00", "returncode": 0, "elapsed_seconds": 87.09724193904549, "ended_utc": "2026-11-15T05:04:08.875787+00:00"}
+{"starting": "s05-90301"}
+{"name": "s05-90301", "command": ["/insomnia001/depts/edu/users/zc2819/clmm/replay-2026-11-12/venv/bin/python", "-B", "/insomnia001/depts/edu/users/zc2819/clmm/kv-control-2026-11-14/repo/scripts/kv_representation_control.py", "train", "--out", "/insomnia001/depts/edu/users/zc2819/clmm/kv-control-2026-11-14/s05-90301", "--design", "/insomnia001/depts/edu/users/zc2819/clmm/kv-control-2026-11-14/design.json", "--method", "neural", "--step-size", "0.5", "--init-seed", "90301", "--train-seed", "90302", "--dev-seed", "90303", "--steps", "1200", "--batch-size", "32", "--eval-episodes", "128", "--pressure-episodes", "32", "--eval-batch-size", "16", "--suite", "gate", "--device", "cuda", "--threads", "2", "--max-seconds", "900"], "status": "succeeded", "started_utc": "2026-11-15T05:04:08.876789+00:00", "returncode": 0, "elapsed_seconds": 63.26705005898839, "ended_utc": "2026-11-15T05:05:12.144155+00:00"}
+Traceback (most recent call last):
+  File "/insomnia001/depts/edu/users/zc2819/clmm/kv-control-2026-11-14/run_pipeline.py", line 57, in <module>
+    candidate['runs'].append(folder.name);candidate['gates'].append(gate(folder));save()
+                                                                                  ^^^^^^
+  File "/insomnia001/depts/edu/users/zc2819/clmm/kv-control-2026-11-14/run_pipeline.py", line 18, in save
+    (root/'selection.json').write_text(json.dumps(selection,indent=2)+'\n')
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/insomnia001/shared/apps/anaconda/2023.09/lib/python3.11/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/insomnia001/shared/apps/anaconda/2023.09/lib/python3.11/json/encoder.py", line 202, in encode
+    chunks = list(chunks)
+             ^^^^^^^^^^^^
+  File "/insomnia001/shared/apps/anaconda/2023.09/lib/python3.11/json/encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/insomnia001/shared/apps/anaconda/2023.09/lib/python3.11/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/insomnia001/shared/apps/anaconda/2023.09/lib/python3.11/json/encoder.py", line 326, in _iterencode_list
+    yield from chunks
+  File "/insomnia001/shared/apps/anaconda/2023.09/lib/python3.11/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/insomnia001/shared/apps/anaconda/2023.09/lib/python3.11/json/encoder.py", line 326, in _iterencode_list
+    yield from chunks
+  File "/insomnia001/shared/apps/anaconda/2023.09/lib/python3.11/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/insomnia001/shared/apps/anaconda/2023.09/lib/python3.11/json/encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "/insomnia001/shared/apps/anaconda/2023.09/lib/python3.11/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type bool is not JSON serializable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/insomnia001/depts/edu/users/zc2819/clmm/kv-control-2026-11-14/run_pipeline.py", line 71, in <module>
+    record.update(status='failed',failure=repr(error),ended_utc=datetime.now(timezone.utc).isoformat());save();raise
+                                                                                                        ^^^^^^
+  File "/insomnia001/depts/edu/users/zc2819/clmm/kv-control-2026-11-14/run_pipeline.py", line 18, in save
+    (root/'selection.json').write_text(json.dumps(selection,indent=2)+'\n')
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/insomnia001/shared/apps/anaconda/2023.09/lib/python3.11/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/insomnia001/shared/apps/anaconda/2023.09/lib/python3.11/json/encoder.py", line 202, in encode
+    chunks = list(chunks)
+             ^^^^^^^^^^^^
+  File "/insomnia001/shared/apps/anaconda/2023.09/lib/python3.11/json/encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/insomnia001/shared/apps/anaconda/2023.09/lib/python3.11/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/insomnia001/shared/apps/anaconda/2023.09/lib/python3.11/json/encoder.py", line 326, in _iterencode_list
+    yield from chunks
+  File "/insomnia001/shared/apps/anaconda/2023.09/lib/python3.11/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/insomnia001/shared/apps/anaconda/2023.09/lib/python3.11/json/encoder.py", line 326, in _iterencode_list
+    yield from chunks
+  File "/insomnia001/shared/apps/anaconda/2023.09/lib/python3.11/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/insomnia001/shared/apps/anaconda/2023.09/lib/python3.11/json/encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "/insomnia001/shared/apps/anaconda/2023.09/lib/python3.11/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type bool is not JSON serializable
+srun: error: ins093: task 0: Exited with exit code 1

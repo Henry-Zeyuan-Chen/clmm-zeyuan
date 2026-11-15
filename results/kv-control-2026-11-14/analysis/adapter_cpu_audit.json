@@ -1,0 +1,26 @@
+{
+  "device": "cpu",
+  "torch": "2.15.0+cpu",
+  "checks": [
+    "Delta logits exactly equal analytic slot-replacement result, including untouched keys and true revisions",
+    "Only the two initial neural-memory matrices are trainable offline",
+    "Four vendored neural writes match independently differentiated half-sum-SSE SGD with current fast weights",
+    "Repeated all-key reads leave every adaptive-state tensor unchanged",
+    "delta torch save/load and continuation are bit-identical; compact clones do not increase backing storage",
+    "neural torch save/load and continuation are bit-identical; compact clones do not increase backing storage",
+    "All registered slow neural parameters remain bit-identical during writes, reads, and serialization"
+  ],
+  "delta_state_bytes_batch2": 32768,
+  "neural_analytic_max_absolute_error": 0.0,
+  "delta_serialization_storage_bytes_batch2": {
+    "live_before_export": 32768,
+    "restored_compact": 32768
+  },
+  "neural_serialization_storage_bytes_batch2": {
+    "live_before_export": 262144,
+    "restored_compact": 131072
+  },
+  "neural_state_bytes_batch2": 262144,
+  "source_sha256": "127a39b76f13f47be9c5126bbd144a717eb0719eac55b661a4dd33577036ca4d",
+  "status": "passed"
+}

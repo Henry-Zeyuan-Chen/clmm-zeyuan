@@ -1,0 +1,21 @@
+C:\Users\henry\Documents\Codex\2026-10-22\i\work\clmm-test-env\Lib\site-packages\torch\jit\_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+{"completed": "acquire2", "arm": "online"}
+{"completed": "acquire2", "arm": "reset"}
+{"completed": "acquire2", "arm": "rolled"}
+{"completed": "acquire4", "arm": "online"}
+{"completed": "acquire4", "arm": "reset"}
+{"completed": "acquire4", "arm": "rolled"}
+{"completed": "revise2", "arm": "online"}
+{"completed": "revise2", "arm": "reset"}
+{"completed": "revise2", "arm": "rolled"}
+{"step": 1, "observations": 16, "answers": 16, "loss": 0.0426349863409996, "accuracy": 1.0, "gradient_norm": 0.016039423644542694, "elapsed_seconds": 0.3751044000091497}
+{"completed": "acquire2", "arm": "online"}
+{"completed": "acquire2", "arm": "reset"}
+{"completed": "acquire2", "arm": "rolled"}
+{"completed": "acquire4", "arm": "online"}
+{"completed": "acquire4", "arm": "reset"}
+{"completed": "acquire4", "arm": "rolled"}
+{"completed": "revise2", "arm": "online"}
+{"completed": "revise2", "arm": "reset"}
+{"completed": "revise2", "arm": "rolled"}

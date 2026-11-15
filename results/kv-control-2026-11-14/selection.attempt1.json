@@ -1,0 +1,12 @@
+{
+  "candidates": [
+    {
+      "tag": "s05",
+      "step_size": 0.5,
+      "runs": [],
+      "gates": []
+    }
+  ],
+  "selected": null,
+  "confirmed": false
+}

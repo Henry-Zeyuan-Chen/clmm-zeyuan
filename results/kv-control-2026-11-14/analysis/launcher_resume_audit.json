@@ -1,0 +1,23 @@
+{
+  "old_status": "failed",
+  "old_failure": "TypeError('Object of type bool is not JSON serializable')",
+  "final_status": "succeeded",
+  "reused": [
+    {
+      "run": "delta-full",
+      "command_identical": true,
+      "started_identical": true,
+      "ended_identical": true,
+      "elapsed_identical": true,
+      "reused_flag": true
+    },
+    {
+      "run": "s05-90301",
+      "command_identical": true,
+      "started_identical": true,
+      "ended_identical": true,
+      "elapsed_identical": true,
+      "reused_flag": true
+    }
+  ]
+}

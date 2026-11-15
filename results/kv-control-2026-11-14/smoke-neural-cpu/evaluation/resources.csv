@@ -1,0 +1,10 @@
+cell,arm,batch_start,batch,boundary_before_bytes,boundary_restored_bytes,final_bytes,peak_post_write_bytes,per_episode_final_bytes,roundtrip_max_abs_delta,logical_buffer_pairs,logical_snapshot_pairs
+acquire2,online,0,2,262144,131072,131072,262144,65536,0.0,0,0
+acquire2,reset,0,2,262144,131072,65536,262144,32768,0.0,0,0
+acquire2,rolled,0,2,262144,131072,262144,262144,131072,0.0,0,0
+acquire4,online,0,2,262144,131072,131072,262144,65536,0.0,0,0
+acquire4,reset,0,2,262144,131072,65536,262144,32768,0.0,0,0
+acquire4,rolled,0,2,262144,131072,262144,262144,131072,0.0,0,0
+revise2,online,0,2,262144,131072,131072,262144,65536,0.0,0,0
+revise2,reset,0,2,262144,131072,65536,262144,32768,0.0,0,0
+revise2,rolled,0,2,262144,131072,262144,262144,131072,0.0,0,0

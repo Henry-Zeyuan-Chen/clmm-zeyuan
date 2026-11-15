@@ -1,0 +1,11 @@
+{
+  "experiment_id":"typed-kv-dense-linear-calibration-v1",
+  "context":"Supplement specified after main typed nonlinear controls passed acquisition and pressure displayed a ceiling, before any dense calibration outcome. Original model selection/protocol retained unchanged.",
+  "purpose":"Check whether the shared state/replay evaluator detects interference in one non-ceiling reference configuration; not a trained Titans, sleep or Hebbian method result.",
+  "representation":{"keys":64,"dim":32,"key_code":"CPU Torch seed90401 Gaussian rows normalized to unit length","values":16,"value_code":"one-hot first16 coordinates","note":"Both representation geometry and fast-matrix size differ from orthogonal control; do not attribute their between-control difference to one factor."},
+  "rule":"Linear half-sum-SSE gradient write with step1: W+=k outer(v-kW). Initial W zero, no decay, no offline training. Read query key only and first16 output coordinates.",
+  "evaluation":{"dev_seed":90403,"gate_episodes":128,"pressure_episodes":32,"suite":"Frozen shared full evaluator and unchanged closed-vocabulary streams/schedules","eligibility":"acquire2/revise2 allcorrect>=.9, acquire4 allcorrect>=.8, and K8D0 fixed four-target allcorrect>=.8","primary":"K8,D64 stable-query periodic-minus-continuous accuracy;32paired episodes","secondary":"Per-K D0 acquisition, per-stratum delay curves, repeat control, boundary reset, FIFO residency, write counts and state bytes","uncertainty":"5000 paired whole-episode resamples,seed90404; one fixed codebook, no codebook-seed population inference"},
+  "selection":"One fixed configuration, no key-code/step/dimension search. A weakD0cell remains acquisition/interference diagnostic rather than retention.",
+  "budget":{"device":"local CPU","threads":2,"max_seconds":300,"no_new_gpu_allocation":true},
+  "handoff":"Keep this calibration separate from the admitted nonlinear checkpoints; it exercises the same plugin/state contract for future sleep and Hebbian adapters."
+}
