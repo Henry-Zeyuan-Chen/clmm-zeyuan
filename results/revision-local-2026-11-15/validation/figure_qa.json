@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "figure_count": 5,
+  "formats": [
+    "png",
+    "pdf",
+    "svg"
+  ],
+  "scope": "Coordinator and independent reviewer visually inspected all5 PNGs generated fromauditedCSVs. Primaryceiling,thresholds,initial/finalscope andunitsvisible; vectorversions sameplotcode."
+}

@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "remote_local_sha256": "4f2f37146a983ff4e947390b3b5905a01558bc88aee7544db1d1e448b12a1c36",
+  "bytes": 68927959,
+  "members": 651,
+  "tar_exit_code": 0,
+  "archive_outside_archived_root": true,
+  "frozen_excluded_from_download_because_original_local_phase_preserved": true
+}

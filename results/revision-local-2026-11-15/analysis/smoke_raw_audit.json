@@ -1,0 +1,203 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "smoke": "smoke-exclusions-cpu",
+      "case": "90511-content-ema",
+      "stage": "evaluation",
+      "predictions": 832,
+      "writes": 4336,
+      "resource_batches": 15,
+      "serialization_boundaries": 19,
+      "applications": {
+        "association": 4336,
+        "decay": 4336,
+        "projection": 0
+      },
+      "files": {
+        "episodes.json": "b27084d8eb8edb3d7ab4304e5a93f3a17413aa4268a412c69362ac1a5f088dca",
+        "plans.json": "037e86e051d87a252f3045118fef67cbff4b1e705bddaf8d7a62c2947e3f0095",
+        "predictions.csv": "37f46d06ef9d536a36a7060136fcd065df58da8e67714374042221d36cfe0ade",
+        "resources.csv": "09c74722e40937d8a287816c092eb2b3e5ebdd17cc85e70e98280d1466a91c7a",
+        "scores.npy": "9e2399459e2cec7073368296bd78d4b657e2672f2981853ec224ba61175a1ba3",
+        "summary.csv": "3f0d0e999ecefb5c6613ca9eb42879b8a482dd4292b4749b74adcf85cab29b68"
+      }
+    },
+    {
+      "smoke": "smoke-frozen-cpu",
+      "case": "90511-content-ema",
+      "stage": "evaluation",
+      "predictions": 832,
+      "writes": 4336,
+      "resource_batches": 15,
+      "serialization_boundaries": 19,
+      "applications": {
+        "association": 4336,
+        "decay": 4336,
+        "projection": 0
+      },
+      "files": {
+        "episodes.json": "b27084d8eb8edb3d7ab4304e5a93f3a17413aa4268a412c69362ac1a5f088dca",
+        "plans.json": "037e86e051d87a252f3045118fef67cbff4b1e705bddaf8d7a62c2947e3f0095",
+        "predictions.csv": "37f46d06ef9d536a36a7060136fcd065df58da8e67714374042221d36cfe0ade",
+        "resources.csv": "9dcecd13eaac87c1eb762318f76c37a515108ccab4671d5c1e3e149695e32353",
+        "scores.npy": "9e2399459e2cec7073368296bd78d4b657e2672f2981853ec224ba61175a1ba3",
+        "summary.csv": "3f0d0e999ecefb5c6613ca9eb42879b8a482dd4292b4749b74adcf85cab29b68"
+      }
+    },
+    {
+      "smoke": "smoke-frozen-cpu",
+      "case": "90511-content-additive",
+      "stage": "evaluation",
+      "predictions": 832,
+      "writes": 4336,
+      "resource_batches": 15,
+      "serialization_boundaries": 19,
+      "applications": {
+        "association": 4336,
+        "decay": 0,
+        "projection": 0
+      },
+      "files": {
+        "episodes.json": "b27084d8eb8edb3d7ab4304e5a93f3a17413aa4268a412c69362ac1a5f088dca",
+        "plans.json": "037e86e051d87a252f3045118fef67cbff4b1e705bddaf8d7a62c2947e3f0095",
+        "predictions.csv": "f6767faa0f78df1554447f4dd970790188ee4f723aa6f71951f550f78305ae1b",
+        "resources.csv": "7d9d49b6ae845ba70e46d1e140ab107cd5b89ee3b3218d777ec1c12b3fccc50e",
+        "scores.npy": "541157183405c8f223d0b293eacdbc28db53b432a3ca7aa36917bebe806fde48",
+        "summary.csv": "2c4605ed5d2f417ea7d3188b4b67c9c1b65553d36dc802323908d8dbf818bedb"
+      }
+    },
+    {
+      "smoke": "smoke-frozen-cpu",
+      "case": "90511-content-erase_ema",
+      "stage": "evaluation",
+      "predictions": 832,
+      "writes": 4336,
+      "resource_batches": 15,
+      "serialization_boundaries": 19,
+      "applications": {
+        "association": 4336,
+        "decay": 4336,
+        "projection": 4336
+      },
+      "files": {
+        "episodes.json": "b27084d8eb8edb3d7ab4304e5a93f3a17413aa4268a412c69362ac1a5f088dca",
+        "plans.json": "037e86e051d87a252f3045118fef67cbff4b1e705bddaf8d7a62c2947e3f0095",
+        "predictions.csv": "1c686a93902f2cb21403b30c6f84da39d8390946d90fb9079eeb15d069c5bfc6",
+        "resources.csv": "cf45e38e485e0f6408294b449fd973a01e4a51a15ffa1b55abb61e90862dfea9",
+        "scores.npy": "f068f0c4c334ebf96cf09a79cfebe9f410b22e198c83451cd6029fbe03fd3581",
+        "summary.csv": "271dedac224c5d58d92bd192792a79c3751ecd652711bab49c856040c5ab1a97"
+      }
+    },
+    {
+      "smoke": "smoke-frozen-cpu",
+      "case": "90511-content-local_delta",
+      "stage": "evaluation",
+      "predictions": 832,
+      "writes": 4336,
+      "resource_batches": 15,
+      "serialization_boundaries": 19,
+      "applications": {
+        "association": 4336,
+        "decay": 0,
+        "projection": 4336
+      },
+      "files": {
+        "episodes.json": "b27084d8eb8edb3d7ab4304e5a93f3a17413aa4268a412c69362ac1a5f088dca",
+        "plans.json": "037e86e051d87a252f3045118fef67cbff4b1e705bddaf8d7a62c2947e3f0095",
+        "predictions.csv": "9c92480c3e34bf6ce8955878fa1612cf82c73abd62def250c8a31739d784f08b",
+        "resources.csv": "21d93d4a855678341f1775edf9b4397004c4fec13787dcd92b560c987be14802",
+        "scores.npy": "65b464476c05eea7f4929816f792527b4908c5b640f1ad39e0919ef18b553b66",
+        "summary.csv": "2734797903e78127a73ec812221f6a02be56077c4d44f01abdf79ad228f0e656"
+      }
+    },
+    {
+      "smoke": "smoke-train-cpu",
+      "case": "90511-content-ema",
+      "stage": "evaluation",
+      "predictions": 832,
+      "writes": 4336,
+      "resource_batches": 15,
+      "serialization_boundaries": 19,
+      "applications": {
+        "association": 4336,
+        "decay": 4336,
+        "projection": 0
+      },
+      "files": {
+        "episodes.json": "b27084d8eb8edb3d7ab4304e5a93f3a17413aa4268a412c69362ac1a5f088dca",
+        "plans.json": "037e86e051d87a252f3045118fef67cbff4b1e705bddaf8d7a62c2947e3f0095",
+        "predictions.csv": "cb0096624b7a1747d58914c2b9d3f4b4002e133c599140e9fbf62aed087ca4f1",
+        "resources.csv": "ab91d6612276ee0533849fe0dd76c8de2c5d105405707d212bf19f1a12dab718",
+        "scores.npy": "4ca2470121722fa9dfbe0c8fb8ea98a986555680d131da6314564bacf0321ea6",
+        "summary.csv": "bc9d486fdc0744c12b1f87732487f1300487f68e16000d4255129fcfa4f75855"
+      }
+    },
+    {
+      "smoke": "smoke-train-cpu",
+      "case": "90511-content-ema",
+      "stage": "initial-evaluation",
+      "predictions": 832,
+      "writes": 4336,
+      "resource_batches": 15,
+      "serialization_boundaries": 19,
+      "applications": {
+        "association": 4336,
+        "decay": 4336,
+        "projection": 0
+      },
+      "files": {
+        "episodes.json": "b27084d8eb8edb3d7ab4304e5a93f3a17413aa4268a412c69362ac1a5f088dca",
+        "plans.json": "037e86e051d87a252f3045118fef67cbff4b1e705bddaf8d7a62c2947e3f0095",
+        "predictions.csv": "938e9fa1456bef6b65eb4b4335c476409e769c8e21efd6593577d00945918b2b",
+        "resources.csv": "752cdd2e61f5df21e8fbd79e09ed89ec5f95400c3c23d04e8b51d318147d58e4",
+        "scores.npy": "f82a84b83fae7c5518d5821bf6cdd4342cfc4c6cce012b215f93ff99af62162c",
+        "summary.csv": "be2b02de5ed1115a6f95aafcd0044e04da1fe9fd05d94335fc2112156b092448"
+      }
+    },
+    {
+      "smoke": "smoke-train-cpu",
+      "case": "90511-content-local_delta",
+      "stage": "evaluation",
+      "predictions": 832,
+      "writes": 4336,
+      "resource_batches": 15,
+      "serialization_boundaries": 19,
+      "applications": {
+        "association": 4336,
+        "decay": 0,
+        "projection": 4336
+      },
+      "files": {
+        "episodes.json": "b27084d8eb8edb3d7ab4304e5a93f3a17413aa4268a412c69362ac1a5f088dca",
+        "plans.json": "037e86e051d87a252f3045118fef67cbff4b1e705bddaf8d7a62c2947e3f0095",
+        "predictions.csv": "fa1882620159539d44e272b83391eaaa2132407f5ea10b09ec2802329ece1c7b",
+        "resources.csv": "7f00765a72927d15753d26f82f0dbcf56c2e4577ec5586cfe4fa259b7e4904d3",
+        "scores.npy": "543e404347dbe8d12a80ea389fefe7237688a3ec93e31ea5a49fbe896b6bca89",
+        "summary.csv": "9ff4bbfcc3b07b2ac25bb7559814d956abc561016db87ee2ddb5914bb93b2c04"
+      }
+    },
+    {
+      "smoke": "smoke-train-cpu",
+      "case": "90511-content-local_delta",
+      "stage": "initial-evaluation",
+      "predictions": 832,
+      "writes": 4336,
+      "resource_batches": 15,
+      "serialization_boundaries": 19,
+      "applications": {
+        "association": 4336,
+        "decay": 0,
+        "projection": 4336
+      },
+      "files": {
+        "episodes.json": "b27084d8eb8edb3d7ab4304e5a93f3a17413aa4268a412c69362ac1a5f088dca",
+        "plans.json": "037e86e051d87a252f3045118fef67cbff4b1e705bddaf8d7a62c2947e3f0095",
+        "predictions.csv": "2c2cec9c00254e018a6fc22fcb309c967707c2ac1c42f9ff90bcadc18ec41f88",
+        "resources.csv": "66e7cebe038e958c6ab4231b6fc07c7723024fa23017b55a430198a93097cb25",
+        "scores.npy": "fc11ca1e0f3024ffda6d7008f512bdbd6d8b83a4fc99ea9361452172ad3e94bf",
+        "summary.csv": "6fa02fa7799f92d16cdd79954cec46182d7a3150b4cb94adfef0025e7528d4bd"
+      }
+    }
+  ]
+}

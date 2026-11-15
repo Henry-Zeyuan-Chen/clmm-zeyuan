@@ -1,0 +1,2707 @@
+{
+  "status": "passed",
+  "scope": "Selected actual inference/resume across48frozen+24initial+24final weightsets; not fullgridnumerical reproduction or retraining",
+  "device": "cpu",
+  "torch": "2.15.0+cpu",
+  "source_sha256": "ec580c4ed93f1df38b2ff701814ada254ba2de73d48dc6e0679449820fbe8d7d",
+  "queries": 10752,
+  "max_abs_error": 3.5762786865234375e-07,
+  "verified_models": 96,
+  "expected_models": 96,
+  "full_planned_model_coverage": true,
+  "groups": [
+    {
+      "run": "frozen:90511-content-ema:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "17ad471ec898eb13cef7d5b593769c8a78d992bd95ee3abac8c9270df68849cc"
+    },
+    {
+      "run": "frozen:90511-content-ema:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "17ad471ec898eb13cef7d5b593769c8a78d992bd95ee3abac8c9270df68849cc"
+    },
+    {
+      "run": "frozen:90511-content-additive:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "7926e048d7cf2811fe2f101473621ba82bb06a61d6f3ee30210edd0cf6c340d4"
+    },
+    {
+      "run": "frozen:90511-content-additive:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "7926e048d7cf2811fe2f101473621ba82bb06a61d6f3ee30210edd0cf6c340d4"
+    },
+    {
+      "run": "frozen:90511-content-erase_ema:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "85c2eb0116fd9857bf7258d86c1fe646f654a59ec1b253dcc9f06c68e434046f"
+    },
+    {
+      "run": "frozen:90511-content-erase_ema:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "85c2eb0116fd9857bf7258d86c1fe646f654a59ec1b253dcc9f06c68e434046f"
+    },
+    {
+      "run": "frozen:90511-content-local_delta:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "c66bc252605cdef023e4e0ff5cea12fdac3018fd73a025cd758c2e2c7d3c05dd"
+    },
+    {
+      "run": "frozen:90511-content-local_delta:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "c66bc252605cdef023e4e0ff5cea12fdac3018fd73a025cd758c2e2c7d3c05dd"
+    },
+    {
+      "run": "frozen:90511-random-90701-ema:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "0e558c10d1785d568a61bda5c6cdc8603a9bc3593330a9193090ca02478252dc"
+    },
+    {
+      "run": "frozen:90511-random-90701-ema:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "0e558c10d1785d568a61bda5c6cdc8603a9bc3593330a9193090ca02478252dc"
+    },
+    {
+      "run": "frozen:90511-random-90701-additive:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "17f0b4d35f2e8c3d5ceca417ea63f605d48e614db12e1c9d2b5a4b30b1f7bb84"
+    },
+    {
+      "run": "frozen:90511-random-90701-additive:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "17f0b4d35f2e8c3d5ceca417ea63f605d48e614db12e1c9d2b5a4b30b1f7bb84"
+    },
+    {
+      "run": "frozen:90511-random-90701-erase_ema:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "1819ac5bbecdfd56a27057db47e322b64e8fedc0b76e5ff63417397243000291"
+    },
+    {
+      "run": "frozen:90511-random-90701-erase_ema:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "1819ac5bbecdfd56a27057db47e322b64e8fedc0b76e5ff63417397243000291"
+    },
+    {
+      "run": "frozen:90511-random-90701-local_delta:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "a8d36676ed871088ce6aea956085a2a360253fbaad00edfc7c23900a46e3e0ba"
+    },
+    {
+      "run": "frozen:90511-random-90701-local_delta:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "a8d36676ed871088ce6aea956085a2a360253fbaad00edfc7c23900a46e3e0ba"
+    },
+    {
+      "run": "frozen:90511-random-90702-ema:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "93cf66716a2497b85fef886bb6737c6fa6cef2cb494afb54685b0f64463d8799"
+    },
+    {
+      "run": "frozen:90511-random-90702-ema:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "93cf66716a2497b85fef886bb6737c6fa6cef2cb494afb54685b0f64463d8799"
+    },
+    {
+      "run": "frozen:90511-random-90702-additive:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "c16320d4575af9996637e5ff2815f7741f5892f586aba9762c7f425c679681d1"
+    },
+    {
+      "run": "frozen:90511-random-90702-additive:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "c16320d4575af9996637e5ff2815f7741f5892f586aba9762c7f425c679681d1"
+    },
+    {
+      "run": "frozen:90511-random-90702-erase_ema:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "57eb4d0982299aad53b292aca4e18fc9cb024c6f9342a963ba6697a00cb066b4"
+    },
+    {
+      "run": "frozen:90511-random-90702-erase_ema:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "57eb4d0982299aad53b292aca4e18fc9cb024c6f9342a963ba6697a00cb066b4"
+    },
+    {
+      "run": "frozen:90511-random-90702-local_delta:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "d9f4aaba0e0e8cf85d6e7f630be6e0b4b2fd2044aef1bfc969438fd35b94a133"
+    },
+    {
+      "run": "frozen:90511-random-90702-local_delta:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "d9f4aaba0e0e8cf85d6e7f630be6e0b4b2fd2044aef1bfc969438fd35b94a133"
+    },
+    {
+      "run": "frozen:90511-random-90703-ema:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "fa438a43fcc0c2f459e4c0d45139796c28c55757e857d0fedba69eb4e509ecbe"
+    },
+    {
+      "run": "frozen:90511-random-90703-ema:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "fa438a43fcc0c2f459e4c0d45139796c28c55757e857d0fedba69eb4e509ecbe"
+    },
+    {
+      "run": "frozen:90511-random-90703-additive:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "784d38663dd2456ecbf9a39ebcf5cb140010e98bd7b009212f8573442715c942"
+    },
+    {
+      "run": "frozen:90511-random-90703-additive:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "784d38663dd2456ecbf9a39ebcf5cb140010e98bd7b009212f8573442715c942"
+    },
+    {
+      "run": "frozen:90511-random-90703-erase_ema:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "b3908c00aa42ecc457f03f9e55919c05fe637d114b024c6c9b344df32c8a87ca"
+    },
+    {
+      "run": "frozen:90511-random-90703-erase_ema:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "b3908c00aa42ecc457f03f9e55919c05fe637d114b024c6c9b344df32c8a87ca"
+    },
+    {
+      "run": "frozen:90511-random-90703-local_delta:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "f897fb2009588a795f1047343e94d649c687007ea0112da5ab45897443992022"
+    },
+    {
+      "run": "frozen:90511-random-90703-local_delta:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "f897fb2009588a795f1047343e94d649c687007ea0112da5ab45897443992022"
+    },
+    {
+      "run": "frozen:90511-random-90704-ema:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "bc5cfb87b3374b2966964d067f5c6296907563ae4f881e8c8f0fc31b1865aa7d"
+    },
+    {
+      "run": "frozen:90511-random-90704-ema:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "bc5cfb87b3374b2966964d067f5c6296907563ae4f881e8c8f0fc31b1865aa7d"
+    },
+    {
+      "run": "frozen:90511-random-90704-additive:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "dacef8b3991335764520c74c7388ef176e1a12898481c908e1e0b984afd0f0aa"
+    },
+    {
+      "run": "frozen:90511-random-90704-additive:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "dacef8b3991335764520c74c7388ef176e1a12898481c908e1e0b984afd0f0aa"
+    },
+    {
+      "run": "frozen:90511-random-90704-erase_ema:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "75c36b282b646eac4a27fc72823e469c8aa2e8d62df95daa413c18d6529cc232"
+    },
+    {
+      "run": "frozen:90511-random-90704-erase_ema:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "75c36b282b646eac4a27fc72823e469c8aa2e8d62df95daa413c18d6529cc232"
+    },
+    {
+      "run": "frozen:90511-random-90704-local_delta:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "18a8b94fcd78511be5f64ad1d494829d1d06053422e71544d69c088a5ee6da1d"
+    },
+    {
+      "run": "frozen:90511-random-90704-local_delta:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "18a8b94fcd78511be5f64ad1d494829d1d06053422e71544d69c088a5ee6da1d"
+    },
+    {
+      "run": "frozen:90511-random-90705-ema:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "517e70c6ce3922d43e0386209d8075fac6840697d20351c2ada8715f23ed822f"
+    },
+    {
+      "run": "frozen:90511-random-90705-ema:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "517e70c6ce3922d43e0386209d8075fac6840697d20351c2ada8715f23ed822f"
+    },
+    {
+      "run": "frozen:90511-random-90705-additive:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "25ebafa45cde78291034547fdaa1e2877d2f4965d6d7c25a4178c5e37c164533"
+    },
+    {
+      "run": "frozen:90511-random-90705-additive:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "25ebafa45cde78291034547fdaa1e2877d2f4965d6d7c25a4178c5e37c164533"
+    },
+    {
+      "run": "frozen:90511-random-90705-erase_ema:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "5f5c16b1ed79445c073ed3bbcec32a647912b7b673bae813f12bd13f8b8d5a07"
+    },
+    {
+      "run": "frozen:90511-random-90705-erase_ema:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "5f5c16b1ed79445c073ed3bbcec32a647912b7b673bae813f12bd13f8b8d5a07"
+    },
+    {
+      "run": "frozen:90511-random-90705-local_delta:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "7e134716a7aec2eb058e973cae77b621a367abd19e55cbbf24c5102726e5b40a"
+    },
+    {
+      "run": "frozen:90511-random-90705-local_delta:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "7e134716a7aec2eb058e973cae77b621a367abd19e55cbbf24c5102726e5b40a"
+    },
+    {
+      "run": "frozen:90515-content-ema:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "4049feb5c0d35b2595d2e3197d9e75fd6ec485064fb61ba30616ff30bdfd8517"
+    },
+    {
+      "run": "frozen:90515-content-ema:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "4049feb5c0d35b2595d2e3197d9e75fd6ec485064fb61ba30616ff30bdfd8517"
+    },
+    {
+      "run": "frozen:90515-content-additive:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "233eb1096c6c9448825f7c354de2f060e944e6b076f59e493e887ba69f1f0e05"
+    },
+    {
+      "run": "frozen:90515-content-additive:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "233eb1096c6c9448825f7c354de2f060e944e6b076f59e493e887ba69f1f0e05"
+    },
+    {
+      "run": "frozen:90515-content-erase_ema:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "f02c317d033dd1f5babb9f3da8cc3fbf602811f4b75776bc3a74ce22b6ef8585"
+    },
+    {
+      "run": "frozen:90515-content-erase_ema:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "f02c317d033dd1f5babb9f3da8cc3fbf602811f4b75776bc3a74ce22b6ef8585"
+    },
+    {
+      "run": "frozen:90515-content-local_delta:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "3dbf73219bdf81ef613ec3d44f3be21c738f21861a4ea6281c9fc9eaf9f39f98"
+    },
+    {
+      "run": "frozen:90515-content-local_delta:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "3dbf73219bdf81ef613ec3d44f3be21c738f21861a4ea6281c9fc9eaf9f39f98"
+    },
+    {
+      "run": "frozen:90515-random-90701-ema:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "087030de6e5db52c14eecaf1dffc7eec96772ba7f3ebab0941f5a651d8756fcf"
+    },
+    {
+      "run": "frozen:90515-random-90701-ema:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "087030de6e5db52c14eecaf1dffc7eec96772ba7f3ebab0941f5a651d8756fcf"
+    },
+    {
+      "run": "frozen:90515-random-90701-additive:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "dba448b4cf69461703026b9563293899a3f5d3de583d99834b7cf2170ca54e42"
+    },
+    {
+      "run": "frozen:90515-random-90701-additive:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "dba448b4cf69461703026b9563293899a3f5d3de583d99834b7cf2170ca54e42"
+    },
+    {
+      "run": "frozen:90515-random-90701-erase_ema:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "0330ca636654d2a1ea1204ce1a4e87a9ed48005843b755085adddbcfa8ee0de8"
+    },
+    {
+      "run": "frozen:90515-random-90701-erase_ema:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "0330ca636654d2a1ea1204ce1a4e87a9ed48005843b755085adddbcfa8ee0de8"
+    },
+    {
+      "run": "frozen:90515-random-90701-local_delta:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "fc9b1a228a3249358514cae07207aadabdf12b53d3e101a3a97c86980b77e844"
+    },
+    {
+      "run": "frozen:90515-random-90701-local_delta:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "fc9b1a228a3249358514cae07207aadabdf12b53d3e101a3a97c86980b77e844"
+    },
+    {
+      "run": "frozen:90515-random-90702-ema:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "8db938aacda86a792e8bd24df46934eda58f77d63ed90dc8c492ddaa25c09050"
+    },
+    {
+      "run": "frozen:90515-random-90702-ema:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "8db938aacda86a792e8bd24df46934eda58f77d63ed90dc8c492ddaa25c09050"
+    },
+    {
+      "run": "frozen:90515-random-90702-additive:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "21de358e4eb4421cb9b0754efdfc57afd312c5e9700e01df0fc216065666f9de"
+    },
+    {
+      "run": "frozen:90515-random-90702-additive:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "21de358e4eb4421cb9b0754efdfc57afd312c5e9700e01df0fc216065666f9de"
+    },
+    {
+      "run": "frozen:90515-random-90702-erase_ema:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "766ec3443120cf5d08a2234298884b6b33a958c4ecea8d21ce3752abc7ac0a79"
+    },
+    {
+      "run": "frozen:90515-random-90702-erase_ema:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "766ec3443120cf5d08a2234298884b6b33a958c4ecea8d21ce3752abc7ac0a79"
+    },
+    {
+      "run": "frozen:90515-random-90702-local_delta:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "6b6a49ca213c367d42bcad965202cc38195593c9f3616b7c024b979fd2f34c6d"
+    },
+    {
+      "run": "frozen:90515-random-90702-local_delta:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "6b6a49ca213c367d42bcad965202cc38195593c9f3616b7c024b979fd2f34c6d"
+    },
+    {
+      "run": "frozen:90515-random-90703-ema:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "5a531ea74f25bc60feeded8b559fdb82eaeaa7c13326069e13d34b931efa3b25"
+    },
+    {
+      "run": "frozen:90515-random-90703-ema:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "5a531ea74f25bc60feeded8b559fdb82eaeaa7c13326069e13d34b931efa3b25"
+    },
+    {
+      "run": "frozen:90515-random-90703-additive:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "c4fd08c904f1cc2f95f5035308b1a628f0b81a3d458a002478f7c08ee36d55c9"
+    },
+    {
+      "run": "frozen:90515-random-90703-additive:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "c4fd08c904f1cc2f95f5035308b1a628f0b81a3d458a002478f7c08ee36d55c9"
+    },
+    {
+      "run": "frozen:90515-random-90703-erase_ema:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "a14bc5e1230fa6eca0c60d82b74bfd98f722d90bf4304944b41852ad9e4df043"
+    },
+    {
+      "run": "frozen:90515-random-90703-erase_ema:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "a14bc5e1230fa6eca0c60d82b74bfd98f722d90bf4304944b41852ad9e4df043"
+    },
+    {
+      "run": "frozen:90515-random-90703-local_delta:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "286b71c2c4c050c44afe27b3919136b48c4ad4bb014cb602561f1973b4cda4d4"
+    },
+    {
+      "run": "frozen:90515-random-90703-local_delta:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "286b71c2c4c050c44afe27b3919136b48c4ad4bb014cb602561f1973b4cda4d4"
+    },
+    {
+      "run": "frozen:90515-random-90704-ema:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "adc0a58d6237fa0dd109b3f2234995dd110fabd62525345c88fd788e63ad07bf"
+    },
+    {
+      "run": "frozen:90515-random-90704-ema:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "adc0a58d6237fa0dd109b3f2234995dd110fabd62525345c88fd788e63ad07bf"
+    },
+    {
+      "run": "frozen:90515-random-90704-additive:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "84c3c4d0e49766d46bc036ca516774eddae74d9fd4cd587226b968b9637d13b0"
+    },
+    {
+      "run": "frozen:90515-random-90704-additive:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "84c3c4d0e49766d46bc036ca516774eddae74d9fd4cd587226b968b9637d13b0"
+    },
+    {
+      "run": "frozen:90515-random-90704-erase_ema:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "f18bfd02134a9185b47bb9ce9a20ec9f299f5aaefd09d17f358271b0671360b9"
+    },
+    {
+      "run": "frozen:90515-random-90704-erase_ema:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "f18bfd02134a9185b47bb9ce9a20ec9f299f5aaefd09d17f358271b0671360b9"
+    },
+    {
+      "run": "frozen:90515-random-90704-local_delta:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "a9a50883f1f0c0410d261a022abe3d4b7da4920468d89ed26c3d636e1b476fcf"
+    },
+    {
+      "run": "frozen:90515-random-90704-local_delta:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "a9a50883f1f0c0410d261a022abe3d4b7da4920468d89ed26c3d636e1b476fcf"
+    },
+    {
+      "run": "frozen:90515-random-90705-ema:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "4d4a05604f2e2d355841082940d38c2326802579b626cc7a4fca3e39e93b34ee"
+    },
+    {
+      "run": "frozen:90515-random-90705-ema:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "4d4a05604f2e2d355841082940d38c2326802579b626cc7a4fca3e39e93b34ee"
+    },
+    {
+      "run": "frozen:90515-random-90705-additive:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "52a79eafb2907b00ff9f0f53a106586524ddb7147a5344592c61efa10a320e43"
+    },
+    {
+      "run": "frozen:90515-random-90705-additive:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "52a79eafb2907b00ff9f0f53a106586524ddb7147a5344592c61efa10a320e43"
+    },
+    {
+      "run": "frozen:90515-random-90705-erase_ema:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "f7882c4966b096febe2f84cd076bd49c03f9104f6bd140c8c1cfcdbd0713ed09"
+    },
+    {
+      "run": "frozen:90515-random-90705-erase_ema:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "f7882c4966b096febe2f84cd076bd49c03f9104f6bd140c8c1cfcdbd0713ed09"
+    },
+    {
+      "run": "frozen:90515-random-90705-local_delta:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "36227a843c617feb3d5cf35919d7bc01ec1600482c495fa174c67bea60b6c902"
+    },
+    {
+      "run": "frozen:90515-random-90705-local_delta:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "36227a843c617feb3d5cf35919d7bc01ec1600482c495fa174c67bea60b6c902"
+    },
+    {
+      "run": "trained:90511-content-ema:initial-evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 3.725290298461914e-08,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "0303988f654ba797066c4295e962f7f7f65a66a2641fb43fc40e8a7ca3a05193"
+    },
+    {
+      "run": "trained:90511-content-ema:initial-evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "0303988f654ba797066c4295e962f7f7f65a66a2641fb43fc40e8a7ca3a05193"
+    },
+    {
+      "run": "trained:90511-content-ema:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 2.384185791015625e-07,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "a29b57e40167f27cf12f8cba936507ce4d91512a6752bca6056dbd8e5c65e7ee"
+    },
+    {
+      "run": "trained:90511-content-ema:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "a29b57e40167f27cf12f8cba936507ce4d91512a6752bca6056dbd8e5c65e7ee"
+    },
+    {
+      "run": "trained:90511-content-local_delta:initial-evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 3.725290298461914e-08,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "c82f7cc6967a07cc1848ef37fc219d0d654ffa0aca944bfe675a7e61cb171fcb"
+    },
+    {
+      "run": "trained:90511-content-local_delta:initial-evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 3.725290298461914e-08,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "c82f7cc6967a07cc1848ef37fc219d0d654ffa0aca944bfe675a7e61cb171fcb"
+    },
+    {
+      "run": "trained:90511-content-local_delta:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 2.384185791015625e-07,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "ec9de4709df9ea2802d50d7bef02bc3bf8b0a6807aacdeff2bce298cd50d8605"
+    },
+    {
+      "run": "trained:90511-content-local_delta:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 3.5762786865234375e-07,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "ec9de4709df9ea2802d50d7bef02bc3bf8b0a6807aacdeff2bce298cd50d8605"
+    },
+    {
+      "run": "trained:90511-random-90701-ema:initial-evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 2.2351741790771484e-08,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "9465d08c984a8485f820eec2c81b0e8fb4089591826146f4f061a0b238620a5d"
+    },
+    {
+      "run": "trained:90511-random-90701-ema:initial-evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "9465d08c984a8485f820eec2c81b0e8fb4089591826146f4f061a0b238620a5d"
+    },
+    {
+      "run": "trained:90511-random-90701-ema:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 2.384185791015625e-07,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "1f16581247b6795ae5fab771381136a964d20be2e700dcf5231c86405010caa2"
+    },
+    {
+      "run": "trained:90511-random-90701-ema:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "1f16581247b6795ae5fab771381136a964d20be2e700dcf5231c86405010caa2"
+    },
+    {
+      "run": "trained:90511-random-90701-local_delta:initial-evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 2.2351741790771484e-08,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "0adc195110410e9b01d9b1d921b72e6fa21e6d794309fce61472a750c848b489"
+    },
+    {
+      "run": "trained:90511-random-90701-local_delta:initial-evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 2.2351741790771484e-08,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "0adc195110410e9b01d9b1d921b72e6fa21e6d794309fce61472a750c848b489"
+    },
+    {
+      "run": "trained:90511-random-90701-local_delta:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 2.384185791015625e-07,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "4d339b2860b7f6f30bfe8c5841b9c77e527326ea9869caeed25cded95a28714e"
+    },
+    {
+      "run": "trained:90511-random-90701-local_delta:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 2.384185791015625e-07,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "4d339b2860b7f6f30bfe8c5841b9c77e527326ea9869caeed25cded95a28714e"
+    },
+    {
+      "run": "trained:90511-random-90702-ema:initial-evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 3.725290298461914e-08,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "4de856f4432e1096a55f0e01d74d5fdf64fb4eef612dc3e582f9153729637bc4"
+    },
+    {
+      "run": "trained:90511-random-90702-ema:initial-evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "4de856f4432e1096a55f0e01d74d5fdf64fb4eef612dc3e582f9153729637bc4"
+    },
+    {
+      "run": "trained:90511-random-90702-ema:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 2.980232238769531e-07,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "73deec87ad62b79ddddc4e0318b00f7a60875a6867be4e681f29b3195d417e03"
+    },
+    {
+      "run": "trained:90511-random-90702-ema:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "73deec87ad62b79ddddc4e0318b00f7a60875a6867be4e681f29b3195d417e03"
+    },
+    {
+      "run": "trained:90511-random-90702-local_delta:initial-evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 3.725290298461914e-08,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "32bf1860971b0649480330214bf0df7ac6d964cde73ec19e04a52406645ffdfb"
+    },
+    {
+      "run": "trained:90511-random-90702-local_delta:initial-evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 3.725290298461914e-08,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "32bf1860971b0649480330214bf0df7ac6d964cde73ec19e04a52406645ffdfb"
+    },
+    {
+      "run": "trained:90511-random-90702-local_delta:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 2.384185791015625e-07,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "56cd15f2c289bd51d843fedb86b17400bce3221dde20f71ed6463ba06e643459"
+    },
+    {
+      "run": "trained:90511-random-90702-local_delta:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 2.384185791015625e-07,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "56cd15f2c289bd51d843fedb86b17400bce3221dde20f71ed6463ba06e643459"
+    },
+    {
+      "run": "trained:90511-random-90703-ema:initial-evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 3.725290298461914e-08,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "bd0ef434ee9d8dc173df58fd216bdbbe94c2c0ab995c8ef6c089ed5197bdf007"
+    },
+    {
+      "run": "trained:90511-random-90703-ema:initial-evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "bd0ef434ee9d8dc173df58fd216bdbbe94c2c0ab995c8ef6c089ed5197bdf007"
+    },
+    {
+      "run": "trained:90511-random-90703-ema:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 3.5762786865234375e-07,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "d83b9e5d2c4ae92b0636c53f122aef19e3934759853f341fa73939fd040981e7"
+    },
+    {
+      "run": "trained:90511-random-90703-ema:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "d83b9e5d2c4ae92b0636c53f122aef19e3934759853f341fa73939fd040981e7"
+    },
+    {
+      "run": "trained:90511-random-90703-local_delta:initial-evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 3.725290298461914e-08,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "c38600eb2eeb38766f9be3dd1d2c4469770cec1e92a02a593f60670069b4051b"
+    },
+    {
+      "run": "trained:90511-random-90703-local_delta:initial-evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 3.055902197957039e-08,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "c38600eb2eeb38766f9be3dd1d2c4469770cec1e92a02a593f60670069b4051b"
+    },
+    {
+      "run": "trained:90511-random-90703-local_delta:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 2.980232238769531e-07,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "7df098cee219574a09020a8e3de32c1654254103ac9612a6a96eaedaa59f724f"
+    },
+    {
+      "run": "trained:90511-random-90703-local_delta:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 2.384185791015625e-07,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "7df098cee219574a09020a8e3de32c1654254103ac9612a6a96eaedaa59f724f"
+    },
+    {
+      "run": "trained:90511-random-90704-ema:initial-evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 3.725290298461914e-08,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "51cc24620a9c322a43a76c7e064330372f9cc36c9fd3a0652f41f0b8243abfb4"
+    },
+    {
+      "run": "trained:90511-random-90704-ema:initial-evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "51cc24620a9c322a43a76c7e064330372f9cc36c9fd3a0652f41f0b8243abfb4"
+    },
+    {
+      "run": "trained:90511-random-90704-ema:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 2.384185791015625e-07,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "d8dc29f853fbfee3150e1953a1192a910c894395eb556bf41fa0b9138af14213"
+    },
+    {
+      "run": "trained:90511-random-90704-ema:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "d8dc29f853fbfee3150e1953a1192a910c894395eb556bf41fa0b9138af14213"
+    },
+    {
+      "run": "trained:90511-random-90704-local_delta:initial-evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 4.470348358154297e-08,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "bc1dc25bb0d17a8531785ccf67f3f348d61e3c6afe0ef177181de0a4af6ce7dc"
+    },
+    {
+      "run": "trained:90511-random-90704-local_delta:initial-evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 4.470348358154297e-08,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "bc1dc25bb0d17a8531785ccf67f3f348d61e3c6afe0ef177181de0a4af6ce7dc"
+    },
+    {
+      "run": "trained:90511-random-90704-local_delta:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 2.384185791015625e-07,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "0b05b75625057b44d801da5e7fa225032558e5c1ce4cb7d71e0d29ea9dde81de"
+    },
+    {
+      "run": "trained:90511-random-90704-local_delta:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 2.384185791015625e-07,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "0b05b75625057b44d801da5e7fa225032558e5c1ce4cb7d71e0d29ea9dde81de"
+    },
+    {
+      "run": "trained:90511-random-90705-ema:initial-evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 3.725290298461914e-08,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "40e6f9f1327666572da9d00ff3f5a323643b2fbdc2f5ea770884cf06e776a644"
+    },
+    {
+      "run": "trained:90511-random-90705-ema:initial-evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "40e6f9f1327666572da9d00ff3f5a323643b2fbdc2f5ea770884cf06e776a644"
+    },
+    {
+      "run": "trained:90511-random-90705-ema:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 2.384185791015625e-07,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "c9d64c763ab0e091e565baee14013ca35dd8b3bf26ed1c7fa5b0dd5c422eb1a1"
+    },
+    {
+      "run": "trained:90511-random-90705-ema:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "c9d64c763ab0e091e565baee14013ca35dd8b3bf26ed1c7fa5b0dd5c422eb1a1"
+    },
+    {
+      "run": "trained:90511-random-90705-local_delta:initial-evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 3.725290298461914e-08,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "e7739e2657fdc615c5efeb3bdeb4a36c44bbd88353f188a1a665c069d0fea584"
+    },
+    {
+      "run": "trained:90511-random-90705-local_delta:initial-evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 5.21540641784668e-08,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "e7739e2657fdc615c5efeb3bdeb4a36c44bbd88353f188a1a665c069d0fea584"
+    },
+    {
+      "run": "trained:90511-random-90705-local_delta:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 2.384185791015625e-07,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "3d610712d35b63e04c584ed1d5dba4d651735190788b2c448534b83d5d034fc1"
+    },
+    {
+      "run": "trained:90511-random-90705-local_delta:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 2.384185791015625e-07,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "3d610712d35b63e04c584ed1d5dba4d651735190788b2c448534b83d5d034fc1"
+    },
+    {
+      "run": "trained:90515-content-ema:initial-evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 3.725290298461914e-08,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "08a5025b17b56191021e89816e36666dfc44ddfabf338049a1f394cf7dd1cf1d"
+    },
+    {
+      "run": "trained:90515-content-ema:initial-evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "08a5025b17b56191021e89816e36666dfc44ddfabf338049a1f394cf7dd1cf1d"
+    },
+    {
+      "run": "trained:90515-content-ema:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 2.980232238769531e-07,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "daaaed292a1dc66b40ec3e048a6b68527160115438cb5807fba9e7e80c3da39a"
+    },
+    {
+      "run": "trained:90515-content-ema:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "daaaed292a1dc66b40ec3e048a6b68527160115438cb5807fba9e7e80c3da39a"
+    },
+    {
+      "run": "trained:90515-content-local_delta:initial-evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 3.725290298461914e-08,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "41d79163702dce692b1819427632a2c0bc71fedfee76a0a374f734d889db430b"
+    },
+    {
+      "run": "trained:90515-content-local_delta:initial-evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 4.470348358154297e-08,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "41d79163702dce692b1819427632a2c0bc71fedfee76a0a374f734d889db430b"
+    },
+    {
+      "run": "trained:90515-content-local_delta:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 2.384185791015625e-07,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "3969bad74a0d64c0290dcef54938245fcf21834a86e3cfcc054279572a85be77"
+    },
+    {
+      "run": "trained:90515-content-local_delta:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 2.980232238769531e-07,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "3969bad74a0d64c0290dcef54938245fcf21834a86e3cfcc054279572a85be77"
+    },
+    {
+      "run": "trained:90515-random-90701-ema:initial-evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 3.725290298461914e-08,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "39fead23eda6f793f798caf91f35314f71c4f30ffa0cf3a819b032753c77719f"
+    },
+    {
+      "run": "trained:90515-random-90701-ema:initial-evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "39fead23eda6f793f798caf91f35314f71c4f30ffa0cf3a819b032753c77719f"
+    },
+    {
+      "run": "trained:90515-random-90701-ema:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 2.980232238769531e-07,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "2148a06b7776ec4fa7c601fb1fb919b55409fdd2ff285218f202d83d1d7d853b"
+    },
+    {
+      "run": "trained:90515-random-90701-ema:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "2148a06b7776ec4fa7c601fb1fb919b55409fdd2ff285218f202d83d1d7d853b"
+    },
+    {
+      "run": "trained:90515-random-90701-local_delta:initial-evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 3.725290298461914e-08,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "f48ea191fcb60363b1ff530008c304989c3e8557a3b78a67e7bb801b1e16d3a2"
+    },
+    {
+      "run": "trained:90515-random-90701-local_delta:initial-evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 2.2351741790771484e-08,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "f48ea191fcb60363b1ff530008c304989c3e8557a3b78a67e7bb801b1e16d3a2"
+    },
+    {
+      "run": "trained:90515-random-90701-local_delta:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 1.7881393432617188e-07,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "0f267b91de1bc64a5fdc422d4ee0629db64587c2d779d0e01da1c110c9d3b10b"
+    },
+    {
+      "run": "trained:90515-random-90701-local_delta:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 2.0547304302453995e-07,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "0f267b91de1bc64a5fdc422d4ee0629db64587c2d779d0e01da1c110c9d3b10b"
+    },
+    {
+      "run": "trained:90515-random-90702-ema:initial-evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 3.725290298461914e-08,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "6a2a025c268f9a732ed8e9d5430e1cef44d0787b33dd30097dd5d6242a443ecf"
+    },
+    {
+      "run": "trained:90515-random-90702-ema:initial-evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "6a2a025c268f9a732ed8e9d5430e1cef44d0787b33dd30097dd5d6242a443ecf"
+    },
+    {
+      "run": "trained:90515-random-90702-ema:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 3.5762786865234375e-07,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "beb19f49e73fb45556fb8c05dfaa5e8962558994a1aed3968786c5baf268a106"
+    },
+    {
+      "run": "trained:90515-random-90702-ema:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "beb19f49e73fb45556fb8c05dfaa5e8962558994a1aed3968786c5baf268a106"
+    },
+    {
+      "run": "trained:90515-random-90702-local_delta:initial-evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 3.725290298461914e-08,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "f9bc832df2a49d01451c6d5fc1fab4fd30b57d6610ee6913a8860677a3a768fe"
+    },
+    {
+      "run": "trained:90515-random-90702-local_delta:initial-evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 2.62516550719738e-08,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "f9bc832df2a49d01451c6d5fc1fab4fd30b57d6610ee6913a8860677a3a768fe"
+    },
+    {
+      "run": "trained:90515-random-90702-local_delta:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 1.7881393432617188e-07,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "154a3292c8cb1d51f902fe9118b6c352bb62c3f9f94a75f5cbccaec2b8309185"
+    },
+    {
+      "run": "trained:90515-random-90702-local_delta:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 3.5762786865234375e-07,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "154a3292c8cb1d51f902fe9118b6c352bb62c3f9f94a75f5cbccaec2b8309185"
+    },
+    {
+      "run": "trained:90515-random-90703-ema:initial-evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 4.470348358154297e-08,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "c77ceb7fc7b204929bc9bdf736237ba8c9003fbbc57fd31f12ee2e4828a7bd39"
+    },
+    {
+      "run": "trained:90515-random-90703-ema:initial-evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "c77ceb7fc7b204929bc9bdf736237ba8c9003fbbc57fd31f12ee2e4828a7bd39"
+    },
+    {
+      "run": "trained:90515-random-90703-ema:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 2.384185791015625e-07,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "6ee872ace8462e65dbede28461d25b7fb16015e8fc69a6fee6321d78a9f85ee8"
+    },
+    {
+      "run": "trained:90515-random-90703-ema:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "6ee872ace8462e65dbede28461d25b7fb16015e8fc69a6fee6321d78a9f85ee8"
+    },
+    {
+      "run": "trained:90515-random-90703-local_delta:initial-evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 4.470348358154297e-08,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "0bdfb229e9a1847821b0251ad81e01d066a641d12fa4332316a29814c34f58fd"
+    },
+    {
+      "run": "trained:90515-random-90703-local_delta:initial-evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 3.457535058259964e-08,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "0bdfb229e9a1847821b0251ad81e01d066a641d12fa4332316a29814c34f58fd"
+    },
+    {
+      "run": "trained:90515-random-90703-local_delta:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 3.5762786865234375e-07,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "660d3c29a5ca1b5fd6da2aa6364899d98ad3f772d84a223dfb7d49645ad6c8ca"
+    },
+    {
+      "run": "trained:90515-random-90703-local_delta:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 2.384185791015625e-07,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "660d3c29a5ca1b5fd6da2aa6364899d98ad3f772d84a223dfb7d49645ad6c8ca"
+    },
+    {
+      "run": "trained:90515-random-90704-ema:initial-evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 2.9802322387695312e-08,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "9740bace222c2ef8abc74babd5a8cf48a4a590f7099b6a70198b9f77292097f7"
+    },
+    {
+      "run": "trained:90515-random-90704-ema:initial-evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "9740bace222c2ef8abc74babd5a8cf48a4a590f7099b6a70198b9f77292097f7"
+    },
+    {
+      "run": "trained:90515-random-90704-ema:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 2.980232238769531e-07,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "bab0afba955d83ba9bc9172764aee4db85645e4a0627857f5e7263aac6594d85"
+    },
+    {
+      "run": "trained:90515-random-90704-ema:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "bab0afba955d83ba9bc9172764aee4db85645e4a0627857f5e7263aac6594d85"
+    },
+    {
+      "run": "trained:90515-random-90704-local_delta:initial-evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 2.9802322387695312e-08,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "f016b8624828e62fe742eb025d92fbe11e31a07c057920d0809dea901b65ff17"
+    },
+    {
+      "run": "trained:90515-random-90704-local_delta:initial-evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 2.5960616767406464e-08,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "f016b8624828e62fe742eb025d92fbe11e31a07c057920d0809dea901b65ff17"
+    },
+    {
+      "run": "trained:90515-random-90704-local_delta:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 2.384185791015625e-07,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "1455f8bc21d4a086bdbd984b9e66458cc6ef0cd0f29f088345a3ae9b31c5a515"
+    },
+    {
+      "run": "trained:90515-random-90704-local_delta:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 2.980232238769531e-07,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "1455f8bc21d4a086bdbd984b9e66458cc6ef0cd0f29f088345a3ae9b31c5a515"
+    },
+    {
+      "run": "trained:90515-random-90705-ema:initial-evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 2.9802322387695312e-08,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "d65936cda36972301345739b7b2dcd816933fab494624b7a51b2a7207d2f71c6"
+    },
+    {
+      "run": "trained:90515-random-90705-ema:initial-evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "d65936cda36972301345739b7b2dcd816933fab494624b7a51b2a7207d2f71c6"
+    },
+    {
+      "run": "trained:90515-random-90705-ema:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 1.7881393432617188e-07,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "74f5909f51e20967d139075d9f9eeeb6e675827bf964f0f343f99bc3ae1855df"
+    },
+    {
+      "run": "trained:90515-random-90705-ema:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "74f5909f51e20967d139075d9f9eeeb6e675827bf964f0f343f99bc3ae1855df"
+    },
+    {
+      "run": "trained:90515-random-90705-local_delta:initial-evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 3.725290298461914e-08,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "f7aad1aa574416e40747e404e217eb81b82cce84e7a84fbcee018f414b130983"
+    },
+    {
+      "run": "trained:90515-random-90705-local_delta:initial-evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 2.246815711259842e-08,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "f7aad1aa574416e40747e404e217eb81b82cce84e7a84fbcee018f414b130983"
+    },
+    {
+      "run": "trained:90515-random-90705-local_delta:evaluation",
+      "cell": "acquire2",
+      "queries": 32,
+      "max_abs_error": 1.1920928955078125e-07,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill"
+      ],
+      "checkpoint_sha256": "3de3e119b9c16331ba4b0e6aed95447f71fdfab15c443cccd8d14705ea54ecb4"
+    },
+    {
+      "run": "trained:90515-random-90705-local_delta:evaluation",
+      "cell": "pressure_k8_d64",
+      "queries": 80,
+      "max_abs_error": 2.384185791015625e-07,
+      "all_argmax_match": true,
+      "stored_predictions_match": true,
+      "score_tolerance": 1e-05,
+      "resume_points": [
+        "prefill",
+        "midblock"
+      ],
+      "checkpoint_sha256": "3de3e119b9c16331ba4b0e6aed95447f71fdfab15c443cccd8d14705ea54ecb4"
+    }
+  ],
+  "verified_weightsets": [
+    "frozen:90511-content-ema:evaluation",
+    "frozen:90511-content-additive:evaluation",
+    "frozen:90511-content-erase_ema:evaluation",
+    "frozen:90511-content-local_delta:evaluation",
+    "frozen:90511-random-90701-ema:evaluation",
+    "frozen:90511-random-90701-additive:evaluation",
+    "frozen:90511-random-90701-erase_ema:evaluation",
+    "frozen:90511-random-90701-local_delta:evaluation",
+    "frozen:90511-random-90702-ema:evaluation",
+    "frozen:90511-random-90702-additive:evaluation",
+    "frozen:90511-random-90702-erase_ema:evaluation",
+    "frozen:90511-random-90702-local_delta:evaluation",
+    "frozen:90511-random-90703-ema:evaluation",
+    "frozen:90511-random-90703-additive:evaluation",
+    "frozen:90511-random-90703-erase_ema:evaluation",
+    "frozen:90511-random-90703-local_delta:evaluation",
+    "frozen:90511-random-90704-ema:evaluation",
+    "frozen:90511-random-90704-additive:evaluation",
+    "frozen:90511-random-90704-erase_ema:evaluation",
+    "frozen:90511-random-90704-local_delta:evaluation",
+    "frozen:90511-random-90705-ema:evaluation",
+    "frozen:90511-random-90705-additive:evaluation",
+    "frozen:90511-random-90705-erase_ema:evaluation",
+    "frozen:90511-random-90705-local_delta:evaluation",
+    "frozen:90515-content-ema:evaluation",
+    "frozen:90515-content-additive:evaluation",
+    "frozen:90515-content-erase_ema:evaluation",
+    "frozen:90515-content-local_delta:evaluation",
+    "frozen:90515-random-90701-ema:evaluation",
+    "frozen:90515-random-90701-additive:evaluation",
+    "frozen:90515-random-90701-erase_ema:evaluation",
+    "frozen:90515-random-90701-local_delta:evaluation",
+    "frozen:90515-random-90702-ema:evaluation",
+    "frozen:90515-random-90702-additive:evaluation",
+    "frozen:90515-random-90702-erase_ema:evaluation",
+    "frozen:90515-random-90702-local_delta:evaluation",
+    "frozen:90515-random-90703-ema:evaluation",
+    "frozen:90515-random-90703-additive:evaluation",
+    "frozen:90515-random-90703-erase_ema:evaluation",
+    "frozen:90515-random-90703-local_delta:evaluation",
+    "frozen:90515-random-90704-ema:evaluation",
+    "frozen:90515-random-90704-additive:evaluation",
+    "frozen:90515-random-90704-erase_ema:evaluation",
+    "frozen:90515-random-90704-local_delta:evaluation",
+    "frozen:90515-random-90705-ema:evaluation",
+    "frozen:90515-random-90705-additive:evaluation",
+    "frozen:90515-random-90705-erase_ema:evaluation",
+    "frozen:90515-random-90705-local_delta:evaluation",
+    "trained:90511-content-ema:initial-evaluation",
+    "trained:90511-content-ema:evaluation",
+    "trained:90511-content-local_delta:initial-evaluation",
+    "trained:90511-content-local_delta:evaluation",
+    "trained:90511-random-90701-ema:initial-evaluation",
+    "trained:90511-random-90701-ema:evaluation",
+    "trained:90511-random-90701-local_delta:initial-evaluation",
+    "trained:90511-random-90701-local_delta:evaluation",
+    "trained:90511-random-90702-ema:initial-evaluation",
+    "trained:90511-random-90702-ema:evaluation",
+    "trained:90511-random-90702-local_delta:initial-evaluation",
+    "trained:90511-random-90702-local_delta:evaluation",
+    "trained:90511-random-90703-ema:initial-evaluation",
+    "trained:90511-random-90703-ema:evaluation",
+    "trained:90511-random-90703-local_delta:initial-evaluation",
+    "trained:90511-random-90703-local_delta:evaluation",
+    "trained:90511-random-90704-ema:initial-evaluation",
+    "trained:90511-random-90704-ema:evaluation",
+    "trained:90511-random-90704-local_delta:initial-evaluation",
+    "trained:90511-random-90704-local_delta:evaluation",
+    "trained:90511-random-90705-ema:initial-evaluation",
+    "trained:90511-random-90705-ema:evaluation",
+    "trained:90511-random-90705-local_delta:initial-evaluation",
+    "trained:90511-random-90705-local_delta:evaluation",
+    "trained:90515-content-ema:initial-evaluation",
+    "trained:90515-content-ema:evaluation",
+    "trained:90515-content-local_delta:initial-evaluation",
+    "trained:90515-content-local_delta:evaluation",
+    "trained:90515-random-90701-ema:initial-evaluation",
+    "trained:90515-random-90701-ema:evaluation",
+    "trained:90515-random-90701-local_delta:initial-evaluation",
+    "trained:90515-random-90701-local_delta:evaluation",
+    "trained:90515-random-90702-ema:initial-evaluation",
+    "trained:90515-random-90702-ema:evaluation",
+    "trained:90515-random-90702-local_delta:initial-evaluation",
+    "trained:90515-random-90702-local_delta:evaluation",
+    "trained:90515-random-90703-ema:initial-evaluation",
+    "trained:90515-random-90703-ema:evaluation",
+    "trained:90515-random-90703-local_delta:initial-evaluation",
+    "trained:90515-random-90703-local_delta:evaluation",
+    "trained:90515-random-90704-ema:initial-evaluation",
+    "trained:90515-random-90704-ema:evaluation",
+    "trained:90515-random-90704-local_delta:initial-evaluation",
+    "trained:90515-random-90704-local_delta:evaluation",
+    "trained:90515-random-90705-ema:initial-evaluation",
+    "trained:90515-random-90705-ema:evaluation",
+    "trained:90515-random-90705-local_delta:initial-evaluation",
+    "trained:90515-random-90705-local_delta:evaluation"
+  ],
+  "elapsed_seconds": 46.374072100035846,
+  "pure_reads": true,
+  "slow_parameters_and_rng_unchanged": true
+}

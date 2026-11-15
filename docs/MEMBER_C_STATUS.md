@@ -2,7 +2,17 @@
 
 Updated November 15, 2026. Zeyuan owns pretraining feasibility, reusable baseline weights and common evaluation. Member A owns sleep consolidation; Member B owns selective Hebbian/neural-memory updates. The proposal asks whether those interventions improve new-association acquisition, unchanged-fact retention and genuine revisions. Sleep timing needs matched replay budgets. The Hebbian track must distinguish its update rule from selective routing.
 
-## Latest result: routing/decay controls and a revision tradeoff
+## Latest result: qualified key-local reference baseline
+
+The [revision study](REVISION_LOCAL.md) adds local erasure/projection, a frozen 2x2 mechanism test, and 24 equal-training EMA/local-delta runs from exact paired original initializers. All use the common API, 64KiB traces, 81,921 parameters, one retained write per observation, and all five fixed random maps alongside cosine. Projection arithmetic is reported separately.
+
+Existing dense-trained checkpoints improve from about 93% short revision to 100%, while late stable recall reaches 90–92%. With matched new training, local delta reaches 95.51% content/97.07% random versus EMA's 24.02%/28.52%. Both start and finish at 100% on short revisions, so the trained joint primary claim fails revision superiority at a ceiling. The admitted stable gain remains substantial. Initial controls show the rule already works before training; training adds a smaller 5–7-point late gain, while EMA has no established late gain.
+
+All initial and terminal conditions pass short and K8/K16D0 gates. There are 96 audited weightsets, 638,976 scores and 24 optimizer states; 181 relevant tests pass. Selected GPU/WindowsCPU checks each cover 10,752 queries/all 96 weightsets. The GPU allocation is released. Member C now has reusable initial/final weights, data, loaders, state contracts and evaluation for A/B's intended adapters. Next use stronger revision/pressure and matched replay, retaining random controls. This delta-style reference is not biological novelty or full Titans.
+
+A separately declared exploratory follow-up reinforces old facts16times before one genuine revision. At64distractors, revised recall is99.61%/98.87% local versus.39%/2.03% EMA, and stable recall96.68%/97.58% versus18.36%/22.46% (content/random). All24 saved checkpoints are reused without training/GPU;156672extra scorevectors and1920selected CPU predictions are checked. EMA fails immediate reinforced revision atD0, so these are exploratory revision/interference diagnostics. The original primary remains unmet. This harder fixture is available for the shared evaluation.
+
+## Prior routing/decay study
 
 The [48-condition factorial](ROUTING_DECAY.md) freezes four dense-trained parents, crosses cosine versus five fixed cardinality-matched random maps with protected/global inactive decay, and uses fresh90723 histories. No new training or map selection occurs. Every condition retains one association update/read module and64KiB persistent traces; arithmetic still computes four candidates.
 

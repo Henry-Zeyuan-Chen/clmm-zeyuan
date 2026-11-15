@@ -1,0 +1,13 @@
+{
+  "time_utc": "2026-11-15T19:19:45.205259+00:00",
+  "event": "revision_local_phases_started",
+  "source_commit": "c9f5c153f786f1b82ac383d01c1d18c6c595946b",
+  "cpu_job13919399": "CANCELLEDpendingzeroelapsednoallocation",
+  "frozen": "LocalisolatedLFcheckout Torch2.15CPU",
+  "gpu_job": 13919414,
+  "gpu_node": "ins080",
+  "gpu": "A6000",
+  "gpu_limit_hours": 1,
+  "tests": 181,
+  "scientific_design_changes": false
+}

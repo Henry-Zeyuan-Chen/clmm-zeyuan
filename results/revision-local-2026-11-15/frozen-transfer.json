@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "bytes": 55851929,
+  "sha256": "f2ba1df647307e14551d9d263315630cdce78ad3334e22efc6f895c75fcda66e",
+  "scope": "Complete frozen phase tosameauthorized Insomnia project forcrossdevice selectedrecheck; fullrawlocalpreserved",
+  "remote_sha256": "f2ba1df647307e14551d9d263315630cdce78ad3334e22efc6f895c75fcda66e",
+  "tar_extract_exit_code": 0,
+  "complete_phase_available_for_gpu_recheck": true
+}

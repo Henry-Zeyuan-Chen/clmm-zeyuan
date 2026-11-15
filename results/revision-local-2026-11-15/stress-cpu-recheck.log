@@ -1,0 +1,12 @@
+C:\Users\henry\Documents\Codex\2026-10-22\i\work\clmm-test-env\Lib\site-packages\torch\jit\_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+{
+  "status": "passed",
+  "scope": "First16historiesofR16D64 acrossall24existingtrainedcheckpoints; actualCPUinference/resume, not fullstress numerical reproduction",
+  "models": 24,
+  "queries": 1920,
+  "max_abs_error": 0.0,
+  "torch": "2.15.0+cpu",
+  "source_sha256": "f55039f38fd28c6320c628a75b891e5471fccf00fd6d22849abb6777a894cfc8",
+  "elapsed_seconds": 12.147961199982092
+}

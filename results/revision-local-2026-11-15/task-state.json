@@ -1,0 +1,49 @@
+{
+  "time_utc": "2026-11-15T20:18:08+00:00",
+  "event": "revision_reinforcement_stress_complete",
+  "status": "complete",
+  "source_commit": "c9f5c153f786f1b82ac383d01c1d18c6c595946b",
+  "driver_sha256": "f7162bbf3d86be1da4dd663e52c2ca97d1434c1087e380ffc1876c35556a8ab3",
+  "cases": 24,
+  "CPU_elapsed_seconds": 351.51,
+  "new_optimizer_steps": 0,
+  "new_GPU_jobs": 0,
+  "original_joint_primary_success": false,
+  "scope": "Exploratory reinforcement/revision/interference followup; not original primary or admitted EMA retention",
+  "scorevectors": 156672,
+  "causal_writes": 1078272,
+  "resource_batches": 2880,
+  "focus_R16D64": {
+    "revised_content": {
+      "local": 0.99609375,
+      "ema": 0.00390625
+    },
+    "revised_random": {
+      "local": 0.988671875,
+      "ema": 0.0203125
+    },
+    "stable_content": {
+      "local": 0.966796875,
+      "ema": 0.18359375
+    },
+    "stable_random": {
+      "local": 0.97578125,
+      "ema": 0.224609375
+    }
+  },
+  "immediate_R4_R16": "Local100percent;EMA0percent;allR16D0revisederrorsobsolete",
+  "coordinator_data_and_CI_crosscheck": "passed",
+  "CPU_selected_proof": {
+    "models": 24,
+    "queries": 1920,
+    "max_abs_error": 0
+  },
+  "all_main_plus_stress_scorevectors": 795648,
+  "all_main_plus_stress_writes": 4408320,
+  "all_required_case_files": 960,
+  "total_optimizer_steps": 28800,
+  "figures_inspected": 7,
+  "all_work_complete": true,
+  "no_active_jobs": true,
+  "no_active_inference": true
+}

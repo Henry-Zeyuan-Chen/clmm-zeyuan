@@ -1,0 +1,9 @@
+rule,route_family,metric,initial,final,final_minus_initial,lower95,upper95,histories,bootstrap_draws,bootstrap_seed,scope
+ema,content,short_revision,1.0,1.0,0.0,0.0,0.0,128,5000,90804,"Secondary predeclared initial/final paired comparison; nominal95, fixed parents/maps, no primary change"
+ema,content,K8D64_stable,0.2265625,0.240234375,0.013671875,-0.03515625,0.060546875,128,5000,90804,"Secondary predeclared initial/final paired comparison; nominal95, fixed parents/maps, no primary change"
+ema,mean5random,short_revision,1.0,1.0,0.0,0.0,0.0,128,5000,90804,"Secondary predeclared initial/final paired comparison; nominal95, fixed parents/maps, no primary change"
+ema,mean5random,K8D64_stable,0.303125,0.28515625,-0.017968750000000002,-0.040625,0.0039062499999999996,128,5000,90804,"Secondary predeclared initial/final paired comparison; nominal95, fixed parents/maps, no primary change"
+local_delta,content,short_revision,1.0,1.0,0.0,0.0,0.0,128,5000,90804,"Secondary predeclared initial/final paired comparison; nominal95, fixed parents/maps, no primary change"
+local_delta,content,K8D64_stable,0.888671875,0.955078125,0.06640625,0.037109375,0.099609375,128,5000,90804,"Secondary predeclared initial/final paired comparison; nominal95, fixed parents/maps, no primary change"
+local_delta,mean5random,short_revision,1.0,1.0,0.0,0.0,0.0,128,5000,90804,"Secondary predeclared initial/final paired comparison; nominal95, fixed parents/maps, no primary change"
+local_delta,mean5random,K8D64_stable,0.9164062500000001,0.970703125,0.05429687500000001,0.038671875,0.069921875,128,5000,90804,"Secondary predeclared initial/final paired comparison; nominal95, fixed parents/maps, no primary change"

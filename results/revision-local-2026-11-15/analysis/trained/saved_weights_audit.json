@@ -1,0 +1,1020 @@
+{
+  "status": "passed",
+  "mode": "train",
+  "source_commit": "c9f5c153f786f1b82ac383d01c1d18c6c595946b",
+  "cases": 24,
+  "checked_checkpoint_payloads": 48,
+  "checkpoints": [
+    {
+      "case": "90511-content-ema",
+      "stage": "final",
+      "slow_sha256": "0e6cd42310dc58b45fd7ca3290c4145f835fd96f86eec34bd928174e805f2c1c",
+      "parent_tensors_bitwise_unchanged": [
+        "router_prototypes",
+        "codebook.keys",
+        "codebook.values"
+      ],
+      "training": {
+        "step": 1200,
+        "init_seed": 90511,
+        "train_seed": 90802,
+        "observations": 279488,
+        "answers": 179712
+      },
+      "route_table_bytes": 512
+    },
+    {
+      "case": "90511-content-ema",
+      "stage": "initial",
+      "slow_sha256": "5fb961881e40819943fd09d2918d780126b5aea657ec7405f8a1ff14eb8bb840",
+      "parent_tensors_bitwise_unchanged": [
+        "key_encoder",
+        "value_encoder",
+        "decoder",
+        "W0",
+        "alpha",
+        "raw_eta",
+        "router_prototypes",
+        "codebook.keys",
+        "codebook.values"
+      ],
+      "training": {
+        "step": 0,
+        "init_seed": 90511,
+        "train_seed": 90802,
+        "observations": 0,
+        "answers": 0
+      },
+      "route_table_bytes": 512
+    },
+    {
+      "case": "90511-content-local_delta",
+      "stage": "final",
+      "slow_sha256": "c0be16349aa28c31939d132e3a9d90b140ec4898d5817624779f71ec6a5bc095",
+      "parent_tensors_bitwise_unchanged": [
+        "router_prototypes",
+        "codebook.keys",
+        "codebook.values"
+      ],
+      "training": {
+        "step": 1200,
+        "init_seed": 90511,
+        "train_seed": 90802,
+        "observations": 279488,
+        "answers": 179712
+      },
+      "route_table_bytes": 512
+    },
+    {
+      "case": "90511-content-local_delta",
+      "stage": "initial",
+      "slow_sha256": "5fb961881e40819943fd09d2918d780126b5aea657ec7405f8a1ff14eb8bb840",
+      "parent_tensors_bitwise_unchanged": [
+        "key_encoder",
+        "value_encoder",
+        "decoder",
+        "W0",
+        "alpha",
+        "raw_eta",
+        "router_prototypes",
+        "codebook.keys",
+        "codebook.values"
+      ],
+      "training": {
+        "step": 0,
+        "init_seed": 90511,
+        "train_seed": 90802,
+        "observations": 0,
+        "answers": 0
+      },
+      "route_table_bytes": 512
+    },
+    {
+      "case": "90511-random-90701-ema",
+      "stage": "final",
+      "slow_sha256": "890ce0556ed87bb1bb83f8e010b19434868b08a1fd19ca97516e95f0e4ae8b7f",
+      "parent_tensors_bitwise_unchanged": [
+        "router_prototypes",
+        "codebook.keys",
+        "codebook.values"
+      ],
+      "training": {
+        "step": 1200,
+        "init_seed": 90511,
+        "train_seed": 90802,
+        "observations": 279488,
+        "answers": 179712
+      },
+      "route_table_bytes": 512
+    },
+    {
+      "case": "90511-random-90701-ema",
+      "stage": "initial",
+      "slow_sha256": "5fb961881e40819943fd09d2918d780126b5aea657ec7405f8a1ff14eb8bb840",
+      "parent_tensors_bitwise_unchanged": [
+        "key_encoder",
+        "value_encoder",
+        "decoder",
+        "W0",
+        "alpha",
+        "raw_eta",
+        "router_prototypes",
+        "codebook.keys",
+        "codebook.values"
+      ],
+      "training": {
+        "step": 0,
+        "init_seed": 90511,
+        "train_seed": 90802,
+        "observations": 0,
+        "answers": 0
+      },
+      "route_table_bytes": 512
+    },
+    {
+      "case": "90511-random-90701-local_delta",
+      "stage": "final",
+      "slow_sha256": "08b48396c30c4480acaba7baeecd3cb2efa914442d7f94dff93bc75c02dcd3a6",
+      "parent_tensors_bitwise_unchanged": [
+        "router_prototypes",
+        "codebook.keys",
+        "codebook.values"
+      ],
+      "training": {
+        "step": 1200,
+        "init_seed": 90511,
+        "train_seed": 90802,
+        "observations": 279488,
+        "answers": 179712
+      },
+      "route_table_bytes": 512
+    },
+    {
+      "case": "90511-random-90701-local_delta",
+      "stage": "initial",
+      "slow_sha256": "5fb961881e40819943fd09d2918d780126b5aea657ec7405f8a1ff14eb8bb840",
+      "parent_tensors_bitwise_unchanged": [
+        "key_encoder",
+        "value_encoder",
+        "decoder",
+        "W0",
+        "alpha",
+        "raw_eta",
+        "router_prototypes",
+        "codebook.keys",
+        "codebook.values"
+      ],
+      "training": {
+        "step": 0,
+        "init_seed": 90511,
+        "train_seed": 90802,
+        "observations": 0,
+        "answers": 0
+      },
+      "route_table_bytes": 512
+    },
+    {
+      "case": "90511-random-90702-ema",
+      "stage": "final",
+      "slow_sha256": "bcaef5391b7a2f5ffc08b541ae785e200e29f75bb3397b12643f7028c239b0d1",
+      "parent_tensors_bitwise_unchanged": [
+        "router_prototypes",
+        "codebook.keys",
+        "codebook.values"
+      ],
+      "training": {
+        "step": 1200,
+        "init_seed": 90511,
+        "train_seed": 90802,
+        "observations": 279488,
+        "answers": 179712
+      },
+      "route_table_bytes": 512
+    },
+    {
+      "case": "90511-random-90702-ema",
+      "stage": "initial",
+      "slow_sha256": "5fb961881e40819943fd09d2918d780126b5aea657ec7405f8a1ff14eb8bb840",
+      "parent_tensors_bitwise_unchanged": [
+        "key_encoder",
+        "value_encoder",
+        "decoder",
+        "W0",
+        "alpha",
+        "raw_eta",
+        "router_prototypes",
+        "codebook.keys",
+        "codebook.values"
+      ],
+      "training": {
+        "step": 0,
+        "init_seed": 90511,
+        "train_seed": 90802,
+        "observations": 0,
+        "answers": 0
+      },
+      "route_table_bytes": 512
+    },
+    {
+      "case": "90511-random-90702-local_delta",
+      "stage": "final",
+      "slow_sha256": "e5dda96249e4c56b9c111c78bba231cb6741a48a35d37615af3a6b5f037382fe",
+      "parent_tensors_bitwise_unchanged": [
+        "router_prototypes",
+        "codebook.keys",
+        "codebook.values"
+      ],
+      "training": {
+        "step": 1200,
+        "init_seed": 90511,
+        "train_seed": 90802,
+        "observations": 279488,
+        "answers": 179712
+      },
+      "route_table_bytes": 512
+    },
+    {
+      "case": "90511-random-90702-local_delta",
+      "stage": "initial",
+      "slow_sha256": "5fb961881e40819943fd09d2918d780126b5aea657ec7405f8a1ff14eb8bb840",
+      "parent_tensors_bitwise_unchanged": [
+        "key_encoder",
+        "value_encoder",
+        "decoder",
+        "W0",
+        "alpha",
+        "raw_eta",
+        "router_prototypes",
+        "codebook.keys",
+        "codebook.values"
+      ],
+      "training": {
+        "step": 0,
+        "init_seed": 90511,
+        "train_seed": 90802,
+        "observations": 0,
+        "answers": 0
+      },
+      "route_table_bytes": 512
+    },
+    {
+      "case": "90511-random-90703-ema",
+      "stage": "final",
+      "slow_sha256": "ed4c166cdfa214109224294801fadf97b5f74f3fd4c5d2e6a49d1f7239e88ae8",
+      "parent_tensors_bitwise_unchanged": [
+        "router_prototypes",
+        "codebook.keys",
+        "codebook.values"
+      ],
+      "training": {
+        "step": 1200,
+        "init_seed": 90511,
+        "train_seed": 90802,
+        "observations": 279488,
+        "answers": 179712
+      },
+      "route_table_bytes": 512
+    },
+    {
+      "case": "90511-random-90703-ema",
+      "stage": "initial",
+      "slow_sha256": "5fb961881e40819943fd09d2918d780126b5aea657ec7405f8a1ff14eb8bb840",
+      "parent_tensors_bitwise_unchanged": [
+        "key_encoder",
+        "value_encoder",
+        "decoder",
+        "W0",
+        "alpha",
+        "raw_eta",
+        "router_prototypes",
+        "codebook.keys",
+        "codebook.values"
+      ],
+      "training": {
+        "step": 0,
+        "init_seed": 90511,
+        "train_seed": 90802,
+        "observations": 0,
+        "answers": 0
+      },
+      "route_table_bytes": 512
+    },
+    {
+      "case": "90511-random-90703-local_delta",
+      "stage": "final",
+      "slow_sha256": "4de6b23d39cc388a617452d1f9d17e0368739bbf75b61b6021058377a9cb7922",
+      "parent_tensors_bitwise_unchanged": [
+        "router_prototypes",
+        "codebook.keys",
+        "codebook.values"
+      ],
+      "training": {
+        "step": 1200,
+        "init_seed": 90511,
+        "train_seed": 90802,
+        "observations": 279488,
+        "answers": 179712
+      },
+      "route_table_bytes": 512
+    },
+    {
+      "case": "90511-random-90703-local_delta",
+      "stage": "initial",
+      "slow_sha256": "5fb961881e40819943fd09d2918d780126b5aea657ec7405f8a1ff14eb8bb840",
+      "parent_tensors_bitwise_unchanged": [
+        "key_encoder",
+        "value_encoder",
+        "decoder",
+        "W0",
+        "alpha",
+        "raw_eta",
+        "router_prototypes",
+        "codebook.keys",
+        "codebook.values"
+      ],
+      "training": {
+        "step": 0,
+        "init_seed": 90511,
+        "train_seed": 90802,
+        "observations": 0,
+        "answers": 0
+      },
+      "route_table_bytes": 512
+    },
+    {
+      "case": "90511-random-90704-ema",
+      "stage": "final",
+      "slow_sha256": "54ac2c071c3b534f946302c594ce36834865c83e965a01b287471e3337487505",
+      "parent_tensors_bitwise_unchanged": [
+        "router_prototypes",
+        "codebook.keys",
+        "codebook.values"
+      ],
+      "training": {
+        "step": 1200,
+        "init_seed": 90511,
+        "train_seed": 90802,
+        "observations": 279488,
+        "answers": 179712
+      },
+      "route_table_bytes": 512
+    },
+    {
+      "case": "90511-random-90704-ema",
+      "stage": "initial",
+      "slow_sha256": "5fb961881e40819943fd09d2918d780126b5aea657ec7405f8a1ff14eb8bb840",
+      "parent_tensors_bitwise_unchanged": [
+        "key_encoder",
+        "value_encoder",
+        "decoder",
+        "W0",
+        "alpha",
+        "raw_eta",
+        "router_prototypes",
+        "codebook.keys",
+        "codebook.values"
+      ],
+      "training": {
+        "step": 0,
+        "init_seed": 90511,
+        "train_seed": 90802,
+        "observations": 0,
+        "answers": 0
+      },
+      "route_table_bytes": 512
+    },
+    {
+      "case": "90511-random-90704-local_delta",
+      "stage": "final",
+      "slow_sha256": "afdb8734ff65fd042a3dd3ce3c38682695fd4cf2687b86d43b4a5ee304059978",
+      "parent_tensors_bitwise_unchanged": [
+        "router_prototypes",
+        "codebook.keys",
+        "codebook.values"
+      ],
+      "training": {
+        "step": 1200,
+        "init_seed": 90511,
+        "train_seed": 90802,
+        "observations": 279488,
+        "answers": 179712
+      },
+      "route_table_bytes": 512
+    },
+    {
+      "case": "90511-random-90704-local_delta",
+      "stage": "initial",
+      "slow_sha256": "5fb961881e40819943fd09d2918d780126b5aea657ec7405f8a1ff14eb8bb840",
+      "parent_tensors_bitwise_unchanged": [
+        "key_encoder",
+        "value_encoder",
+        "decoder",
+        "W0",
+        "alpha",
+        "raw_eta",
+        "router_prototypes",
+        "codebook.keys",
+        "codebook.values"
+      ],
+      "training": {
+        "step": 0,
+        "init_seed": 90511,
+        "train_seed": 90802,
+        "observations": 0,
+        "answers": 0
+      },
+      "route_table_bytes": 512
+    },
+    {
+      "case": "90511-random-90705-ema",
+      "stage": "final",
+      "slow_sha256": "d1f3a071d64aac23e6c53144ed34de7762c785fdf05187a59ccb0d0e2d34a1a6",
+      "parent_tensors_bitwise_unchanged": [
+        "router_prototypes",
+        "codebook.keys",
+        "codebook.values"
+      ],
+      "training": {
+        "step": 1200,
+        "init_seed": 90511,
+        "train_seed": 90802,
+        "observations": 279488,
+        "answers": 179712
+      },
+      "route_table_bytes": 512
+    },
+    {
+      "case": "90511-random-90705-ema",
+      "stage": "initial",
+      "slow_sha256": "5fb961881e40819943fd09d2918d780126b5aea657ec7405f8a1ff14eb8bb840",
+      "parent_tensors_bitwise_unchanged": [
+        "key_encoder",
+        "value_encoder",
+        "decoder",
+        "W0",
+        "alpha",
+        "raw_eta",
+        "router_prototypes",
+        "codebook.keys",
+        "codebook.values"
+      ],
+      "training": {
+        "step": 0,
+        "init_seed": 90511,
+        "train_seed": 90802,
+        "observations": 0,
+        "answers": 0
+      },
+      "route_table_bytes": 512
+    },
+    {
+      "case": "90511-random-90705-local_delta",
+      "stage": "final",
+      "slow_sha256": "450958d010893306b279356fd2c6becff73258fe84ff30962cf22a62b07572d9",
+      "parent_tensors_bitwise_unchanged": [
+        "router_prototypes",
+        "codebook.keys",
+        "codebook.values"
+      ],
+      "training": {
+        "step": 1200,
+        "init_seed": 90511,
+        "train_seed": 90802,
+        "observations": 279488,
+        "answers": 179712
+      },
+      "route_table_bytes": 512
+    },
+    {
+      "case": "90511-random-90705-local_delta",
+      "stage": "initial",
+      "slow_sha256": "5fb961881e40819943fd09d2918d780126b5aea657ec7405f8a1ff14eb8bb840",
+      "parent_tensors_bitwise_unchanged": [
+        "key_encoder",
+        "value_encoder",
+        "decoder",
+        "W0",
+        "alpha",
+        "raw_eta",
+        "router_prototypes",
+        "codebook.keys",
+        "codebook.values"
+      ],
+      "training": {
+        "step": 0,
+        "init_seed": 90511,
+        "train_seed": 90802,
+        "observations": 0,
+        "answers": 0
+      },
+      "route_table_bytes": 512
+    },
+    {
+      "case": "90515-content-ema",
+      "stage": "final",
+      "slow_sha256": "ecb3854d5cc1794d88d4b1a4f87966f506d6a746dbbb820b055af64f7d168aa5",
+      "parent_tensors_bitwise_unchanged": [
+        "router_prototypes",
+        "codebook.keys",
+        "codebook.values"
+      ],
+      "training": {
+        "step": 1200,
+        "init_seed": 90515,
+        "train_seed": 90802,
+        "observations": 279488,
+        "answers": 179712
+      },
+      "route_table_bytes": 512
+    },
+    {
+      "case": "90515-content-ema",
+      "stage": "initial",
+      "slow_sha256": "9626a077d5ae982d635b6a7e0ecc35f48cc1c38a7fd98f4474c49f0bfd0d24ea",
+      "parent_tensors_bitwise_unchanged": [
+        "key_encoder",
+        "value_encoder",
+        "decoder",
+        "W0",
+        "alpha",
+        "raw_eta",
+        "router_prototypes",
+        "codebook.keys",
+        "codebook.values"
+      ],
+      "training": {
+        "step": 0,
+        "init_seed": 90515,
+        "train_seed": 90802,
+        "observations": 0,
+        "answers": 0
+      },
+      "route_table_bytes": 512
+    },
+    {
+      "case": "90515-content-local_delta",
+      "stage": "final",
+      "slow_sha256": "353c252ee8757ca34426d46d6bcad2011cec21a91fa9a97c6d2dd92d54964915",
+      "parent_tensors_bitwise_unchanged": [
+        "router_prototypes",
+        "codebook.keys",
+        "codebook.values"
+      ],
+      "training": {
+        "step": 1200,
+        "init_seed": 90515,
+        "train_seed": 90802,
+        "observations": 279488,
+        "answers": 179712
+      },
+      "route_table_bytes": 512
+    },
+    {
+      "case": "90515-content-local_delta",
+      "stage": "initial",
+      "slow_sha256": "9626a077d5ae982d635b6a7e0ecc35f48cc1c38a7fd98f4474c49f0bfd0d24ea",
+      "parent_tensors_bitwise_unchanged": [
+        "key_encoder",
+        "value_encoder",
+        "decoder",
+        "W0",
+        "alpha",
+        "raw_eta",
+        "router_prototypes",
+        "codebook.keys",
+        "codebook.values"
+      ],
+      "training": {
+        "step": 0,
+        "init_seed": 90515,
+        "train_seed": 90802,
+        "observations": 0,
+        "answers": 0
+      },
+      "route_table_bytes": 512
+    },
+    {
+      "case": "90515-random-90701-ema",
+      "stage": "final",
+      "slow_sha256": "1c3cab3d4a3780f232b43e2512423234bdce50c90fd04d1fe96e540fc1369cba",
+      "parent_tensors_bitwise_unchanged": [
+        "router_prototypes",
+        "codebook.keys",
+        "codebook.values"
+      ],
+      "training": {
+        "step": 1200,
+        "init_seed": 90515,
+        "train_seed": 90802,
+        "observations": 279488,
+        "answers": 179712
+      },
+      "route_table_bytes": 512
+    },
+    {
+      "case": "90515-random-90701-ema",
+      "stage": "initial",
+      "slow_sha256": "9626a077d5ae982d635b6a7e0ecc35f48cc1c38a7fd98f4474c49f0bfd0d24ea",
+      "parent_tensors_bitwise_unchanged": [
+        "key_encoder",
+        "value_encoder",
+        "decoder",
+        "W0",
+        "alpha",
+        "raw_eta",
+        "router_prototypes",
+        "codebook.keys",
+        "codebook.values"
+      ],
+      "training": {
+        "step": 0,
+        "init_seed": 90515,
+        "train_seed": 90802,
+        "observations": 0,
+        "answers": 0
+      },
+      "route_table_bytes": 512
+    },
+    {
+      "case": "90515-random-90701-local_delta",
+      "stage": "final",
+      "slow_sha256": "51f6dae0efdd160b0f8f3641255a5bb0ed8a987a4348ef1d111d13a739c9c725",
+      "parent_tensors_bitwise_unchanged": [
+        "router_prototypes",
+        "codebook.keys",
+        "codebook.values"
+      ],
+      "training": {
+        "step": 1200,
+        "init_seed": 90515,
+        "train_seed": 90802,
+        "observations": 279488,
+        "answers": 179712
+      },
+      "route_table_bytes": 512
+    },
+    {
+      "case": "90515-random-90701-local_delta",
+      "stage": "initial",
+      "slow_sha256": "9626a077d5ae982d635b6a7e0ecc35f48cc1c38a7fd98f4474c49f0bfd0d24ea",
+      "parent_tensors_bitwise_unchanged": [
+        "key_encoder",
+        "value_encoder",
+        "decoder",
+        "W0",
+        "alpha",
+        "raw_eta",
+        "router_prototypes",
+        "codebook.keys",
+        "codebook.values"
+      ],
+      "training": {
+        "step": 0,
+        "init_seed": 90515,
+        "train_seed": 90802,
+        "observations": 0,
+        "answers": 0
+      },
+      "route_table_bytes": 512
+    },
+    {
+      "case": "90515-random-90702-ema",
+      "stage": "final",
+      "slow_sha256": "8df1218184be01aa51af7bf9df2df90bfe00b5e376fd96a655817c739dec8939",
+      "parent_tensors_bitwise_unchanged": [
+        "router_prototypes",
+        "codebook.keys",
+        "codebook.values"
+      ],
+      "training": {
+        "step": 1200,
+        "init_seed": 90515,
+        "train_seed": 90802,
+        "observations": 279488,
+        "answers": 179712
+      },
+      "route_table_bytes": 512
+    },
+    {
+      "case": "90515-random-90702-ema",
+      "stage": "initial",
+      "slow_sha256": "9626a077d5ae982d635b6a7e0ecc35f48cc1c38a7fd98f4474c49f0bfd0d24ea",
+      "parent_tensors_bitwise_unchanged": [
+        "key_encoder",
+        "value_encoder",
+        "decoder",
+        "W0",
+        "alpha",
+        "raw_eta",
+        "router_prototypes",
+        "codebook.keys",
+        "codebook.values"
+      ],
+      "training": {
+        "step": 0,
+        "init_seed": 90515,
+        "train_seed": 90802,
+        "observations": 0,
+        "answers": 0
+      },
+      "route_table_bytes": 512
+    },
+    {
+      "case": "90515-random-90702-local_delta",
+      "stage": "final",
+      "slow_sha256": "409ca194bf551e79d007a31c318fc9337c6d4da926903e7d89a2d85619e1537f",
+      "parent_tensors_bitwise_unchanged": [
+        "router_prototypes",
+        "codebook.keys",
+        "codebook.values"
+      ],
+      "training": {
+        "step": 1200,
+        "init_seed": 90515,
+        "train_seed": 90802,
+        "observations": 279488,
+        "answers": 179712
+      },
+      "route_table_bytes": 512
+    },
+    {
+      "case": "90515-random-90702-local_delta",
+      "stage": "initial",
+      "slow_sha256": "9626a077d5ae982d635b6a7e0ecc35f48cc1c38a7fd98f4474c49f0bfd0d24ea",
+      "parent_tensors_bitwise_unchanged": [
+        "key_encoder",
+        "value_encoder",
+        "decoder",
+        "W0",
+        "alpha",
+        "raw_eta",
+        "router_prototypes",
+        "codebook.keys",
+        "codebook.values"
+      ],
+      "training": {
+        "step": 0,
+        "init_seed": 90515,
+        "train_seed": 90802,
+        "observations": 0,
+        "answers": 0
+      },
+      "route_table_bytes": 512
+    },
+    {
+      "case": "90515-random-90703-ema",
+      "stage": "final",
+      "slow_sha256": "bbe83dcf711aa2065c6032e1c9c541705414d1468a44c9b2fe420c390a634c03",
+      "parent_tensors_bitwise_unchanged": [
+        "router_prototypes",
+        "codebook.keys",
+        "codebook.values"
+      ],
+      "training": {
+        "step": 1200,
+        "init_seed": 90515,
+        "train_seed": 90802,
+        "observations": 279488,
+        "answers": 179712
+      },
+      "route_table_bytes": 512
+    },
+    {
+      "case": "90515-random-90703-ema",
+      "stage": "initial",
+      "slow_sha256": "9626a077d5ae982d635b6a7e0ecc35f48cc1c38a7fd98f4474c49f0bfd0d24ea",
+      "parent_tensors_bitwise_unchanged": [
+        "key_encoder",
+        "value_encoder",
+        "decoder",
+        "W0",
+        "alpha",
+        "raw_eta",
+        "router_prototypes",
+        "codebook.keys",
+        "codebook.values"
+      ],
+      "training": {
+        "step": 0,
+        "init_seed": 90515,
+        "train_seed": 90802,
+        "observations": 0,
+        "answers": 0
+      },
+      "route_table_bytes": 512
+    },
+    {
+      "case": "90515-random-90703-local_delta",
+      "stage": "final",
+      "slow_sha256": "a4777df916a74ac789a6d08935d53e867f190b03d28b9fca9ef534d78d6a54c7",
+      "parent_tensors_bitwise_unchanged": [
+        "router_prototypes",
+        "codebook.keys",
+        "codebook.values"
+      ],
+      "training": {
+        "step": 1200,
+        "init_seed": 90515,
+        "train_seed": 90802,
+        "observations": 279488,
+        "answers": 179712
+      },
+      "route_table_bytes": 512
+    },
+    {
+      "case": "90515-random-90703-local_delta",
+      "stage": "initial",
+      "slow_sha256": "9626a077d5ae982d635b6a7e0ecc35f48cc1c38a7fd98f4474c49f0bfd0d24ea",
+      "parent_tensors_bitwise_unchanged": [
+        "key_encoder",
+        "value_encoder",
+        "decoder",
+        "W0",
+        "alpha",
+        "raw_eta",
+        "router_prototypes",
+        "codebook.keys",
+        "codebook.values"
+      ],
+      "training": {
+        "step": 0,
+        "init_seed": 90515,
+        "train_seed": 90802,
+        "observations": 0,
+        "answers": 0
+      },
+      "route_table_bytes": 512
+    },
+    {
+      "case": "90515-random-90704-ema",
+      "stage": "final",
+      "slow_sha256": "fd1a4fcd87a899f549ca04c5dd817c8333bc85a3dbae8259f5d12ed052d345f5",
+      "parent_tensors_bitwise_unchanged": [
+        "router_prototypes",
+        "codebook.keys",
+        "codebook.values"
+      ],
+      "training": {
+        "step": 1200,
+        "init_seed": 90515,
+        "train_seed": 90802,
+        "observations": 279488,
+        "answers": 179712
+      },
+      "route_table_bytes": 512
+    },
+    {
+      "case": "90515-random-90704-ema",
+      "stage": "initial",
+      "slow_sha256": "9626a077d5ae982d635b6a7e0ecc35f48cc1c38a7fd98f4474c49f0bfd0d24ea",
+      "parent_tensors_bitwise_unchanged": [
+        "key_encoder",
+        "value_encoder",
+        "decoder",
+        "W0",
+        "alpha",
+        "raw_eta",
+        "router_prototypes",
+        "codebook.keys",
+        "codebook.values"
+      ],
+      "training": {
+        "step": 0,
+        "init_seed": 90515,
+        "train_seed": 90802,
+        "observations": 0,
+        "answers": 0
+      },
+      "route_table_bytes": 512
+    },
+    {
+      "case": "90515-random-90704-local_delta",
+      "stage": "final",
+      "slow_sha256": "998d64e877acb8869065475b13b5cc06742f588cb3c8ab12e92b4c79ee97ec3d",
+      "parent_tensors_bitwise_unchanged": [
+        "router_prototypes",
+        "codebook.keys",
+        "codebook.values"
+      ],
+      "training": {
+        "step": 1200,
+        "init_seed": 90515,
+        "train_seed": 90802,
+        "observations": 279488,
+        "answers": 179712
+      },
+      "route_table_bytes": 512
+    },
+    {
+      "case": "90515-random-90704-local_delta",
+      "stage": "initial",
+      "slow_sha256": "9626a077d5ae982d635b6a7e0ecc35f48cc1c38a7fd98f4474c49f0bfd0d24ea",
+      "parent_tensors_bitwise_unchanged": [
+        "key_encoder",
+        "value_encoder",
+        "decoder",
+        "W0",
+        "alpha",
+        "raw_eta",
+        "router_prototypes",
+        "codebook.keys",
+        "codebook.values"
+      ],
+      "training": {
+        "step": 0,
+        "init_seed": 90515,
+        "train_seed": 90802,
+        "observations": 0,
+        "answers": 0
+      },
+      "route_table_bytes": 512
+    },
+    {
+      "case": "90515-random-90705-ema",
+      "stage": "final",
+      "slow_sha256": "5ac4c9fe7ede86f4082b58f8cb72b53a2ff10cf75337fdee27922e64efc2b342",
+      "parent_tensors_bitwise_unchanged": [
+        "router_prototypes",
+        "codebook.keys",
+        "codebook.values"
+      ],
+      "training": {
+        "step": 1200,
+        "init_seed": 90515,
+        "train_seed": 90802,
+        "observations": 279488,
+        "answers": 179712
+      },
+      "route_table_bytes": 512
+    },
+    {
+      "case": "90515-random-90705-ema",
+      "stage": "initial",
+      "slow_sha256": "9626a077d5ae982d635b6a7e0ecc35f48cc1c38a7fd98f4474c49f0bfd0d24ea",
+      "parent_tensors_bitwise_unchanged": [
+        "key_encoder",
+        "value_encoder",
+        "decoder",
+        "W0",
+        "alpha",
+        "raw_eta",
+        "router_prototypes",
+        "codebook.keys",
+        "codebook.values"
+      ],
+      "training": {
+        "step": 0,
+        "init_seed": 90515,
+        "train_seed": 90802,
+        "observations": 0,
+        "answers": 0
+      },
+      "route_table_bytes": 512
+    },
+    {
+      "case": "90515-random-90705-local_delta",
+      "stage": "final",
+      "slow_sha256": "f672e08b661d433993bdb60e499a9aaa4b244b06164128f124ea887d76f58b85",
+      "parent_tensors_bitwise_unchanged": [
+        "router_prototypes",
+        "codebook.keys",
+        "codebook.values"
+      ],
+      "training": {
+        "step": 1200,
+        "init_seed": 90515,
+        "train_seed": 90802,
+        "observations": 279488,
+        "answers": 179712
+      },
+      "route_table_bytes": 512
+    },
+    {
+      "case": "90515-random-90705-local_delta",
+      "stage": "initial",
+      "slow_sha256": "9626a077d5ae982d635b6a7e0ecc35f48cc1c38a7fd98f4474c49f0bfd0d24ea",
+      "parent_tensors_bitwise_unchanged": [
+        "key_encoder",
+        "value_encoder",
+        "decoder",
+        "W0",
+        "alpha",
+        "raw_eta",
+        "router_prototypes",
+        "codebook.keys",
+        "codebook.values"
+      ],
+      "training": {
+        "step": 0,
+        "init_seed": 90515,
+        "train_seed": 90802,
+        "observations": 0,
+        "answers": 0
+      },
+      "route_table_bytes": 512
+    }
+  ],
+  "no_fast_state_in_checkpoint": true,
+  "optimizer_steps_verified": 1200,
+  "scope": "Actual CPU-loaded saved checkpoint/optimizer tensors; no inference/training rerun."
+}

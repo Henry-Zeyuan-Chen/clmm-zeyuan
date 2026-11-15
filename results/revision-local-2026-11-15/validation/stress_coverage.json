@@ -1,0 +1,58 @@
+{
+  "status": "passed",
+  "scope": "Additionalexploratoryfollowup; originaltrainedprimaryremainsfalse",
+  "cases": 24,
+  "scorevectors": 156672,
+  "expected_causal_writes": 1078272,
+  "required_case_files": 168,
+  "source_commit": "c9f5c153f786f1b82ac383d01c1d18c6c595946b",
+  "driver_sha256": "f7162bbf3d86be1da4dd663e52c2ca97d1434c1087e380ffc1876c35556a8ab3",
+  "semantic_stream_reconstruction": true,
+  "old_reinforcement_counts_exact": true,
+  "query_targets_equal_latest_observation": true,
+  "all_argmax_flags_match": true,
+  "paired_focus_CIs_independently_recomputed": true,
+  "focus": [
+    {
+      "family": "content",
+      "category": "stable",
+      "candidate": 0.966796875,
+      "baseline": 0.18359375,
+      "delta": 0.783203125,
+      "lower95": 0.736328125,
+      "upper95": 0.828125
+    },
+    {
+      "family": "content",
+      "category": "revised",
+      "candidate": 0.99609375,
+      "baseline": 0.00390625,
+      "delta": 0.9921875,
+      "lower95": 0.98046875,
+      "upper95": 1.0
+    },
+    {
+      "family": "mean5random",
+      "category": "stable",
+      "candidate": 0.97578125,
+      "baseline": 0.224609375,
+      "delta": 0.751171875,
+      "lower95": 0.7257714843749999,
+      "upper95": 0.7765625
+    },
+    {
+      "family": "mean5random",
+      "category": "revised",
+      "candidate": 0.9886718750000001,
+      "baseline": 0.0203125,
+      "delta": 0.968359375,
+      "lower95": 0.95703125,
+      "upper95": 0.978125
+    }
+  ],
+  "selected_CPUproof": {
+    "models": 24,
+    "queries": 1920,
+    "max_abs_error": 0.0
+  }
+}

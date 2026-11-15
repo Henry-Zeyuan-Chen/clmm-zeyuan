@@ -1,0 +1,300 @@
+{
+  "status": "passed",
+  "scope": "First16historiesofR16D64 acrossall24existingtrainedcheckpoints; actualCPUinference/resume, not fullstress numerical reproduction",
+  "models": 24,
+  "queries": 1920,
+  "max_abs_error": 0.0,
+  "torch": "2.15.0+cpu",
+  "source_sha256": "f55039f38fd28c6320c628a75b891e5471fccf00fd6d22849abb6777a894cfc8",
+  "elapsed_seconds": 12.147961199982092,
+  "cases": [
+    {
+      "case": "90511-content-ema",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_predictions_match": true,
+      "resume_indices": [
+        39,
+        40
+      ],
+      "actual_writes": 104,
+      "checkpoint_sha256": "a29b57e40167f27cf12f8cba936507ce4d91512a6752bca6056dbd8e5c65e7ee"
+    },
+    {
+      "case": "90511-content-local_delta",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_predictions_match": true,
+      "resume_indices": [
+        39,
+        40
+      ],
+      "actual_writes": 104,
+      "checkpoint_sha256": "ec9de4709df9ea2802d50d7bef02bc3bf8b0a6807aacdeff2bce298cd50d8605"
+    },
+    {
+      "case": "90511-random-90701-ema",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_predictions_match": true,
+      "resume_indices": [
+        39,
+        40
+      ],
+      "actual_writes": 104,
+      "checkpoint_sha256": "1f16581247b6795ae5fab771381136a964d20be2e700dcf5231c86405010caa2"
+    },
+    {
+      "case": "90511-random-90701-local_delta",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_predictions_match": true,
+      "resume_indices": [
+        39,
+        40
+      ],
+      "actual_writes": 104,
+      "checkpoint_sha256": "4d339b2860b7f6f30bfe8c5841b9c77e527326ea9869caeed25cded95a28714e"
+    },
+    {
+      "case": "90511-random-90702-ema",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_predictions_match": true,
+      "resume_indices": [
+        39,
+        40
+      ],
+      "actual_writes": 104,
+      "checkpoint_sha256": "73deec87ad62b79ddddc4e0318b00f7a60875a6867be4e681f29b3195d417e03"
+    },
+    {
+      "case": "90511-random-90702-local_delta",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_predictions_match": true,
+      "resume_indices": [
+        39,
+        40
+      ],
+      "actual_writes": 104,
+      "checkpoint_sha256": "56cd15f2c289bd51d843fedb86b17400bce3221dde20f71ed6463ba06e643459"
+    },
+    {
+      "case": "90511-random-90703-ema",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_predictions_match": true,
+      "resume_indices": [
+        39,
+        40
+      ],
+      "actual_writes": 104,
+      "checkpoint_sha256": "d83b9e5d2c4ae92b0636c53f122aef19e3934759853f341fa73939fd040981e7"
+    },
+    {
+      "case": "90511-random-90703-local_delta",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_predictions_match": true,
+      "resume_indices": [
+        39,
+        40
+      ],
+      "actual_writes": 104,
+      "checkpoint_sha256": "7df098cee219574a09020a8e3de32c1654254103ac9612a6a96eaedaa59f724f"
+    },
+    {
+      "case": "90511-random-90704-ema",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_predictions_match": true,
+      "resume_indices": [
+        39,
+        40
+      ],
+      "actual_writes": 104,
+      "checkpoint_sha256": "d8dc29f853fbfee3150e1953a1192a910c894395eb556bf41fa0b9138af14213"
+    },
+    {
+      "case": "90511-random-90704-local_delta",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_predictions_match": true,
+      "resume_indices": [
+        39,
+        40
+      ],
+      "actual_writes": 104,
+      "checkpoint_sha256": "0b05b75625057b44d801da5e7fa225032558e5c1ce4cb7d71e0d29ea9dde81de"
+    },
+    {
+      "case": "90511-random-90705-ema",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_predictions_match": true,
+      "resume_indices": [
+        39,
+        40
+      ],
+      "actual_writes": 104,
+      "checkpoint_sha256": "c9d64c763ab0e091e565baee14013ca35dd8b3bf26ed1c7fa5b0dd5c422eb1a1"
+    },
+    {
+      "case": "90511-random-90705-local_delta",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_predictions_match": true,
+      "resume_indices": [
+        39,
+        40
+      ],
+      "actual_writes": 104,
+      "checkpoint_sha256": "3d610712d35b63e04c584ed1d5dba4d651735190788b2c448534b83d5d034fc1"
+    },
+    {
+      "case": "90515-content-ema",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_predictions_match": true,
+      "resume_indices": [
+        39,
+        40
+      ],
+      "actual_writes": 104,
+      "checkpoint_sha256": "daaaed292a1dc66b40ec3e048a6b68527160115438cb5807fba9e7e80c3da39a"
+    },
+    {
+      "case": "90515-content-local_delta",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_predictions_match": true,
+      "resume_indices": [
+        39,
+        40
+      ],
+      "actual_writes": 104,
+      "checkpoint_sha256": "3969bad74a0d64c0290dcef54938245fcf21834a86e3cfcc054279572a85be77"
+    },
+    {
+      "case": "90515-random-90701-ema",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_predictions_match": true,
+      "resume_indices": [
+        39,
+        40
+      ],
+      "actual_writes": 104,
+      "checkpoint_sha256": "2148a06b7776ec4fa7c601fb1fb919b55409fdd2ff285218f202d83d1d7d853b"
+    },
+    {
+      "case": "90515-random-90701-local_delta",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_predictions_match": true,
+      "resume_indices": [
+        39,
+        40
+      ],
+      "actual_writes": 104,
+      "checkpoint_sha256": "0f267b91de1bc64a5fdc422d4ee0629db64587c2d779d0e01da1c110c9d3b10b"
+    },
+    {
+      "case": "90515-random-90702-ema",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_predictions_match": true,
+      "resume_indices": [
+        39,
+        40
+      ],
+      "actual_writes": 104,
+      "checkpoint_sha256": "beb19f49e73fb45556fb8c05dfaa5e8962558994a1aed3968786c5baf268a106"
+    },
+    {
+      "case": "90515-random-90702-local_delta",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_predictions_match": true,
+      "resume_indices": [
+        39,
+        40
+      ],
+      "actual_writes": 104,
+      "checkpoint_sha256": "154a3292c8cb1d51f902fe9118b6c352bb62c3f9f94a75f5cbccaec2b8309185"
+    },
+    {
+      "case": "90515-random-90703-ema",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_predictions_match": true,
+      "resume_indices": [
+        39,
+        40
+      ],
+      "actual_writes": 104,
+      "checkpoint_sha256": "6ee872ace8462e65dbede28461d25b7fb16015e8fc69a6fee6321d78a9f85ee8"
+    },
+    {
+      "case": "90515-random-90703-local_delta",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_predictions_match": true,
+      "resume_indices": [
+        39,
+        40
+      ],
+      "actual_writes": 104,
+      "checkpoint_sha256": "660d3c29a5ca1b5fd6da2aa6364899d98ad3f772d84a223dfb7d49645ad6c8ca"
+    },
+    {
+      "case": "90515-random-90704-ema",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_predictions_match": true,
+      "resume_indices": [
+        39,
+        40
+      ],
+      "actual_writes": 104,
+      "checkpoint_sha256": "bab0afba955d83ba9bc9172764aee4db85645e4a0627857f5e7263aac6594d85"
+    },
+    {
+      "case": "90515-random-90704-local_delta",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_predictions_match": true,
+      "resume_indices": [
+        39,
+        40
+      ],
+      "actual_writes": 104,
+      "checkpoint_sha256": "1455f8bc21d4a086bdbd984b9e66458cc6ef0cd0f29f088345a3ae9b31c5a515"
+    },
+    {
+      "case": "90515-random-90705-ema",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_predictions_match": true,
+      "resume_indices": [
+        39,
+        40
+      ],
+      "actual_writes": 104,
+      "checkpoint_sha256": "74f5909f51e20967d139075d9f9eeeb6e675827bf964f0f343f99bc3ae1855df"
+    },
+    {
+      "case": "90515-random-90705-local_delta",
+      "queries": 80,
+      "max_abs_error": 0.0,
+      "all_predictions_match": true,
+      "resume_indices": [
+        39,
+        40
+      ],
+      "actual_writes": 104,
+      "checkpoint_sha256": "3de3e119b9c16331ba4b0e6aed95447f71fdfab15c443cccd8d14705ea54ecb4"
+    }
+  ]
+}

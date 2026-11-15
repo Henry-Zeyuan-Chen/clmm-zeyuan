@@ -1,0 +1,6 @@
+{
+  "tests": 181,
+  "test_result": "passed17.33s",
+  "cpu_smokes": "All4frozenrules16hist;bothtrainingrules10steps16hist initial/final;newexclusionhelper16hist; allpassed",
+  "scope": "Engineeringonly90803; nopromotion ormaingateclaims"
+}

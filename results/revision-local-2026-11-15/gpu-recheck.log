@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "scope": "Selected actual inference/resume across48frozen+24initial+24final weightsets; not fullgridnumerical reproduction or retraining",
+  "device": "cuda",
+  "torch": "2.11.0+cu128",
+  "source_sha256": "ec580c4ed93f1df38b2ff701814ada254ba2de73d48dc6e0679449820fbe8d7d",
+  "queries": 10752,
+  "max_abs_error": 9.5367431640625e-07,
+  "verified_models": 96,
+  "expected_models": 96,
+  "full_planned_model_coverage": true,
+  "elapsed_seconds": 55.10735660401406,
+  "pure_reads": true,
+  "slow_parameters_and_rng_unchanged": true
+}

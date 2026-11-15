@@ -1,0 +1,40 @@
+{
+  "recorded_utc": "2026-11-15T20:03:19.434553+00:00",
+  "role": "Exploratory follow-up motivated after seeing trained short-revision ceiling; not a new primary",
+  "original_joint_primary": "Failed revision superiority at ceiling; unchanged and not rescued by this follow-up",
+  "source_commit": "c9f5c153f786f1b82ac383d01c1d18c6c595946b",
+  "driver_sha256": "f7162bbf3d86be1da4dd663e52c2ca97d1434c1087e380ffc1876c35556a8ab3",
+  "models": "All24 fixed trained checkpoints; EMA/local_delta x original initializers90511/90515 x content/all5maps90701..90705; no weights selected or changed",
+  "data": {
+    "seed": 91023,
+    "histories": 128,
+    "batch": 16,
+    "short": "Original acquire2/acquire4/revise2; online/reset/rolled",
+    "pressure": "K8, two true conflicting revisions; R1/4/16 x D0/64; online only",
+    "reinforcement": "Between8initialfacts and2existingrevisions, repeat oldbindings(initialkey2,initialkey3) R-1cycles; preserve originaldelay andquerylabels; boundary10+2*(R-1)",
+    "pairing": "Same base seed/key/value/distractor histories across all six R/D cells; rejectcandidate jointly if any cell signature excluded or duplicated",
+    "base_rng": "PCG64 SeedSequence([91023,8,2,500]); candidate seeds uniform[2000000000,3000000000)",
+    "exclusions": "Exact old90502 andnew90802 training plus all actual prior90723/frozen90823/trained90923 histories; also freshshort signatures"
+  },
+  "focus": {
+    "cell": "pressure_k8_r16_d64",
+    "revision": "local_delta minus EMA revised-query accuracy",
+    "stable": "local_delta minus EMA stable-query accuracy, exploratory noninferiority margin.03",
+    "families": [
+      "content",
+      "mean5random"
+    ],
+    "bootstrap": "128wholehistories jointly acrossfixedparents/maps;5000PCG64seed91004draws;nominal95percentile;exploratory,notconfirmatory"
+  },
+  "report": "AllR/Dcurves, all24cases, D0allfourtargetaccuracy andshortgates; no dropping failures or configuration selection",
+  "resources": {
+    "device": "CPU only",
+    "torch_threads": 2,
+    "global_deadline_seconds": 600,
+    "optimizer_steps": 0,
+    "persistent_trace_bytes": 65536,
+    "route_table_bytes": 512,
+    "extra_buffers": null,
+    "note": "Allmethodsreceiveidenticaloldrepeats/observations; extra projectionarithmeticmeansnotidenticalFLOPs"
+  }
+}

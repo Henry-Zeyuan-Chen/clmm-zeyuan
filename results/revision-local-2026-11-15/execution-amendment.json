@@ -1,0 +1,11 @@
+{
+  "recorded_utc": "2026-11-15T19:18:43.432803+00:00",
+  "reason": "CPUjob13919399PENDINGResources estimated2.5hours; no computationstarted. CancelandrunfrozenCPUphase locally fromisolatedLFcheckout c9f5c153, trainonInsomniaGPUindependently.",
+  "scientific_changes": false,
+  "main_outcomes_seen": false,
+  "local_frozen_timeout_seconds": 3300,
+  "device": "WindowsCPU Torch2.15; maintrainingGPU+CPUevaluationTorch2.11",
+  "original_cpu_job": 13919399,
+  "gpu_bound_hours": 1,
+  "no_renewal": true
+}

@@ -1,0 +1,9 @@
+{
+  "evaluation_weightsets": 96,
+  "observed_evaluation_writes": 3330048,
+  "trained_cases": 24,
+  "actual_optimizer_steps": 28800,
+  "actual_training_observations": 6707712,
+  "actual_training_answers": 4313088,
+  "scope": "Persistent tensor storage and counted updates; excludes Python overhead/transient buffers. Candidate adds projection arithmetic; not FLOPmatching or barelatency benchmark. Initial controls are not additional training."
+}

@@ -1,0 +1,11 @@
+JobID|JobName|State|Elapsed|AllocTRES|ExitCode
+13919399|clmm-revision-frozen|CANCELLED by 564221|00:00:00||0:0
+13919414|clmm-revision-train|CANCELLED by 564221|00:23:01|billing=4,cpu=4,gres/gpu:a6000=1,gres/gpu=1,mem=16G,node=1|0:0
+13919414.batch|batch|CANCELLED|00:23:02|cpu=4,gres/gpu:a6000=1,gres/gpu=1,mem=16G,node=1|0:15
+13919414.extern|extern|COMPLETED|00:23:03|billing=4,cpu=4,gres/gpu:a6000=1,gres/gpu=1,mem=16G,node=1|0:0
+13919414.0|timeout|COMPLETED|00:19:13|cpu=4,gres/gpu:a6000=1,gres/gpu=1,mem=16G,node=1|0:0
+13919414.1|tar|COMPLETED|00:00:02|cpu=1,gres/gpu:a6000=1,gres/gpu=1,mem=16G,node=1|0:0
+13919414.2|tar|COMPLETED|00:00:18|cpu=4,gres/gpu:a6000=1,gres/gpu=1,mem=16G,node=1|0:0
+             JOBID      STATE                   NAME     NODELIST(REASON)
+Selected desktop job: 13686886
+JOBID      STATE    PARTITION                   NAME       NODELIST    TIME_LEFT     NODELIST(REASON)
