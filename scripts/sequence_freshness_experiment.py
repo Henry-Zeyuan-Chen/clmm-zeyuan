@@ -58,6 +58,7 @@ def prepare(args):
             for arm in (ARMS if group.startswith('revision') else ('online',)):
                 raw,plan=replay_context(ep,arm);plans.append(dict(group=group,episode=i,**plan))
     common.json_file(out/'plans.json',plans)
+    common.json_file(out/'samples.json',make_samples(data))
     (out/'parents').mkdir();parents=[]
     for seed in (68101,68105):
         origin=args.parents/f'lm-{seed}/checkpoint.pt';target=out/'parents'/f'{seed}.pt';shutil.copy2(origin,target)
@@ -71,7 +72,7 @@ def prepare(args):
     if args.design:shutil.copy2(args.design,out/'design.json')
     meta=dict(status='succeeded',mode='prepare',source_commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=REPO,text=True).strip(),source_sha256=sources,
         train_seed=args.train_seed,development_seed=args.dev_seed,steps=args.steps,contexts=args.contexts,episodes=args.episodes,revision_episodes=args.revision_episodes,
-        files_sha256={n:common.sha256(out/n) for n in ('training.npz','training_plan.json.gz','episodes.json','plans.json','parents.json','excluded_signatures.json','exclusion_manifest.json')},
+        files_sha256={n:common.sha256(out/n) for n in ('training.npz','training_plan.json.gz','episodes.json','plans.json','samples.json','parents.json','excluded_signatures.json','exclusion_manifest.json')},
         training_answers=args.steps*args.contexts*2,training_input_bytes=int(np.sum(arrays['lengths']))*args.contexts*2,
         command=[sys.executable,*sys.argv],environment=dict(python=sys.version,torch=str(torch.__version__),numpy=np.__version__),elapsed_seconds=time.perf_counter()-start)
     common.json_file(out/'metadata.json',meta);print(json.dumps({k:v for k,v in meta.items() if k in ('status','steps','episodes','training_answers','training_input_bytes','elapsed_seconds')}),flush=True)
@@ -119,7 +120,7 @@ def make_samples(data):
 def evaluate(model,args,out,deadline):
     out.mkdir();tick=time.perf_counter();model.eval();before=state_sha(model)
     cpu=torch.random.get_rng_state().clone();cuda=torch.cuda.get_rng_state(args.device).clone() if str(args.device).startswith('cuda') else None
-    data=json.loads((args.packet/'episodes.json').read_text());rows=make_samples(data);logits=np.empty((len(rows),256),dtype=np.float32);resources=[]
+    rows=json.loads((args.packet/'samples.json').read_text());logits=np.empty((len(rows),256),dtype=np.float32);resources=[]
     buckets={}
     for i,row in enumerate(rows):buckets.setdefault((row['condition'],row['input_bytes']),[]).append(i)
     for (condition,length),indices in buckets.items():
@@ -184,7 +185,7 @@ def execute(args):
         meta['checkpoint_sha256']=save_checkpoint(out/'checkpoint.pt',model,config,source_info=dict(source_commit=packet['source_commit'],source_sha256=packet['source_sha256']),training_info=info)
         meta['final_state_sha256']=state_sha(model)
         # Reload proof uses an ordinary two-fact prefix and all256 output scores.
-        probe=np.array(list(bytes.fromhex(make_samples(json.loads((args.packet/'episodes.json').read_text()))[0]['prefix_hex'])),dtype=np.int64)[None]
+        probe=np.array(list(bytes.fromhex(json.loads((args.packet/'samples.json').read_text())[0]['prefix_hex'])),dtype=np.int64)[None]
         model.eval()
         with torch.no_grad():expected=model(torch.tensor(probe,device=args.device))[:,-1].cpu()
         loaded,_,_=load_checkpoint(out/'checkpoint.pt',map_location=args.device);loaded.eval()
