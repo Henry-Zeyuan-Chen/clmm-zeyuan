@@ -1,0 +1,118 @@
+{
+  "recorded_utc": "2026-11-15T20:54:49.007606+00:00",
+  "question": "Continuous versus periodic literal replay timing underK16/multiple genuine revisions, using fixed local_delta checkpoints",
+  "scope": "Reference component evaluation; no newtraining orbiologicalnovelty/fullTitansclaim",
+  "base_commit": "2e40ab0a09fe03600e21163e4aebb8b229afe0aa",
+  "checkpoint_source_commit": "c9f5c153f786f1b82ac383d01c1d18c6c595946b",
+  "models": {
+    "count": 12,
+    "rule": "local_delta",
+    "initializers": [
+      90511,
+      90515
+    ],
+    "routes": [
+      "content",
+      "random90701",
+      "random90702",
+      "random90703",
+      "random90704",
+      "random90705"
+    ],
+    "selection": "All12terminal1200step checkpoints, no bestmap/modelselection, no newoptimizer"
+  },
+  "data": {
+    "seed": 91123,
+    "histories": 128,
+    "batch": 16,
+    "facts": 16,
+    "revision_rounds": 3,
+    "changes_per_key": 3,
+    "revised_key_positions": [
+      14,
+      15
+    ],
+    "stable_early_positions": [
+      0,
+      1
+    ],
+    "stable_eligible_positions": [
+      12,
+      13
+    ],
+    "target_values": "All6currentqueryvaluesdistinct afterevery genuinearrival; eachrevisedkey4nocycleversions",
+    "prefill": 16,
+    "window": "[distractor,distractor,oldArefresh,oldBrefresh] then4arrivalswithnewA/B atphase0/1 or2/3 plus2distractors",
+    "gap": 16,
+    "gap_count": 2,
+    "post_observations": "56+finalretentiontail",
+    "phases": [
+      0,
+      2
+    ],
+    "tails": [
+      0,
+      64,
+      128
+    ],
+    "pressure_cells": 6,
+    "queries": "6originaltargets (4stable+2revised), plus1recentdistractoronlyiftail>0",
+    "gates": "3existing shortcells +gate_k16_r3 with16initialfacts+6newversionwritesallincommonprefill22, no replay",
+    "exclusions": "Actualold90502/new90802training plus canonical numeric KV histories fromprior clmm outputepisodefiles; freeze excluded-signature manifest before main"
+  },
+  "replay": {
+    "arms": [
+      "online",
+      "repeat",
+      "continuous",
+      "periodic"
+    ],
+    "capacity": 8,
+    "block": 4,
+    "prefill_replay": false,
+    "extra_per_post_arrival": 1,
+    "continuous": "one frozen sampleaftereachrealarrival",
+    "periodic": "same4frozenliteralpairsinidenticalorder afterblockfourtharrival",
+    "sample_rng": "privatePCG64 SeedSequence([episode_seed,77])",
+    "fifo": "latest-per-key, realarrivalsonlyrefresh",
+    "matched": "C/P exactsame literal(source,key,value)sequence perhistory, sameobservations/slowweights/table/state/extra writes; timingonly. Worldstaleness atapplicationmaydiffer asintendedconsequence.",
+    "write_counts": "online72+D; repeat/C/P128+2D; allfulllengthsdivisible4; finishflush0",
+    "controls": "online lowerbudget; repeatcurrent equalwrites butdifferentreplaycontent, no FIFO"
+  },
+  "measurement": {
+    "primary_cell": "bothphases attail128",
+    "primary_endpoints": [
+      "stableaccuracyPminusC",
+      "revisedaccuracyPminusC"
+    ],
+    "aggregation": ".5content+.5mean5random, equal2parents andmean2phases withinbasehistory",
+    "interval": "2co-primary two-sided97.5percent percentile CIs (Bonferroni2)",
+    "bootstrap": "5000PCG64seed91104paired128basehistory draws; jointlyretainphases/parents/maps",
+    "secondary": "family/phase/tail/early-eligible/recent/all-targetcorrect/obsolete-anyversion/staleevents/repeatanchors; nominal95descriptive",
+    "gates": "percheckpoint short acquire2/revise2>=.90 acquire4>=.80 +blockednormalminusrolledacquire2 lower95>0; neutralK16all6correct>=.80; retainallmodelsandfailures",
+    "own_D0": "Report everyarmD0all6correct>=.80; treatmentdamage neverexcluded. IfownD0fails, labelitsdelaycurve revision/interferencediagnostic ratherthan admitted retention."
+  },
+  "logging": [
+    "Allobservedplans, rawscores/predictions, readpurity andslow/RNG equality",
+    "Stale-at-application usingonly realarrivals; anyoldversion prediction",
+    "Lastdirectvalue andobsolete writes afterfinaltarget-valuedwrite",
+    "Perqueryreplaycount andFIFOeligibleblockcount; earlyfactsnotdirectlyrehearsed",
+    "ExactC/Pextraliteralsequence,equalwrites,64KiBstate and8+4records",
+    "Actualsession serialization atprefill/midblock;selected CPU/GPUinference recheck"
+  ],
+  "execution": {
+    "main": "localCPU2workers,1torchthread each (smallmatrixCPUfaster inpriorobservations)",
+    "preflight": "91103,16histories, two representative models sequential andconcurrent runtime estimates; no efficacy consulted",
+    "continuation": "Main128only ifprospective full12model2worker cost with1.25padding<=2700seconds; otherwisepreflightonly; no outcome-basedgridreduction",
+    "hard_timeout_seconds": 3300,
+    "no_renewal": true,
+    "gpu": "UseInsomnia onlyifneededfornumericalverification, oneallocation<=1hcancelafterwork"
+  },
+  "limitations": [
+    "Fixed64key/16valuecodebook andfixedtrainedcheckpoints",
+    "Stableearlyneverin8FIFO; stableeligiblecanbereplayedinitially, exposeboth",
+    "Periodicmayrestoreobsoleteversions; attributeeffecttotimingwithfrozenliteralpolicy, notsleepbiology",
+    "No populationtrainingseed/map uncertainty",
+    "Extra projectionarithmetic present inallarms; matchedwritesnotFLOPidentity"
+  ]
+}
