@@ -1,0 +1,33 @@
+2402-login-002
+Account: edu. CPU: edu1. GPU: short / free_short. Current limits: up to 12h, 2 GPUs per user in this QOS.
+NODE | GPU RESOURCES | STATE (node state does not guarantee a free GPU)
+ins035|gpu:l40:2|mix
+ins036|gpu:l40:2|mix
+ins037|gpu:l40:2|mix-
+ins038|gpu:l40s:2|drng
+ins039|gpu:l40s:2|mix
+ins046|gpu:R6000:8|mix-
+ins047|gpu:R6000:8|mix-
+ins048|gpu:h100:2|mix-
+ins050|gpu:h100:2|alloc
+ins056|gpu:l40s:2|mix-
+ins057|gpu:l40s:2|mix-
+ins058|gpu:l40s:2|drain*
+ins059|gpu:l40s:2|mix-
+ins060|gpu:l40s:2|mix-
+ins061|gpu:l40s:2|mix
+ins080|gpu:A6000:8|mix
+ins081|gpu:A6000:8|mix-
+ins082|gpu:A6000:8|drain*
+ins083|gpu:A6000:8|mix-
+ins084|gpu:A6000:8|mix
+ins085|gpu:A6000:8|alloc
+ins086|gpu:A6000:8|comp
+ins087|gpu:A6000:8|mix-
+ins088|gpu:A6000:8|mix-
+ins089|gpu:A6000:8|mix
+ins090|gpu:A6000:8|alloc
+ins091|gpu:A6000:8|drng
+ins092|gpu:A6000:8|mix-
+ins093|gpu:A6000:4|mix-
+ins094|gpu:A6000:4|drng

@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "scope": "static parameter/trace geometry from preserved strict-loading source and fixed model configs; no model import or inference",
+  "slow_parameter_elements": 81921,
+  "slow_geometry": "Five learned(4,64,64) tensors:key_encoder,value_encoder,decoder,W0,alpha; one scalar raw_eta",
+  "slow_float32_bytes": 327684,
+  "adaptive_trace_elements": 16384,
+  "adaptive_float32_bytes_per_stream": 65536,
+  "fixed_route_table_int64_bytes": 512,
+  "controller_max_records": {
+    "fifo": 8,
+    "snapshot": 4
+  },
+  "exclusions": [
+    "Python containers, allocator reservations, serialization framing, temporary vectorized candidates, offline optimizer state"
+  ],
+  "sources": {
+    "clmm/hebbian/adapter.py": "e52c78207bd308e98815e55b7140dc36016c87a40614d628995e6cc25b8409f5",
+    "clmm/hebbian/routing_decay.py": "1801f7c7112a4ed513bdde8e0cb9c0d7621bed28e832fe05bf156974769fb74b",
+    "clmm/hebbian/revision.py": "2ebfaf8dcc7ccd58af4aca2df2fde20a24fa0994cf519276ea6df7bcab94ccbc",
+    "clmm/pretrain/kv_scheduler.py": "95546fddb2e5645a8f2f7fd23fb52de8ad50e1730adb2ba0ad080986e5e713e2"
+  },
+  "primary_size_reference": "https://arxiv.org/html/2501.00663v1#S5.SS1",
+  "interpretation": "Controlled typed-KV component capacity; no direct full Titans or language-model scaling claim."
+}

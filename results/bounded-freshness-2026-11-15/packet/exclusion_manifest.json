@@ -1,0 +1,180 @@
+{
+  "inputs": [
+    {
+      "kind": "training",
+      "seed": 90502,
+      "histories": 38393,
+      "sha256": "914933206a8a0897fd43bb304e09c573c3e982f4ea18325b930effddaf935cb6"
+    },
+    {
+      "kind": "training",
+      "seed": 90802,
+      "histories": 38396,
+      "sha256": "1ee968d51de054d2497d4582788eb12a304966b00e98ed8af724d6e1c9abcdf1"
+    },
+    {
+      "kind": "prior_evaluation",
+      "path": "clmm-adapter-integration-2026-11-15/fork-gradient-dense-90511/evaluation/episodes.json",
+      "sha256": "8eaeda1c67f9425a2dad766a055a813e4d8dda1dcf35c6dae8135429ba9fff10",
+      "histories": 512
+    },
+    {
+      "kind": "prior_evaluation",
+      "path": "clmm-adapter-integration-2026-11-15/gradient-dense-90511/evaluation/episodes.json",
+      "sha256": "ef2bad79828e665e074fa9accf6802b9cfcf493ce2f804ca178cdf451ec6968c",
+      "histories": 768
+    },
+    {
+      "kind": "prior_evaluation",
+      "path": "clmm-adapter-integration-2026-11-15/smoke-hebbian-cpu/evaluation/episodes.json",
+      "sha256": "19e0a0ab7b33b6f68385a96e06fc395b957b9b29b499f5d9d641442feefe3914",
+      "histories": 18
+    },
+    {
+      "kind": "prior_evaluation",
+      "path": "clmm-adapter-integration-2026-11-15/smoke-hebbian-cpu/initial-evaluation/episodes.json",
+      "sha256": "8561d706fca656b3f176658f1dc5b80da1d30b6ccf7773bbaff4e56a224a6272",
+      "histories": 10
+    },
+    {
+      "kind": "prior_evaluation",
+      "path": "clmm-adapter-integration-2026-11-15/throughput-gpu/evaluation/episodes.json",
+      "sha256": "b879aa26471c930e29a4736e29b0513831f22b44c0420273f3ee1dd30f7195ab",
+      "histories": 144
+    },
+    {
+      "kind": "prior_evaluation",
+      "path": "clmm-adapter-integration-2026-11-15/throughput-gpu/initial-evaluation/episodes.json",
+      "sha256": "78ff57b370de56bfe7116de260f79cdb846585dc7bb8bb53b8e5467cc81b7c07",
+      "histories": 80
+    },
+    {
+      "kind": "prior_evaluation",
+      "path": "clmm-bounded-freshness-2026-11-15/engineering/concurrent/90511-content-local_delta/evaluation/episodes.json",
+      "sha256": "db44813ad04731247aa9b8c5d11c8f008a02fa856019bcb10b5da81745f95b15",
+      "histories": 160
+    },
+    {
+      "kind": "prior_evaluation",
+      "path": "clmm-fixed-set-2026-11-14/disjoint-transfer/episodes.json",
+      "sha256": "48676030808a0129541831c5200ed6280ad36e52ff1532f414cd5345120097c8",
+      "histories": 0
+    },
+    {
+      "kind": "prior_evaluation",
+      "path": "clmm-kv-control-2026-11-14/confirm-s05-90301/evaluation/episodes.json",
+      "sha256": "4e7af389c95abe465b8e1a72f2ee04dcd6919aa240b70ed77325ef91841877b8",
+      "histories": 384
+    },
+    {
+      "kind": "prior_evaluation",
+      "path": "clmm-kv-control-2026-11-14/delta-full/evaluation/episodes.json",
+      "sha256": "d52b8976b8574e2f7466b953b4b357161958226dd4307c8f1512c4477f2777e1",
+      "histories": 672
+    },
+    {
+      "kind": "prior_evaluation",
+      "path": "clmm-kv-control-2026-11-14/dense-calibration/evaluation/episodes.json",
+      "sha256": "08e1153d965cd870444d7da1504ab6f01376cd069b5e7ba061fb5247605debbe",
+      "histories": 672
+    },
+    {
+      "kind": "prior_evaluation",
+      "path": "clmm-kv-control-2026-11-14/s05-90301/evaluation/episodes.json",
+      "sha256": "92dc4ed3161d5ebf1db9956ab9060520938083230692318aac9c453882e87814",
+      "histories": 384
+    },
+    {
+      "kind": "prior_evaluation",
+      "path": "clmm-kv-control-2026-11-14/smoke-delta-cpu/evaluation/episodes.json",
+      "sha256": "16b2fe87a5d74fba9f0747cba7a5360fa81cdc56a24f4bdc5347a7002ab77ff1",
+      "histories": 24
+    },
+    {
+      "kind": "prior_evaluation",
+      "path": "clmm-kv-control-2026-11-14/smoke-neural-cpu/evaluation/episodes.json",
+      "sha256": "999820a9b9f6672f410f08c054d57e225571477522023ea9c4a5f1a358f8913e",
+      "histories": 6
+    },
+    {
+      "kind": "prior_evaluation",
+      "path": "clmm-nonlinear-correlated-2026-11-15/comparison-initial-r32-90511/evaluation/episodes.json",
+      "sha256": "7e9ac30bb71a8d8bafef2c34b8b6e095d38f596a13dfd4418701a5b11b2f2679",
+      "histories": 1536
+    },
+    {
+      "kind": "prior_evaluation",
+      "path": "clmm-nonlinear-correlated-2026-11-15/confirm-r32-90511/evaluation/episodes.json",
+      "sha256": "52429b92eaa7fceaa890613a831050db0e6c52fabdc966e0c71877a76581ce90",
+      "histories": 768
+    },
+    {
+      "kind": "prior_evaluation",
+      "path": "clmm-nonlinear-correlated-2026-11-15/r32-90511/evaluation/episodes.json",
+      "sha256": "8f2c443ea07d63aa241c87ba12c7f6247c5a26c9a4baa37ddf2da21357a43eb4",
+      "histories": 480
+    },
+    {
+      "kind": "prior_evaluation",
+      "path": "clmm-nonlinear-correlated-2026-11-15/smoke-r32-cpu/evaluation/episodes.json",
+      "sha256": "9a14dcf8be55946dc40a7ae0721388441a093f48995b4bb34b7867cd9befb170",
+      "histories": 12
+    },
+    {
+      "kind": "prior_evaluation",
+      "path": "clmm-revision-local-2026-11-15/engineering-cpu/smoke-exclusions-cpu/episodes.json",
+      "sha256": "b27084d8eb8edb3d7ab4304e5a93f3a17413aa4268a412c69362ac1a5f088dca",
+      "histories": 144
+    },
+    {
+      "kind": "prior_evaluation",
+      "path": "clmm-revision-local-2026-11-15/engineering-gpu/episodes.json",
+      "sha256": "cff2c89407511a94d74def8cd6ba00cd4eb6e61fab2e545d1db3de9ac6b65a0a",
+      "histories": 144
+    },
+    {
+      "kind": "prior_evaluation",
+      "path": "clmm-revision-local-2026-11-15/frozen/episodes.json",
+      "sha256": "3353feb68eecc550dfd632dca4dc9097442a517169ac6d4b7bdc9fd21d7b3c21",
+      "histories": 1152
+    },
+    {
+      "kind": "prior_evaluation",
+      "path": "clmm-revision-local-2026-11-15/provenance/prior90723/episodes.json",
+      "sha256": "5f78cf37e3900557ecc4f8b9e2dca484f834265b3f6dd4c540ca92509d33666d",
+      "histories": 1152
+    },
+    {
+      "kind": "prior_evaluation",
+      "path": "clmm-revision-local-2026-11-15/stress/episodes.json",
+      "sha256": "29a70987f93744af82832644297cdbc1511ca62fc200ca8753889dbdc4599996",
+      "histories": 1152
+    },
+    {
+      "kind": "prior_evaluation",
+      "path": "clmm-revision-local-2026-11-15/trained/episodes.json",
+      "sha256": "0899d8bd07117957cd4bb6c66828f622f902c11433eaeaf7878ffbc982c40f88",
+      "histories": 1152
+    },
+    {
+      "kind": "prior_evaluation",
+      "path": "clmm-routing-decay-2026-11-15/engineering/episodes.json",
+      "sha256": "c93f78e3280dd7a46816dc54208bc72591c4ac29abbf0f681e6a657f58d73478",
+      "histories": 144
+    },
+    {
+      "kind": "prior_evaluation",
+      "path": "clmm-sleep-multirevision-2026-11-15/engineering/concurrent/90511-content-local_delta/evaluation/episodes.json",
+      "sha256": "3bf136d057435b6bd3323402808febf670ce60d39696cd37a2701ab4f96d2417",
+      "histories": 160
+    },
+    {
+      "kind": "prior_evaluation",
+      "path": "clmm-sleep-multirevision-2026-11-15/packet/episodes.json",
+      "sha256": "cebeee663219b97abd9192bfa90eb563bf39e86eb5dcac1aff1606b7c8b44046",
+      "histories": 1280
+    }
+  ],
+  "union_histories": 89093,
+  "signature_format": "sha256(bytes(keys)+b|+bytes(values))"
+}

@@ -1,0 +1,42 @@
+{
+  "status": "passed",
+  "scope": "Actual producer regeneration with expanded exclusions, independent of reviewer generator; exact full dataset including query metadata",
+  "original_packets_modified": false,
+  "extra_signatures": [
+    "5671c63e7ecea6474409f7eb758467e43cdb1892c7ffbdb4b9bf296fa7293bca"
+  ],
+  "checks": [
+    {
+      "seed": 91223,
+      "histories_per_cell": 128,
+      "literal_histories": 1280,
+      "full_dataset_including_labels_equal": true,
+      "lengths": [
+        2,
+        3,
+        4,
+        22,
+        72,
+        136,
+        200
+      ],
+      "overlap_with_supplement": 0
+    },
+    {
+      "seed": 91203,
+      "histories_per_cell": 16,
+      "literal_histories": 160,
+      "full_dataset_including_labels_equal": true,
+      "lengths": [
+        2,
+        3,
+        4,
+        22,
+        72,
+        136,
+        200
+      ],
+      "overlap_with_supplement": 0
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+[
+  {
+    "title": "Titans: Learning to Memorize at Test Time, v1",
+    "url": "https://arxiv.org/html/2501.00663v1#S5.SS1",
+    "checked_date": "2026-11-15",
+    "section": "5.1 Experimental Setup",
+    "verified_claim": "Primary paper reports parameter scales 170M/340M/400M/760M; first three train on15B tokens and largest on30B.",
+    "scope_note": "Scale context only; no efficacy or reproduction claim for the component experiment."
+  }
+]

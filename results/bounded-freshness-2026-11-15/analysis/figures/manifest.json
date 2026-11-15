@@ -1,0 +1,53 @@
+{
+  "source_tables": {
+    "summary.json": "296e3032344c8b7d633eb53af917e778a638b6ec2c597915ea372dfae65bcf2f",
+    "aggregate.csv": "af11cfb7c1b25014c00184c89fa94e42f0590f78b201527534aca409aed07b09",
+    "contrasts.csv": "b3dd9b52738281c098b0d86770d329a1ba96fdd545203bbec04a311ad2df0fb9",
+    "replay_telemetry.csv": "5d44fee973e6d69fc9f6b1aa89bdb2d1302fe1aab2367629862c1375da4da983"
+  },
+  "script_sha256": "e4d8a733f6878979024eaacc6a6b754d00bc4e568ba0655cbb0051ce092fdb33",
+  "figures": [
+    {
+      "name": "co_primary_freshness_effects",
+      "files": {
+        "png": "2dd98d2da19fd4fdea7dfbff44fee5a43c599b98f7106cf54d3ee60ec5325b81",
+        "pdf": "73c4c1ca9fe956ae33bc002f0b55220e9776b0ebb2bd8975a39784b0c11d9a57",
+        "svg": "07eefad26806564a52750ef69aeac9cf1f303184aa52ef58bf07660e03ab4127"
+      }
+    },
+    {
+      "name": "balanced_accuracy",
+      "files": {
+        "png": "58b942e39eeba96361d2ce9961f2e1f7edf825071e8965e57acf708e1c2c120b",
+        "pdf": "e0183b966d9406433c6c5c29c6692c8a1101369f3df1b1c9defe73e16cae99c1",
+        "svg": "612097eae739a3a0144b5f12167f7150dc30e341c32ccb2189989ce587cc23e3"
+      }
+    },
+    {
+      "name": "stable_query_groups",
+      "files": {
+        "png": "a1403a0489e6ac56e1d8dd463418b8bb6873886dca51b01eea4011d7b05a832d",
+        "pdf": "ad5da3216c4849e3ba223a1f9bfc7a2c73126711e925f163e9920c99042bf0b2",
+        "svg": "0f0d5cee8c076f2c9dd3dafd1bb9339e5953a2a28e9c78a4be09df8291d4b76b"
+      }
+    },
+    {
+      "name": "timing_freshness_interaction",
+      "files": {
+        "png": "98bc3f5905a91f404e68fd23f99e9cfddd682b10115ed1153f408b986be83fe5",
+        "pdf": "a76a5b040cd64f6f5037c999b33283aa9f9572bc05ac4ed965d3d21d1198bd31",
+        "svg": "10af136a62a64747a681b1fb46b5801cfac0be447469fb7507c6e20cce874668"
+      }
+    },
+    {
+      "name": "replay_staleness_refresh_fallback",
+      "files": {
+        "png": "db25f93b178928af87fe1aa7347f4a6ea97bb4bb89003d1837f3ce87e8a4e757",
+        "pdf": "730f6d494d044246ac8d953f8c80ff2685af02a7555873217b2b7394e081eb1b",
+        "svg": "f04e06b8c4302c0d65ce99051f3584532554fe82f8510a55e5d2356e49cce2c5"
+      }
+    }
+  ],
+  "uncertainty": "Paired history bootstrap; primary97.5% (Bonferroni2), secondary95%; fixed checkpoints/maps",
+  "telemetry_unit": "One generated history set; not12 independent checkpoint replications"
+}

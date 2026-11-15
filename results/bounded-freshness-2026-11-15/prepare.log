@@ -1,0 +1,3 @@
+C:\Users\henry\Documents\Codex\2026-10-22\i\work\clmm-test-env\Lib\site-packages\torch\jit\_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+{"prepared": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\packet", "models": 12, "cells": ["acquire2", "acquire4", "revise2", "gate_k16_r3", "pressure_k16_p0_d0", "pressure_k16_p0_d64", "pressure_k16_p0_d128", "pressure_k16_p2_d0", "pressure_k16_p2_d64", "pressure_k16_p2_d128"], "histories": 128, "exclusions": 89093}

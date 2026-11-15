@@ -1,0 +1,123 @@
+{
+  "status": "complete_with_documented_launch_exclusion_coverage_omission",
+  "python": "3.13.3 (tags/v3.13.3:6280bb5, Apr  8 2025, 14:47:33) [MSC v.1943 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "numpy": "2.2.6",
+  "matplotlib": "3.10.3",
+  "no_model_inference": true,
+  "no_training": true,
+  "no_gpu": true,
+  "source_commit": "9ab3901860548d2d87a9afc61e8ce58f950a03ce",
+  "checks_completed": [
+    "prospective protocol and primary estimand review",
+    "frozen scheduler/session/factory/observer source review",
+    "independent literal generator regeneration and full exclusion enumeration",
+    "all fixed checkpoint/config/map/source byte authentication",
+    "independent causal FIFO plan reconstruction and refresh/fallback telemetry",
+    "runtime-only continuation gate arithmetic",
+    "known-vector bootstrap arithmetic and script syntax",
+    "all12 full raw score/plan/refresh/fallback/query/resource/hash audits",
+    "declared paired co-primary bootstrap and secondary tables",
+    "five scientific figures generated and visually reviewed",
+    "coordinator-produced selected CPU proof inspected without reviewer inference",
+    "broader prior-JSON exclusion supplement and exact unchanged regeneration verified"
+  ],
+  "raw_case_audit": "all12 passed; no model/checkpoint/map removed",
+  "main_statistics": "declared co-primary history bootstrap completed after all12 raw audits",
+  "scope_notes": [
+    "Exact whole-history exclusion; typed key/value vocabularies are intentionally shared.",
+    "Uncertainty conditional on fixed checkpoints/maps.",
+    "No engineering efficacy outputs inspected."
+  ],
+  "completed_utc": "2026-11-15T22:40:50.860735+00:00",
+  "audited_totals": {
+    "score_vectors": 433152,
+    "causal_writes": 13192704,
+    "extra_writes": 5529600,
+    "resource_batches": 4608,
+    "literal_plans": 73728,
+    "matched_candidate_cells": 9216,
+    "stale_extra_writes": 43668,
+    "refreshed_records": 169296,
+    "changed_values": 43668,
+    "fallback_writes": 698052
+  },
+  "primary": [
+    {
+      "route_family": "balanced",
+      "phase": "mean",
+      "retention_tail": 128,
+      "category": "stable",
+      "candidate": "bounded",
+      "baseline": "literal",
+      "schedule": "mean",
+      "contrast_kind": "freshness",
+      "candidate_accuracy": 0.8328125,
+      "baseline_accuracy": 0.8329589843749999,
+      "estimate": -0.00014648437500000208,
+      "lower": -0.0012695312500000016,
+      "upper": 0.0006103515624999974,
+      "interval_level": 0.975,
+      "role": "co-primary",
+      "histories": 128,
+      "bootstrap_draws": 5000,
+      "bootstrap_seed": 91204
+    },
+    {
+      "route_family": "balanced",
+      "phase": "mean",
+      "retention_tail": 128,
+      "category": "revised",
+      "candidate": "bounded",
+      "baseline": "literal",
+      "schedule": "mean",
+      "contrast_kind": "freshness",
+      "candidate_accuracy": 0.9393066406249999,
+      "baseline_accuracy": 0.834619140625,
+      "estimate": 0.10468750000000002,
+      "lower": 0.07763671875,
+      "upper": 0.13276733398437496,
+      "interval_level": 0.975,
+      "role": "co-primary",
+      "histories": 128,
+      "bootstrap_draws": 5000,
+      "bootstrap_seed": 91204
+    }
+  ],
+  "all_common_checkpoint_gates_pass": true,
+  "own_D0_gate_passes": {
+    "continuous": 0,
+    "periodic": 0,
+    "continuous_bounded": 24,
+    "periodic_bounded": 24,
+    "online": 24,
+    "repeat": 24
+  },
+  "own_D0_denominator_per_arm": 24,
+  "interpretation": "revision/interference diagnostic; all conditions retained",
+  "exclusion_coverage": "One omitted prior integration history found postlaunch; zero overlap and exact unchanged main/engineering regeneration with respective expanded unions; original packets untouched",
+  "pipeline_status": "succeeded",
+  "observed_pipeline_seconds": 1850.61939909996,
+  "selected_coordinator_numerical_proof": {
+    "queries": 9216,
+    "models": 12,
+    "max_abs_score_error": 0,
+    "reviewer_executed_model_inference": false
+  },
+  "figures": {
+    "count": 5,
+    "formats": [
+      "png",
+      "pdf",
+      "svg"
+    ],
+    "visual_review": "all5passed"
+  },
+  "remaining_limitations": [
+    "Latest observed arrival defines target authority; no noisy/conflicting-source study.",
+    "Fixed-checkpoint/map conditional history intervals; not training-population uncertainty.",
+    "Literal arms fail ownD0; revised benefit is repair/interference evidence, not two-admitted-arm retention evidence.",
+    "Bounded replay does not establish benefit over online/repeat anchors.",
+    "Reference typed-KV component, not full Titans or language-scale transfer."
+  ]
+}

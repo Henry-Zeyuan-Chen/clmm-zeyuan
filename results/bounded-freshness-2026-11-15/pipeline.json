@@ -1,0 +1,421 @@
+{
+  "status": "succeeded",
+  "started_epoch": 1794779998.0679932,
+  "commands": [
+    {
+      "command": [
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-test-env\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-bounded-freshness\\source-checkout\\scripts\\freshness_experiment.py",
+        "prepare",
+        "--out",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\engineering\\packet",
+        "--trained",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\trained",
+        "--history-root",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs",
+        "--design",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\design.json",
+        "--dev-seed",
+        "91203",
+        "--episodes",
+        "16"
+      ],
+      "log": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\engineering\\prepare.log",
+      "elapsed": 22.962300700019114,
+      "returncode": 0
+    },
+    {
+      "command": [
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-test-env\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-bounded-freshness\\source-checkout\\scripts\\freshness_experiment.py",
+        "prepare",
+        "--out",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\packet",
+        "--trained",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\trained",
+        "--history-root",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs",
+        "--design",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\design.json",
+        "--dev-seed",
+        "91223",
+        "--episodes",
+        "128"
+      ],
+      "log": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\prepare.log",
+      "elapsed": 25.18415579997236,
+      "returncode": 0
+    }
+  ],
+  "representatives": [
+    "90511-content-local_delta",
+    "90515-random-90701-local_delta"
+  ],
+  "preflight_sequential": [
+    {
+      "command": [
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-test-env\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-bounded-freshness\\source-checkout\\scripts\\freshness_experiment.py",
+        "evaluate",
+        "--out",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\engineering\\sequential\\90511-content-local_delta",
+        "--packet",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\engineering\\packet",
+        "--model",
+        "90511-content-local_delta",
+        "--max-seconds",
+        "1500"
+      ],
+      "log": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\engineering\\logs\\sequential-90511-content-local_delta.log",
+      "elapsed": 38.173765300016385,
+      "returncode": 0
+    },
+    {
+      "command": [
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-test-env\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-bounded-freshness\\source-checkout\\scripts\\freshness_experiment.py",
+        "evaluate",
+        "--out",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\engineering\\sequential\\90515-random-90701-local_delta",
+        "--packet",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\engineering\\packet",
+        "--model",
+        "90515-random-90701-local_delta",
+        "--max-seconds",
+        "1500"
+      ],
+      "log": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\engineering\\logs\\sequential-90515-random-90701-local_delta.log",
+      "elapsed": 39.08555299998261,
+      "returncode": 0
+    }
+  ],
+  "preflight_concurrent": [
+    {
+      "command": [
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-test-env\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-bounded-freshness\\source-checkout\\scripts\\freshness_experiment.py",
+        "evaluate",
+        "--out",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\engineering\\concurrent\\90511-content-local_delta",
+        "--packet",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\engineering\\packet",
+        "--model",
+        "90511-content-local_delta",
+        "--max-seconds",
+        "1500"
+      ],
+      "log": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\engineering\\logs\\concurrent-90511-content-local_delta.log",
+      "elapsed": 41.05249570001615,
+      "returncode": 0
+    },
+    {
+      "command": [
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-test-env\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-bounded-freshness\\source-checkout\\scripts\\freshness_experiment.py",
+        "evaluate",
+        "--out",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\engineering\\concurrent\\90515-random-90701-local_delta",
+        "--packet",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\engineering\\packet",
+        "--model",
+        "90515-random-90701-local_delta",
+        "--max-seconds",
+        "1500"
+      ],
+      "log": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\engineering\\logs\\concurrent-90515-random-90701-local_delta.log",
+      "elapsed": 41.202027899969835,
+      "returncode": 0
+    }
+  ],
+  "concurrent_wall_seconds": 41.23543050000444,
+  "projected_main_seconds": 2474.1258300002664,
+  "preflight_pass": true,
+  "main_started_epoch": 1794780164.7290385,
+  "main": [
+    {
+      "command": [
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-test-env\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-bounded-freshness\\source-checkout\\scripts\\freshness_experiment.py",
+        "evaluate",
+        "--out",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\runs\\90511-content-local_delta",
+        "--packet",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\packet",
+        "--model",
+        "90511-content-local_delta",
+        "--max-seconds",
+        "1500"
+      ],
+      "log": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\logs\\runs-90511-content-local_delta.log",
+      "elapsed": 284.78219629998785,
+      "returncode": 0,
+      "name": "90511-content-local_delta"
+    },
+    {
+      "command": [
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-test-env\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-bounded-freshness\\source-checkout\\scripts\\freshness_experiment.py",
+        "evaluate",
+        "--out",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\runs\\90511-random-90701-local_delta",
+        "--packet",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\packet",
+        "--model",
+        "90511-random-90701-local_delta",
+        "--max-seconds",
+        "1500"
+      ],
+      "log": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\logs\\runs-90511-random-90701-local_delta.log",
+      "elapsed": 285.3475852999836,
+      "returncode": 0,
+      "name": "90511-random-90701-local_delta"
+    },
+    {
+      "command": [
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-test-env\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-bounded-freshness\\source-checkout\\scripts\\freshness_experiment.py",
+        "evaluate",
+        "--out",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\runs\\90511-random-90703-local_delta",
+        "--packet",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\packet",
+        "--model",
+        "90511-random-90703-local_delta",
+        "--max-seconds",
+        "1500"
+      ],
+      "log": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\logs\\runs-90511-random-90703-local_delta.log",
+      "elapsed": 280.829792799952,
+      "returncode": 0,
+      "name": "90511-random-90703-local_delta"
+    },
+    {
+      "command": [
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-test-env\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-bounded-freshness\\source-checkout\\scripts\\freshness_experiment.py",
+        "evaluate",
+        "--out",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\runs\\90511-random-90702-local_delta",
+        "--packet",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\packet",
+        "--model",
+        "90511-random-90702-local_delta",
+        "--max-seconds",
+        "1500"
+      ],
+      "log": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\logs\\runs-90511-random-90702-local_delta.log",
+      "elapsed": 281.9458047999651,
+      "returncode": 0,
+      "name": "90511-random-90702-local_delta"
+    },
+    {
+      "command": [
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-test-env\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-bounded-freshness\\source-checkout\\scripts\\freshness_experiment.py",
+        "evaluate",
+        "--out",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\runs\\90511-random-90705-local_delta",
+        "--packet",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\packet",
+        "--model",
+        "90511-random-90705-local_delta",
+        "--max-seconds",
+        "1500"
+      ],
+      "log": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\logs\\runs-90511-random-90705-local_delta.log",
+      "elapsed": 280.60422440001275,
+      "returncode": 0,
+      "name": "90511-random-90705-local_delta"
+    },
+    {
+      "command": [
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-test-env\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-bounded-freshness\\source-checkout\\scripts\\freshness_experiment.py",
+        "evaluate",
+        "--out",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\runs\\90511-random-90704-local_delta",
+        "--packet",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\packet",
+        "--model",
+        "90511-random-90704-local_delta",
+        "--max-seconds",
+        "1500"
+      ],
+      "log": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\logs\\runs-90511-random-90704-local_delta.log",
+      "elapsed": 281.1735484999954,
+      "returncode": 0,
+      "name": "90511-random-90704-local_delta"
+    },
+    {
+      "command": [
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-test-env\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-bounded-freshness\\source-checkout\\scripts\\freshness_experiment.py",
+        "evaluate",
+        "--out",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\runs\\90515-content-local_delta",
+        "--packet",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\packet",
+        "--model",
+        "90515-content-local_delta",
+        "--max-seconds",
+        "1500"
+      ],
+      "log": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\logs\\runs-90515-content-local_delta.log",
+      "elapsed": 275.9828230999992,
+      "returncode": 0,
+      "name": "90515-content-local_delta"
+    },
+    {
+      "command": [
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-test-env\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-bounded-freshness\\source-checkout\\scripts\\freshness_experiment.py",
+        "evaluate",
+        "--out",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\runs\\90515-random-90701-local_delta",
+        "--packet",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\packet",
+        "--model",
+        "90515-random-90701-local_delta",
+        "--max-seconds",
+        "1500"
+      ],
+      "log": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\logs\\runs-90515-random-90701-local_delta.log",
+      "elapsed": 276.4468278999557,
+      "returncode": 0,
+      "name": "90515-random-90701-local_delta"
+    },
+    {
+      "command": [
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-test-env\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-bounded-freshness\\source-checkout\\scripts\\freshness_experiment.py",
+        "evaluate",
+        "--out",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\runs\\90515-random-90702-local_delta",
+        "--packet",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\packet",
+        "--model",
+        "90515-random-90702-local_delta",
+        "--max-seconds",
+        "1500"
+      ],
+      "log": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\logs\\runs-90515-random-90702-local_delta.log",
+      "elapsed": 281.56712999998126,
+      "returncode": 0,
+      "name": "90515-random-90702-local_delta"
+    },
+    {
+      "command": [
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-test-env\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-bounded-freshness\\source-checkout\\scripts\\freshness_experiment.py",
+        "evaluate",
+        "--out",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\runs\\90515-random-90703-local_delta",
+        "--packet",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\packet",
+        "--model",
+        "90515-random-90703-local_delta",
+        "--max-seconds",
+        "1500"
+      ],
+      "log": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\logs\\runs-90515-random-90703-local_delta.log",
+      "elapsed": 281.0873312999611,
+      "returncode": 0,
+      "name": "90515-random-90703-local_delta"
+    },
+    {
+      "command": [
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-test-env\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-bounded-freshness\\source-checkout\\scripts\\freshness_experiment.py",
+        "evaluate",
+        "--out",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\runs\\90515-random-90705-local_delta",
+        "--packet",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\packet",
+        "--model",
+        "90515-random-90705-local_delta",
+        "--max-seconds",
+        "1500"
+      ],
+      "log": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\logs\\runs-90515-random-90705-local_delta.log",
+      "elapsed": 278.0990128000267,
+      "returncode": 0,
+      "name": "90515-random-90705-local_delta"
+    },
+    {
+      "command": [
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-test-env\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-bounded-freshness\\source-checkout\\scripts\\freshness_experiment.py",
+        "evaluate",
+        "--out",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\runs\\90515-random-90704-local_delta",
+        "--packet",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\packet",
+        "--model",
+        "90515-random-90704-local_delta",
+        "--max-seconds",
+        "1500"
+      ],
+      "log": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\logs\\runs-90515-random-90704-local_delta.log",
+      "elapsed": 279.0640061000013,
+      "returncode": 0,
+      "name": "90515-random-90704-local_delta"
+    }
+  ],
+  "main_elapsed_seconds": 1683.9583506584167,
+  "ended_epoch": 1794781848.687393,
+  "elapsed_seconds": 1850.61939909996
+}

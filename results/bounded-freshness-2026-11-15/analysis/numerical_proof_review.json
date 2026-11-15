@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "reviewer_executed_model_inference": false,
+  "verification_sha256": "6e35e76af9244f49514724c05195b1e6d40ac97d8dd7202cfde06aa05feea302",
+  "source_script_sha256": "d89a9d192590df38339ef410b2cfa619fcfcb2656b6e61338c632a5ac9542404",
+  "scope": "Inspected coordinator-produced selected actual CPU inference/resume proof; not reviewer rerun or full-grid numerical reproduction",
+  "models": 12,
+  "cases": 84,
+  "queries": 9216,
+  "max_abs_score_error": 0,
+  "all_predictions_match": true,
+  "pressure_cell": "pressure_k16_p2_d128",
+  "pressure_arms": [
+    "online",
+    "repeat",
+    "continuous",
+    "periodic",
+    "continuous_bounded",
+    "periodic_bounded"
+  ],
+  "neutral_gate": "gate_k16_r3 online",
+  "histories": "first16 per selected cell",
+  "pressure_resume_indices": [
+    15,
+    16,
+    21,
+    22
+  ],
+  "learned_parameters": 81921,
+  "fixed_buffer_bytes": 22016,
+  "adaptive_bytes_per_stream": 65536,
+  "elapsed_seconds": 93.31560560001526
+}

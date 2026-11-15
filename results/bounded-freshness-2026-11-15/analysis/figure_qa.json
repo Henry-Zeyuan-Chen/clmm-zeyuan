@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "scope": "Visual inspection of all five generated PNGs, with corresponding PDF/SVG exports and source-table hashes in figures/manifest.json",
+  "reviewer_viewed_all_pngs": true,
+  "coordinator_reported_all_five_legible": true,
+  "figures": [
+    "co_primary_freshness_effects",
+    "balanced_accuracy",
+    "stable_query_groups",
+    "timing_freshness_interaction",
+    "replay_staleness_refresh_fallback"
+  ],
+  "checks": [
+    "Titles, axes, units, confidence levels, fixed-checkpoint scope and legends are legible",
+    "No clipped labels, overlapping legends or missing panels observed",
+    "Primary intervals are 97.5%; secondary intervals are 95%",
+    "Accuracy figures include all six arms; overlapping online/repeat traces reflect saved outcomes",
+    "Telemetry is one shared generated history set, not 12 independent model replicates",
+    "Scientific figures use saved numeric tables and deterministic plotting code; no generative graphics"
+  ],
+  "changes_after_visual_review": false
+}

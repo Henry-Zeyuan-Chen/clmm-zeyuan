@@ -1,6 +1,16 @@
 # Member C: shared training and evaluation
 
-## Latest: K16 with three genuine revisions per key
+## Latest: bounded freshness repair
+
+November 15: [bounded replay freshness](BOUNDED_FRESHNESS.md) is complete on source `9ab3901860548d2d87a9afc61e8ce58f950a03ce`, retaining all twelve existing local-delta checkpoints, both initializers and all five random maps. Fresh seed 91223 has 128 paired worlds; no training is added. Both schedules use the current FIFO record for each sampled key when present, otherwise the original sample. Same draws, writes, FIFO8/snapshot4 and 64KiB trace capacity; no query oracle or growing version map. Default literal behavior/state compatibility is retained.
+
+At D128, bounded-minus-literal revised accuracy is +10.47pp, adjusted 97.5% interval [7.76,13.28]; stable −0.015pp [−0.127,+0.061]. Both bounded schedules pass all 24 own-D0 gates and reach 100% revised recall; literal schedules fail all their gates. This is revision/interference repair evidence because the comparator starts damaged. Bounded replay still trails matched repeat-current on stable recall, and its revised advantage over repeat is not established. Keep the control and qualify the final project claim.
+
+All 417 tests, 433,152 saved scores/13,192,704 writes and a separate exact 9,216-score CPU/resume check pass. The handoff includes an actual bounded pause state with exact checkpoint hash. The broader exclusion audit found one old verification-embedded history omitted by the launch file collector; main and engineering splits remain disjoint and regenerate exactly under the expanded union. Original packets stay immutable; the additive audit is disclosed.
+
+Model-size decision: retain the 81,921-parameter component for this mechanism comparison. Its neutral acquisition is 100%; increasing size is not the demonstrated repair. Reuse the existing 839,248-parameter complete sequence path, integrate the chosen method and qualify held-out assignments/templates before enlarging it. Full-model generalization, corruption recovery and biological-method claims remain open. Member C owns shared weights/evaluation; A/B own the intended method implementations.
+
+## Previous: K16 with three genuine revisions per key
 
 November 15: all twelve existing local-delta checkpoints evaluated on fresh seed91123,128 paired worlds, two revision placements and final tails0/64/128. Content and all five random maps are retained for each parent. No new training or outcome selection. The [replay timing study](SLEEP_MULTIREVISION.md) supplies executable source06c0a35, full input/exclusion provenance, common admission checks, applied-write diagnostics and a reusable loader/session guide.
 
@@ -47,7 +57,7 @@ The [fixed-set fitting and assignment-transfer diagnostic](FIXED_SET_GENERALIZAT
 ## Shared contract for the two method tracks
 
 1. **Weights and provenance:** retain initial/final checkpoints, architecture, actual source/data identity, optimizer and training budget. Memory states require the corresponding slow weights. Byte weights, typed-memory weights and new Hebbian architectures need explicit loaders/adapters; matching dimensions alone is not compatibility.
-2. **Evaluation:** use the same observed streams, key-only reads, fixed decoder, genuine revisions and separate stable/revised/recent metrics. Gate on short acquisition and per-K D0 performance before interpreting delay. Keep slow parameters frozen and verify read purity, reset/rolled controls and persistent state behavior. The fixed four initial targets form the delay-curve denominator.
+2. **Evaluation:** use the same observed streams, key-only reads, fixed decoder, genuine revisions and separate stable/revised/recent metrics. Gate on short acquisition and per-K D0 performance before interpreting delay. Keep slow parameters frozen and verify read purity, reset/rolled controls and persistent state behavior. Use each study's declared original target set as the delay denominator: four in earlier pilots, six in the K16 multiple-revision studies; keep recent distractors separate.
 3. **Replay:** continuous and periodic must see the same eight-pair FIFO, same frozen samples and same number/order of extra writes, differing only in timing. Report repeat-current and lower-budget online anchors. Record actual adaptive tensor storage, slow parameters, replay pairs and update opportunities separately; equal writes are not necessarily equal compute or nonzero gradients.
 4. **Hebbian comparisons:** implement the update rule behind the same API first, then add selective routing as an ablation. Expose extra slow training, state tensors or representations rather than calling unlike resources matched.
 

@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "scope": "independent NumPy schedules only; one world set shared across checkpoints",
+  "episodes_sha256": "1fcc5d7a2a475ce18a98019f0d571aa426420dfa047bc435e5292856b0376a70",
+  "histories_per_cell": 128,
+  "rows": 4608,
+  "candidate_sequences_matched": 768,
+  "literal_CP_actual_sequences_match": true,
+  "bounded_CP_actual_source_differences": 3403,
+  "bounded_CP_actual_value_differences": 849,
+  "early_stable_direct_replay_writes": 0,
+  "stale_at_emission_distinct_from_final_obsolete": true,
+  "tables": [
+    "plan_telemetry_per_history.csv",
+    "replay_telemetry.csv",
+    "bounded_schedule_content_differences.csv"
+  ]
+}

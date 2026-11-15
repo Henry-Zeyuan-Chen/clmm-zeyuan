@@ -1,0 +1,34 @@
+{
+  "status": "passed",
+  "scope": "independent read-only source/API and declared geometry review; no model execution",
+  "source_commit": "9ab3901860548d2d87a9afc61e8ce58f950a03ce",
+  "source_files": {
+    "clmm/pretrain/kv_scheduler.py": "95546fddb2e5645a8f2f7fd23fb52de8ad50e1730adb2ba0ad080986e5e713e2",
+    "clmm/sleep/adapter.py": "5a8235f8f9167583558d113e1da0da0bbdcaebff2d9a335d41cee8f7d63f8b49",
+    "scripts/adapter_integration_experiment.py": "5765f5e63f2edc9becaa9be092c5f3cbe7919b27994347234ec8f9a109885ca7",
+    "scripts/freshness_experiment.py": "aad665bb838761649dc309d673d9cb6baf98873d4cd4d44a8bbb0e3c35897933"
+  },
+  "findings": [
+    "Only actual arrivals mutate FIFO; replay reads current FIFO without moving recency.",
+    "Bounded resolver executes after arrival and at terminal flush; original-record fallback keeps writes.",
+    "Frozen samples and PCG64 state are unchanged by refresh; source/value changes separately annotated.",
+    "Literal serialized v1 config/schema remains unchanged; bounded uses explicit v2 freshness.",
+    "Session factory has no episode/query metadata; plan_factory and observer labels execute after writes.",
+    "All current delays are multiples of4, so generic evaluator terminal-flush occupancy omission is inactive."
+  ],
+  "blockers": [],
+  "expected_main_per_model": {
+    "score_vectors": 36096,
+    "causal_writes": 1099392,
+    "extra_writes": 460800,
+    "resource_batches": 384,
+    "literal_plans": 6144
+  },
+  "expected_engineering_per_model": {
+    "score_vectors": 4512,
+    "causal_writes": 137424,
+    "extra_writes": 57600,
+    "resource_batches": 48,
+    "literal_plans": 768
+  }
+}

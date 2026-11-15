@@ -6,6 +6,8 @@ We build on lucidrains' [titans-pytorch](https://github.com/lucidrains/titans-py
 
 ## Status
 
+The [bounded freshness control](docs/BOUNDED_FRESHNESS.md) fixes stale replay using only the existing FIFO, with candidate draws, writes and retained records matched. Across twelve fixed checkpoints on fresh K16 multiple-revision histories, D128 revised accuracy improves by 10.47 percentage points over literal replay, with no clear stable change. Both bounded schedules pass D0 revision admission, but do not beat repeat-current overall. This repairs a reference baseline; full Titans/sequence-model efficacy remains separate.
+
 The [K16 multiple-revision replay comparison](docs/SLEEP_MULTIREVISION.md) evaluates all twelve shared local-delta checkpoints with exact matched continuous/periodic samples and write budgets. At D128, revised accuracy is 84.22% continuous, 81.76% periodic, versus 93.89% repeat-current/online. All checkpoints pass neutral acquisition, but both replay schedules damage replacement at D0. This is a controlled revision/interference result and motivates testing replay freshness rather than claiming a sleep benefit.
 
 The latest [key-local revision study](docs/REVISION_LOCAL.md) repairs existing-checkpoint revisions and supplies 24 matched training runs with initial controls. Trained local delta reaches 95.5–97.1% late stable accuracy versus EMA's 24.0–28.5%; both solve short revisions at 100%. These qualified component baselines retain fixed random routing controls and distinguish the ceiling-limited revision test from the stable gain.

@@ -1,0 +1,170 @@
+{
+  "status": "passed",
+  "pipeline_status": "succeeded",
+  "pipeline_sha256": "bdd8df4417b08159e784af440f5ee8134606b91b424eb7396e1df18f51507a6f",
+  "engineering_efficacy_inspected": false,
+  "representatives": [
+    "90511-content-local_delta",
+    "90515-random-90701-local_delta"
+  ],
+  "sequential_seconds": [
+    38.173765300016385,
+    39.08555299998261
+  ],
+  "concurrent_wall_seconds": 41.23543050000444,
+  "padded_projection_seconds": 2474.1258300002664,
+  "prospective_gate_seconds": 3600,
+  "preflight_pass": true,
+  "pipeline_hard_limit_seconds": 4200,
+  "observed_pipeline_seconds": 1850.61939909996,
+  "final": true,
+  "main_completed": 12,
+  "observed_failures": [],
+  "invocation_metadata_inventory": [
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\engineering\\concurrent\\90511-content-local_delta\\metadata.json",
+      "status": "succeeded",
+      "mode": null,
+      "name": "90511-content-local_delta",
+      "failure": null,
+      "sha256": "a3daadf5aa352581baaa71496326a591451099053ef97f5cfafaab01bd402d55"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\engineering\\concurrent\\90515-random-90701-local_delta\\metadata.json",
+      "status": "succeeded",
+      "mode": null,
+      "name": "90515-random-90701-local_delta",
+      "failure": null,
+      "sha256": "24834eee72555faa21117169f0f07f41f76be400078a5c76c7ea67a58a50083c"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\engineering\\packet\\metadata.json",
+      "status": "succeeded",
+      "mode": "prepare",
+      "name": null,
+      "failure": null,
+      "sha256": "da0112b7b2161046c25afd9da63274307a498ef5902de22b80a6cf5153ad6cf5"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\engineering\\sequential\\90511-content-local_delta\\metadata.json",
+      "status": "succeeded",
+      "mode": null,
+      "name": "90511-content-local_delta",
+      "failure": null,
+      "sha256": "b9cba422eace0bbc0b109ceeb84907e29cade734d4251a4b5c833b362c2c9a5d"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\engineering\\sequential\\90515-random-90701-local_delta\\metadata.json",
+      "status": "succeeded",
+      "mode": null,
+      "name": "90515-random-90701-local_delta",
+      "failure": null,
+      "sha256": "9925c4c658b550b81d21e9fc5910e8a38fc5fd2a2dd72cce080510e99c35b973"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\packet\\metadata.json",
+      "status": "succeeded",
+      "mode": "prepare",
+      "name": null,
+      "failure": null,
+      "sha256": "0a9fb8cf0fb4603c54fa2597d33861e117e54f6427716170b30d39ab724cf026"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\runs\\90511-content-local_delta\\metadata.json",
+      "status": "succeeded",
+      "mode": null,
+      "name": "90511-content-local_delta",
+      "failure": null,
+      "sha256": "4af9b3078d6e51e26c7717263e02e83fba2a2056223f32dc1ebf1a17f9a6fe90"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\runs\\90511-random-90701-local_delta\\metadata.json",
+      "status": "succeeded",
+      "mode": null,
+      "name": "90511-random-90701-local_delta",
+      "failure": null,
+      "sha256": "4be3edb000a6ae6fb22fa4cf7134fce62166246433760165e06a1bd7d68db6e9"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\runs\\90511-random-90702-local_delta\\metadata.json",
+      "status": "succeeded",
+      "mode": null,
+      "name": "90511-random-90702-local_delta",
+      "failure": null,
+      "sha256": "07fce196f44f864930516fd0f022cc7624429db95c96d4123c83fa0aed67730e"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\runs\\90511-random-90703-local_delta\\metadata.json",
+      "status": "succeeded",
+      "mode": null,
+      "name": "90511-random-90703-local_delta",
+      "failure": null,
+      "sha256": "4d5e5c569c455a23512f07ed429a0affdcf8ae55fa19de9a60c6c8373c241435"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\runs\\90511-random-90704-local_delta\\metadata.json",
+      "status": "succeeded",
+      "mode": null,
+      "name": "90511-random-90704-local_delta",
+      "failure": null,
+      "sha256": "9329ff6cd4a7c76aa8fa53664f53a7284d78507ea5efb944092dc9f6b944c034"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\runs\\90511-random-90705-local_delta\\metadata.json",
+      "status": "succeeded",
+      "mode": null,
+      "name": "90511-random-90705-local_delta",
+      "failure": null,
+      "sha256": "defdd4832e59ece7bb17dac9be1ababb1f37697c5044abeb3c8e0e26da033a63"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\runs\\90515-content-local_delta\\metadata.json",
+      "status": "succeeded",
+      "mode": null,
+      "name": "90515-content-local_delta",
+      "failure": null,
+      "sha256": "ee1033ddf21a9dd6e6dd453dc616e964a3fa75be5d42ee0c4b0ea0d139e249ff"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\runs\\90515-random-90701-local_delta\\metadata.json",
+      "status": "succeeded",
+      "mode": null,
+      "name": "90515-random-90701-local_delta",
+      "failure": null,
+      "sha256": "2c8d711e3b971c70f5f5f941c5d14b649f5a1f817b445c739a658aa86650d154"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\runs\\90515-random-90702-local_delta\\metadata.json",
+      "status": "succeeded",
+      "mode": null,
+      "name": "90515-random-90702-local_delta",
+      "failure": null,
+      "sha256": "578d39fc249bfd77c64c59824a580ef0aab292d279da2122c1fddf1b6dab23be"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\runs\\90515-random-90703-local_delta\\metadata.json",
+      "status": "succeeded",
+      "mode": null,
+      "name": "90515-random-90703-local_delta",
+      "failure": null,
+      "sha256": "431c2fbcfaa4fb2d48a5284422b076866cfc3a3a7f0be15b1748b5d8471e68ba"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\runs\\90515-random-90704-local_delta\\metadata.json",
+      "status": "succeeded",
+      "mode": null,
+      "name": "90515-random-90704-local_delta",
+      "failure": null,
+      "sha256": "afa7c8a063f5b1ae7c4b25944b61b90b6e0f4d25a89b3a28a58a50064eaf1056"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\runs\\90515-random-90705-local_delta\\metadata.json",
+      "status": "succeeded",
+      "mode": null,
+      "name": "90515-random-90705-local_delta",
+      "failure": null,
+      "sha256": "72515578c68af59be0a83870ae926aa4fa1181371dfe7e3dfde5f9419af2b2df"
+    }
+  ],
+  "evidence_scope": "saved command/runtime/status arithmetic; no engineering model predictions or score arrays read"
+}

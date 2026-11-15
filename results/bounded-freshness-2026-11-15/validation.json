@@ -1,0 +1,106 @@
+{
+  "status": "passed_with_documented_launch_coverage_omission",
+  "scope": "Fixed-checkpoint component freshness comparison with CPU execution, independent full raw/source/data audit and selected actual CPU resume/reproduction",
+  "source_commit": "9ab3901860548d2d87a9afc61e8ce58f950a03ce",
+  "baseline_tag": "35a549f137548d48aecc26e33c6f8a34a6efc97c",
+  "models": 12,
+  "tests_passed": 417,
+  "test_log_sha256": "e82cce514f413fcf67cb858d34a4db6d569047fd10f6adb119914e2371926cb9",
+  "audited_totals": {
+    "score_vectors": 433152,
+    "causal_writes": 13192704,
+    "extra_writes": 5529600,
+    "resource_batches": 4608,
+    "literal_plans": 73728,
+    "matched_candidate_cells": 9216,
+    "stale_extra_writes": 43668,
+    "refreshed_records": 169296,
+    "changed_values": 43668,
+    "fallback_writes": 698052
+  },
+  "primary": [
+    {
+      "category": "stable",
+      "literal": 0.8329589843749999,
+      "bounded": 0.8328125,
+      "estimate": -0.00014648437500000121,
+      "lower": -0.0012695312500000007,
+      "upper": 0.0006103515624999983
+    },
+    {
+      "category": "revised",
+      "literal": 0.834619140625,
+      "bounded": 0.9393066406249999,
+      "estimate": 0.10468750000000002,
+      "lower": 0.07763671875,
+      "upper": 0.13276733398437496
+    }
+  ],
+  "common_gates_all_pass": true,
+  "own_D0_gates": {
+    "continuous": {
+      "passed": 0,
+      "total": 24,
+      "minimum_all_six_correct": 0.3515625,
+      "maximum_all_six_correct": 0.640625
+    },
+    "continuous_bounded": {
+      "passed": 24,
+      "total": 24,
+      "minimum_all_six_correct": 0.8671875,
+      "maximum_all_six_correct": 0.9765625
+    },
+    "online": {
+      "passed": 24,
+      "total": 24,
+      "minimum_all_six_correct": 0.8984375,
+      "maximum_all_six_correct": 1.0
+    },
+    "periodic": {
+      "passed": 0,
+      "total": 24,
+      "minimum_all_six_correct": 0.28125,
+      "maximum_all_six_correct": 0.296875
+    },
+    "periodic_bounded": {
+      "passed": 24,
+      "total": 24,
+      "minimum_all_six_correct": 0.8671875,
+      "maximum_all_six_correct": 0.9765625
+    },
+    "repeat": {
+      "passed": 24,
+      "total": 24,
+      "minimum_all_six_correct": 0.8984375,
+      "maximum_all_six_correct": 1.0
+    }
+  },
+  "cpu_selected_proof": {
+    "models": 12,
+    "queries": 9216,
+    "max_abs_error": 0,
+    "script_sha256": "d89a9d192590df38339ef410b2cfa619fcfcb2656b6e61338c632a5ac9542404"
+  },
+  "new_GPU_allocations": 0,
+  "GPU_numerical_proof": "not run; main small-matrix evaluation and verification use CPU",
+  "analysis_inventory_sha256": "5571882904c8942e67fd372b375a987ba81fb7de4fb5acca52bd148979e8b800",
+  "figures_reviewed": 5,
+  "main_elapsed_seconds": 1683.9583506584167,
+  "pipeline_elapsed_seconds": 1850.61939909996,
+  "new_optimizer_steps": 0,
+  "all_our_inference_stopped": true,
+  "preexisting_user_edit_preserved": {
+    "path": "docs/SLEEP_MULTIREVISION.md",
+    "sha256": "d8d69a9c6872ae86859bf6952814d06cc8d7b43f841f5993d5be1ef30335f26c",
+    "patch_sha256": "5697b5603ed6f8d268a667c9c32136899f2829c75f96fe9bfbbde44b97ba3091"
+  },
+  "model_size_decision": "Retain81921parametercomponent now; qualify held-out acquisition in existing839248parameter sequence model before increasing capacity",
+  "postlaunch_exclusion_coverage": {
+    "launch_signatures": 89093,
+    "extended_signatures": 89094,
+    "older_unique_history_omitted_by_filename_collector": 1,
+    "observed_overlap": 0,
+    "independent_and_producer_regeneration_unchanged": true,
+    "launch_packets_modified": false
+  }
+}

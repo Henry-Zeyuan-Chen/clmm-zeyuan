@@ -1,0 +1,1721 @@
+{
+  "status": "passed_with_documented_launch_coverage_omission",
+  "scope": "Broader prior JSON embedded-key/value history search; no inference or engineering efficacy inspection",
+  "original_packets_modified": false,
+  "launch_exclusion_json_sha256": "eeef9ea881b7fcb4f6eb05e7964e1a17d7acac7a8e410c047d48681b32a622d4",
+  "launch_exclusion_count": 89093,
+  "broader_prior_numeric_files": 275,
+  "prior_episode_json_files": 274,
+  "prior_episode_json_files_with_numeric_histories": 273,
+  "non_numeric_episode_json_files": [
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-fixed-set-2026-11-14\\disjoint-transfer\\episodes.json",
+      "sha256": "48676030808a0129541831c5200ed6280ad36e52ff1532f414cd5345120097c8",
+      "histories": 0
+    }
+  ],
+  "file_count_reconciliation": "274 prior episodes.json paths include1 byte/semantic episode file with0 typed numeric histories;273 numeric episode files+2 numeric verification files=275 numeric files.",
+  "prior_numeric_history_manifest": [
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-nonlinear-correlated-2026-11-15\\confirm-r32-90511\\evaluation\\episodes.json",
+      "sha256": "52429b92eaa7fceaa890613a831050db0e6c52fabdc966e0c71877a76581ce90",
+      "histories": 768,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-kv-control-2026-11-14\\smoke-neural-cpu\\initial-evaluation\\episodes.json",
+      "sha256": "999820a9b9f6672f410f08c054d57e225571477522023ea9c4a5f1a358f8913e",
+      "histories": 6,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-nonlinear-correlated-2026-11-15\\smoke-r32-cpu\\initial-evaluation\\episodes.json",
+      "sha256": "9a14dcf8be55946dc40a7ae0721388441a093f48995b4bb34b7867cd9befb170",
+      "histories": 12,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-kv-control-2026-11-14\\smoke-neural-cpu\\evaluation\\episodes.json",
+      "sha256": "999820a9b9f6672f410f08c054d57e225571477522023ea9c4a5f1a358f8913e",
+      "histories": 6,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-nonlinear-correlated-2026-11-15\\smoke-r32-cpu\\evaluation\\episodes.json",
+      "sha256": "9a14dcf8be55946dc40a7ae0721388441a093f48995b4bb34b7867cd9befb170",
+      "histories": 12,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-adapter-integration-2026-11-15\\throughput-gpu\\initial-evaluation\\episodes.json",
+      "sha256": "78ff57b370de56bfe7116de260f79cdb846585dc7bb8bb53b8e5467cc81b7c07",
+      "histories": 80,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-adapter-integration-2026-11-15\\throughput-gpu\\evaluation\\episodes.json",
+      "sha256": "b879aa26471c930e29a4736e29b0513831f22b44c0420273f3ee1dd30f7195ab",
+      "histories": 144,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-adapter-integration-2026-11-15\\gradient-top1-90515\\initial-evaluation\\episodes.json",
+      "sha256": "8eaeda1c67f9425a2dad766a055a813e4d8dda1dcf35c6dae8135429ba9fff10",
+      "histories": 512,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\runs\\90515-random-90705-local_delta\\evaluation\\episodes.json",
+      "sha256": "cebeee663219b97abd9192bfa90eb563bf39e86eb5dcac1aff1606b7c8b44046",
+      "histories": 1280,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-adapter-integration-2026-11-15\\gradient-top1-90515\\evaluation\\episodes.json",
+      "sha256": "ef2bad79828e665e074fa9accf6802b9cfcf493ce2f804ca178cdf451ec6968c",
+      "histories": 768,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-kv-control-2026-11-14\\smoke-delta-cpu\\evaluation\\episodes.json",
+      "sha256": "16b2fe87a5d74fba9f0747cba7a5360fa81cdc56a24f4bdc5347a7002ab77ff1",
+      "histories": 24,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-nonlinear-correlated-2026-11-15\\comparison-trained-r32-90515\\evaluation\\episodes.json",
+      "sha256": "7e9ac30bb71a8d8bafef2c34b8b6e095d38f596a13dfd4418701a5b11b2f2679",
+      "histories": 1536,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\runs\\90515-random-90704-local_delta\\evaluation\\episodes.json",
+      "sha256": "cebeee663219b97abd9192bfa90eb563bf39e86eb5dcac1aff1606b7c8b44046",
+      "histories": 1280,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-nonlinear-correlated-2026-11-15\\r32-90515\\initial-evaluation\\episodes.json",
+      "sha256": "8f2c443ea07d63aa241c87ba12c7f6247c5a26c9a4baa37ddf2da21357a43eb4",
+      "histories": 480,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-kv-control-2026-11-14\\integration-90301\\verification.json",
+      "sha256": "db02f11803be648031c419d4c37c7dc46b424fc27e092b291558c34664ac2440",
+      "histories": 1,
+      "omitted_from_launch": 1
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-adapter-integration-2026-11-15\\smoke-neural-cpu\\evaluation\\episodes.json",
+      "sha256": "19e0a0ab7b33b6f68385a96e06fc395b957b9b29b499f5d9d641442feefe3914",
+      "histories": 18,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-nonlinear-correlated-2026-11-15\\r32-90515\\evaluation\\episodes.json",
+      "sha256": "8f2c443ea07d63aa241c87ba12c7f6247c5a26c9a4baa37ddf2da21357a43eb4",
+      "histories": 480,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\runs\\90515-random-90703-local_delta\\evaluation\\episodes.json",
+      "sha256": "cebeee663219b97abd9192bfa90eb563bf39e86eb5dcac1aff1606b7c8b44046",
+      "histories": 1280,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-kv-control-2026-11-14\\s05-90305\\initial-evaluation\\episodes.json",
+      "sha256": "92dc4ed3161d5ebf1db9956ab9060520938083230692318aac9c453882e87814",
+      "histories": 384,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-adapter-integration-2026-11-15\\gradient-top1-90511\\initial-evaluation\\episodes.json",
+      "sha256": "8eaeda1c67f9425a2dad766a055a813e4d8dda1dcf35c6dae8135429ba9fff10",
+      "histories": 512,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\runs\\90515-random-90702-local_delta\\evaluation\\episodes.json",
+      "sha256": "cebeee663219b97abd9192bfa90eb563bf39e86eb5dcac1aff1606b7c8b44046",
+      "histories": 1280,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-kv-control-2026-11-14\\s05-90305\\evaluation\\episodes.json",
+      "sha256": "92dc4ed3161d5ebf1db9956ab9060520938083230692318aac9c453882e87814",
+      "histories": 384,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-nonlinear-correlated-2026-11-15\\comparison-trained-r32-90511\\evaluation\\episodes.json",
+      "sha256": "7e9ac30bb71a8d8bafef2c34b8b6e095d38f596a13dfd4418701a5b11b2f2679",
+      "histories": 1536,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\engineering\\sequential\\90515-random-90701-local_delta\\evaluation\\episodes.json",
+      "sha256": "db44813ad04731247aa9b8c5d11c8f008a02fa856019bcb10b5da81745f95b15",
+      "histories": 160,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-adapter-integration-2026-11-15\\gradient-top1-90511\\evaluation\\episodes.json",
+      "sha256": "ef2bad79828e665e074fa9accf6802b9cfcf493ce2f804ca178cdf451ec6968c",
+      "histories": 768,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-adapter-integration-2026-11-15\\smoke-hebbian-cpu\\initial-evaluation\\episodes.json",
+      "sha256": "8561d706fca656b3f176658f1dc5b80da1d30b6ccf7773bbaff4e56a224a6272",
+      "histories": 10,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-adapter-integration-2026-11-15\\smoke-hebbian-cpu\\evaluation\\episodes.json",
+      "sha256": "19e0a0ab7b33b6f68385a96e06fc395b957b9b29b499f5d9d641442feefe3914",
+      "histories": 18,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-nonlinear-correlated-2026-11-15\\r32-90511\\initial-evaluation\\episodes.json",
+      "sha256": "8f2c443ea07d63aa241c87ba12c7f6247c5a26c9a4baa37ddf2da21357a43eb4",
+      "histories": 480,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\engineering\\sequential\\90511-content-local_delta\\evaluation\\episodes.json",
+      "sha256": "db44813ad04731247aa9b8c5d11c8f008a02fa856019bcb10b5da81745f95b15",
+      "histories": 160,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\runs\\90515-random-90701-local_delta\\evaluation\\episodes.json",
+      "sha256": "cebeee663219b97abd9192bfa90eb563bf39e86eb5dcac1aff1606b7c8b44046",
+      "histories": 1280,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-nonlinear-correlated-2026-11-15\\r32-90511\\evaluation\\episodes.json",
+      "sha256": "8f2c443ea07d63aa241c87ba12c7f6247c5a26c9a4baa37ddf2da21357a43eb4",
+      "histories": 480,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-kv-control-2026-11-14\\dense-calibration\\evaluation\\episodes.json",
+      "sha256": "08e1153d965cd870444d7da1504ab6f01376cd069b5e7ba061fb5247605debbe",
+      "histories": 672,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-kv-control-2026-11-14\\s05-90301\\initial-evaluation\\episodes.json",
+      "sha256": "92dc4ed3161d5ebf1db9956ab9060520938083230692318aac9c453882e87814",
+      "histories": 384,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\runs\\90515-content-local_delta\\evaluation\\episodes.json",
+      "sha256": "cebeee663219b97abd9192bfa90eb563bf39e86eb5dcac1aff1606b7c8b44046",
+      "histories": 1280,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\engineering\\packet\\episodes.json",
+      "sha256": "db44813ad04731247aa9b8c5d11c8f008a02fa856019bcb10b5da81745f95b15",
+      "histories": 160,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-adapter-integration-2026-11-15\\gradient-dense-90515\\initial-evaluation\\episodes.json",
+      "sha256": "8eaeda1c67f9425a2dad766a055a813e4d8dda1dcf35c6dae8135429ba9fff10",
+      "histories": 512,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-kv-control-2026-11-14\\s05-90301\\evaluation\\episodes.json",
+      "sha256": "92dc4ed3161d5ebf1db9956ab9060520938083230692318aac9c453882e87814",
+      "histories": 384,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-nonlinear-correlated-2026-11-15\\comparison-initial-r32-90515\\evaluation\\episodes.json",
+      "sha256": "7e9ac30bb71a8d8bafef2c34b8b6e095d38f596a13dfd4418701a5b11b2f2679",
+      "histories": 1536,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-adapter-integration-2026-11-15\\gradient-dense-90515\\evaluation\\episodes.json",
+      "sha256": "ef2bad79828e665e074fa9accf6802b9cfcf493ce2f804ca178cdf451ec6968c",
+      "histories": 768,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-kv-control-2026-11-14\\delta-full\\evaluation\\episodes.json",
+      "sha256": "d52b8976b8574e2f7466b953b4b357161958226dd4307c8f1512c4477f2777e1",
+      "histories": 672,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\runs\\90511-random-90705-local_delta\\evaluation\\episodes.json",
+      "sha256": "cebeee663219b97abd9192bfa90eb563bf39e86eb5dcac1aff1606b7c8b44046",
+      "histories": 1280,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\engineering\\concurrent\\90515-random-90701-local_delta\\evaluation\\episodes.json",
+      "sha256": "db44813ad04731247aa9b8c5d11c8f008a02fa856019bcb10b5da81745f95b15",
+      "histories": 160,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-adapter-integration-2026-11-15\\neural-anchor-90515\\evaluation\\episodes.json",
+      "sha256": "ef2bad79828e665e074fa9accf6802b9cfcf493ce2f804ca178cdf451ec6968c",
+      "histories": 768,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\engineering\\concurrent\\90511-content-local_delta\\evaluation\\episodes.json",
+      "sha256": "db44813ad04731247aa9b8c5d11c8f008a02fa856019bcb10b5da81745f95b15",
+      "histories": 160,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\runs\\90511-random-90704-local_delta\\evaluation\\episodes.json",
+      "sha256": "cebeee663219b97abd9192bfa90eb563bf39e86eb5dcac1aff1606b7c8b44046",
+      "histories": 1280,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-kv-control-2026-11-14\\pressure-s05-90305\\evaluation\\episodes.json",
+      "sha256": "d52b8976b8574e2f7466b953b4b357161958226dd4307c8f1512c4477f2777e1",
+      "histories": 672,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-nonlinear-correlated-2026-11-15\\confirm-r32-90515\\evaluation\\episodes.json",
+      "sha256": "52429b92eaa7fceaa890613a831050db0e6c52fabdc966e0c71877a76581ce90",
+      "histories": 768,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-adapter-integration-2026-11-15\\gradient-dense-90511\\initial-evaluation\\episodes.json",
+      "sha256": "8eaeda1c67f9425a2dad766a055a813e4d8dda1dcf35c6dae8135429ba9fff10",
+      "histories": 512,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-nonlinear-correlated-2026-11-15\\comparison-initial-r32-90511\\evaluation\\episodes.json",
+      "sha256": "7e9ac30bb71a8d8bafef2c34b8b6e095d38f596a13dfd4418701a5b11b2f2679",
+      "histories": 1536,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-kv-control-2026-11-14\\confirm-s05-90305\\evaluation\\episodes.json",
+      "sha256": "4e7af389c95abe465b8e1a72f2ee04dcd6919aa240b70ed77325ef91841877b8",
+      "histories": 384,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-adapter-integration-2026-11-15\\gradient-dense-90511\\evaluation\\episodes.json",
+      "sha256": "ef2bad79828e665e074fa9accf6802b9cfcf493ce2f804ca178cdf451ec6968c",
+      "histories": 768,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\runs\\90511-random-90703-local_delta\\evaluation\\episodes.json",
+      "sha256": "cebeee663219b97abd9192bfa90eb563bf39e86eb5dcac1aff1606b7c8b44046",
+      "histories": 1280,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-adapter-integration-2026-11-15\\neural-anchor-90511\\evaluation\\episodes.json",
+      "sha256": "ef2bad79828e665e074fa9accf6802b9cfcf493ce2f804ca178cdf451ec6968c",
+      "histories": 768,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\engineering\\sequential\\90515-random-90701-local_delta\\evaluation\\episodes.json",
+      "sha256": "3bf136d057435b6bd3323402808febf670ce60d39696cd37a2701ab4f96d2417",
+      "histories": 160,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\engineering\\sequential\\90511-content-local_delta\\evaluation\\episodes.json",
+      "sha256": "3bf136d057435b6bd3323402808febf670ce60d39696cd37a2701ab4f96d2417",
+      "histories": 160,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\runs\\90511-random-90702-local_delta\\evaluation\\episodes.json",
+      "sha256": "cebeee663219b97abd9192bfa90eb563bf39e86eb5dcac1aff1606b7c8b44046",
+      "histories": 1280,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-kv-control-2026-11-14\\pressure-s05-90301\\evaluation\\episodes.json",
+      "sha256": "d52b8976b8574e2f7466b953b4b357161958226dd4307c8f1512c4477f2777e1",
+      "histories": 672,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-kv-control-2026-11-14\\confirm-s05-90301\\evaluation\\episodes.json",
+      "sha256": "4e7af389c95abe465b8e1a72f2ee04dcd6919aa240b70ed77325ef91841877b8",
+      "histories": 384,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\runs\\90511-random-90701-local_delta\\evaluation\\episodes.json",
+      "sha256": "cebeee663219b97abd9192bfa90eb563bf39e86eb5dcac1aff1606b7c8b44046",
+      "histories": 1280,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-adapter-integration-2026-11-15\\fork-hebbian-top1-90515\\evaluation\\episodes.json",
+      "sha256": "8eaeda1c67f9425a2dad766a055a813e4d8dda1dcf35c6dae8135429ba9fff10",
+      "histories": 512,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-adapter-integration-2026-11-15\\hebbian-top1-90515\\initial-evaluation\\episodes.json",
+      "sha256": "8eaeda1c67f9425a2dad766a055a813e4d8dda1dcf35c6dae8135429ba9fff10",
+      "histories": 512,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-kv-control-2026-11-14\\integration-90305\\verification.json",
+      "sha256": "6e23b4624463550867171d643d39b11f1312d4004f550ddd2061813bf3a594a5",
+      "histories": 1,
+      "omitted_from_launch": 1
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\engineering\\packet\\episodes.json",
+      "sha256": "3bf136d057435b6bd3323402808febf670ce60d39696cd37a2701ab4f96d2417",
+      "histories": 160,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\runs\\90511-content-local_delta\\evaluation\\episodes.json",
+      "sha256": "cebeee663219b97abd9192bfa90eb563bf39e86eb5dcac1aff1606b7c8b44046",
+      "histories": 1280,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-adapter-integration-2026-11-15\\hebbian-top1-90515\\evaluation\\episodes.json",
+      "sha256": "ef2bad79828e665e074fa9accf6802b9cfcf493ce2f804ca178cdf451ec6968c",
+      "histories": 768,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\engineering\\concurrent\\90515-random-90701-local_delta\\evaluation\\episodes.json",
+      "sha256": "3bf136d057435b6bd3323402808febf670ce60d39696cd37a2701ab4f96d2417",
+      "histories": 160,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-adapter-integration-2026-11-15\\fork-hebbian-top1-90511\\evaluation\\episodes.json",
+      "sha256": "8eaeda1c67f9425a2dad766a055a813e4d8dda1dcf35c6dae8135429ba9fff10",
+      "histories": 512,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\engineering\\concurrent\\90511-content-local_delta\\evaluation\\episodes.json",
+      "sha256": "3bf136d057435b6bd3323402808febf670ce60d39696cd37a2701ab4f96d2417",
+      "histories": 160,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-adapter-integration-2026-11-15\\fork-gradient-dense-90511\\evaluation\\episodes.json",
+      "sha256": "8eaeda1c67f9425a2dad766a055a813e4d8dda1dcf35c6dae8135429ba9fff10",
+      "histories": 512,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-adapter-integration-2026-11-15\\hebbian-top1-90511\\initial-evaluation\\episodes.json",
+      "sha256": "8eaeda1c67f9425a2dad766a055a813e4d8dda1dcf35c6dae8135429ba9fff10",
+      "histories": 512,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-adapter-integration-2026-11-15\\fork-gradient-dense-90515\\evaluation\\episodes.json",
+      "sha256": "8eaeda1c67f9425a2dad766a055a813e4d8dda1dcf35c6dae8135429ba9fff10",
+      "histories": 512,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-adapter-integration-2026-11-15\\hebbian-top1-90511\\evaluation\\episodes.json",
+      "sha256": "ef2bad79828e665e074fa9accf6802b9cfcf493ce2f804ca178cdf451ec6968c",
+      "histories": 768,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-adapter-integration-2026-11-15\\fork-gradient-top1-90515\\evaluation\\episodes.json",
+      "sha256": "8eaeda1c67f9425a2dad766a055a813e4d8dda1dcf35c6dae8135429ba9fff10",
+      "histories": 512,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-adapter-integration-2026-11-15\\fork-hebbian-dense-90511\\evaluation\\episodes.json",
+      "sha256": "8eaeda1c67f9425a2dad766a055a813e4d8dda1dcf35c6dae8135429ba9fff10",
+      "histories": 512,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-adapter-integration-2026-11-15\\fork-gradient-top1-90511\\evaluation\\episodes.json",
+      "sha256": "8eaeda1c67f9425a2dad766a055a813e4d8dda1dcf35c6dae8135429ba9fff10",
+      "histories": 512,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-adapter-integration-2026-11-15\\fork-hebbian-dense-90515\\evaluation\\episodes.json",
+      "sha256": "8eaeda1c67f9425a2dad766a055a813e4d8dda1dcf35c6dae8135429ba9fff10",
+      "histories": 512,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-adapter-integration-2026-11-15\\hebbian-dense-90515\\evaluation\\episodes.json",
+      "sha256": "ef2bad79828e665e074fa9accf6802b9cfcf493ce2f804ca178cdf451ec6968c",
+      "histories": 768,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\packet\\episodes.json",
+      "sha256": "cebeee663219b97abd9192bfa90eb563bf39e86eb5dcac1aff1606b7c8b44046",
+      "histories": 1280,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-adapter-integration-2026-11-15\\hebbian-dense-90515\\initial-evaluation\\episodes.json",
+      "sha256": "8eaeda1c67f9425a2dad766a055a813e4d8dda1dcf35c6dae8135429ba9fff10",
+      "histories": 512,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-adapter-integration-2026-11-15\\hebbian-dense-90511\\evaluation\\episodes.json",
+      "sha256": "ef2bad79828e665e074fa9accf6802b9cfcf493ce2f804ca178cdf451ec6968c",
+      "histories": 768,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-adapter-integration-2026-11-15\\hebbian-dense-90511\\initial-evaluation\\episodes.json",
+      "sha256": "8eaeda1c67f9425a2dad766a055a813e4d8dda1dcf35c6dae8135429ba9fff10",
+      "histories": 512,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\frozen\\runs\\90511-random-90701-erase_ema\\evaluation\\episodes.json",
+      "sha256": "3353feb68eecc550dfd632dca4dc9097442a517169ac6d4b7bdc9fd21d7b3c21",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\frozen\\runs\\90511-random-90701-ema\\evaluation\\episodes.json",
+      "sha256": "3353feb68eecc550dfd632dca4dc9097442a517169ac6d4b7bdc9fd21d7b3c21",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\frozen\\runs\\90515-random-90705-local_delta\\evaluation\\episodes.json",
+      "sha256": "3353feb68eecc550dfd632dca4dc9097442a517169ac6d4b7bdc9fd21d7b3c21",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\trained\\runs\\90515-random-90705-local_delta\\initial-evaluation\\episodes.json",
+      "sha256": "0899d8bd07117957cd4bb6c66828f622f902c11433eaeaf7878ffbc982c40f88",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\frozen\\runs\\90511-random-90701-additive\\evaluation\\episodes.json",
+      "sha256": "3353feb68eecc550dfd632dca4dc9097442a517169ac6d4b7bdc9fd21d7b3c21",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\trained\\runs\\90515-random-90705-local_delta\\evaluation\\episodes.json",
+      "sha256": "0899d8bd07117957cd4bb6c66828f622f902c11433eaeaf7878ffbc982c40f88",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\frozen\\runs\\90511-content-ema\\evaluation\\episodes.json",
+      "sha256": "3353feb68eecc550dfd632dca4dc9097442a517169ac6d4b7bdc9fd21d7b3c21",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\frozen\\runs\\90515-random-90705-erase_ema\\evaluation\\episodes.json",
+      "sha256": "3353feb68eecc550dfd632dca4dc9097442a517169ac6d4b7bdc9fd21d7b3c21",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\engineering-cpu\\smoke-train-cpu\\episodes.json",
+      "sha256": "b27084d8eb8edb3d7ab4304e5a93f3a17413aa4268a412c69362ac1a5f088dca",
+      "histories": 144,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\frozen\\runs\\90511-content-local_delta\\evaluation\\episodes.json",
+      "sha256": "3353feb68eecc550dfd632dca4dc9097442a517169ac6d4b7bdc9fd21d7b3c21",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\frozen\\runs\\90511-content-additive\\evaluation\\episodes.json",
+      "sha256": "3353feb68eecc550dfd632dca4dc9097442a517169ac6d4b7bdc9fd21d7b3c21",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\frozen\\runs\\90515-random-90705-ema\\evaluation\\episodes.json",
+      "sha256": "3353feb68eecc550dfd632dca4dc9097442a517169ac6d4b7bdc9fd21d7b3c21",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\trained\\runs\\90515-random-90705-ema\\initial-evaluation\\episodes.json",
+      "sha256": "0899d8bd07117957cd4bb6c66828f622f902c11433eaeaf7878ffbc982c40f88",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\engineering-cpu\\smoke-frozen-cpu\\episodes.json",
+      "sha256": "b27084d8eb8edb3d7ab4304e5a93f3a17413aa4268a412c69362ac1a5f088dca",
+      "histories": 144,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\engineering-cpu\\smoke-exclusions-cpu\\episodes.json",
+      "sha256": "b27084d8eb8edb3d7ab4304e5a93f3a17413aa4268a412c69362ac1a5f088dca",
+      "histories": 144,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-routing-decay-2026-11-15\\main\\runs\\hebbian-90515-random-90705-protected\\evaluation\\episodes.json",
+      "sha256": "5f78cf37e3900557ecc4f8b9e2dca484f834265b3f6dd4c540ca92509d33666d",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\engineering-cpu\\smoke-exclusions-cpu\\runs\\90511-content-ema\\evaluation\\episodes.json",
+      "sha256": "b27084d8eb8edb3d7ab4304e5a93f3a17413aa4268a412c69362ac1a5f088dca",
+      "histories": 144,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\trained\\runs\\90515-random-90705-ema\\evaluation\\episodes.json",
+      "sha256": "0899d8bd07117957cd4bb6c66828f622f902c11433eaeaf7878ffbc982c40f88",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\frozen\\episodes.json",
+      "sha256": "3353feb68eecc550dfd632dca4dc9097442a517169ac6d4b7bdc9fd21d7b3c21",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\frozen\\runs\\90511-content-erase_ema\\evaluation\\episodes.json",
+      "sha256": "3353feb68eecc550dfd632dca4dc9097442a517169ac6d4b7bdc9fd21d7b3c21",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\engineering-gpu\\runs\\90511-content-local_delta\\initial-evaluation\\episodes.json",
+      "sha256": "cff2c89407511a94d74def8cd6ba00cd4eb6e61fab2e545d1db3de9ac6b65a0a",
+      "histories": 144,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\frozen\\runs\\90515-random-90705-additive\\evaluation\\episodes.json",
+      "sha256": "3353feb68eecc550dfd632dca4dc9097442a517169ac6d4b7bdc9fd21d7b3c21",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\engineering-cpu\\smoke-frozen-cpu\\runs\\90511-content-local_delta\\evaluation\\episodes.json",
+      "sha256": "b27084d8eb8edb3d7ab4304e5a93f3a17413aa4268a412c69362ac1a5f088dca",
+      "histories": 144,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\engineering-gpu\\runs\\90511-content-local_delta\\evaluation\\episodes.json",
+      "sha256": "cff2c89407511a94d74def8cd6ba00cd4eb6e61fab2e545d1db3de9ac6b65a0a",
+      "histories": 144,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\engineering-cpu\\smoke-frozen-cpu\\runs\\90511-content-ema\\evaluation\\episodes.json",
+      "sha256": "b27084d8eb8edb3d7ab4304e5a93f3a17413aa4268a412c69362ac1a5f088dca",
+      "histories": 144,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\engineering-cpu\\smoke-frozen-cpu\\runs\\90511-content-additive\\evaluation\\episodes.json",
+      "sha256": "b27084d8eb8edb3d7ab4304e5a93f3a17413aa4268a412c69362ac1a5f088dca",
+      "histories": 144,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-routing-decay-2026-11-15\\main\\runs\\hebbian-90515-random-90705-global\\evaluation\\episodes.json",
+      "sha256": "5f78cf37e3900557ecc4f8b9e2dca484f834265b3f6dd4c540ca92509d33666d",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\engineering-cpu\\smoke-train-cpu\\runs\\90511-content-local_delta\\initial-evaluation\\episodes.json",
+      "sha256": "b27084d8eb8edb3d7ab4304e5a93f3a17413aa4268a412c69362ac1a5f088dca",
+      "histories": 144,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\frozen\\runs\\90515-content-ema\\evaluation\\episodes.json",
+      "sha256": "3353feb68eecc550dfd632dca4dc9097442a517169ac6d4b7bdc9fd21d7b3c21",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\frozen\\runs\\90511-random-90703-local_delta\\evaluation\\episodes.json",
+      "sha256": "3353feb68eecc550dfd632dca4dc9097442a517169ac6d4b7bdc9fd21d7b3c21",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\engineering-cpu\\smoke-train-cpu\\runs\\90511-content-ema\\initial-evaluation\\episodes.json",
+      "sha256": "b27084d8eb8edb3d7ab4304e5a93f3a17413aa4268a412c69362ac1a5f088dca",
+      "histories": 144,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\trained\\runs\\90515-random-90704-local_delta\\initial-evaluation\\episodes.json",
+      "sha256": "0899d8bd07117957cd4bb6c66828f622f902c11433eaeaf7878ffbc982c40f88",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\engineering-cpu\\smoke-train-cpu\\runs\\90511-content-ema\\evaluation\\episodes.json",
+      "sha256": "b27084d8eb8edb3d7ab4304e5a93f3a17413aa4268a412c69362ac1a5f088dca",
+      "histories": 144,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\engineering-gpu\\episodes.json",
+      "sha256": "cff2c89407511a94d74def8cd6ba00cd4eb6e61fab2e545d1db3de9ac6b65a0a",
+      "histories": 144,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\engineering-cpu\\smoke-frozen-cpu\\runs\\90511-content-erase_ema\\evaluation\\episodes.json",
+      "sha256": "b27084d8eb8edb3d7ab4304e5a93f3a17413aa4268a412c69362ac1a5f088dca",
+      "histories": 144,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\engineering-cpu\\smoke-train-cpu\\runs\\90511-content-local_delta\\evaluation\\episodes.json",
+      "sha256": "b27084d8eb8edb3d7ab4304e5a93f3a17413aa4268a412c69362ac1a5f088dca",
+      "histories": 144,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\frozen\\runs\\90515-random-90704-local_delta\\evaluation\\episodes.json",
+      "sha256": "3353feb68eecc550dfd632dca4dc9097442a517169ac6d4b7bdc9fd21d7b3c21",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\engineering-gpu\\runs\\90511-content-ema\\initial-evaluation\\episodes.json",
+      "sha256": "cff2c89407511a94d74def8cd6ba00cd4eb6e61fab2e545d1db3de9ac6b65a0a",
+      "histories": 144,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\engineering-gpu\\runs\\90511-content-ema\\evaluation\\episodes.json",
+      "sha256": "cff2c89407511a94d74def8cd6ba00cd4eb6e61fab2e545d1db3de9ac6b65a0a",
+      "histories": 144,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\trained\\runs\\90515-random-90704-local_delta\\evaluation\\episodes.json",
+      "sha256": "0899d8bd07117957cd4bb6c66828f622f902c11433eaeaf7878ffbc982c40f88",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-routing-decay-2026-11-15\\main\\runs\\hebbian-90515-random-90704-protected\\evaluation\\episodes.json",
+      "sha256": "5f78cf37e3900557ecc4f8b9e2dca484f834265b3f6dd4c540ca92509d33666d",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\frozen\\runs\\90515-content-additive\\evaluation\\episodes.json",
+      "sha256": "3353feb68eecc550dfd632dca4dc9097442a517169ac6d4b7bdc9fd21d7b3c21",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\frozen\\runs\\90511-random-90703-additive\\evaluation\\episodes.json",
+      "sha256": "3353feb68eecc550dfd632dca4dc9097442a517169ac6d4b7bdc9fd21d7b3c21",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\frozen\\runs\\90511-random-90702-erase_ema\\evaluation\\episodes.json",
+      "sha256": "3353feb68eecc550dfd632dca4dc9097442a517169ac6d4b7bdc9fd21d7b3c21",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\frozen\\runs\\90511-random-90703-ema\\evaluation\\episodes.json",
+      "sha256": "3353feb68eecc550dfd632dca4dc9097442a517169ac6d4b7bdc9fd21d7b3c21",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\frozen\\runs\\90511-random-90703-erase_ema\\evaluation\\episodes.json",
+      "sha256": "3353feb68eecc550dfd632dca4dc9097442a517169ac6d4b7bdc9fd21d7b3c21",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\frozen\\runs\\90511-random-90702-local_delta\\evaluation\\episodes.json",
+      "sha256": "3353feb68eecc550dfd632dca4dc9097442a517169ac6d4b7bdc9fd21d7b3c21",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\frozen\\runs\\90511-random-90702-additive\\evaluation\\episodes.json",
+      "sha256": "3353feb68eecc550dfd632dca4dc9097442a517169ac6d4b7bdc9fd21d7b3c21",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\frozen\\runs\\90515-random-90704-erase_ema\\evaluation\\episodes.json",
+      "sha256": "3353feb68eecc550dfd632dca4dc9097442a517169ac6d4b7bdc9fd21d7b3c21",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\frozen\\runs\\90511-random-90701-local_delta\\evaluation\\episodes.json",
+      "sha256": "3353feb68eecc550dfd632dca4dc9097442a517169ac6d4b7bdc9fd21d7b3c21",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\frozen\\runs\\90511-random-90705-additive\\evaluation\\episodes.json",
+      "sha256": "3353feb68eecc550dfd632dca4dc9097442a517169ac6d4b7bdc9fd21d7b3c21",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\trained\\runs\\90515-random-90704-ema\\initial-evaluation\\episodes.json",
+      "sha256": "0899d8bd07117957cd4bb6c66828f622f902c11433eaeaf7878ffbc982c40f88",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-routing-decay-2026-11-15\\main\\runs\\hebbian-90515-random-90704-global\\evaluation\\episodes.json",
+      "sha256": "5f78cf37e3900557ecc4f8b9e2dca484f834265b3f6dd4c540ca92509d33666d",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\frozen\\runs\\90511-random-90705-local_delta\\evaluation\\episodes.json",
+      "sha256": "3353feb68eecc550dfd632dca4dc9097442a517169ac6d4b7bdc9fd21d7b3c21",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\frozen\\runs\\90511-random-90704-erase_ema\\evaluation\\episodes.json",
+      "sha256": "3353feb68eecc550dfd632dca4dc9097442a517169ac6d4b7bdc9fd21d7b3c21",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\frozen\\runs\\90511-random-90702-ema\\evaluation\\episodes.json",
+      "sha256": "3353feb68eecc550dfd632dca4dc9097442a517169ac6d4b7bdc9fd21d7b3c21",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\frozen\\runs\\90511-random-90704-additive\\evaluation\\episodes.json",
+      "sha256": "3353feb68eecc550dfd632dca4dc9097442a517169ac6d4b7bdc9fd21d7b3c21",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\frozen\\runs\\90511-random-90705-ema\\evaluation\\episodes.json",
+      "sha256": "3353feb68eecc550dfd632dca4dc9097442a517169ac6d4b7bdc9fd21d7b3c21",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\trained\\runs\\90515-random-90704-ema\\evaluation\\episodes.json",
+      "sha256": "0899d8bd07117957cd4bb6c66828f622f902c11433eaeaf7878ffbc982c40f88",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\frozen\\runs\\90511-random-90704-ema\\evaluation\\episodes.json",
+      "sha256": "3353feb68eecc550dfd632dca4dc9097442a517169ac6d4b7bdc9fd21d7b3c21",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\frozen\\runs\\90511-random-90704-local_delta\\evaluation\\episodes.json",
+      "sha256": "3353feb68eecc550dfd632dca4dc9097442a517169ac6d4b7bdc9fd21d7b3c21",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\frozen\\runs\\90515-random-90704-ema\\evaluation\\episodes.json",
+      "sha256": "3353feb68eecc550dfd632dca4dc9097442a517169ac6d4b7bdc9fd21d7b3c21",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\frozen\\runs\\90515-random-90703-local_delta\\evaluation\\episodes.json",
+      "sha256": "3353feb68eecc550dfd632dca4dc9097442a517169ac6d4b7bdc9fd21d7b3c21",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\frozen\\runs\\90515-random-90702-ema\\evaluation\\episodes.json",
+      "sha256": "3353feb68eecc550dfd632dca4dc9097442a517169ac6d4b7bdc9fd21d7b3c21",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-routing-decay-2026-11-15\\main\\runs\\hebbian-90515-random-90703-protected\\evaluation\\episodes.json",
+      "sha256": "5f78cf37e3900557ecc4f8b9e2dca484f834265b3f6dd4c540ca92509d33666d",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\frozen\\runs\\90511-random-90705-erase_ema\\evaluation\\episodes.json",
+      "sha256": "3353feb68eecc550dfd632dca4dc9097442a517169ac6d4b7bdc9fd21d7b3c21",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\frozen\\runs\\90515-random-90701-local_delta\\evaluation\\episodes.json",
+      "sha256": "3353feb68eecc550dfd632dca4dc9097442a517169ac6d4b7bdc9fd21d7b3c21",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\frozen\\runs\\90515-random-90701-ema\\evaluation\\episodes.json",
+      "sha256": "3353feb68eecc550dfd632dca4dc9097442a517169ac6d4b7bdc9fd21d7b3c21",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\frozen\\runs\\90515-random-90703-ema\\evaluation\\episodes.json",
+      "sha256": "3353feb68eecc550dfd632dca4dc9097442a517169ac6d4b7bdc9fd21d7b3c21",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\frozen\\runs\\90515-content-local_delta\\evaluation\\episodes.json",
+      "sha256": "3353feb68eecc550dfd632dca4dc9097442a517169ac6d4b7bdc9fd21d7b3c21",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\trained\\runs\\90515-random-90703-local_delta\\initial-evaluation\\episodes.json",
+      "sha256": "0899d8bd07117957cd4bb6c66828f622f902c11433eaeaf7878ffbc982c40f88",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\frozen\\runs\\90515-random-90702-local_delta\\evaluation\\episodes.json",
+      "sha256": "3353feb68eecc550dfd632dca4dc9097442a517169ac6d4b7bdc9fd21d7b3c21",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\frozen\\runs\\90515-random-90701-erase_ema\\evaluation\\episodes.json",
+      "sha256": "3353feb68eecc550dfd632dca4dc9097442a517169ac6d4b7bdc9fd21d7b3c21",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-routing-decay-2026-11-15\\main\\runs\\hebbian-90515-random-90703-global\\evaluation\\episodes.json",
+      "sha256": "5f78cf37e3900557ecc4f8b9e2dca484f834265b3f6dd4c540ca92509d33666d",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\frozen\\runs\\90515-random-90704-additive\\evaluation\\episodes.json",
+      "sha256": "3353feb68eecc550dfd632dca4dc9097442a517169ac6d4b7bdc9fd21d7b3c21",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\frozen\\runs\\90515-random-90703-erase_ema\\evaluation\\episodes.json",
+      "sha256": "3353feb68eecc550dfd632dca4dc9097442a517169ac6d4b7bdc9fd21d7b3c21",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\frozen\\runs\\90515-random-90701-additive\\evaluation\\episodes.json",
+      "sha256": "3353feb68eecc550dfd632dca4dc9097442a517169ac6d4b7bdc9fd21d7b3c21",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\frozen\\runs\\90515-random-90702-additive\\evaluation\\episodes.json",
+      "sha256": "3353feb68eecc550dfd632dca4dc9097442a517169ac6d4b7bdc9fd21d7b3c21",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\frozen\\runs\\90515-random-90702-erase_ema\\evaluation\\episodes.json",
+      "sha256": "3353feb68eecc550dfd632dca4dc9097442a517169ac6d4b7bdc9fd21d7b3c21",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\trained\\runs\\90515-random-90703-local_delta\\evaluation\\episodes.json",
+      "sha256": "0899d8bd07117957cd4bb6c66828f622f902c11433eaeaf7878ffbc982c40f88",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\frozen\\runs\\90515-random-90703-additive\\evaluation\\episodes.json",
+      "sha256": "3353feb68eecc550dfd632dca4dc9097442a517169ac6d4b7bdc9fd21d7b3c21",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\trained\\episodes.json",
+      "sha256": "0899d8bd07117957cd4bb6c66828f622f902c11433eaeaf7878ffbc982c40f88",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\frozen\\runs\\90515-content-erase_ema\\evaluation\\episodes.json",
+      "sha256": "3353feb68eecc550dfd632dca4dc9097442a517169ac6d4b7bdc9fd21d7b3c21",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\trained\\runs\\90511-random-90701-local_delta\\initial-evaluation\\episodes.json",
+      "sha256": "0899d8bd07117957cd4bb6c66828f622f902c11433eaeaf7878ffbc982c40f88",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\trained\\runs\\90511-random-90705-local_delta\\initial-evaluation\\episodes.json",
+      "sha256": "0899d8bd07117957cd4bb6c66828f622f902c11433eaeaf7878ffbc982c40f88",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\trained\\runs\\90511-random-90703-local_delta\\initial-evaluation\\episodes.json",
+      "sha256": "0899d8bd07117957cd4bb6c66828f622f902c11433eaeaf7878ffbc982c40f88",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\stress\\episodes.json",
+      "sha256": "29a70987f93744af82832644297cdbc1511ca62fc200ca8753889dbdc4599996",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-routing-decay-2026-11-15\\main\\runs\\hebbian-90515-random-90702-protected\\evaluation\\episodes.json",
+      "sha256": "5f78cf37e3900557ecc4f8b9e2dca484f834265b3f6dd4c540ca92509d33666d",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\provenance\\prior90723\\episodes.json",
+      "sha256": "5f78cf37e3900557ecc4f8b9e2dca484f834265b3f6dd4c540ca92509d33666d",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\trained\\runs\\90511-random-90703-ema\\initial-evaluation\\episodes.json",
+      "sha256": "0899d8bd07117957cd4bb6c66828f622f902c11433eaeaf7878ffbc982c40f88",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\trained\\runs\\90511-random-90701-local_delta\\evaluation\\episodes.json",
+      "sha256": "0899d8bd07117957cd4bb6c66828f622f902c11433eaeaf7878ffbc982c40f88",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\trained\\runs\\90515-random-90703-ema\\initial-evaluation\\episodes.json",
+      "sha256": "0899d8bd07117957cd4bb6c66828f622f902c11433eaeaf7878ffbc982c40f88",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\trained\\runs\\90511-random-90703-local_delta\\evaluation\\episodes.json",
+      "sha256": "0899d8bd07117957cd4bb6c66828f622f902c11433eaeaf7878ffbc982c40f88",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\trained\\runs\\90511-content-local_delta\\initial-evaluation\\episodes.json",
+      "sha256": "0899d8bd07117957cd4bb6c66828f622f902c11433eaeaf7878ffbc982c40f88",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\trained\\runs\\90511-random-90705-local_delta\\evaluation\\episodes.json",
+      "sha256": "0899d8bd07117957cd4bb6c66828f622f902c11433eaeaf7878ffbc982c40f88",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\stress\\runs\\90511-random-90703-ema\\evaluation\\episodes.json",
+      "sha256": "29a70987f93744af82832644297cdbc1511ca62fc200ca8753889dbdc4599996",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\stress\\runs\\90511-content-ema\\evaluation\\episodes.json",
+      "sha256": "29a70987f93744af82832644297cdbc1511ca62fc200ca8753889dbdc4599996",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\stress\\runs\\90511-random-90701-local_delta\\evaluation\\episodes.json",
+      "sha256": "29a70987f93744af82832644297cdbc1511ca62fc200ca8753889dbdc4599996",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-routing-decay-2026-11-15\\main\\runs\\hebbian-90515-random-90702-global\\evaluation\\episodes.json",
+      "sha256": "5f78cf37e3900557ecc4f8b9e2dca484f834265b3f6dd4c540ca92509d33666d",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\trained\\runs\\90511-random-90703-ema\\evaluation\\episodes.json",
+      "sha256": "0899d8bd07117957cd4bb6c66828f622f902c11433eaeaf7878ffbc982c40f88",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\trained\\runs\\90511-content-local_delta\\evaluation\\episodes.json",
+      "sha256": "0899d8bd07117957cd4bb6c66828f622f902c11433eaeaf7878ffbc982c40f88",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\trained\\runs\\90511-content-ema\\initial-evaluation\\episodes.json",
+      "sha256": "0899d8bd07117957cd4bb6c66828f622f902c11433eaeaf7878ffbc982c40f88",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\trained\\runs\\90515-random-90703-ema\\evaluation\\episodes.json",
+      "sha256": "0899d8bd07117957cd4bb6c66828f622f902c11433eaeaf7878ffbc982c40f88",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\stress\\runs\\90515-random-90705-local_delta\\evaluation\\episodes.json",
+      "sha256": "29a70987f93744af82832644297cdbc1511ca62fc200ca8753889dbdc4599996",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\trained\\runs\\90511-random-90701-ema\\initial-evaluation\\episodes.json",
+      "sha256": "0899d8bd07117957cd4bb6c66828f622f902c11433eaeaf7878ffbc982c40f88",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\trained\\runs\\90511-random-90704-local_delta\\initial-evaluation\\episodes.json",
+      "sha256": "0899d8bd07117957cd4bb6c66828f622f902c11433eaeaf7878ffbc982c40f88",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\trained\\runs\\90511-random-90705-ema\\initial-evaluation\\episodes.json",
+      "sha256": "0899d8bd07117957cd4bb6c66828f622f902c11433eaeaf7878ffbc982c40f88",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\trained\\runs\\90511-content-ema\\evaluation\\episodes.json",
+      "sha256": "0899d8bd07117957cd4bb6c66828f622f902c11433eaeaf7878ffbc982c40f88",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\stress\\runs\\90511-random-90702-local_delta\\evaluation\\episodes.json",
+      "sha256": "29a70987f93744af82832644297cdbc1511ca62fc200ca8753889dbdc4599996",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\stress\\runs\\90511-random-90701-ema\\evaluation\\episodes.json",
+      "sha256": "29a70987f93744af82832644297cdbc1511ca62fc200ca8753889dbdc4599996",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\trained\\runs\\90511-random-90701-ema\\evaluation\\episodes.json",
+      "sha256": "0899d8bd07117957cd4bb6c66828f622f902c11433eaeaf7878ffbc982c40f88",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-routing-decay-2026-11-15\\main\\runs\\hebbian-90515-random-90701-protected\\evaluation\\episodes.json",
+      "sha256": "5f78cf37e3900557ecc4f8b9e2dca484f834265b3f6dd4c540ca92509d33666d",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\trained\\runs\\90511-random-90704-local_delta\\evaluation\\episodes.json",
+      "sha256": "0899d8bd07117957cd4bb6c66828f622f902c11433eaeaf7878ffbc982c40f88",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\trained\\runs\\90511-random-90702-local_delta\\initial-evaluation\\episodes.json",
+      "sha256": "0899d8bd07117957cd4bb6c66828f622f902c11433eaeaf7878ffbc982c40f88",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\stress\\runs\\90515-random-90705-ema\\evaluation\\episodes.json",
+      "sha256": "29a70987f93744af82832644297cdbc1511ca62fc200ca8753889dbdc4599996",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\stress\\runs\\90511-content-local_delta\\evaluation\\episodes.json",
+      "sha256": "29a70987f93744af82832644297cdbc1511ca62fc200ca8753889dbdc4599996",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\trained\\runs\\90511-random-90705-ema\\evaluation\\episodes.json",
+      "sha256": "0899d8bd07117957cd4bb6c66828f622f902c11433eaeaf7878ffbc982c40f88",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\trained\\runs\\90511-random-90702-ema\\initial-evaluation\\episodes.json",
+      "sha256": "0899d8bd07117957cd4bb6c66828f622f902c11433eaeaf7878ffbc982c40f88",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\trained\\runs\\90515-random-90702-local_delta\\initial-evaluation\\episodes.json",
+      "sha256": "0899d8bd07117957cd4bb6c66828f622f902c11433eaeaf7878ffbc982c40f88",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\stress\\runs\\90511-random-90702-ema\\evaluation\\episodes.json",
+      "sha256": "29a70987f93744af82832644297cdbc1511ca62fc200ca8753889dbdc4599996",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\trained\\runs\\90511-random-90702-ema\\evaluation\\episodes.json",
+      "sha256": "0899d8bd07117957cd4bb6c66828f622f902c11433eaeaf7878ffbc982c40f88",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\trained\\runs\\90511-random-90702-local_delta\\evaluation\\episodes.json",
+      "sha256": "0899d8bd07117957cd4bb6c66828f622f902c11433eaeaf7878ffbc982c40f88",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\stress\\runs\\90515-random-90701-ema\\evaluation\\episodes.json",
+      "sha256": "29a70987f93744af82832644297cdbc1511ca62fc200ca8753889dbdc4599996",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-routing-decay-2026-11-15\\main\\runs\\hebbian-90515-random-90701-global\\evaluation\\episodes.json",
+      "sha256": "5f78cf37e3900557ecc4f8b9e2dca484f834265b3f6dd4c540ca92509d33666d",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\trained\\runs\\90511-random-90704-ema\\initial-evaluation\\episodes.json",
+      "sha256": "0899d8bd07117957cd4bb6c66828f622f902c11433eaeaf7878ffbc982c40f88",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\trained\\runs\\90515-random-90702-local_delta\\evaluation\\episodes.json",
+      "sha256": "0899d8bd07117957cd4bb6c66828f622f902c11433eaeaf7878ffbc982c40f88",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\stress\\runs\\90515-random-90704-local_delta\\evaluation\\episodes.json",
+      "sha256": "29a70987f93744af82832644297cdbc1511ca62fc200ca8753889dbdc4599996",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\trained\\runs\\90511-random-90704-ema\\evaluation\\episodes.json",
+      "sha256": "0899d8bd07117957cd4bb6c66828f622f902c11433eaeaf7878ffbc982c40f88",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\trained\\runs\\90515-random-90701-local_delta\\initial-evaluation\\episodes.json",
+      "sha256": "0899d8bd07117957cd4bb6c66828f622f902c11433eaeaf7878ffbc982c40f88",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\stress\\runs\\90511-random-90705-ema\\evaluation\\episodes.json",
+      "sha256": "29a70987f93744af82832644297cdbc1511ca62fc200ca8753889dbdc4599996",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\trained\\runs\\90515-content-local_delta\\initial-evaluation\\episodes.json",
+      "sha256": "0899d8bd07117957cd4bb6c66828f622f902c11433eaeaf7878ffbc982c40f88",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\trained\\runs\\90515-content-local_delta\\evaluation\\episodes.json",
+      "sha256": "0899d8bd07117957cd4bb6c66828f622f902c11433eaeaf7878ffbc982c40f88",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\trained\\runs\\90515-content-ema\\initial-evaluation\\episodes.json",
+      "sha256": "0899d8bd07117957cd4bb6c66828f622f902c11433eaeaf7878ffbc982c40f88",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\stress\\runs\\90515-random-90703-ema\\evaluation\\episodes.json",
+      "sha256": "29a70987f93744af82832644297cdbc1511ca62fc200ca8753889dbdc4599996",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\stress\\runs\\90515-content-local_delta\\evaluation\\episodes.json",
+      "sha256": "29a70987f93744af82832644297cdbc1511ca62fc200ca8753889dbdc4599996",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\trained\\runs\\90515-random-90701-local_delta\\evaluation\\episodes.json",
+      "sha256": "0899d8bd07117957cd4bb6c66828f622f902c11433eaeaf7878ffbc982c40f88",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-routing-decay-2026-11-15\\main\\runs\\hebbian-90515-content-protected\\evaluation\\episodes.json",
+      "sha256": "5f78cf37e3900557ecc4f8b9e2dca484f834265b3f6dd4c540ca92509d33666d",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\trained\\runs\\90515-random-90701-ema\\initial-evaluation\\episodes.json",
+      "sha256": "0899d8bd07117957cd4bb6c66828f622f902c11433eaeaf7878ffbc982c40f88",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\trained\\runs\\90515-content-ema\\evaluation\\episodes.json",
+      "sha256": "0899d8bd07117957cd4bb6c66828f622f902c11433eaeaf7878ffbc982c40f88",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\stress\\runs\\90515-random-90704-ema\\evaluation\\episodes.json",
+      "sha256": "29a70987f93744af82832644297cdbc1511ca62fc200ca8753889dbdc4599996",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\stress\\runs\\90511-random-90704-local_delta\\evaluation\\episodes.json",
+      "sha256": "29a70987f93744af82832644297cdbc1511ca62fc200ca8753889dbdc4599996",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-routing-decay-2026-11-15\\main\\runs\\gradient-90511-random-90705-protected\\evaluation\\episodes.json",
+      "sha256": "5f78cf37e3900557ecc4f8b9e2dca484f834265b3f6dd4c540ca92509d33666d",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\trained\\runs\\90515-random-90702-ema\\initial-evaluation\\episodes.json",
+      "sha256": "0899d8bd07117957cd4bb6c66828f622f902c11433eaeaf7878ffbc982c40f88",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-routing-decay-2026-11-15\\main\\episodes.json",
+      "sha256": "5f78cf37e3900557ecc4f8b9e2dca484f834265b3f6dd4c540ca92509d33666d",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\trained\\runs\\90515-random-90701-ema\\evaluation\\episodes.json",
+      "sha256": "0899d8bd07117957cd4bb6c66828f622f902c11433eaeaf7878ffbc982c40f88",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\stress\\runs\\90515-random-90702-local_delta\\evaluation\\episodes.json",
+      "sha256": "29a70987f93744af82832644297cdbc1511ca62fc200ca8753889dbdc4599996",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\stress\\runs\\90515-content-ema\\evaluation\\episodes.json",
+      "sha256": "29a70987f93744af82832644297cdbc1511ca62fc200ca8753889dbdc4599996",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-routing-decay-2026-11-15\\main\\runs\\hebbian-90515-content-global\\evaluation\\episodes.json",
+      "sha256": "5f78cf37e3900557ecc4f8b9e2dca484f834265b3f6dd4c540ca92509d33666d",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\trained\\runs\\90515-random-90702-ema\\evaluation\\episodes.json",
+      "sha256": "0899d8bd07117957cd4bb6c66828f622f902c11433eaeaf7878ffbc982c40f88",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\stress\\runs\\90515-random-90703-local_delta\\evaluation\\episodes.json",
+      "sha256": "29a70987f93744af82832644297cdbc1511ca62fc200ca8753889dbdc4599996",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\stress\\runs\\90511-random-90704-ema\\evaluation\\episodes.json",
+      "sha256": "29a70987f93744af82832644297cdbc1511ca62fc200ca8753889dbdc4599996",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-routing-decay-2026-11-15\\main\\runs\\gradient-90511-random-90705-global\\evaluation\\episodes.json",
+      "sha256": "5f78cf37e3900557ecc4f8b9e2dca484f834265b3f6dd4c540ca92509d33666d",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-routing-decay-2026-11-15\\engineering\\episodes.json",
+      "sha256": "c93f78e3280dd7a46816dc54208bc72591c4ac29abbf0f681e6a657f58d73478",
+      "histories": 144,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-routing-decay-2026-11-15\\main\\runs\\gradient-90511-random-90702-global\\evaluation\\episodes.json",
+      "sha256": "5f78cf37e3900557ecc4f8b9e2dca484f834265b3f6dd4c540ca92509d33666d",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\stress\\runs\\90515-random-90702-ema\\evaluation\\episodes.json",
+      "sha256": "29a70987f93744af82832644297cdbc1511ca62fc200ca8753889dbdc4599996",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\stress\\runs\\90511-random-90705-local_delta\\evaluation\\episodes.json",
+      "sha256": "29a70987f93744af82832644297cdbc1511ca62fc200ca8753889dbdc4599996",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-routing-decay-2026-11-15\\engineering-cpu\\episodes.json",
+      "sha256": "c93f78e3280dd7a46816dc54208bc72591c4ac29abbf0f681e6a657f58d73478",
+      "histories": 144,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-routing-decay-2026-11-15\\main\\runs\\hebbian-90511-random-90705-protected\\evaluation\\episodes.json",
+      "sha256": "5f78cf37e3900557ecc4f8b9e2dca484f834265b3f6dd4c540ca92509d33666d",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\stress\\runs\\90511-random-90703-local_delta\\evaluation\\episodes.json",
+      "sha256": "29a70987f93744af82832644297cdbc1511ca62fc200ca8753889dbdc4599996",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-routing-decay-2026-11-15\\engineering\\runs\\gradient-90511-content-protected\\evaluation\\episodes.json",
+      "sha256": "c93f78e3280dd7a46816dc54208bc72591c4ac29abbf0f681e6a657f58d73478",
+      "histories": 144,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-routing-decay-2026-11-15\\main\\runs\\gradient-90515-random-90705-protected\\evaluation\\episodes.json",
+      "sha256": "5f78cf37e3900557ecc4f8b9e2dca484f834265b3f6dd4c540ca92509d33666d",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-routing-decay-2026-11-15\\main\\runs\\gradient-90511-random-90704-protected\\evaluation\\episodes.json",
+      "sha256": "5f78cf37e3900557ecc4f8b9e2dca484f834265b3f6dd4c540ca92509d33666d",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\stress\\runs\\90515-random-90701-local_delta\\evaluation\\episodes.json",
+      "sha256": "29a70987f93744af82832644297cdbc1511ca62fc200ca8753889dbdc4599996",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-routing-decay-2026-11-15\\main\\runs\\gradient-90511-random-90701-protected\\evaluation\\episodes.json",
+      "sha256": "5f78cf37e3900557ecc4f8b9e2dca484f834265b3f6dd4c540ca92509d33666d",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-routing-decay-2026-11-15\\engineering-cpu\\runs\\gradient-90511-content-protected\\evaluation\\episodes.json",
+      "sha256": "c93f78e3280dd7a46816dc54208bc72591c4ac29abbf0f681e6a657f58d73478",
+      "histories": 144,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-routing-decay-2026-11-15\\main\\runs\\hebbian-90511-random-90705-global\\evaluation\\episodes.json",
+      "sha256": "5f78cf37e3900557ecc4f8b9e2dca484f834265b3f6dd4c540ca92509d33666d",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-routing-decay-2026-11-15\\main\\runs\\gradient-90511-random-90701-global\\evaluation\\episodes.json",
+      "sha256": "5f78cf37e3900557ecc4f8b9e2dca484f834265b3f6dd4c540ca92509d33666d",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-routing-decay-2026-11-15\\main\\runs\\gradient-90511-content-global\\evaluation\\episodes.json",
+      "sha256": "5f78cf37e3900557ecc4f8b9e2dca484f834265b3f6dd4c540ca92509d33666d",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-routing-decay-2026-11-15\\main\\runs\\gradient-90515-random-90705-global\\evaluation\\episodes.json",
+      "sha256": "5f78cf37e3900557ecc4f8b9e2dca484f834265b3f6dd4c540ca92509d33666d",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-routing-decay-2026-11-15\\main\\runs\\gradient-90511-random-90704-global\\evaluation\\episodes.json",
+      "sha256": "5f78cf37e3900557ecc4f8b9e2dca484f834265b3f6dd4c540ca92509d33666d",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-routing-decay-2026-11-15\\main\\runs\\gradient-90511-random-90703-global\\evaluation\\episodes.json",
+      "sha256": "5f78cf37e3900557ecc4f8b9e2dca484f834265b3f6dd4c540ca92509d33666d",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-routing-decay-2026-11-15\\main\\runs\\gradient-90511-content-protected\\evaluation\\episodes.json",
+      "sha256": "5f78cf37e3900557ecc4f8b9e2dca484f834265b3f6dd4c540ca92509d33666d",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-routing-decay-2026-11-15\\main\\runs\\gradient-90515-random-90702-protected\\evaluation\\episodes.json",
+      "sha256": "5f78cf37e3900557ecc4f8b9e2dca484f834265b3f6dd4c540ca92509d33666d",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-routing-decay-2026-11-15\\main\\runs\\gradient-90511-random-90702-protected\\evaluation\\episodes.json",
+      "sha256": "5f78cf37e3900557ecc4f8b9e2dca484f834265b3f6dd4c540ca92509d33666d",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-routing-decay-2026-11-15\\main\\runs\\gradient-90511-random-90703-protected\\evaluation\\episodes.json",
+      "sha256": "5f78cf37e3900557ecc4f8b9e2dca484f834265b3f6dd4c540ca92509d33666d",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-routing-decay-2026-11-15\\main\\runs\\gradient-90515-random-90701-global\\evaluation\\episodes.json",
+      "sha256": "5f78cf37e3900557ecc4f8b9e2dca484f834265b3f6dd4c540ca92509d33666d",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-routing-decay-2026-11-15\\main\\runs\\gradient-90515-random-90702-global\\evaluation\\episodes.json",
+      "sha256": "5f78cf37e3900557ecc4f8b9e2dca484f834265b3f6dd4c540ca92509d33666d",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-routing-decay-2026-11-15\\main\\runs\\hebbian-90511-random-90704-protected\\evaluation\\episodes.json",
+      "sha256": "5f78cf37e3900557ecc4f8b9e2dca484f834265b3f6dd4c540ca92509d33666d",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-routing-decay-2026-11-15\\main\\runs\\gradient-90515-random-90703-protected\\evaluation\\episodes.json",
+      "sha256": "5f78cf37e3900557ecc4f8b9e2dca484f834265b3f6dd4c540ca92509d33666d",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-routing-decay-2026-11-15\\main\\runs\\gradient-90515-random-90704-protected\\evaluation\\episodes.json",
+      "sha256": "5f78cf37e3900557ecc4f8b9e2dca484f834265b3f6dd4c540ca92509d33666d",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-routing-decay-2026-11-15\\main\\runs\\gradient-90515-random-90704-global\\evaluation\\episodes.json",
+      "sha256": "5f78cf37e3900557ecc4f8b9e2dca484f834265b3f6dd4c540ca92509d33666d",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-routing-decay-2026-11-15\\main\\runs\\hebbian-90511-random-90701-protected\\evaluation\\episodes.json",
+      "sha256": "5f78cf37e3900557ecc4f8b9e2dca484f834265b3f6dd4c540ca92509d33666d",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-routing-decay-2026-11-15\\main\\runs\\hebbian-90511-random-90702-global\\evaluation\\episodes.json",
+      "sha256": "5f78cf37e3900557ecc4f8b9e2dca484f834265b3f6dd4c540ca92509d33666d",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-routing-decay-2026-11-15\\main\\runs\\hebbian-90511-content-protected\\evaluation\\episodes.json",
+      "sha256": "5f78cf37e3900557ecc4f8b9e2dca484f834265b3f6dd4c540ca92509d33666d",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-routing-decay-2026-11-15\\main\\runs\\gradient-90515-random-90701-protected\\evaluation\\episodes.json",
+      "sha256": "5f78cf37e3900557ecc4f8b9e2dca484f834265b3f6dd4c540ca92509d33666d",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-routing-decay-2026-11-15\\main\\runs\\gradient-90515-random-90703-global\\evaluation\\episodes.json",
+      "sha256": "5f78cf37e3900557ecc4f8b9e2dca484f834265b3f6dd4c540ca92509d33666d",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-routing-decay-2026-11-15\\main\\runs\\hebbian-90511-random-90703-protected\\evaluation\\episodes.json",
+      "sha256": "5f78cf37e3900557ecc4f8b9e2dca484f834265b3f6dd4c540ca92509d33666d",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-routing-decay-2026-11-15\\main\\runs\\hebbian-90511-content-global\\evaluation\\episodes.json",
+      "sha256": "5f78cf37e3900557ecc4f8b9e2dca484f834265b3f6dd4c540ca92509d33666d",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-routing-decay-2026-11-15\\main\\runs\\hebbian-90511-random-90704-global\\evaluation\\episodes.json",
+      "sha256": "5f78cf37e3900557ecc4f8b9e2dca484f834265b3f6dd4c540ca92509d33666d",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-routing-decay-2026-11-15\\main\\runs\\hebbian-90511-random-90701-global\\evaluation\\episodes.json",
+      "sha256": "5f78cf37e3900557ecc4f8b9e2dca484f834265b3f6dd4c540ca92509d33666d",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-routing-decay-2026-11-15\\main\\runs\\gradient-90515-content-protected\\evaluation\\episodes.json",
+      "sha256": "5f78cf37e3900557ecc4f8b9e2dca484f834265b3f6dd4c540ca92509d33666d",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-routing-decay-2026-11-15\\main\\runs\\hebbian-90511-random-90703-global\\evaluation\\episodes.json",
+      "sha256": "5f78cf37e3900557ecc4f8b9e2dca484f834265b3f6dd4c540ca92509d33666d",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-routing-decay-2026-11-15\\main\\runs\\gradient-90515-content-global\\evaluation\\episodes.json",
+      "sha256": "5f78cf37e3900557ecc4f8b9e2dca484f834265b3f6dd4c540ca92509d33666d",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-routing-decay-2026-11-15\\main\\runs\\hebbian-90511-random-90702-protected\\evaluation\\episodes.json",
+      "sha256": "5f78cf37e3900557ecc4f8b9e2dca484f834265b3f6dd4c540ca92509d33666d",
+      "histories": 1152,
+      "omitted_from_launch": 0
+    }
+  ],
+  "omitted_prior_unique_histories": 1,
+  "omitted_sources": [
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-kv-control-2026-11-14\\integration-90301\\verification.json",
+      "sha256": "db02f11803be648031c419d4c37c7dc46b424fc27e092b291558c34664ac2440",
+      "histories": 1,
+      "omitted_signatures": [
+        "5671c63e7ecea6474409f7eb758467e43cdb1892c7ffbdb4b9bf296fa7293bca"
+      ]
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-kv-control-2026-11-14\\integration-90305\\verification.json",
+      "sha256": "6e23b4624463550867171d643d39b11f1312d4004f550ddd2061813bf3a594a5",
+      "histories": 1,
+      "omitted_signatures": [
+        "5671c63e7ecea6474409f7eb758467e43cdb1892c7ffbdb4b9bf296fa7293bca"
+      ]
+    }
+  ],
+  "supplemental_signatures": [
+    "5671c63e7ecea6474409f7eb758467e43cdb1892c7ffbdb4b9bf296fa7293bca"
+  ],
+  "extended_exclusion_count": 89094,
+  "engineering_own_extended_exclusion_count": 88934,
+  "reusable_superset_path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-bounded-freshness-2026-11-15\\analysis\\audited_signature_superset.json",
+  "reusable_superset_sha256": "3e1d48d84318fae894660d9f2e4fdddac9b5d9f93623a7cdb253a8418d1d0ac4",
+  "reusable_superset_scope": "Original launch union plus the one omitted integration history; a future study must also add this study main histories and any later consulted inputs.",
+  "main_overlap_with_extended_prior_union": 0,
+  "engineering_overlap_with_supplement": 0,
+  "main_overlap_with_own_extended_launch_exclusions": 0,
+  "engineering_overlap_with_own_extended_launch_exclusions": 0,
+  "exact_main_regeneration_with_extended_exclusions": {
+    "status": "passed",
+    "literal_streams_exact": 1280,
+    "development_seed": 91223,
+    "accepted_base_histories": 128,
+    "candidate_attempts": 128,
+    "base_seed_sequence_sha256": "c3fac4105838cf562f291576cf3af3b02d7e15132eccdcbc4ede0cb5844871a1",
+    "scope": "independent private PCG64 draws, rejection logic and full keys/values equality; no CLMM imports"
+  },
+  "exact_engineering_regeneration_with_supplement": {
+    "status": "passed",
+    "literal_streams_exact": 160,
+    "development_seed": 91203,
+    "accepted_base_histories": 16,
+    "candidate_attempts": 16,
+    "base_seed_sequence_sha256": "d3ac202e97c34445bc1bdd885e5d21476929b27fb5e829f4fae32778e1d00d56",
+    "scope": "independent private PCG64 draws, rejection logic and full keys/values equality; no CLMM imports"
+  },
+  "conclusion": "One seed90323 integration history embedded in verification.json was absent from the launch union. It has26 arrivals, whereas all new cells have2/3/4/22/72/136/200 arrivals. Extended exclusions reproduce every accepted new history exactly, so no data, score or selection change is needed.",
+  "interpretation": "Provenance coverage omission, not observed train/test history overlap; disclose rather than retroactively rewrite the launch packet."
+}

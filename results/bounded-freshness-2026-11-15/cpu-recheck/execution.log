@@ -1,0 +1,29 @@
+C:\Users\henry\Documents\Codex\2026-10-22\i\work\clmm-test-env\Lib\site-packages\torch\jit\_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+90511-content-local_delta
+90511-random-90701-local_delta
+90511-random-90702-local_delta
+90511-random-90703-local_delta
+90511-random-90704-local_delta
+90511-random-90705-local_delta
+90515-content-local_delta
+90515-random-90701-local_delta
+90515-random-90702-local_delta
+90515-random-90703-local_delta
+90515-random-90704-local_delta
+90515-random-90705-local_delta
+{
+  "status": "passed",
+  "scope": "First 16 histories of neutral K16 gate and phase2 D128 with all six pressure arms across all12 fixed checkpoints; actual inference/resume, not full-grid numerical reproduction",
+  "models": 12,
+  "queries": 9216,
+  "max_abs_error": 0.0,
+  "torch": "2.15.0+cpu",
+  "python": "3.13.3 (tags/v3.13.3:6280bb5, Apr  8 2025, 14:47:33) [MSC v.1943 64 bit (AMD64)]",
+  "numpy": "2.5.4",
+  "device": "cpu",
+  "device_name": "CPU",
+  "source_sha256": "d89a9d192590df38339ef410b2cfa619fcfcb2656b6e61338c632a5ac9542404",
+  "slurm_job": null,
+  "elapsed_seconds": 93.31560560001526
+}

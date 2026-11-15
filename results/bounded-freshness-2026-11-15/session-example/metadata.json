@@ -1,0 +1,31 @@
+{
+  "case": "90511-content-local_delta",
+  "checkpoint": "checkpoints/90511-content-local_delta.pt",
+  "checkpoint_sha256": "ec9de4709df9ea2802d50d7bef02bc3bf8b0a6807aacdeff2bce298cd50d8605",
+  "slow_sha256": "c0be16349aa28c31939d132e3a9d90b140ec4898d5817624779f71ec6a5bc095",
+  "source_commit": "9ab3901860548d2d87a9afc61e8ce58f950a03ce",
+  "data_sha256": "1fcc5d7a2a475ce18a98019f0d571aa426420dfa047bc435e5292856b0376a70",
+  "cell": "pressure_k16_p2_d128",
+  "arm": "periodic_bounded",
+  "real_arrival_index": 22,
+  "batch_histories": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "session_schema": 2,
+  "scope": "Actual bounded policy snapshot before final revision-block arrival; resume with exact slow checkpoint and remaining real stream"
+}

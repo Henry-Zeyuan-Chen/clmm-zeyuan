@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "scope": "Direct raw-row latest-target, primary weighting/bootstrap and resource recomputation; no analysis module imports",
+  "primary": [
+    {
+      "category": "stable",
+      "literal": 0.8329589843749999,
+      "bounded": 0.8328125,
+      "estimate": -0.00014648437500000121,
+      "lower": -0.0012695312500000007,
+      "upper": 0.0006103515624999983
+    },
+    {
+      "category": "revised",
+      "literal": 0.834619140625,
+      "bounded": 0.9393066406249999,
+      "estimate": 0.10468750000000002,
+      "lower": 0.07763671875,
+      "upper": 0.13276733398437496
+    }
+  ],
+  "scores": 433152,
+  "writes": 13192704,
+  "batches": 4608
+}
