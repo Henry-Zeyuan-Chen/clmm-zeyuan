@@ -1,0 +1,96 @@
+{
+  "status": "passed",
+  "scope": "Actual saved tensor storage, not disk size or FLOP equivalence",
+  "runs": [
+    {
+      "run": "gradient-dense-90511",
+      "slow_parameter_elements": 81921,
+      "slow_parameter_backing_bytes": 327684,
+      "fixed_codebook_and_router_backing_bytes": 21504,
+      "router_backing_bytes": 1024,
+      "optimizer_tensor_backing_bytes": 655392,
+      "optimizer_file_bytes": 661597,
+      "fast_trace_bytes_per_stream": 65536,
+      "note": "Optimizer is training-only and not retained by evaluation adapter; tensor backing excludes Python/allocator overhead"
+    },
+    {
+      "run": "gradient-dense-90515",
+      "slow_parameter_elements": 81921,
+      "slow_parameter_backing_bytes": 327684,
+      "fixed_codebook_and_router_backing_bytes": 21504,
+      "router_backing_bytes": 1024,
+      "optimizer_tensor_backing_bytes": 655392,
+      "optimizer_file_bytes": 661597,
+      "fast_trace_bytes_per_stream": 65536,
+      "note": "Optimizer is training-only and not retained by evaluation adapter; tensor backing excludes Python/allocator overhead"
+    },
+    {
+      "run": "gradient-top1-90511",
+      "slow_parameter_elements": 81921,
+      "slow_parameter_backing_bytes": 327684,
+      "fixed_codebook_and_router_backing_bytes": 21504,
+      "router_backing_bytes": 1024,
+      "optimizer_tensor_backing_bytes": 655392,
+      "optimizer_file_bytes": 661597,
+      "fast_trace_bytes_per_stream": 65536,
+      "note": "Optimizer is training-only and not retained by evaluation adapter; tensor backing excludes Python/allocator overhead"
+    },
+    {
+      "run": "gradient-top1-90515",
+      "slow_parameter_elements": 81921,
+      "slow_parameter_backing_bytes": 327684,
+      "fixed_codebook_and_router_backing_bytes": 21504,
+      "router_backing_bytes": 1024,
+      "optimizer_tensor_backing_bytes": 655392,
+      "optimizer_file_bytes": 661597,
+      "fast_trace_bytes_per_stream": 65536,
+      "note": "Optimizer is training-only and not retained by evaluation adapter; tensor backing excludes Python/allocator overhead"
+    },
+    {
+      "run": "hebbian-dense-90511",
+      "slow_parameter_elements": 81921,
+      "slow_parameter_backing_bytes": 327684,
+      "fixed_codebook_and_router_backing_bytes": 21504,
+      "router_backing_bytes": 1024,
+      "optimizer_tensor_backing_bytes": 655392,
+      "optimizer_file_bytes": 661597,
+      "fast_trace_bytes_per_stream": 65536,
+      "note": "Optimizer is training-only and not retained by evaluation adapter; tensor backing excludes Python/allocator overhead"
+    },
+    {
+      "run": "hebbian-dense-90515",
+      "slow_parameter_elements": 81921,
+      "slow_parameter_backing_bytes": 327684,
+      "fixed_codebook_and_router_backing_bytes": 21504,
+      "router_backing_bytes": 1024,
+      "optimizer_tensor_backing_bytes": 655392,
+      "optimizer_file_bytes": 661597,
+      "fast_trace_bytes_per_stream": 65536,
+      "note": "Optimizer is training-only and not retained by evaluation adapter; tensor backing excludes Python/allocator overhead"
+    },
+    {
+      "run": "hebbian-top1-90511",
+      "slow_parameter_elements": 81921,
+      "slow_parameter_backing_bytes": 327684,
+      "fixed_codebook_and_router_backing_bytes": 21504,
+      "router_backing_bytes": 1024,
+      "optimizer_tensor_backing_bytes": 655392,
+      "optimizer_file_bytes": 661597,
+      "fast_trace_bytes_per_stream": 65536,
+      "note": "Optimizer is training-only and not retained by evaluation adapter; tensor backing excludes Python/allocator overhead"
+    },
+    {
+      "run": "hebbian-top1-90515",
+      "slow_parameter_elements": 81921,
+      "slow_parameter_backing_bytes": 327684,
+      "fixed_codebook_and_router_backing_bytes": 21504,
+      "router_backing_bytes": 1024,
+      "optimizer_tensor_backing_bytes": 655392,
+      "optimizer_file_bytes": 661597,
+      "fast_trace_bytes_per_stream": 65536,
+      "note": "Optimizer is training-only and not retained by evaluation adapter; tensor backing excludes Python/allocator overhead"
+    }
+  ],
+  "latency_scope": "Run walltimes include imports/provenance; resource batch times include policy/validation/serialization, not bare-kernel inference latency",
+  "sparse_scope": "Top1 updates one active module vsdense4 but vectorized dense candidates are still computed; no4xspeed ormemoryclaim"
+}

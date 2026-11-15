@@ -2,15 +2,15 @@
 
 Updated November 15, 2026. Zeyuan owns pretraining feasibility, reusable baseline weights and common evaluation. Member A owns sleep consolidation; Member B owns selective Hebbian/neural-memory updates. The proposal asks whether those interventions improve new-association acquisition, unchanged-fact retention and genuine revisions. Sleep timing needs matched replay budgets. The Hebbian track must distinguish its update rule from selective routing.
 
-## Latest result: qualified nonlinear interference regime
+## Latest result: working reference adapters and a shared pilot
 
-The [nonlinear correlated-key experiment](NONLINEAR_CORRELATED.md) now supplies rank32 trained component initializers with short/fresh acquisition and revision checks, plus meaningful delay interference. K8 and K16 pass actual D0 admission in both checkpoints; K32 remains diagnostic. The finite rank sweep stopped at its first candidate, before any replay outcomes.
+The [adapter integration](ADAPTER_INTEGRATION.md) supplies a generic sleep session, local Hebbian and matched gradient components, dense/top-one access, checkpoint registry and one evaluator. These are references because the refreshed team repo had only empty method directories. A/B can replace the backend/controller without changing the observed streams, key-only reads, state checks or metric contract.
 
-At K8,D64 stable accuracy, the trained mean is39.06% online,35.35% continuous and34.77% periodic. Periodic-minus-continuous is−0.59 percentage points,95% paired interval[−2.15,+0.98], so there is no established timing advantage. Exact untrained anchors average29.10% online; outer training improves delayed classification despite already-perfect short accuracy, while late coordinateMSE worsens. These are128 paired histories for two fixed checkpoints/one codebook, not population training uncertainty.
+All four trained systems qualify at K8; top-one versions also qualify at K16, where dense versions fail acquisition. At K8D64 online stable recall, Hebbian top-one21.48% exceeds dense5.47% by16.02points[8.98,23.44], but gradient top-one reaches36.72%. The positive result concerns access, with inactive decay protection and learned-parameter differences explicit, not a Hebbian-rule superiority claim. Fixed-slow-weight tests support a conditional access effect and leave the top-one rule difference uncertain. Sleep timing comparisons remain inconclusive.
 
-Use the portable correlated loader to preserve saved literal codebook vectors across framework environments. Strict GPU inference and portable CPU streaming/state-resume checks pass. Handoff/log record the unverified optional GPU check and final scheduler status after SSH timeout; the main results are fully local.
+The exact initializers remain important: no late-training gain is established for Hebbian top-one; gradient top-one improves from24.61% to36.72%. Longer-horizon training is a future controlled study rather than an unplanned remedy on these histories. Fully typed component success does not qualify the complete byte model for fresh two-key selection.
 
-The next shared milestone is actual sleep/Hebbian adapter integration against this frozen K8/K16 regime. Keep update rule, routing, buffer content and timing ablations separate, and retain untrained anchors, acquisition gates and physical resource accounting. Complete byte-model transfer remains unresolved.
+62 new integration tests, full artifact coverage, exact GPU and close CPU saved-score checks pass. All artifacts/weights are local and the new allocation is released. The old unverified portable GPU check was retrieved and passed; old job closure is also verified. [HANDOFF.md](HANDOFF.md) records the recoverable source, budgets, closed jobs and next decisions.
 
 ## Earlier evidence and its limits
 
@@ -27,6 +27,6 @@ The [fixed-set fitting and assignment-transfer diagnostic](FIXED_SET_GENERALIZAT
 
 ## Next Member C milestone
 
-Maintain the qualified correlated component baseline and integrate teammate adapters with the common write/read/state contract. Freeze new changes before fresh evaluation; do not reselect on the current replay histories. A later buffer-coverage/content ablation can test why recent FIFO replay harms older stable facts under this rule. Keep complete sequence-model encoding/pretraining as a separate, acquisition-gated milestone.
+Maintain the shared checkpoint/state/evaluation contract while A/B replace the explicitly reference methods with their intended mechanisms. Before a biological claim, separate update rule from access/decay exposure and independently trained representations. Before broader language claims, repair the complete sequence model's acquisition/generalization gap.
 
-The team still needs to state which resources define its main matched comparison: writes, adaptive bytes or measured compute. The interim report can now cite actual calibration, untrained controls, persistent-state checks and an informative non-ceiling timing result, with the full-model and method-efficacy gaps explicit. See [HANDOFF.md](HANDOFF.md) for recovery and the outstanding cluster-status check.
+Design any longer-horizon curriculum with a fresh evaluation split and declared total observations, answers and optimizer opportunities; changing context length does not preserve every training budget automatically. Keep exact untrained anchors and own admission gates. The interim report can now cite a working integration, controlled ablations and actual limitations without claiming final project efficacy or full Titans reproduction.

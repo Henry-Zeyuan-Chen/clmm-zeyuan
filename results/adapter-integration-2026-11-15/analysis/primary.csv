@@ -1,0 +1,4 @@
+family,cell,contrast,initializer,fixed_initializers,episodes,left_accuracy,right_accuracy,difference,ci_low,ci_high,both_systems_admitted,scope
+trained,pressure_k8_d64,hebbian_top1_minus_dense,90511,1,64,0.203125,0.0546875,0.1484375,0.078125,0.2265625,True,trained-system development pilot
+trained,pressure_k8_d64,hebbian_top1_minus_dense,90515,1,64,0.2265625,0.0546875,0.171875,0.09375,0.25,True,trained-system development pilot
+trained,pressure_k8_d64,hebbian_top1_minus_dense,mean_of_fixed_initializers,2,64,0.21484375,0.0546875,0.16015625,0.08984375,0.234375,True,trained-system development pilot

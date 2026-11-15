@@ -1,0 +1,42 @@
+{
+  "job": 13918002,
+  "node": "ins081",
+  "gpu": "NVIDIA RTX A6000",
+  "cpus": 4,
+  "system_memory": "16G",
+  "requested_limit": "01:00:00",
+  "final_state": "CANCELLED by user after retrieval/verification",
+  "release_confirmed": true,
+  "allocation_elapsed": "00:16:50",
+  "allocated_gpu_hours": 0.28055555555555556,
+  "pipeline_seconds": 767.8906543389894,
+  "main_step": "COMPLETED exit0",
+  "gpu_recheck_step": "COMPLETED exit0",
+  "archive_step": "FAILED exit1 due root directory mtime warning; complete matchingSHAarchive and expected artifacts verified",
+  "source_records": [
+    "cluster-release.txt",
+    "cluster-sacct-final.txt",
+    "cluster-squeue-final.txt",
+    "transfer-verification.json"
+  ],
+  "no_renewal": true,
+  "desktop_helper_selection_changed": false,
+  "unrelated_jobs_modified": false,
+  "active_task_jobs": false,
+  "prior_job": {
+    "verified_utc": "2026-11-15T17:11:58.732595+00:00",
+    "job": 13914782,
+    "state": "TIMEOUT",
+    "elapsed": "01:00:03",
+    "allocated_gpu_hours": 1.0008333333333332,
+    "ended_cluster_time": "2026-11-15T02:03:21",
+    "active": false,
+    "main_step": "COMPLETED exit0",
+    "portable_gpu_check": "passed",
+    "queries": 2432,
+    "max_score_error": 0.0,
+    "reason": "Previous one-hour allocation expired after all experiments/checks; no cancellation or renewal needed",
+    "supersedes": "e3b744c unknown closeout status; scientific results unchanged"
+  },
+  "monitoring": "None scheduled"
+}

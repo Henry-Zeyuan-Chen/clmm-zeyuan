@@ -1,0 +1,38 @@
+{"starting": "throughput-gpu"}
+{"completed": "throughput-gpu", "status": "succeeded"}
+{"starting": "neural-anchor-90511"}
+{"completed": "neural-anchor-90511", "status": "succeeded"}
+{"starting": "neural-anchor-90515"}
+{"completed": "neural-anchor-90515", "status": "succeeded"}
+{"starting": "gradient-dense-90511"}
+{"completed": "gradient-dense-90511", "status": "succeeded"}
+{"starting": "gradient-top1-90511"}
+{"completed": "gradient-top1-90511", "status": "succeeded"}
+{"starting": "hebbian-dense-90511"}
+{"completed": "hebbian-dense-90511", "status": "succeeded"}
+{"starting": "hebbian-top1-90511"}
+{"completed": "hebbian-top1-90511", "status": "succeeded"}
+{"starting": "gradient-dense-90515"}
+{"completed": "gradient-dense-90515", "status": "succeeded"}
+{"starting": "gradient-top1-90515"}
+{"completed": "gradient-top1-90515", "status": "succeeded"}
+{"starting": "hebbian-dense-90515"}
+{"completed": "hebbian-dense-90515", "status": "succeeded"}
+{"starting": "hebbian-top1-90515"}
+{"completed": "hebbian-top1-90515", "status": "succeeded"}
+{"starting": "fork-gradient-dense-90511"}
+{"completed": "fork-gradient-dense-90511", "status": "succeeded"}
+{"starting": "fork-gradient-top1-90511"}
+{"completed": "fork-gradient-top1-90511", "status": "succeeded"}
+{"starting": "fork-hebbian-dense-90511"}
+{"completed": "fork-hebbian-dense-90511", "status": "succeeded"}
+{"starting": "fork-hebbian-top1-90511"}
+{"completed": "fork-hebbian-top1-90511", "status": "succeeded"}
+{"starting": "fork-gradient-dense-90515"}
+{"completed": "fork-gradient-dense-90515", "status": "succeeded"}
+{"starting": "fork-gradient-top1-90515"}
+{"completed": "fork-gradient-top1-90515", "status": "succeeded"}
+{"starting": "fork-hebbian-dense-90515"}
+{"completed": "fork-hebbian-dense-90515", "status": "succeeded"}
+{"starting": "fork-hebbian-top1-90515"}
+{"completed": "fork-hebbian-top1-90515", "status": "succeeded"}

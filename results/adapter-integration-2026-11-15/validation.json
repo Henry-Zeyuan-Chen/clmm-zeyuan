@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "source_commit": "a41bb097af3e7eed356d13e24e4a0d5bc6677b14",
+  "completed_utc": "2026-11-15T18:00:54.036880+00:00",
+  "integration_tests": 62,
+  "main_training_runs": 8,
+  "neural_anchors": 2,
+  "frozen_fork_runs": 8,
+  "engineering_gpu_runs": 1,
+  "all_declared_invocations": 19,
+  "main_score_vectors": 160768,
+  "main_causal_writes": 1107712,
+  "main_serialization_batches": 2960,
+  "actual_main_training_answers": 1431552,
+  "actual_main_training_observations": 2239744,
+  "exact_sham_fork_vectors": 7296,
+  "independent_required_file_checks": 815,
+  "pipeline_session_bundles_checked": 22,
+  "gpu_selected": {
+    "models": 18,
+    "queries": 3616,
+    "max_raw_score_error": 0.0,
+    "all_stored_predictions_match": true
+  },
+  "cpu_selected": {
+    "models": 18,
+    "queries": 3616,
+    "max_raw_score_error": 9.5367431640625e-07,
+    "all_stored_predictions_match": true,
+    "tolerance_declared": 1e-05
+  },
+  "scope": "Independent source/artifact/analytic checks and selected inference, not retraining or every numerical output",
+  "qualification": "Own admission by system/K in analysis/admission.csv; failed denseK16 stays diagnostic",
+  "scientific_limit": "Access benefits both rules; no Hebbian superiority or sleep timing advantage established; fixed2seeds/onecodebook development evidence"
+}

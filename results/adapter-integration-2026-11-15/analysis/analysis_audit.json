@@ -1,0 +1,71 @@
+{
+  "status": "reconstructed_from_saved_predictions",
+  "bootstrap_seed": 90604,
+  "bootstrap_draws": 5000,
+  "primary": "trained Hebbian top1 minus dense, ONLINE K8D64 stable accuracy",
+  "primary_rows": [
+    {
+      "family": "trained",
+      "cell": "pressure_k8_d64",
+      "contrast": "hebbian_top1_minus_dense",
+      "initializer": 90511,
+      "fixed_initializers": 1,
+      "episodes": 64,
+      "left_accuracy": 0.203125,
+      "right_accuracy": 0.0546875,
+      "difference": 0.1484375,
+      "ci_low": 0.078125,
+      "ci_high": 0.2265625,
+      "both_systems_admitted": true,
+      "scope": "trained-system development pilot"
+    },
+    {
+      "family": "trained",
+      "cell": "pressure_k8_d64",
+      "contrast": "hebbian_top1_minus_dense",
+      "initializer": 90515,
+      "fixed_initializers": 1,
+      "episodes": 64,
+      "left_accuracy": 0.2265625,
+      "right_accuracy": 0.0546875,
+      "difference": 0.171875,
+      "ci_low": 0.09375,
+      "ci_high": 0.25,
+      "both_systems_admitted": true,
+      "scope": "trained-system development pilot"
+    },
+    {
+      "family": "trained",
+      "cell": "pressure_k8_d64",
+      "contrast": "hebbian_top1_minus_dense",
+      "initializer": "mean_of_fixed_initializers",
+      "fixed_initializers": 2,
+      "episodes": 64,
+      "left_accuracy": 0.21484375,
+      "right_accuracy": 0.0546875,
+      "difference": 0.16015625,
+      "ci_low": 0.08984375,
+      "ci_high": 0.234375,
+      "both_systems_admitted": true,
+      "scope": "trained-system development pilot"
+    }
+  ],
+  "primary_paired_seeds_complete": true,
+  "interval_scope": "Paired histories for two fixed trained checkpoints/codebook, not training-procedure uncertainty; pilot intervals unadjusted",
+  "frozen_sham_reloads": [
+    {
+      "initializer": 90511,
+      "compared_queries": 3648,
+      "max_score_error": 0.0,
+      "all_scores_exact": true
+    },
+    {
+      "initializer": 90515,
+      "compared_queries": 3648,
+      "max_score_error": 0.0,
+      "all_scores_exact": true
+    }
+  ],
+  "incomplete_pairs": [],
+  "successful_records": 18
+}

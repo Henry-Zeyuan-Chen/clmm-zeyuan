@@ -1,0 +1,21 @@
+rule,routing,contrast,episodes,fixed_initializers,left_mean,right_mean,difference,ci_low,ci_high,scope
+gradient,dense,periodic_minus_continuous,64,2,0.08984375,0.078125,0.01171875,0.0,0.03125,Secondary unadjusted fixed-checkpoint/history comparison; identical P/C replay records and write opportunities
+gradient,dense,periodic_minus_online,64,2,0.08984375,0.0625,0.02734375,-0.00390625,0.0625,Secondary unadjusted fixed-checkpoint/history comparison; online has fewer writes
+gradient,dense,continuous_minus_online,64,2,0.078125,0.0625,0.015625,-0.015625,0.046875,Secondary unadjusted fixed-checkpoint/history comparison; online has fewer writes
+gradient,dense,repeat_minus_online,64,2,0.0390625,0.0625,-0.0234375,-0.0546875,0.0078125,Secondary unadjusted fixed-checkpoint/history comparison; online has fewer writes
+gradient,top1,periodic_minus_continuous,64,2,0.16796875,0.17578125,-0.0078125,-0.01953125,0.0,Secondary unadjusted fixed-checkpoint/history comparison; identical P/C replay records and write opportunities
+gradient,top1,periodic_minus_online,64,2,0.16796875,0.3671875,-0.19921875,-0.27734375,-0.125,Secondary unadjusted fixed-checkpoint/history comparison; online has fewer writes
+gradient,top1,continuous_minus_online,64,2,0.17578125,0.3671875,-0.19140625,-0.26953125,-0.12109375,Secondary unadjusted fixed-checkpoint/history comparison; online has fewer writes
+gradient,top1,repeat_minus_online,64,2,0.1484375,0.3671875,-0.21875,-0.30078125,-0.140625,Secondary unadjusted fixed-checkpoint/history comparison; online has fewer writes
+hebbian,dense,periodic_minus_continuous,64,2,0.08203125,0.0859375,-0.00390625,-0.01171875,0.0,Secondary unadjusted fixed-checkpoint/history comparison; identical P/C replay records and write opportunities
+hebbian,dense,periodic_minus_online,64,2,0.08203125,0.0546875,0.02734375,-0.01171875,0.06640625,Secondary unadjusted fixed-checkpoint/history comparison; online has fewer writes
+hebbian,dense,continuous_minus_online,64,2,0.0859375,0.0546875,0.03125,-0.0078125,0.07421875,Secondary unadjusted fixed-checkpoint/history comparison; online has fewer writes
+hebbian,dense,repeat_minus_online,64,2,0.0390625,0.0546875,-0.015625,-0.046875,0.01171875,Secondary unadjusted fixed-checkpoint/history comparison; online has fewer writes
+hebbian,top1,periodic_minus_continuous,64,2,0.13671875,0.12890625,0.0078125,0.0,0.0234375,Secondary unadjusted fixed-checkpoint/history comparison; identical P/C replay records and write opportunities
+hebbian,top1,periodic_minus_online,64,2,0.13671875,0.21484375,-0.078125,-0.1328125,-0.0234375,Secondary unadjusted fixed-checkpoint/history comparison; online has fewer writes
+hebbian,top1,continuous_minus_online,64,2,0.12890625,0.21484375,-0.0859375,-0.1484375,-0.02734375,Secondary unadjusted fixed-checkpoint/history comparison; online has fewer writes
+hebbian,top1,repeat_minus_online,64,2,0.1015625,0.21484375,-0.11328125,-0.16796875,-0.0625,Secondary unadjusted fixed-checkpoint/history comparison; online has fewer writes
+neural,none,periodic_minus_continuous,64,2,0.34765625,0.3515625,-0.00390625,-0.02734375,0.0234375,Secondary unadjusted fixed-checkpoint/history comparison; identical P/C replay records and write opportunities
+neural,none,periodic_minus_online,64,2,0.34765625,0.3671875,-0.01953125,-0.0625,0.0234375,Secondary unadjusted fixed-checkpoint/history comparison; online has fewer writes
+neural,none,continuous_minus_online,64,2,0.3515625,0.3671875,-0.015625,-0.05859375,0.02734375,Secondary unadjusted fixed-checkpoint/history comparison; online has fewer writes
+neural,none,repeat_minus_online,64,2,0.3984375,0.3671875,0.03125,0.00390625,0.0625,Secondary unadjusted fixed-checkpoint/history comparison; online has fewer writes

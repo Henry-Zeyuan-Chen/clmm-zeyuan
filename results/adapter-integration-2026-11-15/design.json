@@ -1,0 +1,109 @@
+{
+  "experiment_id": "reference-adapter-integration-v1",
+  "scope": "Member C shared component integration and bounded feasibility pilot. Reference modules because fetched team repo only contains empty sleep/Hebbian folders. Not teammate-final algorithms, full Titans/MAC integration or paper-baseline-v1.",
+  "source_parent": "e3b744cf1ff89aaff41ae7abfa4d9ebb973069e0",
+  "proposal": "Local CLMM final proposal (1).docx: memory-only buffered sleep, and several nonlinear associative modules with W0+alpha*trace, offline differentiable training and bounded local Hebbian writes; fixed shared routing is a component-control simplification.",
+  "prior_closeout": {
+    "job": 13914782,
+    "observed_state": "TIMEOUT",
+    "elapsed": "01:00:03",
+    "portable_gpu_check": "passed2432 queries, exact scores",
+    "new_allocation_not_yet_requested": true
+  },
+  "sleep": {
+    "implementation": "SleepSession atopexistingStreamingReplay, genericfunctionalmodel API; saves model faststate andboundedliteralpolicy together",
+    "arms": [
+      "online",
+      "repeat",
+      "continuous",
+      "periodic"
+    ],
+    "fifo_capacity": 8,
+    "block_size": 4,
+    "selection": "Latest-per-key FIFO refreshed only on real arrivals; frozen4draws withreplacement beforeblock; C one aftereacharrival, P same records/order atblockend",
+    "read": "Only query keys and faststate; no buffer/history/labels passed",
+    "session": "Prefill and firstdelay midblock export/save/load/import; modelslowcheckpoint SHA recorded externally. Terminalfinishdistinctfrompause."
+  },
+  "associative": {
+    "systems": [
+      "gradient_dense",
+      "gradient_top1",
+      "hebbian_dense",
+      "hebbian_top1"
+    ],
+    "modules": 4,
+    "dim": 64,
+    "trainable_elements": 81921,
+    "fast_tensor_bytes_per_stream": 65536,
+    "codebook": "Exact saved rank32 shared vectors, first16 onehotvalues/decodercoordinates; sourceNNM weightsNOTloaded into incompatiblearchitecture",
+    "slow": "Per-module key/value nonlinear tanh encoders and linear decoder initializedI+Gaussian.01; W0zero,alpha1, learnedscalar sigmoideta initialized.1",
+    "effective_weights": "W0+alpha*H",
+    "hebbian": "Hnew=clamp((1-eta)*H+eta*pre outer post,-1,1); pre/post from observedkey/value encodings",
+    "gradient": "Same leak/bounds; replace outerproduct by negative exact analytic gradient wrtH of halfsumSSE between pre(W0+alphaH) and observed post",
+    "routing": "Fixedcosineprototypes at shared keyIDs0,16,32,48. Dense reads/writes all4 and averages outputs. Top1reads/writes selectedmodule, inactiveHunchanged includingNOdecay.",
+    "fairness": "Same shapes/initialslowtensorbits perseed across4systems. Top1vsdense changes both read and write access and active updates1vs4. Vectorizedimplementationstillcomputes densecandidate tensors: no4xcompute/speed claim. Independentlytrained encoders/eta/alpha diverge; maincompares trainedsystems, not pure update-rule causality."
+  },
+  "training": {
+    "init_seeds": [
+      90511,
+      90515
+    ],
+    "train_seed": 90502,
+    "steps": 1200,
+    "batch_size": 32,
+    "optimizer": "AdamW",
+    "lr": 0.001,
+    "weight_decay": 0,
+    "clip_norm": 1,
+    "objective": "Same16-coordinate MSE vs onehotanswers, kv_streamsK2/4/8,genuine revisions,D0/4",
+    "budget": "Atmost8actual trainingruns, every4conditions forfirstdeclaredseed then second; identical actual arrays. Final fixedendpoints, initialweights+initial3gates andonlineK8D0/D64 retained. No method/hyperparameter/seed selection byoutcome."
+  },
+  "evaluation": {
+    "seed": 90623,
+    "short_episodes": 128,
+    "pressure_episodes": 64,
+    "facts": [
+      8,
+      16
+    ],
+    "delays": [
+      0,
+      16,
+      64
+    ],
+    "query_strata": "Same4initialtargets atall delays: stable/revised separate; recentdistractor separate; no target revisitedduringdelay. Crossstrata age/residency differ.",
+    "gates": "Own per-system shortacq2/rev2>=.9,acq4>=.8 all-correct; normalminusrolledK2 blockbootstraplower95>0. Ownper-KD0fourtargetallcorrect>=.8 BOTHoriginalseeds before retention-efficacy interpretation. Preservefailedgates asdiagnostics; previousNNMqualificationdoesnottransfer.",
+    "primary": "ONLINE arm atK8D64 stableaccuracy top1minusdense withinindependentlytrainedHebbian systems, ifownadmissionpasses else diagnostic. Reporteachseed+meanfixedseeds; bootstrap same64historyIDs acrossbothseeds,5000draws90604. Paired developmentpilot, not confirmatory efficacy; freshconfirmation needed.",
+    "secondary": "Gradientaccess effect, rulecontrastwithinrouting, rule-accessinteraction; PminusC foreachsystem, initialfinalonline anchors, revisions/obsoleteanswers, othercells. Descriptive/unadjusted unlessfuturedeclared confirmation; noequivalenceclaimfromnull.",
+    "budgets": "CommononlineprefillK+2. OnlineK+2+D writes,repeat/C/PK+2+2D. Moduleactiveupdates1vs4 andactual tensorbytes,parameters,latency reportedseparately."
+  },
+  "anchors": {
+    "neural": "BothsavedqualifiedNNMcheckpoints re-evaluate on samefreshhistories throughSleepSession. Descriptivearchitectureanchor, notparameter/update-compute matched toassociative models.",
+    "frozen_forks": "After8trainedsystemscomplete, fixedsmall8evaluations: for eachgradient_dense finalseed cloneSAMEslowtensors intoall4rule/accessconfigs, resetH=0. Short128 andK8D0/D64online64 only. No newtraining/replay. Theseisolate onlineintervention conditionalon gradient-trainedslowweights; owngatesstillapply and transfercanfail. Notmatchedadaptation or assumptionHebbianarchitectureweightscompatiblewithNNM."
+  },
+  "resources": {
+    "max_gpu_allocations": 1,
+    "gpu_limit_hours": 1,
+    "pipeline_limit_seconds": 3300,
+    "per_invocation_limit_seconds": 900,
+    "no_renewal": true,
+    "preflight": "CPU2stepCLI+unitproof; GPU10stepB32 throughputsmoke ondev90603, gate16 andpressure16 measuredatmainB16. Project8train+eval+anchors/forks usingstep/batchtimes+1.25padding,NNM5xassoc heuristic. Ifprojection>2400s do notlaunchfull8. No outcome/config/seed selection.",
+    "runtime_stop": "Stopstartingnewruns when projectedremainingbudgetinsufficient; preservealllaunchedruns and missingpairedgroups, aggregateonlycompletepredeclaredgroups andstateincompleteness. Reserve retrieval/recheck/cancel time. No score-based stopping."
+  },
+  "measurements": [
+    "allraw16scores/labels/plans",
+    "exactlivepolicyparity",
+    "pure key-only reads",
+    "unchangedslowtensors/RNG",
+    "combinedstate/policyroundtrips",
+    "learnedeta/alpha",
+    "trace saturation",
+    "modulewriteoccupancy",
+    "adaptive unique backingbytes",
+    "logicalpaircounts",
+    "actualupdates and walltime"
+  ],
+  "limitations": "Fixedprototype routing, observed-value postsynaptic clamp, typed64key/16value vocabulary andsimplifiedcomponent are provisional choices for teamreview. Biologicalhypothesis/fullmodelmethodnovelty remainuntested. Allatomicbindingsfamiliar; exactwholetraininghistoriesexcluded, notnewkeys/language. No branchpublication,sharedDoceditsorparticipantmessages.",
+  "primary_source": "https://proceedings.mlr.press/v80/miconi18a/miconi18a.pdf equations1/2; experimental component simplifications stated above",
+  "session_binding": "Combined fast/policy payload identifiesconfig, not all learnedslowtensors; handoff examples must be used with exactcheckpointSHA in surroundingrunmetadata/registry."
+}

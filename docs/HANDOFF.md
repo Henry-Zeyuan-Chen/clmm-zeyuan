@@ -1,40 +1,48 @@
 # CLMM working handoff
 
-## Resume here: nonlinear correlated-key experiment
+## Resume here
 
-Completed local implementation, bounded calibration, fresh confirmation, matched-budget comparisons and audited analysis on November15,2026. Branch `nonlinear-correlated-control`. **One operational closeout remains unverified:** SSH to Insomnia began timing out after all main artifacts and the strict GPU proof were downloaded. Check job13914782 and retrieve the optional portable-GPU result when access returns. Do not rerun training or reopen configuration selection.
+**Completed November 15, 2026: reference sleep/Hebbian adapter integration and bounded shared pilot.** Local branch `adapter-integration`, frozen model/runner source `a41bb097af3e7eed356d13e24e4a0d5bc6677b14`, parent `e3b744c`. Start with [ADAPTER_INTEGRATION.md](ADAPTER_INTEGRATION.md), [MEMBER_C_STATUS.md](MEMBER_C_STATUS.md) and `results/adapter-integration-2026-11-15`. No task process, GPU allocation, pending connection check or background monitoring remains.
 
-Read [NONLINEAR_CORRELATED.md](NONLINEAR_CORRELATED.md), [MEMBER_C_STATUS.md](MEMBER_C_STATUS.md) and `results/nonlinear-correlated-2026-11-15`. Zeyuan is Member C, responsible for shared baseline/pretraining/evaluation. A owns sleep, B owns the Hebbian rule/routing. The full byte model remains unqualified for novel two-key transfer; the new result is a typed memory-component baseline.
+Zeyuan is Member C: shared pretraining, weights and evaluation. A owns sleep, B owns Hebbian/routing methods. Fetched team main1e8de19 (only remote branch) still contained empty sleep/Hebbian directories. Current implementations are explicitly working REFERENCE component adapters, not uploaded teammate algorithms or full Titans/MAC integration. The complete byte-model two-key transfer failure remains unresolved.
 
-## Current scientific result
+## What exists now
 
-- The first declared rank32 configuration qualifies both original seeds90511/90515; ranks16/8 were not run. Both trained models pass short acquisition/revision and fresh confirmation128/128 in every cell. Actual final K8D0 is128/128 both, K16 is125/128 and124/128. K32 fails75/128,77/128 and remains diagnostic.
-- At K8D64, trained stable accuracy averages39.06% online,40.43% repeat-current,35.35% continuous and34.77% periodic. Initial/untrained online accuracy averages29.10%. Training improves delayed accuracy by9.96pp[5.08,14.84] despite initial short accuracy already being perfect; late online coordinateMSE worsens, so accuracy and MSE must remain separate.
-- Prespecified periodic-minus-continuous primary:−0.59pp,95%paired interval[−2.15,+0.98]. No established periodic advantage. Two fixed seeds/one codebook,128 shared histories; bootstrap resamples same history IDs across both seeds, not256 independent seed×history rows. No equivalence or broad sleep/Hebbian efficacy claim.
-- Continuous/periodic are below the lower-budget online anchor in the planned secondary K8D64 comparison. This frozen small-FIFO timing baseline is useful evidence, not a reason to tune the same histories until a positive result appears. All256 primary stable queries are finally evicted;102 had earlier replay.
+- `clmm/sleep/adapter.py`: generic SleepSession over functional write/read memory and bounded literal scheduler; atomic combined model/policy handoff, midblock resume, no full history/read labels.
+- `clmm/hebbian/adapter.py`: four associative modules with learned encoders/decoder,W0,alpha,eta; local bounded Hebbian EMA or matched analytic gradient; dense or top-one fixed key-prototype access. Inactive modules remain unchanged, including no decay.
+- `clmm/pretrain/adapter_registry.py`: strict own checkpoint format and explicit slow-only forks. Shared neural slow weights are incompatible; only exact literal codebooks transfer to the new architecture.
+- `scripts/adapter_integration_experiment.py`: common causal data, acquisition/revision/reset/rolled controls, replay budgets, combined state persistence and resource measurements.
 
-## Source and reusable artifacts
+## Scientific outcome
 
-- Main frozen source: `b5f27ff4738ded4832538573d454d2461786d38b`.
-- Post-run portable loader: `4b119efd9df2f3bc68a223fca4b2da951026f2d8`. Use `clmm.pretrain.kv_correlated_portable.load_portable_checkpoint`. It preserves saved literal codebook bits and every model tensor; the original strict constructor rejects cross-environment normalization bits. This did not alter any model run, selection or score. It also separates CPU-aliased frozen/template and initial-memory storage before loading.
-- Output root: `C:/Users/henry/Documents/Codex/2026-10-22/i/outputs/clmm-nonlinear-correlated-2026-11-15`.
-- Work scripts: sibling `work/clmm-nonlinear-correlated`.
-- Final component weights: `r32-90511/checkpoint.pt`, `r32-90515/checkpoint.pt`; their `initial_checkpoint.pt` files are exact untrained anchors. Checkpoint registry records hashes/config/actual D0 abilities. All64 IDs/atomicbindings are familiar; fresh complete histories are the scope.
-- Complete recovery ZIP: `C:/Users/henry/Documents/Codex/2026-10-22/i/outputs/CLMM_Nonlinear_Correlated_2026-11-15.zip`. Adjacent verification JSON records actual ZIP checks and final handoff commit. The archive contains full data/plans/scores/weights/source snapshots and a complete branch bundle; the compact Git index omits raw traces and weights. Read MANIFEST.sha256 after extracting.
-- Design fixes ranks32/16/8,1200updatesB32, acquisition/D0/headroom gates and diagnostic fallback before main outcomes. `selection-before-confirmation.json` and `comparison-freeze.json` precede replay. No fallback was needed. Actual training totals357888labels/559936writes from two runs, not planned arrays saved again in evaluation folders.
+All8trainedsystems pass own short128/128 gates and own K8D0 admission; denseK16 fails, top-oneK16 passes63/64 both seeds. At K8D64 online stable recall: gradientdense6.25%,gradienttop-one36.72%,Hebbiandense5.47%,Hebbiantop-one21.48%.
 
-## Validation actually observed
+Primary Hebbian access effect is+16.02percentage points [8.98,23.44], but access helps gradient even more(+30.47points). Independently trained gradienttop-one beats Hebbiantop-one by15.23points. Do not call this a Hebbian advantage. Top-one changes both reading and writing plus active update/decay exposure; independently trained encoders/eta/alpha also diverge.
 
-352 focused tests plus21 portable-adapter tests. Independent current-state SGD/nested-codebook/seed alignment and persistent-state checks. Main artifact audit143616scores/1536000causal writes/2232serialization batches. Strict same-environment GPU:2432selectedanswers and all coordinates exactly reproduced. Portable Windows CPU:2432argmaxes match,max raw-score error3.58e−7. Both use actual bounded streaming/resume; these are selected inference checks, not retraining or full-grid numerical reproduction. Figures are generated from saved CSVs and visually checked.
+Fixed-slow-weight forks hold gradientdense learned tensors identical, start newzeroH, then vary rule/access: gradientdense6.25%,gradienttop-one47.27%,Hebbiandense6.25%,Hebbiantop-one43.75%. Frozen top-one rule gap(Hb−gradient)−3.52points[−7.81,.78] is uncertain. Exactshamfork repeats7296savedscorevectors bitforbit. No frozenfork was promoted as a selected winner.
 
-## Cluster closeout: verify rather than assume
+All fixed2seed K8D64 secondary P−C timing intervals include/touchzero, including the neural anchor. No sleep-timing advantage is established. Hebbiantop-one initial24.22%→trained21.48% has no established late gain; gradienttop-one24.61%→36.72% improves. Preserve initializers and short/late accuracy/MSE separately.
 
-Allocation13914782,ins083,A6000,4CPUs,16G,one-hour limit, observedRUNNING during execution. Scheduler showed start2026-11-15T01:03:18 and scheduled end02:03:18. Main pipeline completed946.50seconds; strict GPU proof was retrieved. A further portable GPU check launched in separate `verification-repo` with180s internal/240s external limit, but SSH channel loss then repeated connection timeouts prevented result retrieval and final scheduler/cancel confirmation. The one-hour limit was not renewed; actual final state/elapsed must not be invented from a scheduled end. No desktop helper selection or unrelated job was changed.
+## Evidence and recovery
 
-Remote root: `/insomnia001/depts/edu/users/zc2819/clmm/nonlinear-correlated-2026-11-15`. When access returns, inspect `sacct -j13914782`/`squeue -j13914782`; if still running, verify ownership/task completion before cancelling it. Retrieve `gpu-portable-recheck/verification.json` and its log if present, then append the observed closure to the log. No background monitoring is active after this session. A user-facing VPN reconnect question was issued; elapsed time is not a connection response.
+Output root: `C:/Users/henry/Documents/Codex/2026-10-22/i/outputs/clmm-adapter-integration-2026-11-15`.
+Work scripts: sibling `work/clmm-adapter-integration`.
+Full recovery ZIP: sibling `outputs/CLMM_Adapter_Integration_2026-11-15.zip`; adjacent verificationJSON records observed CRC/every-file SHA and final handoff commit. Archive includes full branch bundle, unchanged baseline tag, supplied neural checkpoints, all8 initial/final models/optimizers, training data, observed plans/rawscores, fork outputs and source snapshots. Compact Git results omit weights/full raw arrays.
 
-## Next project work
+62 integrationtests pass; independent analytic/state proof passes. Main audit160768scorevectors/1107712causalwrites/2960serializationbatches. 19declared invocations include1throughput,8maintrain,2NNanchors,8forks; no skips. Actual main training1431552labels/2239744writes, not planned arrays saved again in evalfolders. Required-file coverage815checks and22pipeline sessionbundles includes2throughput bundles; optimizerpayloads9=8main+1throughput. Source/protocol pinned before main outcomes.
 
-Freeze rank32,K8/K16 as the shared qualified component regime. Member A can integrate its actual sleep update and compare it against this continuous timing anchor. Member B can implement the Hebbian update alone, then selective routing. Member C keeps common encoding, state/load API, data histories, acquisition gates and resource accounting. A later buffer-coverage or replay-content ablation should be specified on fresh histories before changing the FIFO; do not conflate it with timing alone. Full sequence-model encoding/pretraining remains separate.
+Selected rechecks cover all18mainmodels:3616savedpredictions+scoresexact onGPU; CPUallpredictionsmatch,maxcoordinateerror9.54e−7. Real SleepSession resume/pure reads/unchangedslowweights and RNG verified. These are inference/artifact checks, not retraining or complete-grid numerical reproduction. Three measured figures rendered and visually inspected.
 
-Earlier evidence: [KV_CONTROL.md](KV_CONTROL.md) records the orthogonal ceiling and single linear calibration; [FIXED_SET_GENERALIZATION.md](FIXED_SET_GENERALIZATION.md) records byte fitting/transfer failure; [SHARED_PRETRAIN.md](SHARED_PRETRAIN.md) records both original byte parents. Keep those failures/limits visible. No Google Doc edits, teammate messages, push, PR or merge occurred. Preserve baseline-v0.6.0 at35a549f137548d48aecc26e33c6f8a34a6efc97c. Append consequential work to EXPERIMENT_LOG.jsonl.
+## Compute closeout: resolved
+
+Current job13918002,ins081,A6000,4CPU/16G: explicitlyCANCELLED after16m50s(0.281allocatedGPUh), main12m48spipeline andGPUrecheck completedexit0. Full artifact transfer extracted and SHA matched. Tar emitted `.: file changed as we read it` because outputwas inside root; archive stepExit1 is preserved, not treated as a failed model. File-level audit confirms expected artifacts. Raw current scheduler records and transfer proof are saved.
+
+Prior13914782 is now observedTIMEOUT after1h3s, no active job; optional portableGPUcheck passed2432queriesexact and is retrieved. This supersedes e3b744c's unknown status, with addendum under prior outputs and current `prior-job-closeout.json`. No renewal, desktop helper selection change or unrelated cancellation occurred.
+
+## Next work and team choices
+
+Replace/extend reference adapters with A/B's actual modules using the shared functional API and exactcheckpoint binding. Agree fixed versus learned routing, top-k/modules, postsynaptic clamp/EMA versus another local rule, and full sequence-model bridge. Test another one-module allocation/decay control on fresh histories before attributing access benefit to content routing or biology. Keep rule/access and training effects separate.
+
+Member C should next specify a longer-horizon training check with explicit writes/labels/optimizer budgets; short training does not guarantee late recall. Do not tune these same90623 histories or choose the favorable frozenfork as a final model. The earlier correlated control ([NONLINEAR_CORRELATED.md](NONLINEAR_CORRELATED.md)), orthogonal positive control ([KV_CONTROL.md](KV_CONTROL.md)), and byte fitting/transfer record ([FIXED_SET_GENERALIZATION.md](FIXED_SET_GENERALIZATION.md)) remain distinct milestones. Full paper-style roadmap and paper-baseline-v1 are not complete.
+
+No Google Doc edits, teammate messages, push/PR/merge occurred. Preserve baseline-v0.6.0 at35a549f137548d48aecc26e33c6f8a34a6efc97c. Append substantive work to EXPERIMENT_LOG.jsonl; inspect real files/Git/scheduler rather than assuming this snapshot remains current.

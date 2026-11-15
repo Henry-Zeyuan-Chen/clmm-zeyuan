@@ -1,0 +1,15 @@
+{
+  "verified_utc": "2026-11-15T17:11:58.732595+00:00",
+  "job": 13914782,
+  "state": "TIMEOUT",
+  "elapsed": "01:00:03",
+  "allocated_gpu_hours": 1.0008333333333332,
+  "ended_cluster_time": "2026-11-15T02:03:21",
+  "active": false,
+  "main_step": "COMPLETED exit0",
+  "portable_gpu_check": "passed",
+  "queries": 2432,
+  "max_score_error": 0.0,
+  "reason": "Previous one-hour allocation expired after all experiments/checks; no cancellation or renewal needed",
+  "supersedes": "e3b744c unknown closeout status; scientific results unchanged"
+}

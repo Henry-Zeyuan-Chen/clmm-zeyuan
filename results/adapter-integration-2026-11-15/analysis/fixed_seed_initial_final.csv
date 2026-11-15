@@ -1,0 +1,13 @@
+rule,routing,cell,category,arm,metric,episodes,fixed_initializers,initial_mean,final_mean,difference,ci_low,ci_high,scope
+gradient,dense,pressure_k8_d64,stable,online,accuracy,64,2,0.06640625,0.0625,-0.00390625,-0.04296875,0.03515625,Secondary paired exact initializer comparison
+gradient,dense,pressure_k8_d64,stable,online,all_correct,64,2,0.0,0.0,0.0,0.0,0.0,Secondary paired exact initializer comparison
+gradient,dense,pressure_k8_d64,stable,online,mse,64,2,0.062467724034131075,0.07437202040328011,0.01190429636914904,0.00907488343847787,0.014975720470540875,Secondary paired exact initializer comparison
+gradient,top1,pressure_k8_d64,stable,online,accuracy,64,2,0.24609375,0.3671875,0.12109375,0.04287109375000003,0.203125,Secondary paired exact initializer comparison
+gradient,top1,pressure_k8_d64,stable,online,all_correct,64,2,0.0546875,0.171875,0.1171875,0.0546875,0.1953125,Secondary paired exact initializer comparison
+gradient,top1,pressure_k8_d64,stable,online,mse,64,2,0.060837715793443485,0.05147510191212338,-0.009362613881320111,-0.01180413258688185,-0.006940785440426995,Secondary paired exact initializer comparison
+hebbian,dense,pressure_k8_d64,stable,online,accuracy,64,2,0.06640625,0.0546875,-0.01171875,-0.04296875,0.015625,Secondary paired exact initializer comparison
+hebbian,dense,pressure_k8_d64,stable,online,all_correct,64,2,0.0,0.0,0.0,0.0,0.0,Secondary paired exact initializer comparison
+hebbian,dense,pressure_k8_d64,stable,online,mse,64,2,0.06246817556303358,0.07382153219816472,0.01135335663513112,0.008769428787418368,0.014155775529587024,Secondary paired exact initializer comparison
+hebbian,top1,pressure_k8_d64,stable,online,accuracy,64,2,0.2421875,0.21484375,-0.02734375,-0.08203125,0.02734375,Secondary paired exact initializer comparison
+hebbian,top1,pressure_k8_d64,stable,online,all_correct,64,2,0.046875,0.0703125,0.0234375,-0.03125,0.078125,Secondary paired exact initializer comparison
+hebbian,top1,pressure_k8_d64,stable,online,mse,64,2,0.06074884952852001,0.05575351050773411,-0.004995339020785895,-0.007322748765657669,-0.00278857334222004,Secondary paired exact initializer comparison

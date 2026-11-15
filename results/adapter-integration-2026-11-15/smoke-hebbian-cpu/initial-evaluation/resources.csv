@@ -1,0 +1,12 @@
+cell,arm,batch_start,batch,actual_writes,replay_writes,peak_fast_bytes,final_fast_bytes,per_stream_final_bytes,peak_buffer_pairs,peak_snapshot_pairs,query_state_write_count,boundary_error,midblock_error,resume_points,active_module_updates,module_occupancy,trace_saturation,elapsed_seconds
+acquire2,online,0,2,2,0,131072,131072,65536.0,0,0,2,0.0,0.0,prefill,16,"[4, 4, 4, 4]",0.0,0.011034000024665147
+acquire2,reset,0,2,2,0,131072,131072,65536.0,0,0,0,0.0,0.0,prefill,16,"[4, 4, 4, 4]",0.0,0.010735300020314753
+acquire2,rolled,0,2,2,0,131072,131072,65536.0,0,0,2,0.0,0.0,prefill,16,"[4, 4, 4, 4]",0.0,0.011414799955673516
+acquire4,online,0,2,4,0,131072,131072,65536.0,0,0,4,0.0,0.0,prefill,32,"[8, 8, 8, 8]",0.0,0.011605000006966293
+acquire4,reset,0,2,4,0,131072,131072,65536.0,0,0,0,0.0,0.0,prefill,32,"[8, 8, 8, 8]",0.0,0.011968200036790222
+acquire4,rolled,0,2,4,0,131072,131072,65536.0,0,0,4,0.0,0.0,prefill,32,"[8, 8, 8, 8]",0.0,0.015448399994056672
+revise2,online,0,2,3,0,131072,131072,65536.0,0,0,3,0.0,0.0,prefill,24,"[6, 6, 6, 6]",0.0,0.012871499988250434
+revise2,reset,0,2,3,0,131072,131072,65536.0,0,0,0,0.0,0.0,prefill,24,"[6, 6, 6, 6]",0.0,0.01202020002529025
+revise2,rolled,0,2,3,0,131072,131072,65536.0,0,0,3,0.0,0.0,prefill,24,"[6, 6, 6, 6]",0.0,0.012959900021087378
+pressure_k8_d0,online,0,2,10,0,131072,131072,65536.0,0,0,10,0.0,0.0,prefill,80,"[20, 20, 20, 20]",0.0,0.018387400021310896
+pressure_k8_d64,online,0,2,74,0,131072,131072,65536.0,0,0,74,0.0,0.0,"prefill,midblock",592,"[148, 148, 148, 148]",0.0,0.08719950000522658

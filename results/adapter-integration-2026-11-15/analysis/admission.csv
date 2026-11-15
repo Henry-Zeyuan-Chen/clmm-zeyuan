@@ -1,0 +1,29 @@
+run,family,rule,routing,initializer,acquire2,acquire4,revise2,normal_minus_rolled,rolled_ci_low,rolled_ci_high,short_pass,facts,d0_four_target_all_correct,individual_admission,both_seed_admission,interpretation
+fork-gradient-dense-90511,fork,gradient,dense,90511,1.0,1.0,1.0,0.9921875,0.9765625,1.0,True,8,1.0,True,True,frozen-transfer admitted
+fork-gradient-dense-90515,fork,gradient,dense,90515,1.0,1.0,1.0,0.9921875,0.9765625,1.0,True,8,1.0,True,True,frozen-transfer admitted
+fork-gradient-top1-90511,fork,gradient,top1,90511,1.0,1.0,1.0,0.9921875,0.9765625,1.0,True,8,1.0,True,True,frozen-transfer admitted
+fork-gradient-top1-90515,fork,gradient,top1,90515,1.0,1.0,1.0,0.9921875,0.9765625,1.0,True,8,1.0,True,True,frozen-transfer admitted
+fork-hebbian-dense-90511,fork,hebbian,dense,90511,1.0,1.0,1.0,0.9921875,0.9765625,1.0,True,8,0.984375,True,True,frozen-transfer admitted
+fork-hebbian-dense-90515,fork,hebbian,dense,90515,1.0,1.0,1.0,0.9921875,0.9765625,1.0,True,8,0.984375,True,True,frozen-transfer admitted
+fork-hebbian-top1-90511,fork,hebbian,top1,90511,1.0,1.0,0.921875,0.9921875,0.9765625,1.0,True,8,0.890625,True,True,frozen-transfer admitted
+fork-hebbian-top1-90515,fork,hebbian,top1,90515,1.0,1.0,0.9453125,0.9921875,0.9765625,1.0,True,8,0.9375,True,True,frozen-transfer admitted
+gradient-dense-90511,trained,gradient,dense,90511,1.0,1.0,1.0,0.9921875,0.9765625,1.0,True,8,1.0,True,True,trained-system retention admitted
+gradient-dense-90511,trained,gradient,dense,90511,1.0,1.0,1.0,0.9921875,0.9765625,1.0,True,16,0.46875,False,False,acquisition/interference diagnostic
+gradient-dense-90515,trained,gradient,dense,90515,1.0,1.0,1.0,0.9921875,0.9765625,1.0,True,8,1.0,True,True,trained-system retention admitted
+gradient-dense-90515,trained,gradient,dense,90515,1.0,1.0,1.0,0.9921875,0.9765625,1.0,True,16,0.4375,False,False,acquisition/interference diagnostic
+gradient-top1-90511,trained,gradient,top1,90511,1.0,1.0,1.0,0.984375,0.9609375,1.0,True,8,1.0,True,True,trained-system retention admitted
+gradient-top1-90511,trained,gradient,top1,90511,1.0,1.0,1.0,0.984375,0.9609375,1.0,True,16,0.984375,True,True,trained-system retention admitted
+gradient-top1-90515,trained,gradient,top1,90515,1.0,1.0,1.0,0.9921875,0.9765625,1.0,True,8,1.0,True,True,trained-system retention admitted
+gradient-top1-90515,trained,gradient,top1,90515,1.0,1.0,1.0,0.9921875,0.9765625,1.0,True,16,0.984375,True,True,trained-system retention admitted
+hebbian-dense-90511,trained,hebbian,dense,90511,1.0,1.0,1.0,0.984375,0.9609375,1.0,True,8,0.984375,True,True,trained-system retention admitted
+hebbian-dense-90511,trained,hebbian,dense,90511,1.0,1.0,1.0,0.984375,0.9609375,1.0,True,16,0.46875,False,False,acquisition/interference diagnostic
+hebbian-dense-90515,trained,hebbian,dense,90515,1.0,1.0,1.0,0.984375,0.9609375,1.0,True,8,0.984375,True,True,trained-system retention admitted
+hebbian-dense-90515,trained,hebbian,dense,90515,1.0,1.0,1.0,0.984375,0.9609375,1.0,True,16,0.484375,False,False,acquisition/interference diagnostic
+hebbian-top1-90511,trained,hebbian,top1,90511,1.0,1.0,1.0,1.0,1.0,1.0,True,8,1.0,True,True,trained-system retention admitted
+hebbian-top1-90511,trained,hebbian,top1,90511,1.0,1.0,1.0,1.0,1.0,1.0,True,16,0.984375,True,True,trained-system retention admitted
+hebbian-top1-90515,trained,hebbian,top1,90515,1.0,1.0,1.0,1.0,1.0,1.0,True,8,1.0,True,True,trained-system retention admitted
+hebbian-top1-90515,trained,hebbian,top1,90515,1.0,1.0,1.0,1.0,1.0,1.0,True,16,0.984375,True,True,trained-system retention admitted
+neural-anchor-90511,neural,neural,none,90511,1.0,1.0,1.0,1.0,1.0,1.0,True,8,1.0,True,True,descriptive neural anchor
+neural-anchor-90511,neural,neural,none,90511,1.0,1.0,1.0,1.0,1.0,1.0,True,16,0.96875,True,True,descriptive neural anchor
+neural-anchor-90515,neural,neural,none,90515,1.0,1.0,1.0,1.0,1.0,1.0,True,8,1.0,True,True,descriptive neural anchor
+neural-anchor-90515,neural,neural,none,90515,1.0,1.0,1.0,1.0,1.0,1.0,True,16,0.953125,True,True,descriptive neural anchor

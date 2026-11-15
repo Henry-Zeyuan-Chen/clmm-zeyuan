@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "remote_sha256": "f34c7573197f0f709c32c2278d71091de2c78b3bf63d9cd0d40fb3a46d510489",
+  "local_sha256": "f34c7573197f0f709c32c2278d71091de2c78b3bf63d9cd0d40fb3a46d510489",
+  "gzip_extracted": true,
+  "warning": "tar: .: file changed as we read it; tar stepExit1; outputarchivecreated inside source directory",
+  "scope": "Archivebytescompleteandidentical; independent audit stillverifies all expectedartifacts/hashes",
+  "excluded": [
+    "repo",
+    "source.bundle",
+    "download.tar.gz"
+  ]
+}

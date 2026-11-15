@@ -1,0 +1,8 @@
+{
+  "step_seconds": 0.01867280201986432,
+  "per_train_seconds": 67.14736767602153,
+  "per_fork_seconds": 11.029441236518323,
+  "per_neural_anchor_seconds": 106.17123620188795,
+  "projected_complete_seconds": 1047.1961796301184,
+  "rule": "1.25padding; NNM evaluation5x associative batch cost; estimates contain no scores"
+}

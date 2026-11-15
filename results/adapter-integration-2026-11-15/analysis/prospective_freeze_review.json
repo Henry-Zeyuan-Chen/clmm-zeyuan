@@ -1,0 +1,11 @@
+{
+  "status": "reviewed_before_main_outcomes",
+  "reviewed_utc": "2026-11-15T17:27:34.809024+00:00",
+  "source_commit": "a41bb09",
+  "design_sha256": "3199dfc3960e3e776243d7c9d98a0d9c7dbe0b76ac27879ae65f90638c03bcbc",
+  "launcher_sha256": "4f5ecb6a8f4b7da25bdb492cc07d103fc3d2bcd33156cbd702f1030314c075af",
+  "runtime_projection_batch_fix": "pressure16 preflight now measures the actualB16 main pressure batch",
+  "primary": "onlineK8D64 stable Hebbiantop1minusdense; paireddevelopmentpilot",
+  "score_based_configuration_selection": false,
+  "main_outcomes_available_at_review": false
+}

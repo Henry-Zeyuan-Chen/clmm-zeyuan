@@ -1,0 +1,57 @@
+{"completed": "acquire2", "arm": "online"}
+{"completed": "acquire2", "arm": "reset"}
+{"completed": "acquire2", "arm": "rolled"}
+{"completed": "acquire4", "arm": "online"}
+{"completed": "acquire4", "arm": "reset"}
+{"completed": "acquire4", "arm": "rolled"}
+{"completed": "revise2", "arm": "online"}
+{"completed": "revise2", "arm": "reset"}
+{"completed": "revise2", "arm": "rolled"}
+{"completed": "pressure_k8_d0", "arm": "online"}
+{"completed": "pressure_k8_d64", "arm": "online"}
+{"step": 1, "answers": 128, "observations": 128, "loss": 0.05419498682022095, "gradient_norm": 0.012850441038608551, "eta": 0.10009001940488815, "elapsed_seconds": 9.420001372986007}
+{"step": 100, "answers": 128, "observations": 256, "loss": 0.02677144482731819, "gradient_norm": 0.01669960841536522, "eta": 0.11105583608150482, "elapsed_seconds": 11.34795414598193}
+{"step": 200, "answers": 128, "observations": 128, "loss": 0.0027068662457168102, "gradient_norm": 0.0040746936574578285, "eta": 0.11657152324914932, "elapsed_seconds": 13.397420149005484}
+{"step": 300, "answers": 64, "observations": 192, "loss": 0.005651807878166437, "gradient_norm": 0.008331974036991596, "eta": 0.11677522212266922, "elapsed_seconds": 15.4364210619824}
+{"step": 400, "answers": 64, "observations": 64, "loss": 0.0008001957321539521, "gradient_norm": 0.006668053101748228, "eta": 0.11683691293001175, "elapsed_seconds": 17.52375147899147}
+{"step": 500, "answers": 64, "observations": 192, "loss": 0.004201892763376236, "gradient_norm": 0.007582610007375479, "eta": 0.11649084091186523, "elapsed_seconds": 19.634987687983084}
+{"step": 600, "answers": 64, "observations": 224, "loss": 0.004928489215672016, "gradient_norm": 0.010212193243205547, "eta": 0.11583170294761658, "elapsed_seconds": 21.891118830011692}
+{"step": 700, "answers": 128, "observations": 256, "loss": 0.0037290260661393404, "gradient_norm": 0.005132591817528009, "eta": 0.11593933403491974, "elapsed_seconds": 23.74530893599149}
+{"step": 800, "answers": 256, "observations": 256, "loss": 0.0023103016428649426, "gradient_norm": 0.0036443753633648157, "eta": 0.1158154085278511, "elapsed_seconds": 25.93654493201757}
+{"step": 900, "answers": 128, "observations": 256, "loss": 0.004303470253944397, "gradient_norm": 0.005180295556783676, "eta": 0.11492049694061279, "elapsed_seconds": 28.015199757996015}
+{"step": 1000, "answers": 256, "observations": 448, "loss": 0.005467699375003576, "gradient_norm": 0.006151136476546526, "eta": 0.11403651535511017, "elapsed_seconds": 30.30643069400685}
+{"step": 1100, "answers": 64, "observations": 96, "loss": 0.0011017532087862492, "gradient_norm": 0.005133758299052715, "eta": 0.11304260790348053, "elapsed_seconds": 32.47450483799912}
+{"step": 1200, "answers": 64, "observations": 224, "loss": 0.0027927709743380547, "gradient_norm": 0.007394726388156414, "eta": 0.11229723691940308, "elapsed_seconds": 34.58477785700234}
+{"completed": "acquire2", "arm": "online"}
+{"completed": "acquire2", "arm": "reset"}
+{"completed": "acquire2", "arm": "rolled"}
+{"completed": "acquire4", "arm": "online"}
+{"completed": "acquire4", "arm": "reset"}
+{"completed": "acquire4", "arm": "rolled"}
+{"completed": "revise2", "arm": "online"}
+{"completed": "revise2", "arm": "reset"}
+{"completed": "revise2", "arm": "rolled"}
+{"completed": "pressure_k8_d0", "arm": "online"}
+{"completed": "pressure_k8_d0", "arm": "repeat"}
+{"completed": "pressure_k8_d0", "arm": "continuous"}
+{"completed": "pressure_k8_d0", "arm": "periodic"}
+{"completed": "pressure_k8_d16", "arm": "online"}
+{"completed": "pressure_k8_d16", "arm": "repeat"}
+{"completed": "pressure_k8_d16", "arm": "continuous"}
+{"completed": "pressure_k8_d16", "arm": "periodic"}
+{"completed": "pressure_k8_d64", "arm": "online"}
+{"completed": "pressure_k8_d64", "arm": "repeat"}
+{"completed": "pressure_k8_d64", "arm": "continuous"}
+{"completed": "pressure_k8_d64", "arm": "periodic"}
+{"completed": "pressure_k16_d0", "arm": "online"}
+{"completed": "pressure_k16_d0", "arm": "repeat"}
+{"completed": "pressure_k16_d0", "arm": "continuous"}
+{"completed": "pressure_k16_d0", "arm": "periodic"}
+{"completed": "pressure_k16_d16", "arm": "online"}
+{"completed": "pressure_k16_d16", "arm": "repeat"}
+{"completed": "pressure_k16_d16", "arm": "continuous"}
+{"completed": "pressure_k16_d16", "arm": "periodic"}
+{"completed": "pressure_k16_d64", "arm": "online"}
+{"completed": "pressure_k16_d64", "arm": "repeat"}
+{"completed": "pressure_k16_d64", "arm": "continuous"}
+{"completed": "pressure_k16_d64", "arm": "periodic"}
