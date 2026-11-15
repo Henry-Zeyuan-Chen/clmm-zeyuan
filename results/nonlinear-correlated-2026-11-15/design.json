@@ -1,0 +1,116 @@
+{
+  "experiment_id": "nonlinear-correlated-shared-control-v1",
+  "declared_before": "Any calibration model outcome; November15,2026",
+  "question": "Can fixed correlated key representations give the nonlinear shared memory adequate acquisition plus informative interference, and how do matched-budget replay schedules behave?",
+  "scope": "Member C memory-component calibration supporting sleep/Hebbian adapters, not full language Titans or teammate method efficacy",
+  "source_parent": "ffaffed543232a4bc49634aa73580cdd9190c574",
+  "representation": {
+    "nkeys": 64,
+    "nvalues": 16,
+    "dim": 64,
+    "hidden": 128,
+    "codebook_seed": 90501,
+    "candidate_rank_order": [
+      32,
+      16,
+      8
+    ],
+    "construction": "One deterministic CPU64x64 Gaussian draw. For rank r, normalize each row of first r columns, then pad to64 dimensions with zeros. Values/decoder unchanged one-hot first16 coordinates.",
+    "controls": "All candidates have identical nonlinear parameter shapes and adaptive-state storage. Rank changes geometry/effective key subspace, not registered memory size. One fixed codebook per rank, nested before normalization; no codebook-seed search."
+  },
+  "memory": {
+    "engine": "Unchanged vendored NeuralMemory and64x128x64 MemoryMLP; same identity QKV/no norms/momentum/residual/read gate as prior control",
+    "inner_step_size": 0.5,
+    "inner_loss": "half-sum squared error",
+    "decay_logit": -80,
+    "trainable": "Initial memory matrices only; last matrix initialized zero"
+  },
+  "training": {
+    "init_seeds": [
+      90511,
+      90515
+    ],
+    "train_seed": 90502,
+    "steps": 1200,
+    "batch_size": 32,
+    "optimizer": "AdamW",
+    "lr": 0.001,
+    "weight_decay": 0,
+    "clip_norm": 1,
+    "objective": "Mean squared16-coordinate read error versus one-hot answer",
+    "data": "Existing kv_streams: K2/4/8, half batches genuine revisions, D0/4 outside-key distractors; identical arrays across candidates/seeds",
+    "endpoint": "Fixed final; retain initial and final checkpoint, optimizer, initial/final calibration predictions; no best-checkpoint selection"
+  },
+  "calibration": {
+    "dev_seed": 90503,
+    "gate_episodes_per_cell": 128,
+    "pressure_episodes_per_cell": 32,
+    "pressure_cells": "K8,D0/16/64 online ONLY; replay outcomes unavailable at selection",
+    "short_gates": {
+      "acquire2_all_correct_min": 0.9,
+      "acquire4_all_correct_min": 0.8,
+      "revise2_all_correct_min": 0.9,
+      "acquire2_normal_minus_rolled_block_bootstrap_lower95_gt": 0
+    },
+    "pressure_gate": {
+      "k8_d0_fixed4_all_correct_min": 0.8,
+      "k8_d64_stable_accuracy_min": 0.15,
+      "k8_d64_stable_accuracy_max": 0.85,
+      "stable_accuracy_drop_d0_minus_d64_min": 0.1
+    },
+    "selection": "First candidate rank in32,16,8 satisfying every short and pressure gate in BOTH original seeds. Stop sweep on first eligible rank; preserve all trials. Never select by replay advantage.",
+    "fallback": "If none is eligible, use last candidate passing short+D0 acquisition in both seeds for explicitly ineligible diagnostic replay; if none passes acquisition use rank8 diagnostically. Do not label an ineligible comparison retention efficacy.",
+    "gate_uncertainty": "5000 bootstrap draws of8 cyclic roll blocks16episodes, seed90504"
+  },
+  "confirmation": {
+    "dev_seed": 90513,
+    "gate_episodes_per_cell": 128,
+    "pressure_episodes_per_cell": 128,
+    "checks": "Selected trained seeds both repeat short admission and K8D0 fixed4>=.8. Online-only delay outcomes are recorded as fresh headroom checks, never used to reselect. Failure retains planned comparison as diagnostic; no resweep."
+  },
+  "comparison": {
+    "dev_seed": 90523,
+    "gate_episodes_per_cell": 128,
+    "pressure_episodes_per_cell": 128,
+    "facts": [
+      8,
+      16,
+      32
+    ],
+    "delays": [
+      0,
+      16,
+      64
+    ],
+    "models": "Both selected final checkpoints AND their exact untrained initial checkpoints on identical fresh episodes. Untrained arms are run regardless of acquisition qualification and labeled accordingly.",
+    "arms": [
+      "online",
+      "repeat",
+      "continuous",
+      "periodic",
+      "boundary_reset"
+    ],
+    "schedules": "Same frozen kv_streams causal plans: online-only K+2 prefill; latest-per-key FIFO8; block4 frozen draws with replacement at block start. C one sample after each arrival; P identical records/order at block end; repeat-current matches extras. All unchanged gates/write rules.",
+    "writes": "Online K+2+D, repeat/C/P K+2+2D; reset separate effective-state diagnostic",
+    "measurement": "Same4 initial targets at every D; stable/revised/recent separately; real revisions and no initial target observed in delay. Compare schedules within each stratum; age/residency differ across strata.",
+    "primary": "K8,D64 stable periodic-minus-continuous accuracy, each trained seed reported plus mean across these2 fixed seeds. Match same episode IDs across both seeds and resample whole histories,5000draws seed90504. Interval describes sampled histories for fixed codebook/checkpoints, not training-procedure or codebook variability.",
+    "secondary": "C/online, P/online, repeat controls; initial/final paired accuracy and MSE; obsolete revision answers; other K/D exploratory. No equivalence or mechanism claim from nonsignificant contrasts.",
+    "retention_claim_gate": "Candidate calibration eligibility and fresh confirmation; actual comparison per-K online D0 fixed-four-target all-correct>=.8 in BOTH trained checkpoints. If either K8 checkpoint fails, the fixed-two-seed primary is diagnostic. Otherwise retain labeled acquisition/interference diagnostics; never exclude weak results."
+  },
+  "isolation": {
+    "history": "All64 IDs/atomicbindings familiar. Exclude exact ordered planned training histories from ALL evaluation including untrained anchors. Fresh complete compositions, not unseen atomicbindings/keys/language.",
+    "state": "Slow model frozen during evaluation; read only query key+fast state; pure reads; exact state roundtrip; report actual unique tensor backing storage and replay pairs separately",
+    "data_splits": "Calibration and fresh confirmation are development evidence; comparison seed is consulted once for planned analysis, not configuration selection."
+  },
+  "resources": {
+    "max_training_runs": 6,
+    "max_gpu_allocations": 1,
+    "gpu_allocation_limit_hours": 1,
+    "pipeline_timeout_seconds": 3300,
+    "train_timeout_seconds": 900,
+    "no_renewal": true,
+    "device": "Use existing Insomnia oneGPU allocation if available, else request bounded new one; preserve desktop helper selection/unrelated jobs"
+  },
+  "decision": "Freeze a qualified non-ceiling component setting for teammates if found. If bounded candidates fail, report precise acquisition/ceiling failure and retain diagnostic comparisons; no unplanned hyperparameter search. Full sequence-model transfer stays a separate milestone.",
+  "pre_execution_clarification": "Numerical comparison D0 and gate-bootstrap seed clarified before any main calibration outcome; CPU smoke is execution-only."
+}

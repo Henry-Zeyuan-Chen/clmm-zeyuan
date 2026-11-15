@@ -1,0 +1,57 @@
+{
+  "status": "passed",
+  "device": "cpu",
+  "torch": "2.15.0+cpu",
+  "elapsed_seconds": 12.866984899999807,
+  "scope": "API, analytic update, matched initialization and state mechanism only; no training or efficacy run",
+  "same_engine_parameters_and_rng_across_ranks": true,
+  "nested_gaussian_construction_matches": true,
+  "analytic_half_sse_sgd_max_absolute_error": 0.0,
+  "state_roundtrip_and_continuation_bit_identical": true,
+  "reads_pure_and_slow_state_unchanged": true,
+  "adapter_sha256": "36eba373f036948e9a023bb00690348e8e0cfae1458ae7602b623507ae7f7200",
+  "conditions": [
+    {
+      "init_seed": 90511,
+      "rank": 32,
+      "key_codebook_sha256": "902f1efe3853920ef3c388fda74054c55027a9319bd88473eac7be2e7d66546c",
+      "live_state_bytes_per_episode": 131072,
+      "compact_restored_bytes_per_episode": 65536
+    },
+    {
+      "init_seed": 90511,
+      "rank": 16,
+      "key_codebook_sha256": "bcc09c86ecc8583af0a3b341510375aff90523d26c9c4e48c54c27cc1418c857",
+      "live_state_bytes_per_episode": 131072,
+      "compact_restored_bytes_per_episode": 65536
+    },
+    {
+      "init_seed": 90511,
+      "rank": 8,
+      "key_codebook_sha256": "f0c4e38156138bb909727a4f8bfed265c5964bb4e56a2297d0344f405025ec73",
+      "live_state_bytes_per_episode": 131072,
+      "compact_restored_bytes_per_episode": 65536
+    },
+    {
+      "init_seed": 90515,
+      "rank": 32,
+      "key_codebook_sha256": "902f1efe3853920ef3c388fda74054c55027a9319bd88473eac7be2e7d66546c",
+      "live_state_bytes_per_episode": 131072,
+      "compact_restored_bytes_per_episode": 65536
+    },
+    {
+      "init_seed": 90515,
+      "rank": 16,
+      "key_codebook_sha256": "bcc09c86ecc8583af0a3b341510375aff90523d26c9c4e48c54c27cc1418c857",
+      "live_state_bytes_per_episode": 131072,
+      "compact_restored_bytes_per_episode": 65536
+    },
+    {
+      "init_seed": 90515,
+      "rank": 8,
+      "key_codebook_sha256": "f0c4e38156138bb909727a4f8bfed265c5964bb4e56a2297d0344f405025ec73",
+      "live_state_bytes_per_episode": 131072,
+      "compact_restored_bytes_per_episode": 65536
+    }
+  ]
+}

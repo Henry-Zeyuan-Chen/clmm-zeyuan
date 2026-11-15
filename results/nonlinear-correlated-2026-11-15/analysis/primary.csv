@@ -1,0 +1,7 @@
+stage,initializer,rank,episodes,fixed_initializers,periodic_accuracy,continuous_accuracy,difference,ci_low,ci_high,scope
+trained,90511,32,128,1,0.34375,0.359375,-0.015625,-0.0390625,0.00390625,qualified within-setting timing comparison
+trained,90515,32,128,1,0.3515625,0.34765625,0.00390625,-0.015625,0.0234375,qualified within-setting timing comparison
+trained,mean_of_fixed_initializers,32,128,2,0.34765625,0.353515625,-0.005859375,-0.021484375,0.009765625,qualified within-setting timing comparison
+initial,90511,32,128,1,0.21484375,0.21875,-0.00390625,-0.01171875,0.0,untrained diagnostic anchor
+initial,90515,32,128,1,0.22265625,0.20703125,0.015625,0.00390625,0.03125,untrained diagnostic anchor
+initial,mean_of_fixed_initializers,32,128,2,0.21875,0.212890625,0.005859375,-0.001953125,0.015625,untrained diagnostic anchor

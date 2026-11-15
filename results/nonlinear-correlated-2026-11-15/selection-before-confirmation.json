@@ -1,0 +1,51 @@
+{
+  "candidates": [
+    {
+      "rank": 32,
+      "runs": [
+        "r32-90511",
+        "r32-90515"
+      ],
+      "gates": [
+        {
+          "run": "r32-90511",
+          "acquire2": 1.0,
+          "acquire4": 1.0,
+          "revise2": 1.0,
+          "normal_minus_rolled": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "k8_d0_all_correct": 1.0,
+          "stable_d0": 1.0,
+          "stable_d64": 0.390625,
+          "stable_drop": 0.609375,
+          "short_pass": true,
+          "acquisition_pass": true,
+          "headroom_pass": true,
+          "eligible": true
+        },
+        {
+          "run": "r32-90515",
+          "acquire2": 1.0,
+          "acquire4": 1.0,
+          "revise2": 1.0,
+          "normal_minus_rolled": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "k8_d0_all_correct": 1.0,
+          "stable_d0": 1.0,
+          "stable_d64": 0.359375,
+          "stable_drop": 0.640625,
+          "short_pass": true,
+          "acquisition_pass": true,
+          "headroom_pass": true,
+          "eligible": true
+        }
+      ]
+    }
+  ],
+  "selected_rank": 32,
+  "calibration_eligible": true,
+  "confirmed": false,
+  "comparison_scope": null
+}

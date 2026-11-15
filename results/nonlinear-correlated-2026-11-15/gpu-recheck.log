@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "scope": "Selected inference and real streaming resume, not retraining or full-grid numerical reproduction",
+  "started_utc": "2026-11-15T06:21:26.701706+00:00",
+  "ended_utc": "2026-11-15T06:21:38.545296+00:00",
+  "elapsed_seconds": 11.843588895048015,
+  "source_sha256": "b4ace0f8c55f22f99a551e353f40c151104dd404f9d8f5c1a143192fc34f024d",
+  "device": "cuda",
+  "loader": "strict",
+  "torch": "2.11.0+cu128",
+  "queries": 2432,
+  "max_abs_error": 0.0,
+  "read_pure": true,
+  "slow_parameters_and_rng_unchanged": true
+}

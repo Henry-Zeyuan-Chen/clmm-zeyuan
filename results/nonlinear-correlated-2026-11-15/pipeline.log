@@ -1,0 +1,16 @@
+{"starting": "r32-90511"}
+{"completed": "r32-90511", "status": "succeeded"}
+{"starting": "r32-90515"}
+{"completed": "r32-90515", "status": "succeeded"}
+{"starting": "confirm-r32-90511"}
+{"completed": "confirm-r32-90511", "status": "succeeded"}
+{"starting": "confirm-r32-90515"}
+{"completed": "confirm-r32-90515", "status": "succeeded"}
+{"starting": "comparison-trained-r32-90511"}
+{"completed": "comparison-trained-r32-90511", "status": "succeeded"}
+{"starting": "comparison-initial-r32-90511"}
+{"completed": "comparison-initial-r32-90511", "status": "succeeded"}
+{"starting": "comparison-trained-r32-90515"}
+{"completed": "comparison-trained-r32-90515", "status": "succeeded"}
+{"starting": "comparison-initial-r32-90515"}
+{"completed": "comparison-initial-r32-90515", "status": "succeeded"}

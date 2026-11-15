@@ -1,0 +1,8 @@
+{
+  "event":"Post-run checkpoint loading compatibility fix",
+  "observed_failure":{"operation":"Load completed r32-90511 cluster checkpoint on Windows CPU using frozen strict loader","environment":"Python3.13.3 / PyTorch2.15.0+cpu versus training Python3.11.5 / PyTorch2.11.0+cu128","error":"ValueError: Configured key codebook SHA256 does not match its deterministic construction","origin":"scripts/kv_correlated_experiment.py load_checkpoint -> CorrelatedConfig.__post_init__"},
+  "cause":"Regenerated Gaussian-key normalization differs by up to2.98e-8 across environments. Exact hash changes despite numerically equivalent construction. Frozen loader treats regenerated bits as authoritative.",
+  "preservation":"All model runs, selection, codebooks, saved predictions and frozen source b5f27ff remain unchanged. This is an inference-loader compatibility failure, not a failed training trial or reason to repeat/select models.",
+  "fix_plan":"Separate post-run portable adapter/loader. Preserve saved literal codebook tensors exactly; validate actual embedded SHA, structural geometry, fixed values, unit norms and seed/rank construction within declared floating-point tolerance. Exact state fingerprints continue to include saved bit identity. Existing strict frozen loader remains available.",
+  "validation_plan":"Wrong codebooks/configs rejected; saved fast-state imports/continuation exact; selected same-environment GPU inference and cross-environment CPU inference against saved scores; no retraining or renormalization. Record actual observed checks before claiming portability."
+}

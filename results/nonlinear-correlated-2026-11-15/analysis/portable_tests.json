@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "record_kind": "Observed precommit CPU pytest execution; no test rerun during recording",
+  "recorded_utc": "2026-11-15T10:12:42.469351+00:00",
+  "execution": {
+    "command_powershell": "& 'C:/Users/henry/Documents/Codex/2026-10-22/i/work/clmm-test-env/Scripts/python.exe' -B -m pytest tests/test_clmm_kv_correlated_portable.py -q -p no:cacheprovider",
+    "argv": [
+      "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-test-env\\Scripts\\python.exe",
+      "-B",
+      "-m",
+      "pytest",
+      "tests/test_clmm_kv_correlated_portable.py",
+      "-q",
+      "-p",
+      "no:cacheprovider"
+    ],
+    "cwd": "C:\\Users\\henry\\Documents\\Codex\\clmm-replay",
+    "exit_code": 0,
+    "passed": 21,
+    "failed": 0,
+    "warnings": 1,
+    "elapsed_seconds": 11.8,
+    "observed_output_summary": "21 passed, 1 warning in 11.80s",
+    "output_progress": ".....................                                                    [100%]",
+    "tool_evidence": {
+      "exec_session_id": 2344,
+      "final_output_chunk_id": "aca9c8"
+    },
+    "tests_run_precommit": true,
+    "tests_rerun_for_this_record": false,
+    "git_head_at_execution": null,
+    "git_head_at_execution_note": "The pytest invocation did not capture HEAD. The observed run occurred before commit 4b119ef; this is not a postcommit test execution."
+  },
+  "source_snapshot": {
+    "corresponding_commit": "4b119efd9df2f3bc68a223fca4b2da951026f2d8",
+    "parent_commit": "b5f27ff4738ded4832538573d454d2461786d38b",
+    "execution_source_and_test_snapshot_match_current_commit_bytes": true,
+    "snapshot_basis": "The implementation and test files were unchanged between the observed run and commit. Their current bytes, and the unchanged engine/helper dependencies, were compared directly against the committed Git blobs while creating this record.",
+    "files": [
+      {
+        "path": "clmm/pretrain/kv_correlated_portable.py",
+        "absolute_path": "C:\\Users\\henry\\Documents\\Codex\\clmm-replay\\clmm\\pretrain\\kv_correlated_portable.py",
+        "role": "portable implementation",
+        "sha256": "788d89b01139a689bb2a401f925016018a9bd5c570afa89886637602b3ac9837",
+        "committed_sha256": "788d89b01139a689bb2a401f925016018a9bd5c570afa89886637602b3ac9837",
+        "working_bytes_equal_committed_bytes": true
+      },
+      {
+        "path": "tests/test_clmm_kv_correlated_portable.py",
+        "absolute_path": "C:\\Users\\henry\\Documents\\Codex\\clmm-replay\\tests\\test_clmm_kv_correlated_portable.py",
+        "role": "executed tests",
+        "sha256": "e0a52ee2e73899fe3a42b3a001b3b7043bf7bca8f1f432592ad0ba427cacd4bf",
+        "committed_sha256": "e0a52ee2e73899fe3a42b3a001b3b7043bf7bca8f1f432592ad0ba427cacd4bf",
+        "working_bytes_equal_committed_bytes": true
+      },
+      {
+        "path": "clmm/pretrain/kv_control.py",
+        "absolute_path": "C:\\Users\\henry\\Documents\\Codex\\clmm-replay\\clmm\\pretrain\\kv_control.py",
+        "role": "unchanged engine and state dependency",
+        "sha256": "127a39b76f13f47be9c5126bbd144a717eb0719eac55b661a4dd33577036ca4d",
+        "committed_sha256": "127a39b76f13f47be9c5126bbd144a717eb0719eac55b661a4dd33577036ca4d",
+        "working_bytes_equal_committed_bytes": true
+      },
+      {
+        "path": "clmm/pretrain/kv_correlated.py",
+        "absolute_path": "C:\\Users\\henry\\Documents\\Codex\\clmm-replay\\clmm\\pretrain\\kv_correlated.py",
+        "role": "unchanged frozen codebook hash/construction dependency",
+        "sha256": "36eba373f036948e9a023bb00690348e8e0cfae1458ae7602b623507ae7f7200",
+        "committed_sha256": "36eba373f036948e9a023bb00690348e8e0cfae1458ae7602b623507ae7f7200",
+        "working_bytes_equal_committed_bytes": true
+      }
+    ]
+  },
+  "environment": {
+    "test_python_executable": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-test-env\\Scripts\\python.exe",
+    "python": "3.13.3 (tags/v3.13.3:6280bb5, Apr  8 2025, 14:47:33) [MSC v.1943 64 bit (AMD64)]",
+    "python_version": "3.13.3",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "shell": "PowerShell",
+    "device": "cpu",
+    "gpu_used": false,
+    "package_versions": {
+      "torch": "2.15.0",
+      "numpy": "2.5.4",
+      "pytest": "9.2.0"
+    },
+    "torch_num_threads_during_tests": 1,
+    "torch_thread_setting_source": "module-scoped cpu_threads autouse fixture",
+    "environment_evidence_note": "Interpreter and installed-package metadata were inspected while writing this record, using the same test environment; tests were not rerun.",
+    "torch_build_version": "2.15.0+cpu",
+    "torch_cuda_build": null,
+    "torch_build_metadata_source": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-test-env\\Lib\\site-packages\\torch\\version.py"
+  },
+  "warning": {
+    "category": "FutureWarning",
+    "message": "`torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.",
+    "source": "torch/jit/_script.py:1491"
+  },
+  "coverage_note": "Includes the actual downloaded r32-90511 checkpoint and saved evaluation/example_boundary_state.pt, literal equality of all source model tensors, original fingerprint import, exact state continuation, and a synthetic ULP-different codebook fixture."
+}

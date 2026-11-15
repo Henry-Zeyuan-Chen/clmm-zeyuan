@@ -1,0 +1,11 @@
+run,stage,rank,init_seed,acquire2,acquire4,revise2,normal_minus_rolled,ci_low,ci_high,k8_d0_all_correct,stable_d0,stable_d64,stable_drop,short_pass,acquisition_pass,headroom_pass,eligible
+comparison-initial-r32-90511,evaluation,32,90511,1.0,1.0,1.0,1.0,1.0,1.0,0.9765625,1.0,0.2734375,0.7265625,True,True,True,True
+comparison-initial-r32-90515,evaluation,32,90515,1.0,1.0,1.0,1.0,1.0,1.0,0.984375,1.0,0.30859375,0.69140625,True,True,True,True
+comparison-trained-r32-90511,evaluation,32,90511,1.0,1.0,1.0,0.9921875,0.9765625,1.0,1.0,1.0,0.390625,0.609375,True,True,True,True
+comparison-trained-r32-90515,evaluation,32,90515,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.390625,0.609375,True,True,True,True
+confirm-r32-90511,evaluation,32,90511,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.40234375,0.59765625,True,True,True,True
+confirm-r32-90515,evaluation,32,90515,1.0,1.0,1.0,0.9921875,0.9765625,1.0,1.0,1.0,0.375,0.625,True,True,True,True
+r32-90511,evaluation,32,90511,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.390625,0.609375,True,True,True,True
+r32-90511,initial-evaluation,32,90511,1.0,1.0,1.0,0.9921875,0.9765625,1.0,1.0,1.0,0.34375,0.65625,True,True,True,True
+r32-90515,evaluation,32,90515,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.359375,0.640625,True,True,True,True
+r32-90515,initial-evaluation,32,90515,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.328125,0.671875,True,True,True,True

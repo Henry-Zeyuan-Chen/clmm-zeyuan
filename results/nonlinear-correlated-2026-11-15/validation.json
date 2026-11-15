@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "scope": "Observed local artifacts, main protocol, strict GPU and portable CPU selected inference; optional portable GPU result and scheduler closure unavailable",
+  "completed_utc": "2026-11-15T10:09:58.163281+00:00",
+  "source_commit": "b5f27ff4738ded4832538573d454d2461786d38b",
+  "portable_loader_commit": "4b119efd9df2f3bc68a223fca4b2da951026f2d8",
+  "focused_tests": 352,
+  "portable_tests": 21,
+  "portable_test_execution": "Implementer-executed CPU tests, recorded separately; actual checkpoint and boundary-state included",
+  "main": {
+    "score_vectors": 143616,
+    "causal_plan_writes": 1536000,
+    "serialization_batches": 2232,
+    "actual_training_runs": 2,
+    "supervised_answers": 357888,
+    "observed_writes": 559936
+  },
+  "selected_strict_gpu": {
+    "queries": 2432,
+    "max_score_error": 0.0,
+    "all_argmax_match": true
+  },
+  "selected_portable_cpu": {
+    "queries": 2432,
+    "max_score_error": 3.5762786865234375e-07,
+    "all_argmax_match": true
+  },
+  "streaming": "Real bounded policies, prefill and D>0 midblock fast-state plus policy JSON resume, event/score parity and pure reads",
+  "optional_portable_gpu": "Unknown after SSH transport loss; not counted as passed",
+  "final_scheduler_state": "Unverified after SSH timeouts; one-hour allocation limit was set, no renewal",
+  "reproduction_scope": "Independent artifact/inference checks, not retraining or every-grid numerical reproduction"
+}

@@ -1,0 +1,9 @@
+cell,category,arm,metric,episodes,fixed_initializers,initial_mean,trained_mean,trained_minus_initial,ci_low,ci_high,scope
+pressure_k8_d64,stable,online,accuracy,128,2,0.291015625,0.390625,0.099609375,0.05078125,0.1484375,secondary; same histories/exact initial checkpoints
+pressure_k8_d64,stable,online,mse,128,2,0.05602824745367401,0.07031351016684463,0.014285262713170616,0.011971118251927515,0.016612225709174984,secondary; same histories/exact initial checkpoints
+pressure_k8_d64,stable,repeat,accuracy,128,2,0.14453125,0.404296875,0.259765625,0.208984375,0.310546875,secondary; same histories/exact initial checkpoints
+pressure_k8_d64,stable,repeat,mse,128,2,0.07076337190981913,0.06925699389347292,-0.0015063780163461955,-0.0034695804049815113,0.00035561446620460257,secondary; same histories/exact initial checkpoints
+pressure_k8_d64,stable,continuous,accuracy,128,2,0.212890625,0.353515625,0.140625,0.09370117187500002,0.189453125,secondary; same histories/exact initial checkpoints
+pressure_k8_d64,stable,continuous,mse,128,2,0.06592210020579783,0.07497071642037467,0.009048616214576824,0.006565405473456294,0.011428776842848943,secondary; same histories/exact initial checkpoints
+pressure_k8_d64,stable,periodic,accuracy,128,2,0.21875,0.34765625,0.12890625,0.080078125,0.17578125,secondary; same histories/exact initial checkpoints
+pressure_k8_d64,stable,periodic,mse,128,2,0.06587504036050747,0.07589922111676478,0.010024180756257321,0.007535610311932102,0.012444168523324004,secondary; same histories/exact initial checkpoints

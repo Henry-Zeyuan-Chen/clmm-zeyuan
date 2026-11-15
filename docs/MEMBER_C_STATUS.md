@@ -2,15 +2,15 @@
 
 Updated November 15, 2026. Zeyuan owns pretraining feasibility, reusable baseline weights and common evaluation. Member A owns sleep consolidation; Member B owns selective Hebbian/neural-memory updates. The proposal asks whether those interventions improve new-association acquisition, unchanged-fact retention and genuine revisions. Sleep timing needs matched replay budgets. The Hebbian track must distinguish its update rule from selective routing.
 
-## Current deliverable
+## Latest result: qualified nonlinear interference regime
 
-The [key/value control](KV_CONTROL.md) now supplies two acquisition-qualified **memory-component** initializers, fixed common encoding/decoding, a write/read/state API, saved boundary states and a live bounded replay scheduler. Both nonlinear seeds score 128/128 all-correct on K2 acquisition, K4 acquisition and real K2 revision, including fresh confirmation histories. All keys and atomic bindings were familiar during training; transfer concerns new whole histories/compositions.
+The [nonlinear correlated-key experiment](NONLINEAR_CORRELATED.md) now supplies rank32 trained component initializers with short/fresh acquisition and revision checks, plus meaningful delay interference. K8 and K16 pass actual D0 admission in both checkpoints; K32 remains diagnostic. The finite rank sweep stopped at its first candidate, before any replay outcomes.
 
-Initial checkpoints already pass those short accuracy gates. The two offline training runs lower read-coordinate MSE, without an observed short-accuracy improvement. Preserve untrained anchors in the next experiments rather than calling outer training essential. Each final checkpoint has explicit provenance and capability limits in `results/kv-control-2026-11-14/checkpoint_admission.json`.
+At K8,D64 stable accuracy, the trained mean is39.06% online,35.35% continuous and34.77% periodic. Periodic-minus-continuous is−0.59 percentage points,95% paired interval[−2.15,+0.98], so there is no established timing advantage. Exact untrained anchors average29.10% online; outer training improves delayed classification despite already-perfect short accuracy, while late coordinateMSE worsens. These are128 paired histories for two fixed checkpoints/one codebook, not population training uncertainty.
 
-The orthogonal pressure grid is 100% in all ordinary arms, so it cannot establish a replay advantage. A separately declared correlated-key linear control produces interference with adequate initial K8 acquisition, but its primary periodic-minus-continuous interval includes zero. It is one fixed untrained instrument with different geometry and state size, not a trained neural or Hebbian result. This identifies a direction for calibrating pressure rather than a project-method conclusion.
+Use the portable correlated loader to preserve saved literal codebook vectors across framework environments. Strict GPU inference and portable CPU streaming/state-resume checks pass. Handoff/log record the unverified optional GPU check and final scheduler status after SSH timeout; the main results are fully local.
 
-The common persistent interface is now implemented and tested at the component level. Slow weights are frozen during evaluation; queries receive only keys and fast state. Save/load/continue preserves answers, and both fast state and replay-scheduler state can resume within a block. The live policy stores ≤8 FIFO pairs and ≤4 frozen selections. It matches every saved experiment plan; both learned initializers pass the all-arm integration demo. Full language-model cross-session integration remains a later milestone.
+The next shared milestone is actual sleep/Hebbian adapter integration against this frozen K8/K16 regime. Keep update rule, routing, buffer content and timing ablations separate, and retain untrained anchors, acquisition gates and physical resource accounting. Complete byte-model transfer remains unresolved.
 
 ## Earlier evidence and its limits
 
@@ -27,8 +27,6 @@ The [fixed-set fitting and assignment-transfer diagnostic](FIXED_SET_GENERALIZAT
 
 ## Next Member C milestone
 
-Implement a small declared correlated/capacity-limited setting in the nonlinear adapter, retaining the untrained initializer and D0 acquisition checks. Freeze one setting with real pressure headroom before comparing sleep and Hebbian variants. The dense calibration is a feasibility instrument, not the selected nonlinear setting. Teammates can integrate adapters with the current state/scheduler contract while this is calibrated.
+Maintain the qualified correlated component baseline and integrate teammate adapters with the common write/read/state contract. Freeze new changes before fresh evaluation; do not reselect on the current replay histories. A later buffer-coverage/content ablation can test why recent FIFO replay harms older stable facts under this rule. Keep complete sequence-model encoding/pretraining as a separate, acquisition-gated milestone.
 
-The team should record whether this typed suite is the common mechanism test, the chosen pressure capacity/representation, and which resources define the main matched comparison. Keep the complete sequence-model baseline separate until a stronger encoder/association curriculum passes fresh two-key selection. Future subword training must save a compatible tokenizer/embeddings/output head, measure throughput and context coverage, and use a finite compute/configuration budget. Byte-pilot costs do not predict paper-scale FineWeb-Edu training costs.
-
-For the interim report, there is now concrete implementation, acquisition, persistence and interference evidence to report, together with the unresolved full-model and method-efficacy gaps. Current code/results are local on `kv-representation-control`; no shared document or GitHub publication was changed. [HANDOFF.md](HANDOFF.md) records artifact recovery and closed compute status.
+The team still needs to state which resources define its main matched comparison: writes, adaptive bytes or measured compute. The interim report can now cite actual calibration, untrained controls, persistent-state checks and an informative non-ceiling timing result, with the full-model and method-efficacy gaps explicit. See [HANDOFF.md](HANDOFF.md) for recovery and the outstanding cluster-status check.

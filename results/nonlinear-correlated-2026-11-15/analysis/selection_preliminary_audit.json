@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "scope": "Selection and confirmation only; final comparison aggregate deferred until all four comparison runs arrive",
+  "selected_rank": 32,
+  "calibration_eligible": true,
+  "confirmed": true,
+  "raw_prediction_gates_reconstructed": [
+    "r32-90511",
+    "r32-90515",
+    "confirm-r32-90511",
+    "confirm-r32-90515"
+  ]
+}

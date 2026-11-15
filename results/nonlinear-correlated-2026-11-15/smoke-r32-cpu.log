@@ -1,0 +1,27 @@
+C:\Users\henry\Documents\Codex\2026-10-22\i\work\clmm-test-env\Lib\site-packages\torch\jit\_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+{"completed": "acquire2", "arm": "online"}
+{"completed": "acquire2", "arm": "reset"}
+{"completed": "acquire2", "arm": "rolled"}
+{"completed": "acquire4", "arm": "online"}
+{"completed": "acquire4", "arm": "reset"}
+{"completed": "acquire4", "arm": "rolled"}
+{"completed": "revise2", "arm": "online"}
+{"completed": "revise2", "arm": "reset"}
+{"completed": "revise2", "arm": "rolled"}
+{"completed": "pressure_k8_d0", "arm": "online"}
+{"completed": "pressure_k8_d16", "arm": "online"}
+{"completed": "pressure_k8_d64", "arm": "online"}
+{"step": 1, "observations": 8, "answers": 8, "loss": 0.04361740127205849, "accuracy": 1.0, "gradient_norm": 0.02208925411105156, "elapsed_seconds": 0.6678318999765906}
+{"completed": "acquire2", "arm": "online"}
+{"completed": "acquire2", "arm": "reset"}
+{"completed": "acquire2", "arm": "rolled"}
+{"completed": "acquire4", "arm": "online"}
+{"completed": "acquire4", "arm": "reset"}
+{"completed": "acquire4", "arm": "rolled"}
+{"completed": "revise2", "arm": "online"}
+{"completed": "revise2", "arm": "reset"}
+{"completed": "revise2", "arm": "rolled"}
+{"completed": "pressure_k8_d0", "arm": "online"}
+{"completed": "pressure_k8_d16", "arm": "online"}
+{"completed": "pressure_k8_d64", "arm": "online"}

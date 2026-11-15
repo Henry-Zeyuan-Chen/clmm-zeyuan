@@ -1,0 +1,18 @@
+C:\Users\henry\Documents\Codex\2026-10-22\i\work\clmm-test-env\Lib\site-packages\torch\jit\_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+{
+  "status": "passed",
+  "scope": "Selected inference and real streaming resume, not retraining or full-grid numerical reproduction",
+  "started_utc": "2026-11-15T06:26:45.001279+00:00",
+  "ended_utc": "2026-11-15T06:26:56.181714+00:00",
+  "elapsed_seconds": 11.180434699985199,
+  "source_sha256": "a12402ebad0a9f224036cafbeca23a98dacf120b8da95d2aa1ed732acb7fb134",
+  "device": "cpu",
+  "loader": "portable",
+  "torch": "2.15.0+cpu",
+  "loader_source_sha256": "788d89b01139a689bb2a401f925016018a9bd5c570afa89886637602b3ac9837",
+  "queries": 2432,
+  "max_abs_error": 3.5762786865234375e-07,
+  "read_pure": true,
+  "slow_parameters_and_rng_unchanged": true
+}

@@ -1,0 +1,13 @@
+run,stage,init_seed,rank,facts,d0_accuracy,d0_four_target_all_correct,d0_pass,calibration_eligible,confirmed,qualified_trained_retention,both_trained_d0_pass
+comparison-trained-r32-90511,trained,90511,32,8,1.0,1.0,True,True,True,True,True
+comparison-trained-r32-90511,trained,90511,32,16,0.994140625,0.9765625,True,True,True,True,True
+comparison-trained-r32-90511,trained,90511,32,32,0.869140625,0.5859375,False,True,True,False,False
+comparison-trained-r32-90515,trained,90515,32,8,1.0,1.0,True,True,True,True,True
+comparison-trained-r32-90515,trained,90515,32,16,0.9921875,0.96875,True,True,True,True,True
+comparison-trained-r32-90515,trained,90515,32,32,0.875,0.6015625,False,True,True,False,False
+comparison-initial-r32-90511,initial,90511,32,8,0.994140625,0.9765625,True,True,True,False,True
+comparison-initial-r32-90511,initial,90511,32,16,0.958984375,0.8359375,True,True,True,False,True
+comparison-initial-r32-90511,initial,90511,32,32,0.880859375,0.625,False,True,True,False,False
+comparison-initial-r32-90515,initial,90515,32,8,0.99609375,0.984375,True,True,True,False,True
+comparison-initial-r32-90515,initial,90515,32,16,0.955078125,0.8359375,True,True,True,False,True
+comparison-initial-r32-90515,initial,90515,32,32,0.869140625,0.5546875,False,True,True,False,False
