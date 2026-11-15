@@ -21,6 +21,11 @@ def collect_histories(value):
                          for r in value):found.add(signature(value))
         for child in value:found.update(collect_histories(child))
     elif isinstance(value,dict):
+        if {'episode_seeds','facts','delay','revision_fraction'}<=set(value):
+            # Earlier byte-task runs saved generator seeds rather than Episode objects.
+            for seed in value['episode_seeds']:
+                old=make_episode(int(seed),int(value['facts']),int(value['delay']),'train',revision_fraction=value['revision_fraction'])
+                found.add(signature(old.events))
         for child in value.values():found.update(collect_histories(child))
     return found
 

@@ -34,17 +34,30 @@ def prepare(args):
     arrays=training_arrays(worlds);np.savez_compressed(out/'training.npz',**arrays)
     with gzip.open(out/'training_plan.json.gz','wt',encoding='utf8') as f:json.dump(worlds,f)
     seen=collect_histories(worlds);manifest=[];digests=set()
+    if args.exclusions:
+        supplied=json.loads(args.exclusions.read_text(encoding='utf8'))
+        if not isinstance(supplied,list) or not all(isinstance(v,str) and len(v)==64 for v in supplied):raise ValueError('Invalid supplied signature union')
+        seen.update(supplied);manifest.append(dict(kind='supplied_exclusions',path=str(args.exclusions),sha256=common.sha256(args.exclusions),histories=len(supplied)))
     # The rg scan is structural; gzip episode/training records are also inspected.
-    scan=subprocess.run(['rg','-l','-U',r'"key"\s*:\s*"[0-9]{3}"',str(args.history_root),'-g','*.json'],capture_output=True,text=True)
+    scan=(subprocess.run(['rg','-l','-U','-e',r'"key"\s*:\s*"[0-9]{3}"','-e',r'"episode_seeds"',str(args.history_root),'-g','*.json'],capture_output=True,text=True)
+          if not args.exclusions else subprocess.CompletedProcess([],0,'',''))
     if scan.returncode not in (0,1):raise RuntimeError(scan.stderr)
     candidates={Path(s) for s in scan.stdout.splitlines()}
-    candidates.update(args.history_root.rglob('*.json.gz'))
+    if not args.exclusions:
+        candidates.update(args.history_root.rglob('*.json.gz'))
+        candidates.update(args.history_root.rglob('*.jsonl'))
+        candidates.update(args.history_root.rglob('*.jsonl.gz'))
     for p in sorted(candidates):
         if p.resolve()==(out/'training_plan.json.gz').resolve():continue
         digest=common.sha256(p)
         if digest in digests:continue
         digests.add(digest)
-        with (gzip.open(p,'rt',encoding='utf8') if p.suffix=='.gz' else p.open(encoding='utf8')) as f:ids=collect_histories(json.load(f))
+        with (gzip.open(p,'rt',encoding='utf8') if p.suffix=='.gz' else p.open(encoding='utf8')) as f:
+            if '.jsonl' in p.name:
+                ids=set()
+                for line in f:
+                    if line.strip():ids.update(collect_histories(json.loads(line)))
+            else:ids=collect_histories(json.load(f))
         if ids:
             seen.update(ids);manifest.append(dict(path=str(p),sha256=digest,histories=len(ids)))
     common.json_file(out/'excluded_signatures.json',sorted(seen))
@@ -158,10 +171,12 @@ def execute(args):
     common.json_file(out/'metadata.json',meta);logs=[]
     try:
         if args.mode in ('train','preflight'):
-            arrays=np.load(args.packet/'training.npz');steps=packet['steps']
+            with np.load(args.packet/'training.npz') as archive:
+                inputs=archive[args.arm];targets=archive['targets'];lengths=archive['lengths']
+            steps=packet['steps']
             optimizer=torch.optim.AdamW(model.parameters(),lr=.0003,weight_decay=.01);train_start=time.perf_counter()
             for step in range(steps):
-                common.before_deadline(deadline);n=int(arrays['lengths'][step]);x=torch.tensor(arrays[args.arm][step,:,:n].astype(np.int64),device=args.device);y=torch.tensor(arrays['targets'][step].astype(np.int64),device=args.device)
+                common.before_deadline(deadline);n=int(lengths[step]);x=torch.tensor(inputs[step,:,:n].astype(np.int64),device=args.device);y=torch.tensor(targets[step].astype(np.int64),device=args.device)
                 model.train();optimizer.zero_grad(set_to_none=True);result=model(x)[:,-1];loss=F.cross_entropy(result,y)
                 if not torch.isfinite(loss):raise RuntimeError('Nonfinite loss')
                 loss.backward()
@@ -202,7 +217,7 @@ def execute(args):
 
 def parser():
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('mode',choices=['prepare','initial','preflight','train'])
-    p.add_argument('--out',type=Path,required=True);p.add_argument('--packet',type=Path);p.add_argument('--parents',type=Path);p.add_argument('--history-root',type=Path);p.add_argument('--design',type=Path)
+    p.add_argument('--out',type=Path,required=True);p.add_argument('--packet',type=Path);p.add_argument('--parents',type=Path);p.add_argument('--history-root',type=Path);p.add_argument('--design',type=Path);p.add_argument('--exclusions',type=Path)
     p.add_argument('--steps',type=int,default=2000);p.add_argument('--contexts',type=int,default=8);p.add_argument('--train-seed',type=int,default=91302);p.add_argument('--dev-seed',type=int,default=91323);p.add_argument('--episodes',type=int,default=128);p.add_argument('--revision-episodes',type=int,default=64)
     p.add_argument('--parent',type=int,choices=[68101,68105],default=68101);p.add_argument('--segment',type=int,choices=[32,128],default=32);p.add_argument('--arm',choices=['periodic','periodic_bounded'],default='periodic')
     p.add_argument('--device',default='cpu');p.add_argument('--threads',type=int,default=2);p.add_argument('--eval-batch',type=int,default=16);p.add_argument('--max-seconds',type=int,default=4000)

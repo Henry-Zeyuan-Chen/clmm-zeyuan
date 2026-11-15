@@ -49,3 +49,9 @@ def test_signature_discovery_ignores_nonsemantic_numeric_models():
     ep=distinct_episode(91309)
     assert signature(ep.events) in collect_histories(ep.to_dict())
     assert not collect_histories({'keys':[1,2],'values':[3,4],'records':[{'key':4,'value':5}]})
+
+def test_legacy_seed_only_training_traces_are_excluded():
+    from clmm.pretrain.fact_streams import make_episode
+    trace=dict(episode_seeds=[123456],facts=2,delay=0,revision_fraction=.5)
+    old=make_episode(123456,2,0,'train',revision_fraction=.5)
+    assert collect_histories(trace)=={signature(old.events)}
