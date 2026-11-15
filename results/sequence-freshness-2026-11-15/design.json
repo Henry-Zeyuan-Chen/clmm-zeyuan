@@ -1,0 +1,45 @@
+{
+  "question": "Can the unchanged 839248-parameter complete byte sequence baseline generalize fresh assignments/templates after integrating bounded raw-record freshness?",
+  "status": "prospective before model efficacy",
+  "base_commit": "0ca5cbadfebd76d65e94bf9291d69f25afda7f65",
+  "models": {"parents":[68101,68105],"trained_attention_segments":[32,128],"training_policies":["periodic","periodic_bounded"],"cases":8,"parameters_each":839248,"architecture":"Existing vendored-MAC byte approximation, unchanged attention/persistent tokens/neural memory/head and parameter values at initialization"},
+  "integration": {
+    "scope":"Exact observed raw records replay through full unchanged transformer, including attention and native gradient neural memory; sequence replay reference, not memory-only sleep or paper-faithful Titans",
+    "parser":"Fixed preprocessing recognizes four provided observed32-byte fact grammars; retains exact raw wording, does not canonicalize; never receives query/target/version metadata",
+    "controller":"Existing StreamingReplay with FIFO8/snapshot4, same privatePCG64 candidate draws and keys; bounded uses latest FIFO record if present, original snapshot record if evicted",
+    "prefill":"First min(2,real-record-count) observations prime online-only, then block4; differs explicitly from older empty-first-block fact scheduler",
+    "storage":"At rest <=12 raw records/384 payload bytes plus controller metadata; transition temporary lookup <=13/416 bytes, no growing history/version table. Full LM input/activation/cache cost is separate and measured",
+    "boundaries":"Every observation/replay32 bytes; final query31 bytes; no earlier answer in another query's input; full256-way argmax is primary"
+  },
+  "training": {
+    "steps":2000,"contexts_per_update":8,"answer_forks_per_context":2,"answers_per_update":16,"seed":91302,
+    "curriculum":"256K1 updates (duplicate query to retain16forks);1024K2 acquisition;last720 alternate3K2acquisition to1K2both-revised+2distractors, totaling1564K2acquisition/180revision updates",
+    "input_lengths":{"K1":63,"K2_acquisition":95,"K2_revision":351},
+    "padding":"NPZ storage351 wide; slice each batch by recorded length before model sees it",
+    "data":"Fresh random assignments each update over600train keys, seen templates only; initial/current two target values distinct after every real revision",
+    "budgets_per_case":{"optimizer_updates":2000,"supervised_answer_forks":32000,"input_bytes":3646208},
+    "budgets_all8":{"optimizer_updates":16000,"supervised_answer_forks":256000,"input_bytes":29169664},
+    "optimizer":"AdamW lr0.0003 wd0.01 clip1; float32; TF32false deterministic algorithms; paired cases start from byte-identical parent tensors",
+    "selection":"Terminal fixed step2000 only; initial4parent-by-geometry conditions shared across policy pairs; no best checkpoint/seed/map selection, no scale increase"
+  },
+  "evaluation": {
+    "seed":91323,"acquisition_worlds":128,"revision_worlds":64,"eval_batch":16,
+    "groups":["fresh_train_key_seen","same_world_value_swaps","fresh_dev_key_seen","same_dev_world_heldout_fact_and_query_templates","revision_dev_seen","same_revision_world_heldout_templates","query_only_control"],
+    "exclusions":"Actual full new training semantic histories plus old consulted string-key/value histories from structural JSON scan and all JSONgzip; reject both original and swapped histories jointly; document discovered manifest and supplementary checks",
+    "pairing":"Both queries identical wording except key; values distinct; original/swap and seen/heldout semantic indices shared across every model/policy",
+    "arms":"Acquisition online normal/reset only (other replay arms yield identical no-extra prefixes). Revision all6arms normal, reset additionally online/boundedperiodic. Both trained geometries evaluated natively, not geometry transfer",
+    "raw_vectors_each":4352,"initial_cases":4,"terminal_cases":8,"raw_vectors_initial_and_terminal":52224,
+    "primary":"Two bounded-training minus literal-training BOTH-correct endpoints: fresh train-key seen acquisition and fresh dev-key heldout-template acquisition. These no-extra probes measure adaptation spillover/generalization, not direct test-time replay repair",
+    "uncertainty":"5000 whole-world paired PCG64 bootstrap draws91304; average fixed2parents and2trainedgeometries within each episode; two-sided97.5percent percentile intervals Bonferroni2; fixed-model history uncertainty only",
+    "gates":"Per-terminal-case BOTH-correct >=0.8 on fresh train seen, dev seen and dev heldout; keep failures. Native32 memory dependence separately normal-minus-reset lower95positive if acquisition passes. Query switch alone does not qualify correctness",
+    "secondary":"Value-swap joint four-answer correctness, per-rank full256 correctness/NLL/legal mass, per-parent/geometry gates, revision/stale/fallback diagnostics, controls; nominal95 descriptive",
+    "interpretation":"If acquisition fails, report integration works but baseline not qualified; no retention/sleep claim or outcome-based extra training. Latest observation authoritative, no noisy-fact or cross-session persistent-cache claim"
+  },
+  "execution": {
+    "allocation":"One bounded90-minute Slurm allocation,2A6000 GPUs,8CPU,16GiB RAM, excluding previously I/O-stalled ins081; no helper-selection change or automatic renewal",
+    "preflight":"20-step seed91303 engineering curriculum,N16/revision8, primaryparent68101 segments32/128 concurrently. Only time/resources/reload/finite/source/data checks consulted",
+    "projection":"1.25*(8*(2000/20)*max(two calibration training seconds)+12*(128/16)*max(two calibration evaluation seconds))/2 <=4200seconds to continue all8fullruns",
+    "pipeline_hard_seconds":5000,"no_renewal":true,
+    "fallback":"If resource/preflight gate fails, preserve evidence and do not silently change scale/training budget or claim full experiment completion"
+  }
+}
