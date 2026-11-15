@@ -57,7 +57,7 @@ def prepare():
  for folder in (ROOT/'stress/runs').iterdir():
   copy(folder/'case.json',DEST/'stress/runs'/folder.name/'case.json')
   for name in ('summary.csv','resources.csv'):copy(folder/'evaluation'/name,DEST/'stress/runs'/folder.name/'evaluation'/name)
- (DEST/'.gitattributes').write_text('* -text whitespace=blank-at-eol,-blank-at-eof,space-before-tab,cr-at-eol\n');(DEST/'.gitignore').write_text('!*.log\n')
+ (DEST/'.gitattributes').write_text('* -text whitespace=blank-at-eol,-blank-at-eof,space-before-tab,cr-at-eol\n*.svg -diff -merge -text\n');(DEST/'.gitignore').write_text('!*.log\n')
  (DEST/'README.md').write_text("""# Key-local revision reference study
 
 Read [results guide](../../docs/REVISION_LOCAL.md), [handoff](../../docs/HANDOFF.md), [checkpoint/admission registry](checkpoint_admission.json), and phase analysis under analysis/frozen and analysis/trained.
