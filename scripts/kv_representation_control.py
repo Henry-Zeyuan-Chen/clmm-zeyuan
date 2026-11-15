@@ -54,17 +54,19 @@ def roll_tree(x):
 
 
 @torch.no_grad()
-def evaluate(model,args,out,seen,deadline):
+def evaluate(model,args,out,seen,deadline,*,datasets=None,pressure_arms=None):
     out.mkdir();model.eval();device=next(model.buffers()).device
     cpu_rng=torch.random.get_rng_state().clone()
     gpu_rng=torch.cuda.get_rng_state(device).clone() if device.type=='cuda' else None
     original={k:v.detach().clone() for k,v in model.state_dict().items()}
-    datasets=evaluation_data(args.dev_seed,args.eval_episodes,args.pressure_episodes,seen,args.suite)
+    if datasets is None:datasets=evaluation_data(args.dev_seed,args.eval_episodes,args.pressure_episodes,seen,args.suite)
+    if pressure_arms is not None and (not pressure_arms or any(a not in ('online','repeat','continuous','periodic','boundary_reset') for a in pressure_arms)):
+        raise ValueError('Invalid pressure arms')
     common.json_file(out/'episodes.json',datasets)
     rows,logits_saved,resources,plans_saved=[],[],[],[]
     for cell,episodes in datasets.items():
         pressure=cell.startswith('pressure')
-        arms=('online','repeat','continuous','periodic','boundary_reset') if pressure else ('online','reset','rolled')
+        arms=(pressure_arms or ('online','repeat','continuous','periodic','boundary_reset')) if pressure else ('online','reset','rolled')
         for arm in arms:
             for start in range(0,len(episodes),args.eval_batch_size):
                 batch_started=time.perf_counter()
