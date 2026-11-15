@@ -1,0 +1,109 @@
+{
+  "recorded_utc": "2026-11-15T18:23:44.140008+00:00",
+  "stage": "prospective development factorial; not untouched final test",
+  "question": "Does content-based versus a fixed random key allocation matter under matched one-active-module budgets, separately from inactive trace protection?",
+  "parent_source_commit": "a41bb097af3e7eed356d13e24e4a0d5bc6677b14",
+  "base_commit": "65609b3648a8e36b3ad0bee02202f84522a9b550",
+  "parents": [
+    "gradient-dense-90511",
+    "gradient-dense-90515",
+    "hebbian-dense-90511",
+    "hebbian-dense-90515"
+  ],
+  "frozen": "Within each parent all encoder/decoder/W0/alpha/raw_eta bits identical; new zero H; no offline adaptation or optimizer",
+  "routes": {
+    "content": "Cosine to literal keys0,16,32,48 materialized on CPU once; same table for read/write",
+    "random_seeds": [
+      90701,
+      90702,
+      90703,
+      90704,
+      90705
+    ],
+    "random": "Privately permute content labels across key IDs; retain exact global module sizes; same fixed table for read/write; no value access"
+  },
+  "decay": {
+    "protected": "Only active trace decays and updates; other3 unchanged",
+    "global_decay": "Active update identical; other3 multiply by1-eta each observation"
+  },
+  "budget": {
+    "cases": 48,
+    "active_association_updates_per_observation": 1,
+    "active_read_modules": 1,
+    "fast_bytes_per_stream": 65536,
+    "table_bytes": 512,
+    "decay_applications_per_observation": {
+      "protected": 1,
+      "global_decay": 4
+    },
+    "note": "State decay multiplications differ intentionally; not total FLOP matching"
+  },
+  "data": {
+    "dev_seed": 90723,
+    "engineering_seed": 90703,
+    "eval_episodes": 128,
+    "pressure_episodes": 128,
+    "batch": 16,
+    "K": [
+      8,
+      16
+    ],
+    "D": [
+      0,
+      16,
+      64
+    ],
+    "arms": [
+      "online"
+    ],
+    "training_exclusion": {
+      "steps": 1200,
+      "batch": 32,
+      "seed": 90502
+    },
+    "split": "Fresh whole histories; all atomic keys/values/bindings familiar"
+  },
+  "admission": {
+    "short": "episode-all-correct acquire2/revise2>=.90, acquire4>=.80, normal-minus-rolled acquire2 blocked-bootstrap lower95>0",
+    "rolled_bootstrap": "8 cyclic blocks of16 episodes;5000draws seed90704",
+    "reset": "reported diagnostic, not formal gate",
+    "pressure": "own K D0 four-original-target all-correct>=.80 in both initializers; no dropping failing maps or conditions"
+  },
+  "primary": {
+    "family": "hebbian dense-trained parents; fixed2 initializers and5randommaps",
+    "cell": "pressure_k8_d64",
+    "category": "stable",
+    "contrasts": [
+      "content protected minus mean5 random protected",
+      "content protected minus content global"
+    ],
+    "bootstrap": "Paired resampling128 history IDs jointly across2parents and5maps,5000draws seed90704",
+    "interval": "nominal97.5percent percentile interval for each of2 co-primary contrasts (Bonferroni); fixed parents/maps, not population uncertainty",
+    "qualification": "If any relevant route/decay/parent fails own admission, label acquisition/interference diagnostic, not admitted retention improvement"
+  },
+  "secondary": [
+    "gradient family replication",
+    "random protected-global decay",
+    "route x decay interaction",
+    "D16 and K16",
+    "per-map/per-parent results"
+  ],
+  "logging": [
+    "actual plans/raw scores/predictions",
+    "per-history module occupancy and decay applications",
+    "target-specific following same/other-module writes after last real target observation, computed post hoc"
+  ],
+  "limitations": [
+    "joint read and write allocation effect",
+    "equal global sizes do not equal per-history occupancy/collisions",
+    "frozen transfer from dense parents, not equally retrained routing efficacy",
+    "reference component, not full Titans or teammate implementation",
+    "no new biological or routing novelty claim"
+  ],
+  "execution": {
+    "max_allocated_gpu_hours": 1,
+    "pipeline_seconds": 3300,
+    "no_renewal": true,
+    "no_score_selection": true
+  }
+}

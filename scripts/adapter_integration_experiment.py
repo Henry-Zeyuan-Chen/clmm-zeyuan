@@ -36,19 +36,20 @@ def datasets(args,seen,phase):
 
 
 @torch.no_grad()
-def evaluate(model,args,out,seen,deadline,phase='comparison'):
+def evaluate(model,args,out,seen,deadline,phase='comparison',*,data_override=None,pressure_arms_override=None):
     out.mkdir()
     model.eval()
     device=next(model.buffers()).device
     slow={name:t.clone() for name,t in model.state_dict().items()}
     cpu_rng=torch.random.get_rng_state().clone()
     cuda_rng=torch.cuda.get_rng_state(device).clone() if device.type=='cuda' else None
-    data=datasets(args,seen,phase)
+    data=datasets(args,seen,phase) if data_override is None else data_override
     common.json_file(out/'episodes.json',data)
     rows,scores,plans,resources=[],[],[],[]
     for cell,episodes in data.items():
         pressure=cell.startswith('pressure')
         arms=(('online',) if phase in ('initial','fork') else ('online','repeat','continuous','periodic')) if pressure else ('online','reset','rolled')
+        if pressure and pressure_arms_override is not None:arms=pressure_arms_override
         for arm in arms:
             for start in range(0,len(episodes),args.eval_batch_size):
                 common.before_deadline(deadline)
@@ -60,6 +61,8 @@ def evaluate(model,args,out,seen,deadline,phase='comparison'):
                 queries=torch.tensor([[q['key'] for q in ep['queries']] for ep in batch],device=device)
                 peak=physical_state_bytes(session.state)
                 occupancy=torch.zeros(4,device=device,dtype=torch.long)
+                per_history_occupancy=torch.zeros(size,4,device=device,dtype=torch.long)
+                per_history_decay=torch.zeros_like(per_history_occupancy)
                 max_pairs=max_snapshot=0
                 boundary_error=midblock_error=0.
                 resume_points=[]
@@ -72,7 +75,10 @@ def evaluate(model,args,out,seen,deadline,phase='comparison'):
                     if hasattr(model,'routing_mask'):
                         for offset in range(len(events[0])):
                             ids=torch.tensor([items[offset]['key'] for items in events],device=device)
-                            occupancy+=model.routing_mask(ids).sum(0)
+                            active=model.routing_mask(ids)
+                            occupancy+=active.sum(0)
+                            per_history_occupancy+=active
+                            if hasattr(model,'decay_mask'):per_history_decay+=model.decay_mask(ids)
                     peak=max(peak,physical_state_bytes(session.state))
                     counts=[p.logical_counts() for p in session.policies]
                     max_pairs=max(max_pairs,max(c['buffer_pairs'] for c in counts))
@@ -111,16 +117,28 @@ def evaluate(model,args,out,seen,deadline,phase='comparison'):
                 vectors=logits.cpu().numpy()
                 predicted=vectors.argmax(-1)
                 scores.append(vectors.reshape(-1,16))
+                # Exposure instrumentation is computed after all state updates.
+                # Future query keys/labels never enter a write or the router.
+                route_table=model.route_table.cpu().tolist() if hasattr(model,'route_table') else None
                 for b,ep in enumerate(batch):
                     plans.append(dict(cell=cell,arm=arm,episode=start+b,events=emitted[b],boundary=ep['boundary']))
                     for q,query in enumerate(ep['queries']):
                         target=query['target']
+                        exposure={}
+                        if route_table is not None:
+                            head=route_table[query['key']]
+                            last=max(i for i,event in enumerate(emitted[b]) if event['key']==query['key'] and event['kind']=='online')
+                            following=emitted[b][last+1:]
+                            same=sum(route_table[event['key']]==head for event in following)
+                            exposure=dict(query_module=head,after_last_real_target_observation=len(following),
+                                following_same_module_writes=same,following_other_module_writes=len(following)-same,
+                                target_decay_applications=len(following) if model.config.inactive_decay=='global' else same)
                         rows.append(dict(cell=cell,arm=arm,episode=start+b,rank=q,key=query['key'],category=query['category'],
                             target=target,old=query['old'],prediction=int(predicted[b,q]),correct=int(predicted[b,q]==target),
                             obsolete=int(query['old']>=0 and predicted[b,q]==query['old']),
                             mse=float(np.mean((vectors[b,q]-np.eye(16)[target])**2)),
                             actual_writes=len(emitted[b]),state_write_count=query_state.write_count,
-                            state_source_episode=(-1 if arm=='reset' else start+(b-1)%size if arm=='rolled' else start+b)))
+                            state_source_episode=(-1 if arm=='reset' else start+(b-1)%size if arm=='rolled' else start+b),**exposure))
                 budget=session.budget()
                 saturation=float((query_state.weights['trace'].abs()>=model.config.trace_bound-1e-6).float().mean()) if 'trace' in query_state.weights else None
                 common.sync(device)
@@ -130,6 +148,9 @@ def evaluate(model,args,out,seen,deadline,phase='comparison'):
                     peak_buffer_pairs=max_pairs,peak_snapshot_pairs=max_snapshot,query_state_write_count=query_state.write_count,
                     boundary_error=boundary_error,midblock_error=midblock_error,resume_points=','.join(resume_points),
                     active_module_updates=int(occupancy.sum()) if hasattr(model,'routing_mask') else None,module_occupancy=json.dumps(occupancy.cpu().tolist()) if hasattr(model,'routing_mask') else None,
+                    per_history_module_occupancy=json.dumps(per_history_occupancy.cpu().tolist()) if hasattr(model,'routing_mask') else None,
+                    decay_applications=int(per_history_decay.sum()) if hasattr(model,'decay_mask') else None,
+                    per_history_decay_applications=json.dumps(per_history_decay.cpu().tolist()) if hasattr(model,'decay_mask') else None,
                     trace_saturation=saturation,elapsed_seconds=time.perf_counter()-tick))
             print(json.dumps(dict(completed=cell,arm=arm)),flush=True)
     summary=[]

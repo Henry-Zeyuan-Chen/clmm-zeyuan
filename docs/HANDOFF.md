@@ -2,6 +2,8 @@
 
 ## Resume here
 
+**Active routing/decay follow-up (November15):** branch `routing-decay-controls`; prospective design under `outputs/clmm-routing-decay-2026-11-15/design.json`.48 fixed-slow dense-parent transfers, content versus5 fixed cardinality-matched random maps crossed with protected/global inactive decay. Main90723 histories have not run yet. No new training, online-only, one active association update/read. Continue from actual pipeline/status artifacts, not this provisional note.
+
 **Completed November 15, 2026: reference sleep/Hebbian adapter integration and bounded shared pilot.** Local branch `adapter-integration`, frozen model/runner source `a41bb097af3e7eed356d13e24e4a0d5bc6677b14`, parent `e3b744c`. Start with [ADAPTER_INTEGRATION.md](ADAPTER_INTEGRATION.md), [MEMBER_C_STATUS.md](MEMBER_C_STATUS.md) and `results/adapter-integration-2026-11-15`. No task process, GPU allocation, pending connection check or background monitoring remains.
 
 Zeyuan is Member C: shared pretraining, weights and evaluation. A owns sleep, B owns Hebbian/routing methods. Fetched team main1e8de19 (only remote branch) still contained empty sleep/Hebbian directories. Current implementations are explicitly working REFERENCE component adapters, not uploaded teammate algorithms or full Titans/MAC integration. The complete byte-model two-key transfer failure remains unresolved.
