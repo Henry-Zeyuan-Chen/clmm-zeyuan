@@ -2,6 +2,8 @@
 
 ## Resume here
 
+**Active revision-local follow-up:** branch `hebbian-revision-local`; design under `outputs/clmm-revision-local-2026-11-15/design.json`.48 frozen2x2diagnosticconditions and24matched-training EMA/local-delta conditions from untrained paired initializers. No main outcomes yet. Both cosine/all5randommaps, same state/write/optimizerbudgets; nextjob/statusmustbeverifiedfromactualfiles.
+
 **Completed November15,2026: content/random routing × inactive-trace decay.** Local branch `routing-decay-controls`, executable source `61212289d6029da65eeb6a3735ce5ec3894866a9`, parent handoff65609b3. Start with [ROUTING_DECAY.md](ROUTING_DECAY.md), [MEMBER_C_STATUS.md](MEMBER_C_STATUS.md), and `results/routing-decay-2026-11-15`. No active task job, pending connection check or background monitoring remains.
 
 Zeyuan is Member C: shared pretraining, weights and evaluation. A owns sleep, B owns Hebbian/routing. Latest fetched team main1e8de19 contained only empty sleep/Hebbian folders; these are reference component implementations, not teammate-final methods. Full Titans/MAC and byte-model fresh-assignment transfer remain unresolved.

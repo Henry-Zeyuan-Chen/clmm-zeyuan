@@ -63,6 +63,7 @@ def evaluate(model,args,out,seen,deadline,phase='comparison',*,data_override=Non
                 occupancy=torch.zeros(4,device=device,dtype=torch.long)
                 per_history_occupancy=torch.zeros(size,4,device=device,dtype=torch.long)
                 per_history_decay=torch.zeros_like(per_history_occupancy)
+                per_history_projection=torch.zeros_like(per_history_occupancy)
                 max_pairs=max_snapshot=0
                 boundary_error=midblock_error=0.
                 resume_points=[]
@@ -79,6 +80,7 @@ def evaluate(model,args,out,seen,deadline,phase='comparison',*,data_override=Non
                             occupancy+=active.sum(0)
                             per_history_occupancy+=active
                             if hasattr(model,'decay_mask'):per_history_decay+=model.decay_mask(ids)
+                            if hasattr(model,'projection_mask'):per_history_projection+=model.projection_mask(ids)
                     peak=max(peak,physical_state_bytes(session.state))
                     counts=[p.logical_counts() for p in session.policies]
                     max_pairs=max(max_pairs,max(c['buffer_pairs'] for c in counts))
@@ -132,7 +134,8 @@ def evaluate(model,args,out,seen,deadline,phase='comparison',*,data_override=Non
                             same=sum(route_table[event['key']]==head for event in following)
                             exposure=dict(query_module=head,after_last_real_target_observation=len(following),
                                 following_same_module_writes=same,following_other_module_writes=len(following)-same,
-                                target_decay_applications=len(following) if model.config.inactive_decay=='global' else same)
+                                target_decay_applications=len(following) if model.config.inactive_decay=='global' else (same if getattr(model.config,'active_bulk_decay',True) else 0),
+                                target_projection_events=same if getattr(model.config,'key_local_erasure',False) else 0)
                         rows.append(dict(cell=cell,arm=arm,episode=start+b,rank=q,key=query['key'],category=query['category'],
                             target=target,old=query['old'],prediction=int(predicted[b,q]),correct=int(predicted[b,q]==target),
                             obsolete=int(query['old']>=0 and predicted[b,q]==query['old']),
@@ -151,6 +154,8 @@ def evaluate(model,args,out,seen,deadline,phase='comparison',*,data_override=Non
                     per_history_module_occupancy=json.dumps(per_history_occupancy.cpu().tolist()) if hasattr(model,'routing_mask') else None,
                     decay_applications=int(per_history_decay.sum()) if hasattr(model,'decay_mask') else None,
                     per_history_decay_applications=json.dumps(per_history_decay.cpu().tolist()) if hasattr(model,'decay_mask') else None,
+                    projection_applications=int(per_history_projection.sum()) if hasattr(model,'projection_mask') else None,
+                    per_history_projection_applications=json.dumps(per_history_projection.cpu().tolist()) if hasattr(model,'projection_mask') else None,
                     trace_saturation=saturation,elapsed_seconds=time.perf_counter()-tick))
             print(json.dumps(dict(completed=cell,arm=arm)),flush=True)
     summary=[]

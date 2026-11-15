@@ -1,0 +1,163 @@
+{
+  "recorded_utc": "2026-11-15T19:07:18.359117+00:00",
+  "base_commit": "a98c849821b16ff48108e51a309e4676770512fb",
+  "stage": "prospective reference component study; fresh development compositions, not final paper test",
+  "question": "Can key-local erasure improve genuine Hebbian revisions while preserving late stable recall, with same observations, persistentstate and optimizer budgets?",
+  "formula": "x=tanh(keyencoder(k)), y=tanh(valueencoder(v)), s=max(sum(x*x),1e-8), P_xH=(x/s) outer (x^T H); Hnew=clamp(d*(H-e*P_xH)+eta*x outer y). Only routed module changes; allinactiveprotected.",
+  "rules": {
+    "ema": {
+      "bulk_decay": true,
+      "erase": false
+    },
+    "additive": {
+      "bulk_decay": false,
+      "erase": false
+    },
+    "erase_ema": {
+      "bulk_decay": true,
+      "erase": true
+    },
+    "local_delta": {
+      "bulk_decay": false,
+      "erase": true
+    }
+  },
+  "interpretation": "Delta-rule-inspired reference control, not claimed new Hebbian biology. P acts fastH, not W0/alpha; exact trace overwrite withoutclipping/epsilonfloor is not exact decoded prediction. Primarycandidatechangesbothbulkdecayanderasure; factorialcontrolsrequiredformechanism.",
+  "routes": {
+    "content": "Samecosineprototypekeys0,16,32,48",
+    "random_seeds": [
+      90701,
+      90702,
+      90703,
+      90704,
+      90705
+    ],
+    "construction": "Privately permutedcontentlabels acrosskeyIDs; cardinalities14,20,9,21; fixedread/writeassignments; allmapsretained"
+  },
+  "frozen": {
+    "cases": 48,
+    "parents": [
+      "hebbian-dense-90511.pt",
+      "hebbian-dense-90515.pt"
+    ],
+    "init_seeds": [
+      90511,
+      90515
+    ],
+    "rules": [
+      "ema",
+      "additive",
+      "erase_ema",
+      "local_delta"
+    ],
+    "dev_seed": 90823,
+    "training_steps": 0
+  },
+  "trained": {
+    "cases": 24,
+    "parents": [
+      "hebbian-initial-90511.pt",
+      "hebbian-initial-90515.pt"
+    ],
+    "required_parent_training_step": 0,
+    "rules": [
+      "ema",
+      "local_delta"
+    ],
+    "train_seed": 90802,
+    "steps": 1200,
+    "batch": 32,
+    "optimizer": "AdamW lr.001 weight_decay0 defaultbetas clipglobalnorm1",
+    "checkpoint": "Terminal1200steps only; no earlystopping or bestselection",
+    "evaluation_seed": 90923,
+    "initial_final_paired": true,
+    "init_weights": "Allnineoriginaltensorbitsidenticalwithinseedacrossrules/maps; originaluntraineddenseparent; freshzeroH perstream"
+  },
+  "data": {
+    "episodes": 128,
+    "pressure_episodes": 128,
+    "eval_batch": 16,
+    "pressure_K": [
+      8,
+      16
+    ],
+    "pressure_D": [
+      0,
+      16,
+      64
+    ],
+    "pressure_arms": [
+      "online"
+    ],
+    "short_arms": [
+      "online",
+      "reset",
+      "rolled"
+    ],
+    "exclusion": "Union exactoldtraining90502(1200x32) andnewtraining90802(1200x32)histories; familiar64keys/16values/1024bindings, compositiondisjoint",
+    "excluded_previous_development_seed": 90723,
+    "trained_excludes_frozen_development_seed": 90823,
+    "exclusion_addendum_utc": "2026-11-15T19:12:06.441578+00:00",
+    "exclusion_addendum": "Beforemainoutcomes: exactprior90723actualused9cells reconstructedfromold90502exclusions; frozen90823excludesold/newtraining+prior90723; trained90923alsoexcludesprospective128historyfrozen90823. No repeatedconsultedhistories."
+  },
+  "primary": {
+    "phase": "trained final90923",
+    "candidate": "local_delta",
+    "baseline": "ema",
+    "route_families": [
+      "content",
+      "mean5random"
+    ],
+    "endpoints": {
+      "revision": "revise2 online revised-query accuracy superiority",
+      "stable": "pressure_k8_d64 online stable-query accuracy noninferiority margin.03 absolute"
+    },
+    "bootstrap": "Paired128historyIDs jointlyacrossfixed2parents/allfixedmaps;5000drawsPCG64seed90804 perendpoint",
+    "interval": "97.5percenttwo-sidedpercentile; lower.0125 = Bonferroni fourone-sidedconstraints atfamilywisealpha.05 nominal",
+    "joint_success": "Forbothroutefamilies revisionlower>0 andstablelower>-.03; also candidate ownshortfullgates+K8D0 inbothparents/allmaps; comparatoracquisition/rolled/K8D0pass. Comparatorrevisionfailreportedandnotautomaticexclusion fromrepaircomparison.",
+    "caveat": "Ifbaselineequaltrainingrepairsrevisionceiling, do notclaimuniqueruleadvantage withoutsuperiority. Sharedbaselinequalificationmayholdwithoutfourinequalitysuccess. Stage1contrastsdiagnostic; no bestmap selection."
+  },
+  "admission": {
+    "acquire2_allcorrect": 0.9,
+    "acquire4_allcorrect": 0.8,
+    "revise2_allcorrect": 0.9,
+    "rolled": "acquire2bothcorrectnormal-minusrolled blocked8cyclesof16,5000drawsseed90804 lower95>0",
+    "pressure_d0_four_target_allcorrect": 0.8,
+    "reset": "diagnosticonly",
+    "no_gate_relaxation": true
+  },
+  "budgets": {
+    "retained_module_updates_per_observation": 1,
+    "persistent_fast_bytes": 65536,
+    "table_bytes": 512,
+    "parameters": 81921,
+    "auxstate": null,
+    "externalbuffers": "No newbuffer; sameSleepSessionboundedpolicy",
+    "new_local_projection": "Extra read/outerproduct operations: equalwrites/state, not identicalFLOPs. Dense4modulecandidatepath remains.",
+    "cpu_allocation_hours": 1,
+    "gpu_allocation_hours": 1,
+    "no_renewal": true,
+    "phase_timeout_seconds": 3300,
+    "training_continuation": "Runtimeonlyprojection<=2700secondsforfull24runs; ifoverboundpreservepreflightonly, nopartialwinner"
+  },
+  "selection": {
+    "allconfigurations_fixed": true,
+    "no_outcome_based_rule_selection": true,
+    "stage2_independent_of_stage1_outcomes": true,
+    "engineering_seed": 90803,
+    "engineering_episodes": 16,
+    "engineering_train_steps": 10
+  },
+  "prior_art": {
+    "source": "https://papers.neurips.cc/paper_files/paper/2024/file/d13a3eae72366e61dfdc7eea82eeb685-Paper-Conference.pdf",
+    "role": "Section2.2delta-rule memorycorrection andSection3.3projection interpretation; notpaperarchitecture reproduction"
+  },
+  "limitations": [
+    "ReferencecomponentnotfullTitans",
+    "Parenttrainingfamilyandfixedcodebook",
+    "No populationmap/seed uncertainty",
+    "Elementwiseclamping/epsilonfloor canbreakexactprojectionidentity",
+    "Contentroutingjointread/write",
+    "Newrulefullactiveassociationarithmetic differs though budgets matched"
+  ]
+}
