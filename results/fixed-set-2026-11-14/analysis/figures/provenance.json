@@ -1,0 +1,6 @@
+{
+  "source": "Verified metrics.csv; no model inference or invented values",
+  "verification": "verified",
+  "source_commit": "5bccffd9084b543ca086721be2bd46e6a2ea27a6",
+  "bootstrap": "Base ordered key pairs, retaining all four assignment replicates (tiny control has sixteen replicates per base pair)."
+}

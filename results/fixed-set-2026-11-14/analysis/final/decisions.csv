@@ -1,0 +1,7 @@
+run,parent,segment,regime,bank_group,bank_episodes,bank_both_count,bank_both_correct,fixed_fit_gate_at_0_95,novel_both_count,novel_both_correct,assignment_transfer_at_0_8,query_only_per_key_majority_ceiling
+fixed32-68101,68101,32,fixed,train,32,32,1.0,True,0,0.0,False,0.34375
+fixed128-68101,68101,128,fixed,train,32,32,1.0,True,0,0.0,False,0.34375
+fixed32-68105,68105,32,fixed,train,32,32,1.0,True,0,0.0,False,0.34375
+fixed128-68105,68105,128,fixed,train,32,32,1.0,True,2,0.015625,False,0.34375
+fresh32-68101,68101,32,fresh,reference_bank,32,0,0.0,,2,0.015625,False,0.34375
+fresh128-68101,68101,128,fresh,reference_bank,32,2,0.0625,,2,0.015625,False,0.34375

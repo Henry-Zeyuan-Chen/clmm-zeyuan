@@ -1,0 +1,35 @@
+test_duplicate_identity_rejected (__main__.ArtifactChecks.test_duplicate_identity_rejected) ... ok
+test_nll_corruption_rejected (__main__.ArtifactChecks.test_nll_corruption_rejected) ... ok
+test_prediction_corruption_rejected (__main__.ArtifactChecks.test_prediction_corruption_rejected) ... ok
+test_prefix_corruption_rejected (__main__.ArtifactChecks.test_prefix_corruption_rejected) ... ok
+test_reset_non_noop_rejected (__main__.ArtifactChecks.test_reset_non_noop_rejected) ... ok
+test_summary_corruption_rejected (__main__.ArtifactChecks.test_summary_corruption_rejected) ... ok
+test_target_corruption_rejected (__main__.ArtifactChecks.test_target_corruption_rejected) ... ok
+test_truncated_logits_rejected (__main__.ArtifactChecks.test_truncated_logits_rejected) ... ok
+test_valid_fixture (__main__.ArtifactChecks.test_valid_fixture) ... ok
+test_base_pair_corruption_rejected (__main__.DisjointChecks.test_base_pair_corruption_rejected) ... ok
+test_counter_corruption_rejected (__main__.DisjointChecks.test_counter_corruption_rejected) ... ok
+test_duplicate_candidates_are_rejected (__main__.DisjointChecks.test_duplicate_candidates_are_rejected) ... ok
+test_exhausted_candidate_stream_rejected (__main__.DisjointChecks.test_exhausted_candidate_stream_rejected) ... ok
+test_original_values_in_candidate_rejected (__main__.DisjointChecks.test_original_values_in_candidate_rejected) ... ok
+test_selection_passes_without_corruption (__main__.DisjointChecks.test_selection_passes_without_corruption) ... ok
+test_source_candidate_corruption_rejected (__main__.DisjointChecks.test_source_candidate_corruption_rejected) ... ok
+test_training_overlap_is_rejected (__main__.DisjointChecks.test_training_overlap_is_rejected) ... ok
+test_wrong_candidate_keys_rejected (__main__.DisjointChecks.test_wrong_candidate_keys_rejected) ... ok
+test_bootstrap_deterministic (__main__.ScoreChecks.test_bootstrap_deterministic) ... ok
+test_cluster_replicates_are_not_independent_units (__main__.ScoreChecks.test_cluster_replicates_are_not_independent_units) ... ok
+test_correct_full_vocabulary (__main__.ScoreChecks.test_correct_full_vocabulary) ... ok
+test_full_and_forced_choice_differ (__main__.ScoreChecks.test_full_and_forced_choice_differ) ... ok
+test_illegal_target_rejected (__main__.ScoreChecks.test_illegal_target_rejected) ... ok
+test_near_rejects_tampered_score (__main__.ScoreChecks.test_near_rejects_tampered_score) ... ok
+test_nonfinite_rejected (__main__.ScoreChecks.test_nonfinite_rejected) ... ok
+test_pair_identity_not_incidental_order (__main__.ScoreChecks.test_pair_identity_not_incidental_order) ... ok
+test_paired_zero_difference (__main__.ScoreChecks.test_paired_zero_difference) ... ok
+test_unbalanced_clusters_rejected (__main__.ScoreChecks.test_unbalanced_clusters_rejected) ... ok
+test_uniform_full_vocabulary (__main__.ScoreChecks.test_uniform_full_vocabulary) ... ok
+test_wrong_shape_rejected (__main__.ScoreChecks.test_wrong_shape_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 30 tests in 0.512s
+
+OK

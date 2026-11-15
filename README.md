@@ -16,6 +16,8 @@ Member C's [fact/revision evaluation](docs/FACT_REVISION.md) adapts the shared c
 
 The follow-up [paired-key acquisition diagnostic](docs/PAIRED_ACQUISITION.md) tests balanced supervision against a matched duplicate-query control and saves fixed curriculum-stage checkpoints for both shared parents. Single-fact recall and revisions succeed, while two-key selection remains unresolved even with the wider attention control.
 
+[Fixed-set fitting and transfer](docs/FIXED_SET_GENERALIZATION.md) establishes perfect fitting of 32 contexts but failed transfer to new values, including a bounded fresh-assignment follow-up with a training-disjoint probe. [Member C status](docs/MEMBER_C_STATUS.md) connects these controls, checkpoint qualifications and remaining baseline work to the sleep and Hebbian project tracks.
+
 ## Getting started
 
 Follow [SETUP.md](SETUP.md). After pulling a change to `pyproject.toml`, rerun `pip install -e ".[test]"`.

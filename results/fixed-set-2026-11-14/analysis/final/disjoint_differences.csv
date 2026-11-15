@@ -1,0 +1,13 @@
+left_run,right_run,condition,metric,units,left,right,difference,lower,upper
+fresh32-68101,fixed32-68101,online,both_correct,32,0.0078125,0.0,0.0078125,0.0,0.0234375
+fresh32-68101,fixed32-68101,reset_memory,both_correct,32,0.0,0.0,0.0,0.0,0.0
+fresh128-68101,fixed128-68101,online,both_correct,32,0.0234375,0.0,0.0234375,0.0,0.0546875
+fresh128-68101,fixed128-68101,reset_memory,both_correct,32,0.0234375,0.0,0.0234375,0.0,0.0546875
+fixed128-68101,fixed32-68101,online,both_correct,32,0.0,0.0,0.0,0.0,0.0
+fixed128-68101,fixed32-68101,reset_memory,both_correct,32,0.0,0.0,0.0,0.0,0.0
+fresh128-68101,fresh32-68101,online,both_correct,32,0.0234375,0.0078125,0.015625,0.0,0.0390625
+fresh128-68101,fresh32-68101,reset_memory,both_correct,32,0.0234375,0.0,0.0234375,0.0,0.0546875
+fixed32-68101,fixed32-68101,online-minus-reset,both_correct,32,0.0,0.0,0.0,0.0,0.0
+fixed128-68101,fixed128-68101,online-minus-reset,both_correct,32,0.0,0.0,0.0,0.0,0.0
+fresh32-68101,fresh32-68101,online-minus-reset,both_correct,32,0.0078125,0.0,0.0078125,0.0,0.0234375
+fresh128-68101,fresh128-68101,online-minus-reset,both_correct,32,0.0234375,0.0234375,0.0,0.0,0.0

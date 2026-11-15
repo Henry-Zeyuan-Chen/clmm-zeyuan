@@ -1,0 +1,1754 @@
+{
+  "episodes": [
+    {
+      "format_version": 1,
+      "seed": 34240384648975799869399453276779830406,
+      "facts": 2,
+      "delay": 0,
+      "split": "train",
+      "template_family": "seen",
+      "revision_fraction": 0.0,
+      "include_recent": false,
+      "key_pool_scheme": "sha256(clmm.fact.keys.v1:+key), key tie-break; ranked 600/200/200",
+      "key_pool_sha256": "02b74ed398e6de24c519562f950f8f88c082038b1d0129ae923c090bf594d0e7",
+      "events": [
+        {
+          "event_id": 0,
+          "key": "431",
+          "value": "j",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "event_id": 1,
+          "key": "563",
+          "value": "f",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ],
+      "queries": [
+        {
+          "key": "431",
+          "target": "j",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 0,
+          "latest_event_id": 0,
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "key": "563",
+          "target": "f",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 1,
+          "latest_event_id": 1,
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ]
+    },
+    {
+      "format_version": 1,
+      "seed": 34240384648975799877674764104655216004,
+      "facts": 2,
+      "delay": 0,
+      "split": "train",
+      "template_family": "seen",
+      "revision_fraction": 0.0,
+      "include_recent": false,
+      "key_pool_scheme": "sha256(clmm.fact.keys.v1:+key), key tie-break; ranked 600/200/200",
+      "key_pool_sha256": "02b74ed398e6de24c519562f950f8f88c082038b1d0129ae923c090bf594d0e7",
+      "events": [
+        {
+          "event_id": 0,
+          "key": "855",
+          "value": "j",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "event_id": 1,
+          "key": "126",
+          "value": "l",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ],
+      "queries": [
+        {
+          "key": "855",
+          "target": "j",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 0,
+          "latest_event_id": 0,
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "key": "126",
+          "target": "l",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 1,
+          "latest_event_id": 1,
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ]
+    },
+    {
+      "format_version": 1,
+      "seed": 34240384648975799885950074932530601603,
+      "facts": 2,
+      "delay": 0,
+      "split": "train",
+      "template_family": "seen",
+      "revision_fraction": 0.0,
+      "include_recent": false,
+      "key_pool_scheme": "sha256(clmm.fact.keys.v1:+key), key tie-break; ranked 600/200/200",
+      "key_pool_sha256": "02b74ed398e6de24c519562f950f8f88c082038b1d0129ae923c090bf594d0e7",
+      "events": [
+        {
+          "event_id": 0,
+          "key": "028",
+          "value": "e",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "event_id": 1,
+          "key": "107",
+          "value": "p",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ],
+      "queries": [
+        {
+          "key": "028",
+          "target": "e",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 0,
+          "latest_event_id": 0,
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "key": "107",
+          "target": "p",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 1,
+          "latest_event_id": 1,
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ]
+    },
+    {
+      "format_version": 1,
+      "seed": 34240384648975799894225385760405987203,
+      "facts": 2,
+      "delay": 0,
+      "split": "train",
+      "template_family": "seen",
+      "revision_fraction": 0.0,
+      "include_recent": false,
+      "key_pool_scheme": "sha256(clmm.fact.keys.v1:+key), key tie-break; ranked 600/200/200",
+      "key_pool_sha256": "02b74ed398e6de24c519562f950f8f88c082038b1d0129ae923c090bf594d0e7",
+      "events": [
+        {
+          "event_id": 0,
+          "key": "249",
+          "value": "o",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "event_id": 1,
+          "key": "557",
+          "value": "i",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ],
+      "queries": [
+        {
+          "key": "249",
+          "target": "o",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 0,
+          "latest_event_id": 0,
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "key": "557",
+          "target": "i",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 1,
+          "latest_event_id": 1,
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ]
+    },
+    {
+      "format_version": 1,
+      "seed": 34240384648975799902500696588281372804,
+      "facts": 2,
+      "delay": 0,
+      "split": "train",
+      "template_family": "seen",
+      "revision_fraction": 0.0,
+      "include_recent": false,
+      "key_pool_scheme": "sha256(clmm.fact.keys.v1:+key), key tie-break; ranked 600/200/200",
+      "key_pool_sha256": "02b74ed398e6de24c519562f950f8f88c082038b1d0129ae923c090bf594d0e7",
+      "events": [
+        {
+          "event_id": 0,
+          "key": "452",
+          "value": "n",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "event_id": 1,
+          "key": "955",
+          "value": "b",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ],
+      "queries": [
+        {
+          "key": "452",
+          "target": "n",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 0,
+          "latest_event_id": 0,
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "key": "955",
+          "target": "b",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 1,
+          "latest_event_id": 1,
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ]
+    },
+    {
+      "format_version": 1,
+      "seed": 34240384648975799910776007416156758406,
+      "facts": 2,
+      "delay": 0,
+      "split": "train",
+      "template_family": "seen",
+      "revision_fraction": 0.0,
+      "include_recent": false,
+      "key_pool_scheme": "sha256(clmm.fact.keys.v1:+key), key tie-break; ranked 600/200/200",
+      "key_pool_sha256": "02b74ed398e6de24c519562f950f8f88c082038b1d0129ae923c090bf594d0e7",
+      "events": [
+        {
+          "event_id": 0,
+          "key": "205",
+          "value": "m",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "event_id": 1,
+          "key": "652",
+          "value": "g",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ],
+      "queries": [
+        {
+          "key": "205",
+          "target": "m",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 0,
+          "latest_event_id": 0,
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "key": "652",
+          "target": "g",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 1,
+          "latest_event_id": 1,
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ]
+    },
+    {
+      "format_version": 1,
+      "seed": 34240384648975799919051318244032144009,
+      "facts": 2,
+      "delay": 0,
+      "split": "train",
+      "template_family": "seen",
+      "revision_fraction": 0.0,
+      "include_recent": false,
+      "key_pool_scheme": "sha256(clmm.fact.keys.v1:+key), key tie-break; ranked 600/200/200",
+      "key_pool_sha256": "02b74ed398e6de24c519562f950f8f88c082038b1d0129ae923c090bf594d0e7",
+      "events": [
+        {
+          "event_id": 0,
+          "key": "438",
+          "value": "c",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "event_id": 1,
+          "key": "581",
+          "value": "e",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ],
+      "queries": [
+        {
+          "key": "438",
+          "target": "c",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 0,
+          "latest_event_id": 0,
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "key": "581",
+          "target": "e",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 1,
+          "latest_event_id": 1,
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ]
+    },
+    {
+      "format_version": 1,
+      "seed": 34240384648975799927326629071907529613,
+      "facts": 2,
+      "delay": 0,
+      "split": "train",
+      "template_family": "seen",
+      "revision_fraction": 0.0,
+      "include_recent": false,
+      "key_pool_scheme": "sha256(clmm.fact.keys.v1:+key), key tie-break; ranked 600/200/200",
+      "key_pool_sha256": "02b74ed398e6de24c519562f950f8f88c082038b1d0129ae923c090bf594d0e7",
+      "events": [
+        {
+          "event_id": 0,
+          "key": "788",
+          "value": "a",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "event_id": 1,
+          "key": "544",
+          "value": "h",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ],
+      "queries": [
+        {
+          "key": "788",
+          "target": "a",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 0,
+          "latest_event_id": 0,
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "key": "544",
+          "target": "h",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 1,
+          "latest_event_id": 1,
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ]
+    },
+    {
+      "format_version": 1,
+      "seed": 34240384648975799935601939899782915218,
+      "facts": 2,
+      "delay": 0,
+      "split": "train",
+      "template_family": "seen",
+      "revision_fraction": 0.0,
+      "include_recent": false,
+      "key_pool_scheme": "sha256(clmm.fact.keys.v1:+key), key tie-break; ranked 600/200/200",
+      "key_pool_sha256": "02b74ed398e6de24c519562f950f8f88c082038b1d0129ae923c090bf594d0e7",
+      "events": [
+        {
+          "event_id": 0,
+          "key": "438",
+          "value": "f",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "event_id": 1,
+          "key": "855",
+          "value": "i",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ],
+      "queries": [
+        {
+          "key": "438",
+          "target": "f",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 0,
+          "latest_event_id": 0,
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "key": "855",
+          "target": "i",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 1,
+          "latest_event_id": 1,
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ]
+    },
+    {
+      "format_version": 1,
+      "seed": 34240384648975799943877250727658300824,
+      "facts": 2,
+      "delay": 0,
+      "split": "train",
+      "template_family": "seen",
+      "revision_fraction": 0.0,
+      "include_recent": false,
+      "key_pool_scheme": "sha256(clmm.fact.keys.v1:+key), key tie-break; ranked 600/200/200",
+      "key_pool_sha256": "02b74ed398e6de24c519562f950f8f88c082038b1d0129ae923c090bf594d0e7",
+      "events": [
+        {
+          "event_id": 0,
+          "key": "028",
+          "value": "a",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "event_id": 1,
+          "key": "955",
+          "value": "k",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ],
+      "queries": [
+        {
+          "key": "028",
+          "target": "a",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 0,
+          "latest_event_id": 0,
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "key": "955",
+          "target": "k",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 1,
+          "latest_event_id": 1,
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ]
+    },
+    {
+      "format_version": 1,
+      "seed": 34240384648975799952152561555533686431,
+      "facts": 2,
+      "delay": 0,
+      "split": "train",
+      "template_family": "seen",
+      "revision_fraction": 0.0,
+      "include_recent": false,
+      "key_pool_scheme": "sha256(clmm.fact.keys.v1:+key), key tie-break; ranked 600/200/200",
+      "key_pool_sha256": "02b74ed398e6de24c519562f950f8f88c082038b1d0129ae923c090bf594d0e7",
+      "events": [
+        {
+          "event_id": 0,
+          "key": "107",
+          "value": "p",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "event_id": 1,
+          "key": "788",
+          "value": "m",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ],
+      "queries": [
+        {
+          "key": "107",
+          "target": "p",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 0,
+          "latest_event_id": 0,
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "key": "788",
+          "target": "m",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 1,
+          "latest_event_id": 1,
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ]
+    },
+    {
+      "format_version": 1,
+      "seed": 34240384648975799960427872383409072039,
+      "facts": 2,
+      "delay": 0,
+      "split": "train",
+      "template_family": "seen",
+      "revision_fraction": 0.0,
+      "include_recent": false,
+      "key_pool_scheme": "sha256(clmm.fact.keys.v1:+key), key tie-break; ranked 600/200/200",
+      "key_pool_sha256": "02b74ed398e6de24c519562f950f8f88c082038b1d0129ae923c090bf594d0e7",
+      "events": [
+        {
+          "event_id": 0,
+          "key": "557",
+          "value": "n",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "event_id": 1,
+          "key": "652",
+          "value": "a",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ],
+      "queries": [
+        {
+          "key": "557",
+          "target": "n",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 0,
+          "latest_event_id": 0,
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "key": "652",
+          "target": "a",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 1,
+          "latest_event_id": 1,
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ]
+    },
+    {
+      "format_version": 1,
+      "seed": 34240384648975799968703183211284457648,
+      "facts": 2,
+      "delay": 0,
+      "split": "train",
+      "template_family": "seen",
+      "revision_fraction": 0.0,
+      "include_recent": false,
+      "key_pool_scheme": "sha256(clmm.fact.keys.v1:+key), key tie-break; ranked 600/200/200",
+      "key_pool_sha256": "02b74ed398e6de24c519562f950f8f88c082038b1d0129ae923c090bf594d0e7",
+      "events": [
+        {
+          "event_id": 0,
+          "key": "249",
+          "value": "n",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "event_id": 1,
+          "key": "581",
+          "value": "o",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ],
+      "queries": [
+        {
+          "key": "249",
+          "target": "n",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 0,
+          "latest_event_id": 0,
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "key": "581",
+          "target": "o",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 1,
+          "latest_event_id": 1,
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ]
+    },
+    {
+      "format_version": 1,
+      "seed": 34240384648975799976978494039159843258,
+      "facts": 2,
+      "delay": 0,
+      "split": "train",
+      "template_family": "seen",
+      "revision_fraction": 0.0,
+      "include_recent": false,
+      "key_pool_scheme": "sha256(clmm.fact.keys.v1:+key), key tie-break; ranked 600/200/200",
+      "key_pool_sha256": "02b74ed398e6de24c519562f950f8f88c082038b1d0129ae923c090bf594d0e7",
+      "events": [
+        {
+          "event_id": 0,
+          "key": "544",
+          "value": "p",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "event_id": 1,
+          "key": "452",
+          "value": "g",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ],
+      "queries": [
+        {
+          "key": "544",
+          "target": "p",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 0,
+          "latest_event_id": 0,
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "key": "452",
+          "target": "g",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 1,
+          "latest_event_id": 1,
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ]
+    },
+    {
+      "format_version": 1,
+      "seed": 34240384648975799985253804867035228869,
+      "facts": 2,
+      "delay": 0,
+      "split": "train",
+      "template_family": "seen",
+      "revision_fraction": 0.0,
+      "include_recent": false,
+      "key_pool_scheme": "sha256(clmm.fact.keys.v1:+key), key tie-break; ranked 600/200/200",
+      "key_pool_sha256": "02b74ed398e6de24c519562f950f8f88c082038b1d0129ae923c090bf594d0e7",
+      "events": [
+        {
+          "event_id": 0,
+          "key": "126",
+          "value": "l",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "event_id": 1,
+          "key": "431",
+          "value": "f",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ],
+      "queries": [
+        {
+          "key": "126",
+          "target": "l",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 0,
+          "latest_event_id": 0,
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "key": "431",
+          "target": "f",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 1,
+          "latest_event_id": 1,
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ]
+    },
+    {
+      "format_version": 1,
+      "seed": 34240384648975799993529115694910614481,
+      "facts": 2,
+      "delay": 0,
+      "split": "train",
+      "template_family": "seen",
+      "revision_fraction": 0.0,
+      "include_recent": false,
+      "key_pool_scheme": "sha256(clmm.fact.keys.v1:+key), key tie-break; ranked 600/200/200",
+      "key_pool_sha256": "02b74ed398e6de24c519562f950f8f88c082038b1d0129ae923c090bf594d0e7",
+      "events": [
+        {
+          "event_id": 0,
+          "key": "205",
+          "value": "j",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "event_id": 1,
+          "key": "563",
+          "value": "c",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ],
+      "queries": [
+        {
+          "key": "205",
+          "target": "j",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 0,
+          "latest_event_id": 0,
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "key": "563",
+          "target": "c",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 1,
+          "latest_event_id": 1,
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ]
+    },
+    {
+      "format_version": 1,
+      "seed": 34240384648975800001804426522786000094,
+      "facts": 2,
+      "delay": 0,
+      "split": "train",
+      "template_family": "seen",
+      "revision_fraction": 0.0,
+      "include_recent": false,
+      "key_pool_scheme": "sha256(clmm.fact.keys.v1:+key), key tie-break; ranked 600/200/200",
+      "key_pool_sha256": "02b74ed398e6de24c519562f950f8f88c082038b1d0129ae923c090bf594d0e7",
+      "events": [
+        {
+          "event_id": 0,
+          "key": "431",
+          "value": "d",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "event_id": 1,
+          "key": "205",
+          "value": "n",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ],
+      "queries": [
+        {
+          "key": "431",
+          "target": "d",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 0,
+          "latest_event_id": 0,
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "key": "205",
+          "target": "n",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 1,
+          "latest_event_id": 1,
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ]
+    },
+    {
+      "format_version": 1,
+      "seed": 34240384648975800010079737350661385708,
+      "facts": 2,
+      "delay": 0,
+      "split": "train",
+      "template_family": "seen",
+      "revision_fraction": 0.0,
+      "include_recent": false,
+      "key_pool_scheme": "sha256(clmm.fact.keys.v1:+key), key tie-break; ranked 600/200/200",
+      "key_pool_sha256": "02b74ed398e6de24c519562f950f8f88c082038b1d0129ae923c090bf594d0e7",
+      "events": [
+        {
+          "event_id": 0,
+          "key": "126",
+          "value": "b",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "event_id": 1,
+          "key": "563",
+          "value": "l",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ],
+      "queries": [
+        {
+          "key": "126",
+          "target": "b",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 0,
+          "latest_event_id": 0,
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "key": "563",
+          "target": "l",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 1,
+          "latest_event_id": 1,
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ]
+    },
+    {
+      "format_version": 1,
+      "seed": 34240384648975800018355048178536771323,
+      "facts": 2,
+      "delay": 0,
+      "split": "train",
+      "template_family": "seen",
+      "revision_fraction": 0.0,
+      "include_recent": false,
+      "key_pool_scheme": "sha256(clmm.fact.keys.v1:+key), key tie-break; ranked 600/200/200",
+      "key_pool_sha256": "02b74ed398e6de24c519562f950f8f88c082038b1d0129ae923c090bf594d0e7",
+      "events": [
+        {
+          "event_id": 0,
+          "key": "544",
+          "value": "k",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "event_id": 1,
+          "key": "581",
+          "value": "j",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ],
+      "queries": [
+        {
+          "key": "544",
+          "target": "k",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 0,
+          "latest_event_id": 0,
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "key": "581",
+          "target": "j",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 1,
+          "latest_event_id": 1,
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ]
+    },
+    {
+      "format_version": 1,
+      "seed": 34240384648975800026630359006412156939,
+      "facts": 2,
+      "delay": 0,
+      "split": "train",
+      "template_family": "seen",
+      "revision_fraction": 0.0,
+      "include_recent": false,
+      "key_pool_scheme": "sha256(clmm.fact.keys.v1:+key), key tie-break; ranked 600/200/200",
+      "key_pool_sha256": "02b74ed398e6de24c519562f950f8f88c082038b1d0129ae923c090bf594d0e7",
+      "events": [
+        {
+          "event_id": 0,
+          "key": "557",
+          "value": "i",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "event_id": 1,
+          "key": "438",
+          "value": "g",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ],
+      "queries": [
+        {
+          "key": "557",
+          "target": "i",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 0,
+          "latest_event_id": 0,
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "key": "438",
+          "target": "g",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 1,
+          "latest_event_id": 1,
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ]
+    },
+    {
+      "format_version": 1,
+      "seed": 34240384648975800034905669834287542556,
+      "facts": 2,
+      "delay": 0,
+      "split": "train",
+      "template_family": "seen",
+      "revision_fraction": 0.0,
+      "include_recent": false,
+      "key_pool_scheme": "sha256(clmm.fact.keys.v1:+key), key tie-break; ranked 600/200/200",
+      "key_pool_sha256": "02b74ed398e6de24c519562f950f8f88c082038b1d0129ae923c090bf594d0e7",
+      "events": [
+        {
+          "event_id": 0,
+          "key": "788",
+          "value": "f",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "event_id": 1,
+          "key": "452",
+          "value": "c",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ],
+      "queries": [
+        {
+          "key": "788",
+          "target": "f",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 0,
+          "latest_event_id": 0,
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "key": "452",
+          "target": "c",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 1,
+          "latest_event_id": 1,
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ]
+    },
+    {
+      "format_version": 1,
+      "seed": 34240384648975800043180980662162928174,
+      "facts": 2,
+      "delay": 0,
+      "split": "train",
+      "template_family": "seen",
+      "revision_fraction": 0.0,
+      "include_recent": false,
+      "key_pool_scheme": "sha256(clmm.fact.keys.v1:+key), key tie-break; ranked 600/200/200",
+      "key_pool_sha256": "02b74ed398e6de24c519562f950f8f88c082038b1d0129ae923c090bf594d0e7",
+      "events": [
+        {
+          "event_id": 0,
+          "key": "652",
+          "value": "g",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "event_id": 1,
+          "key": "855",
+          "value": "m",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ],
+      "queries": [
+        {
+          "key": "652",
+          "target": "g",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 0,
+          "latest_event_id": 0,
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "key": "855",
+          "target": "m",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 1,
+          "latest_event_id": 1,
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ]
+    },
+    {
+      "format_version": 1,
+      "seed": 34240384648975800051456291490038313793,
+      "facts": 2,
+      "delay": 0,
+      "split": "train",
+      "template_family": "seen",
+      "revision_fraction": 0.0,
+      "include_recent": false,
+      "key_pool_scheme": "sha256(clmm.fact.keys.v1:+key), key tie-break; ranked 600/200/200",
+      "key_pool_sha256": "02b74ed398e6de24c519562f950f8f88c082038b1d0129ae923c090bf594d0e7",
+      "events": [
+        {
+          "event_id": 0,
+          "key": "955",
+          "value": "d",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "event_id": 1,
+          "key": "249",
+          "value": "k",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ],
+      "queries": [
+        {
+          "key": "955",
+          "target": "d",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 0,
+          "latest_event_id": 0,
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "key": "249",
+          "target": "k",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 1,
+          "latest_event_id": 1,
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ]
+    },
+    {
+      "format_version": 1,
+      "seed": 34240384648975800059731602317913699413,
+      "facts": 2,
+      "delay": 0,
+      "split": "train",
+      "template_family": "seen",
+      "revision_fraction": 0.0,
+      "include_recent": false,
+      "key_pool_scheme": "sha256(clmm.fact.keys.v1:+key), key tie-break; ranked 600/200/200",
+      "key_pool_sha256": "02b74ed398e6de24c519562f950f8f88c082038b1d0129ae923c090bf594d0e7",
+      "events": [
+        {
+          "event_id": 0,
+          "key": "107",
+          "value": "i",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "event_id": 1,
+          "key": "028",
+          "value": "k",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ],
+      "queries": [
+        {
+          "key": "107",
+          "target": "i",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 0,
+          "latest_event_id": 0,
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "key": "028",
+          "target": "k",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 1,
+          "latest_event_id": 1,
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ]
+    },
+    {
+      "format_version": 1,
+      "seed": 34240384648975800068006913145789085034,
+      "facts": 2,
+      "delay": 0,
+      "split": "train",
+      "template_family": "seen",
+      "revision_fraction": 0.0,
+      "include_recent": false,
+      "key_pool_scheme": "sha256(clmm.fact.keys.v1:+key), key tie-break; ranked 600/200/200",
+      "key_pool_sha256": "02b74ed398e6de24c519562f950f8f88c082038b1d0129ae923c090bf594d0e7",
+      "events": [
+        {
+          "event_id": 0,
+          "key": "652",
+          "value": "e",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "event_id": 1,
+          "key": "126",
+          "value": "d",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ],
+      "queries": [
+        {
+          "key": "652",
+          "target": "e",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 0,
+          "latest_event_id": 0,
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "key": "126",
+          "target": "d",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 1,
+          "latest_event_id": 1,
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ]
+    },
+    {
+      "format_version": 1,
+      "seed": 34240384648975800076282223973664470656,
+      "facts": 2,
+      "delay": 0,
+      "split": "train",
+      "template_family": "seen",
+      "revision_fraction": 0.0,
+      "include_recent": false,
+      "key_pool_scheme": "sha256(clmm.fact.keys.v1:+key), key tie-break; ranked 600/200/200",
+      "key_pool_sha256": "02b74ed398e6de24c519562f950f8f88c082038b1d0129ae923c090bf594d0e7",
+      "events": [
+        {
+          "event_id": 0,
+          "key": "107",
+          "value": "e",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "event_id": 1,
+          "key": "955",
+          "value": "d",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ],
+      "queries": [
+        {
+          "key": "107",
+          "target": "e",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 0,
+          "latest_event_id": 0,
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "key": "955",
+          "target": "d",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 1,
+          "latest_event_id": 1,
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ]
+    },
+    {
+      "format_version": 1,
+      "seed": 34240384648975800084557534801539856279,
+      "facts": 2,
+      "delay": 0,
+      "split": "train",
+      "template_family": "seen",
+      "revision_fraction": 0.0,
+      "include_recent": false,
+      "key_pool_scheme": "sha256(clmm.fact.keys.v1:+key), key tie-break; ranked 600/200/200",
+      "key_pool_sha256": "02b74ed398e6de24c519562f950f8f88c082038b1d0129ae923c090bf594d0e7",
+      "events": [
+        {
+          "event_id": 0,
+          "key": "544",
+          "value": "l",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "event_id": 1,
+          "key": "563",
+          "value": "h",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ],
+      "queries": [
+        {
+          "key": "544",
+          "target": "l",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 0,
+          "latest_event_id": 0,
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "key": "563",
+          "target": "h",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 1,
+          "latest_event_id": 1,
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ]
+    },
+    {
+      "format_version": 1,
+      "seed": 34240384648975800092832845629415241903,
+      "facts": 2,
+      "delay": 0,
+      "split": "train",
+      "template_family": "seen",
+      "revision_fraction": 0.0,
+      "include_recent": false,
+      "key_pool_scheme": "sha256(clmm.fact.keys.v1:+key), key tie-break; ranked 600/200/200",
+      "key_pool_sha256": "02b74ed398e6de24c519562f950f8f88c082038b1d0129ae923c090bf594d0e7",
+      "events": [
+        {
+          "event_id": 0,
+          "key": "788",
+          "value": "b",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "event_id": 1,
+          "key": "249",
+          "value": "h",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ],
+      "queries": [
+        {
+          "key": "788",
+          "target": "b",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 0,
+          "latest_event_id": 0,
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "key": "249",
+          "target": "h",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 1,
+          "latest_event_id": 1,
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ]
+    },
+    {
+      "format_version": 1,
+      "seed": 34240384648975800101108156457290627528,
+      "facts": 2,
+      "delay": 0,
+      "split": "train",
+      "template_family": "seen",
+      "revision_fraction": 0.0,
+      "include_recent": false,
+      "key_pool_scheme": "sha256(clmm.fact.keys.v1:+key), key tie-break; ranked 600/200/200",
+      "key_pool_sha256": "02b74ed398e6de24c519562f950f8f88c082038b1d0129ae923c090bf594d0e7",
+      "events": [
+        {
+          "event_id": 0,
+          "key": "855",
+          "value": "c",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "event_id": 1,
+          "key": "452",
+          "value": "o",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ],
+      "queries": [
+        {
+          "key": "855",
+          "target": "c",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 0,
+          "latest_event_id": 0,
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "key": "452",
+          "target": "o",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 1,
+          "latest_event_id": 1,
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ]
+    },
+    {
+      "format_version": 1,
+      "seed": 34240384648975800109383467285166013154,
+      "facts": 2,
+      "delay": 0,
+      "split": "train",
+      "template_family": "seen",
+      "revision_fraction": 0.0,
+      "include_recent": false,
+      "key_pool_scheme": "sha256(clmm.fact.keys.v1:+key), key tie-break; ranked 600/200/200",
+      "key_pool_sha256": "02b74ed398e6de24c519562f950f8f88c082038b1d0129ae923c090bf594d0e7",
+      "events": [
+        {
+          "event_id": 0,
+          "key": "205",
+          "value": "h",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "event_id": 1,
+          "key": "557",
+          "value": "a",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ],
+      "queries": [
+        {
+          "key": "205",
+          "target": "h",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 0,
+          "latest_event_id": 0,
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "key": "557",
+          "target": "a",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 1,
+          "latest_event_id": 1,
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ]
+    },
+    {
+      "format_version": 1,
+      "seed": 34240384648975800117658778113041398781,
+      "facts": 2,
+      "delay": 0,
+      "split": "train",
+      "template_family": "seen",
+      "revision_fraction": 0.0,
+      "include_recent": false,
+      "key_pool_scheme": "sha256(clmm.fact.keys.v1:+key), key tie-break; ranked 600/200/200",
+      "key_pool_sha256": "02b74ed398e6de24c519562f950f8f88c082038b1d0129ae923c090bf594d0e7",
+      "events": [
+        {
+          "event_id": 0,
+          "key": "431",
+          "value": "b",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "event_id": 1,
+          "key": "581",
+          "value": "o",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ],
+      "queries": [
+        {
+          "key": "431",
+          "target": "b",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 0,
+          "latest_event_id": 0,
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "key": "581",
+          "target": "o",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 1,
+          "latest_event_id": 1,
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ]
+    },
+    {
+      "format_version": 1,
+      "seed": 34240384648975800125934088940916784409,
+      "facts": 2,
+      "delay": 0,
+      "split": "train",
+      "template_family": "seen",
+      "revision_fraction": 0.0,
+      "include_recent": false,
+      "key_pool_scheme": "sha256(clmm.fact.keys.v1:+key), key tie-break; ranked 600/200/200",
+      "key_pool_sha256": "02b74ed398e6de24c519562f950f8f88c082038b1d0129ae923c090bf594d0e7",
+      "events": [
+        {
+          "event_id": 0,
+          "key": "028",
+          "value": "m",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "event_id": 1,
+          "key": "438",
+          "value": "p",
+          "version": 1,
+          "kind": "fact",
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ],
+      "queries": [
+        {
+          "key": "028",
+          "target": "m",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 0,
+          "latest_event_id": 0,
+          "template_family": "seen",
+          "template_index": 0
+        },
+        {
+          "key": "438",
+          "target": "p",
+          "old_value": null,
+          "category": "stable",
+          "initial_event_id": 1,
+          "latest_event_id": 1,
+          "template_family": "seen",
+          "template_index": 0
+        }
+      ]
+    }
+  ],
+  "key_pool": [
+    "249",
+    "438",
+    "652",
+    "431",
+    "955",
+    "028",
+    "107",
+    "563",
+    "205",
+    "452",
+    "581",
+    "126",
+    "788",
+    "557",
+    "544",
+    "855"
+  ],
+  "seed": 90201,
+  "contexts": 32,
+  "key_count": 16,
+  "attempt": 21
+}

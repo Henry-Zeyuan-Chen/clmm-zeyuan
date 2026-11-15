@@ -1,0 +1,9 @@
+{
+  "selected_from": "fixed128-68101/step-2000",
+  "fit_both_correct": 1.0,
+  "novel_values_both_correct": 0.0,
+  "fit_threshold": 0.95,
+  "transfer_threshold": 0.8,
+  "recorded_utc": "2026-11-15T02:43:20.220257+00:00",
+  "choice": "fresh"
+}

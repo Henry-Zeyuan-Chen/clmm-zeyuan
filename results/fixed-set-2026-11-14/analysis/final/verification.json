@@ -1,0 +1,64 @@
+{
+  "status": "verified",
+  "scope": "Saved-artifact integrity and independently recomputed scoring; does not execute model inference or reproduce training.",
+  "experiment": "fixed-set-generalization-v1",
+  "source_commit": "5bccffd9084b543ca086721be2bd46e6a2ea27a6",
+  "design_sha256": "497a606ae963ba3e52cbc44a9924024db50bf5ec7609e597b49e37c9acec4edd",
+  "runs": [
+    "fixed32-68101",
+    "fixed128-68101",
+    "fixed32-68105",
+    "fixed128-68105",
+    "fresh32-68101",
+    "fresh128-68101"
+  ],
+  "checked_training_answers": 192000,
+  "checked_training_input_bytes": 18240000,
+  "checked_evaluation_answers": 45056,
+  "bootstrap_draws": 5000,
+  "bootstrap_seed": 90204,
+  "novel_value_unit": "Base ordered key pairs, retaining all four assignment replicates (tiny control has sixteen replicates per base pair).",
+  "branch": "fresh",
+  "source_sha256": {
+    "clmm/pretrain/__init__.py": "3684561d02ad25bba9fe0673da2241b976031fb4ab98a891da8c081490eae526",
+    "clmm/pretrain/association_probe.py": "f5f2b92ecda5d5adbcbaca32857ce2547d760c7189c30ad69148a068880485dc",
+    "clmm/pretrain/byte_lm.py": "b41de6f729bb4bc18f1d17ce6a449deb4c90eafea550271d32f01866f3b4feea",
+    "clmm/pretrain/fact_streams.py": "32637fe0388ffa132b061ce1d8dab4e9a7e64324606e9ade49d29024214ac7f3",
+    "titans_pytorch/__init__.py": "b154ceb9152468861a6c513174b63ab35a979b55301c7cff275f47f1957e5fbe",
+    "titans_pytorch/implicit_mlp_attention.py": "a5ec0c11005f447fb3697f13cfa4f967ff342712fa154c1bc5e848490ef2f40c",
+    "titans_pytorch/mac_transformer.py": "3ba521375e92f661542792b7e04196e89c3a668ec5329eb8b31d4a5c2f96f38d",
+    "titans_pytorch/memory_models.py": "c271fd8bd9144a8559844594963f0ba4149b078d342fd90bb75ccff023b8e504",
+    "titans_pytorch/nested_attention.py": "361102a81ccd3f080f0d8f3401af1a3383cc28a3b34326daf7c740cbcc6894da",
+    "titans_pytorch/neural_memory.py": "c4a756d8d8257500d2da6e94473a0cd13e5ae4b517826cdd761dc500de468804",
+    "clmm/__init__.py": "cb8d9ffaff4a6d144592b0f7cb041683f7e79fc7accc73647ff020070647d652",
+    "scripts/fact_revision_experiment.py": "018301da2035fbb3c6af331e33b8d174589f924d6b8022d59d9e61609053955d",
+    "pyproject.toml": "daa0c8b7d63238c7439a50b0c5dc152d203bfb15b445aa8c0aebbd1b2d6d512b",
+    "requirements-lock.txt": "0021fd959cc013c08f41735d2d3d8b43e3f261dae8c0069f56d345a413340e17",
+    "scripts/fixed_set_generalization.py": "3edd2a173d12f01a5fa3a79eef84c590e6c08afab5b38f6d76d5e7b7355073a6"
+  },
+  "auditor_sha256": "9d083a93cc361fa64e55410a6aca519b1fd8dc25c98f7b327eab5be21b16b44b",
+  "disjoint_probe": {
+    "amendment_sha256": "e899cac7a74bc34039fd17cdf835e2763ae91392203190376c90684c825f2705",
+    "probe_source_sha256": "4415b084752467f6f3a13b4ab8fad6bc9e3f1dcda339621049f31e678ae178c6",
+    "metadata_sha256": "eb642896db1d3b1d4d4b124f09e094fbd9b3878eeacbc91d04fb5bbb4fe99f0d",
+    "evaluated_rows": 2048
+  },
+  "posthoc_metrics": {
+    "original_bank_target_prediction": "Requested after main fitting/transfer outcomes; descriptive per-query and both-old rates, not a primary gate or internal-mechanism inference."
+  },
+  "parents": {
+    "68101": {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-shared-pretrain-2026-11-14\\lm-68101\\checkpoint.pt",
+      "sha256": "a07762534f0b6311ec68c08b0d9f9c0ce74ec71577138eb13279a4a5dffbb24d"
+    },
+    "68105": {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-shared-pretrain-2026-11-14\\lm-68105\\checkpoint.pt",
+      "sha256": "c3c4b5f49fa3116f348720b8215e2a97a8b166587d22c5c1c9ab1f72cccf8a55"
+    }
+  },
+  "limitations": [
+    "Fixed-checkpoint development evidence; no training-seed variability inference or reserved test access.",
+    "Zero-event empirical bootstrap intervals do not establish zero population error or equivalence.",
+    "Exact-set fitting and same-key transfer alone do not qualify the retention baseline."
+  ]
+}

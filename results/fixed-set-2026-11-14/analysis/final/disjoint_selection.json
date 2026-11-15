@@ -1,0 +1,24 @@
+{
+  "selection": {
+    "seed": 90205,
+    "candidate_cap": 8192,
+    "variants_per_base_pair": 4,
+    "base_pairs": 32,
+    "order": "base_pair then acceptance variant",
+    "rule": "First four distinct full64-byte fact contexts per pair absent from either fresh training NPZ; both original context values excluded",
+    "visited": 248,
+    "rejected_training": 42,
+    "rejected_duplicate": 2,
+    "skipped_completed_base_pair": 76,
+    "accepted": 128,
+    "candidates_generated": 8192,
+    "excluded_unique_contexts": 13919,
+    "accepted_unique_contexts": 128
+  },
+  "provenance": {
+    "amendment_sha256": "e899cac7a74bc34039fd17cdf835e2763ae91392203190376c90684c825f2705",
+    "probe_source_sha256": "4415b084752467f6f3a13b4ab8fad6bc9e3f1dcda339621049f31e678ae178c6",
+    "metadata_sha256": "eb642896db1d3b1d4d4b124f09e094fbd9b3878eeacbc91d04fb5bbb4fe99f0d",
+    "evaluated_rows": 2048
+  }
+}

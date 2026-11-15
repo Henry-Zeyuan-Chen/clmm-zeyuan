@@ -1,0 +1,48 @@
+{
+  "source_commit": "5bccffd9084b543ca086721be2bd46e6a2ea27a6",
+  "focused_tests": {
+    "passed": 98,
+    "seconds": 12.26,
+    "log": "pytest-focused.log",
+    "scope": "32 data-factory tests,6 runner tests,60 fixed fact-stream tests; not exhaustive upstream suite."
+  },
+  "cpu_smoke": {
+    "steps": 10,
+    "batch": 2,
+    "contexts": 8,
+    "keys": 4,
+    "eval_episodes": 8,
+    "stages": [
+      0,
+      1,
+      5,
+      10
+    ],
+    "elapsed_seconds": 7.126328200014541,
+    "log": "smoke-cpu-final.log",
+    "scope": "Reduced execution/immutable tensor and RNG checks, not efficacy evidence."
+  },
+  "independent_artifact_audit": {
+    "status": "verified",
+    "scope": "Saved-artifact integrity and independently recomputed scoring; does not execute model inference or reproduce training.",
+    "evidence": "analysis/final/verification.json",
+    "checked_training_answers": 192000,
+    "checked_evaluation_answers": 45056
+  },
+  "independent_audit_selfchecks": {
+    "passed": 30,
+    "log": "analysis/selfchecks.log",
+    "scope": "Synthetic corruption/pairing/cluster/rejection checks"
+  },
+  "disjoint_probe_selfchecks": {
+    "passed": 5,
+    "source": "analysis/probe-selfchecks/disjoint_probe_selfcheck.py",
+    "scope": "Separate agent CPU synthetic selection checks"
+  },
+  "gpu_reload": {
+    "queries": 192,
+    "evidence": "analysis/gpu-recheck/verification.json",
+    "scope": "Bounded final-checkpoint inference reload, not a training reproduction"
+  },
+  "protocol_amendment": "transfer-amendment.json declared before branch outcomes; original probe overlap is retained and disjoint inference is additional, not a replacement of fixed main outcomes."
+}

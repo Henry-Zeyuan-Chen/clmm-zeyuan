@@ -1,0 +1,67 @@
+{
+  "recorded_utc": "2026-11-15T02:57:16.378321+00:00",
+  "allocation": {
+    "job_id": 13912639,
+    "node": "ins089",
+    "gpu": "NVIDIA RTX A6000",
+    "requested": {
+      "hours": 1,
+      "gpus": 1,
+      "cpus": 4,
+      "system_ram_gb": 16
+    },
+    "state": "CANCELLED by 564221",
+    "elapsed": "00:37:22",
+    "allocated_gpu_hours": 0.6227777777777778,
+    "start_scheduler": "2026-11-14T21:19:12",
+    "end_scheduler": "2026-11-14T21:56:34",
+    "release_reason": "Deliberate release after declared runs and inference checks/retrieval",
+    "automatic_renewal": false
+  },
+  "branch": {
+    "selected_from": "fixed128-68101/step-2000",
+    "fit_both_correct": 1.0,
+    "novel_values_both_correct": 0.0,
+    "fit_threshold": 0.95,
+    "transfer_threshold": 0.8,
+    "recorded_utc": "2026-11-15T02:43:20.220257+00:00",
+    "choice": "fresh"
+  },
+  "runs": [
+    {
+      "name": "fixed32-68101",
+      "status": "succeeded",
+      "elapsed_seconds": 491.8399793569697
+    },
+    {
+      "name": "fixed128-68101",
+      "status": "succeeded",
+      "elapsed_seconds": 294.8134162060451
+    },
+    {
+      "name": "fixed32-68105",
+      "status": "succeeded",
+      "elapsed_seconds": 304.0484859130229
+    },
+    {
+      "name": "fixed128-68105",
+      "status": "succeeded",
+      "elapsed_seconds": 306.84504487301456
+    },
+    {
+      "name": "fresh32-68101",
+      "status": "succeeded",
+      "elapsed_seconds": 294.7902235430083
+    },
+    {
+      "name": "fresh128-68101",
+      "status": "succeeded",
+      "elapsed_seconds": 294.7033117990359
+    }
+  ],
+  "unrelated_jobs_preserved": true,
+  "desktop_job_selection_changed": false,
+  "environment": "analysis/gpu-recheck/verification.json and gpu-driver.txt",
+  "startup": "First process waited on shared-filesystem reads; pipeline durations include startup, internal run timing starts after initialization.",
+  "timing_note": "Pipeline timestamps include UTC offset; Slurm records preserve scheduler time formatting without explicit timezone."
+}

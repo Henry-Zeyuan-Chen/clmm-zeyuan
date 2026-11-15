@@ -1,0 +1,10 @@
+{
+  "amendment_id":"fresh-assignment-disjoint-probe-v1",
+  "selection_context":"Declared during first main-run startup, before any main final result or conditional branch choice. Original prospective design is preserved.",
+  "reason":"Fresh random training over16keys and16letters can accidentally include exact semantic contexts in the original novel-value evaluation. That evaluation is not guaranteed disjoint for the conditional fresh regime.",
+  "condition":"Only if the originally declared fresh-assignment training branch is selected",
+  "training":"No additional training, no change to frozen source or main/follow-up training data, budgets or final checkpoint rule",
+  "new_probe":{"seed":90205,"base_pairs":32,"assignments_per_pair":4,"total_episodes":128,"candidate_limit":8192,"rule":"Generate candidates cycling original ordered bank pairs, exclude both original letters, reject any64byte fact context present in either fresh training array and duplicates within a base pair; take first4accepted variants per pair. Fail if anypair lacks4.","models":["fixed32-68101","fixed128-68101","fresh32-68101","fresh128-68101"],"checkpoint":"Final step2000","conditions":["online","reset_memory"],"primary_metric":"Both requested keys correct under identical disjoint novel assignments","uncertainty":"Bootstrap32basepairs with all4variants retained,5000draws,seed90204"},
+  "interpretation":"Use this disjoint probe for the fresh-branch novel-assignment conclusion. Preserve the original evaluation and quantify its exact fresh-training overlap descriptively. The dev key namespace is previously exposed; do not call this an untouched final test.",
+  "resource_bound":"Within existing one-hour allocation, bounded300second inference-only step, no renewal"
+}

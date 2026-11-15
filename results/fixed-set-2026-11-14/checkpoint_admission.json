@@ -1,0 +1,128 @@
+{
+  "recorded_utc": "2026-11-15T02:57:16.375724+00:00",
+  "owner": "Member C: Zeyuan, shared pretraining and evaluation",
+  "project": "Shared foundation for sleep replay timing and selective Hebbian memory",
+  "entries": [
+    {
+      "run": "fixed32-68101",
+      "parent": 68101,
+      "source_commit": "5bccffd9084b543ca086721be2bd46e6a2ea27a6",
+      "checkpoint": "fixed32-68101/step-2000/checkpoint.pt",
+      "checkpoint_sha256": "b5db88b77d54e2c6071fa7ca133a60d4d32eca557ebb25e515070c1ff411844d",
+      "attention_segment_len": 32,
+      "training_regime": "fixed",
+      "fixed_set_both_correct": 1.0,
+      "original_novel_values_both_correct": 0.0,
+      "disjoint_novel_values_both_correct": 0.0,
+      "heldout_key_both_correct": 0.0,
+      "qualified_for_project_retention_comparison": false,
+      "pending": [
+        "Revision validation under this training recipe",
+        "Persistent-session state/write/read/reset tests",
+        "Explicit key/assignment/template scope and acquisition-matched method training"
+      ],
+      "role": "Fitting/transfer diagnostic checkpoint; see metric scope before use"
+    },
+    {
+      "run": "fixed128-68101",
+      "parent": 68101,
+      "source_commit": "5bccffd9084b543ca086721be2bd46e6a2ea27a6",
+      "checkpoint": "fixed128-68101/step-2000/checkpoint.pt",
+      "checkpoint_sha256": "79e4c7fce906f926892d643ca707b7ed2fa9030ad95f747d1fdb8aa853a8b308",
+      "attention_segment_len": 128,
+      "training_regime": "fixed",
+      "fixed_set_both_correct": 1.0,
+      "original_novel_values_both_correct": 0.0,
+      "disjoint_novel_values_both_correct": 0.0,
+      "heldout_key_both_correct": 0.0078125,
+      "qualified_for_project_retention_comparison": false,
+      "pending": [
+        "Revision validation under this training recipe",
+        "Persistent-session state/write/read/reset tests",
+        "Explicit key/assignment/template scope and acquisition-matched method training"
+      ],
+      "role": "Fitting/transfer diagnostic checkpoint; see metric scope before use"
+    },
+    {
+      "run": "fixed32-68105",
+      "parent": 68105,
+      "source_commit": "5bccffd9084b543ca086721be2bd46e6a2ea27a6",
+      "checkpoint": "fixed32-68105/step-2000/checkpoint.pt",
+      "checkpoint_sha256": "7ace15fca55ac7de36dde9bfc985b89e88d9e5eb60516ff385de1e0ef50f583b",
+      "attention_segment_len": 32,
+      "training_regime": "fixed",
+      "fixed_set_both_correct": 1.0,
+      "original_novel_values_both_correct": 0.0,
+      "disjoint_novel_values_both_correct": null,
+      "heldout_key_both_correct": 0.015625,
+      "qualified_for_project_retention_comparison": false,
+      "pending": [
+        "Revision validation under this training recipe",
+        "Persistent-session state/write/read/reset tests",
+        "Explicit key/assignment/template scope and acquisition-matched method training"
+      ],
+      "role": "Fitting/transfer diagnostic checkpoint; see metric scope before use"
+    },
+    {
+      "run": "fixed128-68105",
+      "parent": 68105,
+      "source_commit": "5bccffd9084b543ca086721be2bd46e6a2ea27a6",
+      "checkpoint": "fixed128-68105/step-2000/checkpoint.pt",
+      "checkpoint_sha256": "9dbb8e71dba55e8aa14fb9a89c51911cfc3140e5a58b777b9d08d70189bb69d4",
+      "attention_segment_len": 128,
+      "training_regime": "fixed",
+      "fixed_set_both_correct": 1.0,
+      "original_novel_values_both_correct": 0.015625,
+      "disjoint_novel_values_both_correct": null,
+      "heldout_key_both_correct": 0.015625,
+      "qualified_for_project_retention_comparison": false,
+      "pending": [
+        "Revision validation under this training recipe",
+        "Persistent-session state/write/read/reset tests",
+        "Explicit key/assignment/template scope and acquisition-matched method training"
+      ],
+      "role": "Fitting/transfer diagnostic checkpoint; see metric scope before use"
+    },
+    {
+      "run": "fresh32-68101",
+      "parent": 68101,
+      "source_commit": "5bccffd9084b543ca086721be2bd46e6a2ea27a6",
+      "checkpoint": "fresh32-68101/step-2000/checkpoint.pt",
+      "checkpoint_sha256": "054964bc26febc37b068023ac8adef0035eeeb9bdb7dea6481c3cfe284bbb544",
+      "attention_segment_len": 32,
+      "training_regime": "fresh",
+      "fixed_set_both_correct": null,
+      "original_novel_values_both_correct": 0.015625,
+      "disjoint_novel_values_both_correct": 0.0078125,
+      "heldout_key_both_correct": 0.0078125,
+      "qualified_for_project_retention_comparison": false,
+      "pending": [
+        "Revision validation under this training recipe",
+        "Persistent-session state/write/read/reset tests",
+        "Explicit key/assignment/template scope and acquisition-matched method training"
+      ],
+      "role": "Fitting/transfer diagnostic checkpoint; see metric scope before use"
+    },
+    {
+      "run": "fresh128-68101",
+      "parent": 68101,
+      "source_commit": "5bccffd9084b543ca086721be2bd46e6a2ea27a6",
+      "checkpoint": "fresh128-68101/step-2000/checkpoint.pt",
+      "checkpoint_sha256": "ae064a684713da8a30172a87b4b2dbaeead386093fd0839d68af479c18595a36",
+      "attention_segment_len": 128,
+      "training_regime": "fresh",
+      "fixed_set_both_correct": null,
+      "original_novel_values_both_correct": 0.015625,
+      "disjoint_novel_values_both_correct": 0.0234375,
+      "heldout_key_both_correct": 0.0078125,
+      "qualified_for_project_retention_comparison": false,
+      "pending": [
+        "Revision validation under this training recipe",
+        "Persistent-session state/write/read/reset tests",
+        "Explicit key/assignment/template scope and acquisition-matched method training"
+      ],
+      "role": "Fitting/transfer diagnostic checkpoint; see metric scope before use"
+    }
+  ],
+  "interpretation": "Fitting and transfer measurements are scoped capabilities, not admission to a retention comparison. Outer weights were frozen during evaluation; full prefixes were recomputed, not persistent sessions."
+}

@@ -1,0 +1,22 @@
+{
+  "primary": "fixed128-68101",
+  "step": 2000,
+  "train_both_count": 32,
+  "train_episodes": 32,
+  "novel_both_count": 0,
+  "novel_episodes": 128,
+  "branch": "fresh",
+  "expected_extra_runs": [
+    "fresh32-68101",
+    "fresh128-68101"
+  ],
+  "pipeline_record": {
+    "selected_from": "fixed128-68101/step-2000",
+    "fit_both_correct": 1.0,
+    "novel_values_both_correct": 0.0,
+    "fit_threshold": 0.95,
+    "transfer_threshold": 0.8,
+    "recorded_utc": "2026-11-15T02:43:20.220257+00:00",
+    "choice": "fresh"
+  }
+}
