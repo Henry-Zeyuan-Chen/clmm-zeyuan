@@ -1,0 +1,13 @@
+rule,route,metric,protected,global_decay,protected_minus_global,lower95,upper95,scope
+gradient,content,both_correct,1.0,1.0,0.0,0.0,0.0,Exploratory post-outcome contrast; nominal95 fixed-parent/map paired-history interval; not co-primary
+gradient,content,revised_correct,1.0,1.0,0.0,0.0,0.0,Exploratory post-outcome contrast; nominal95 fixed-parent/map paired-history interval; not co-primary
+gradient,content,obsolete,0.0,0.0,0.0,0.0,0.0,Exploratory post-outcome contrast; nominal95 fixed-parent/map paired-history interval; not co-primary
+gradient,mean5random,both_correct,1.0,1.0,0.0,0.0,0.0,Exploratory post-outcome contrast; nominal95 fixed-parent/map paired-history interval; not co-primary
+gradient,mean5random,revised_correct,1.0,1.0,0.0,0.0,0.0,Exploratory post-outcome contrast; nominal95 fixed-parent/map paired-history interval; not co-primary
+gradient,mean5random,obsolete,0.0,0.0,0.0,0.0,0.0,Exploratory post-outcome contrast; nominal95 fixed-parent/map paired-history interval; not co-primary
+hebbian,content,both_correct,0.921875,0.9921875,-0.0703125,-0.10546875,-0.0390625,Exploratory post-outcome contrast; nominal95 fixed-parent/map paired-history interval; not co-primary
+hebbian,content,revised_correct,0.921875,0.9921875,-0.0703125,-0.10546875,-0.0390625,Exploratory post-outcome contrast; nominal95 fixed-parent/map paired-history interval; not co-primary
+hebbian,content,obsolete,0.078125,0.0078125,0.0703125,0.0390625,0.10546875,Exploratory post-outcome contrast; nominal95 fixed-parent/map paired-history interval; not co-primary
+hebbian,mean5random,both_correct,0.91328125,0.9921875,-0.07890625000000001,-0.103125,-0.056249999999999994,Exploratory post-outcome contrast; nominal95 fixed-parent/map paired-history interval; not co-primary
+hebbian,mean5random,revised_correct,0.91328125,0.9921875,-0.07890625000000001,-0.103125,-0.056249999999999994,Exploratory post-outcome contrast; nominal95 fixed-parent/map paired-history interval; not co-primary
+hebbian,mean5random,obsolete,0.08671875,0.0078125,0.07890625000000001,0.056249999999999994,0.10312500000000001,Exploratory post-outcome contrast; nominal95 fixed-parent/map paired-history interval; not co-primary

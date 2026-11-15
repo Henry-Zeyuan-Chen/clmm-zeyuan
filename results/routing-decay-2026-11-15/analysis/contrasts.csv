@@ -1,0 +1,12 @@
+contrast,rule,co_primary,cell,category,estimate,interval_level,lower,upper,histories,fixed_parents,fixed_random_maps,bootstrap_draws,bootstrap_seed,admitted,interpretation
+content_protected_minus_mean5random_protected,gradient,False,pressure_k8_d64,stable,-0.07304687500000001,0.95,-0.134765625,-0.010546875000000002,128,2,5,5000,90704,True,admitted retention contrast
+content_protected_minus_content_global,gradient,False,pressure_k8_d64,stable,0.35546875,0.95,0.3046875,0.408203125,128,2,5,5000,90704,True,admitted retention contrast
+mean5random_protected_minus_mean5random_global,gradient,False,pressure_k8_d64,stable,0.427734375,0.95,0.4015625,0.45625,128,2,5,5000,90704,True,admitted retention contrast
+routing_by_decay_interaction,gradient,False,pressure_k8_d64,stable,-0.072265625,0.95,-0.13086914062499996,-0.013281249999999998,128,2,5,5000,90704,True,admitted retention contrast
+content_global_minus_mean5random_global,gradient,False,pressure_k8_d64,stable,-0.0007812500000000042,0.95,-0.02265625,0.022265625,128,2,5,5000,90704,True,admitted retention contrast
+content_protected_minus_mean5random_protected,hebbian,True,pressure_k8_d64,stable,-0.052343749999999994,0.975,-0.11523437500000001,0.013281249999999993,128,2,5,5000,90704,False,acquisition/interference diagnostic
+content_protected_minus_content_global,hebbian,True,pressure_k8_d64,stable,0.287109375,0.975,0.232421875,0.345703125,128,2,5,5000,90704,False,acquisition/interference diagnostic
+mean5random_protected_minus_mean5random_global,hebbian,False,pressure_k8_d64,stable,0.3328125,0.95,0.308984375,0.357421875,128,2,5,5000,90704,False,acquisition/interference diagnostic
+routing_by_decay_interaction,hebbian,False,pressure_k8_d64,stable,-0.045703125,0.95,-0.098046875,0.008203124999999999,128,2,5,5000,90704,False,acquisition/interference diagnostic
+content_global_minus_mean5random_global,hebbian,False,pressure_k8_d64,stable,-0.006640624999999997,0.95,-0.02890625,0.018749999999999996,128,2,5,5000,90704,True,admitted retention contrast
+hebbian_minus_gradient_routing_effect,interaction,False,pressure_k8_d64,stable,0.020703125,0.95,-0.01484375,0.05586914062499986,128,2,5,5000,90704,False,acquisition/interference diagnostic

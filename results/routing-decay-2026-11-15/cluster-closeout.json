@@ -1,0 +1,20 @@
+{
+  "time_utc": "2026-11-15T18:43:12.946253+00:00",
+  "event": "routing_decay_runs_retrieved_and_allocation_released",
+  "source_commit": "61212289d6029da65eeb6a3735ce5ec3894866a9",
+  "job": 13918985,
+  "state": "CANCELLED",
+  "allocation_elapsed": "00:13:25",
+  "allocated_gpu_hours": 0.22361111111111112,
+  "task_steps": "GPUengineering57s;CPUmainpipeline9m55;tar13s, allCOMPLETEDexit0",
+  "main_cases": 48,
+  "main_device": "cpu",
+  "main_seconds": 534.457273426,
+  "gpu_queries": 5376,
+  "gpu_max_abs_error": 9.5367431640625e-07,
+  "cpu_queries": 5376,
+  "cpu_max_abs_error": 3.5762786865234375e-07,
+  "transfer": "exit0 tar; remote/localSHAverified",
+  "no_active_jobs": true,
+  "no_desktop_helper_selection_change": true
+}

@@ -1,0 +1,47 @@
+{
+  "status": "preflight_only",
+  "started_utc": "2026-11-15T18:27:55.180766+00:00",
+  "source_commit": "61212289d6029da65eeb6a3735ce5ec3894866a9",
+  "job_id": "13918985",
+  "commands": [
+    {
+      "command": [
+        "/insomnia001/depts/edu/users/zc2819/clmm/replay-2026-11-12/venv/bin/python",
+        "-B",
+        "/insomnia001/depts/edu/users/zc2819/clmm/routing-decay-2026-11-15/repo/scripts/routing_decay_experiment.py",
+        "--out",
+        "/insomnia001/depts/edu/users/zc2819/clmm/routing-decay-2026-11-15/engineering",
+        "--parents",
+        "/insomnia001/depts/edu/users/zc2819/clmm/routing-decay-2026-11-15/parents",
+        "--design",
+        "/insomnia001/depts/edu/users/zc2819/clmm/routing-decay-2026-11-15/design.json",
+        "--source-commit",
+        "61212289d6029da65eeb6a3735ce5ec3894866a9",
+        "--device",
+        "cuda",
+        "--max-seconds",
+        "180",
+        "--dev-seed",
+        "90703",
+        "--eval-episodes",
+        "16",
+        "--pressure-episodes",
+        "16",
+        "--case-limit",
+        "1"
+      ],
+      "log": "engineering.log",
+      "status": "succeeded",
+      "exit_code": 0,
+      "elapsed_seconds": 55.405313904979266
+    }
+  ],
+  "runtime_preflight": {
+    "engineering_case_seconds": 5.57777921698289,
+    "projected_main_seconds": 2874.4273851178586,
+    "rule": "48cases x8historybatches x1.3padding +90; no score consulted"
+  },
+  "reason": "Runtime bound exceeded; no performance selection",
+  "ended_utc": "2026-11-15T18:28:50.590258+00:00",
+  "elapsed_seconds": 55.42544955399353
+}

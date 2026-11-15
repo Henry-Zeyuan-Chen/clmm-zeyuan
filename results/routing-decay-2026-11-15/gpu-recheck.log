@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "scope": "Selected inference and actual combined-session resume, not retraining or complete-grid numerical reproduction",
+  "started_utc": "2026-11-15T18:39:34.089271+00:00",
+  "ended_utc": "2026-11-15T18:40:00.046177+00:00",
+  "elapsed_seconds": 25.956927667954005,
+  "source_sha256": "d65ba66ef46ba4e0d8acb3f302846a6d63f177274c3851e281d9c5d4e3ae3ad0",
+  "device": "cuda",
+  "torch": "2.11.0+cu128",
+  "queries": 5376,
+  "max_abs_error": 9.5367431640625e-07,
+  "verified_models": 48,
+  "expected_models": 48,
+  "full_planned_model_coverage": true,
+  "pure_reads": true,
+  "slow_parameters_and_rng_unchanged": true
+}

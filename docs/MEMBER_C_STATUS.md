@@ -2,7 +2,15 @@
 
 Updated November 15, 2026. Zeyuan owns pretraining feasibility, reusable baseline weights and common evaluation. Member A owns sleep consolidation; Member B owns selective Hebbian/neural-memory updates. The proposal asks whether those interventions improve new-association acquisition, unchanged-fact retention and genuine revisions. Sleep timing needs matched replay budgets. The Hebbian track must distinguish its update rule from selective routing.
 
-## Latest result: working reference adapters and a shared pilot
+## Latest result: routing/decay controls and a revision tradeoff
+
+The [48-condition factorial](ROUTING_DECAY.md) freezes four dense-trained parents, crosses cosine versus five fixed cardinality-matched random maps with protected/global inactive decay, and uses fresh90723 histories. No new training or map selection occurs. Every condition retains one association update/read module and64KiB persistent traces; arithmetic still computes four candidates.
+
+Cosine routing has no demonstrated advantage. In the admitted gradient comparison, inactive protection raises K8D64 stable accuracy from5.47% to41.02%; fixed random/protected averages48.32%. Hebbian content scores4.69% global versus33.40% protected, but its co-primary comparisons are diagnostics: four protected conditions miss short revision admission, including one content parent. Exploratory content revision analysis shows92.19% protected versus99.22% global, with obsolete-answer errors. Stability and genuine revisions must be evaluated together.
+
+All48models and raw319,488scores are audited;110relevant tests pass. GPU/WindowsCPU selected reloads each check5,376queries across every condition and all predictions match. The one allocation is released. Checkpoint registry, histories, gates, costs, four figures, source and recovery bundle are saved. Member C should next qualify intended A/B methods on revisions before replay comparisons; do not tune this consulted split or call frozen transfers equally retrained efficacy.
+
+## Prior reference adapter pilot
 
 The [adapter integration](ADAPTER_INTEGRATION.md) supplies a generic sleep session, local Hebbian and matched gradient components, dense/top-one access, checkpoint registry and one evaluator. These are references because the refreshed team repo had only empty method directories. A/B can replace the backend/controller without changing the observed streams, key-only reads, state checks or metric contract.
 

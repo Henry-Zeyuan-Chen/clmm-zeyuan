@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "figures": [
+    "factorial_stable_recall",
+    "paired_mechanism_contrasts",
+    "every_map_parent",
+    "stability_revision_tradeoff"
+  ],
+  "formats": [
+    "png",
+    "pdf"
+  ],
+  "review": "Both independent reviewer and coordinator visually inspected PNGs; labels/intervalscope/gatefailures legible; exploratory revision and zoomed axis labeled",
+  "data_source": "Saved main raw predictions and audited CSVs, no generated measurements"
+}

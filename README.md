@@ -6,6 +6,8 @@ We build on lucidrains' [titans-pytorch](https://github.com/lucidrains/titans-py
 
 ## Status
 
+The latest [routing/decay factorial](docs/ROUTING_DECAY.md) freezes four dense-trained parents across48 conditions. Inactive-trace protection strongly changes late stable scores, while cosine allocation has no advantage over matched fixed random maps. Hebbian revision failures expose a stability/revision tradeoff; the gradient replication passes admission.
+
 The local [reference adapter integration](docs/ADAPTER_INTEGRATION.md) connects bounded sleep sessions and Hebbian/gradient associative components to the shared correlated-key baseline, with persistent checkpoints, a common evaluator and a finite four-system pilot. Selective access helps in the component study, while the Hebbian rule does not beat its matched gradient control. These are reference modules; full Titans/sequence-model and teammate-final method integration remain separate.
 
 We are working through [docs/ROADMAP.md](docs/ROADMAP.md). Until the `paper-baseline-v1` tag exists, the paper-style models are in progress.

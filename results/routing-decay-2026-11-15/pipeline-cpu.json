@@ -1,0 +1,96 @@
+{
+  "status": "succeeded",
+  "started_utc": "2026-11-15T18:30:07.206038+00:00",
+  "source_commit": "61212289d6029da65eeb6a3735ce5ec3894866a9",
+  "job_id": "13918985",
+  "commands": [
+    {
+      "command": [
+        "/insomnia001/depts/edu/users/zc2819/clmm/replay-2026-11-12/venv/bin/python",
+        "-B",
+        "/insomnia001/depts/edu/users/zc2819/clmm/routing-decay-2026-11-15/repo/scripts/routing_decay_experiment.py",
+        "--out",
+        "/insomnia001/depts/edu/users/zc2819/clmm/routing-decay-2026-11-15/engineering-cpu",
+        "--parents",
+        "/insomnia001/depts/edu/users/zc2819/clmm/routing-decay-2026-11-15/parents",
+        "--design",
+        "/insomnia001/depts/edu/users/zc2819/clmm/routing-decay-2026-11-15/design.json",
+        "--source-commit",
+        "61212289d6029da65eeb6a3735ce5ec3894866a9",
+        "--device",
+        "cpu",
+        "--max-seconds",
+        "180",
+        "--dev-seed",
+        "90703",
+        "--eval-episodes",
+        "16",
+        "--pressure-episodes",
+        "16",
+        "--case-limit",
+        "1"
+      ],
+      "log": "engineering-cpu.log",
+      "status": "succeeded",
+      "exit_code": 0,
+      "elapsed_seconds": 17.046855620050337
+    },
+    {
+      "command": [
+        "/insomnia001/depts/edu/users/zc2819/clmm/replay-2026-11-12/venv/bin/python",
+        "-B",
+        "/insomnia001/depts/edu/users/zc2819/clmm/routing-decay-2026-11-15/repo/scripts/routing_decay_experiment.py",
+        "--out",
+        "/insomnia001/depts/edu/users/zc2819/clmm/routing-decay-2026-11-15/main",
+        "--parents",
+        "/insomnia001/depts/edu/users/zc2819/clmm/routing-decay-2026-11-15/parents",
+        "--design",
+        "/insomnia001/depts/edu/users/zc2819/clmm/routing-decay-2026-11-15/design.json",
+        "--source-commit",
+        "61212289d6029da65eeb6a3735ce5ec3894866a9",
+        "--device",
+        "cpu",
+        "--max-seconds",
+        "2850",
+        "--dev-seed",
+        "90723",
+        "--eval-episodes",
+        "128",
+        "--pressure-episodes",
+        "128",
+        "--case-limit",
+        "48"
+      ],
+      "log": "main.log",
+      "status": "succeeded",
+      "exit_code": 0,
+      "elapsed_seconds": 539.8960369679844
+    },
+    {
+      "command": [
+        "/insomnia001/depts/edu/users/zc2819/clmm/replay-2026-11-12/venv/bin/python",
+        "-B",
+        "/insomnia001/depts/edu/users/zc2819/clmm/routing-decay-2026-11-15/recheck_routing.py",
+        "--root",
+        "/insomnia001/depts/edu/users/zc2819/clmm/routing-decay-2026-11-15",
+        "--repo",
+        "/insomnia001/depts/edu/users/zc2819/clmm/routing-decay-2026-11-15/repo",
+        "--out",
+        "/insomnia001/depts/edu/users/zc2819/clmm/routing-decay-2026-11-15/gpu-recheck",
+        "--device",
+        "cuda"
+      ],
+      "log": "gpu-recheck.log",
+      "status": "succeeded",
+      "exit_code": 0,
+      "elapsed_seconds": 36.9504617889761
+    }
+  ],
+  "runtime_preflight": {
+    "engineering_case_seconds": 1.5474446939770132,
+    "projected_main_seconds": 862.484391233325,
+    "rule": "48cases x8historybatches x1.3padding +90; no score consulted"
+  },
+  "ended_utc": "2026-11-15T18:40:01.115343+00:00",
+  "elapsed_seconds": 593.9130439220462
+}

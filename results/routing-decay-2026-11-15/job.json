@@ -1,0 +1,10 @@
+{
+  "time_utc": "2026-11-15T18:28:24.077262+00:00",
+  "event": "routing_decay_gpu_started",
+  "source_commit": "61212289d6029da65eeb6a3735ce5ec3894866a9",
+  "job": 13918985,
+  "node": "ins087",
+  "limit_seconds": 3300,
+  "new_training": false,
+  "tests": 110
+}

@@ -1,0 +1,455 @@
+{
+  "all_checks_passed": true,
+  "scope": "independent CPU equations/state validation; not GPU or training reproduction",
+  "cases": 48,
+  "batch": 8,
+  "old_top1_content_protected_exact_steps_per_parent": 12,
+  "maximum_coordinate_formula_error": 1.4901161193847656e-08,
+  "source_sha256": "1801f7c7112a4ed513bdde8e0cb9c0d7621bed28e832fe05bf156974769fb74b",
+  "checks": [
+    "exact parent learned/codebook/prototype tensors",
+    "zero initial H;64KiB perstream",
+    "private fixed tables and exact cardinalities",
+    "independent two-rule analytic equations",
+    "exact sibling active results and expected inactive traces",
+    "unchanged inputs/slow weights/RNG",
+    "pure reads",
+    "serialization exact",
+    "cross-policy imports rejected",
+    "all12 policy fingerprints distinct"
+  ],
+  "results": [
+    {
+      "parent": "gradient-dense-90511",
+      "policy": "content",
+      "random_seed": null,
+      "inactive_decay": "protected",
+      "max_formula_error": 7.450580596923828e-09,
+      "fingerprint": "2163500d4a716ccf627d4630ebb1989eb9a459b79ed7c4efad29d0f4d294443a",
+      "routing_table_sha256": "eab608d0a344ca1b1dd6e087d41582f933d70e52bf05c8df3ededcd3bc317f4a"
+    },
+    {
+      "parent": "gradient-dense-90511",
+      "policy": "content",
+      "random_seed": null,
+      "inactive_decay": "global",
+      "max_formula_error": 1.4901161193847656e-08,
+      "fingerprint": "29ddd88012342fbfe21ea3ce84eba3db60872782e711191499e314d5230cbdf3",
+      "routing_table_sha256": "eab608d0a344ca1b1dd6e087d41582f933d70e52bf05c8df3ededcd3bc317f4a"
+    },
+    {
+      "parent": "gradient-dense-90511",
+      "policy": "random",
+      "random_seed": 90701,
+      "inactive_decay": "protected",
+      "max_formula_error": 7.450580596923828e-09,
+      "fingerprint": "f6a1f0970fcb0c6363656f55b20613ac4fd4de848dc03e15f780ec30faad0e3a",
+      "routing_table_sha256": "26697d0ecfc996642b88dc78a2d2878eb2301f2870858cc5f108c4d82a5df02e"
+    },
+    {
+      "parent": "gradient-dense-90511",
+      "policy": "random",
+      "random_seed": 90701,
+      "inactive_decay": "global",
+      "max_formula_error": 7.450580596923828e-09,
+      "fingerprint": "308f65a165b330210598bdc1d09a232d1602c2de80a0d3866d72d393ef091785",
+      "routing_table_sha256": "26697d0ecfc996642b88dc78a2d2878eb2301f2870858cc5f108c4d82a5df02e"
+    },
+    {
+      "parent": "gradient-dense-90511",
+      "policy": "random",
+      "random_seed": 90702,
+      "inactive_decay": "protected",
+      "max_formula_error": 7.450580596923828e-09,
+      "fingerprint": "9273fa8e85ddc3c6af621589afa4243dd241443497886974c37e4e01b77de20f",
+      "routing_table_sha256": "3248528fc69d4bdd7c6ac5b04e6e27d401534ddf04018ee60bb161290f5a661d"
+    },
+    {
+      "parent": "gradient-dense-90511",
+      "policy": "random",
+      "random_seed": 90702,
+      "inactive_decay": "global",
+      "max_formula_error": 7.450580596923828e-09,
+      "fingerprint": "99401e7b1cf8c4606621d91a00c4624e453ca509d7e1c566b58af7f74185e943",
+      "routing_table_sha256": "3248528fc69d4bdd7c6ac5b04e6e27d401534ddf04018ee60bb161290f5a661d"
+    },
+    {
+      "parent": "gradient-dense-90511",
+      "policy": "random",
+      "random_seed": 90703,
+      "inactive_decay": "protected",
+      "max_formula_error": 7.450580596923828e-09,
+      "fingerprint": "69699f4b1c51f2dd213935cc3c88f833eb1817004cb511d3a4be35f754c0802b",
+      "routing_table_sha256": "34a5b5443668550524d23d716d846ff2b99fd3c7f227ecc84771b123d5caa3d4"
+    },
+    {
+      "parent": "gradient-dense-90511",
+      "policy": "random",
+      "random_seed": 90703,
+      "inactive_decay": "global",
+      "max_formula_error": 7.450580596923828e-09,
+      "fingerprint": "2098999c805a09638778d49818a10ed61f2eac3bc9fa31e55b569c6767e2fd61",
+      "routing_table_sha256": "34a5b5443668550524d23d716d846ff2b99fd3c7f227ecc84771b123d5caa3d4"
+    },
+    {
+      "parent": "gradient-dense-90511",
+      "policy": "random",
+      "random_seed": 90704,
+      "inactive_decay": "protected",
+      "max_formula_error": 7.450580596923828e-09,
+      "fingerprint": "42de8e0e0af556eaa34fa946aecdf0fc82951f2f8aaaf42aa8e7c85fb26e9baf",
+      "routing_table_sha256": "ebb5828fc2cc1a5ede9729906f01fea6dc829892e540a8b7fa9d6257129c448c"
+    },
+    {
+      "parent": "gradient-dense-90511",
+      "policy": "random",
+      "random_seed": 90704,
+      "inactive_decay": "global",
+      "max_formula_error": 1.4901161193847656e-08,
+      "fingerprint": "60bcc203122aff6e4d54b4a246782c7402928b83857e42bc73ad03cbf4733048",
+      "routing_table_sha256": "ebb5828fc2cc1a5ede9729906f01fea6dc829892e540a8b7fa9d6257129c448c"
+    },
+    {
+      "parent": "gradient-dense-90511",
+      "policy": "random",
+      "random_seed": 90705,
+      "inactive_decay": "protected",
+      "max_formula_error": 7.450580596923828e-09,
+      "fingerprint": "1446f1b0cc123dd240844bc1a332af083765e6c2d220478e49da62541652e452",
+      "routing_table_sha256": "9225500bd88dd089591bdea6c1a4a2cefef81821a2d10d04dcb33505e31ab407"
+    },
+    {
+      "parent": "gradient-dense-90511",
+      "policy": "random",
+      "random_seed": 90705,
+      "inactive_decay": "global",
+      "max_formula_error": 1.4901161193847656e-08,
+      "fingerprint": "05b81b430418a07a79c3b01d09961f4d655b0884568bf944e7d64d116c9106e1",
+      "routing_table_sha256": "9225500bd88dd089591bdea6c1a4a2cefef81821a2d10d04dcb33505e31ab407"
+    },
+    {
+      "parent": "gradient-dense-90515",
+      "policy": "content",
+      "random_seed": null,
+      "inactive_decay": "protected",
+      "max_formula_error": 7.450580596923828e-09,
+      "fingerprint": "2163500d4a716ccf627d4630ebb1989eb9a459b79ed7c4efad29d0f4d294443a",
+      "routing_table_sha256": "eab608d0a344ca1b1dd6e087d41582f933d70e52bf05c8df3ededcd3bc317f4a"
+    },
+    {
+      "parent": "gradient-dense-90515",
+      "policy": "content",
+      "random_seed": null,
+      "inactive_decay": "global",
+      "max_formula_error": 7.450580596923828e-09,
+      "fingerprint": "29ddd88012342fbfe21ea3ce84eba3db60872782e711191499e314d5230cbdf3",
+      "routing_table_sha256": "eab608d0a344ca1b1dd6e087d41582f933d70e52bf05c8df3ededcd3bc317f4a"
+    },
+    {
+      "parent": "gradient-dense-90515",
+      "policy": "random",
+      "random_seed": 90701,
+      "inactive_decay": "protected",
+      "max_formula_error": 7.450580596923828e-09,
+      "fingerprint": "f6a1f0970fcb0c6363656f55b20613ac4fd4de848dc03e15f780ec30faad0e3a",
+      "routing_table_sha256": "26697d0ecfc996642b88dc78a2d2878eb2301f2870858cc5f108c4d82a5df02e"
+    },
+    {
+      "parent": "gradient-dense-90515",
+      "policy": "random",
+      "random_seed": 90701,
+      "inactive_decay": "global",
+      "max_formula_error": 1.4901161193847656e-08,
+      "fingerprint": "308f65a165b330210598bdc1d09a232d1602c2de80a0d3866d72d393ef091785",
+      "routing_table_sha256": "26697d0ecfc996642b88dc78a2d2878eb2301f2870858cc5f108c4d82a5df02e"
+    },
+    {
+      "parent": "gradient-dense-90515",
+      "policy": "random",
+      "random_seed": 90702,
+      "inactive_decay": "protected",
+      "max_formula_error": 7.450580596923828e-09,
+      "fingerprint": "9273fa8e85ddc3c6af621589afa4243dd241443497886974c37e4e01b77de20f",
+      "routing_table_sha256": "3248528fc69d4bdd7c6ac5b04e6e27d401534ddf04018ee60bb161290f5a661d"
+    },
+    {
+      "parent": "gradient-dense-90515",
+      "policy": "random",
+      "random_seed": 90702,
+      "inactive_decay": "global",
+      "max_formula_error": 7.450580596923828e-09,
+      "fingerprint": "99401e7b1cf8c4606621d91a00c4624e453ca509d7e1c566b58af7f74185e943",
+      "routing_table_sha256": "3248528fc69d4bdd7c6ac5b04e6e27d401534ddf04018ee60bb161290f5a661d"
+    },
+    {
+      "parent": "gradient-dense-90515",
+      "policy": "random",
+      "random_seed": 90703,
+      "inactive_decay": "protected",
+      "max_formula_error": 1.4901161193847656e-08,
+      "fingerprint": "69699f4b1c51f2dd213935cc3c88f833eb1817004cb511d3a4be35f754c0802b",
+      "routing_table_sha256": "34a5b5443668550524d23d716d846ff2b99fd3c7f227ecc84771b123d5caa3d4"
+    },
+    {
+      "parent": "gradient-dense-90515",
+      "policy": "random",
+      "random_seed": 90703,
+      "inactive_decay": "global",
+      "max_formula_error": 7.450580596923828e-09,
+      "fingerprint": "2098999c805a09638778d49818a10ed61f2eac3bc9fa31e55b569c6767e2fd61",
+      "routing_table_sha256": "34a5b5443668550524d23d716d846ff2b99fd3c7f227ecc84771b123d5caa3d4"
+    },
+    {
+      "parent": "gradient-dense-90515",
+      "policy": "random",
+      "random_seed": 90704,
+      "inactive_decay": "protected",
+      "max_formula_error": 7.450580596923828e-09,
+      "fingerprint": "42de8e0e0af556eaa34fa946aecdf0fc82951f2f8aaaf42aa8e7c85fb26e9baf",
+      "routing_table_sha256": "ebb5828fc2cc1a5ede9729906f01fea6dc829892e540a8b7fa9d6257129c448c"
+    },
+    {
+      "parent": "gradient-dense-90515",
+      "policy": "random",
+      "random_seed": 90704,
+      "inactive_decay": "global",
+      "max_formula_error": 1.4901161193847656e-08,
+      "fingerprint": "60bcc203122aff6e4d54b4a246782c7402928b83857e42bc73ad03cbf4733048",
+      "routing_table_sha256": "ebb5828fc2cc1a5ede9729906f01fea6dc829892e540a8b7fa9d6257129c448c"
+    },
+    {
+      "parent": "gradient-dense-90515",
+      "policy": "random",
+      "random_seed": 90705,
+      "inactive_decay": "protected",
+      "max_formula_error": 7.450580596923828e-09,
+      "fingerprint": "1446f1b0cc123dd240844bc1a332af083765e6c2d220478e49da62541652e452",
+      "routing_table_sha256": "9225500bd88dd089591bdea6c1a4a2cefef81821a2d10d04dcb33505e31ab407"
+    },
+    {
+      "parent": "gradient-dense-90515",
+      "policy": "random",
+      "random_seed": 90705,
+      "inactive_decay": "global",
+      "max_formula_error": 7.450580596923828e-09,
+      "fingerprint": "05b81b430418a07a79c3b01d09961f4d655b0884568bf944e7d64d116c9106e1",
+      "routing_table_sha256": "9225500bd88dd089591bdea6c1a4a2cefef81821a2d10d04dcb33505e31ab407"
+    },
+    {
+      "parent": "hebbian-dense-90511",
+      "policy": "content",
+      "random_seed": null,
+      "inactive_decay": "protected",
+      "max_formula_error": 0.0,
+      "fingerprint": "447478525d82d767f55f1ea7eb983068076834b1089ee8d510aa1b0913565595",
+      "routing_table_sha256": "eab608d0a344ca1b1dd6e087d41582f933d70e52bf05c8df3ededcd3bc317f4a"
+    },
+    {
+      "parent": "hebbian-dense-90511",
+      "policy": "content",
+      "random_seed": null,
+      "inactive_decay": "global",
+      "max_formula_error": 0.0,
+      "fingerprint": "0d0e9a360214c0ac626fb8f1709a96dcc5077ca6f8f0fc8d6435c7e1dbd6b46e",
+      "routing_table_sha256": "eab608d0a344ca1b1dd6e087d41582f933d70e52bf05c8df3ededcd3bc317f4a"
+    },
+    {
+      "parent": "hebbian-dense-90511",
+      "policy": "random",
+      "random_seed": 90701,
+      "inactive_decay": "protected",
+      "max_formula_error": 0.0,
+      "fingerprint": "aa6897eb9cf10826f1e8f2a6c4b929adaf3be758b5b8ac232e2a626ae470a551",
+      "routing_table_sha256": "26697d0ecfc996642b88dc78a2d2878eb2301f2870858cc5f108c4d82a5df02e"
+    },
+    {
+      "parent": "hebbian-dense-90511",
+      "policy": "random",
+      "random_seed": 90701,
+      "inactive_decay": "global",
+      "max_formula_error": 0.0,
+      "fingerprint": "006bdaafd471a0cc6fe7385ed64452f494ab836aa0a9c8d6291927b3bfa0cc0f",
+      "routing_table_sha256": "26697d0ecfc996642b88dc78a2d2878eb2301f2870858cc5f108c4d82a5df02e"
+    },
+    {
+      "parent": "hebbian-dense-90511",
+      "policy": "random",
+      "random_seed": 90702,
+      "inactive_decay": "protected",
+      "max_formula_error": 0.0,
+      "fingerprint": "6392f4e8134ffcb5a5f2c0b4af61fed389cd7ff20c5e66ec3449978c6998ffeb",
+      "routing_table_sha256": "3248528fc69d4bdd7c6ac5b04e6e27d401534ddf04018ee60bb161290f5a661d"
+    },
+    {
+      "parent": "hebbian-dense-90511",
+      "policy": "random",
+      "random_seed": 90702,
+      "inactive_decay": "global",
+      "max_formula_error": 0.0,
+      "fingerprint": "153e3a43f0be68a93264f7d6d58256a5b367d4072cc3fee6f8cabc9608dab43a",
+      "routing_table_sha256": "3248528fc69d4bdd7c6ac5b04e6e27d401534ddf04018ee60bb161290f5a661d"
+    },
+    {
+      "parent": "hebbian-dense-90511",
+      "policy": "random",
+      "random_seed": 90703,
+      "inactive_decay": "protected",
+      "max_formula_error": 0.0,
+      "fingerprint": "accd2427deccc9f8f5135a67fe642b0289894501725d7c0efc3fcccaff8da075",
+      "routing_table_sha256": "34a5b5443668550524d23d716d846ff2b99fd3c7f227ecc84771b123d5caa3d4"
+    },
+    {
+      "parent": "hebbian-dense-90511",
+      "policy": "random",
+      "random_seed": 90703,
+      "inactive_decay": "global",
+      "max_formula_error": 0.0,
+      "fingerprint": "048bad59b027199f7626731862ca900650c8143a70f6d2623feac661a5849920",
+      "routing_table_sha256": "34a5b5443668550524d23d716d846ff2b99fd3c7f227ecc84771b123d5caa3d4"
+    },
+    {
+      "parent": "hebbian-dense-90511",
+      "policy": "random",
+      "random_seed": 90704,
+      "inactive_decay": "protected",
+      "max_formula_error": 0.0,
+      "fingerprint": "5c195b228e689af82e67ceb1ce71e14bc0b374de1a3f2a687c977a71bb735400",
+      "routing_table_sha256": "ebb5828fc2cc1a5ede9729906f01fea6dc829892e540a8b7fa9d6257129c448c"
+    },
+    {
+      "parent": "hebbian-dense-90511",
+      "policy": "random",
+      "random_seed": 90704,
+      "inactive_decay": "global",
+      "max_formula_error": 0.0,
+      "fingerprint": "36e3e80a76ef4883d971dde15605e5321e63b9e4d4f8d48f7f9b3f791c5ca080",
+      "routing_table_sha256": "ebb5828fc2cc1a5ede9729906f01fea6dc829892e540a8b7fa9d6257129c448c"
+    },
+    {
+      "parent": "hebbian-dense-90511",
+      "policy": "random",
+      "random_seed": 90705,
+      "inactive_decay": "protected",
+      "max_formula_error": 0.0,
+      "fingerprint": "74b001355e53a5930668dc58aff9d4edfc17ff8644efbfab00e0edea0c0e0c3c",
+      "routing_table_sha256": "9225500bd88dd089591bdea6c1a4a2cefef81821a2d10d04dcb33505e31ab407"
+    },
+    {
+      "parent": "hebbian-dense-90511",
+      "policy": "random",
+      "random_seed": 90705,
+      "inactive_decay": "global",
+      "max_formula_error": 0.0,
+      "fingerprint": "a81e4f5e7049d8ffb15fcc192b542c643e398b1ba5c65210aa3a359719f6d97c",
+      "routing_table_sha256": "9225500bd88dd089591bdea6c1a4a2cefef81821a2d10d04dcb33505e31ab407"
+    },
+    {
+      "parent": "hebbian-dense-90515",
+      "policy": "content",
+      "random_seed": null,
+      "inactive_decay": "protected",
+      "max_formula_error": 0.0,
+      "fingerprint": "447478525d82d767f55f1ea7eb983068076834b1089ee8d510aa1b0913565595",
+      "routing_table_sha256": "eab608d0a344ca1b1dd6e087d41582f933d70e52bf05c8df3ededcd3bc317f4a"
+    },
+    {
+      "parent": "hebbian-dense-90515",
+      "policy": "content",
+      "random_seed": null,
+      "inactive_decay": "global",
+      "max_formula_error": 0.0,
+      "fingerprint": "0d0e9a360214c0ac626fb8f1709a96dcc5077ca6f8f0fc8d6435c7e1dbd6b46e",
+      "routing_table_sha256": "eab608d0a344ca1b1dd6e087d41582f933d70e52bf05c8df3ededcd3bc317f4a"
+    },
+    {
+      "parent": "hebbian-dense-90515",
+      "policy": "random",
+      "random_seed": 90701,
+      "inactive_decay": "protected",
+      "max_formula_error": 0.0,
+      "fingerprint": "aa6897eb9cf10826f1e8f2a6c4b929adaf3be758b5b8ac232e2a626ae470a551",
+      "routing_table_sha256": "26697d0ecfc996642b88dc78a2d2878eb2301f2870858cc5f108c4d82a5df02e"
+    },
+    {
+      "parent": "hebbian-dense-90515",
+      "policy": "random",
+      "random_seed": 90701,
+      "inactive_decay": "global",
+      "max_formula_error": 0.0,
+      "fingerprint": "006bdaafd471a0cc6fe7385ed64452f494ab836aa0a9c8d6291927b3bfa0cc0f",
+      "routing_table_sha256": "26697d0ecfc996642b88dc78a2d2878eb2301f2870858cc5f108c4d82a5df02e"
+    },
+    {
+      "parent": "hebbian-dense-90515",
+      "policy": "random",
+      "random_seed": 90702,
+      "inactive_decay": "protected",
+      "max_formula_error": 0.0,
+      "fingerprint": "6392f4e8134ffcb5a5f2c0b4af61fed389cd7ff20c5e66ec3449978c6998ffeb",
+      "routing_table_sha256": "3248528fc69d4bdd7c6ac5b04e6e27d401534ddf04018ee60bb161290f5a661d"
+    },
+    {
+      "parent": "hebbian-dense-90515",
+      "policy": "random",
+      "random_seed": 90702,
+      "inactive_decay": "global",
+      "max_formula_error": 0.0,
+      "fingerprint": "153e3a43f0be68a93264f7d6d58256a5b367d4072cc3fee6f8cabc9608dab43a",
+      "routing_table_sha256": "3248528fc69d4bdd7c6ac5b04e6e27d401534ddf04018ee60bb161290f5a661d"
+    },
+    {
+      "parent": "hebbian-dense-90515",
+      "policy": "random",
+      "random_seed": 90703,
+      "inactive_decay": "protected",
+      "max_formula_error": 0.0,
+      "fingerprint": "accd2427deccc9f8f5135a67fe642b0289894501725d7c0efc3fcccaff8da075",
+      "routing_table_sha256": "34a5b5443668550524d23d716d846ff2b99fd3c7f227ecc84771b123d5caa3d4"
+    },
+    {
+      "parent": "hebbian-dense-90515",
+      "policy": "random",
+      "random_seed": 90703,
+      "inactive_decay": "global",
+      "max_formula_error": 0.0,
+      "fingerprint": "048bad59b027199f7626731862ca900650c8143a70f6d2623feac661a5849920",
+      "routing_table_sha256": "34a5b5443668550524d23d716d846ff2b99fd3c7f227ecc84771b123d5caa3d4"
+    },
+    {
+      "parent": "hebbian-dense-90515",
+      "policy": "random",
+      "random_seed": 90704,
+      "inactive_decay": "protected",
+      "max_formula_error": 0.0,
+      "fingerprint": "5c195b228e689af82e67ceb1ce71e14bc0b374de1a3f2a687c977a71bb735400",
+      "routing_table_sha256": "ebb5828fc2cc1a5ede9729906f01fea6dc829892e540a8b7fa9d6257129c448c"
+    },
+    {
+      "parent": "hebbian-dense-90515",
+      "policy": "random",
+      "random_seed": 90704,
+      "inactive_decay": "global",
+      "max_formula_error": 0.0,
+      "fingerprint": "36e3e80a76ef4883d971dde15605e5321e63b9e4d4f8d48f7f9b3f791c5ca080",
+      "routing_table_sha256": "ebb5828fc2cc1a5ede9729906f01fea6dc829892e540a8b7fa9d6257129c448c"
+    },
+    {
+      "parent": "hebbian-dense-90515",
+      "policy": "random",
+      "random_seed": 90705,
+      "inactive_decay": "protected",
+      "max_formula_error": 0.0,
+      "fingerprint": "74b001355e53a5930668dc58aff9d4edfc17ff8644efbfab00e0edea0c0e0c3c",
+      "routing_table_sha256": "9225500bd88dd089591bdea6c1a4a2cefef81821a2d10d04dcb33505e31ab407"
+    },
+    {
+      "parent": "hebbian-dense-90515",
+      "policy": "random",
+      "random_seed": 90705,
+      "inactive_decay": "global",
+      "max_formula_error": 0.0,
+      "fingerprint": "a81e4f5e7049d8ffb15fcc192b542c643e398b1ba5c65210aa3a359719f6d97c",
+      "routing_table_sha256": "9225500bd88dd089591bdea6c1a4a2cefef81821a2d10d04dcb33505e31ab407"
+    }
+  ]
+}

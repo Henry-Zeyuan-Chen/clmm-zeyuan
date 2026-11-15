@@ -1,0 +1,1 @@
+Contrasts added after inspecting main outcomes. The original revise2 gate and its threshold remain unchanged. These secondary intervals describe the128 paired short-revision histories for fixed parents/maps and are not multiplicity-adjusted confirmatory tests. All maps/parents retained.

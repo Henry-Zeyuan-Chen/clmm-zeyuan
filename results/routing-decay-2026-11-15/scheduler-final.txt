@@ -1,0 +1,10 @@
+JobID|JobName|State|Elapsed|AllocTRES|ExitCode
+13918985|clmm-routing-decay|CANCELLED by 564221|00:13:25|billing=4,cpu=4,gres/gpu:a6000=1,gres/gpu=1,mem=16G,node=1|0:0
+13918985.batch|batch|CANCELLED|00:13:26|cpu=4,gres/gpu:a6000=1,gres/gpu=1,mem=16G,node=1|0:15
+13918985.extern|extern|COMPLETED|00:13:27|billing=4,cpu=4,gres/gpu:a6000=1,gres/gpu=1,mem=16G,node=1|0:0
+13918985.0|timeout|COMPLETED|00:00:57|cpu=4,gres/gpu:a6000=1,gres/gpu=1,mem=16G,node=1|0:0
+13918985.1|timeout|COMPLETED|00:09:55|cpu=4,gres/gpu:a6000=1,gres/gpu=1,mem=16G,node=1|0:0
+13918985.2|tar|COMPLETED|00:00:13|cpu=4,gres/gpu:a6000=1,gres/gpu=1,mem=16G,node=1|0:0
+             JOBID       USER     STATE                 NAME        NODELIST
+Selected desktop job: 13686886
+JOBID      STATE    PARTITION                   NAME       NODELIST    TIME_LEFT     NODELIST(REASON)

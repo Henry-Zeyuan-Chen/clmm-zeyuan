@@ -2,49 +2,46 @@
 
 ## Resume here
 
-**Active routing/decay follow-up (November15):** branch `routing-decay-controls`; prospective design under `outputs/clmm-routing-decay-2026-11-15/design.json`.48 fixed-slow dense-parent transfers, content versus5 fixed cardinality-matched random maps crossed with protected/global inactive decay. Main90723 histories have not run yet. No new training, online-only, one active association update/read. Continue from actual pipeline/status artifacts, not this provisional note.
+**Completed November15,2026: content/random routing × inactive-trace decay.** Local branch `routing-decay-controls`, executable source `61212289d6029da65eeb6a3735ce5ec3894866a9`, parent handoff65609b3. Start with [ROUTING_DECAY.md](ROUTING_DECAY.md), [MEMBER_C_STATUS.md](MEMBER_C_STATUS.md), and `results/routing-decay-2026-11-15`. No active task job, pending connection check or background monitoring remains.
 
-**Completed November 15, 2026: reference sleep/Hebbian adapter integration and bounded shared pilot.** Local branch `adapter-integration`, frozen model/runner source `a41bb097af3e7eed356d13e24e4a0d5bc6677b14`, parent `e3b744c`. Start with [ADAPTER_INTEGRATION.md](ADAPTER_INTEGRATION.md), [MEMBER_C_STATUS.md](MEMBER_C_STATUS.md) and `results/adapter-integration-2026-11-15`. No task process, GPU allocation, pending connection check or background monitoring remains.
+Zeyuan is Member C: shared pretraining, weights and evaluation. A owns sleep, B owns Hebbian/routing. Latest fetched team main1e8de19 contained only empty sleep/Hebbian folders; these are reference component implementations, not teammate-final methods. Full Titans/MAC and byte-model fresh-assignment transfer remain unresolved.
 
-Zeyuan is Member C: shared pretraining, weights and evaluation. A owns sleep, B owns Hebbian/routing methods. Fetched team main1e8de19 (only remote branch) still contained empty sleep/Hebbian directories. Current implementations are explicitly working REFERENCE component adapters, not uploaded teammate algorithms or full Titans/MAC integration. The complete byte-model two-key transfer failure remains unresolved.
+## What changed
 
-## What exists now
+`clmm/hebbian/routing_decay.py` adds fixed cosine/random tables, protected/global inactive decay, versioned configs and strict state/checkpoint validation. Existing adapter behavior is preserved. New runner `scripts/routing_decay_experiment.py` freezes dense parents and saves dedicated `clmm.routing_decay.v1` weights. Shared evaluator has optional overrides and post-update exposure logging.110 relevant tests pass.
 
-- `clmm/sleep/adapter.py`: generic SleepSession over functional write/read memory and bounded literal scheduler; atomic combined model/policy handoff, midblock resume, no full history/read labels.
-- `clmm/hebbian/adapter.py`: four associative modules with learned encoders/decoder,W0,alpha,eta; local bounded Hebbian EMA or matched analytic gradient; dense or top-one fixed key-prototype access. Inactive modules remain unchanged, including no decay.
-- `clmm/pretrain/adapter_registry.py`: strict own checkpoint format and explicit slow-only forks. Shared neural slow weights are incompatible; only exact literal codebooks transfer to the new architecture.
-- `scripts/adapter_integration_experiment.py`: common causal data, acquisition/revision/reset/rolled controls, replay budgets, combined state persistence and resource measurements.
+48 conditions =4dense-trained parents ×(content+5fixed maps90701–90705) ×2decays. Parents: gradient/Hebbian, seeds90511/90515, frozen training sourcea41bb09. All learned/codebook/prototype bits remain identical within a parent, and every session starts zero H. No new training, optimizer or map selection. One retained update/effective read per observation,64KiB persistent trace,512-byte table. Arithmetic still computes four candidates; global decay intentionally multiplies4traces instead of1.
 
-## Scientific outcome
+Main development90723:128histories in each short/acquisition/revision andK8/K16×D0/16/64cell. Online pressure only. Whole histories are training-disjoint; atomic codebook/bindings are familiar. Original bootstrap/admission preserved, failures retained.
 
-All8trainedsystems pass own short128/128 gates and own K8D0 admission; denseK16 fails, top-oneK16 passes63/64 both seeds. At K8D64 online stable recall: gradientdense6.25%,gradienttop-one36.72%,Hebbiandense5.47%,Hebbiantop-one21.48%.
+## Evidence and interpretation
 
-Primary Hebbian access effect is+16.02percentage points [8.98,23.44], but access helps gradient even more(+30.47points). Independently trained gradienttop-one beats Hebbiantop-one by15.23points. Do not call this a Hebbian advantage. Top-one changes both reading and writing plus active update/decay exposure; independently trained encoders/eta/alpha also diverge.
+K8D64 stable scores, contentprotected/randomprotected/contentglobal/randomglobal:
+- Gradient:41.02/48.32/5.47/5.55percent. All12table×decay families pass both-parent admission atK8/K16. Secondary contentprotection+35.55pp95[30.47,40.82]; content−random−7.30pp[−13.48,−1.05].
+- Hebbian:33.40/38.63/4.69/5.35percent. Co-primary content−random−5.23pp97.5[−11.52,+1.33]; contentprotection+28.71pp[23.24,34.57]. **Both are diagnostics, not admitted retention claims.** Four protected90515 shortrevision conditions fail .90; content=.890625. Both-parent families admitted8/12atK8,4/12atK16. Five globalHbparentconditions additionallyfailK16D0.
 
-Fixed-slow-weight forks hold gradientdense learned tensors identical, start newzeroH, then vary rule/access: gradientdense6.25%,gradienttop-one47.27%,Hebbiandense6.25%,Hebbiantop-one43.75%. Frozen top-one rule gap(Hb−gradient)−3.52points[−7.81,.78] is uncertain. Exactshamfork repeats7296savedscorevectors bitforbit. No frozenfork was promoted as a selected winner.
+Post-outcome exploratory revision contrast: Hbcontent92.19%protected versus99.22%global, difference−7.03pp95[−10.55,−3.91]; allshortrevision errors return obsolete values. This exposes a stability/revision tradeoff. Cosine routing has no demonstrated advantage. Do not call this biology, pure semantic routing, equally retrained efficacy, population-map inference, or a percentage of the historical dense→top1gain. Routes jointly alter read/write allocation. Intervals condition on fixedparents/maps/codebook.
 
-All fixed2seed K8D64 secondary P−C timing intervals include/touchzero, including the neural anchor. No sleep-timing advantage is established. Hebbiantop-one initial24.22%→trained21.48% has no established late gain; gradienttop-one24.61%→36.72% improves. Preserve initializers and short/late accuracy/MSE separately.
+Independent raw audit:319,488vectors,1,665,024causalwrites,5,760resourcebatches,7,296serializationboundaries; actual data/summary/plans/budgets/exposure exact. All48 saved checkpoints retain all9parent tensors bitforbit.384casefiles and29executed-source Gitblobs checked. GPU/WindowsCPU rechecks each cover5,376queries/all48models; allpredictionsmatch, maxerrors9.54e−7/3.58e−7. Four measured figures rendered and inspected. These checks do not retrain or numerically reproduce every grid output.
 
-## Evidence and recovery
+## Artifacts and recovery
 
-Output root: `C:/Users/henry/Documents/Codex/2026-10-22/i/outputs/clmm-adapter-integration-2026-11-15`.
-Work scripts: sibling `work/clmm-adapter-integration`.
-Full recovery ZIP: sibling `outputs/CLMM_Adapter_Integration_2026-11-15.zip`; adjacent verificationJSON records observed CRC/every-file SHA and final handoff commit. Archive includes full branch bundle, unchanged baseline tag, supplied neural checkpoints, all8 initial/final models/optimizers, training data, observed plans/rawscores, fork outputs and source snapshots. Compact Git results omit weights/full raw arrays.
+Full output root: `C:/Users/henry/Documents/Codex/2026-10-22/i/outputs/clmm-routing-decay-2026-11-15`.
+Work scripts: sibling `work/clmm-routing-decay`.
+Recovery ZIP: sibling `outputs/CLMM_Routing_Decay_2026-11-15.zip`; adjacent verificationJSON binds every-fileSHA/CRC and handoffcommit. Contains fullbranchbundle/baseline tag,4parents,48caseweights, bothengineeringruns, rawscores/plans, sources and analysis. Compact Git index omits weights/fullrawdata.
 
-62 integrationtests pass; independent analytic/state proof passes. Main audit160768scorevectors/1107712causalwrites/2960serializationbatches. 19declared invocations include1throughput,8maintrain,2NNanchors,8forks; no skips. Actual main training1431552labels/2239744writes, not planned arrays saved again in evalfolders. Required-file coverage815checks and22pipeline sessionbundles includes2throughput bundles; optimizerpayloads9=8main+1throughput. Source/protocol pinned before main outcomes.
+Use dedicated `scripts.routing_decay_experiment.load_checkpoint`, not the old associative registry loader, for new48casefiles. `RoutingDecayAdapter.from_parent` requires a dense base parent; supplies identicalslowbits/newconfig/zeroH. Exactslowcheckpoint SHA must accompany everyfaststate: config fingerprints bindtable/policy/decay/codebook, not learnedweights. `checkpoint_admission.json` records compatibility and gates. Saved byte weights, nonlinear neural weights and associative weights remain distinct architectures.
 
-Selected rechecks cover all18mainmodels:3616savedpredictions+scoresexact onGPU; CPUallpredictionsmatch,maxcoordinateerror9.54e−7. Real SleepSession resume/pure reads/unchangedslowweights and RNG verified. These are inference/artifact checks, not retraining or complete-grid numerical reproduction. Three measured figures rendered and visually inspected.
+Main `pipeline-cpu.json` succeeded. Original `pipeline.json` is intentionally `preflight_only`: GPU projection2874s exceeded2550bound, before main. Saved runtime-only amendment moved unchanged grid to CPU (projection862s; main534.46s), GPUusedforengineering/recheck. Preserve bothpipeline records. Launch scripts need path relocation; frozen source6121228 and environment versions are authoritative. Analysis README has reproduction commands requiring fullrawroot.
 
-## Compute closeout: resolved
+## Cluster closed
 
-Current job13918002,ins081,A6000,4CPU/16G: explicitlyCANCELLED after16m50s(0.281allocatedGPUh), main12m48spipeline andGPUrecheck completedexit0. Full artifact transfer extracted and SHA matched. Tar emitted `.: file changed as we read it` because outputwas inside root; archive stepExit1 is preserved, not treated as a failed model. File-level audit confirms expected artifacts. Raw current scheduler records and transfer proof are saved.
+Job13918985(ins087,A6000,4CPU/16G) explicitlyCANCELLED after13m25s,0.2236allocatedGPUh includingCPUmain/transfer. Tasksteps COMPLETEDexit0; wrappercancelintentional. Tar exits0, remote/localSHAagree, transferextracted651members. No activeuserjobs; desktophelperselection unchanged. Earlier13918002cancelled and13914782TIMEOUT remain resolved in prior handoffs.
 
-Prior13914782 is now observedTIMEOUT after1h3s, no active job; optional portableGPUcheck passed2432queriesexact and is retrieved. This supersedes e3b744c's unknown status, with addendum under prior outputs and current `prior-job-closeout.json`. No renewal, desktop helper selection change or unrelated cancellation occurred.
+## Next concrete work / team choices
 
-## Next work and team choices
+Member C should maintain the common API/checkpoint/causal-evaluation contract, qualify A/B's intended modules on acquisition and genuine revision, and then rerun matched continuous/periodic replay with identical routing/decay. Keep random allocation as a mandatory control. Do not select a favorable map or tune eta on90723.
 
-Replace/extend reference adapters with A/B's actual modules using the shared functional API and exactcheckpoint binding. Agree fixed versus learned routing, top-k/modules, postsynaptic clamp/EMA versus another local rule, and full sequence-model bridge. Test another one-module allocation/decay control on fresh histories before attributing access benefit to content routing or biology. Keep rule/access and training effects separate.
+Team decisions: inactive global/protected forgettingclock; intended route (fixed/learned/topk); and error-correcting revision behavior of B's local rule without revision/query-label oracles. A new equal-training-budget comparison needs declared observations/labels/optimizeropportunities, exact initializers and fresh histories. Do not solve admission by dropping seeds or relaxing thresholds. No new training study started here. Fullsequence bridge and roadmap remain separate milestones.
 
-Member C should next specify a longer-horizon training check with explicit writes/labels/optimizer budgets; short training does not guarantee late recall. Do not tune these same90623 histories or choose the favorable frozenfork as a final model. The earlier correlated control ([NONLINEAR_CORRELATED.md](NONLINEAR_CORRELATED.md)), orthogonal positive control ([KV_CONTROL.md](KV_CONTROL.md)), and byte fitting/transfer record ([FIXED_SET_GENERALIZATION.md](FIXED_SET_GENERALIZATION.md)) remain distinct milestones. Full paper-style roadmap and paper-baseline-v1 are not complete.
-
-No Google Doc edits, teammate messages, push/PR/merge occurred. Preserve baseline-v0.6.0 at35a549f137548d48aecc26e33c6f8a34a6efc97c. Append substantive work to EXPERIMENT_LOG.jsonl; inspect real files/Git/scheduler rather than assuming this snapshot remains current.
+Prior [ADAPTER_INTEGRATION.md](ADAPTER_INTEGRATION.md), [NONLINEAR_CORRELATED.md](NONLINEAR_CORRELATED.md), [KV_CONTROL.md](KV_CONTROL.md), and [FIXED_SET_GENERALIZATION.md](FIXED_SET_GENERALIZATION.md) retain earlier evidence/limits. No GoogleDoc edits, teammate messages, pushes/PRs/merges. Preserve baseline-v0.6.0 at35a549f137548d48aecc26e33c6f8a34a6efc97c. Inspect real files/Git/scheduler on resume and append EXPERIMENT_LOG.jsonl.

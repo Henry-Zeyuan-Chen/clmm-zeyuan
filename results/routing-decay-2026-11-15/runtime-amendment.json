@@ -1,0 +1,8 @@
+{
+  "recorded_utc": "2026-11-15T18:30:11.017910+00:00",
+  "reason": "GPU engineering-case projection2874s exceeds declared2550s continuation bound; main not launched. Probe CPU execution for tiny matrices, preserve all48cases/128histories and factor settings.",
+  "selection": "Runtime only; no main outcomes available. Preserve original pipeline.json and engineering GPU artifacts.",
+  "execution": "CPU engineering+conditional CPUmain in existing compute allocation, then selected GPU reload check. No renewal. Main max2850s, outer3300s, remaining allocation independently bounds work.",
+  "numerical_recheck": "Before first main outcomes: cross-device score absolute tolerance1e-5 on both devices; all predictions must agree exactly. CPUmain changes reference hardware; do not require same-device exactness.",
+  "recheck_update_utc": "2026-11-15T18:31:03.375132+00:00"
+}

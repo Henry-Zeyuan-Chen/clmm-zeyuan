@@ -1,0 +1,18 @@
+{
+  "cases": 48,
+  "new_training_steps": 0,
+  "new_training_labels": 0,
+  "observed_evaluation_writes": 1665024,
+  "main_elapsed_seconds": 534.457273426,
+  "main_device": "cpu",
+  "environment": {
+    "python": "3.11.5 (main, Sep 11 2023, 13:54:46) [GCC 11.2.0]",
+    "torch": "2.11.0+cu128",
+    "numpy": "2.4.6",
+    "device": "cpu",
+    "device_name": "CPU",
+    "deterministic": true,
+    "dtype": "float32"
+  },
+  "scope": "Instrumented inference cost, not a bare latency/FLOP benchmark. Same dense candidate arithmetic for content/random. Inactive global decay adds3multiplications intentionally; allocated GPU time also includes CPU execution."
+}

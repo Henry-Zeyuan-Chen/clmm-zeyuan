@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "frozen_commit": "61212289d6029da65eeb6a3735ce5ec3894866a9",
+  "semantic_json_equal_to_frozen_commit": true,
+  "main_input_byte_equal_to_prospective_local": true,
+  "main_metadata_design_sha256": "0d1755b90f157874a0f77c9dde17d1ae59e937926e0fa055f142c7cd69f698a2",
+  "git_blob_sha256": "e88371c66ce32363fa6e2e65ab1091d0cea8bd693ac67dbf2fc5dbe130dfe3c7",
+  "note": "Git text normalization changes line endings only; JSON design unchanged"
+}

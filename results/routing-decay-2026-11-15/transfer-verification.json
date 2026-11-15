@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "remote_local_sha256": "16a419407296cb185722dc31dd55d6600329c31d68fbab5a45655fc7536d16b3",
+  "bytes": 61685460,
+  "members": 651,
+  "tar_exit_code": 0,
+  "archive_outside_archived_root": true
+}
