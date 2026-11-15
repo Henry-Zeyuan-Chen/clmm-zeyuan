@@ -1,0 +1,12 @@
+{
+  "status": "closed",
+  "job_id": "13921270",
+  "allocation_state": "CANCELLED",
+  "allocation_elapsed_seconds": 456,
+  "allocated_GPU_hours": 0.12666666666666668,
+  "selected_gpu_proof": "unverified: timeout with kernel I/O wait observed, no scores",
+  "no_active_user_jobs": true,
+  "helper_selection_changed": false,
+  "no_renewal": true,
+  "scheduler_sha256": "25e23c4f58d74b4b32fd80e9bb14e7cee14fdc2dafd3dacdea7bed21a013677c"
+}

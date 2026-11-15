@@ -1,0 +1,74 @@
+{
+  "files": [
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\analysis\\figures\\balanced_accuracy.png",
+      "sha256": "f6c711411da34ba87ebe094b65868927952b255ede71d83dce3510d98c0b0e7e"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\analysis\\figures\\balanced_accuracy.pdf",
+      "sha256": "9084939a2a1911d68caa16f35981ef8ff15fd9cea39f56c7e62a63a3ae2521f2"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\analysis\\figures\\balanced_accuracy.svg",
+      "sha256": "58547ecba1d9ede4835121ac93e4f7ef9495888f8667d00fa36c2d0d60df6c5f"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\analysis\\figures\\routing_families.png",
+      "sha256": "58481aa40a346ae40d32d36cf83e7a1b9bc66dc47f9087d277f3404b561bf2da"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\analysis\\figures\\routing_families.pdf",
+      "sha256": "086f1c1454f772176f50ad25f421f8af67735a0e4a0a02f1865f72f7ac6f8f71"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\analysis\\figures\\routing_families.svg",
+      "sha256": "179e97ab377abf4fd5ce57d8e544c6219e01325a277fd9a044d6072001122e37"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\analysis\\figures\\stable_query_groups.png",
+      "sha256": "dd8c8abbabd3f8a6b5f7480e102baaa1854052cd92b28d52c58edf0ffaf595c6"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\analysis\\figures\\stable_query_groups.pdf",
+      "sha256": "9f1cf245b916c6d01eca486abf1cee88ee02b4bdc4db609e8ea753ed2a72bc46"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\analysis\\figures\\stable_query_groups.svg",
+      "sha256": "a053b6537e03244e1468a32157855db9dbef472359545fac58224c6538112659"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\analysis\\figures\\co_primary_contrasts.png",
+      "sha256": "5a9b5f9a979b46dc02506161aa719ea40a81eaf5f9bb1c25daf12681fdaa89c1"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\analysis\\figures\\co_primary_contrasts.pdf",
+      "sha256": "8e2ef48df6d1f38ee0eaab65f8bc8b32edafe1da886d23151d98fc63a32a690a"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\analysis\\figures\\co_primary_contrasts.svg",
+      "sha256": "588ee9c98d71376def93cb4b9598ce1b718daf02b66d4ced48f8a25f9a32bdbf"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\analysis\\figures\\revision_error_and_stale_replay.png",
+      "sha256": "787eca0a3de884bd859d9c977744578850d56003e727a430999190cda8a4720a"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\analysis\\figures\\revision_error_and_stale_replay.pdf",
+      "sha256": "8abeaa0c27ef7314c5c6c60e01ccc17b3cfbd5aa8850aa0e320b7d5dfa1ec9ef"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\analysis\\figures\\revision_error_and_stale_replay.svg",
+      "sha256": "7db50e292fa57dd8e8e0dcd5ba2d5a586e874bb9c39dea816a1869ea8432a5b1"
+    }
+  ],
+  "inputs": {
+    "aggregate.csv": "66a6a26236cb72a12fd39dce0bfb69cd5f1a421c7a8a2e4c659339c4f49d8b40",
+    "contrasts.csv": "0724fbee50213647686766d823ca7ccf83f29bc5c23fbe91878d61d98ed7a5f7",
+    "diagnostics.csv": "e747e74431a9f10a6591ad587cfdfed5c4edfc530c626205d32498e8de9979f4",
+    "replay_telemetry.csv": "d2c28ba58f164295f98b2acfff90d5375e11f5c0aaa9e458a7593a26fa148787"
+  },
+  "uncertainty": "Nominal95% history-cluster bootstrap on curves; Bonferroni97.5% on two co-primary contrasts",
+  "weighting": ".5 content + .5 mean(all5random), average2fixedparents/2phases unless family panel",
+  "visual_inspection": "passed: all five PNG figures inspected; final error-stack panel inspected again after adding 1.5x error-rate headroom to remove legend overlap",
+  "visual_reviewed_utc": "2026-11-15T21:30:03.719973+00:00"
+}

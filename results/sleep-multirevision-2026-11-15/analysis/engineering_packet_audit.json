@@ -1,0 +1,287 @@
+{
+  "status": "passed",
+  "scope": "full prepared inputs/source/file arithmetic; no model inference",
+  "packet": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\engineering\\packet",
+  "metadata_sha256": "97cb736e9d3c54687dff8f598de9ad1b2b8d108eb6de4347fe560f1e95a8747e",
+  "episodes_sha256": "3bf136d057435b6bd3323402808febf670ce60d39696cd37a2701ab4f96d2417",
+  "exclusions_sha256": "327d0428ba7d60975d8a3a24d558e412181e9fde6fe5dad8eca6c22069dd2ddf",
+  "design_sha256": "c8aac5253b26b353b9c7f953a37f652aad93a8bb07488f4afd8936f55c02a8d9",
+  "geometry": {
+    "cells": 10,
+    "histories_per_cell": 16,
+    "literal_histories": 160,
+    "genuine_revision_arrivals": 672,
+    "refresh_arrivals": 576,
+    "excluded_signature_count": 87493,
+    "overlaps": 0,
+    "scope": "geometry reconstructed from literal arrivals; no model execution"
+  },
+  "expressly_required_exclusion_roles": {
+    "training90502": {
+      "source": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\trained\\old_training_exclusions.npz",
+      "sha256": "2d718ff0283042feccadbca7ce55d2ccc77d82fc2ef717d79f426001edf6a3f3",
+      "histories": 38393,
+      "all_present": true
+    },
+    "training90802": {
+      "source": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\trained\\training_data.npz",
+      "sha256": "a4d34bd16b5d2229758ffe8e487c40c92e397ded01e74d12681bde015ede343d",
+      "histories": 38396,
+      "all_present": true
+    },
+    "evaluation90723": {
+      "source": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\provenance\\prior90723\\episodes.json",
+      "sha256": "5f78cf37e3900557ecc4f8b9e2dca484f834265b3f6dd4c540ca92509d33666d",
+      "histories": 1152,
+      "all_present": true
+    },
+    "evaluation90823": {
+      "source": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\frozen\\episodes.json",
+      "sha256": "3353feb68eecc550dfd632dca4dc9097442a517169ac6d4b7bdc9fd21d7b3c21",
+      "histories": 1152,
+      "all_present": true
+    },
+    "evaluation90923": {
+      "source": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\trained\\episodes.json",
+      "sha256": "0899d8bd07117957cd4bb6c66828f622f902c11433eaeaf7878ffbc982c40f88",
+      "histories": 1152,
+      "all_present": true
+    },
+    "evaluation91023": {
+      "source": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\stress\\episodes.json",
+      "sha256": "29a70987f93744af82832644297cdbc1511ca62fc200ca8753889dbdc4599996",
+      "histories": 1152,
+      "all_present": true
+    }
+  },
+  "reconstructed_all_manifest_inputs": [
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\engineering\\packet\\training_exclusions_90502.npz",
+      "histories": 38393,
+      "sha256": "914933206a8a0897fd43bb304e09c573c3e982f4ea18325b930effddaf935cb6"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\engineering\\packet\\training_exclusions_90802.npz",
+      "histories": 38396,
+      "sha256": "1ee968d51de054d2497d4582788eb12a304966b00e98ed8af724d6e1c9abcdf1"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-adapter-integration-2026-11-15\\fork-gradient-dense-90511\\evaluation\\episodes.json",
+      "histories": 512,
+      "sha256": "8eaeda1c67f9425a2dad766a055a813e4d8dda1dcf35c6dae8135429ba9fff10"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-adapter-integration-2026-11-15\\gradient-dense-90511\\evaluation\\episodes.json",
+      "histories": 768,
+      "sha256": "ef2bad79828e665e074fa9accf6802b9cfcf493ce2f804ca178cdf451ec6968c"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-adapter-integration-2026-11-15\\smoke-hebbian-cpu\\evaluation\\episodes.json",
+      "histories": 18,
+      "sha256": "19e0a0ab7b33b6f68385a96e06fc395b957b9b29b499f5d9d641442feefe3914"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-adapter-integration-2026-11-15\\smoke-hebbian-cpu\\initial-evaluation\\episodes.json",
+      "histories": 10,
+      "sha256": "8561d706fca656b3f176658f1dc5b80da1d30b6ccf7773bbaff4e56a224a6272"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-adapter-integration-2026-11-15\\throughput-gpu\\evaluation\\episodes.json",
+      "histories": 144,
+      "sha256": "b879aa26471c930e29a4736e29b0513831f22b44c0420273f3ee1dd30f7195ab"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-adapter-integration-2026-11-15\\throughput-gpu\\initial-evaluation\\episodes.json",
+      "histories": 80,
+      "sha256": "78ff57b370de56bfe7116de260f79cdb846585dc7bb8bb53b8e5467cc81b7c07"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-fixed-set-2026-11-14\\disjoint-transfer\\episodes.json",
+      "histories": 0,
+      "sha256": "48676030808a0129541831c5200ed6280ad36e52ff1532f414cd5345120097c8"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-kv-control-2026-11-14\\confirm-s05-90301\\evaluation\\episodes.json",
+      "histories": 384,
+      "sha256": "4e7af389c95abe465b8e1a72f2ee04dcd6919aa240b70ed77325ef91841877b8"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-kv-control-2026-11-14\\delta-full\\evaluation\\episodes.json",
+      "histories": 672,
+      "sha256": "d52b8976b8574e2f7466b953b4b357161958226dd4307c8f1512c4477f2777e1"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-kv-control-2026-11-14\\dense-calibration\\evaluation\\episodes.json",
+      "histories": 672,
+      "sha256": "08e1153d965cd870444d7da1504ab6f01376cd069b5e7ba061fb5247605debbe"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-kv-control-2026-11-14\\s05-90301\\evaluation\\episodes.json",
+      "histories": 384,
+      "sha256": "92dc4ed3161d5ebf1db9956ab9060520938083230692318aac9c453882e87814"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-kv-control-2026-11-14\\smoke-delta-cpu\\evaluation\\episodes.json",
+      "histories": 24,
+      "sha256": "16b2fe87a5d74fba9f0747cba7a5360fa81cdc56a24f4bdc5347a7002ab77ff1"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-kv-control-2026-11-14\\smoke-neural-cpu\\evaluation\\episodes.json",
+      "histories": 6,
+      "sha256": "999820a9b9f6672f410f08c054d57e225571477522023ea9c4a5f1a358f8913e"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-nonlinear-correlated-2026-11-15\\comparison-initial-r32-90511\\evaluation\\episodes.json",
+      "histories": 1536,
+      "sha256": "7e9ac30bb71a8d8bafef2c34b8b6e095d38f596a13dfd4418701a5b11b2f2679"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-nonlinear-correlated-2026-11-15\\confirm-r32-90511\\evaluation\\episodes.json",
+      "histories": 768,
+      "sha256": "52429b92eaa7fceaa890613a831050db0e6c52fabdc966e0c71877a76581ce90"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-nonlinear-correlated-2026-11-15\\r32-90511\\evaluation\\episodes.json",
+      "histories": 480,
+      "sha256": "8f2c443ea07d63aa241c87ba12c7f6247c5a26c9a4baa37ddf2da21357a43eb4"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-nonlinear-correlated-2026-11-15\\smoke-r32-cpu\\evaluation\\episodes.json",
+      "histories": 12,
+      "sha256": "9a14dcf8be55946dc40a7ae0721388441a093f48995b4bb34b7867cd9befb170"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\engineering-cpu\\smoke-exclusions-cpu\\episodes.json",
+      "histories": 144,
+      "sha256": "b27084d8eb8edb3d7ab4304e5a93f3a17413aa4268a412c69362ac1a5f088dca"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\engineering-gpu\\episodes.json",
+      "histories": 144,
+      "sha256": "cff2c89407511a94d74def8cd6ba00cd4eb6e61fab2e545d1db3de9ac6b65a0a"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\frozen\\episodes.json",
+      "histories": 1152,
+      "sha256": "3353feb68eecc550dfd632dca4dc9097442a517169ac6d4b7bdc9fd21d7b3c21"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\provenance\\prior90723\\episodes.json",
+      "histories": 1152,
+      "sha256": "5f78cf37e3900557ecc4f8b9e2dca484f834265b3f6dd4c540ca92509d33666d"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\stress\\episodes.json",
+      "histories": 1152,
+      "sha256": "29a70987f93744af82832644297cdbc1511ca62fc200ca8753889dbdc4599996"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\trained\\episodes.json",
+      "histories": 1152,
+      "sha256": "0899d8bd07117957cd4bb6c66828f622f902c11433eaeaf7878ffbc982c40f88"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-routing-decay-2026-11-15\\engineering\\episodes.json",
+      "histories": 144,
+      "sha256": "c93f78e3280dd7a46816dc54208bc72591c4ac29abbf0f681e6a657f58d73478"
+    }
+  ],
+  "extra_exclusions_allowed": true,
+  "models": [
+    {
+      "name": "90511-content-local_delta",
+      "checkpoint_sha256": "ec9de4709df9ea2802d50d7bef02bc3bf8b0a6807aacdeff2bce298cd50d8605"
+    },
+    {
+      "name": "90511-random-90701-local_delta",
+      "checkpoint_sha256": "4d339b2860b7f6f30bfe8c5841b9c77e527326ea9869caeed25cded95a28714e"
+    },
+    {
+      "name": "90511-random-90702-local_delta",
+      "checkpoint_sha256": "56cd15f2c289bd51d843fedb86b17400bce3221dde20f71ed6463ba06e643459"
+    },
+    {
+      "name": "90511-random-90703-local_delta",
+      "checkpoint_sha256": "7df098cee219574a09020a8e3de32c1654254103ac9612a6a96eaedaa59f724f"
+    },
+    {
+      "name": "90511-random-90704-local_delta",
+      "checkpoint_sha256": "0b05b75625057b44d801da5e7fa225032558e5c1ce4cb7d71e0d29ea9dde81de"
+    },
+    {
+      "name": "90511-random-90705-local_delta",
+      "checkpoint_sha256": "3d610712d35b63e04c584ed1d5dba4d651735190788b2c448534b83d5d034fc1"
+    },
+    {
+      "name": "90515-content-local_delta",
+      "checkpoint_sha256": "3969bad74a0d64c0290dcef54938245fcf21834a86e3cfcc054279572a85be77"
+    },
+    {
+      "name": "90515-random-90701-local_delta",
+      "checkpoint_sha256": "0f267b91de1bc64a5fdc422d4ee0629db64587c2d779d0e01da1c110c9d3b10b"
+    },
+    {
+      "name": "90515-random-90702-local_delta",
+      "checkpoint_sha256": "154a3292c8cb1d51f902fe9118b6c352bb62c3f9f94a75f5cbccaec2b8309185"
+    },
+    {
+      "name": "90515-random-90703-local_delta",
+      "checkpoint_sha256": "660d3c29a5ca1b5fd6da2aa6364899d98ad3f772d84a223dfb7d49645ad6c8ca"
+    },
+    {
+      "name": "90515-random-90704-local_delta",
+      "checkpoint_sha256": "1455f8bc21d4a086bdbd984b9e66458cc6ef0cd0f29f088345a3ae9b31c5a515"
+    },
+    {
+      "name": "90515-random-90705-local_delta",
+      "checkpoint_sha256": "3de3e119b9c16331ba4b0e6aed95447f71fdfab15c443cccd8d14705ea54ecb4"
+    }
+  ],
+  "preserved_source_files": {
+    "clmm/pretrain/__init__.py": "3684561d02ad25bba9fe0673da2241b976031fb4ab98a891da8c081490eae526",
+    "clmm/pretrain/adapter_registry.py": "770226cdfc0d4dc93294668defaeec5375b4abbfccd2e717aa25398871fcfc83",
+    "clmm/pretrain/association_probe.py": "f5f2b92ecda5d5adbcbaca32857ce2547d760c7189c30ad69148a068880485dc",
+    "clmm/pretrain/byte_lm.py": "b41de6f729bb4bc18f1d17ce6a449deb4c90eafea550271d32f01866f3b4feea",
+    "clmm/pretrain/fact_streams.py": "32637fe0388ffa132b061ce1d8dab4e9a7e64324606e9ade49d29024214ac7f3",
+    "clmm/pretrain/kv_control.py": "127a39b76f13f47be9c5126bbd144a717eb0719eac55b661a4dd33577036ca4d",
+    "clmm/pretrain/kv_correlated.py": "36eba373f036948e9a023bb00690348e8e0cfae1458ae7602b623507ae7f7200",
+    "clmm/pretrain/kv_correlated_portable.py": "788d89b01139a689bb2a401f925016018a9bd5c570afa89886637602b3ac9837",
+    "clmm/pretrain/kv_scheduler.py": "8c082b77871adfa08264507f5e37f9b78cded0d5c3b4798f599801d5c06923dd",
+    "clmm/pretrain/kv_streams.py": "1a62fd8d5d58fab9dcb4ba7e49f1cee8506c5564ce4ebc64f0b6d6f5a2537b9a",
+    "titans_pytorch/__init__.py": "b154ceb9152468861a6c513174b63ab35a979b55301c7cff275f47f1957e5fbe",
+    "titans_pytorch/implicit_mlp_attention.py": "a5ec0c11005f447fb3697f13cfa4f967ff342712fa154c1bc5e848490ef2f40c",
+    "titans_pytorch/mac_transformer.py": "3ba521375e92f661542792b7e04196e89c3a668ec5329eb8b31d4a5c2f96f38d",
+    "titans_pytorch/memory_models.py": "c271fd8bd9144a8559844594963f0ba4149b078d342fd90bb75ccff023b8e504",
+    "titans_pytorch/nested_attention.py": "361102a81ccd3f080f0d8f3401af1a3383cc28a3b34326daf7c740cbcc6894da",
+    "titans_pytorch/neural_memory.py": "c4a756d8d8257500d2da6e94473a0cd13e5ae4b517826cdd761dc500de468804",
+    "clmm/__init__.py": "cb8d9ffaff4a6d144592b0f7cb041683f7e79fc7accc73647ff020070647d652",
+    "scripts/fact_revision_experiment.py": "018301da2035fbb3c6af331e33b8d174589f924d6b8022d59d9e61609053955d",
+    "pyproject.toml": "daa0c8b7d63238c7439a50b0c5dc152d203bfb15b445aa8c0aebbd1b2d6d512b",
+    "requirements-lock.txt": "0021fd959cc013c08f41735d2d3d8b43e3f261dae8c0069f56d345a413340e17",
+    "clmm/hebbian/__init__.py": "52568fd1204238d9dfdb9c1e2027683c0f4036df5a13222e4ed72159e7e7d618",
+    "clmm/hebbian/adapter.py": "e52c78207bd308e98815e55b7140dc36016c87a40614d628995e6cc25b8409f5",
+    "clmm/hebbian/revision.py": "2ebfaf8dcc7ccd58af4aca2df2fde20a24fa0994cf519276ea6df7bcab94ccbc",
+    "clmm/hebbian/routing_decay.py": "1801f7c7112a4ed513bdde8e0cb9c0d7621bed28e832fe05bf156974769fb74b",
+    "clmm/reference.py": "60b3126befb79d0024bcb30c451ec44e3103ab97d65cb23790f7a8a598816abf",
+    "clmm/sleep/__init__.py": "631877b5398d3a963175ddec86e750035a29a64639c7db9c63bcce431132ac56",
+    "clmm/sleep/adapter.py": "9b7e0b089905ec8027814644991d1135de6a93858c6b15dee78782b3bb87652d",
+    "clmm/sleep/multirevision.py": "cf37db0c83c56a7658a5b6c5726295cce23a03cd36f7ae6c25138ab9b2a50bae",
+    "scripts/adapter_integration_experiment.py": "e363b22ceb155127430fffd57215df69957cbbeb4982e3005b1ad81aacab3619",
+    "scripts/fact_attention_control.py": "bd8606c3f9f0bc48e1026f7f4d9b71b15520607d39b27275790981d73c32b60b",
+    "scripts/fact_paired_acquisition.py": "a488c241b25dbd6532e433ae883d2da074cd7b677833f9b24a8b2832ce880bb3",
+    "scripts/fixed_set_generalization.py": "3edd2a173d12f01a5fa3a79eef84c590e6c08afab5b38f6d76d5e7b7355073a6",
+    "scripts/kv_correlated_experiment.py": "c3144b3e308ab55f7e81ce808239cdaab36cea32d6eba54567237e3fc886f2f4",
+    "scripts/kv_representation_control.py": "406ab97d44e5b89d6b8be45f4d46070c2ea2c4b9f0cb7c264c2815346dd40e00",
+    "scripts/kv_streaming_demo.py": "402a68e4ddf2f5793de0e14e6b7ef1f1595247a10a22006ed471039de8de4cca",
+    "scripts/memory_pressure_probe.py": "53ef1684b81fade61b6dfe2dce5829f5443ed2a9c0cb4a3162992ed6faf1196c",
+    "scripts/replay_probe.py": "7c9e9ca0cb79ff59ef527237bf2424d52c9a2956754784d1027702f782bb5424",
+    "scripts/research_memory.py": "c129ff991eea1f6bf215eb8116f1b0e8b9b1f65c76b8f8988afc8a235bdd27ac",
+    "scripts/revision_local_experiment.py": "2e0faa9f4fd191cd49701553a73b8f03adc959d2f8b6b766497045d2282e459e",
+    "scripts/routing_decay_experiment.py": "142139eaf25c11deca63ec0c65ef44d3958ae1303809e2a56d628239fabac188",
+    "scripts/sleep_multirevision_experiment.py": "6663ce8e2919bfaa5ed2760f207d32c9074ccb967002378357032f61fd0c54a7",
+    "scripts/train_memory_pilot.py": "9fd565ceedadf852b86d5462b3423324166009934fcebb439ad6aded018a0669",
+    "scripts/train_shared_byte_lm.py": "06e7dce0041b84f5759c7d2c0a9f129c1f159bc73e6945cebd8f7b6f1eabfd78",
+    "scripts/verify_titans.py": "55b7518ed598ac88bb8f52dfb3f43dc7f872408a0a5adb33b253b0a19bfed866"
+  },
+  "source_files_match_git_blobs": 44
+}

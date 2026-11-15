@@ -1,0 +1,8 @@
+{
+  "source": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\runs\\90511-content-local_delta\\evaluation\\replay_audit.csv",
+  "source_sha256": "b51242271ae02f1ee45f9ea907154b5249d84a47d9199a4f9ade2314f40856db",
+  "data_sha256": "cebeee663219b97abd9192bfa90eb563bf39e86eb5dcac1aff1606b7c8b44046",
+  "audit": "The full raw audit checks every event against an independent PCG/FIFO reconstruction.",
+  "distinction": "stale uses world truth at application; final_obsolete refers to earlier versions of final queried keys",
+  "scope": "Model-independent counts over the same128 paired streams, repeated under every checkpoint; do not multiply by12 for independent sample size."
+}

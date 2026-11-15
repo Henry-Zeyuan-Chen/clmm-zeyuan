@@ -1,0 +1,4 @@
+Selected portability job13921270, owned byzc2819, verifiedRUNNING onins081.
+Separate lightweight probes inside the allocation observed the recheck Python PID534614 in stateDl, kernel wait channelcxiWaitEventWait, with CPU~0.4–0.5% after~2minutes. The proof log was still0bytes. nvidia-smi reported RTX A6000, utilization0%, memory1MiB.
+The inference step itself wasRUNNING in sacct. These observations indicate a blocked I/O wait; the underlying filesystem or library operation has not been identified. They do not demonstrate a model or CUDA numerical failure.
+The allocation wrapper is bounded15minutes and the srun proof command has a420-second timeout. The launch controller owns final cancellation and scheduler capture. Do not launch another job or change the global Insomnia helper selection.

@@ -1,0 +1,7 @@
+JobID|User|State|Elapsed|AllocTRES|ExitCode
+13921270|zc2819|CANCELLED by 564221|00:07:36|billing=4,cpu=4,gres/gpu:a6000=1,gres/gpu=1,mem=16G,node=1|0:0
+13921270.batch||CANCELLED|00:07:37|cpu=4,gres/gpu:a6000=1,gres/gpu=1,mem=16G,node=1|0:15
+13921270.extern||COMPLETED|00:07:38|billing=4,cpu=4,gres/gpu:a6000=1,gres/gpu=1,mem=16G,node=1|0:0
+13921270.0||CANCELLED|00:06:57|cpu=4,gres/gpu:a6000=1,gres/gpu=1,mem=16G,node=1|0:15
+13921270.1||COMPLETED|00:00:00|cpu=1,gres/gpu:a6000=1,gres/gpu=1,mem=16G,node=1|0:0
+13921270.2||COMPLETED|00:00:00|cpu=1,gres/gpu:a6000=1,gres/gpu=1,mem=16G,node=1|0:0

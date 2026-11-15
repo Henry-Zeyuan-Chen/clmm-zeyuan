@@ -1,0 +1,12 @@
+{
+  "scope": "independent prospective source read, no model execution",
+  "repository_head": "2e40ab0a09fe03600e21163e4aebb8b229afe0aa",
+  "git_status": "?? clmm/sleep/multirevision.py\n?? tests/test_clmm_sleep_multirevision.py\n",
+  "files": {
+    "docs/HANDOFF.md": "4139ebc9980b919a1d8e1bc59141914258a040a4220aec3c2c97f18a29160138",
+    "clmm/sleep/adapter.py": "9b7e0b089905ec8027814644991d1135de6a93858c6b15dee78782b3bb87652d",
+    "clmm/pretrain/kv_scheduler.py": "8c082b77871adfa08264507f5e37f9b78cded0d5c3b4798f599801d5c06923dd",
+    "clmm/pretrain/kv_streams.py": "1a62fd8d5d58fab9dcb4ba7e49f1cee8506c5564ce4ebc64f0b6d6f5a2537b9a",
+    "clmm/hebbian/revision.py": "2ebfaf8dcc7ccd58af4aca2df2fde20a24fa0994cf519276ea6df7bcab94ccbc"
+  }
+}

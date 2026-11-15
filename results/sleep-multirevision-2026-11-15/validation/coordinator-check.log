@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "scope": "Direct row/target, per-history primary weighting/bootstrap and total resource recomputation; independent of analysis modules",
+  "primary": [
+    {
+      "category": "stable",
+      "continuous": 0.833056640625,
+      "periodic": 0.83076171875,
+      "estimate": -0.002294921874999997,
+      "lower": -0.004736328124999999,
+      "upper": -0.00024414062499999824
+    },
+    {
+      "category": "revised",
+      "continuous": 0.8421875,
+      "periodic": 0.817578125,
+      "estimate": -0.024609374999999996,
+      "lower": -0.04052734375,
+      "upper": -0.0103515625
+    }
+  ],
+  "score_vectors": 310272,
+  "causal_writes": 8474112,
+  "resource_batches": 3456,
+  "own_D0_all_pass": false
+}

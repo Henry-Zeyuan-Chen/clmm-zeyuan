@@ -1,0 +1,9 @@
+# K16 multiple-revision replay timing
+
+Read [results guide](../../docs/SLEEP_MULTIREVISION.md), [handoff](../../docs/HANDOFF.md), and analysis/summary.json. Twelve existing local-delta checkpoints, both parents, content plus all five random maps, no additional training. Continuous/periodic samples and extra writes match exactly; only application timing changes. Keep admission failures and the distinction between stale-at-application and any obsolete final query version.
+
+This compact Git index omits raw scores/predictions/plans, excluded signatures, full source snapshots and weights. Full root: C:/Users/henry/Documents/Codex/2026-10-22/i/outputs/clmm-sleep-multirevision-2026-11-15. Adjacent CLMM_Sleep_Multirevision_2026-11-15.zip includes complete raw data, all twelve checkpoints, frozen source, engineering runs, launch scripts and the full branch bundle. Recover with the bundle, check out executable commit06c0a35b543c25437659765128b81718e5bfa1c5 with core.autocrlf=false, and relocate paths in recorded commands. No original team Google Doc or Git remote was modified.
+
+To reproduce inference, use the archived packet directly with scripts/sleep_multirevision_experiment.py evaluate --out NEW_FOLDER --packet PACKET --model NAME. For data-only reconstruction, call clmm.sleep.multirevision.make_datasets(91123,128,set(json.load(open(PACKET/excluded_signatures.json)))); the exact captured JSON bytes/hash can be regenerated with the project's json_file writer. Dataset and observer audit scripts are model-independent. Source snapshots and packet hashes must match the executable source, regardless of later documentation commits.
+
+Reference component evaluation only: no full Titans/MAC qualification or biological novelty claim. Content/random differences also reflect separately learned representations; within-checkpoint replay timing remains the controlled contrast.

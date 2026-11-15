@@ -1,0 +1,421 @@
+{
+  "status": "succeeded",
+  "started_epoch": 1794776610.6972203,
+  "commands": [
+    {
+      "command": [
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-test-env\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-sleep-multirevision\\source-checkout\\scripts\\sleep_multirevision_experiment.py",
+        "prepare",
+        "--out",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\engineering\\packet",
+        "--trained",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\trained",
+        "--history-root",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs",
+        "--design",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\design.json",
+        "--dev-seed",
+        "91103",
+        "--episodes",
+        "16"
+      ],
+      "log": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\engineering\\prepare.log",
+      "elapsed": 25.77633809996769,
+      "returncode": 0
+    },
+    {
+      "command": [
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-test-env\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-sleep-multirevision\\source-checkout\\scripts\\sleep_multirevision_experiment.py",
+        "prepare",
+        "--out",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\packet",
+        "--trained",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-revision-local-2026-11-15\\trained",
+        "--history-root",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs",
+        "--design",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\design.json",
+        "--dev-seed",
+        "91123",
+        "--episodes",
+        "128"
+      ],
+      "log": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\prepare.log",
+      "elapsed": 23.980954500031658,
+      "returncode": 0
+    }
+  ],
+  "representatives": [
+    "90511-content-local_delta",
+    "90515-random-90701-local_delta"
+  ],
+  "preflight_sequential": [
+    {
+      "command": [
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-test-env\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-sleep-multirevision\\source-checkout\\scripts\\sleep_multirevision_experiment.py",
+        "evaluate",
+        "--out",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\engineering\\sequential\\90511-content-local_delta",
+        "--packet",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\engineering\\packet",
+        "--model",
+        "90511-content-local_delta",
+        "--max-seconds",
+        "1200"
+      ],
+      "log": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\engineering\\logs\\sequential-90511-content-local_delta.log",
+      "elapsed": 31.713986799994018,
+      "returncode": 0
+    },
+    {
+      "command": [
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-test-env\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-sleep-multirevision\\source-checkout\\scripts\\sleep_multirevision_experiment.py",
+        "evaluate",
+        "--out",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\engineering\\sequential\\90515-random-90701-local_delta",
+        "--packet",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\engineering\\packet",
+        "--model",
+        "90515-random-90701-local_delta",
+        "--max-seconds",
+        "1200"
+      ],
+      "log": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\engineering\\logs\\sequential-90515-random-90701-local_delta.log",
+      "elapsed": 31.373616600001696,
+      "returncode": 0
+    }
+  ],
+  "preflight_concurrent": [
+    {
+      "command": [
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-test-env\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-sleep-multirevision\\source-checkout\\scripts\\sleep_multirevision_experiment.py",
+        "evaluate",
+        "--out",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\engineering\\concurrent\\90511-content-local_delta",
+        "--packet",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\engineering\\packet",
+        "--model",
+        "90511-content-local_delta",
+        "--max-seconds",
+        "1200"
+      ],
+      "log": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\engineering\\logs\\concurrent-90511-content-local_delta.log",
+      "elapsed": 33.398130999994464,
+      "returncode": 0
+    },
+    {
+      "command": [
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-test-env\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-sleep-multirevision\\source-checkout\\scripts\\sleep_multirevision_experiment.py",
+        "evaluate",
+        "--out",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\engineering\\concurrent\\90515-random-90701-local_delta",
+        "--packet",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\engineering\\packet",
+        "--model",
+        "90515-random-90701-local_delta",
+        "--max-seconds",
+        "1200"
+      ],
+      "log": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\engineering\\logs\\concurrent-90515-random-90701-local_delta.log",
+      "elapsed": 33.46363320003729,
+      "returncode": 0
+    }
+  ],
+  "concurrent_wall_seconds": 33.50100139999995,
+  "projected_main_seconds": 2010.060083999997,
+  "preflight_pass": true,
+  "main_started_epoch": 1794776757.0665138,
+  "main": [
+    {
+      "command": [
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-test-env\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-sleep-multirevision\\source-checkout\\scripts\\sleep_multirevision_experiment.py",
+        "evaluate",
+        "--out",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\runs\\90511-content-local_delta",
+        "--packet",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\packet",
+        "--model",
+        "90511-content-local_delta",
+        "--max-seconds",
+        "1200"
+      ],
+      "log": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\logs\\runs-90511-content-local_delta.log",
+      "elapsed": 193.6046209000051,
+      "returncode": 0,
+      "name": "90511-content-local_delta"
+    },
+    {
+      "command": [
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-test-env\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-sleep-multirevision\\source-checkout\\scripts\\sleep_multirevision_experiment.py",
+        "evaluate",
+        "--out",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\runs\\90511-random-90701-local_delta",
+        "--packet",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\packet",
+        "--model",
+        "90511-random-90701-local_delta",
+        "--max-seconds",
+        "1200"
+      ],
+      "log": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\logs\\runs-90511-random-90701-local_delta.log",
+      "elapsed": 193.80976689996896,
+      "returncode": 0,
+      "name": "90511-random-90701-local_delta"
+    },
+    {
+      "command": [
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-test-env\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-sleep-multirevision\\source-checkout\\scripts\\sleep_multirevision_experiment.py",
+        "evaluate",
+        "--out",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\runs\\90511-random-90702-local_delta",
+        "--packet",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\packet",
+        "--model",
+        "90511-random-90702-local_delta",
+        "--max-seconds",
+        "1200"
+      ],
+      "log": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\logs\\runs-90511-random-90702-local_delta.log",
+      "elapsed": 194.6548405000358,
+      "returncode": 0,
+      "name": "90511-random-90702-local_delta"
+    },
+    {
+      "command": [
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-test-env\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-sleep-multirevision\\source-checkout\\scripts\\sleep_multirevision_experiment.py",
+        "evaluate",
+        "--out",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\runs\\90511-random-90703-local_delta",
+        "--packet",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\packet",
+        "--model",
+        "90511-random-90703-local_delta",
+        "--max-seconds",
+        "1200"
+      ],
+      "log": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\logs\\runs-90511-random-90703-local_delta.log",
+      "elapsed": 194.60982970002806,
+      "returncode": 0,
+      "name": "90511-random-90703-local_delta"
+    },
+    {
+      "command": [
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-test-env\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-sleep-multirevision\\source-checkout\\scripts\\sleep_multirevision_experiment.py",
+        "evaluate",
+        "--out",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\runs\\90511-random-90704-local_delta",
+        "--packet",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\packet",
+        "--model",
+        "90511-random-90704-local_delta",
+        "--max-seconds",
+        "1200"
+      ],
+      "log": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\logs\\runs-90511-random-90704-local_delta.log",
+      "elapsed": 186.59937630000059,
+      "returncode": 0,
+      "name": "90511-random-90704-local_delta"
+    },
+    {
+      "command": [
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-test-env\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-sleep-multirevision\\source-checkout\\scripts\\sleep_multirevision_experiment.py",
+        "evaluate",
+        "--out",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\runs\\90511-random-90705-local_delta",
+        "--packet",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\packet",
+        "--model",
+        "90511-random-90705-local_delta",
+        "--max-seconds",
+        "1200"
+      ],
+      "log": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\logs\\runs-90511-random-90705-local_delta.log",
+      "elapsed": 186.7467203999986,
+      "returncode": 0,
+      "name": "90511-random-90705-local_delta"
+    },
+    {
+      "command": [
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-test-env\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-sleep-multirevision\\source-checkout\\scripts\\sleep_multirevision_experiment.py",
+        "evaluate",
+        "--out",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\runs\\90515-content-local_delta",
+        "--packet",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\packet",
+        "--model",
+        "90515-content-local_delta",
+        "--max-seconds",
+        "1200"
+      ],
+      "log": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\logs\\runs-90515-content-local_delta.log",
+      "elapsed": 174.45494070003042,
+      "returncode": 0,
+      "name": "90515-content-local_delta"
+    },
+    {
+      "command": [
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-test-env\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-sleep-multirevision\\source-checkout\\scripts\\sleep_multirevision_experiment.py",
+        "evaluate",
+        "--out",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\runs\\90515-random-90701-local_delta",
+        "--packet",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\packet",
+        "--model",
+        "90515-random-90701-local_delta",
+        "--max-seconds",
+        "1200"
+      ],
+      "log": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\logs\\runs-90515-random-90701-local_delta.log",
+      "elapsed": 174.7401009000023,
+      "returncode": 0,
+      "name": "90515-random-90701-local_delta"
+    },
+    {
+      "command": [
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-test-env\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-sleep-multirevision\\source-checkout\\scripts\\sleep_multirevision_experiment.py",
+        "evaluate",
+        "--out",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\runs\\90515-random-90703-local_delta",
+        "--packet",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\packet",
+        "--model",
+        "90515-random-90703-local_delta",
+        "--max-seconds",
+        "1200"
+      ],
+      "log": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\logs\\runs-90515-random-90703-local_delta.log",
+      "elapsed": 186.25613430002704,
+      "returncode": 0,
+      "name": "90515-random-90703-local_delta"
+    },
+    {
+      "command": [
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-test-env\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-sleep-multirevision\\source-checkout\\scripts\\sleep_multirevision_experiment.py",
+        "evaluate",
+        "--out",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\runs\\90515-random-90702-local_delta",
+        "--packet",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\packet",
+        "--model",
+        "90515-random-90702-local_delta",
+        "--max-seconds",
+        "1200"
+      ],
+      "log": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\logs\\runs-90515-random-90702-local_delta.log",
+      "elapsed": 186.98027609998826,
+      "returncode": 0,
+      "name": "90515-random-90702-local_delta"
+    },
+    {
+      "command": [
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-test-env\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-sleep-multirevision\\source-checkout\\scripts\\sleep_multirevision_experiment.py",
+        "evaluate",
+        "--out",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\runs\\90515-random-90705-local_delta",
+        "--packet",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\packet",
+        "--model",
+        "90515-random-90705-local_delta",
+        "--max-seconds",
+        "1200"
+      ],
+      "log": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\logs\\runs-90515-random-90705-local_delta.log",
+      "elapsed": 185.26195700000972,
+      "returncode": 0,
+      "name": "90515-random-90705-local_delta"
+    },
+    {
+      "command": [
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-test-env\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-sleep-multirevision\\source-checkout\\scripts\\sleep_multirevision_experiment.py",
+        "evaluate",
+        "--out",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\runs\\90515-random-90704-local_delta",
+        "--packet",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\packet",
+        "--model",
+        "90515-random-90704-local_delta",
+        "--max-seconds",
+        "1200"
+      ],
+      "log": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sleep-multirevision-2026-11-15\\logs\\runs-90515-random-90704-local_delta.log",
+      "elapsed": 185.53849439998157,
+      "returncode": 0,
+      "name": "90515-random-90704-local_delta"
+    }
+  ],
+  "main_elapsed_seconds": 1121.7142872810364,
+  "ended_epoch": 1794777878.780805,
+  "elapsed_seconds": 1268.0835836000042
+}

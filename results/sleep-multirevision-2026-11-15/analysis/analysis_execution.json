@@ -1,0 +1,53 @@
+{
+  "recorded_utc": "2026-11-15T21:20:01.981553+00:00",
+  "model_execution_by_reviewer": false,
+  "events": [
+    {
+      "command": "audit_pretrained_inventory.py --trained priorROOT/trained",
+      "status": "succeeded",
+      "checkpoints": 12
+    },
+    {
+      "command": "audit_prepared_packet.py --packet engineering/packet --episodes16 --seed91103",
+      "status": "succeeded",
+      "sources": 44,
+      "exclusions": 87493
+    },
+    {
+      "command": "audit_prepared_packet.py --packet packet",
+      "status": "succeeded",
+      "sources": 44,
+      "exclusions": 87653,
+      "literal_histories_exact": 1280
+    },
+    {
+      "command": "run_analysis.py (first raw-reader attempt)",
+      "status": "failed",
+      "reason": "Analysis diagnostic dictionary used penultimate both as raw code and error indicator; TypeError before outputs were saved. Renamed indicator penultimate_error and reran.",
+      "scientific_run_failure": false,
+      "experimental_inputs_changed": false
+    },
+    {
+      "command": "run_analysis.py (subsequent progressive invocations)",
+      "status": "succeeded",
+      "cases_audited_so_far": 8,
+      "model_predictions_changed": false
+    },
+    {
+      "command": "run_analysis.py --final",
+      "status": "succeeded",
+      "cases": 12,
+      "score_vectors": 310272,
+      "causal_writes": 8474112,
+      "resource_batches": 3456
+    },
+    {
+      "command": "plot_results.py (then legend-headroom refinement and rerender)",
+      "status": "succeeded",
+      "figures": 5,
+      "files": 15,
+      "visual_review": "passed"
+    }
+  ],
+  "note": "Individual command timestamps were not captured; this is a recovered analysis execution record, not fabricated launch-time provenance."
+}

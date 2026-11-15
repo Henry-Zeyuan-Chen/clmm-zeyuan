@@ -1,5 +1,13 @@
 # Member C: shared training and evaluation
 
+## Latest: K16 with three genuine revisions per key
+
+November 15: all twelve existing local-delta checkpoints evaluated on fresh seed91123,128 paired worlds, two revision placements and final tails0/64/128. Content and all five random maps are retained for each parent. No new training or outcome selection. The [replay timing study](SLEEP_MULTIREVISION.md) supplies executable source06c0a35, full input/exclusion provenance, common admission checks, applied-write diagnostics and a reusable loader/session guide.
+
+At D128, stable/revised accuracy is 84.88/93.89% online and repeat-current, 83.31/84.22% continuous, and 83.08/81.76% periodic. The primary periodic-minus-continuous revised difference is −2.46pp adjusted97.5%[−4.05,−1.04]; stable −0.23pp[−0.47,−0.02]. Both reference replay policies trail the equal-write repeat control. Every checkpoint passes short/neutral acquisition, but both replay policies fail their own D0 replacement gate; interpret revision/interference, not admitted retention. No cases are dropped.
+
+This advances Member C's shared evaluation and checkpoint handoff. Member A can use the observed stale-snapshot problem to design a causal bounded freshness control; Member B can retain local-delta/random-routing controls while supplying the intended biological rule. A freshness intervention must declare changed replay content and preserve write/storage budgets, without querying future labels. The current split is now consulted development data. Full Titans/MAC and byte-model fresh-assignment acquisition remain separate work.
+
 Updated November 15, 2026. Zeyuan owns pretraining feasibility, reusable baseline weights and common evaluation. Member A owns sleep consolidation; Member B owns selective Hebbian/neural-memory updates. The proposal asks whether those interventions improve new-association acquisition, unchanged-fact retention and genuine revisions. Sleep timing needs matched replay budgets. The Hebbian track must distinguish its update rule from selective routing.
 
 ## Latest result: qualified key-local reference baseline

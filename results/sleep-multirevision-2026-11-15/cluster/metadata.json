@@ -1,0 +1,211 @@
+{
+  "status": "failed",
+  "allocation_limit_seconds": 900,
+  "pending_limit_seconds": 120,
+  "selected_inference_limit_seconds": 420,
+  "commands": [
+    {
+      "args": [
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-test-env\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-sleep-multirevision\\portable_packet.py"
+      ],
+      "returncode": 0,
+      "stdout": "{\"archive\": \"C:\\\\Users\\\\henry\\\\Documents\\\\Codex\\\\2026-10-22\\\\i\\\\work\\\\clmm-sleep-multirevision\\\\portable-proof.tar.gz\", \"sha256\": \"a8a981d7717d676fda9031c29c9c3c2403d758e64f0a048780ff37c4dda4381c\", \"bytes\": 56383972}\n",
+      "stderr": "",
+      "elapsed_seconds": 17.138206900039222
+    },
+    {
+      "args": [
+        "C:\\Windows\\System32\\OpenSSH\\ssh.exe",
+        "-F",
+        "C:\\Users\\henry\\.ssh\\config",
+        "-o",
+        "BatchMode=yes",
+        "-o",
+        "ConnectTimeout=8",
+        "insomnia-login",
+        "mkdir -p /insomnia001/depts/edu/users/zc2819/clmm/sleep-multirevision-2026-11-15; hostname; squeue -u zc2819 -h -o \"%i %T %j %M %R\""
+      ],
+      "returncode": 0,
+      "stdout": "2402-login-002\n",
+      "stderr": "",
+      "elapsed_seconds": 0.4394650000031106
+    },
+    {
+      "args": [
+        "C:\\Windows\\System32\\OpenSSH\\scp.exe",
+        "-F",
+        "C:\\Users\\henry\\.ssh\\config",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-sleep-multirevision\\portable-proof.tar.gz",
+        "insomnia-login:/insomnia001/depts/edu/users/zc2819/clmm/sleep-multirevision-2026-11-15/portable-proof.tar.gz"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "elapsed_seconds": 34.25933500000974
+    },
+    {
+      "args": [
+        "C:\\Windows\\System32\\OpenSSH\\ssh.exe",
+        "-F",
+        "C:\\Users\\henry\\.ssh\\config",
+        "-o",
+        "BatchMode=yes",
+        "-o",
+        "ConnectTimeout=8",
+        "insomnia-login",
+        "sha256sum /insomnia001/depts/edu/users/zc2819/clmm/sleep-multirevision-2026-11-15/portable-proof.tar.gz"
+      ],
+      "returncode": 0,
+      "stdout": "a8a981d7717d676fda9031c29c9c3c2403d758e64f0a048780ff37c4dda4381c  /insomnia001/depts/edu/users/zc2819/clmm/sleep-multirevision-2026-11-15/portable-proof.tar.gz\n",
+      "stderr": "",
+      "elapsed_seconds": 0.4566960000083782
+    },
+    {
+      "args": [
+        "C:\\Windows\\System32\\OpenSSH\\ssh.exe",
+        "-F",
+        "C:\\Users\\henry\\.ssh\\config",
+        "-o",
+        "BatchMode=yes",
+        "-o",
+        "ConnectTimeout=8",
+        "insomnia-login",
+        "cd /insomnia001/depts/edu/users/zc2819/clmm/sleep-multirevision-2026-11-15 && tar -xzf portable-proof.tar.gz && git -c core.autocrlf=false clone -q --no-checkout protocol.bundle source && git -c core.autocrlf=false -C source checkout -q --detach 06c0a35b543c25437659765128b81718e5bfa1c5"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "hint: Using 'master' as the name for the initial branch. This default branch name\nhint: is subject to change. To configure the initial branch name to use in all\nhint: of your new repositories, which will suppress this warning, call:\nhint:\nhint: \tgit config --global init.defaultBranch <name>\nhint:\nhint: Names commonly chosen instead of 'master' are 'main', 'trunk' and\nhint: 'development'. The just-created branch can be renamed via this command:\nhint:\nhint: \tgit branch -m <name>\n",
+      "elapsed_seconds": 21.046411800023634
+    },
+    {
+      "args": [
+        "C:\\Windows\\System32\\OpenSSH\\ssh.exe",
+        "-F",
+        "C:\\Users\\henry\\.ssh\\config",
+        "-o",
+        "BatchMode=yes",
+        "-o",
+        "ConnectTimeout=8",
+        "insomnia-login",
+        "sbatch --parsable -A edu -p short --qos=free_short -N1 -n1 -c4 --mem=16G --time=00:15:00 --job-name=clmm-sleep-proof --output=/insomnia001/depts/edu/users/zc2819/clmm/sleep-multirevision-2026-11-15/allocation-%j.log --gres=gpu:A6000:1 --wrap=\"sleep 900\""
+      ],
+      "returncode": 0,
+      "stdout": "13921270\n",
+      "stderr": "",
+      "elapsed_seconds": 0.4526268999907188
+    },
+    {
+      "args": [
+        "C:\\Windows\\System32\\OpenSSH\\ssh.exe",
+        "-F",
+        "C:\\Users\\henry\\.ssh\\config",
+        "-o",
+        "BatchMode=yes",
+        "-o",
+        "ConnectTimeout=8",
+        "insomnia-login",
+        "squeue -j 13921270 -h -o \"%u %T %N\""
+      ],
+      "returncode": 0,
+      "stdout": "zc2819 PENDING \n",
+      "stderr": "",
+      "elapsed_seconds": 0.39396539999870583
+    },
+    {
+      "args": [
+        "C:\\Windows\\System32\\OpenSSH\\ssh.exe",
+        "-F",
+        "C:\\Users\\henry\\.ssh\\config",
+        "-o",
+        "BatchMode=yes",
+        "-o",
+        "ConnectTimeout=8",
+        "insomnia-login",
+        "squeue -j 13921270 -h -o \"%u %T %N\""
+      ],
+      "returncode": 0,
+      "stdout": "zc2819 RUNNING ins081\n",
+      "stderr": "",
+      "elapsed_seconds": 0.4256083000218496
+    },
+    {
+      "args": [
+        "C:\\Windows\\System32\\OpenSSH\\ssh.exe",
+        "-F",
+        "C:\\Users\\henry\\.ssh\\config",
+        "-o",
+        "BatchMode=yes",
+        "-o",
+        "ConnectTimeout=8",
+        "insomnia-login",
+        "scontrol show job -o 13921270"
+      ],
+      "returncode": 0,
+      "stdout": "JobId=13921270 JobName=clmm-sleep-proof UserId=zc2819(564221) GroupId=user(500) MCS_label=N/A Priority=4786 Nice=0 Account=edu QOS=free JobState=RUNNING Reason=None Dependency=(null) Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:05 TimeLimit=00:15:00 TimeMin=N/A SubmitTime=2026-11-15T16:26:13 EligibleTime=2026-11-15T16:26:13 AccrueTime=2026-11-15T16:26:13 StartTime=2026-11-15T16:26:14 EndTime=2026-11-15T16:41:14 Deadline=N/A PreemptEligibleTime=2026-11-15T16:56:14 PreemptTime=None SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-11-15T16:26:14 Scheduler=Backfill Partition=short AllocNode:Sid=2402-login-002:3168384 ReqNodeList=(null) ExcNodeList=(null) NodeList=ins081 BatchHost=ins081 NumNodes=1 NumCPUs=4 NumTasks=1 CPUs/Task=4 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=4,mem=16G,node=1,billing=4,gres/gpu=1,gres/gpu:a6000=1 AllocTRES=cpu=4,mem=16G,node=1,billing=4,gres/gpu=1,gres/gpu:a6000=1 Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=4 MinMemoryNode=16G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null) Command=(null) WorkDir=/insomnia001/home/zc2819 StdErr=/insomnia001/depts/edu/users/zc2819/clmm/sleep-multirevision-2026-11-15/allocation-13921270.log StdIn=/dev/null StdOut=/insomnia001/depts/edu/users/zc2819/clmm/sleep-multirevision-2026-11-15/allocation-13921270.log TresPerNode=gres/gpu:A6000:1 TresPerTask=cpu=4 \n",
+      "stderr": "",
+      "elapsed_seconds": 0.40234299999428913
+    },
+    {
+      "args": [
+        "C:\\Windows\\System32\\OpenSSH\\ssh.exe",
+        "-F",
+        "C:\\Users\\henry\\.ssh\\config",
+        "-o",
+        "BatchMode=yes",
+        "-o",
+        "ConnectTimeout=8",
+        "insomnia-login",
+        "tail -n 60 /insomnia001/depts/edu/users/zc2819/clmm/sleep-multirevision-2026-11-15/gpu-recheck.log"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "elapsed_seconds": 0.37118289998034015
+    },
+    {
+      "args": [
+        "C:\\Windows\\System32\\OpenSSH\\ssh.exe",
+        "-F",
+        "C:\\Users\\henry\\.ssh\\config",
+        "-o",
+        "BatchMode=yes",
+        "-o",
+        "ConnectTimeout=8",
+        "insomnia-login",
+        "scancel 13921270"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "elapsed_seconds": 0.40783989999908954
+    },
+    {
+      "args": [
+        "C:\\Windows\\System32\\OpenSSH\\ssh.exe",
+        "-F",
+        "C:\\Users\\henry\\.ssh\\config",
+        "-o",
+        "BatchMode=yes",
+        "-o",
+        "ConnectTimeout=8",
+        "insomnia-login",
+        "sacct -j 13921270 --format=JobID,User,State,Elapsed,AllocTRES,ExitCode -P; squeue -u zc2819 -h -o \"%i %T %j %M %R\""
+      ],
+      "returncode": 0,
+      "stdout": "JobID|User|State|Elapsed|AllocTRES|ExitCode\n13921270|zc2819|CANCELLED by 564221|00:07:36|billing=4,cpu=4,gres/gpu:a6000=1,gres/gpu=1,mem=16G,node=1|0:0\n13921270.batch||CANCELLED|00:07:37|cpu=4,gres/gpu:a6000=1,gres/gpu=1,mem=16G,node=1|0:15\n13921270.extern||CANCELLED|00:07:36|billing=4,cpu=4,gres/gpu:a6000=1,gres/gpu=1,mem=16G,node=1|0:0\n13921270.0||CANCELLED|00:06:57|cpu=4,gres/gpu:a6000=1,gres/gpu=1,mem=16G,node=1|0:15\n13921270.1||COMPLETED|00:00:00|cpu=1,gres/gpu:a6000=1,gres/gpu=1,mem=16G,node=1|0:0\n13921270.2||COMPLETED|00:00:00|cpu=1,gres/gpu:a6000=1,gres/gpu=1,mem=16G,node=1|0:0\n13921270 COMPLETING clmm-sleep-proof 7:36 ins081\n",
+      "stderr": "",
+      "elapsed_seconds": 0.42706750001525506
+    }
+  ],
+  "started_epoch": 1794777899.6227953,
+  "job_id": "13921270",
+  "upload_sha256": "a8a981d7717d676fda9031c29c9c3c2403d758e64f0a048780ff37c4dda4381c",
+  "verified_running_status": "zc2819 RUNNING ins081",
+  "error": "TimeoutExpired(['C:\\\\Windows\\\\System32\\\\OpenSSH\\\\ssh.exe', '-F', 'C:\\\\Users\\\\henry\\\\.ssh\\\\config', '-o', 'BatchMode=yes', '-o', 'ConnectTimeout=8', 'insomnia-login', 'timeout 420s srun --input=/dev/null --jobid=13921270 --overlap -N1 -n1 -c4 /insomnia001/depts/edu/users/zc2819/clmm/replay-2026-11-12/venv/bin/python -B /insomnia001/depts/edu/users/zc2819/clmm/sleep-multirevision-2026-11-15/recheck.py --root /insomnia001/depts/edu/users/zc2819/clmm/sleep-multirevision-2026-11-15/root --source /insomnia001/depts/edu/users/zc2819/clmm/sleep-multirevision-2026-11-15/source --device cuda --expected /insomnia001/depts/edu/users/zc2819/clmm/sleep-multirevision-2026-11-15/root/portable-proof/expected --out /insomnia001/depts/edu/users/zc2819/clmm/sleep-multirevision-2026-11-15/gpu-recheck > /insomnia001/depts/edu/users/zc2819/clmm/sleep-multirevision-2026-11-15/gpu-recheck.log 2>&1'], 450)",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-sleep-multirevision\\cluster_recheck.py\", line 33, in <module>\n    ssh(f'timeout 420s srun --input=/dev/null --jobid={job} --overlap -N1 -n1 -c4 {PY} -B {REMOTE}/recheck.py --root {REMOTE}/root --source {REMOTE}/source --device cuda --expected {REMOTE}/root/portable-proof/expected --out {REMOTE}/gpu-recheck > {REMOTE}/gpu-recheck.log 2>&1',timeout=450)\n    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-sleep-multirevision\\cluster_recheck.py\", line 16, in ssh\n    def ssh(cmd,timeout=90):return command([SSH,'-F',CONFIG,'-o','BatchMode=yes','-o','ConnectTimeout=8','insomnia-login',cmd],timeout)\n                                   ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-sleep-multirevision\\cluster_recheck.py\", line 12, in command\n    begin=time.monotonic();r=subprocess.run(args,text=True,encoding='utf8',errors='replace',capture_output=True,timeout=timeout)\n                             ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\henry\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\subprocess.py\", line 556, in run\n    stdout, stderr = process.communicate(input, timeout=timeout)\n                     ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\henry\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\subprocess.py\", line 1222, in communicate\n    stdout, stderr = self._communicate(input, endtime, timeout)\n                     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\henry\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\subprocess.py\", line 1643, in _communicate\n    raise TimeoutExpired(self.args, orig_timeout)\nsubprocess.TimeoutExpired: Command '['C:\\\\Windows\\\\System32\\\\OpenSSH\\\\ssh.exe', '-F', 'C:\\\\Users\\\\henry\\\\.ssh\\\\config', '-o', 'BatchMode=yes', '-o', 'ConnectTimeout=8', 'insomnia-login', 'timeout 420s srun --input=/dev/null --jobid=13921270 --overlap -N1 -n1 -c4 /insomnia001/depts/edu/users/zc2819/clmm/replay-2026-11-12/venv/bin/python -B /insomnia001/depts/edu/users/zc2819/clmm/sleep-multirevision-2026-11-15/recheck.py --root /insomnia001/depts/edu/users/zc2819/clmm/sleep-multirevision-2026-11-15/root --source /insomnia001/depts/edu/users/zc2819/clmm/sleep-multirevision-2026-11-15/source --device cuda --expected /insomnia001/depts/edu/users/zc2819/clmm/sleep-multirevision-2026-11-15/root/portable-proof/expected --out /insomnia001/depts/edu/users/zc2819/clmm/sleep-multirevision-2026-11-15/gpu-recheck > /insomnia001/depts/edu/users/zc2819/clmm/sleep-multirevision-2026-11-15/gpu-recheck.log 2>&1']' timed out after 450 seconds\n",
+  "cancel_requested": true,
+  "ended_epoch": 1794778433.0289989
+}

@@ -1,0 +1,80 @@
+{
+  "primary": [
+    {
+      "route_family": "balanced",
+      "phase": "mean",
+      "retention_tail": 128,
+      "category": "stable",
+      "candidate": "periodic",
+      "baseline": "continuous",
+      "candidate_accuracy": 0.83076171875,
+      "baseline_accuracy": 0.833056640625,
+      "estimate": -0.002294921874999997,
+      "lower": -0.004736328124999999,
+      "upper": -0.00024414062499999824,
+      "interval_level": 0.975,
+      "role": "co-primary",
+      "histories": 128,
+      "bootstrap_draws": 5000,
+      "bootstrap_seed": 91104
+    },
+    {
+      "route_family": "balanced",
+      "phase": "mean",
+      "retention_tail": 128,
+      "category": "revised",
+      "candidate": "periodic",
+      "baseline": "continuous",
+      "candidate_accuracy": 0.817578125,
+      "baseline_accuracy": 0.8421875,
+      "estimate": -0.024609374999999996,
+      "lower": -0.04052734375,
+      "upper": -0.0103515625,
+      "interval_level": 0.975,
+      "role": "co-primary",
+      "histories": 128,
+      "bootstrap_draws": 5000,
+      "bootstrap_seed": 91104
+    }
+  ],
+  "all_common_checkpoint_gates_pass": true,
+  "all_continuous_periodic_retention_gates_pass": false,
+  "interpretation": "revision/interference diagnostic; all conditions retained",
+  "bootstrap": {
+    "seed": 91104,
+    "draws": 5000,
+    "histories": 128,
+    "co_primary_interval_level": 0.975,
+    "secondary_interval_level": 0.95,
+    "co_primary_quantiles": [
+      0.0125,
+      0.9875
+    ],
+    "paired_unit": "whole history, jointly across phases/delays/arms/parents/maps",
+    "conditioning": "two fixed learned initializers, one fixed content map, all five fixed random maps",
+    "balanced_weighting": ".5 content + .5 mean(all5random); average2parents and2phases",
+    "scope": "conditional history uncertainty; not population training or routing-map uncertainty"
+  },
+  "status": "passed",
+  "models": 12,
+  "audited_totals": {
+    "score_vectors": 310272,
+    "causal_writes": 8474112,
+    "extra_writes": 3317760,
+    "stale_extra_writes": 45432,
+    "resource_batches": 3456,
+    "literal_plans": 55296
+  },
+  "packet_audit": "packet_audit.json",
+  "source_commit": "06c0a35b543c25437659765128b81718e5bfa1c5",
+  "data_sha256": "cebeee663219b97abd9192bfa90eb563bf39e86eb5dcac1aff1606b7c8b44046",
+  "additional_optimizer_steps": 0,
+  "verification_scope": "full saved-output arithmetic plus independent data/source reconstruction; no numerical model inference by this reviewer",
+  "tables": [
+    "gates.csv",
+    "aggregate.csv",
+    "contrasts.csv",
+    "per_condition.csv",
+    "diagnostics.csv"
+  ]
+}

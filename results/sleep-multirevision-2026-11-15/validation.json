@@ -1,0 +1,61 @@
+{
+  "status": "passed",
+  "scope": "Completed CPU comparison, full saved-output/data/source audit and selected actual CPU reproduction; GPU numerical proof is unverified",
+  "source_commit": "06c0a35b543c25437659765128b81718e5bfa1c5",
+  "baseline_tag": "35a549f137548d48aecc26e33c6f8a34a6efc97c",
+  "models": 12,
+  "tests_passed": 359,
+  "test_log_sha256": "ecb8e3bfcb13617672f5b79a6db8dfe0af177564f00455badebd040f9ee39f56",
+  "audited_totals": {
+    "score_vectors": 310272,
+    "causal_writes": 8474112,
+    "extra_writes": 3317760,
+    "stale_extra_writes": 45432,
+    "resource_batches": 3456,
+    "literal_plans": 55296
+  },
+  "primary": [
+    {
+      "category": "stable",
+      "continuous": 0.833056640625,
+      "periodic": 0.83076171875,
+      "estimate": -0.002294921874999997,
+      "lower": -0.004736328124999999,
+      "upper": -0.00024414062499999824
+    },
+    {
+      "category": "revised",
+      "continuous": 0.8421875,
+      "periodic": 0.817578125,
+      "estimate": -0.024609374999999996,
+      "lower": -0.04052734375,
+      "upper": -0.0103515625
+    }
+  ],
+  "common_gates_all_pass": true,
+  "all_CP_own_D0_gates_pass": false,
+  "cpu_selected_proof": {
+    "models": 12,
+    "queries": 5184,
+    "max_abs_error": 0,
+    "script_sha256": "26a3caac1d2bb547e9b0082d705cb77618de4b0c0e7f7bc2dddac5576d2a61cb"
+  },
+  "gpu": {
+    "status": "closed",
+    "job_id": "13921270",
+    "allocation_state": "CANCELLED",
+    "allocation_elapsed_seconds": 456,
+    "allocated_GPU_hours": 0.12666666666666668,
+    "selected_gpu_proof": "unverified: timeout with kernel I/O wait observed, no scores",
+    "no_active_user_jobs": true,
+    "helper_selection_changed": false,
+    "no_renewal": true,
+    "scheduler_sha256": "25e23c4f58d74b4b32fd80e9bb14e7cee14fdc2dafd3dacdea7bed21a013677c"
+  },
+  "analysis_inventory_sha256": "cea092e36e0e4cf02edae14408afcbbf0726255c8d6f38cf559ec551c5845704",
+  "figures_reviewed": 5,
+  "main_elapsed_seconds": 1121.7142872810364,
+  "pipeline_elapsed_seconds": 1268.0835836000042,
+  "new_optimizer_steps": 0,
+  "all_inference_stopped": true
+}
