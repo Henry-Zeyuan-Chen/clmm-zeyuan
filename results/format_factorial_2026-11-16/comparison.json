@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "contrasts_exact": 36,
+  "normal_cells_exact": 192,
+  "control_cells_exact": 96,
+  "scope": "Independent raw-logit math agrees with coordinator answer-byte joins, all counts and fixed-checkpoint paired statistics."
+}

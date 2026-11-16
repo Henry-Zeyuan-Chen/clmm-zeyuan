@@ -2,6 +2,41 @@
 
 ## Resume here
 
+**COMPLETE: independent fact/query format factorial, November 16.**
+Read [FORMAT_FACTORIAL.md](FORMAT_FACTORIAL.md) and
+[figures/source tables](../results/format_factorial_2026-11-16). Branch
+`sequence-format-factorial`; executed inference source `f6fbde2`, checkpoint
+model source `708b038`. All 24 capabilities / 14 weights remain 839,248
+parameters. Two-thread CPU inference completes in 1,449.99 seconds; no new
+training or cluster allocation. Normal within-prefix fast-memory updates
+remain active; persistent slow weights are frozen.
+
+On 128 fresh development-key worlds, four fixed V checkpoints average 72.07%
+joint-four-answer success originally, 24.61% with only changed facts, 36.72%
+with only changed queries, and 16.60% with both. Primary losses are 47.46 pp
+[45.70,48.83] and 35.35 pp [28.91,41.90] (97.5% conditional intervals).
+All four cases remain: the weak atomic model is at floor, two fitted V cases
+collapse on fact transfer, and one preserves it; query changes hurt all three
+fitted cases. S fails changed facts while D stays strong. Both format blocks
+need attention; the experiment does not identify a neural mechanism.
+
+164 focused tests, independent full-byte/checkpoint-lineage/all-138,240-score
+audits, exact coordinator statistics, and a 13,824-query / 864 actual-batch CPU
+reload pass (all scores and answers bitwise identical). Current wording is
+consulted development evidence. The future exclusion union has 790,004
+semantic histories. Artifacts, SESSION.json, log, source and verified recovery
+manifest live at
+`C:/Users/henry/Documents/Codex/2026-10-22/i/outputs/clmm-format-factorial-2026-11-16`.
+
+Next C experiment: eight paired 6k V adaptations from all four natural-selector
+checkpoints, familiar-only versus uniform 2x2 format mixing at matched semantic
+histories, supervision, input bytes and updates. Freeze truly new confirmation
+wording/histories first; use a GPU runtime gate when accessible. This training
+is planned, not executed. Keep qualified typed-memory references for A/B;
+ordinary acquisition and separately trained native-32/stateful retention remain
+unqualified. No push, team message or Google Doc edit occurred. Preserve the
+existing SLEEP_MULTIREVISION user edit and baseline tag.
+
 **COMPLETE: record selection and separate value decoding, November16.** Read
 [RECORD_SELECTION.md](RECORD_SELECTION.md), [figures/source tables](../results/record_selection_2026-11-16),
 and the artifact root

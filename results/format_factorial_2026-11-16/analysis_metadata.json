@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "source_sha256": "a12ad40353b41cf54ec3c4a80f34a5ef90efc8bdb3e4dece2c0ae4ae1267ee7f",
+  "vectors": 138240,
+  "cases": 24,
+  "normal_cells": 192,
+  "bootstrap_seed": 91804,
+  "resamples": 5000,
+  "scope": "Saved answer-byte joins; no neural inference. Conditional fixed-checkpoint effects; model/training variability not estimated."
+}

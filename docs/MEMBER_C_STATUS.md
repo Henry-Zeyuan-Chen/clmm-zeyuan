@@ -1,5 +1,35 @@
 # Member C: shared training and evaluation
 
+## Complete: fact versus query format transfer
+
+November 16: [FORMAT_FACTORIAL.md](FORMAT_FACTORIAL.md) separates fact and
+query wording on the same fresh histories using all 12 selected trained
+capabilities and 12 task-unadapted controls. Model size stays 839,248;
+normal virtual fast-memory updates remain active. All-case CPU execution
+finishes in 24.17 minutes without new training or a cluster allocation.
+
+Four fixed V checkpoints average 72.07% joint success on familiar formats,
+24.61% on fact-only changes, 36.72% on query-only changes, 16.60% on both.
+Primary losses are 47.46 [45.70,48.83] and 35.35 [28.91,41.90] pp (97.5%
+conditional intervals). Keep the failed atomic V case and fitted-case
+heterogeneity. Natural selection is fact-sensitive; known-index decoding
+remains strong. These are format-block effects, not internal-mechanism,
+retention or model-capacity proofs; consulted wording is exploratory evidence.
+
+The shared evaluator now supports independent fact/query rendering without
+weakening Episode invariants, plus full-head raw distributions, four semantic
+views, erasure controls, independent score auditing and fixed-checkpoint
+paired statistics. 164 tests and the 13,824-query exact CPU reload pass.
+Use the new 790,004-history exclusion union. The handoff includes plots,
+source tables, raw evidence, copied checkpoints and local recovery manifest.
+
+Next: paired familiar-only versus mixed-format V training, eight runs at 6k
+new updates each, all four S initializers retained. Freeze new wording and
+histories before training. Qualify ordinary key-conditioned acquisition at
+the current size before separately training native-32 and testing persistence
+after attention/buffer exit. A/B can continue with the qualified typed-memory
+reference while their intended adapters and primary project scope are settled.
+
 ## Complete: selection versus value decoding
 
 November16: [RECORD_SELECTION.md](RECORD_SELECTION.md) completes16 matched20k

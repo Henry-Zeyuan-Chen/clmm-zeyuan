@@ -6,6 +6,17 @@ We build on lucidrains' [titans-pytorch](https://github.com/lucidrains/titans-py
 
 ## Status
 
+The [fact/query format diagnostic](docs/FORMAT_FACTORIAL.md) completes 24
+frozen-weight capability evaluations with 839,248 parameters unchanged.
+Ordinary value recall averages 72.07% joint success on familiar wording,
+24.61% after changing only facts and 36.72% after changing only queries.
+Keep all four V cases and their heterogeneity; given-index decoding stays
+strong. Independent raw-score/statistical audits and the 13,824-query exact
+CPU reload pass. [Figures and source tables](results/format_factorial_2026-11-16)
+support the next matched familiar-only versus mixed-format training study.
+Native-32/stateful retention and the final A/B sequence adapters remain open.
+
+
 The [record-selection and decoding study](docs/RECORD_SELECTION.md) completes16 matched20k adaptations and8 paired6k continuations with839,248 parameters unchanged. All4 main given-index decoders pass full admission; natural selection is strong on familiar formats but fails combined fact/query format transfer. Ordinary key-to-value and composed continuations remain unqualified. The bridge has no uniform gain. Independent raw/data/tensor audits,165 tests and12,544-query CPU proofs pass. [Figures and source tables](results/record_selection_2026-11-16) are ready; use the qualified typed-memory reference for A/B while Member C qualifies full-sequence transfer and native32 acquisition.
 
 The [key-binding encoding diagnostic](docs/KEY_BINDING.md) compares digits with one-token keys in four matched adaptations of the unchanged 839,248-parameter model. Both formats fail: 0–2/256 both-correct per acquisition cell and 0/256 joint original-plus-swap success on both primary groups. Atomic keys are not a sufficient repair under this recipe. All 109 scoped tests, saved-score audits and the selected 2,560-query CPU proof pass. Member C's next diagnostic separates record selection from value decoding before scaling; qualified typed-memory controls remain available for A/B.

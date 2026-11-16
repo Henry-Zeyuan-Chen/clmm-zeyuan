@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "ended_utc": "2026-11-16T16:49:46.814151+00:00",
+  "script_sha256": "68fffd1add38a1a3a23f8ba56fedee42c32fb261ede97539c04793289c91d82a",
+  "packet_metadata_sha256": "0b78e5a80ca4b9f0dbe52b85ab171cf384b03fd0e676eed05f15e4b60cbf53ab",
+  "registry_sha256": "b9ef58244adc6ad7434625b3c85d94ac5106d96cbb9950969cbeba6c7a276a3e",
+  "trained_capabilities": 12,
+  "initial_capabilities": 12,
+  "distinct_weight_files": 14,
+  "exact_unchanged_original_source_files": 52,
+  "packet_indices": {
+    "engineering": 3456,
+    "main": 34560
+  },
+  "includes_weak_V_case": true,
+  "limitations": "JSON/hash lineage only; tensor content and parameter counts are prior verified registry evidence and runner assertions"
+}
