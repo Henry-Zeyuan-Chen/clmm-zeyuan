@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "prediction_rows": 2334720,
+  "normal_worlds": 62976,
+  "main_cases": 16,
+  "admitted": 4,
+  "source_prediction_sha256": "236f17c981359b5d665ae3d1c0420cb156bb9d2228bf0c2f52d3c2dc98525176",
+  "analysis_source_sha256": "04bcc481331acc1ebcc5830d2d3cc0e583fd65e46362765278179cea9429b86a"
+}

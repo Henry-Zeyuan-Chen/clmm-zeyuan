@@ -1,16 +1,29 @@
 # Member C: shared training and evaluation
 
-## In progress: selection versus value decoding
+## Complete: selection versus value decoding
 
-November16: [RECORD_SELECTION.md](RECORD_SELECTION.md) separates record selection
-from explicit-index value reading and ordinary full-value recall. All16
-parent/encoding/objective conditions receive20k updates with the same839,248
-parameters and95-byte inputs. Development data already distinguish familiar
-query selection from held-out wording; final evaluation is still sealed.
-Slurm13928152 plus dependent one-hour CPU audit13928622 are tracked in the
-new session's SESSION.json and EXPERIMENT_LOG.md. Full raw artifacts stay on
-Insomnia; Member C will deliver checked shared capability cards and evaluation
-controls rather than treat diagnostic success as a retention baseline.
+November16: [RECORD_SELECTION.md](RECORD_SELECTION.md) completes16 matched20k
+conditions and8 paired6k continuations with839,248 parameters unchanged.
+Natural selection works on familiar formats; known-index decoding qualifies
+all four parents/encodings. Ordinary V remains unreliable and held-out changes
+both fact and query formats. The two-call bridge has no uniform advantage;
+none of its ordinary/composed endpoints passes all-format admission. Three
+value continuations do learn strong familiar recall, so architectural
+impossibility and the necessity of enlargement are not established.
+
+The24 terminal weights have capability cards in shared_checkpoint_registry.json
+under the new artifact root. Four main D models are given-index positive
+controls with facts visible inside128-byte attention, not retention baselines.
+165 tests, independent full-data/score/tensor/decision audits,2.33M saved answer
+distributions and two12,544-query CPU proofs pass. Both Slurmjobs are closed;
+recovery ZIP/hash, compact artifacts and final figures are in the handoff.
+
+Next C work: robust ordinary formats and a same-size separately trained native32
+baseline, followed by stateful delay/revision/corruption after context/buffer
+exit. Keep the qualified typed-memory controls available for A/B's method
+work. Scope and inference-format choices are team decisions, not gates waived
+after seeing results. The current final data are now development evidence;
+use the789,300-history exclusion union for new studies.
 
 ## Latest: atomic-key control also fails binding
 

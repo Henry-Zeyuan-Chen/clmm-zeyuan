@@ -1,0 +1,17 @@
+evaluation,admitted,minimum_joint4,minimum_both,worlds
+final/terminal/68101-atomic-decode,True,256,256,256
+final/terminal/68101-atomic-select,False,14,55,256
+final/terminal/68101-atomic-select_aligned,False,1,23,256
+final/terminal/68101-atomic-value,False,0,0,256
+final/terminal/68101-digits-decode,True,256,256,256
+final/terminal/68101-digits-select,False,7,30,256
+final/terminal/68101-digits-select_aligned,False,54,123,256
+final/terminal/68101-digits-value,False,0,0,256
+final/terminal/68105-atomic-decode,True,234,238,256
+final/terminal/68105-atomic-select,False,2,11,256
+final/terminal/68105-atomic-select_aligned,False,0,0,256
+final/terminal/68105-atomic-value,False,0,0,256
+final/terminal/68105-digits-decode,True,252,254,256
+final/terminal/68105-digits-select,False,136,184,256
+final/terminal/68105-digits-select_aligned,False,4,39,256
+final/terminal/68105-digits-value,False,30,58,256

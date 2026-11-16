@@ -2,23 +2,40 @@
 
 ## Resume here
 
-**IN PROGRESS: fixed-size record selection and separate value decoding, November 16.**
-Read [RECORD_SELECTION.md](RECORD_SELECTION.md) and the session record at
-`C:/Users/henry/Documents/Codex/2026-10-22/i/outputs/clmm-record-selection-2026-11-16/SESSION.json`.
-Branch `sequence-record-selection`, executed source `708b038de7fb63506aa5f184513177684ab372ad`.
-Slurm13928152 runs the globally matched20k-update16-condition factorial on two
-A6000s; dependent CPU audit job13928622 has a separate one-hour limit. Main
-data preaudit and closed calibration raw/tensor audit passed. Final outputs
-remain sealed until terminal development choices and conditional training
-finish. The direct SSH route timed out; existing AICS SSH jump `-J aics`
-works. Absolute GPU stop14:52:49UTC, user window ends15:52:49UTC.
+**COMPLETE: record selection and separate value decoding, November16.** Read
+[RECORD_SELECTION.md](RECORD_SELECTION.md), [figures/source tables](../results/record_selection_2026-11-16),
+and the artifact root
+`C:/Users/henry/Documents/Codex/2026-10-22/i/outputs/clmm-record-selection-2026-11-16/`.
+Branch `sequence-record-selection`; executed source708b038de7fb63506aa5f184513177684ab372ad.
+All16 main20k cases and8 paired6k continuations finish at839,248 parameters.
+Familiar-development joint success averages96.29% natural selection,100% known-index
+decoding,13.38% ordinary V. Held-out fact+query formats yield15.53%,97.46%,2.93%.
+Among the16 main models, only the four D controls pass all-format admission. The bridge's familiar
+average gain is entirely one atomic case; no ordinary/composed model qualifies.
+No retention or model-capacity-impossibility claim follows.
 
-Full canonical packets/source/raw evidence are on shared Insomnia storage:
+165 frozen-source tests,2,334,720 saved answer distributions plus routing arrays,
+data/temporal-seal/tensor audits and both12,544-query CPU proofs pass. The registry
+retains all24 terminal weights and per-capability limits. Three final figures
+were visually checked. Current final histories are now consulted data; next
+study exclusion union789,300 is in gpu-results/analysis/.
+
+Slurm13928152 and13928622 are COMPLETED/exit0,13.075 allocated GPU-hours and
+849 CPU-job seconds. Exact closure is cluster_closure.txt. Full remote evidence:
 `/insomnia001/depts/edu/users/zc2819/clmm/record-selection-2026-11-16`.
-Local packet caches were deliberately trimmed only after hash-verified remote
-uploads when C: filled transiently; do not assume those caches are complete.
-No source model size increase, push, Google Doc change, teammate message,
-baseline-tag move, helper-selection change or unrelated-job cancellation.
+The verified3.060GB cluster recovery ZIP's SHA256 is
+6965d2cd8cdf031589af8b9e083241157473fae747fe0ade09aaf4d437f598b8.
+Local compact/numerical ZIPs pass inbound SHA/CRC. Full recovery plus final
+supplement are required for the later Windows proof/figures/docs. Original local
+packet caches are intentionally incomplete after verified duplicate cleanup.
+Use existing SSH `-J aics` if direct Insomnia route times out. Disk/launcher and
+observer outages did not restart the bounded independent batch run.
+
+Member C next: same-size format-robust ordinary V and separately trained native32
+acquisition, then stateful delay/revision/corruption. Keep qualified typed-memory
+controls for A/B. Team scope choices: component/full sequence, format-transfer
+gate, and two-call deployment protocol. No push, Google Doc edit, teammate
+message, baseline-tag move, helper-selection change or unrelated cancellation.
 
 **COMPLETE: fixed-size key binding diagnostic; acquisition FAILED, November 15.** Read [KEY_BINDING.md](KEY_BINDING.md). Local branch `sequence-key-binding`; executed source `5e8c61829ff85ecea3c9314d4ccd8dfef3268b68`. Four terminal models cross the original language parents 68101/68105 and digit/one-token atomic keys, all independently trained at attention segment 128 with 839,248 registered parameters unchanged. Each receives 2,000 updates, 32,000 answer forks and 2,908,928 input bytes. All four task-unadapted initial conditions and recovery-only step-1000 checkpoints are retained. No outcome-based extra training or model enlargement occurred.
 
