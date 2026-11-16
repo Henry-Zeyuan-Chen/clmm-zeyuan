@@ -1,0 +1,3235 @@
+[
+  {
+    "id": "68101-atomic-constant",
+    "pair": "68101-atomic",
+    "parent": 68101,
+    "encoding": "atomic",
+    "arm": "constant",
+    "admitted": false,
+    "failed_endpoints": 90,
+    "tested_endpoints": 90,
+    "failures": [
+      {
+        "group": "train_keys",
+        "cell": "F0Q0",
+        "metric": "joint4",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F0Q0",
+        "metric": "original_both",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F0Q0",
+        "metric": "order_both",
+        "count": 1,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F0Q0",
+        "metric": "value_both",
+        "count": 2,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F0Q0",
+        "metric": "order_value_both",
+        "count": 2,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F0Q1",
+        "metric": "joint4",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F0Q1",
+        "metric": "original_both",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F0Q1",
+        "metric": "order_both",
+        "count": 1,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F0Q1",
+        "metric": "value_both",
+        "count": 1,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F0Q1",
+        "metric": "order_value_both",
+        "count": 1,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F0Q3",
+        "metric": "joint4",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F0Q3",
+        "metric": "original_both",
+        "count": 2,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F0Q3",
+        "metric": "order_both",
+        "count": 1,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F0Q3",
+        "metric": "value_both",
+        "count": 1,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F0Q3",
+        "metric": "order_value_both",
+        "count": 3,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F1Q0",
+        "metric": "joint4",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F1Q0",
+        "metric": "original_both",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F1Q0",
+        "metric": "order_both",
+        "count": 2,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F1Q0",
+        "metric": "value_both",
+        "count": 2,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F1Q0",
+        "metric": "order_value_both",
+        "count": 2,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F1Q1",
+        "metric": "joint4",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F1Q1",
+        "metric": "original_both",
+        "count": 1,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F1Q1",
+        "metric": "order_both",
+        "count": 1,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F1Q1",
+        "metric": "value_both",
+        "count": 1,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F1Q1",
+        "metric": "order_value_both",
+        "count": 1,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F1Q3",
+        "metric": "joint4",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F1Q3",
+        "metric": "original_both",
+        "count": 2,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F1Q3",
+        "metric": "order_both",
+        "count": 3,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F1Q3",
+        "metric": "value_both",
+        "count": 1,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F1Q3",
+        "metric": "order_value_both",
+        "count": 3,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q0",
+        "metric": "joint4",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q0",
+        "metric": "original_both",
+        "count": 3,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q0",
+        "metric": "order_both",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q0",
+        "metric": "value_both",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q0",
+        "metric": "order_value_both",
+        "count": 1,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q1",
+        "metric": "joint4",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q1",
+        "metric": "original_both",
+        "count": 1,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q1",
+        "metric": "order_both",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q1",
+        "metric": "value_both",
+        "count": 1,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q1",
+        "metric": "order_value_both",
+        "count": 1,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q3",
+        "metric": "joint4",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q3",
+        "metric": "original_both",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q3",
+        "metric": "order_both",
+        "count": 1,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q3",
+        "metric": "value_both",
+        "count": 1,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q3",
+        "metric": "order_value_both",
+        "count": 1,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F0Q0",
+        "metric": "joint4",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F0Q0",
+        "metric": "original_both",
+        "count": 2,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F0Q0",
+        "metric": "order_both",
+        "count": 1,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F0Q0",
+        "metric": "value_both",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F0Q0",
+        "metric": "order_value_both",
+        "count": 1,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F0Q1",
+        "metric": "joint4",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F0Q1",
+        "metric": "original_both",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F0Q1",
+        "metric": "order_both",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F0Q1",
+        "metric": "value_both",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F0Q1",
+        "metric": "order_value_both",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F0Q3",
+        "metric": "joint4",
+        "count": 1,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F0Q3",
+        "metric": "original_both",
+        "count": 3,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F0Q3",
+        "metric": "order_both",
+        "count": 3,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F0Q3",
+        "metric": "value_both",
+        "count": 2,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F0Q3",
+        "metric": "order_value_both",
+        "count": 2,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F1Q0",
+        "metric": "joint4",
+        "count": 2,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F1Q0",
+        "metric": "original_both",
+        "count": 4,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F1Q0",
+        "metric": "order_both",
+        "count": 3,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F1Q0",
+        "metric": "value_both",
+        "count": 1,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F1Q0",
+        "metric": "order_value_both",
+        "count": 1,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F1Q1",
+        "metric": "joint4",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F1Q1",
+        "metric": "original_both",
+        "count": 2,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F1Q1",
+        "metric": "order_both",
+        "count": 1,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F1Q1",
+        "metric": "value_both",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F1Q1",
+        "metric": "order_value_both",
+        "count": 1,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F1Q3",
+        "metric": "joint4",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F1Q3",
+        "metric": "original_both",
+        "count": 2,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F1Q3",
+        "metric": "order_both",
+        "count": 2,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F1Q3",
+        "metric": "value_both",
+        "count": 1,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F1Q3",
+        "metric": "order_value_both",
+        "count": 1,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q0",
+        "metric": "joint4",
+        "count": 1,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q0",
+        "metric": "original_both",
+        "count": 2,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q0",
+        "metric": "order_both",
+        "count": 1,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q0",
+        "metric": "value_both",
+        "count": 2,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q0",
+        "metric": "order_value_both",
+        "count": 3,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q1",
+        "metric": "joint4",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q1",
+        "metric": "original_both",
+        "count": 1,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q1",
+        "metric": "order_both",
+        "count": 1,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q1",
+        "metric": "value_both",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q1",
+        "metric": "order_value_both",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q3",
+        "metric": "joint4",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q3",
+        "metric": "original_both",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q3",
+        "metric": "order_both",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q3",
+        "metric": "value_both",
+        "count": 1,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q3",
+        "metric": "order_value_both",
+        "count": 0,
+        "required": 205
+      }
+    ],
+    "scope": "Visible attention128 acquisition only"
+  },
+  {
+    "id": "68101-atomic-warmup",
+    "pair": "68101-atomic",
+    "parent": 68101,
+    "encoding": "atomic",
+    "arm": "warmup",
+    "admitted": false,
+    "failed_endpoints": 90,
+    "tested_endpoints": 90,
+    "failures": [
+      {
+        "group": "train_keys",
+        "cell": "F0Q0",
+        "metric": "joint4",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F0Q0",
+        "metric": "original_both",
+        "count": 2,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F0Q0",
+        "metric": "order_both",
+        "count": 2,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F0Q0",
+        "metric": "value_both",
+        "count": 2,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F0Q0",
+        "metric": "order_value_both",
+        "count": 2,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F0Q1",
+        "metric": "joint4",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F0Q1",
+        "metric": "original_both",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F0Q1",
+        "metric": "order_both",
+        "count": 1,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F0Q1",
+        "metric": "value_both",
+        "count": 2,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F0Q1",
+        "metric": "order_value_both",
+        "count": 1,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F0Q3",
+        "metric": "joint4",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F0Q3",
+        "metric": "original_both",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F0Q3",
+        "metric": "order_both",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F0Q3",
+        "metric": "value_both",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F0Q3",
+        "metric": "order_value_both",
+        "count": 1,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F1Q0",
+        "metric": "joint4",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F1Q0",
+        "metric": "original_both",
+        "count": 1,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F1Q0",
+        "metric": "order_both",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F1Q0",
+        "metric": "value_both",
+        "count": 4,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F1Q0",
+        "metric": "order_value_both",
+        "count": 1,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F1Q1",
+        "metric": "joint4",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F1Q1",
+        "metric": "original_both",
+        "count": 2,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F1Q1",
+        "metric": "order_both",
+        "count": 3,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F1Q1",
+        "metric": "value_both",
+        "count": 1,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F1Q1",
+        "metric": "order_value_both",
+        "count": 3,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F1Q3",
+        "metric": "joint4",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F1Q3",
+        "metric": "original_both",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F1Q3",
+        "metric": "order_both",
+        "count": 1,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F1Q3",
+        "metric": "value_both",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F1Q3",
+        "metric": "order_value_both",
+        "count": 1,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q0",
+        "metric": "joint4",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q0",
+        "metric": "original_both",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q0",
+        "metric": "order_both",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q0",
+        "metric": "value_both",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q0",
+        "metric": "order_value_both",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q1",
+        "metric": "joint4",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q1",
+        "metric": "original_both",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q1",
+        "metric": "order_both",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q1",
+        "metric": "value_both",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q1",
+        "metric": "order_value_both",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q3",
+        "metric": "joint4",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q3",
+        "metric": "original_both",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q3",
+        "metric": "order_both",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q3",
+        "metric": "value_both",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q3",
+        "metric": "order_value_both",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F0Q0",
+        "metric": "joint4",
+        "count": 1,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F0Q0",
+        "metric": "original_both",
+        "count": 1,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F0Q0",
+        "metric": "order_both",
+        "count": 2,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F0Q0",
+        "metric": "value_both",
+        "count": 3,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F0Q0",
+        "metric": "order_value_both",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F0Q1",
+        "metric": "joint4",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F0Q1",
+        "metric": "original_both",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F0Q1",
+        "metric": "order_both",
+        "count": 2,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F0Q1",
+        "metric": "value_both",
+        "count": 1,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F0Q1",
+        "metric": "order_value_both",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F0Q3",
+        "metric": "joint4",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F0Q3",
+        "metric": "original_both",
+        "count": 3,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F0Q3",
+        "metric": "order_both",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F0Q3",
+        "metric": "value_both",
+        "count": 2,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F0Q3",
+        "metric": "order_value_both",
+        "count": 2,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F1Q0",
+        "metric": "joint4",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F1Q0",
+        "metric": "original_both",
+        "count": 1,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F1Q0",
+        "metric": "order_both",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F1Q0",
+        "metric": "value_both",
+        "count": 3,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F1Q0",
+        "metric": "order_value_both",
+        "count": 2,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F1Q1",
+        "metric": "joint4",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F1Q1",
+        "metric": "original_both",
+        "count": 1,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F1Q1",
+        "metric": "order_both",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F1Q1",
+        "metric": "value_both",
+        "count": 1,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F1Q1",
+        "metric": "order_value_both",
+        "count": 2,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F1Q3",
+        "metric": "joint4",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F1Q3",
+        "metric": "original_both",
+        "count": 1,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F1Q3",
+        "metric": "order_both",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F1Q3",
+        "metric": "value_both",
+        "count": 1,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F1Q3",
+        "metric": "order_value_both",
+        "count": 2,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q0",
+        "metric": "joint4",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q0",
+        "metric": "original_both",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q0",
+        "metric": "order_both",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q0",
+        "metric": "value_both",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q0",
+        "metric": "order_value_both",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q1",
+        "metric": "joint4",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q1",
+        "metric": "original_both",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q1",
+        "metric": "order_both",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q1",
+        "metric": "value_both",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q1",
+        "metric": "order_value_both",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q3",
+        "metric": "joint4",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q3",
+        "metric": "original_both",
+        "count": 1,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q3",
+        "metric": "order_both",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q3",
+        "metric": "value_both",
+        "count": 0,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q3",
+        "metric": "order_value_both",
+        "count": 1,
+        "required": 205
+      }
+    ],
+    "scope": "Visible attention128 acquisition only"
+  },
+  {
+    "id": "68101-digits-constant",
+    "pair": "68101-digits",
+    "parent": 68101,
+    "encoding": "digits",
+    "arm": "constant",
+    "admitted": false,
+    "failed_endpoints": 59,
+    "tested_endpoints": 90,
+    "failures": [
+      {
+        "group": "train_keys",
+        "cell": "F0Q0",
+        "metric": "joint4",
+        "count": 199,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F0Q1",
+        "metric": "joint4",
+        "count": 197,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F0Q3",
+        "metric": "joint4",
+        "count": 159,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F0Q3",
+        "metric": "original_both",
+        "count": 180,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F0Q3",
+        "metric": "order_both",
+        "count": 186,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F0Q3",
+        "metric": "value_both",
+        "count": 176,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F0Q3",
+        "metric": "order_value_both",
+        "count": 176,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F1Q0",
+        "metric": "joint4",
+        "count": 202,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F1Q1",
+        "metric": "joint4",
+        "count": 199,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F1Q1",
+        "metric": "original_both",
+        "count": 204,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F1Q3",
+        "metric": "joint4",
+        "count": 150,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F1Q3",
+        "metric": "original_both",
+        "count": 169,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F1Q3",
+        "metric": "order_both",
+        "count": 179,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F1Q3",
+        "metric": "value_both",
+        "count": 168,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F1Q3",
+        "metric": "order_value_both",
+        "count": 162,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q0",
+        "metric": "joint4",
+        "count": 93,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q0",
+        "metric": "original_both",
+        "count": 120,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q0",
+        "metric": "order_both",
+        "count": 135,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q0",
+        "metric": "value_both",
+        "count": 130,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q0",
+        "metric": "order_value_both",
+        "count": 134,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q1",
+        "metric": "joint4",
+        "count": 93,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q1",
+        "metric": "original_both",
+        "count": 117,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q1",
+        "metric": "order_both",
+        "count": 129,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q1",
+        "metric": "value_both",
+        "count": 132,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q1",
+        "metric": "order_value_both",
+        "count": 126,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q3",
+        "metric": "joint4",
+        "count": 74,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q3",
+        "metric": "original_both",
+        "count": 113,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q3",
+        "metric": "order_both",
+        "count": 124,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q3",
+        "metric": "value_both",
+        "count": 116,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q3",
+        "metric": "order_value_both",
+        "count": 113,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F0Q0",
+        "metric": "joint4",
+        "count": 204,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F0Q1",
+        "metric": "joint4",
+        "count": 201,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F0Q3",
+        "metric": "joint4",
+        "count": 155,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F0Q3",
+        "metric": "original_both",
+        "count": 187,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F0Q3",
+        "metric": "order_both",
+        "count": 174,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F0Q3",
+        "metric": "value_both",
+        "count": 180,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F0Q3",
+        "metric": "order_value_both",
+        "count": 177,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F1Q0",
+        "metric": "joint4",
+        "count": 201,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F1Q1",
+        "metric": "joint4",
+        "count": 197,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F1Q3",
+        "metric": "joint4",
+        "count": 136,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F1Q3",
+        "metric": "original_both",
+        "count": 163,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F1Q3",
+        "metric": "order_both",
+        "count": 161,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F1Q3",
+        "metric": "value_both",
+        "count": 166,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F1Q3",
+        "metric": "order_value_both",
+        "count": 165,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q0",
+        "metric": "joint4",
+        "count": 95,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q0",
+        "metric": "original_both",
+        "count": 119,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q0",
+        "metric": "order_both",
+        "count": 126,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q0",
+        "metric": "value_both",
+        "count": 130,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q0",
+        "metric": "order_value_both",
+        "count": 134,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q1",
+        "metric": "joint4",
+        "count": 90,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q1",
+        "metric": "original_both",
+        "count": 117,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q1",
+        "metric": "order_both",
+        "count": 128,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q1",
+        "metric": "value_both",
+        "count": 126,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q1",
+        "metric": "order_value_both",
+        "count": 133,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q3",
+        "metric": "joint4",
+        "count": 73,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q3",
+        "metric": "original_both",
+        "count": 112,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q3",
+        "metric": "order_both",
+        "count": 115,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q3",
+        "metric": "value_both",
+        "count": 111,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q3",
+        "metric": "order_value_both",
+        "count": 111,
+        "required": 205
+      }
+    ],
+    "scope": "Visible attention128 acquisition only"
+  },
+  {
+    "id": "68101-digits-warmup",
+    "pair": "68101-digits",
+    "parent": 68101,
+    "encoding": "digits",
+    "arm": "warmup",
+    "admitted": false,
+    "failed_endpoints": 42,
+    "tested_endpoints": 90,
+    "failures": [
+      {
+        "group": "train_keys",
+        "cell": "F0Q3",
+        "metric": "joint4",
+        "count": 193,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F1Q3",
+        "metric": "joint4",
+        "count": 127,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F1Q3",
+        "metric": "original_both",
+        "count": 179,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F1Q3",
+        "metric": "order_both",
+        "count": 175,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F1Q3",
+        "metric": "value_both",
+        "count": 182,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F1Q3",
+        "metric": "order_value_both",
+        "count": 183,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q0",
+        "metric": "joint4",
+        "count": 105,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q0",
+        "metric": "original_both",
+        "count": 154,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q0",
+        "metric": "order_both",
+        "count": 155,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q0",
+        "metric": "value_both",
+        "count": 153,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q0",
+        "metric": "order_value_both",
+        "count": 154,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q1",
+        "metric": "joint4",
+        "count": 131,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q1",
+        "metric": "original_both",
+        "count": 180,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q1",
+        "metric": "order_both",
+        "count": 176,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q1",
+        "metric": "value_both",
+        "count": 185,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q1",
+        "metric": "order_value_both",
+        "count": 177,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q3",
+        "metric": "joint4",
+        "count": 109,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q3",
+        "metric": "original_both",
+        "count": 166,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q3",
+        "metric": "order_both",
+        "count": 173,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q3",
+        "metric": "value_both",
+        "count": 160,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q3",
+        "metric": "order_value_both",
+        "count": 170,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F0Q3",
+        "metric": "joint4",
+        "count": 201,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F1Q3",
+        "metric": "joint4",
+        "count": 132,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F1Q3",
+        "metric": "original_both",
+        "count": 176,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F1Q3",
+        "metric": "order_both",
+        "count": 179,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F1Q3",
+        "metric": "value_both",
+        "count": 183,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F1Q3",
+        "metric": "order_value_both",
+        "count": 172,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q0",
+        "metric": "joint4",
+        "count": 105,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q0",
+        "metric": "original_both",
+        "count": 157,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q0",
+        "metric": "order_both",
+        "count": 161,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q0",
+        "metric": "value_both",
+        "count": 159,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q0",
+        "metric": "order_value_both",
+        "count": 164,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q1",
+        "metric": "joint4",
+        "count": 142,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q1",
+        "metric": "original_both",
+        "count": 185,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q1",
+        "metric": "order_both",
+        "count": 189,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q1",
+        "metric": "value_both",
+        "count": 185,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q1",
+        "metric": "order_value_both",
+        "count": 188,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q3",
+        "metric": "joint4",
+        "count": 115,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q3",
+        "metric": "original_both",
+        "count": 176,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q3",
+        "metric": "order_both",
+        "count": 174,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q3",
+        "metric": "value_both",
+        "count": 178,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q3",
+        "metric": "order_value_both",
+        "count": 163,
+        "required": 205
+      }
+    ],
+    "scope": "Visible attention128 acquisition only"
+  },
+  {
+    "id": "68105-atomic-constant",
+    "pair": "68105-atomic",
+    "parent": 68105,
+    "encoding": "atomic",
+    "arm": "constant",
+    "admitted": false,
+    "failed_endpoints": 50,
+    "tested_endpoints": 90,
+    "failures": [
+      {
+        "group": "train_keys",
+        "cell": "F0Q3",
+        "metric": "joint4",
+        "count": 158,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F0Q3",
+        "metric": "original_both",
+        "count": 185,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F0Q3",
+        "metric": "order_both",
+        "count": 183,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F0Q3",
+        "metric": "value_both",
+        "count": 183,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F0Q3",
+        "metric": "order_value_both",
+        "count": 180,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F1Q3",
+        "metric": "joint4",
+        "count": 165,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F1Q3",
+        "metric": "original_both",
+        "count": 192,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F1Q3",
+        "metric": "order_both",
+        "count": 188,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F1Q3",
+        "metric": "value_both",
+        "count": 192,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F1Q3",
+        "metric": "order_value_both",
+        "count": 185,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q0",
+        "metric": "joint4",
+        "count": 129,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q0",
+        "metric": "original_both",
+        "count": 176,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q0",
+        "metric": "order_both",
+        "count": 161,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q0",
+        "metric": "value_both",
+        "count": 179,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q0",
+        "metric": "order_value_both",
+        "count": 166,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q1",
+        "metric": "joint4",
+        "count": 134,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q1",
+        "metric": "original_both",
+        "count": 174,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q1",
+        "metric": "order_both",
+        "count": 169,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q1",
+        "metric": "value_both",
+        "count": 180,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q1",
+        "metric": "order_value_both",
+        "count": 172,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q3",
+        "metric": "joint4",
+        "count": 88,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q3",
+        "metric": "original_both",
+        "count": 143,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q3",
+        "metric": "order_both",
+        "count": 120,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q3",
+        "metric": "value_both",
+        "count": 144,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q3",
+        "metric": "order_value_both",
+        "count": 125,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F0Q3",
+        "metric": "joint4",
+        "count": 111,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F0Q3",
+        "metric": "original_both",
+        "count": 131,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F0Q3",
+        "metric": "order_both",
+        "count": 131,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F0Q3",
+        "metric": "value_both",
+        "count": 132,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F0Q3",
+        "metric": "order_value_both",
+        "count": 133,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F1Q3",
+        "metric": "joint4",
+        "count": 109,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F1Q3",
+        "metric": "original_both",
+        "count": 130,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F1Q3",
+        "metric": "order_both",
+        "count": 129,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F1Q3",
+        "metric": "value_both",
+        "count": 131,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F1Q3",
+        "metric": "order_value_both",
+        "count": 130,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q0",
+        "metric": "joint4",
+        "count": 93,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q0",
+        "metric": "original_both",
+        "count": 141,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q0",
+        "metric": "order_both",
+        "count": 137,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q0",
+        "metric": "value_both",
+        "count": 139,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q0",
+        "metric": "order_value_both",
+        "count": 137,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q1",
+        "metric": "joint4",
+        "count": 99,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q1",
+        "metric": "original_both",
+        "count": 149,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q1",
+        "metric": "order_both",
+        "count": 136,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q1",
+        "metric": "value_both",
+        "count": 145,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q1",
+        "metric": "order_value_both",
+        "count": 136,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q3",
+        "metric": "joint4",
+        "count": 44,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q3",
+        "metric": "original_both",
+        "count": 81,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q3",
+        "metric": "order_both",
+        "count": 82,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q3",
+        "metric": "value_both",
+        "count": 86,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q3",
+        "metric": "order_value_both",
+        "count": 79,
+        "required": 205
+      }
+    ],
+    "scope": "Visible attention128 acquisition only"
+  },
+  {
+    "id": "68105-atomic-warmup",
+    "pair": "68105-atomic",
+    "parent": 68105,
+    "encoding": "atomic",
+    "arm": "warmup",
+    "admitted": false,
+    "failed_endpoints": 50,
+    "tested_endpoints": 90,
+    "failures": [
+      {
+        "group": "train_keys",
+        "cell": "F0Q3",
+        "metric": "joint4",
+        "count": 127,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F0Q3",
+        "metric": "original_both",
+        "count": 157,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F0Q3",
+        "metric": "order_both",
+        "count": 138,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F0Q3",
+        "metric": "value_both",
+        "count": 153,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F0Q3",
+        "metric": "order_value_both",
+        "count": 137,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F1Q3",
+        "metric": "joint4",
+        "count": 133,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F1Q3",
+        "metric": "original_both",
+        "count": 160,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F1Q3",
+        "metric": "order_both",
+        "count": 145,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F1Q3",
+        "metric": "value_both",
+        "count": 154,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F1Q3",
+        "metric": "order_value_both",
+        "count": 143,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q0",
+        "metric": "joint4",
+        "count": 126,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q0",
+        "metric": "original_both",
+        "count": 171,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q0",
+        "metric": "order_both",
+        "count": 169,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q0",
+        "metric": "value_both",
+        "count": 169,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q0",
+        "metric": "order_value_both",
+        "count": 161,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q1",
+        "metric": "joint4",
+        "count": 124,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q1",
+        "metric": "original_both",
+        "count": 170,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q1",
+        "metric": "order_both",
+        "count": 170,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q1",
+        "metric": "value_both",
+        "count": 170,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q1",
+        "metric": "order_value_both",
+        "count": 166,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q3",
+        "metric": "joint4",
+        "count": 71,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q3",
+        "metric": "original_both",
+        "count": 108,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q3",
+        "metric": "order_both",
+        "count": 96,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q3",
+        "metric": "value_both",
+        "count": 105,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q3",
+        "metric": "order_value_both",
+        "count": 99,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F0Q3",
+        "metric": "joint4",
+        "count": 117,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F0Q3",
+        "metric": "original_both",
+        "count": 133,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F0Q3",
+        "metric": "order_both",
+        "count": 127,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F0Q3",
+        "metric": "value_both",
+        "count": 132,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F0Q3",
+        "metric": "order_value_both",
+        "count": 131,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F1Q3",
+        "metric": "joint4",
+        "count": 117,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F1Q3",
+        "metric": "original_both",
+        "count": 130,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F1Q3",
+        "metric": "order_both",
+        "count": 131,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F1Q3",
+        "metric": "value_both",
+        "count": 131,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F1Q3",
+        "metric": "order_value_both",
+        "count": 130,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q0",
+        "metric": "joint4",
+        "count": 104,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q0",
+        "metric": "original_both",
+        "count": 148,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q0",
+        "metric": "order_both",
+        "count": 146,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q0",
+        "metric": "value_both",
+        "count": 146,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q0",
+        "metric": "order_value_both",
+        "count": 147,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q1",
+        "metric": "joint4",
+        "count": 113,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q1",
+        "metric": "original_both",
+        "count": 158,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q1",
+        "metric": "order_both",
+        "count": 161,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q1",
+        "metric": "value_both",
+        "count": 158,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q1",
+        "metric": "order_value_both",
+        "count": 159,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q3",
+        "metric": "joint4",
+        "count": 55,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q3",
+        "metric": "original_both",
+        "count": 89,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q3",
+        "metric": "order_both",
+        "count": 75,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q3",
+        "metric": "value_both",
+        "count": 88,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q3",
+        "metric": "order_value_both",
+        "count": 83,
+        "required": 205
+      }
+    ],
+    "scope": "Visible attention128 acquisition only"
+  },
+  {
+    "id": "68105-digits-constant",
+    "pair": "68105-digits",
+    "parent": 68105,
+    "encoding": "digits",
+    "arm": "constant",
+    "admitted": false,
+    "failed_endpoints": 16,
+    "tested_endpoints": 90,
+    "failures": [
+      {
+        "group": "train_keys",
+        "cell": "F1Q3",
+        "metric": "joint4",
+        "count": 187,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q0",
+        "metric": "joint4",
+        "count": 193,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q1",
+        "metric": "joint4",
+        "count": 199,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q3",
+        "metric": "joint4",
+        "count": 140,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q3",
+        "metric": "original_both",
+        "count": 193,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q3",
+        "metric": "order_both",
+        "count": 182,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q3",
+        "metric": "value_both",
+        "count": 193,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q3",
+        "metric": "order_value_both",
+        "count": 192,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F0Q3",
+        "metric": "joint4",
+        "count": 198,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F1Q3",
+        "metric": "joint4",
+        "count": 176,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F1Q3",
+        "metric": "order_value_both",
+        "count": 202,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q3",
+        "metric": "joint4",
+        "count": 134,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q3",
+        "metric": "original_both",
+        "count": 184,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q3",
+        "metric": "order_both",
+        "count": 180,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q3",
+        "metric": "value_both",
+        "count": 194,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q3",
+        "metric": "order_value_both",
+        "count": 178,
+        "required": 205
+      }
+    ],
+    "scope": "Visible attention128 acquisition only"
+  },
+  {
+    "id": "68105-digits-warmup",
+    "pair": "68105-digits",
+    "parent": 68105,
+    "encoding": "digits",
+    "arm": "warmup",
+    "admitted": false,
+    "failed_endpoints": 50,
+    "tested_endpoints": 90,
+    "failures": [
+      {
+        "group": "train_keys",
+        "cell": "F0Q3",
+        "metric": "joint4",
+        "count": 34,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F0Q3",
+        "metric": "original_both",
+        "count": 79,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F0Q3",
+        "metric": "order_both",
+        "count": 90,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F0Q3",
+        "metric": "value_both",
+        "count": 85,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F0Q3",
+        "metric": "order_value_both",
+        "count": 78,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F1Q3",
+        "metric": "joint4",
+        "count": 29,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F1Q3",
+        "metric": "original_both",
+        "count": 89,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F1Q3",
+        "metric": "order_both",
+        "count": 78,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F1Q3",
+        "metric": "value_both",
+        "count": 88,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F1Q3",
+        "metric": "order_value_both",
+        "count": 80,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q0",
+        "metric": "joint4",
+        "count": 132,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q0",
+        "metric": "original_both",
+        "count": 171,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q0",
+        "metric": "order_both",
+        "count": 184,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q0",
+        "metric": "value_both",
+        "count": 171,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q0",
+        "metric": "order_value_both",
+        "count": 176,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q1",
+        "metric": "joint4",
+        "count": 140,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q1",
+        "metric": "original_both",
+        "count": 177,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q1",
+        "metric": "order_both",
+        "count": 186,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q1",
+        "metric": "value_both",
+        "count": 183,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q1",
+        "metric": "order_value_both",
+        "count": 189,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q3",
+        "metric": "joint4",
+        "count": 15,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q3",
+        "metric": "original_both",
+        "count": 58,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q3",
+        "metric": "order_both",
+        "count": 52,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q3",
+        "metric": "value_both",
+        "count": 59,
+        "required": 205
+      },
+      {
+        "group": "train_keys",
+        "cell": "F3Q3",
+        "metric": "order_value_both",
+        "count": 49,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F0Q3",
+        "metric": "joint4",
+        "count": 30,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F0Q3",
+        "metric": "original_both",
+        "count": 86,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F0Q3",
+        "metric": "order_both",
+        "count": 80,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F0Q3",
+        "metric": "value_both",
+        "count": 93,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F0Q3",
+        "metric": "order_value_both",
+        "count": 82,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F1Q3",
+        "metric": "joint4",
+        "count": 34,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F1Q3",
+        "metric": "original_both",
+        "count": 88,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F1Q3",
+        "metric": "order_both",
+        "count": 79,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F1Q3",
+        "metric": "value_both",
+        "count": 92,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F1Q3",
+        "metric": "order_value_both",
+        "count": 80,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q0",
+        "metric": "joint4",
+        "count": 115,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q0",
+        "metric": "original_both",
+        "count": 169,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q0",
+        "metric": "order_both",
+        "count": 164,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q0",
+        "metric": "value_both",
+        "count": 182,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q0",
+        "metric": "order_value_both",
+        "count": 161,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q1",
+        "metric": "joint4",
+        "count": 129,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q1",
+        "metric": "original_both",
+        "count": 182,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q1",
+        "metric": "order_both",
+        "count": 174,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q1",
+        "metric": "value_both",
+        "count": 190,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q1",
+        "metric": "order_value_both",
+        "count": 177,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q3",
+        "metric": "joint4",
+        "count": 13,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q3",
+        "metric": "original_both",
+        "count": 50,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q3",
+        "metric": "order_both",
+        "count": 40,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q3",
+        "metric": "value_both",
+        "count": 53,
+        "required": 205
+      },
+      {
+        "group": "dev_keys",
+        "cell": "F3Q3",
+        "metric": "order_value_both",
+        "count": 52,
+        "required": 205
+      }
+    ],
+    "scope": "Visible attention128 acquisition only"
+  }
+]

@@ -6,6 +6,17 @@ We build on lucidrains' [titans-pytorch](https://github.com/lucidrains/titans-py
 
 ## Status
 
+The [eight matched LR runs](docs/LR_WARMUP.md) complete6k updates each at
+839,248 parameters. A500-step warm-up improves familiar-wording mean recall
+by5.27pp on development keys but reduces new-wording mean recall by6.64pp.
+The result varies by initializer; the weak atomic pair stays near floor.
+**0/8 terminals pass full admission.** Keep constant LR as the reference.
+All raw/tensor/statistical checks and14,592 selectedCPUqueries pass; the GPU
+job is closed. [Five figures and source tables](results/lr_warmup_2026-11-16)
+retain all cases. Member C's proposed next diagnostic separates value-head
+alignment from later representation adaptation at fixed registered size.
+A/B can continue using the qualified typed-memory components.
+
 The [eight matched format-training runs](docs/FORMAT_TRAINING.md) finish 6k
 updates each at 839,248 parameters. Mixed wording improves the fixed-case mean
 on three reserved-wording endpoints by 16–20 pp, while familiar recall falls

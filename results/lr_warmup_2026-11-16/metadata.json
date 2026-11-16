@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "vectors": 466944,
+  "cases": 12,
+  "source_sha256": "dadd94f010dd85e853b844d6437f60a380e6526371fa05783db6d4cd44ecf31b",
+  "bootstrap_seeds": {
+    "train_keys": 92205,
+    "dev_keys": 92204
+  },
+  "resamples": 5000,
+  "all_three_primary_supported": false,
+  "scope": "Saved prediction summaries; frozen-packet/raw-logit joins are separately audited. Fixed paired checkpoints/streams, not training-procedure variability or retention."
+}

@@ -2,37 +2,50 @@
 
 ## Resume here
 
-**IN PROGRESS: constant LR versus 500-step warm-up, November 16.**
-Read [LR_WARMUP.md](LR_WARMUP.md). Branch `sequence-lr-warmup`; executed source
-`ae13353`. Four exact S initializers each have constant/warmup V arms, all
-839,248 parameters and 6k updates. Both recipes receive identical mixed arrays.
-Warmup is3e-4×min(update/500,1), with no LR-area compensation. New family3 is
-sealed until all eight terminal hashes lock; consulted family2 is omitted.
+**COMPLETE: constant LR versus 500-step warm-up, November 16.**
+Read [LR_WARMUP.md](LR_WARMUP.md) and
+[figures/source tables](../results/lr_warmup_2026-11-16). Branch
+`sequence-lr-warmup`; executed neural/data source `ae13353`. All eight fresh V
+restarts from four exact20kS initializers complete6k updates, with839,248
+parameters unchanged. Identical mixed arrays/labels/budgets pair the LR arms.
+All terminal hashes lock22:33:46UTC before family3 confirmation; consulted
+family2 is omitted. All12capabilities and466,944 distributions finish.
 
-129 scoped tests and full independent packet/seed/orbit/source audit pass.
-The packet binds SHA79657e9d53b158c59c380b979bd3952ddff8b8e77abc230f7ab8e41b774c4d75.
-Full union is1,181,812 histories; confirmation has256worlds pergroup and466,944
-vectors across12capabilities. Primaries are trainF0Q0,devF0Q0,devF3Q3joint4;
-all90per-terminal gates require205/256. No gate or weakcase is waived.
+Warm-up improves fixed-case mean joint4 on familiar wording: training keys
+68.26→72.07% (+3.81pp[2.05,5.76]), development keys66.31→71.58%
+(+5.27pp[2.93,7.42]). New fact+query wording falls24.51→17.87%
+(−6.64pp[−9.86,−3.52]); intervals are adjusted98.3333%, conditional on four
+fixed pairs. Broad fitting+transfer support fails. The68105-digit new-wording
+drop134→13/256 dominates the mean decline;68101-digits improves73→115.
+The68101-atomic floor persists. **0/8 qualifies all90gates**, no waiver.
+Keep constant as reference; do not adopt warm-up as a general fix.
 
-Insomnia job **13935872** started21:06:16UTC on ins094, with a separate
-1A6000/3h/2CPU/8G allocation. At21:18:16UTC the first constant run completed
-6000updates and its warmup partner started. The engineering paired initial
-logits match exactly; the full-workload gate passed (9106.84seconds projected
-versus10572.91remaining). All runs proceed serially on the dedicated GPU.
-Another project owns1GPU(job13933883); leave it untouched. Inspect actual
-state before any retry; do not duplicate this job. Remote root:
-`/insomnia001/depts/edu/users/zc2819/clmm/lr-warmup-2026-11-16`.
-Local SESSION/log, packet source and launch files:
-`C:/Users/henry/Documents/Codex/2026-10-22/i/outputs/clmm-lr-warmup-2026-11-16`;
-work sibling`work/clmm-lr-warmup`. Root owns GPU/source; reviewer data/math only.
-Observer exec session74901 is read-only, bounded5h. Engineering-only raw math
-and1152actualCPUqueries pass; one tensor-audit helper initially assumed500
-warmupsteps for constant too, corrected to metadata0/500 before rerun. No
-model or training change. Next observe existing job, audit raw scores/LR trajectories/actual tensors,
-run selected CPU portability, update shared diagnostic registry and recovery.
-Preserve SLEEP_MULTIREVISION user edit and baseline tag. No push/report draft,
-teammate message or Google Doc edit is authorized by this study.
+129 scoped tests, full independent RNG/byte/hash/score/LR/lock/budget audits,
+exact coordinator statistics, all8 actual tensor/optimizer audits and14,592
+selectedWindowsCPUqueries pass. CPUargmax is exact; maxlogit.000289917 and
+probability.0000311042 meet fixed.002/.0002 limits. Five figures are visually
+checked. One engineering tensor-helper0/500 metadata expectation was corrected;
+no neural/source/model or tolerance repair. All8weights/optimizers and failed
+gates remain in the portable diagnostic registry. No native32/retention or
+intended sleep/Hebbian sequence-adapter qualification is implied.
+
+Slurm13935872 is COMPLETED0:0,6652seconds/oneA6000=1.847778GPUhours, ending
+22:57:06UTC. No study job or observer remains running; unrelated13933883 was
+not altered. Full remote907,929,600-byte tar and230file hashes pass. Source
+and complete local recovery verification are recorded in source_recovery_audit
+and RECOVERY.json beside SESSION/log/registry:
+`C:/Users/henry/Documents/Codex/2026-10-22/i/outputs/clmm-lr-warmup-2026-11-16`.
+Remote root: `/insomnia001/depts/edu/users/zc2819/clmm/lr-warmup-2026-11-16`.
+
+Future exclusion union is1,181,812; family3 is now consulted. Next proposed
+bounded diagnostic is500 head-alignment updates then5500 all-weight updates
+versus6000 all-weight updates, constant LR, all4S initializers, fixed registered
+size and matched V examples. It is not implemented or launched here. Qualify
+ordinary acquisition before native32/stateful retention; A/B can use qualified
+typed-memory controls meanwhile. Team should settle canonical digit interface
+versus broad-format primary scope before any new admission policy. Preserve
+SLEEP_MULTIREVISION user edit and baseline tag. Nothing pushed; no report,
+teammate message or Google Doc edit.
 
 **COMPLETE: eight matched familiar/mixed training runs, November 16.**
 Read [FORMAT_TRAINING.md](FORMAT_TRAINING.md) and

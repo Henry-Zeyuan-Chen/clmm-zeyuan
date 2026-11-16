@@ -1,5 +1,31 @@
 # Member C: shared training and evaluation
 
+## Complete: constant LR versus 500-step warm-up
+
+November16: [LR_WARMUP.md](LR_WARMUP.md) completes eight matched6k V restarts
+from all four exact S initializers, at839,248 parameters. Both arms use the
+same mixed data; family3 confirmation opens only after all terminal hashes lock.
+
+Fixed-case mean joint4 rises3.81pp on training-key familiar wording and5.27pp
+on development-key familiar wording, but falls6.64pp on new fact+query wording.
+All three adjusted98.3333% intervals exclude zero in their observed directions.
+The68105-digit pair has a large transfer regression,68101-digits improves,
+and68101-atomic stays near floor. There is no broad fitting-and-transfer gain;
+0/8 terminals qualifies. Retain all720gate decisions and every weight.
+
+All data/score/LR/lock/budget audits, independent statistics, actual tensors,
+and14,592 selectedCPUqueries pass. Five figures, a diagnostic registry and
+complete recovery evidence are in the handoff. Job13935872 closes0:0 using
+1.847778GPUhours. Future exclusions total1,181,812; family3 is consulted.
+
+Keep constant LR as the reference. Proposed next test:500 value-head alignment
+updates then5500 all-weight updates versus6000 all-weight updates, fixed size,
+all four initializers, constant LR and matched examples. This is not yet run.
+Do not assume the mechanism is established or start retention claims from
+unqualified sequence weights. Qualified typed components remain available for
+A/B. Native32 and stateful retention remain separate C work; team primary
+scope must precede any changed qualification policy. No report was drafted.
+
 ## Complete: eight matched familiar/mixed continuations
 
 November 16: [FORMAT_TRAINING.md](FORMAT_TRAINING.md) completes all eight 6k V
@@ -20,9 +46,9 @@ score/budget/data audits, actual tensor checks and 14,592 selected GPU-to-CPU
 answers pass. Job 13933115 closed at exit 0:0, using 1.8711 allocated GPU-hours.
 Future exclusions total 985,652 histories.
 
-Next diagnostic holds mixed wording and size fixed: constant learning rate
-versus a 500-step linear warm-up, identical 6k budgets, all four S initializers.
-The hypothesis concerns fitting stability; backbone drift is not established.
+The subsequent constant-LR versus500-step warm-up diagnostic is complete
+above, using identical mixed wording and6k budgets across all four S states.
+It does not establish a backbone-drift mechanism.
 Keep qualified typed-memory references for A/B. Native-32, persistence after
 visible context, and intended sequence adapters remain open. Team scope on a
 canonical digit interface versus broad formats must precede any new
