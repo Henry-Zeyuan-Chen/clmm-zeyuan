@@ -2,6 +2,27 @@
 
 ## Resume here
 
+**Priority update: TA feedback, November 16.**
+Read [TA_FEEDBACK_2026-11-16.md](TA_FEEDBACK_2026-11-16.md). The supplied email
+endorses investigating memory update rules but asks for explicit state carry
+across segments, recognizable benchmark foundations, and a same-size vanilla
+Titans comparator. Code inspection finds carried-state APIs in vendored neural
+memory and typed Hebbian components; it does not qualify the intended complete
+sequence system. The recent95-byte/attention128 studies remain acquisition
+diagnostics. Keep every completed result and failed gate unchanged.
+
+Next prioritize a shared streaming carry/reset/resume harness and a learnable
+vanilla short-attention baseline, then a pinned RULER-derived retrieval pilot
+and short BABILong acquisition subset. Separate adapted protocols from official
+scores. Original LongMemEval is a revision-oriented extension, conditional on
+language capability. Match intended A/B methods to vanilla training opportunity,
+state/storage and write budgets; add matched continuous replay for sleep.
+The previously proposed head-alignment study below is secondary and unlaunched.
+This is planning/code inspection only: no new experiments, benchmark downloads,
+GPU allocation, TA message, meeting booking, report draft or Google Doc edit.
+Planning branch `ta-feedback-plan`; preserve the existing SLEEP_MULTIREVISION
+edit and baseline tag. Completed-study archives remain immutable.
+
 **COMPLETE: constant LR versus 500-step warm-up, November 16.**
 Read [LR_WARMUP.md](LR_WARMUP.md) and
 [figures/source tables](../results/lr_warmup_2026-11-16). Branch

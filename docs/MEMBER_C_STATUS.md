@@ -1,5 +1,19 @@
 # Member C: shared training and evaluation
 
+## Priority update from TA feedback
+
+The [November16 TA feedback plan](TA_FEEDBACK_2026-11-16.md) puts explicit
+cross-segment state persistence, benchmark-backed evaluation and a same-size
+vanilla Titans comparator ahead of another optimizer sweep. C owns the shared
+streaming state/evaluation harness and vanilla baseline; A/B retain ownership
+of their intended update rules. Recent95-byte/attention128 results are useful
+acquisition diagnostics, with no sequence-retention qualification implied.
+First prove carry/reset/resume mechanics and learnable delayed recall; then
+use a pinned RULER-derived pilot and a short BABILong task. Original LongMemEval
+is a later revision-oriented option. The head-alignment proposal below remains
+unlaunched and secondary. No new compute or experiment was started by this
+feedback update; completed results and qualification policy are unchanged.
+
 ## Complete: constant LR versus 500-step warm-up
 
 November16: [LR_WARMUP.md](LR_WARMUP.md) completes eight matched6k V restarts
