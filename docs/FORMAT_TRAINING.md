@@ -53,3 +53,10 @@ Work: sibling `work/clmm-format-training`. Protocol, log and SESSION identify
 actual state; never infer completion from this prospective document. Branch
 `sequence-format-training` preserves the original baseline tag and the existing
 SLEEP_MULTIREVISION edit. No push, teammate message or Google Doc edit occurs.
+
+Resource update before any model execution: same pending job13933115 was
+reduced from4h to2h after the long request slipped intoNovember18. Source
+ae55882 reads actualSlurm time and retains the complete-workload gate; a
+resource-parser test passes. All training/data hashes are unchanged and
+independently rebound to the new source. Current packet metadataSHA is
+38f92aade1fcb91b6a5da4294478cfdf9ec9fa5439eaa064f3c30c674d967dc6.

@@ -2,6 +2,36 @@
 
 ## Resume here
 
+**IN PROGRESS: matched format training, November 16.**
+Read [FORMAT_TRAINING.md](FORMAT_TRAINING.md). Branch `sequence-format-training`,
+executed source `ae55882`. All eight familiar/mixed V arms retain 839,248
+parameters, the four exact S initializers, and 6k matched updates each.
+New family2 wording is sealed from all training/engineering neural runs;
+confirmation opens only after all eight terminal hashes are locked.
+117 focused tests and full independent packet reconstruction pass.
+
+Single scoped Insomnia job **13933115** is PENDING (Priority) at
+18:48 UTC, with 2 A6000 / 4 CPUs / 16G / 2h requested. Its start time is
+unknown; no new training has started. Preserve this job and inspect actual
+scheduler/pipeline state before any restart. Remote root:
+`/insomnia001/depts/edu/users/zc2819/clmm/format-training-2026-11-16`.
+Local artifacts and resumable SESSION/log:
+`C:/Users/henry/Documents/Codex/2026-10-22/i/outputs/clmm-format-training-2026-11-16`;
+work sibling `work/clmm-format-training`. Root owns GPU/source/docs;
+reviewer only data/math. Source bundle delta and every packet file are copied
+and hash checked remotely. Runtime engineering gate must admit the complete
+8-run workload; do not shorten conditions or select checkpoints from results.
+Next observe the existing job, then audit all raw distributions/optimizer
+states, run selected real CPU reload batches, and update C's baseline registry.
+Keep the pre-existing SLEEP_MULTIREVISION edit and baseline tag unchanged.
+
+Resource-only correction: the original 4h estimate slipped into November18.
+The same job was held, reduced to2h and released after independent source
+rebind clearance. All data, wording and training budgets are unchanged.
+The pipeline now reads actualSlurm remaining time with a3-minute reserve.
+Original metadata/source/audit are preserved; SESSION identifies the current
+packetSHA and gate. No model output preceded this change.
+
 **COMPLETE: independent fact/query format factorial, November 16.**
 Read [FORMAT_FACTORIAL.md](FORMAT_FACTORIAL.md) and
 [figures/source tables](../results/format_factorial_2026-11-16). Branch
