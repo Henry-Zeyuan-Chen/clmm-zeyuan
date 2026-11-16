@@ -2,6 +2,38 @@
 
 ## Resume here
 
+**IN PROGRESS: constant LR versus 500-step warm-up, November 16.**
+Read [LR_WARMUP.md](LR_WARMUP.md). Branch `sequence-lr-warmup`; executed source
+`ae13353`. Four exact S initializers each have constant/warmup V arms, all
+839,248 parameters and 6k updates. Both recipes receive identical mixed arrays.
+Warmup is3e-4×min(update/500,1), with no LR-area compensation. New family3 is
+sealed until all eight terminal hashes lock; consulted family2 is omitted.
+
+129 scoped tests and full independent packet/seed/orbit/source audit pass.
+The packet binds SHA79657e9d53b158c59c380b979bd3952ddff8b8e77abc230f7ab8e41b774c4d75.
+Full union is1,181,812 histories; confirmation has256worlds pergroup and466,944
+vectors across12capabilities. Primaries are trainF0Q0,devF0Q0,devF3Q3joint4;
+all90per-terminal gates require205/256. No gate or weakcase is waived.
+
+Insomnia job **13935872** started21:06:16UTC on ins094, with a separate
+1A6000/3h/2CPU/8G allocation. At21:18:16UTC the first constant run completed
+6000updates and its warmup partner started. The engineering paired initial
+logits match exactly; the full-workload gate passed (9106.84seconds projected
+versus10572.91remaining). All runs proceed serially on the dedicated GPU.
+Another project owns1GPU(job13933883); leave it untouched. Inspect actual
+state before any retry; do not duplicate this job. Remote root:
+`/insomnia001/depts/edu/users/zc2819/clmm/lr-warmup-2026-11-16`.
+Local SESSION/log, packet source and launch files:
+`C:/Users/henry/Documents/Codex/2026-10-22/i/outputs/clmm-lr-warmup-2026-11-16`;
+work sibling`work/clmm-lr-warmup`. Root owns GPU/source; reviewer data/math only.
+Observer exec session74901 is read-only, bounded5h. Engineering-only raw math
+and1152actualCPUqueries pass; one tensor-audit helper initially assumed500
+warmupsteps for constant too, corrected to metadata0/500 before rerun. No
+model or training change. Next observe existing job, audit raw scores/LR trajectories/actual tensors,
+run selected CPU portability, update shared diagnostic registry and recovery.
+Preserve SLEEP_MULTIREVISION user edit and baseline tag. No push/report draft,
+teammate message or Google Doc edit is authorized by this study.
+
 **COMPLETE: eight matched familiar/mixed training runs, November 16.**
 Read [FORMAT_TRAINING.md](FORMAT_TRAINING.md) and
 [figures/source tables](../results/format_training_2026-11-16). Branch
