@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "count": 985652,
+  "counts": {
+    "prior": 790004,
+    "engineering_training": 2048,
+    "engineering_evaluation": 64,
+    "main_training": 192000,
+    "confirmation": 1536,
+    "total": 985652
+  },
+  "sha256": "fc69dd8fba6bf68f5687d18942a8cd5b0b7daac4ba7ee4c4dfe33b1c872524a0",
+  "unit": "Ordered full key/value histories, all four order/value-swap closures. Individual facts may recur."
+}

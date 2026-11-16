@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "contrasts": 18,
+  "case_cells": 216,
+  "control_cells": 48,
+  "terminal_gate_decisions": 720,
+  "counts_and_per_world_effects_exact": true,
+  "intervals_exact": true,
+  "max_interval_difference_pp": 0.0,
+  "predeclared_numeric_rounding_tolerance_pp": 1e-12
+}

@@ -1,5 +1,33 @@
 # Member C: shared training and evaluation
 
+## Complete: eight matched familiar/mixed continuations
+
+November 16: [FORMAT_TRAINING.md](FORMAT_TRAINING.md) completes all eight 6k V
+adaptations from four exact S initializers, with 839,248 parameters fixed.
+Shared semantic histories, answers and input-byte/update budgets isolate the
+wording-training distribution. New wording stays sealed until terminal lock.
+
+Mean development-key joint4 improves 16.02/16.60/20.31 pp for new fact/query/both
+wording, with positive adjusted conditional intervals. Familiar recall falls
+10.74 pp. Both digit pairs improve; one atomic pair stays at a fitting floor
+and the other regresses. No terminal qualifies all-format acquisition (0/8),
+although mixed digit candidates pass 89/90 and 86/90 cells. Keep every weight
+and its diagnostic capability card; do not select successful cases.
+
+The shared registry, raw scores/optimizers, exact streams, new wording, four
+figures and recovery evidence are in the handoff. 117 tests, independent full
+score/budget/data audits, actual tensor checks and 14,592 selected GPU-to-CPU
+answers pass. Job 13933115 closed at exit 0:0, using 1.8711 allocated GPU-hours.
+Future exclusions total 985,652 histories.
+
+Next diagnostic holds mixed wording and size fixed: constant learning rate
+versus a 500-step linear warm-up, identical 6k budgets, all four S initializers.
+The hypothesis concerns fitting stability; backbone drift is not established.
+Keep qualified typed-memory references for A/B. Native-32, persistence after
+visible context, and intended sequence adapters remain open. Team scope on a
+canonical digit interface versus broad formats must precede any new
+qualification policy. No report is drafted in this task.
+
 ## Complete: fact versus query format transfer
 
 November 16: [FORMAT_FACTORIAL.md](FORMAT_FACTORIAL.md) separates fact and

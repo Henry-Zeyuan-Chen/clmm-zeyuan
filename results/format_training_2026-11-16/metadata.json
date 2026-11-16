@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "vectors": 350208,
+  "cases": 12,
+  "source_sha256": "5b66b075cf199a0da58a8b215d5961e669a029a26547422434075dcf13b1f96d",
+  "bootstrap_seed": 92004,
+  "resamples": 5000,
+  "all_three_primary_supported": true,
+  "scope": "Independent answer-byte joins; fixed paired checkpoints/streams, not training-procedure variability or retention."
+}

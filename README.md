@@ -6,6 +6,16 @@ We build on lucidrains' [titans-pytorch](https://github.com/lucidrains/titans-py
 
 ## Status
 
+The [eight matched format-training runs](docs/FORMAT_TRAINING.md) finish 6k
+updates each at 839,248 parameters. Mixed wording improves the fixed-case mean
+on three reserved-wording endpoints by 16–20 pp, while familiar recall falls
+10.74 pp. Digit pairs improve; atomic failures/regressions prevent a uniform
+gain. **0/8 terminals pass full acquisition qualification.** All checkpoints
+are retained as diagnostics. Independent score/tensor audits and 14,592 selected
+CPU answers pass; the GPU job is closed. [Four figures and source tables](results/format_training_2026-11-16)
+show every case. Fitting stability, native-32 and true retention remain Member C
+work; A/B can use the qualified typed-memory reference.
+
 The [fact/query format diagnostic](docs/FORMAT_FACTORIAL.md) completes 24
 frozen-weight capability evaluations with 839,248 parameters unchanged.
 Ordinary value recall averages 72.07% joint success on familiar wording,

@@ -1,0 +1,48 @@
+{
+  "status": "passed",
+  "created_utc": "2026-11-16T18:46:56.161709+00:00",
+  "packet_metadata_sha256": "38f92aade1fcb91b6a5da4294478cfdf9ec9fa5439eaa064f3c30c674d967dc6",
+  "source_commit": "ae55882b86edc838d2768dca48b8caf8516c5648",
+  "prior_packet_metadata_sha256": "7661c5c290c6aebe3719346e64b84d9166ebe9c2e4a153467e02a21f1fac60c5",
+  "prior_source_commit": "49694072e2d00242da016120fc9bc606f6b21e22",
+  "prior_packet_audit_sha256": "076dfd6fc6864c22f0646d3c7beae9b194d86f592379b69f4813504e6d3bf3a6",
+  "archived_prior_metadata_sha256": "7661c5c290c6aebe3719346e64b84d9166ebe9c2e4a153467e02a21f1fac60c5",
+  "script_sha256": "0a212cea742091725fa636e74752e0357e7125d4418766e28290cc7fd0328667",
+  "unchanged_data_and_initializer_mappings": true,
+  "immutable_packet_files_reverified": 19,
+  "source_files_reverified": 60,
+  "changed_manifest_sources": [
+    "scripts/format_training_pipeline.py"
+  ],
+  "changed_commit_files": [
+    "scripts/format_training_pipeline.py",
+    "tests/test_clmm_format_pipeline_resources.py"
+  ],
+  "new_pipeline_sha256": "4d2e02dfc5d294faff29d398ccb88c61ffa25c7341ffacb52e20fb533861eff0",
+  "resource_change": "Read actual Slurm remaining seconds; require180<remaining<=14400; deadline=min13500,remaining\u2212180. Same pending job may use shorter allocation; no renewal or design reduction.",
+  "preserved": "All data, recipe, wordings, optimizer/steps, model source, batch sizes, lock, primary statistics and all-eight-or-stop policy are unchanged.",
+  "isolated_parser_cases": {
+    "valid": {
+      "02:00:00": 7200,
+      "01:59:59": 7199,
+      "04:00:00": 14400,
+      "59:59": 3599,
+      "03:01": 181,
+      "0-02:00:00": 7200,
+      "1-00:00:00": 86400
+    },
+    "invalid": [
+      "UNLIMITED",
+      "N/A",
+      "",
+      "02:60:00",
+      "02:00:60",
+      "0-0-02:00:00"
+    ],
+    "all_passed": true
+  },
+  "inherited_data_audit": "Full byte/label/RNG/split/oracle checks inherited by exact immutable file-hash equality; not rerun.",
+  "output_timing": "Coordinator states resource-only amendment occurred before any neural output; no current model scores viewed by this reviewer.",
+  "restrictions": "Stdlib only. No project imports, pipeline execution, SSH, GPU, neural execution or Git mutation.",
+  "blockers": []
+}

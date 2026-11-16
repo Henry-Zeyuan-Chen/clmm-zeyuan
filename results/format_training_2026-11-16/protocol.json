@@ -1,0 +1,176 @@
+{
+  "experiment": "matched-format-training-2026-11-16",
+  "base_commit": "c8344b4d05c34d68158a240fdc2b279952739b5d",
+  "parameters": 839248,
+  "attention": 128,
+  "bytes_per_query": 95,
+  "parents": [
+    68101,
+    68105
+  ],
+  "encodings": [
+    "digits",
+    "atomic"
+  ],
+  "arms": [
+    "familiar",
+    "mixed"
+  ],
+  "initializers": "All four exact 20k natural-selector checkpoints, same tensor state within each arm pair; reset optimizer",
+  "updates_per_run": 6000,
+  "runs": 8,
+  "total_new_updates": 48000,
+  "contexts_per_update": 8,
+  "queries_per_update": 16,
+  "input_bytes_per_run": 9120000,
+  "supervised_answers_per_run": 96000,
+  "optimizer": {
+    "name": "AdamW",
+    "lr": 0.0003,
+    "weight_decay": 0.01,
+    "clip_grad_norm": 1.0,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "amsgrad": false
+  },
+  "precision": "float32; deterministic algorithms; TF32 disabled",
+  "familiar_cells": [
+    "F0Q0"
+  ],
+  "mixed_cells": [
+    "F0Q0",
+    "F0Q1",
+    "F1Q0",
+    "F1Q1"
+  ],
+  "mix_balance": "Two contexts per cell per update, independent PCG permutation; semantic worlds/views/order/answers shared with familiar arm",
+  "reserved_fact_templates": [
+    "entry {key} stores {value}.\n",
+    "{key}: stored code is {value}.\n"
+  ],
+  "reserved_query_templates": [
+    "lookup code belonging to {key}: ",
+    "report {key}'s stored code: "
+  ],
+  "no_confirmation_model_outputs_until": "All eight terminal checkpoints complete and exact lock binds their hashes. No outcome-adaptive changes or checkpoint selection.",
+  "source_family_note": "Current families0/1 are consulted development material. Family2 is frozen new wording and remains absent from engineering model runs and all training.",
+  "seeds": {
+    "engineering": 92102,
+    "engineering_evaluation": 92113,
+    "training": 92002,
+    "confirmation": 92023,
+    "bootstrap": 92004,
+    "model_rng": 92007
+  },
+  "engineering": {
+    "updates": 64,
+    "runs": 2,
+    "parent": 68101,
+    "encoding": "digits",
+    "train_worlds": 512,
+    "eval_n_per_group": 8,
+    "eval_cells": [
+      "F0Q0",
+      "F0Q1",
+      "F1Q0",
+      "F1Q1"
+    ],
+    "efficacy_tuning": false
+  },
+  "confirmation": {
+    "dev_keys": 256,
+    "train_keys": 128,
+    "cells": [
+      "F0Q0",
+      "F0Q1",
+      "F0Q2",
+      "F1Q0",
+      "F1Q1",
+      "F1Q2",
+      "F2Q0",
+      "F2Q1",
+      "F2Q2"
+    ],
+    "views": [
+      "original",
+      "order",
+      "value",
+      "order_value"
+    ],
+    "controls": "Original F0Q0 only: no_facts and cue_erased",
+    "terminal_capabilities": 8,
+    "initial_capabilities": 4,
+    "total_vectors": 350208
+  },
+  "exclusions": {
+    "prior_count": 790004,
+    "unit": "Full ordered key/value history, four-view closure",
+    "disjoint": "Prior, engineering training, engineering evaluation, main training, confirmation; all accepted semantic worlds distinct"
+  },
+  "primary": {
+    "task": "Ordinary full256 value argmax",
+    "metric": "Both requested answers correct in original and order views (joint4)",
+    "cells": [
+      "F2Q0",
+      "F0Q2",
+      "F2Q2"
+    ],
+    "contrast": "mixed minus familiar",
+    "group": "dev_keys",
+    "fixed_pairs": 4,
+    "unit": "World after averaging four paired checkpoint differences",
+    "bootstrap_draws": 5000,
+    "seed": 92004,
+    "shared_indices": true,
+    "interval_percent": 98.33333333333333,
+    "quantiles": [
+      0.008333333333333333,
+      0.9916666666666667
+    ],
+    "scope": "Conditional on these initializers and exact training streams; no training-procedure variance estimate",
+    "percentile_method": "linear",
+    "decision_rule": "An endpoint is supported only if its adjusted interval lower bound is above zero; all three must pass for the broad three-shift claim. No nonsignificance-as-equivalence claim."
+  },
+  "secondary": "All other cells/groups, joint8, per-view BOTH, per-case endpoints, initial controls, erasure controls and familiar cost are descriptive.",
+  "acquisition_qualification": "Existing 80% rule: >=205/256 development,>=103/128 training BOTH-correct in every normal cell/view and joint4 in every cell, per terminal; do not waive failures.",
+  "resources": {
+    "gpus": 2,
+    "allocation_hours": 4,
+    "max_gpu_hours": 8,
+    "cpus": 4,
+    "ram": "16G",
+    "runtime_gate": "1.3*(4*6000*worst_warm_step_seconds + 350208*worst_eval_seconds_per_query/2 + 240) must fit remaining allocation",
+    "stop": "All eight or stop; no N/run reduction. Preserve failures. No automatic allocation renewal.",
+    "local_artifact_cap_bytes": 2000000000,
+    "remote_artifact_cap_bytes": 6000000000
+  },
+  "scope": "Member C acquisition and reusable baseline qualification. Not native32, retention or final sleep/Hebbian efficacy. No publication/push/Google Doc edit.",
+  "acquisition_qualification_cells": {
+    "normal": [
+      "F0Q0",
+      "F0Q1",
+      "F0Q2",
+      "F1Q0",
+      "F1Q1",
+      "F1Q2",
+      "F2Q0",
+      "F2Q1",
+      "F2Q2"
+    ],
+    "groups": [
+      "train_keys",
+      "dev_keys"
+    ],
+    "views": [
+      "original",
+      "order",
+      "value",
+      "order_value"
+    ],
+    "additional": "joint4 for each group/cell; joint8 descriptive",
+    "per_checkpoint": true
+  }
+}

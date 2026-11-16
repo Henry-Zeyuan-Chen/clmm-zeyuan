@@ -1,0 +1,249 @@
+{
+  "status": "passed",
+  "created_utc": "2026-11-16T18:36:04.150643+00:00",
+  "packet_metadata_sha256": "7661c5c290c6aebe3719346e64b84d9166ebe9c2e4a153467e02a21f1fac60c5",
+  "source_commit": "49694072e2d00242da016120fc9bc606f6b21e22",
+  "audit_source_sha256": "38d3c892be689b68aed5040beb45fb08bc6457a2fcf87aa66463e2e43b462d71",
+  "helper_sha256": "dccdf8768c4871eb96162fc846ceb18363ef7a746c85f5050cb479c7c030d6b8",
+  "command": [
+    "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-test-env\\Scripts\\python.exe",
+    "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-format-training-2026-11-16\\analysis\\audit_format_training_packet.py"
+  ],
+  "elapsed_seconds": 21.163237099999606,
+  "environment": {
+    "python": "3.13.3 (tags/v3.13.3:6280bb5, Apr  8 2025, 14:47:33) [MSC v.1943 64 bit (AMD64)]",
+    "numpy": "2.5.4"
+  },
+  "restrictions": "Only stdlib/NumPy; no project imports, checkpoint deserialization, neural execution, SSH, GPU or Git mutation.",
+  "provenance": {
+    "source_files_verified": 60,
+    "original_model_files_verified": 52,
+    "packet_files_verified": 19,
+    "initializer_files_exactly_match_prior_S": true,
+    "initializer_tensors": "Not deserialized; exact file hashes match prior audited S artifacts.",
+    "packet_metadata_sha256": "7661c5c290c6aebe3719346e64b84d9166ebe9c2e4a153467e02a21f1fac60c5"
+  },
+  "exclusions": {
+    "prior": 790004,
+    "engineering_training": 2048,
+    "engineering_evaluation": 64,
+    "main_training": 192000,
+    "confirmation": 1536,
+    "total": 985652,
+    "all_disjoint": true,
+    "full_future_union_exact": true
+  },
+  "sections": {
+    "engineering_training": {
+      "steps": 64,
+      "worlds": 512,
+      "orbit_signatures": 2048,
+      "independent_rejection_attempts": 821,
+      "serialized_input_rows": 4096,
+      "label_rows": 1024,
+      "array_shapes": {
+        "familiar_digits": [
+          64,
+          16,
+          95
+        ],
+        "familiar_atomic": [
+          64,
+          16,
+          95
+        ],
+        "mixed_digits": [
+          64,
+          16,
+          95
+        ],
+        "mixed_atomic": [
+          64,
+          16,
+          95
+        ],
+        "targets": [
+          64,
+          16
+        ]
+      },
+      "mixed_cell_view_contexts": {
+        "F0Q0/order": 35,
+        "F0Q0/order_value": 25,
+        "F0Q0/original": 30,
+        "F0Q0/value": 38,
+        "F0Q1/order": 32,
+        "F0Q1/order_value": 29,
+        "F0Q1/original": 33,
+        "F0Q1/value": 34,
+        "F1Q0/order": 34,
+        "F1Q0/order_value": 23,
+        "F1Q0/original": 30,
+        "F1Q0/value": 41,
+        "F1Q1/order": 31,
+        "F1Q1/order_value": 36,
+        "F1Q1/original": 35,
+        "F1Q1/value": 26
+      },
+      "all_bytes_labels_and_visible_oracles_equal": true,
+      "semantic_seed_stream_views_cells_independently_regenerated": true,
+      "reserved_wording_absent_by_all_row_reconstruction": true
+    },
+    "engineering_evaluation": {
+      "worlds": 16,
+      "orbit_signatures": 64,
+      "independent_rejection_attempts": 19,
+      "rows": 1152,
+      "semantic_seed_stream_independently_regenerated": true,
+      "all_prefixes_metadata_labels_visible_oracles_equal": true,
+      "erased_forks_identical_input_distinct_labels": true,
+      "reserved_wording_absent": true,
+      "row_counts": {
+        "atomic/dev_keys/F0Q0/cue_erased": 16,
+        "atomic/dev_keys/F0Q0/no_facts": 16,
+        "atomic/dev_keys/F0Q0/normal": 64,
+        "atomic/dev_keys/F0Q1/normal": 64,
+        "atomic/dev_keys/F1Q0/normal": 64,
+        "atomic/dev_keys/F1Q1/normal": 64,
+        "atomic/train_keys/F0Q0/cue_erased": 16,
+        "atomic/train_keys/F0Q0/no_facts": 16,
+        "atomic/train_keys/F0Q0/normal": 64,
+        "atomic/train_keys/F0Q1/normal": 64,
+        "atomic/train_keys/F1Q0/normal": 64,
+        "atomic/train_keys/F1Q1/normal": 64,
+        "digits/dev_keys/F0Q0/cue_erased": 16,
+        "digits/dev_keys/F0Q0/no_facts": 16,
+        "digits/dev_keys/F0Q0/normal": 64,
+        "digits/dev_keys/F0Q1/normal": 64,
+        "digits/dev_keys/F1Q0/normal": 64,
+        "digits/dev_keys/F1Q1/normal": 64,
+        "digits/train_keys/F0Q0/cue_erased": 16,
+        "digits/train_keys/F0Q0/no_facts": 16,
+        "digits/train_keys/F0Q0/normal": 64,
+        "digits/train_keys/F0Q1/normal": 64,
+        "digits/train_keys/F1Q0/normal": 64,
+        "digits/train_keys/F1Q1/normal": 64
+      }
+    },
+    "main_training": {
+      "steps": 6000,
+      "worlds": 48000,
+      "orbit_signatures": 192000,
+      "independent_rejection_attempts": 79354,
+      "serialized_input_rows": 384000,
+      "label_rows": 96000,
+      "array_shapes": {
+        "familiar_digits": [
+          6000,
+          16,
+          95
+        ],
+        "familiar_atomic": [
+          6000,
+          16,
+          95
+        ],
+        "mixed_digits": [
+          6000,
+          16,
+          95
+        ],
+        "mixed_atomic": [
+          6000,
+          16,
+          95
+        ],
+        "targets": [
+          6000,
+          16
+        ]
+      },
+      "mixed_cell_view_contexts": {
+        "F0Q0/order": 2982,
+        "F0Q0/order_value": 3010,
+        "F0Q0/original": 2939,
+        "F0Q0/value": 3069,
+        "F0Q1/order": 2971,
+        "F0Q1/order_value": 2998,
+        "F0Q1/original": 3018,
+        "F0Q1/value": 3013,
+        "F1Q0/order": 3006,
+        "F1Q0/order_value": 3049,
+        "F1Q0/original": 2911,
+        "F1Q0/value": 3034,
+        "F1Q1/order": 3006,
+        "F1Q1/order_value": 2971,
+        "F1Q1/original": 3025,
+        "F1Q1/value": 2998
+      },
+      "all_bytes_labels_and_visible_oracles_equal": true,
+      "semantic_seed_stream_views_cells_independently_regenerated": true,
+      "reserved_wording_absent_by_all_row_reconstruction": true
+    },
+    "confirmation": {
+      "worlds": 384,
+      "orbit_signatures": 1536,
+      "independent_rejection_attempts": 484,
+      "rows": 58368,
+      "semantic_seed_stream_independently_regenerated": true,
+      "all_prefixes_metadata_labels_visible_oracles_equal": true,
+      "erased_forks_identical_input_distinct_labels": true,
+      "reserved_wording_absent": false,
+      "row_counts": {
+        "atomic/dev_keys/F0Q0/cue_erased": 512,
+        "atomic/dev_keys/F0Q0/no_facts": 512,
+        "atomic/dev_keys/F0Q0/normal": 2048,
+        "atomic/dev_keys/F0Q1/normal": 2048,
+        "atomic/dev_keys/F0Q2/normal": 2048,
+        "atomic/dev_keys/F1Q0/normal": 2048,
+        "atomic/dev_keys/F1Q1/normal": 2048,
+        "atomic/dev_keys/F1Q2/normal": 2048,
+        "atomic/dev_keys/F2Q0/normal": 2048,
+        "atomic/dev_keys/F2Q1/normal": 2048,
+        "atomic/dev_keys/F2Q2/normal": 2048,
+        "atomic/train_keys/F0Q0/cue_erased": 256,
+        "atomic/train_keys/F0Q0/no_facts": 256,
+        "atomic/train_keys/F0Q0/normal": 1024,
+        "atomic/train_keys/F0Q1/normal": 1024,
+        "atomic/train_keys/F0Q2/normal": 1024,
+        "atomic/train_keys/F1Q0/normal": 1024,
+        "atomic/train_keys/F1Q1/normal": 1024,
+        "atomic/train_keys/F1Q2/normal": 1024,
+        "atomic/train_keys/F2Q0/normal": 1024,
+        "atomic/train_keys/F2Q1/normal": 1024,
+        "atomic/train_keys/F2Q2/normal": 1024,
+        "digits/dev_keys/F0Q0/cue_erased": 512,
+        "digits/dev_keys/F0Q0/no_facts": 512,
+        "digits/dev_keys/F0Q0/normal": 2048,
+        "digits/dev_keys/F0Q1/normal": 2048,
+        "digits/dev_keys/F0Q2/normal": 2048,
+        "digits/dev_keys/F1Q0/normal": 2048,
+        "digits/dev_keys/F1Q1/normal": 2048,
+        "digits/dev_keys/F1Q2/normal": 2048,
+        "digits/dev_keys/F2Q0/normal": 2048,
+        "digits/dev_keys/F2Q1/normal": 2048,
+        "digits/dev_keys/F2Q2/normal": 2048,
+        "digits/train_keys/F0Q0/cue_erased": 256,
+        "digits/train_keys/F0Q0/no_facts": 256,
+        "digits/train_keys/F0Q0/normal": 1024,
+        "digits/train_keys/F0Q1/normal": 1024,
+        "digits/train_keys/F0Q2/normal": 1024,
+        "digits/train_keys/F1Q0/normal": 1024,
+        "digits/train_keys/F1Q1/normal": 1024,
+        "digits/train_keys/F1Q2/normal": 1024,
+        "digits/train_keys/F2Q0/normal": 1024,
+        "digits/train_keys/F2Q1/normal": 1024,
+        "digits/train_keys/F2Q2/normal": 1024
+      }
+    }
+  },
+  "source_contract_review": {
+    "reserved_prediction_gate": "evaluate validates complete eight-terminal lock and packet/checkpoint hashes before model loading/forward.",
+    "engineering": "Training/reload and engineering evaluation use only engineering data, with F0/F1 wordings.",
+    "main": "Exactly6000 updates per arm; new optimizer;16queries\u00d795bytes; same arrays reused across parents; terminal only.",
+    "lock": "Pipeline verifies all8 metadata/weights/optimizer hashes and creates lock before starting confirmation workers.",
+    "qualification": "Per terminal72normal group/cell/view BOTH cells +18joint4 cells;80% thresholds205/256dev and103/128train.",
+    "practical_limit": "Gate is enforced by the authorized pipeline; manual code or artifact tampering lies outside this integrity contract.",
+    "blockers": []
+  }
+}

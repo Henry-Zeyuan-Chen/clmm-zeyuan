@@ -2,35 +2,55 @@
 
 ## Resume here
 
-**IN PROGRESS: matched format training, November 16.**
-Read [FORMAT_TRAINING.md](FORMAT_TRAINING.md). Branch `sequence-format-training`,
-executed source `ae55882`. All eight familiar/mixed V arms retain 839,248
-parameters, the four exact S initializers, and 6k matched updates each.
-New family2 wording is sealed from all training/engineering neural runs;
-confirmation opens only after all eight terminal hashes are locked.
-117 focused tests and full independent packet reconstruction pass.
+**COMPLETE: eight matched familiar/mixed training runs, November 16.**
+Read [FORMAT_TRAINING.md](FORMAT_TRAINING.md) and
+[figures/source tables](../results/format_training_2026-11-16). Branch
+`sequence-format-training`; executed NN source `ae55882`. All eight runs finish
+6k updates at 839,248 parameters: 48k new updates, 768k answers and 72.96M input
+bytes. Four exact 20k S initializers are retained in both arms. Family 2 stays
+out of training and engineering neural execution; all eight terminal hashes
+lock at 19:34:56 UTC before 12 confirmation capabilities / 350,208 scores.
+Slurm 13933115 is COMPLETED, exit 0:0, 3,368 seconds / 1.8711 allocated GPU-hours.
+No job or observer remains active.
 
-Single scoped Insomnia job **13933115** is PENDING (Priority) at
-18:48 UTC, with 2 A6000 / 4 CPUs / 16G / 2h requested. Its start time is
-unknown; no new training has started. Preserve this job and inspect actual
-scheduler/pipeline state before any restart. Remote root:
+On 256 fresh development-key worlds, mean joint4 familiar→mixed is 65.04→54.30%
+on F0Q0, 29.88→45.90% on new facts F2Q0, 28.52→45.12% on new queries F0Q2,
+and 20.70→41.02% on both F2Q2. Primary gains 16.02, 16.60 and 20.31 pp have
+positive adjusted 98.3333% intervals, conditional on four fixed pairs.
+Familiar cost −10.74 pp is descriptive. Effects are heterogeneous: both digit
+pairs improve, 68101/digits dominates, 68101/atomic stays at floor, and
+68105/atomic regresses. **0/8 passes full admission.** Mixed 68101/digits passes
+89/90 (train F2Q0 joint4 102/128 < 103); mixed 68105/digits passes 86/90.
+No endpoint or weak case is waived. These are not uniform gains, a capacity
+proof, native-32 results or retention/sleep/Hebbian efficacy.
+
+117 tests, complete independent byte/RNG/hash/score/lock/budget audits, exact
+coordinator statistics, all eight actual model/optimizer tensor audits, and
+14,592 selected Windows CPU queries pass. CPU argmax is exact; max logit
+0.00014687 and probability 0.00001525 meet frozen .002/.0002 limits. Four
+figures are visually checked. The registry retains all eight diagnostic
+weights with portable archive paths and explicit unqualified flags.
+
+Artifacts, SESSION, log, registry and recovery manifest:
+`C:/Users/henry/Documents/Codex/2026-10-22/i/outputs/clmm-format-training-2026-11-16`.
+The future exclusion union contains 985,652 histories. Family 2 is now
+consulted. Complete remote evidence:
 `/insomnia001/depts/edu/users/zc2819/clmm/format-training-2026-11-16`.
-Local artifacts and resumable SESSION/log:
-`C:/Users/henry/Documents/Codex/2026-10-22/i/outputs/clmm-format-training-2026-11-16`;
-work sibling `work/clmm-format-training`. Root owns GPU/source/docs;
-reviewer only data/math. Source bundle delta and every packet file are copied
-and hash checked remotely. Runtime engineering gate must admit the complete
-8-run workload; do not shorten conditions or select checkpoints from results.
-Next observe the existing job, then audit all raw distributions/optimizer
-states, run selected real CPU reload batches, and update C's baseline registry.
-Keep the pre-existing SLEEP_MULTIREVISION edit and baseline tag unchanged.
+The 731,975,680-byte results tar has SHA256
+ba429d25cc5a401994f4715b1f4d76db8de3c32cb56e8b378a6df40dc0c16b0e;
+all 224 entry hashes and stream bytes verify locally. It includes the NN
+source bundle and exact packet. The pending 4h request was reduced to 2h before
+neural execution after independent resource rebind; no data or recipe changed.
 
-Resource-only correction: the original 4h estimate slipped into November18.
-The same job was held, reduced to2h and released after independent source
-rebind clearance. All data, wording and training budgets are unchanged.
-The pipeline now reads actualSlurm remaining time with a3-minute reserve.
-Original metadata/source/audit are preserved; SESSION identifies the current
-packetSHA and gate. No model output preceded this change.
+Next C: a finite fitting-stability comparison on mixed wording, constant LR
+versus a 500-update linear warm-up to 3e-4, all four S initializers and matched
+6k budgets, at the same size. Freeze fresh histories and wording before future
+confirmation; this follow-up has not run. Keep qualified typed references for
+A/B. Team scope still needs a canonical digit interface versus broad encoding/
+paraphrase choice; do not retroactively reclassify current 0/8 failures.
+Native-32 and persistence after attention/buffer exit remain open. Preserve
+the SLEEP_MULTIREVISION user edit and baseline tag. No push, report draft,
+teammate message or Google Doc edit occurred.
 
 **COMPLETE: independent fact/query format factorial, November 16.**
 Read [FORMAT_FACTORIAL.md](FORMAT_FACTORIAL.md) and
