@@ -41,8 +41,10 @@ for c in cases:
             both=sum(erased[group,condition,j][1]==3 for j in range(n))
             if condition=='cue_erased':assert both==0
             controls.append(dict(**c,group=group,condition=condition,worlds=n,both_correct=both))
-    qual.append(dict(**c,admitted=not failures,failed_endpoints=len(failures),tested_endpoints=90,failures=failures,scope='Visible attention128 acquisition only'))
+    if c['arm']!='initial':
+        qual.append(dict(**c,admitted=not failures,failed_endpoints=len(failures),tested_endpoints=90,failures=failures,scope='Visible attention128 acquisition only'))
 assert total==466944
+assert len(qual)==8 and sum(q['tested_endpoints'] for q in qual)==720
 save('case_cells.csv',rows);save('control_cells.csv',controls)
 statistics={}
 for group,n in counts.items():
