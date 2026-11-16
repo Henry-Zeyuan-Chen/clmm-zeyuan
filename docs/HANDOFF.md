@@ -2,6 +2,24 @@
 
 ## Resume here
 
+**IN PROGRESS: fixed-size record selection and separate value decoding, November 16.**
+Read [RECORD_SELECTION.md](RECORD_SELECTION.md) and the session record at
+`C:/Users/henry/Documents/Codex/2026-10-22/i/outputs/clmm-record-selection-2026-11-16/SESSION.json`.
+Branch `sequence-record-selection`, executed source `708b038de7fb63506aa5f184513177684ab372ad`.
+Slurm13928152 runs the globally matched20k-update16-condition factorial on two
+A6000s; dependent CPU audit job13928622 has a separate one-hour limit. Main
+data preaudit and closed calibration raw/tensor audit passed. Final outputs
+remain sealed until terminal development choices and conditional training
+finish. The direct SSH route timed out; existing AICS SSH jump `-J aics`
+works. Absolute GPU stop14:52:49UTC, user window ends15:52:49UTC.
+
+Full canonical packets/source/raw evidence are on shared Insomnia storage:
+`/insomnia001/depts/edu/users/zc2819/clmm/record-selection-2026-11-16`.
+Local packet caches were deliberately trimmed only after hash-verified remote
+uploads when C: filled transiently; do not assume those caches are complete.
+No source model size increase, push, Google Doc change, teammate message,
+baseline-tag move, helper-selection change or unrelated-job cancellation.
+
 **COMPLETE: fixed-size key binding diagnostic; acquisition FAILED, November 15.** Read [KEY_BINDING.md](KEY_BINDING.md). Local branch `sequence-key-binding`; executed source `5e8c61829ff85ecea3c9314d4ccd8dfef3268b68`. Four terminal models cross the original language parents 68101/68105 and digit/one-token atomic keys, all independently trained at attention segment 128 with 839,248 registered parameters unchanged. Each receives 2,000 updates, 32,000 answer forks and 2,908,928 input bytes. All four task-unadapted initial conditions and recovery-only step-1000 checkpoints are retained. No outcome-based extra training or model enlargement occurred.
 
 All 24 acquisition cells fail the 205/256 threshold: both-correct counts are 0–2/256. Every model scores 0/256 original-plus-swapped joint-four correctness on train-seen and dev-heldout endpoints. Atomic-minus-digits effects are 0 pp; the [0,0] bootstrap intervals are degenerate floor artifacts, not equivalence evidence. Single-fact training reaches 100%; the final 100 two-fact updates average 49.81–50.06% accuracy. All 512 fresh training-key answers per model are observed values, but 253–256/256 worlds receive the same prediction for both keys. Atomic keys did not repair binding under this recipe. No particular architectural cause, capacity impossibility or retention result is established.

@@ -1,5 +1,17 @@
 # Member C: shared training and evaluation
 
+## In progress: selection versus value decoding
+
+November16: [RECORD_SELECTION.md](RECORD_SELECTION.md) separates record selection
+from explicit-index value reading and ordinary full-value recall. All16
+parent/encoding/objective conditions receive20k updates with the same839,248
+parameters and95-byte inputs. Development data already distinguish familiar
+query selection from held-out wording; final evaluation is still sealed.
+Slurm13928152 plus dependent one-hour CPU audit13928622 are tracked in the
+new session's SESSION.json and EXPERIMENT_LOG.md. Full raw artifacts stay on
+Insomnia; Member C will deliver checked shared capability cards and evaluation
+controls rather than treat diagnostic success as a retention baseline.
+
 ## Latest: atomic-key control also fails binding
 
 November 15: [KEY_BINDING.md](KEY_BINDING.md) records the completed fixed-size diagnostic on source `5e8c618`, local branch `sequence-key-binding`. Four terminal models use two original language parents and digit/one-token key representations, all at attention segment 128 with 839,248 registered parameters unchanged. Inputs, labels and budgets are paired: 2,000 updates, 32,000 forks and 2,908,928 input bytes each. The common smaller key pool and acquisition-only curriculum differ from the preceding study in both arms; only the current encoding contrast is controlled.
