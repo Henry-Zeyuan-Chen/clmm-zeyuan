@@ -10,6 +10,16 @@ def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def write(p,v):
     p.parent.mkdir(parents=True,exist_ok=True);tmp=p.with_suffix('.tmp');tmp.write_text(json.dumps(v,indent=2)+'\n');tmp.replace(p)
 def left():return A.hard_stop-time.time()
+def slurm_time_seconds(value):
+    """Parse Slurm's actual remaining time, refusing unknown/unlimited values."""
+    pieces=value.strip().split('-')
+    if len(pieces)>2:raise ValueError('Invalid Slurm time')
+    days=int(pieces[0]) if len(pieces)==2 else 0
+    clock=pieces[-1].split(':')
+    if len(clock) not in (2,3) or any(not p.isdigit() for p in clock):raise ValueError('Unknown Slurm time')
+    numbers=list(map(int,clock))
+    if numbers[-1]>=60 or numbers[-2]>=60:raise ValueError('Invalid Slurm clock')
+    return days*86400+sum(n*factor for n,factor in zip(reversed(numbers),(1,60,3600)))
 def invoke(mode,out,**kw):
     out.parent.mkdir(parents=True,exist_ok=True)
     cmd=[sys.executable,'scripts/format_training_experiment.py',mode,'--packet',str(PACK),'--out',str(out),'--device','cuda:0','--threads','2','--max-seconds',str(max(1,int(left()-30)))]
@@ -54,8 +64,10 @@ def parallel(stage,devices):
 def pipeline():
     assert os.environ.get('SLURM_JOB_ID'),'Substantial work requires Slurm'
     devices=os.environ.get('CUDA_VISIBLE_DEVICES','').split(',');assert len(devices)==2 and all(devices)
-    A.hard_stop=time.time()+13500
-    state=dict(status='running',started_utc=utc(),slurm_job_id=os.environ['SLURM_JOB_ID'],devices=devices,source_commit=read(PACK/'metadata.json')['source_commit'],packet_metadata_sha256=sha(PACK/'metadata.json'))
+    actual_left=slurm_time_seconds(subprocess.check_output(['squeue','-h','-j',os.environ['SLURM_JOB_ID'],'-o','%L'],text=True))
+    assert 180<actual_left<=14400,'Allocation must fit the declared four-hour maximum'
+    A.hard_stop=time.time()+min(13500,actual_left-180)
+    state=dict(status='running',started_utc=utc(),slurm_job_id=os.environ['SLURM_JOB_ID'],actual_slurm_seconds=actual_left,hard_stop_epoch=A.hard_stop,devices=devices,source_commit=read(PACK/'metadata.json')['source_commit'],packet_metadata_sha256=sha(PACK/'metadata.json'))
     audit=read(B/'analysis/packet_audit.json');assert audit['status']=='passed' and audit['packet_metadata_sha256']==sha(PACK/'metadata.json')
     write(B/'pipeline_state.json',state)
     try:
