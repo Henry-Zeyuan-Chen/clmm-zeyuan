@@ -1,0 +1,51 @@
+{
+  "status": "passed",
+  "original_source": "d0b74557408a43a1609fd28308b9a455196ba5b3",
+  "executed_source": "95da59531ccf5d5f3fe2729553e6d980da598352",
+  "source_files_changed": [
+    "clmm/pretrain/sequence_freshness_data.py",
+    "scripts/sequence_freshness_experiment.py"
+  ],
+  "original_exclusions": 42416,
+  "executed_exclusions": 81326,
+  "additional_exclusions": 38910,
+  "data": {
+    "training_plan.json.gz": {
+      "semantic_content_identical": true,
+      "original_sha256": "2bacc242a13740a9006da15dc7b9ade1cd744329202d67c2d4329ff0543522bc",
+      "executed_sha256": "7be0c5a6344f59ed513c060faeb41af8ced743e0f7e0a0e4b5d53d90e5bf403b"
+    },
+    "episodes.json": {
+      "semantic_content_identical": true,
+      "original_sha256": "a5a08ef4ddafd1bf2816a2c60e2134bc7dc4ef8e520ffd21603c4a72fe23fd9f",
+      "executed_sha256": "a5a08ef4ddafd1bf2816a2c60e2134bc7dc4ef8e520ffd21603c4a72fe23fd9f"
+    },
+    "plans.json": {
+      "semantic_content_identical": true,
+      "original_sha256": "8b180fffd5b5689f84db87c25f9beb26d402b982deda0eaeb8b77398a4ee93e5",
+      "executed_sha256": "8b180fffd5b5689f84db87c25f9beb26d402b982deda0eaeb8b77398a4ee93e5"
+    },
+    "samples.json": {
+      "semantic_content_identical": true,
+      "original_sha256": "cd9d7a392bfff65e5ec60ee42cec305047c86457365e27a02041f871f6a347be",
+      "executed_sha256": "cd9d7a392bfff65e5ec60ee42cec305047c86457365e27a02041f871f6a347be"
+    },
+    "parents.json": {
+      "semantic_content_identical": true,
+      "original_sha256": "0550c422fe2d3f629ed9f31a7d6678a0e566f24ae17448dcd64a5a3127293f50",
+      "executed_sha256": "0550c422fe2d3f629ed9f31a7d6678a0e566f24ae17448dcd64a5a3127293f50"
+    },
+    "training.npz": {
+      "all_arrays_identical": true,
+      "keys": [
+        "lengths",
+        "periodic",
+        "periodic_bounded",
+        "targets"
+      ],
+      "original_sha256": "70d339e1ab5fb048fec05158cb80c4eeb7feddf156a8d584bef5568833499d6f",
+      "executed_sha256": "70d339e1ab5fb048fec05158cb80c4eeb7feddf156a8d584bef5568833499d6f"
+    }
+  },
+  "scope": "data-preserving pre-execution source amendment; no model execution"
+}

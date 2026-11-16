@@ -1,0 +1,3 @@
+C:\Users\henry\Documents\Codex\2026-10-22\i\work\clmm-test-env\Lib\site-packages\torch\jit\_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+{"step": 1, "loss": 4.4344658851623535, "accuracy": 0.0, "gradient_norm": 34.2412109375, "answers": 4, "input_bytes": 252, "elapsed_seconds": 0.3847735999734141}

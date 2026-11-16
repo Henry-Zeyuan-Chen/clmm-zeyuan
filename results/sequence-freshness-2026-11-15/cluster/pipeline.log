@@ -1,0 +1,13 @@
+{"projected_main_seconds": 2821.6674887540285, "proceed": true}
+{"initial": "68101-w128"}
+{"initial": "68101-w32"}
+{"initial": "68105-w128"}
+{"initial": "68105-w32"}
+{"completed": "68101-w32-periodic", "seconds": 332.99851119099185, "count": 1}
+{"completed": "68101-w128-periodic", "seconds": 343.02121453901054, "count": 2}
+{"completed": "68101-w128-periodic_bounded", "seconds": 356.82282859197585, "count": 3}
+{"completed": "68101-w32-periodic_bounded", "seconds": 366.72139301599236, "count": 4}
+{"completed": "68105-w128-periodic", "seconds": 355.66927410301287, "count": 5}
+{"completed": "68105-w32-periodic", "seconds": 357.9454807770089, "count": 6}
+{"completed": "68105-w128-periodic_bounded", "seconds": 400.75392034102697, "count": 7}
+{"completed": "68105-w32-periodic_bounded", "seconds": 402.3387131629861, "count": 8}

@@ -1,0 +1,9 @@
+{
+  "selection": "episode in [0,1], every initial/final model, group, arm and condition",
+  "absolute_logit_tolerance": 0.002,
+  "maximum_probability_error": 0.0002,
+  "maximum_seconds": 300,
+  "scope": "selected inference, not full training reproduction",
+  "threads": 2,
+  "batch_size": 16
+}

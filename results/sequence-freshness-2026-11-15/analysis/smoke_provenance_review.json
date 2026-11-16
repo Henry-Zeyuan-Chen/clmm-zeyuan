@@ -1,0 +1,390 @@
+{
+  "status": "passed",
+  "scope": "CPU tensor and source inspection only; no model built or executed",
+  "environment": {
+    "torch": "2.10.0+cpu",
+    "numpy": "2.2.6"
+  },
+  "source_commit": "0ca5cbadfebd76d65e94bf9291d69f25afda7f65",
+  "source_files": [
+    {
+      "path": "clmm/pretrain/__init__.py",
+      "sha256": "3684561d02ad25bba9fe0673da2241b976031fb4ab98a891da8c081490eae526",
+      "snapshot_matches": true,
+      "git_blob_matches": true,
+      "current_checkout_matches": true
+    },
+    {
+      "path": "clmm/pretrain/adapter_registry.py",
+      "sha256": "770226cdfc0d4dc93294668defaeec5375b4abbfccd2e717aa25398871fcfc83",
+      "snapshot_matches": true,
+      "git_blob_matches": true,
+      "current_checkout_matches": true
+    },
+    {
+      "path": "clmm/pretrain/association_probe.py",
+      "sha256": "f5f2b92ecda5d5adbcbaca32857ce2547d760c7189c30ad69148a068880485dc",
+      "snapshot_matches": true,
+      "git_blob_matches": true,
+      "current_checkout_matches": true
+    },
+    {
+      "path": "clmm/pretrain/byte_lm.py",
+      "sha256": "b41de6f729bb4bc18f1d17ce6a449deb4c90eafea550271d32f01866f3b4feea",
+      "snapshot_matches": true,
+      "git_blob_matches": true,
+      "current_checkout_matches": true
+    },
+    {
+      "path": "clmm/pretrain/fact_streams.py",
+      "sha256": "32637fe0388ffa132b061ce1d8dab4e9a7e64324606e9ade49d29024214ac7f3",
+      "snapshot_matches": true,
+      "git_blob_matches": true,
+      "current_checkout_matches": true
+    },
+    {
+      "path": "clmm/pretrain/kv_control.py",
+      "sha256": "127a39b76f13f47be9c5126bbd144a717eb0719eac55b661a4dd33577036ca4d",
+      "snapshot_matches": true,
+      "git_blob_matches": true,
+      "current_checkout_matches": true
+    },
+    {
+      "path": "clmm/pretrain/kv_correlated.py",
+      "sha256": "36eba373f036948e9a023bb00690348e8e0cfae1458ae7602b623507ae7f7200",
+      "snapshot_matches": true,
+      "git_blob_matches": true,
+      "current_checkout_matches": true
+    },
+    {
+      "path": "clmm/pretrain/kv_correlated_portable.py",
+      "sha256": "788d89b01139a689bb2a401f925016018a9bd5c570afa89886637602b3ac9837",
+      "snapshot_matches": true,
+      "git_blob_matches": true,
+      "current_checkout_matches": true
+    },
+    {
+      "path": "clmm/pretrain/kv_scheduler.py",
+      "sha256": "95546fddb2e5645a8f2f7fd23fb52de8ad50e1730adb2ba0ad080986e5e713e2",
+      "snapshot_matches": true,
+      "git_blob_matches": true,
+      "current_checkout_matches": true
+    },
+    {
+      "path": "clmm/pretrain/kv_streams.py",
+      "sha256": "1a62fd8d5d58fab9dcb4ba7e49f1cee8506c5564ce4ebc64f0b6d6f5a2537b9a",
+      "snapshot_matches": true,
+      "git_blob_matches": true,
+      "current_checkout_matches": true
+    },
+    {
+      "path": "clmm/pretrain/sequence_freshness_data.py",
+      "sha256": "b4300272ae1a0c15d66c1e346c25928b0780f4efb07b04611510893c3ce560db",
+      "snapshot_matches": true,
+      "git_blob_matches": null,
+      "current_checkout_matches": true
+    },
+    {
+      "path": "clmm/pretrain/sequence_replay.py",
+      "sha256": "fbd7432551e73e1062ad3e7cedd34456d9cce5fcb8c1bd6ab5fcbc16c955347b",
+      "snapshot_matches": true,
+      "git_blob_matches": null,
+      "current_checkout_matches": true
+    },
+    {
+      "path": "titans_pytorch/__init__.py",
+      "sha256": "9b3be9e16d55d7108bcecb048e3a05428b508f632dca9d90e69653175a343c78",
+      "snapshot_matches": true,
+      "git_blob_matches": false,
+      "current_checkout_matches": true
+    },
+    {
+      "path": "titans_pytorch/implicit_mlp_attention.py",
+      "sha256": "de0d5554ffe5814d490de5f1e4dde007087e9304510d9f9a1af666df9ff522f5",
+      "snapshot_matches": true,
+      "git_blob_matches": false,
+      "current_checkout_matches": true
+    },
+    {
+      "path": "titans_pytorch/mac_transformer.py",
+      "sha256": "e879c0d830fc2a3daef31aaea3966f5af9bb214ab7f84f7ae816ab239cf0487e",
+      "snapshot_matches": true,
+      "git_blob_matches": false,
+      "current_checkout_matches": true
+    },
+    {
+      "path": "titans_pytorch/memory_models.py",
+      "sha256": "840064caa4a849ee91c26b1dcf93f2f8a8ead3abc1245bb5d3326ac46431697c",
+      "snapshot_matches": true,
+      "git_blob_matches": false,
+      "current_checkout_matches": true
+    },
+    {
+      "path": "titans_pytorch/nested_attention.py",
+      "sha256": "c463433b41b506dff5d5ca5667a4d7b5e63468be14ab2413c9dc375a9e0801a8",
+      "snapshot_matches": true,
+      "git_blob_matches": false,
+      "current_checkout_matches": true
+    },
+    {
+      "path": "titans_pytorch/neural_memory.py",
+      "sha256": "f32bba441df47d79379d2b1831ac012d4f268b35257e3e828119cea814519483",
+      "snapshot_matches": true,
+      "git_blob_matches": false,
+      "current_checkout_matches": true
+    },
+    {
+      "path": "clmm/__init__.py",
+      "sha256": "19574fe82dbeb4beb2bdd854142fbbc5f6a0fe692ae68018bf9e241e64fb759a",
+      "snapshot_matches": true,
+      "git_blob_matches": false,
+      "current_checkout_matches": true
+    },
+    {
+      "path": "scripts/fact_revision_experiment.py",
+      "sha256": "018301da2035fbb3c6af331e33b8d174589f924d6b8022d59d9e61609053955d",
+      "snapshot_matches": true,
+      "git_blob_matches": true,
+      "current_checkout_matches": true
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "ffe8b04d359dd4bc2599778c14aa08a57523424ac4bfaa3342a2608ef097854f",
+      "snapshot_matches": true,
+      "git_blob_matches": false,
+      "current_checkout_matches": true
+    },
+    {
+      "path": "requirements-lock.txt",
+      "sha256": "4308f2773c1f90d8de25dc486514401a805c3528ce8e639bec8ef8f60a1d2a47",
+      "snapshot_matches": true,
+      "git_blob_matches": false,
+      "current_checkout_matches": true
+    },
+    {
+      "path": "clmm/hebbian/__init__.py",
+      "sha256": "52568fd1204238d9dfdb9c1e2027683c0f4036df5a13222e4ed72159e7e7d618",
+      "snapshot_matches": true,
+      "git_blob_matches": true,
+      "current_checkout_matches": true
+    },
+    {
+      "path": "clmm/hebbian/adapter.py",
+      "sha256": "e52c78207bd308e98815e55b7140dc36016c87a40614d628995e6cc25b8409f5",
+      "snapshot_matches": true,
+      "git_blob_matches": true,
+      "current_checkout_matches": true
+    },
+    {
+      "path": "clmm/hebbian/revision.py",
+      "sha256": "2ebfaf8dcc7ccd58af4aca2df2fde20a24fa0994cf519276ea6df7bcab94ccbc",
+      "snapshot_matches": true,
+      "git_blob_matches": true,
+      "current_checkout_matches": true
+    },
+    {
+      "path": "clmm/hebbian/routing_decay.py",
+      "sha256": "1801f7c7112a4ed513bdde8e0cb9c0d7621bed28e832fe05bf156974769fb74b",
+      "snapshot_matches": true,
+      "git_blob_matches": true,
+      "current_checkout_matches": true
+    },
+    {
+      "path": "clmm/reference.py",
+      "sha256": "9eb9dd0783047272139f7550e56fe37330dbbd49c428c111eefa60334c3e36d5",
+      "snapshot_matches": true,
+      "git_blob_matches": false,
+      "current_checkout_matches": true
+    },
+    {
+      "path": "clmm/sleep/__init__.py",
+      "sha256": "631877b5398d3a963175ddec86e750035a29a64639c7db9c63bcce431132ac56",
+      "snapshot_matches": true,
+      "git_blob_matches": true,
+      "current_checkout_matches": true
+    },
+    {
+      "path": "clmm/sleep/adapter.py",
+      "sha256": "5a8235f8f9167583558d113e1da0da0bbdcaebff2d9a335d41cee8f7d63f8b49",
+      "snapshot_matches": true,
+      "git_blob_matches": true,
+      "current_checkout_matches": true
+    },
+    {
+      "path": "clmm/sleep/multirevision.py",
+      "sha256": "cf37db0c83c56a7658a5b6c5726295cce23a03cd36f7ae6c25138ab9b2a50bae",
+      "snapshot_matches": true,
+      "git_blob_matches": true,
+      "current_checkout_matches": true
+    },
+    {
+      "path": "scripts/adapter_integration_experiment.py",
+      "sha256": "5765f5e63f2edc9becaa9be092c5f3cbe7919b27994347234ec8f9a109885ca7",
+      "snapshot_matches": true,
+      "git_blob_matches": true,
+      "current_checkout_matches": true
+    },
+    {
+      "path": "scripts/fact_attention_control.py",
+      "sha256": "bd8606c3f9f0bc48e1026f7f4d9b71b15520607d39b27275790981d73c32b60b",
+      "snapshot_matches": true,
+      "git_blob_matches": true,
+      "current_checkout_matches": true
+    },
+    {
+      "path": "scripts/fact_paired_acquisition.py",
+      "sha256": "a488c241b25dbd6532e433ae883d2da074cd7b677833f9b24a8b2832ce880bb3",
+      "snapshot_matches": true,
+      "git_blob_matches": true,
+      "current_checkout_matches": true
+    },
+    {
+      "path": "scripts/fixed_set_generalization.py",
+      "sha256": "3edd2a173d12f01a5fa3a79eef84c590e6c08afab5b38f6d76d5e7b7355073a6",
+      "snapshot_matches": true,
+      "git_blob_matches": true,
+      "current_checkout_matches": true
+    },
+    {
+      "path": "scripts/freshness_experiment.py",
+      "sha256": "aad665bb838761649dc309d673d9cb6baf98873d4cd4d44a8bbb0e3c35897933",
+      "snapshot_matches": true,
+      "git_blob_matches": true,
+      "current_checkout_matches": true
+    },
+    {
+      "path": "scripts/kv_correlated_experiment.py",
+      "sha256": "c3144b3e308ab55f7e81ce808239cdaab36cea32d6eba54567237e3fc886f2f4",
+      "snapshot_matches": true,
+      "git_blob_matches": true,
+      "current_checkout_matches": true
+    },
+    {
+      "path": "scripts/kv_representation_control.py",
+      "sha256": "406ab97d44e5b89d6b8be45f4d46070c2ea2c4b9f0cb7c264c2815346dd40e00",
+      "snapshot_matches": true,
+      "git_blob_matches": true,
+      "current_checkout_matches": true
+    },
+    {
+      "path": "scripts/kv_streaming_demo.py",
+      "sha256": "402a68e4ddf2f5793de0e14e6b7ef1f1595247a10a22006ed471039de8de4cca",
+      "snapshot_matches": true,
+      "git_blob_matches": true,
+      "current_checkout_matches": true
+    },
+    {
+      "path": "scripts/memory_pressure_probe.py",
+      "sha256": "53ef1684b81fade61b6dfe2dce5829f5443ed2a9c0cb4a3162992ed6faf1196c",
+      "snapshot_matches": true,
+      "git_blob_matches": true,
+      "current_checkout_matches": true
+    },
+    {
+      "path": "scripts/replay_probe.py",
+      "sha256": "7c9e9ca0cb79ff59ef527237bf2424d52c9a2956754784d1027702f782bb5424",
+      "snapshot_matches": true,
+      "git_blob_matches": true,
+      "current_checkout_matches": true
+    },
+    {
+      "path": "scripts/research_memory.py",
+      "sha256": "c129ff991eea1f6bf215eb8116f1b0e8b9b1f65c76b8f8988afc8a235bdd27ac",
+      "snapshot_matches": true,
+      "git_blob_matches": true,
+      "current_checkout_matches": true
+    },
+    {
+      "path": "scripts/revision_local_experiment.py",
+      "sha256": "2e0faa9f4fd191cd49701553a73b8f03adc959d2f8b6b766497045d2282e459e",
+      "snapshot_matches": true,
+      "git_blob_matches": true,
+      "current_checkout_matches": true
+    },
+    {
+      "path": "scripts/routing_decay_experiment.py",
+      "sha256": "142139eaf25c11deca63ec0c65ef44d3958ae1303809e2a56d628239fabac188",
+      "snapshot_matches": true,
+      "git_blob_matches": true,
+      "current_checkout_matches": true
+    },
+    {
+      "path": "scripts/sequence_freshness_experiment.py",
+      "sha256": "595f3eb362c3d5591d61dc45ff2384efbdab6fa7d13ef7a687c569fec3a7bac9",
+      "snapshot_matches": true,
+      "git_blob_matches": null,
+      "current_checkout_matches": false
+    },
+    {
+      "path": "scripts/sleep_multirevision_experiment.py",
+      "sha256": "6663ce8e2919bfaa5ed2760f207d32c9074ccb967002378357032f61fd0c54a7",
+      "snapshot_matches": true,
+      "git_blob_matches": true,
+      "current_checkout_matches": true
+    },
+    {
+      "path": "scripts/train_memory_pilot.py",
+      "sha256": "9fd565ceedadf852b86d5462b3423324166009934fcebb439ad6aded018a0669",
+      "snapshot_matches": true,
+      "git_blob_matches": true,
+      "current_checkout_matches": true
+    },
+    {
+      "path": "scripts/train_shared_byte_lm.py",
+      "sha256": "06e7dce0041b84f5759c7d2c0a9f129c1f159bc73e6945cebd8f7b6f1eabfd78",
+      "snapshot_matches": true,
+      "git_blob_matches": true,
+      "current_checkout_matches": true
+    },
+    {
+      "path": "scripts/verify_titans.py",
+      "sha256": "797f63f15a9fc353bfc15fabbf3afa00e3c8f1f3b4f346785d35e5864755d3c9",
+      "snapshot_matches": true,
+      "git_blob_matches": false,
+      "current_checkout_matches": true
+    }
+  ],
+  "parents": [
+    {
+      "seed": 68101,
+      "sha256": "a07762534f0b6311ec68c08b0d9f9c0ce74ec71577138eb13279a4a5dffbb24d",
+      "state_sha256": "75b37a9c453ecb0ac5cf488a73efe7ec7f37290eee5d89579833f8ce089dec9c",
+      "tensor_elements": 839248,
+      "all_finite": true
+    },
+    {
+      "seed": 68105,
+      "sha256": "c3c4b5f49fa3116f348720b8215e2a97a8b166587d22c5c1c9ab1f72cccf8a55",
+      "state_sha256": "3801f168b07538e32c33ef47d36bb34fdf7cac023c24c195d178a4baf3ffcdb3",
+      "tensor_elements": 839248,
+      "all_finite": true
+    }
+  ],
+  "cases": [
+    {
+      "case": "smoke-run",
+      "parent": 68101,
+      "segment": 128,
+      "mode": "train",
+      "unchanged_parameter_shapes": true,
+      "tensor_elements": 839248,
+      "all_finite": true,
+      "changed_tensors": 71,
+      "optimizer_steps": [
+        8
+      ],
+      "checkpoint_sha256": "cab1c337665f4150204c8fa5945a5073ebef50753b15806df714bbefa7e5bdba",
+      "optimizer_state_elements": 830960,
+      "no_optimizer_state_tensors": [
+        "layers.0.4.memory_model.norm.gamma",
+        "layers.0.4.memory_model.model.weights.0",
+        "layers.0.4.memory_model.model.weights.1",
+        "layers.0.5.rotary_emb.freqs",
+        "layers.1.4.memory_model.norm.gamma",
+        "layers.1.4.memory_model.model.weights.0",
+        "layers.1.4.memory_model.model.weights.1",
+        "layers.1.5.rotary_emb.freqs"
+      ]
+    }
+  ]
+}

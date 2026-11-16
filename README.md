@@ -6,6 +6,8 @@ We build on lucidrains' [titans-pytorch](https://github.com/lucidrains/titans-py
 
 ## Status
 
+The [complete-sequence freshness pilot](docs/SEQUENCE_FRESHNESS.md) integrates bounded raw-record replay into the unchanged 839,248-parameter byte model and completes eight matched adaptations on Insomnia. All 24 fresh assignment/template acquisition gates fail (0–2/128 both-correct); bounded versus literal training has 0 ppaggregate effect on both primary acquisition endpoints. Keep the qualified component baseline for method work; fix sequence key-conditioned reading before scaling or claiming retention. Full saved-GPU audits pass; selected CPU answers match, with disclosed score-tolerance failures on longer revision probes.
+
 The [bounded freshness control](docs/BOUNDED_FRESHNESS.md) fixes stale replay using only the existing FIFO, with candidate draws, writes and retained records matched. Across twelve fixed checkpoints on fresh K16 multiple-revision histories, D128 revised accuracy improves by 10.47 percentage points over literal replay, with no clear stable change. Both bounded schedules pass D0 revision admission, but do not beat repeat-current overall. This repairs a reference baseline; full Titans/sequence-model efficacy remains separate.
 
 The [K16 multiple-revision replay comparison](docs/SLEEP_MULTIREVISION.md) evaluates all twelve shared local-delta checkpoints with exact matched continuous/periodic samples and write budgets. At D128, revised accuracy is 84.22% continuous, 81.76% periodic, versus 93.89% repeat-current/online. All checkpoints pass neutral acquisition, but both replay schedules damage replacement at D0. This is a controlled revision/interference result and motivates testing replay freshness rather than claiming a sleep benefit.

@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "scope": "secondary development diagnostics; fixed checkpoints and paired histories",
+  "final_cases": 1,
+  "counterfactual_rows": 1,
+  "acquisition_gate_rows": 3,
+  "passed_acquisition_gates": 0,
+  "revision_contrast_rows": 30,
+  "draws": 100,
+  "seed": 91304,
+  "all_final_case_gate_sets_pass": false
+}

@@ -1,0 +1,129 @@
+{
+  "status": "audited_documented_failure",
+  "scope": "saved numerical-comparison evidence only; no reviewer inference",
+  "models": 12,
+  "selected_vectors": 1200,
+  "absolute_logit_tolerance": 0.002,
+  "maximum_probability_tolerance": 0.0002,
+  "maximum_absolute_logit_error": 0.018770217895507812,
+  "maximum_probability_error": 0.0007565086630314521,
+  "argmax_differences": 0,
+  "absolute_logit_failures": 6,
+  "probability_failures": 6,
+  "combined_failures": 10,
+  "affected_models": 2,
+  "all_acquisition_rows_within_tolerance": true,
+  "exact_GPU_cohort_CPU_equals_prior_subset_CPU": true,
+  "maximum_CPU_single_versus_batch_error": 0.000438690185546875,
+  "interpretation": "Original numerical acceptance remains unmet; selected-subset batching does not explain the observed CPU/GPU difference. Hardware and Torch version differ; cause not isolated.",
+  "failures": [
+    {
+      "case": "68101-w32-periodic",
+      "score_index": 1282,
+      "group": "revision_dev_seen",
+      "arm": "repeat",
+      "absolute_logit_error": 0.0011434555053710938,
+      "maximum_probability_error": 0.000248462711518016,
+      "logit_threshold_failed": false,
+      "probability_threshold_failed": true
+    },
+    {
+      "case": "68101-w32-periodic",
+      "score_index": 1283,
+      "group": "revision_dev_seen",
+      "arm": "repeat",
+      "absolute_logit_error": 0.0011348724365234375,
+      "maximum_probability_error": 0.0002531613267816313,
+      "logit_threshold_failed": false,
+      "probability_threshold_failed": true
+    },
+    {
+      "case": "68101-w32-periodic",
+      "score_index": 1666,
+      "group": "revision_dev_seen",
+      "arm": "continuous_bounded",
+      "absolute_logit_error": 0.0006747245788574219,
+      "maximum_probability_error": 0.00022346001111506197,
+      "logit_threshold_failed": false,
+      "probability_threshold_failed": true
+    },
+    {
+      "case": "68101-w32-periodic",
+      "score_index": 1667,
+      "group": "revision_dev_seen",
+      "arm": "continuous_bounded",
+      "absolute_logit_error": 0.0006661415100097656,
+      "maximum_probability_error": 0.00022386707199728573,
+      "logit_threshold_failed": false,
+      "probability_threshold_failed": true
+    },
+    {
+      "case": "68101-w32-periodic",
+      "score_index": 3584,
+      "group": "revision_dev_heldout",
+      "arm": "periodic",
+      "absolute_logit_error": 0.018770217895507812,
+      "maximum_probability_error": 0.0007565086630314521,
+      "logit_threshold_failed": true,
+      "probability_threshold_failed": true
+    },
+    {
+      "case": "68101-w32-periodic",
+      "score_index": 3585,
+      "group": "revision_dev_heldout",
+      "arm": "periodic",
+      "absolute_logit_error": 0.01848626136779785,
+      "maximum_probability_error": 0.0005511499319370283,
+      "logit_threshold_failed": true,
+      "probability_threshold_failed": true
+    },
+    {
+      "case": "68105-w128-periodic_bounded",
+      "score_index": 3329,
+      "group": "revision_dev_heldout",
+      "arm": "repeat",
+      "absolute_logit_error": 0.0020813941955566406,
+      "maximum_probability_error": 0.00010976392891459685,
+      "logit_threshold_failed": true,
+      "probability_threshold_failed": false
+    },
+    {
+      "case": "68105-w128-periodic_bounded",
+      "score_index": 3584,
+      "group": "revision_dev_heldout",
+      "arm": "periodic",
+      "absolute_logit_error": 0.003570556640625,
+      "maximum_probability_error": 0.0001609946307249699,
+      "logit_threshold_failed": true,
+      "probability_threshold_failed": false
+    },
+    {
+      "case": "68105-w128-periodic_bounded",
+      "score_index": 3585,
+      "group": "revision_dev_heldout",
+      "arm": "periodic",
+      "absolute_logit_error": 0.0036516189575195312,
+      "maximum_probability_error": 0.00010883843550005268,
+      "logit_threshold_failed": true,
+      "probability_threshold_failed": false
+    },
+    {
+      "case": "68105-w128-periodic_bounded",
+      "score_index": 3841,
+      "group": "revision_dev_heldout",
+      "arm": "periodic_bounded",
+      "absolute_logit_error": 0.0020132064819335938,
+      "maximum_probability_error": 7.73368302654509e-05,
+      "logit_threshold_failed": true,
+      "probability_threshold_failed": false
+    }
+  ],
+  "input_sha256": {
+    "cpu-recheck\\plan.json": "5ef1c9b8ddb19392b4c64545c55353350550598c4adc03cd6ed159b2057a1c98",
+    "cpu-recheck\\verification.json": "c0190e0548ed378b4b823ff654c1c923621e0b965cba18e7f19f117201ef005d",
+    "cpu-recheck\\selected_rows.json": "3946d07d8b4ed5b14b98fdde28e125b3e1d312d2a39ca9263495b857bd2ca3cf",
+    "cpu-recheck\\cpu_logits.npy": "6b51208db1d52befd68f1fb45b35569a4b2a065bd75e9ad1823e02e5920e4375",
+    "cpu-recheck\\gpu_logits.npy": "0a1198099c52934f0fe68c08534324b921d34c9c227fa2fabebbbf2906ebec20",
+    "cpu-recheck\\batch-diagnostic\\review.json": "b7f3c667959baa3355f8e09e181b017da1b5a39cc47fe767b30657077a39540a"
+  }
+}

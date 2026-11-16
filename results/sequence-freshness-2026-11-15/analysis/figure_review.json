@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "scope": "Current PNGs visually inspected; PDF/SVG exported from same Matplotlib figures",
+  "observations": {
+    "acquisition_counts": "All8cases and exact denominators legible; joint4 separately identified; full-scale colorbar preserves acquisition floor.",
+    "primary_paired_effects": "Both co-primary fixed-case intervals and zero effects legible; wrapped axis caption and97.5% bootstrap scope fully visible.",
+    "revision_diagnostics": "Per-question metric explicit; all0/64pair failures stated; both trained geometries/template families/all6arms retained; nominal fixed-parent intervals labeled."
+  },
+  "figures": {
+    "acquisition_counts.png": "8d2118c79a1e37109df99f3d4f98d112328afa119699ede8d218831b7fbc3d8c",
+    "acquisition_counts.pdf": "4623672611689543889e79e04ec6db3125967cff6e83b6db53047e3580f4831e",
+    "acquisition_counts.svg": "b4a4bad5c20493bd140128040eab5f1b300a976a75f8afbdd65f30d6e8cf70b0",
+    "primary_paired_effects.png": "d7b92343399c7a0050df4098ff48231795d2406dd4d103f4e0f4fc85c6b03fae",
+    "primary_paired_effects.pdf": "5a31bebe6cbc3f71f678baa3b9275c29ca1dae01fbe23b333b3fecb0d3cf6bf5",
+    "primary_paired_effects.svg": "9e9f6a50575798516c937c65e9b15b4411441a18fa132a28a489a00a0d115d8e",
+    "revision_diagnostics.png": "faf8664272b8566c59f9dbd79a10d6af0bbe3e6879b3a6ad8258da0e0231129b",
+    "revision_diagnostics.pdf": "368317f9e691e14fde78524d1d7a8cae438e1e1d84af7815fea12221cb3e6e18",
+    "revision_diagnostics.svg": "ea3f92f2f7dd0ba88a3f6113f69fd8b3346cecdff88d928db17a64e33f6bf048"
+  },
+  "source_tables": {
+    "figures\\acquisition_figure_source.csv": "5cc7b04c3232610bd90c868f0d8f8ff360774637bc23cf2a8fc21466ebd71dfc",
+    "audited\\primary_estimates.csv": "86d64e4bcf33ab74028cf47e16c99053afcc813ee4e4d90a52eac8bb673f67bb",
+    "figures\\revision_figure_source.csv": "9c9b245ae71b5fdf753fb09c4702942c22be0b09a8f26a419aa2f4e06b7054b3"
+  }
+}

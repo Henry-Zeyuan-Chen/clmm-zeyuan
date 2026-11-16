@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "scope": "frozen bytes and replay-plan reconstruction; no model execution",
+  "plans": 1280,
+  "samples": 4352,
+  "context_record_presentations": 8192,
+  "online_record_presentations": 5632,
+  "extra_record_presentations": 2560,
+  "stale_extra_presentations": 968,
+  "bounded_source_refreshes": 968,
+  "samples_input_bytes": 855808,
+  "files_sha256": {
+    "episodes.json": "a5a08ef4ddafd1bf2816a2c60e2134bc7dc4ef8e520ffd21603c4a72fe23fd9f",
+    "plans.json": "8b180fffd5b5689f84db87c25f9beb26d402b982deda0eaeb8b77398a4ee93e5",
+    "samples.json": "cd9d7a392bfff65e5ec60ee42cec305047c86457365e27a02041f871f6a347be"
+  }
+}

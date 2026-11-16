@@ -1,0 +1,92 @@
+{
+  "status": "complete_with_documented_limitations",
+  "scientific_outcome": "acquisition_failed",
+  "source_commit": "95da59531ccf5d5f3fe2729553e6d980da598352",
+  "registered_parameters": 839248,
+  "tests_passed": 238,
+  "test_log_sha256": "18ffc300454008a6aaa586110f23c530e27c436e01fd62bb7e6c72f2a52f134e",
+  "totals": {
+    "updates": 16000,
+    "answers": 256000,
+    "input_bytes": 29169664,
+    "score_vectors": 52224,
+    "memory_nonzero_gradient_steps": 16000
+  },
+  "primary": [
+    {
+      "endpoint": "acquire_train_seen",
+      "estimate": 0.0,
+      "lower": -0.009765625,
+      "upper": 0.008813476562499645
+    },
+    {
+      "endpoint": "acquire_dev_heldout",
+      "estimate": 0.0,
+      "lower": -0.009765625,
+      "upper": 0.009765625
+    }
+  ],
+  "passed_acquisition_gate_cells": 0,
+  "total_acquisition_gate_cells": 24,
+  "all_acquisition_gate_sets_pass": false,
+  "full_sequence_retention_qualified": false,
+  "CPU_selected_inference": {
+    "status": "numerical_review_required",
+    "models": 12,
+    "queries": 1200,
+    "max_absolute_error": 0.018770217895507812,
+    "maximum_probability_error": 0.0007565086630314521,
+    "rows_exceeding_either_threshold": 10,
+    "argmax_differences": 0,
+    "original_tolerances_unchanged": true
+  },
+  "figures": {
+    "status": "passed",
+    "reviewer": "coordinator",
+    "figures": 3,
+    "scope": "Actual PNG visual inspection; readable labels, 0-100percent ranges, paired interval and floor/admission caveats verified",
+    "files_sha256": {
+      "analysis\\figures\\acquisition_counts.pdf": "4623672611689543889e79e04ec6db3125967cff6e83b6db53047e3580f4831e",
+      "analysis\\figures\\acquisition_counts.png": "8d2118c79a1e37109df99f3d4f98d112328afa119699ede8d218831b7fbc3d8c",
+      "analysis\\figures\\acquisition_counts.svg": "b4a4bad5c20493bd140128040eab5f1b300a976a75f8afbdd65f30d6e8cf70b0",
+      "analysis\\figures\\figure_manifest.json": "3465b8806f77fa7a7cd9e30b37eec8a09255b146f0b24e39a4aaced5957e1e1d",
+      "analysis\\figures\\primary_paired_effects.pdf": "5a31bebe6cbc3f71f678baa3b9275c29ca1dae01fbe23b333b3fecb0d3cf6bf5",
+      "analysis\\figures\\primary_paired_effects.png": "d7b92343399c7a0050df4098ff48231795d2406dd4d103f4e0f4fc85c6b03fae",
+      "analysis\\figures\\primary_paired_effects.svg": "9e9f6a50575798516c937c65e9b15b4411441a18fa132a28a489a00a0d115d8e",
+      "analysis\\figures\\revision_diagnostics.pdf": "368317f9e691e14fde78524d1d7a8cae438e1e1d84af7815fea12221cb3e6e18",
+      "analysis\\figures\\revision_diagnostics.png": "faf8664272b8566c59f9dbd79a10d6af0bbe3e6879b3a6ad8258da0e0231129b",
+      "analysis\\figures\\revision_diagnostics.svg": "ea3f92f2f7dd0ba88a3f6113f69fd8b3346cecdff88d928db17a64e33f6bf048",
+      "analysis\\figures\\revision_figure_source.csv": "9c9b245ae71b5fdf753fb09c4702942c22be0b09a8f26a419aa2f4e06b7054b3"
+    }
+  },
+  "cluster": {
+    "job_id": 13922356,
+    "node": "ins080",
+    "job_closed": true,
+    "accounting_state": "CANCELLED by 564221",
+    "allocation_elapsed_seconds": 1634,
+    "GPUs": 2,
+    "allocated_GPU_hours": 0.9077777777777778,
+    "no_active_user_jobs": true,
+    "no_renewal": true,
+    "helper_selection_changed": false,
+    "accounting_sha256": "4d5808465aea7bc806dad125954e2874678f46c2e85b93896c64e65fb5059f6c"
+  },
+  "pipeline_elapsed_seconds": 1583.0393893529545,
+  "main_elapsed_seconds": 1542.8670291900635,
+  "exclusions": {
+    "supplied": 81326,
+    "later_union": 81347,
+    "main_evaluation_overlap": 0,
+    "original_data_unchanged": true
+  },
+  "scope": "Full-sequence raw-record replay reference, fixed training budgets, no size increase; no paper-faithful/memory-only sleep/cross-session/biological claim",
+  "checks_sha256": {
+    "analysis\\audited\\results_audit.json": "369001e15a6cbf21d62fa78d606ccae7a14bf47b1825c0e672952006a87dc6bc",
+    "analysis\\audited\\secondary_analysis.json": "b8377a7a4511f0ed60c118a1e805cb5284dfca0a6f76d83761d8d6861b9db7db",
+    "analysis\\final_packet_provenance_review.json": "e1696372b7c5ac967487f406df46c9112eda65ff8af04dde0532bebb7169f146",
+    "analysis\\work_smoke_regeneration_review.json": "21514819ccc1748d692d47ae9897065d6abdc7fcf7b493a28c6158f4fbf36ea3",
+    "validation\\coordinator-check.json": "404eeeefeff984cb3df9de30a574212fe85b65291ceef680941d01669f15fa83",
+    "cpu-recheck\\verification.json": "c0190e0548ed378b4b823ff654c1c923621e0b965cba18e7f19f117201ef005d"
+  }
+}

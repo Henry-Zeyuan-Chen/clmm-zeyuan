@@ -1,0 +1,58 @@
+{
+  "status": "passed",
+  "scope": "saved-output score/data analysis only; no model execution",
+  "cases": [
+    {
+      "folder": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sequence-freshness-2026-11-15\\gpu-output\\result\\engineering\\w128",
+      "mode": "preflight",
+      "parent": 68101,
+      "segment": 128,
+      "training_arm": "periodic",
+      "status": "passed",
+      "logit_vectors": 544,
+      "max_score_error": {
+        "prediction": 0.0,
+        "forced_prediction": 0.0,
+        "correct": 0.0,
+        "nll": 4.000545938964706e-07,
+        "forced_nll": 2.510439465197578e-07,
+        "legal_probability_mass": 2.2723408221736463e-07
+      },
+      "training": {
+        "steps": 20,
+        "answer_forks": 320,
+        "input_bytes": 37056,
+        "memory_nonzero_gradient_steps": 20
+      }
+    },
+    {
+      "folder": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sequence-freshness-2026-11-15\\gpu-output\\result\\engineering\\w32",
+      "mode": "preflight",
+      "parent": 68101,
+      "segment": 32,
+      "training_arm": "periodic",
+      "status": "passed",
+      "logit_vectors": 544,
+      "max_score_error": {
+        "prediction": 0.0,
+        "forced_prediction": 0.0,
+        "correct": 0.0,
+        "nll": 3.2497185209479085e-07,
+        "forced_nll": 3.0019167418515735e-07,
+        "legal_probability_mass": 2.101915329566495e-07
+      },
+      "training": {
+        "steps": 20,
+        "answer_forks": 320,
+        "input_bytes": 37056,
+        "memory_nonzero_gradient_steps": 20
+      }
+    }
+  ],
+  "total_logit_vectors": 1088,
+  "complete_eight_final_cases": false,
+  "primary": [],
+  "source_sha256": {
+    "audit_results.py": "3cf5f3082924f93f838d99fed6df5c545f7625ba2f4cd8ae4342123ae51c137e"
+  }
+}

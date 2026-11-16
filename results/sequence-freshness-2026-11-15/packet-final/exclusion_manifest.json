@@ -1,0 +1,12 @@
+{
+  "inputs": [
+    {
+      "kind": "supplied_exclusions",
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sequence-freshness-2026-11-15\\analysis\\supplemental_exclusion_review_expanded_signatures.json",
+      "sha256": "efe37f8aaebc61808ba05365e91f99cf4c7d0aeb276880eb07b6ec2de91dbd72",
+      "histories": 81326
+    }
+  ],
+  "union_count": 81326,
+  "current_training_unique": 15801
+}

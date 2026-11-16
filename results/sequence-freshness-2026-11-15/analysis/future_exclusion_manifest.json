@@ -1,0 +1,61 @@
+{
+  "status": "complete_future_only",
+  "scope": "For subsequent studies only; launch packets/unions remain byte-for-byte unchanged",
+  "base_histories": 81347,
+  "future_union_histories": 85123,
+  "additional_now_consulted_histories": 3776,
+  "includes": "Chronological real semantic histories plus actual presented raw-record contexts from both trained policies and all evaluation arms; excludes label-free query-only empty contexts",
+  "units": "SHA256 compact-JSON ordered string-key/value pairs, independent of surface template",
+  "packets": [
+    {
+      "packet": "main",
+      "real_training_histories": 15801,
+      "real_evaluation_histories": 448,
+      "rendered_training_and_evaluation_histories": 18009,
+      "new_signatures_added": 3648
+    },
+    {
+      "packet": "engineering",
+      "real_training_histories": 160,
+      "real_evaluation_histories": 56,
+      "rendered_training_and_evaluation_histories": 272,
+      "new_signatures_added": 128
+    }
+  ],
+  "base_sha256": "4ef26bf68676c79943ae8967295f0f97fe8d207ba3f85a3750464b24fc5410c2",
+  "future_union_sha256": "99db2ebb75ccf49faad2fc3cd3a4bff9bb8ff42cc5e842063a695feba8d02a7b",
+  "inputs": [
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sequence-freshness-2026-11-15\\packet-final\\episodes.json",
+      "sha256": "a5a08ef4ddafd1bf2816a2c60e2134bc7dc4ef8e520ffd21603c4a72fe23fd9f"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sequence-freshness-2026-11-15\\packet-final\\training_plan.json.gz",
+      "sha256": "7be0c5a6344f59ed513c060faeb41af8ced743e0f7e0a0e4b5d53d90e5bf403b"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sequence-freshness-2026-11-15\\packet-final\\samples.json",
+      "sha256": "cd9d7a392bfff65e5ec60ee42cec305047c86457365e27a02041f871f6a347be"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sequence-freshness-2026-11-15\\packet-final\\training.npz",
+      "sha256": "70d339e1ab5fb048fec05158cb80c4eeb7feddf156a8d584bef5568833499d6f"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sequence-freshness-2026-11-15\\engineering\\packet-final\\episodes.json",
+      "sha256": "c87ded9fbdfa1e4eca2d331d291add247af3a588aca5c52913d68ea743e0c36d"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sequence-freshness-2026-11-15\\engineering\\packet-final\\training_plan.json.gz",
+      "sha256": "7101c553bb3e4ed8a020ba9b13e3011fef6a2fccb4b8758b6af6709decf981f1"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sequence-freshness-2026-11-15\\engineering\\packet-final\\samples.json",
+      "sha256": "25e6b441a02e08079ab87623013791bc1d796a21dd95325164ed2c3f737e3f79"
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sequence-freshness-2026-11-15\\engineering\\packet-final\\training.npz",
+      "sha256": "db41dc0341389071b703a05ddde28234b23f7d0553496278bfdff478242df45e"
+    }
+  ]
+}

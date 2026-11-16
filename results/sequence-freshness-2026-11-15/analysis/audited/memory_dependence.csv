@@ -1,0 +1,25 @@
+case,parent,segment,training_arm,group,contrast,estimate,lower,upper,episodes,confidence,draws,seed
+68101-w128-periodic,68101,128,periodic,acquire_train_seen,normal-minus-segment-reset both-correct,0.0,0.0,0.0,128,0.95,5000,91304
+68101-w128-periodic,68101,128,periodic,acquire_dev_seen,normal-minus-segment-reset both-correct,0.0,0.0,0.0,128,0.95,5000,91304
+68101-w128-periodic,68101,128,periodic,acquire_dev_heldout,normal-minus-segment-reset both-correct,0.0,0.0,0.0,128,0.95,5000,91304
+68101-w128-periodic_bounded,68101,128,periodic_bounded,acquire_train_seen,normal-minus-segment-reset both-correct,0.0,0.0,0.0,128,0.95,5000,91304
+68101-w128-periodic_bounded,68101,128,periodic_bounded,acquire_dev_seen,normal-minus-segment-reset both-correct,0.0,0.0,0.0,128,0.95,5000,91304
+68101-w128-periodic_bounded,68101,128,periodic_bounded,acquire_dev_heldout,normal-minus-segment-reset both-correct,0.0,0.0,0.0,128,0.95,5000,91304
+68101-w32-periodic,68101,32,periodic,acquire_train_seen,normal-minus-segment-reset both-correct,0.0078125,-0.015625,0.0390625,128,0.95,5000,91304
+68101-w32-periodic,68101,32,periodic,acquire_dev_seen,normal-minus-segment-reset both-correct,0.0,0.0,0.0,128,0.95,5000,91304
+68101-w32-periodic,68101,32,periodic,acquire_dev_heldout,normal-minus-segment-reset both-correct,0.0078125,0.0,0.0234375,128,0.95,5000,91304
+68101-w32-periodic_bounded,68101,32,periodic_bounded,acquire_train_seen,normal-minus-segment-reset both-correct,0.0078125,0.0,0.0234375,128,0.95,5000,91304
+68101-w32-periodic_bounded,68101,32,periodic_bounded,acquire_dev_seen,normal-minus-segment-reset both-correct,0.015625,0.0,0.0390625,128,0.95,5000,91304
+68101-w32-periodic_bounded,68101,32,periodic_bounded,acquire_dev_heldout,normal-minus-segment-reset both-correct,0.0,0.0,0.0,128,0.95,5000,91304
+68105-w128-periodic,68105,128,periodic,acquire_train_seen,normal-minus-segment-reset both-correct,0.0,0.0,0.0,128,0.95,5000,91304
+68105-w128-periodic,68105,128,periodic,acquire_dev_seen,normal-minus-segment-reset both-correct,0.0,0.0,0.0,128,0.95,5000,91304
+68105-w128-periodic,68105,128,periodic,acquire_dev_heldout,normal-minus-segment-reset both-correct,0.0,0.0,0.0,128,0.95,5000,91304
+68105-w128-periodic_bounded,68105,128,periodic_bounded,acquire_train_seen,normal-minus-segment-reset both-correct,0.0,0.0,0.0,128,0.95,5000,91304
+68105-w128-periodic_bounded,68105,128,periodic_bounded,acquire_dev_seen,normal-minus-segment-reset both-correct,0.0,0.0,0.0,128,0.95,5000,91304
+68105-w128-periodic_bounded,68105,128,periodic_bounded,acquire_dev_heldout,normal-minus-segment-reset both-correct,0.0,0.0,0.0,128,0.95,5000,91304
+68105-w32-periodic,68105,32,periodic,acquire_train_seen,normal-minus-segment-reset both-correct,0.0,0.0,0.0,128,0.95,5000,91304
+68105-w32-periodic,68105,32,periodic,acquire_dev_seen,normal-minus-segment-reset both-correct,0.0078125,0.0,0.0234375,128,0.95,5000,91304
+68105-w32-periodic,68105,32,periodic,acquire_dev_heldout,normal-minus-segment-reset both-correct,0.0078125,0.0,0.0234375,128,0.95,5000,91304
+68105-w32-periodic_bounded,68105,32,periodic_bounded,acquire_train_seen,normal-minus-segment-reset both-correct,0.0,0.0,0.0,128,0.95,5000,91304
+68105-w32-periodic_bounded,68105,32,periodic_bounded,acquire_dev_seen,normal-minus-segment-reset both-correct,0.0,0.0,0.0,128,0.95,5000,91304
+68105-w32-periodic_bounded,68105,32,periodic_bounded,acquire_dev_heldout,normal-minus-segment-reset both-correct,0.015625,0.0,0.0390625,128,0.95,5000,91304

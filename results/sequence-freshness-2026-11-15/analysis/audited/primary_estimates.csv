@@ -1,0 +1,3 @@
+endpoint,metric,contrast,fixed_cases,episodes,estimate,lower,upper,confidence,draws,seed,unit
+acquire_train_seen,both_correct,bounded-minus-literal adaptation,4,128,0.0,-0.009765625,0.008813476562499645,0.975,5000,91304,whole episode after fixed-case averaging
+acquire_dev_heldout,both_correct,bounded-minus-literal adaptation,4,128,0.0,-0.009765625,0.009765625,0.975,5000,91304,whole episode after fixed-case averaging

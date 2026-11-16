@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "scope": "actual frozen producer data regeneration only; no model construction/inference",
+  "source_commit": "95da59531ccf5d5f3fe2729553e6d980da598352",
+  "source_sha256": {
+    "clmm/pretrain/fact_streams.py": "32637fe0388ffa132b061ce1d8dab4e9a7e64324606e9ade49d29024214ac7f3",
+    "clmm/pretrain/kv_scheduler.py": "95546fddb2e5645a8f2f7fd23fb52de8ad50e1730adb2ba0ad080986e5e713e2",
+    "clmm/pretrain/sequence_replay.py": "fbd7432551e73e1062ad3e7cedd34456d9cce5fcb8c1bd6ab5fcbc16c955347b",
+    "clmm/pretrain/sequence_freshness_data.py": "1d7f20d8af9f9b08e70d3593085a6512c93e14f2f7ab7ea745aa101e6ed0606f"
+  },
+  "expanded_signatures": 81347,
+  "expanded_signatures_sha256": "4ef26bf68676c79943ae8967295f0f97fe8d207ba3f85a3750464b24fc5410c2",
+  "episode_objects_identical": true,
+  "groups": {
+    "acquire_train_seen": 128,
+    "acquire_dev_seen": 128,
+    "revision_dev_seen": 64,
+    "acquire_train_swapped": 128,
+    "acquire_dev_heldout": 128,
+    "revision_dev_heldout": 64
+  },
+  "frozen_episode_file_sha256": "a5a08ef4ddafd1bf2816a2c60e2134bc7dc4ef8e520ffd21603c4a72fe23fd9f"
+}

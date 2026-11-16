@@ -1,0 +1,4 @@
+case,parent,segment,training_arm,group,both_correct,episodes,accuracy,acquisition_pass,memory_dependence_required,memory_dependence_pass,normal_minus_reset,lower,upper
+smoke-run,68101,128,periodic_bounded,acquire_train_seen,0,2,0.0,False,False,,0.0,0.0,0.0
+smoke-run,68101,128,periodic_bounded,acquire_dev_seen,0,2,0.0,False,False,,0.0,0.0,0.0
+smoke-run,68101,128,periodic_bounded,acquire_dev_heldout,0,2,0.0,False,False,,0.0,0.0,0.0

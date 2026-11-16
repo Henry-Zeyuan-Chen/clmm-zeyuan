@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "scope": "saved-output score/data analysis only; no model execution",
+  "cases": [
+    {
+      "folder": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-sequence-freshness\\smoke-run",
+      "mode": "train",
+      "parent": 68101,
+      "segment": 128,
+      "training_arm": "periodic_bounded",
+      "status": "passed",
+      "logit_vectors": 100,
+      "max_score_error": {
+        "prediction": 0.0,
+        "forced_prediction": 0.0,
+        "correct": 0.0,
+        "nll": 2.9229531239849393e-07,
+        "forced_nll": 5.34860230771983e-07,
+        "legal_probability_mass": 2.6357958282652305e-07
+      },
+      "training": {
+        "steps": 8,
+        "answer_forks": 32,
+        "input_bytes": 2784,
+        "memory_nonzero_gradient_steps": null
+      }
+    }
+  ],
+  "total_logit_vectors": 100,
+  "complete_eight_final_cases": false,
+  "primary": [],
+  "source_sha256": {
+    "audit_results.py": "3cf5f3082924f93f838d99fed6df5c545f7625ba2f4cd8ae4342123ae51c137e"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "stage": "before engineering GPU efficacy or main training",
+  "original_packet_source": "d0b74557408a43a1609fd28308b9a455196ba5b3",
+  "executed_source": "95da59531ccf5d5f3fe2729553e6d980da598352",
+  "changes": [
+    "Materialize selected compressed NPZ training arrays once, eliminating repeated full-array decompression from every optimizer update",
+    "Discover JSONL/gzip and legacy seed-only training records; allow an independently audited supplied signature union including actual old raw-prefix histories"
+  ],
+  "preservation": "Original packet and engineering packet remain intact. New packet-executed uses same planned seed/steps/parents; original vs executed tensor arrays, semantic histories, exact samples and plans will be compared before allocation",
+  "exclusions": {"original":42416,"additional_audited_signatures":38910,"expanded":81326,"observed_main_evaluation_overlap":0},
+  "selection": "No learning rate, model size, curriculum, training-step, query, endpoint or outcome-driven selection change",
+  "tests":238
+}

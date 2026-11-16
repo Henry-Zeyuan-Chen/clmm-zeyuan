@@ -1,0 +1,17 @@
+{
+  "status": "succeeded",
+  "job_id": "13922356",
+  "started_epoch": 1794785754.7958658,
+  "pending_limit_seconds": 1200,
+  "allocation_limit_seconds": 5400,
+  "no_renewal": true,
+  "upload_sha256": "70822557c2ab955d5f6acc4b012c9da6c6aab50466695006afa53de7f402fbcc",
+  "upload_bytes": 69383168,
+  "verified_running": "zc2819 RUNNING ins080",
+  "running_epoch": 1794785786.4473193,
+  "phase": "retrieve",
+  "download_sha256": "39165b0fc4677b0b882a098b108de1acbc1980f2493cab455a54d1b6fcca1284",
+  "pipeline_status": "succeeded",
+  "cancel_requested": true,
+  "ended_epoch": 1794787418.7603142
+}

@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "scope": "earlier CPU-smoke semantic histories outside outputs root; no model execution",
+  "frozen_exclusions": 81326,
+  "cpu_smoke_training_histories": 16,
+  "cpu_smoke_evaluation_histories": 8,
+  "additional_histories": 21,
+  "expanded_exclusions": 81347,
+  "overlap_with_main_evaluation": 0,
+  "main_evaluation_histories": 448,
+  "inputs": {
+    "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-sequence-freshness\\smoke-packet\\training_plan.json.gz": "7c02c52ef169933cd575b50d92152324fc3f9e90bed0f24d058a5f0911596c10",
+    "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-sequence-freshness\\smoke-packet\\episodes.json": "3d0d4c8763b78821416f230f2793a67959b50a36f7237fe71c50e4fb3e3656bc"
+  }
+}

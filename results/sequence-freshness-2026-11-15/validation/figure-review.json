@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "reviewer": "coordinator",
+  "figures": 3,
+  "scope": "Actual PNG visual inspection; readable labels, 0-100percent ranges, paired interval and floor/admission caveats verified",
+  "files_sha256": {
+    "analysis\\figures\\acquisition_counts.pdf": "4623672611689543889e79e04ec6db3125967cff6e83b6db53047e3580f4831e",
+    "analysis\\figures\\acquisition_counts.png": "8d2118c79a1e37109df99f3d4f98d112328afa119699ede8d218831b7fbc3d8c",
+    "analysis\\figures\\acquisition_counts.svg": "b4a4bad5c20493bd140128040eab5f1b300a976a75f8afbdd65f30d6e8cf70b0",
+    "analysis\\figures\\figure_manifest.json": "3465b8806f77fa7a7cd9e30b37eec8a09255b146f0b24e39a4aaced5957e1e1d",
+    "analysis\\figures\\primary_paired_effects.pdf": "5a31bebe6cbc3f71f678baa3b9275c29ca1dae01fbe23b333b3fecb0d3cf6bf5",
+    "analysis\\figures\\primary_paired_effects.png": "d7b92343399c7a0050df4098ff48231795d2406dd4d103f4e0f4fc85c6b03fae",
+    "analysis\\figures\\primary_paired_effects.svg": "9e9f6a50575798516c937c65e9b15b4411441a18fa132a28a489a00a0d115d8e",
+    "analysis\\figures\\revision_diagnostics.pdf": "368317f9e691e14fde78524d1d7a8cae438e1e1d84af7815fea12221cb3e6e18",
+    "analysis\\figures\\revision_diagnostics.png": "faf8664272b8566c59f9dbd79a10d6af0bbe3e6879b3a6ad8258da0e0231129b",
+    "analysis\\figures\\revision_diagnostics.svg": "ea3f92f2f7dd0ba88a3f6113f69fd8b3346cecdff88d928db17a64e33f6bf048",
+    "analysis\\figures\\revision_figure_source.csv": "9c9b245ae71b5fdf753fb09c4702942c22be0b09a8f26a419aa2f4e06b7054b3"
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "status": "passed",
+  "scope": "historical raw data/exclusions only; no inference/training",
+  "declared_exclusions": 81326,
+  "declared_manifest_inputs": 1,
+  "new_training_histories": 15801,
+  "supplemental_unique_histories": 66155,
+  "additional_histories": 0,
+  "expanded_exclusions": 81326,
+  "main_evaluation_unique_histories": 448,
+  "overlap_with_main_evaluation": 0,
+  "engineering_training_histories": 160,
+  "inputs": [
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-fact-revision-2026-11-14\\after-68101\\evaluation_data.jsonl.gz",
+      "sha256": "82a3e452a845d7ebca1c9d7b403c17b24cbb71d1e940b0d628d593e83c252bbe",
+      "kind": "JSONL real episodes",
+      "histories": 640,
+      "episode_lines": 17
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-fact-revision-2026-11-14\\attention128\\evaluation_data.jsonl.gz",
+      "sha256": "36e29cdad892b00a84c13e6e08d19ac5462551cdbb4cbd1d550a8d1f6fa0738b",
+      "kind": "JSONL real episodes",
+      "histories": 255,
+      "episode_lines": 8
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-fact-revision-2026-11-14\\before-68101\\evaluation_data.jsonl.gz",
+      "sha256": "4a5bf5412d6463cce17c3b57e6c592e36c7ffa7b040c324e4de8ce928b5b6dcc",
+      "kind": "JSONL real episodes",
+      "histories": 256,
+      "episode_lines": 8
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-fact-revision-2026-11-14\\smoke-cpu-eval\\evaluation_data.jsonl.gz",
+      "sha256": "cbd3c7bdb0421d12c4507036e98a3f855de0a2d272880011a441a472e87419f7",
+      "kind": "JSONL real episodes",
+      "histories": 26,
+      "episode_lines": 17
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-fact-revision-2026-11-14\\adapt-68101\\training_inputs.npz",
+      "sha256": "2bb3fe343bcfd9aa38493e05aa2c8aa7feb1f9de208665281e1facbfe1ca45c0",
+      "kind": "actual raw training prefixes",
+      "histories": 23474,
+      "answer_forks": 25600
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-fact-revision-2026-11-14\\attention128\\training_inputs.npz",
+      "sha256": "f887d767fea5648e20b1057fabfac33b52ca622cdf847e49d4293c009c67ebde",
+      "kind": "actual raw training prefixes",
+      "histories": 16000,
+      "answer_forks": 16000
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-fact-revision-2026-11-14\\smoke-cpu-train\\training_inputs.npz",
+      "sha256": "85014c3406c97d5488c9a2fd350c3269c76f63dd996e2b3f4e3a1c1d8c7ceb71",
+      "kind": "actual raw training prefixes",
+      "histories": 4,
+      "answer_forks": 4
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-paired-acquisition-2026-11-14\\duplicate32-68101\\step-0200\\evaluation\\evaluation_data.jsonl.gz",
+      "sha256": "7483d1d65e5db92b5c4046c4d02b26fd1416ee88a183ac9c166043794334cd99",
+      "kind": "JSONL real episodes",
+      "histories": 256,
+      "episode_lines": 8
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-paired-acquisition-2026-11-14\\smoke-cpu\\step-0001\\evaluation\\evaluation_data.jsonl.gz",
+      "sha256": "e68368d4c758d7bb82c572372c89f01cec0b999e2bda0c24b4ba4c0312f559f9",
+      "kind": "JSONL real episodes",
+      "histories": 8,
+      "episode_lines": 8
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-paired-acquisition-2026-11-14\\duplicate32-68101\\training_inputs.npz",
+      "sha256": "76bea945fde997869ced137cfc82e0997df470de506ece87ecf8abb06b758468",
+      "kind": "actual raw training prefixes",
+      "histories": 12524,
+      "answer_forks": 25600
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-paired-acquisition-2026-11-14\\paired128-68101\\training_inputs.npz",
+      "sha256": "adff0ad9de6d8a655a3bb0119c0993d2e12e94e074a43ea2b7ecf11453794920",
+      "kind": "actual raw training prefixes",
+      "histories": 12524,
+      "answer_forks": 25600
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-paired-acquisition-2026-11-14\\smoke-cpu\\training_inputs.npz",
+      "sha256": "354c2763aff627eb469436ceced21185aabaa97767cfa820cb0dd62e132d831a",
+      "kind": "actual raw training prefixes",
+      "histories": 8,
+      "answer_forks": 16
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-fixed-set-2026-11-14\\fixed128-68101\\training_inputs.npz",
+      "sha256": "c381cbc75e448c9d8db8896d7ddb873cc5e112deb7fd2888f566cf812ee5cd16",
+      "kind": "actual raw training prefixes",
+      "histories": 32,
+      "answer_forks": 32000
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-fixed-set-2026-11-14\\fresh128-68101\\training_inputs.npz",
+      "sha256": "9ecd8ff6cc90b25a8cc0e7dfe148d6f630e20159ba56d9508c45ac4be7c1fc62",
+      "kind": "actual raw training prefixes",
+      "histories": 13919,
+      "answer_forks": 32000
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-fixed-set-2026-11-14\\smoke-cpu\\training_inputs.npz",
+      "sha256": "0b5fd79bdbcf10f689d8f75bd67a86bcff1998bef6db4910e5366aad535d17d4",
+      "kind": "actual raw training prefixes",
+      "histories": 8,
+      "answer_forks": 20
+    }
+  ],
+  "declared_set_sha256": "efe37f8aaebc61808ba05365e91f99cf4c7d0aeb276880eb07b6ec2de91dbd72"
+}

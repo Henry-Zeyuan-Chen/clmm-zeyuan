@@ -1,0 +1,246 @@
+{
+  "status": "passed",
+  "source_commit": "95da59531ccf5d5f3fe2729553e6d980da598352",
+  "totals": {
+    "updates": 16000,
+    "answers": 256000,
+    "input_bytes": 29169664,
+    "score_vectors": 52224,
+    "memory_nonzero_gradient_steps": 16000
+  },
+  "primary": [
+    {
+      "endpoint": "acquire_train_seen",
+      "estimate": 0.0,
+      "lower": -0.009765625,
+      "upper": 0.008813476562499645
+    },
+    {
+      "endpoint": "acquire_dev_heldout",
+      "estimate": 0.0,
+      "lower": -0.009765625,
+      "upper": 0.009765625
+    }
+  ],
+  "gates": [
+    {
+      "parent": 68101,
+      "segment": 32,
+      "training_arm": "periodic",
+      "group": "acquire_train_seen",
+      "correct_worlds": 2,
+      "worlds": 128,
+      "passed": false
+    },
+    {
+      "parent": 68101,
+      "segment": 32,
+      "training_arm": "periodic",
+      "group": "acquire_dev_seen",
+      "correct_worlds": 0,
+      "worlds": 128,
+      "passed": false
+    },
+    {
+      "parent": 68101,
+      "segment": 32,
+      "training_arm": "periodic",
+      "group": "acquire_dev_heldout",
+      "correct_worlds": 1,
+      "worlds": 128,
+      "passed": false
+    },
+    {
+      "parent": 68101,
+      "segment": 32,
+      "training_arm": "periodic_bounded",
+      "group": "acquire_train_seen",
+      "correct_worlds": 1,
+      "worlds": 128,
+      "passed": false
+    },
+    {
+      "parent": 68101,
+      "segment": 32,
+      "training_arm": "periodic_bounded",
+      "group": "acquire_dev_seen",
+      "correct_worlds": 2,
+      "worlds": 128,
+      "passed": false
+    },
+    {
+      "parent": 68101,
+      "segment": 32,
+      "training_arm": "periodic_bounded",
+      "group": "acquire_dev_heldout",
+      "correct_worlds": 0,
+      "worlds": 128,
+      "passed": false
+    },
+    {
+      "parent": 68101,
+      "segment": 128,
+      "training_arm": "periodic",
+      "group": "acquire_train_seen",
+      "correct_worlds": 0,
+      "worlds": 128,
+      "passed": false
+    },
+    {
+      "parent": 68101,
+      "segment": 128,
+      "training_arm": "periodic",
+      "group": "acquire_dev_seen",
+      "correct_worlds": 1,
+      "worlds": 128,
+      "passed": false
+    },
+    {
+      "parent": 68101,
+      "segment": 128,
+      "training_arm": "periodic",
+      "group": "acquire_dev_heldout",
+      "correct_worlds": 0,
+      "worlds": 128,
+      "passed": false
+    },
+    {
+      "parent": 68101,
+      "segment": 128,
+      "training_arm": "periodic_bounded",
+      "group": "acquire_train_seen",
+      "correct_worlds": 0,
+      "worlds": 128,
+      "passed": false
+    },
+    {
+      "parent": 68101,
+      "segment": 128,
+      "training_arm": "periodic_bounded",
+      "group": "acquire_dev_seen",
+      "correct_worlds": 0,
+      "worlds": 128,
+      "passed": false
+    },
+    {
+      "parent": 68101,
+      "segment": 128,
+      "training_arm": "periodic_bounded",
+      "group": "acquire_dev_heldout",
+      "correct_worlds": 0,
+      "worlds": 128,
+      "passed": false
+    },
+    {
+      "parent": 68105,
+      "segment": 32,
+      "training_arm": "periodic",
+      "group": "acquire_train_seen",
+      "correct_worlds": 0,
+      "worlds": 128,
+      "passed": false
+    },
+    {
+      "parent": 68105,
+      "segment": 32,
+      "training_arm": "periodic",
+      "group": "acquire_dev_seen",
+      "correct_worlds": 1,
+      "worlds": 128,
+      "passed": false
+    },
+    {
+      "parent": 68105,
+      "segment": 32,
+      "training_arm": "periodic",
+      "group": "acquire_dev_heldout",
+      "correct_worlds": 1,
+      "worlds": 128,
+      "passed": false
+    },
+    {
+      "parent": 68105,
+      "segment": 32,
+      "training_arm": "periodic_bounded",
+      "group": "acquire_train_seen",
+      "correct_worlds": 0,
+      "worlds": 128,
+      "passed": false
+    },
+    {
+      "parent": 68105,
+      "segment": 32,
+      "training_arm": "periodic_bounded",
+      "group": "acquire_dev_seen",
+      "correct_worlds": 0,
+      "worlds": 128,
+      "passed": false
+    },
+    {
+      "parent": 68105,
+      "segment": 32,
+      "training_arm": "periodic_bounded",
+      "group": "acquire_dev_heldout",
+      "correct_worlds": 2,
+      "worlds": 128,
+      "passed": false
+    },
+    {
+      "parent": 68105,
+      "segment": 128,
+      "training_arm": "periodic",
+      "group": "acquire_train_seen",
+      "correct_worlds": 0,
+      "worlds": 128,
+      "passed": false
+    },
+    {
+      "parent": 68105,
+      "segment": 128,
+      "training_arm": "periodic",
+      "group": "acquire_dev_seen",
+      "correct_worlds": 1,
+      "worlds": 128,
+      "passed": false
+    },
+    {
+      "parent": 68105,
+      "segment": 128,
+      "training_arm": "periodic",
+      "group": "acquire_dev_heldout",
+      "correct_worlds": 0,
+      "worlds": 128,
+      "passed": false
+    },
+    {
+      "parent": 68105,
+      "segment": 128,
+      "training_arm": "periodic_bounded",
+      "group": "acquire_train_seen",
+      "correct_worlds": 1,
+      "worlds": 128,
+      "passed": false
+    },
+    {
+      "parent": 68105,
+      "segment": 128,
+      "training_arm": "periodic_bounded",
+      "group": "acquire_dev_seen",
+      "correct_worlds": 0,
+      "worlds": 128,
+      "passed": false
+    },
+    {
+      "parent": 68105,
+      "segment": 128,
+      "training_arm": "periodic_bounded",
+      "group": "acquire_dev_heldout",
+      "correct_worlds": 0,
+      "worlds": 128,
+      "passed": false
+    }
+  ],
+  "passed_gate_cells": 0,
+  "primary_agrees_with_independent_review": true,
+  "script_sha256": "aa30bf9e89c357c50a635d9aa120c62f531431ce572d284b1420c5031eef17df"
+}

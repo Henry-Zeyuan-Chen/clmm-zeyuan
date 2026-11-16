@@ -1,0 +1,309 @@
+{
+  "status": "succeeded",
+  "job_id": "13922356",
+  "commands": [
+    {
+      "args": [
+        "C:\\Windows\\System32\\OpenSSH\\ssh.exe",
+        "-F",
+        "C:\\Users\\henry\\.ssh\\config",
+        "-o",
+        "BatchMode=yes",
+        "-o",
+        "ConnectTimeout=8",
+        "insomnia-login",
+        "mkdir -p /insomnia001/depts/edu/users/zc2819/clmm/sequence-freshness-2026-11-15; hostname; squeue -u zc2819 -h -o \"%i %T %j %M %R\""
+      ],
+      "exit_code": 0,
+      "stdout": "2402-login-002\n",
+      "stderr": "",
+      "elapsed_seconds": 0.4286640000063926
+    },
+    {
+      "args": [
+        "C:\\Windows\\System32\\OpenSSH\\scp.exe",
+        "-F",
+        "C:\\Users\\henry\\.ssh\\config",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-sequence-freshness\\input-upload.tar.gz",
+        "insomnia-login:/insomnia001/depts/edu/users/zc2819/clmm/sequence-freshness-2026-11-15/input-upload.tar.gz"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "elapsed_seconds": 2.4846267999964766
+    },
+    {
+      "args": [
+        "C:\\Windows\\System32\\OpenSSH\\ssh.exe",
+        "-F",
+        "C:\\Users\\henry\\.ssh\\config",
+        "-o",
+        "BatchMode=yes",
+        "-o",
+        "ConnectTimeout=8",
+        "insomnia-login",
+        "sha256sum /insomnia001/depts/edu/users/zc2819/clmm/sequence-freshness-2026-11-15/input-upload.tar.gz"
+      ],
+      "exit_code": 0,
+      "stdout": "70822557c2ab955d5f6acc4b012c9da6c6aab50466695006afa53de7f402fbcc  /insomnia001/depts/edu/users/zc2819/clmm/sequence-freshness-2026-11-15/input-upload.tar.gz\n",
+      "stderr": "",
+      "elapsed_seconds": 0.5040821000002325
+    },
+    {
+      "args": [
+        "C:\\Windows\\System32\\OpenSSH\\ssh.exe",
+        "-F",
+        "C:\\Users\\henry\\.ssh\\config",
+        "-o",
+        "BatchMode=yes",
+        "-o",
+        "ConnectTimeout=8",
+        "insomnia-login",
+        "cd /insomnia001/depts/edu/users/zc2819/clmm/sequence-freshness-2026-11-15 && tar -xzf input-upload.tar.gz && git -c core.autocrlf=false clone -q --no-checkout source.bundle source && git -c core.autocrlf=false -C source checkout -q --detach 95da59531ccf5d5f3fe2729553e6d980da598352"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "hint: Using 'master' as the name for the initial branch. This default branch name\nhint: is subject to change. To configure the initial branch name to use in all\nhint: of your new repositories, which will suppress this warning, call:\nhint:\nhint: \tgit config --global init.defaultBranch <name>\nhint:\nhint: Names commonly chosen instead of 'master' are 'main', 'trunk' and\nhint: 'development'. The just-created branch can be renamed via this command:\nhint:\nhint: \tgit branch -m <name>\n",
+      "elapsed_seconds": 2.937125399999786
+    },
+    {
+      "args": [
+        "C:\\Windows\\System32\\OpenSSH\\ssh.exe",
+        "-F",
+        "C:\\Users\\henry\\.ssh\\config",
+        "-o",
+        "BatchMode=yes",
+        "-o",
+        "ConnectTimeout=8",
+        "insomnia-login",
+        "sbatch --parsable -A edu -p short --qos=free_short -N1 -n1 -c8 --mem=16G --time=01:30:00 --gres=gpu:A6000:2 --exclude=ins081 --job-name=clmm-sequence --output=/insomnia001/depts/edu/users/zc2819/clmm/sequence-freshness-2026-11-15/allocation-%j.log --wrap=\"sleep 5400\""
+      ],
+      "exit_code": 0,
+      "stdout": "13922356\n",
+      "stderr": "",
+      "elapsed_seconds": 0.38925520004704595
+    },
+    {
+      "args": [
+        "C:\\Windows\\System32\\OpenSSH\\ssh.exe",
+        "-F",
+        "C:\\Users\\henry\\.ssh\\config",
+        "-o",
+        "BatchMode=yes",
+        "-o",
+        "ConnectTimeout=8",
+        "insomnia-login",
+        "squeue -j 13922356 -h -o \"%u %T %N\""
+      ],
+      "exit_code": 0,
+      "stdout": "zc2819 PENDING \n",
+      "stderr": "",
+      "elapsed_seconds": 0.4105339999659918
+    },
+    {
+      "args": [
+        "C:\\Windows\\System32\\OpenSSH\\ssh.exe",
+        "-F",
+        "C:\\Users\\henry\\.ssh\\config",
+        "-o",
+        "BatchMode=yes",
+        "-o",
+        "ConnectTimeout=8",
+        "insomnia-login",
+        "squeue -j 13922356 -h -o \"%u %T %N\""
+      ],
+      "exit_code": 0,
+      "stdout": "zc2819 PENDING \n",
+      "stderr": "",
+      "elapsed_seconds": 0.3685049000196159
+    },
+    {
+      "args": [
+        "C:\\Windows\\System32\\OpenSSH\\ssh.exe",
+        "-F",
+        "C:\\Users\\henry\\.ssh\\config",
+        "-o",
+        "BatchMode=yes",
+        "-o",
+        "ConnectTimeout=8",
+        "insomnia-login",
+        "squeue -j 13922356 -h -o \"%u %T %N\""
+      ],
+      "exit_code": 0,
+      "stdout": "zc2819 RUNNING ins080\n",
+      "stderr": "",
+      "elapsed_seconds": 0.5632987999706529
+    },
+    {
+      "args": [
+        "C:\\Windows\\System32\\OpenSSH\\ssh.exe",
+        "-F",
+        "C:\\Users\\henry\\.ssh\\config",
+        "-o",
+        "BatchMode=yes",
+        "-o",
+        "ConnectTimeout=8",
+        "insomnia-login",
+        "scontrol show job -o 13922356"
+      ],
+      "exit_code": 0,
+      "stdout": "JobId=13922356 JobName=clmm-sequence UserId=zc2819(564221) GroupId=user(500) MCS_label=N/A Priority=4786 Nice=0 Account=edu QOS=free JobState=RUNNING Reason=None Dependency=(null) Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:04 TimeLimit=01:30:00 TimeMin=N/A SubmitTime=2026-11-15T18:36:04 EligibleTime=2026-11-15T18:36:04 AccrueTime=2026-11-15T18:36:04 StartTime=2026-11-15T18:36:21 EndTime=2026-11-15T20:06:21 Deadline=N/A PreemptEligibleTime=2026-11-15T19:06:21 PreemptTime=None SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-11-15T18:36:21 Scheduler=Backfill Partition=short AllocNode:Sid=2402-login-002:3425302 ReqNodeList=(null) ExcNodeList=ins081 NodeList=ins080 BatchHost=ins080 NumNodes=1 NumCPUs=8 NumTasks=1 CPUs/Task=8 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=8,mem=16G,node=1,billing=8,gres/gpu=2,gres/gpu:a6000=2 AllocTRES=cpu=8,mem=16G,node=1,billing=8,gres/gpu=2,gres/gpu:a6000=2 Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=8 MinMemoryNode=16G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null) Command=(null) WorkDir=/insomnia001/home/zc2819 StdErr=/insomnia001/depts/edu/users/zc2819/clmm/sequence-freshness-2026-11-15/allocation-13922356.log StdIn=/dev/null StdOut=/insomnia001/depts/edu/users/zc2819/clmm/sequence-freshness-2026-11-15/allocation-13922356.log TresPerNode=gres/gpu:A6000:2 TresPerTask=cpu=8 \n",
+      "stderr": "",
+      "elapsed_seconds": 0.3570199999958277
+    },
+    {
+      "args": [
+        "C:\\Windows\\System32\\OpenSSH\\ssh.exe",
+        "-F",
+        "C:\\Users\\henry\\.ssh\\config",
+        "-o",
+        "BatchMode=yes",
+        "-o",
+        "ConnectTimeout=8",
+        "insomnia-login",
+        "timeout --kill-after=10s 90s srun --input=/dev/null --jobid=13922356 --overlap -N1 -n1 -c8 /insomnia001/depts/edu/users/zc2819/clmm/replay-2026-11-12/venv/bin/python -u -B -c 'import time; t=time.time(); print(\"PY_START\",flush=True); import torch; print(\"TORCH_IMPORTED\",torch.__version__,time.time()-t,flush=True); print(torch.cuda.device_count(),flush=True); assert torch.cuda.device_count()==2' > /insomnia001/depts/edu/users/zc2819/clmm/sequence-freshness-2026-11-15/import-probe.log 2>&1"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "elapsed_seconds": 16.076234000036493
+    },
+    {
+      "args": [
+        "C:\\Windows\\System32\\OpenSSH\\ssh.exe",
+        "-F",
+        "C:\\Users\\henry\\.ssh\\config",
+        "-o",
+        "BatchMode=yes",
+        "-o",
+        "ConnectTimeout=8",
+        "insomnia-login",
+        "timeout --kill-after=20s 5050s srun --input=/dev/null --jobid=13922356 --overlap -N1 -n1 -c8 /insomnia001/depts/edu/users/zc2819/clmm/replay-2026-11-12/venv/bin/python -u -B /insomnia001/depts/edu/users/zc2819/clmm/sequence-freshness-2026-11-15/remote_pipeline.py > /insomnia001/depts/edu/users/zc2819/clmm/sequence-freshness-2026-11-15/pipeline.log 2>&1"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "elapsed_seconds": 1583.779906199954
+    },
+    {
+      "args": [
+        "C:\\Windows\\System32\\OpenSSH\\ssh.exe",
+        "-F",
+        "C:\\Users\\henry\\.ssh\\config",
+        "-o",
+        "BatchMode=yes",
+        "-o",
+        "ConnectTimeout=8",
+        "insomnia-login",
+        "timeout --kill-after=10s 180s srun --input=/dev/null --jobid=13922356 --overlap -N1 -n1 -c4 tar -czf /insomnia001/depts/edu/users/zc2819/clmm/sequence-freshness-2026-11-15/result.tar.gz -C /insomnia001/depts/edu/users/zc2819/clmm/sequence-freshness-2026-11-15 result"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "elapsed_seconds": 13.977558600017801
+    },
+    {
+      "args": [
+        "C:\\Windows\\System32\\OpenSSH\\ssh.exe",
+        "-F",
+        "C:\\Users\\henry\\.ssh\\config",
+        "-o",
+        "BatchMode=yes",
+        "-o",
+        "ConnectTimeout=8",
+        "insomnia-login",
+        "sha256sum /insomnia001/depts/edu/users/zc2819/clmm/sequence-freshness-2026-11-15/result.tar.gz"
+      ],
+      "exit_code": 0,
+      "stdout": "39165b0fc4677b0b882a098b108de1acbc1980f2493cab455a54d1b6fcca1284  /insomnia001/depts/edu/users/zc2819/clmm/sequence-freshness-2026-11-15/result.tar.gz\n",
+      "stderr": "",
+      "elapsed_seconds": 0.6356956999516115
+    },
+    {
+      "args": [
+        "C:\\Windows\\System32\\OpenSSH\\scp.exe",
+        "-F",
+        "C:\\Users\\henry\\.ssh\\config",
+        "insomnia-login:/insomnia001/depts/edu/users/zc2819/clmm/sequence-freshness-2026-11-15/result.tar.gz",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-sequence-freshness\\result-download.tar.gz"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "elapsed_seconds": 10.727740000002086
+    },
+    {
+      "args": [
+        "C:\\Windows\\System32\\OpenSSH\\scp.exe",
+        "-F",
+        "C:\\Users\\henry\\.ssh\\config",
+        "insomnia-login:/insomnia001/depts/edu/users/zc2819/clmm/sequence-freshness-2026-11-15/import-probe.log",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sequence-freshness-2026-11-15\\cluster\\import-probe.log"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "elapsed_seconds": 0.5105969999567606
+    },
+    {
+      "args": [
+        "C:\\Windows\\System32\\OpenSSH\\scp.exe",
+        "-F",
+        "C:\\Users\\henry\\.ssh\\config",
+        "insomnia-login:/insomnia001/depts/edu/users/zc2819/clmm/sequence-freshness-2026-11-15/pipeline.log",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sequence-freshness-2026-11-15\\cluster\\pipeline.log"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "elapsed_seconds": 0.4741333000129089
+    },
+    {
+      "args": [
+        "C:\\Windows\\System32\\OpenSSH\\ssh.exe",
+        "-F",
+        "C:\\Users\\henry\\.ssh\\config",
+        "-o",
+        "BatchMode=yes",
+        "-o",
+        "ConnectTimeout=8",
+        "insomnia-login",
+        "scancel 13922356"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "elapsed_seconds": 0.42716660001315176
+    },
+    {
+      "args": [
+        "C:\\Windows\\System32\\OpenSSH\\ssh.exe",
+        "-F",
+        "C:\\Users\\henry\\.ssh\\config",
+        "-o",
+        "BatchMode=yes",
+        "-o",
+        "ConnectTimeout=8",
+        "insomnia-login",
+        "sacct -j 13922356 --format=JobID,User,State,Elapsed,AllocTRES,ExitCode -P; squeue -u zc2819 -h -o \"%i %T %j %M %R\""
+      ],
+      "exit_code": 0,
+      "stdout": "JobID|User|State|Elapsed|AllocTRES|ExitCode\n13922356|zc2819|CANCELLED by 564221|00:27:14|billing=8,cpu=8,gres/gpu:a6000=2,gres/gpu=2,mem=16G,node=1|0:0\n13922356.batch||CANCELLED|00:27:15|cpu=8,gres/gpu:a6000=2,gres/gpu=2,mem=16G,node=1|0:15\n13922356.extern||COMPLETED|00:27:16|billing=8,cpu=8,gres/gpu:a6000=2,gres/gpu=2,mem=16G,node=1|0:0\n13922356.0||COMPLETED|00:00:15|cpu=8,gres/gpu:a6000=2,gres/gpu=2,mem=16G,node=1|0:0\n13922356.1||COMPLETED|00:26:23|cpu=8,gres/gpu:a6000=2,gres/gpu=2,mem=16G,node=1|0:0\n13922356.2||COMPLETED|00:00:13|cpu=4,gres/gpu:a6000=2,gres/gpu=2,mem=16G,node=1|0:0\n13922356 COMPLETING clmm-sequence 27:14 ins080\n",
+      "stderr": "",
+      "elapsed_seconds": 0.4302964999806136
+    }
+  ],
+  "started_epoch": 1794785754.7958658,
+  "pending_limit_seconds": 1200,
+  "allocation_limit_seconds": 5400,
+  "no_renewal": true,
+  "upload_sha256": "70822557c2ab955d5f6acc4b012c9da6c6aab50466695006afa53de7f402fbcc",
+  "upload_bytes": 69383168,
+  "verified_running": "zc2819 RUNNING ins080",
+  "running_epoch": 1794785786.4473193,
+  "phase": "retrieve",
+  "download_sha256": "39165b0fc4677b0b882a098b108de1acbc1980f2493cab455a54d1b6fcca1284",
+  "pipeline_status": "succeeded",
+  "cancel_requested": true,
+  "ended_epoch": 1794787418.7603142
+}

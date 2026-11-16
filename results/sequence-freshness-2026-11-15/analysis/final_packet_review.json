@@ -1,0 +1,62 @@
+{
+  "status": "passed",
+  "scope": "saved packet reconstruction only; no model inference",
+  "training_steps": 2000,
+  "stage_counts": {
+    "k1": 256,
+    "k2": 1564,
+    "revision": 180
+  },
+  "per_case_answer_forks": 32000,
+  "per_case_input_bytes": 3646208,
+  "real_context_records": 35712,
+  "extra_context_records": 5760,
+  "training_histories": 15801,
+  "training_revision_steps_with_changed_payloads": 180,
+  "independently_reconstructed_context_plans": 32000,
+  "consulted_exclusion_count": 81326,
+  "groups": [
+    {
+      "group": "acquire_train_seen",
+      "episodes": 128,
+      "queries": 256,
+      "unique_semantic_histories": 128
+    },
+    {
+      "group": "acquire_dev_seen",
+      "episodes": 128,
+      "queries": 256,
+      "unique_semantic_histories": 128
+    },
+    {
+      "group": "revision_dev_seen",
+      "episodes": 64,
+      "queries": 128,
+      "unique_semantic_histories": 64
+    },
+    {
+      "group": "acquire_train_swapped",
+      "episodes": 128,
+      "queries": 256,
+      "unique_semantic_histories": 128
+    },
+    {
+      "group": "acquire_dev_heldout",
+      "episodes": 128,
+      "queries": 256,
+      "unique_semantic_histories": 128
+    },
+    {
+      "group": "revision_dev_heldout",
+      "episodes": 64,
+      "queries": 128,
+      "unique_semantic_histories": 64
+    }
+  ],
+  "input_sha256": {
+    "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sequence-freshness-2026-11-15\\packet-final\\training_plan.json.gz": "7be0c5a6344f59ed513c060faeb41af8ced743e0f7e0a0e4b5d53d90e5bf403b",
+    "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sequence-freshness-2026-11-15\\packet-final\\training.npz": "70d339e1ab5fb048fec05158cb80c4eeb7feddf156a8d584bef5568833499d6f",
+    "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sequence-freshness-2026-11-15\\packet-final\\episodes.json": "a5a08ef4ddafd1bf2816a2c60e2134bc7dc4ef8e520ffd21603c4a72fe23fd9f",
+    "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sequence-freshness-2026-11-15\\packet-final\\excluded_signatures.json": "efe37f8aaebc61808ba05365e91f99cf4c7d0aeb276880eb07b6ec2de91dbd72"
+  }
+}

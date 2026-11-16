@@ -1,0 +1,13 @@
+{
+  "job_id": 13922356,
+  "node": "ins080",
+  "job_closed": true,
+  "accounting_state": "CANCELLED by 564221",
+  "allocation_elapsed_seconds": 1634,
+  "GPUs": 2,
+  "allocated_GPU_hours": 0.9077777777777778,
+  "no_active_user_jobs": true,
+  "no_renewal": true,
+  "helper_selection_changed": false,
+  "accounting_sha256": "4d5808465aea7bc806dad125954e2874678f46c2e85b93896c64e65fb5059f6c"
+}

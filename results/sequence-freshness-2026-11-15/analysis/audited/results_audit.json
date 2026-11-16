@@ -1,0 +1,297 @@
+{
+  "status": "passed",
+  "scope": "saved-output score/data analysis only; no model execution",
+  "cases": [
+    {
+      "folder": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sequence-freshness-2026-11-15\\gpu-output\\result\\initial\\68101-w128",
+      "mode": "initial",
+      "parent": 68101,
+      "segment": 128,
+      "training_arm": "periodic",
+      "status": "passed",
+      "logit_vectors": 4352,
+      "max_score_error": {
+        "prediction": 0.0,
+        "forced_prediction": 0.0,
+        "correct": 0.0,
+        "nll": 5.94928184938226e-07,
+        "forced_nll": 4.003718787615185e-07,
+        "legal_probability_mass": 6.093407567409059e-08
+      },
+      "training": null
+    },
+    {
+      "folder": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sequence-freshness-2026-11-15\\gpu-output\\result\\initial\\68101-w32",
+      "mode": "initial",
+      "parent": 68101,
+      "segment": 32,
+      "training_arm": "periodic",
+      "status": "passed",
+      "logit_vectors": 4352,
+      "max_score_error": {
+        "prediction": 0.0,
+        "forced_prediction": 0.0,
+        "correct": 0.0,
+        "nll": 5.705393180122087e-07,
+        "forced_nll": 4.785070908397415e-07,
+        "legal_probability_mass": 6.775960398330838e-08
+      },
+      "training": null
+    },
+    {
+      "folder": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sequence-freshness-2026-11-15\\gpu-output\\result\\initial\\68105-w128",
+      "mode": "initial",
+      "parent": 68105,
+      "segment": 128,
+      "training_arm": "periodic",
+      "status": "passed",
+      "logit_vectors": 4352,
+      "max_score_error": {
+        "prediction": 0.0,
+        "forced_prediction": 0.0,
+        "correct": 0.0,
+        "nll": 5.990665350452673e-07,
+        "forced_nll": 4.723643334259009e-07,
+        "legal_probability_mass": 6.898238613661789e-08
+      },
+      "training": null
+    },
+    {
+      "folder": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sequence-freshness-2026-11-15\\gpu-output\\result\\initial\\68105-w32",
+      "mode": "initial",
+      "parent": 68105,
+      "segment": 32,
+      "training_arm": "periodic",
+      "status": "passed",
+      "logit_vectors": 4352,
+      "max_score_error": {
+        "prediction": 0.0,
+        "forced_prediction": 0.0,
+        "correct": 0.0,
+        "nll": 6.487604728988572e-07,
+        "forced_nll": 4.869992524803024e-07,
+        "legal_probability_mass": 7.916919658734756e-08
+      },
+      "training": null
+    },
+    {
+      "folder": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sequence-freshness-2026-11-15\\gpu-output\\result\\runs\\68101-w128-periodic",
+      "mode": "train",
+      "parent": 68101,
+      "segment": 128,
+      "training_arm": "periodic",
+      "status": "passed",
+      "logit_vectors": 4352,
+      "max_score_error": {
+        "prediction": 0.0,
+        "forced_prediction": 0.0,
+        "correct": 0.0,
+        "nll": 9.779241967322605e-07,
+        "forced_nll": 9.92531784760331e-07,
+        "legal_probability_mass": 3.5173748946792927e-07
+      },
+      "training": {
+        "steps": 2000,
+        "answer_forks": 32000,
+        "input_bytes": 3646208,
+        "memory_nonzero_gradient_steps": 2000
+      }
+    },
+    {
+      "folder": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sequence-freshness-2026-11-15\\gpu-output\\result\\runs\\68101-w128-periodic_bounded",
+      "mode": "train",
+      "parent": 68101,
+      "segment": 128,
+      "training_arm": "periodic_bounded",
+      "status": "passed",
+      "logit_vectors": 4352,
+      "max_score_error": {
+        "prediction": 0.0,
+        "forced_prediction": 0.0,
+        "correct": 0.0,
+        "nll": 7.309931433496786e-07,
+        "forced_nll": 7.268844406382868e-07,
+        "legal_probability_mass": 3.565023481977292e-07
+      },
+      "training": {
+        "steps": 2000,
+        "answer_forks": 32000,
+        "input_bytes": 3646208,
+        "memory_nonzero_gradient_steps": 2000
+      }
+    },
+    {
+      "folder": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sequence-freshness-2026-11-15\\gpu-output\\result\\runs\\68101-w32-periodic",
+      "mode": "train",
+      "parent": 68101,
+      "segment": 32,
+      "training_arm": "periodic",
+      "status": "passed",
+      "logit_vectors": 4352,
+      "max_score_error": {
+        "prediction": 0.0,
+        "forced_prediction": 0.0,
+        "correct": 0.0,
+        "nll": 1.0261245275700048e-06,
+        "forced_nll": 1.0124742253481145e-06,
+        "legal_probability_mass": 3.4654716041249145e-07
+      },
+      "training": {
+        "steps": 2000,
+        "answer_forks": 32000,
+        "input_bytes": 3646208,
+        "memory_nonzero_gradient_steps": 2000
+      }
+    },
+    {
+      "folder": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sequence-freshness-2026-11-15\\gpu-output\\result\\runs\\68101-w32-periodic_bounded",
+      "mode": "train",
+      "parent": 68101,
+      "segment": 32,
+      "training_arm": "periodic_bounded",
+      "status": "passed",
+      "logit_vectors": 4352,
+      "max_score_error": {
+        "prediction": 0.0,
+        "forced_prediction": 0.0,
+        "correct": 0.0,
+        "nll": 9.065438852928764e-07,
+        "forced_nll": 7.402893533736687e-07,
+        "legal_probability_mass": 3.1658088828212527e-07
+      },
+      "training": {
+        "steps": 2000,
+        "answer_forks": 32000,
+        "input_bytes": 3646208,
+        "memory_nonzero_gradient_steps": 2000
+      }
+    },
+    {
+      "folder": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sequence-freshness-2026-11-15\\gpu-output\\result\\runs\\68105-w128-periodic",
+      "mode": "train",
+      "parent": 68105,
+      "segment": 128,
+      "training_arm": "periodic",
+      "status": "passed",
+      "logit_vectors": 4352,
+      "max_score_error": {
+        "prediction": 0.0,
+        "forced_prediction": 0.0,
+        "correct": 0.0,
+        "nll": 8.13336100691231e-07,
+        "forced_nll": 7.04296466480514e-07,
+        "legal_probability_mass": 3.1132593891758376e-07
+      },
+      "training": {
+        "steps": 2000,
+        "answer_forks": 32000,
+        "input_bytes": 3646208,
+        "memory_nonzero_gradient_steps": 2000
+      }
+    },
+    {
+      "folder": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sequence-freshness-2026-11-15\\gpu-output\\result\\runs\\68105-w128-periodic_bounded",
+      "mode": "train",
+      "parent": 68105,
+      "segment": 128,
+      "training_arm": "periodic_bounded",
+      "status": "passed",
+      "logit_vectors": 4352,
+      "max_score_error": {
+        "prediction": 0.0,
+        "forced_prediction": 0.0,
+        "correct": 0.0,
+        "nll": 7.19433284501747e-07,
+        "forced_nll": 6.809781751826449e-07,
+        "legal_probability_mass": 3.339223225706789e-07
+      },
+      "training": {
+        "steps": 2000,
+        "answer_forks": 32000,
+        "input_bytes": 3646208,
+        "memory_nonzero_gradient_steps": 2000
+      }
+    },
+    {
+      "folder": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sequence-freshness-2026-11-15\\gpu-output\\result\\runs\\68105-w32-periodic",
+      "mode": "train",
+      "parent": 68105,
+      "segment": 32,
+      "training_arm": "periodic",
+      "status": "passed",
+      "logit_vectors": 4352,
+      "max_score_error": {
+        "prediction": 0.0,
+        "forced_prediction": 0.0,
+        "correct": 0.0,
+        "nll": 5.641686948720803e-07,
+        "forced_nll": 6.102779890326815e-07,
+        "legal_probability_mass": 3.2030818819528406e-07
+      },
+      "training": {
+        "steps": 2000,
+        "answer_forks": 32000,
+        "input_bytes": 3646208,
+        "memory_nonzero_gradient_steps": 2000
+      }
+    },
+    {
+      "folder": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sequence-freshness-2026-11-15\\gpu-output\\result\\runs\\68105-w32-periodic_bounded",
+      "mode": "train",
+      "parent": 68105,
+      "segment": 32,
+      "training_arm": "periodic_bounded",
+      "status": "passed",
+      "logit_vectors": 4352,
+      "max_score_error": {
+        "prediction": 0.0,
+        "forced_prediction": 0.0,
+        "correct": 0.0,
+        "nll": 1.1046202210707179e-06,
+        "forced_nll": 6.004437196338586e-07,
+        "legal_probability_mass": 3.269927666416095e-07
+      },
+      "training": {
+        "steps": 2000,
+        "answer_forks": 32000,
+        "input_bytes": 3646208,
+        "memory_nonzero_gradient_steps": 2000
+      }
+    }
+  ],
+  "total_logit_vectors": 52224,
+  "complete_eight_final_cases": true,
+  "primary": [
+    {
+      "endpoint": "acquire_train_seen",
+      "metric": "both_correct",
+      "contrast": "bounded-minus-literal adaptation",
+      "fixed_cases": 4,
+      "episodes": 128,
+      "estimate": 0.0,
+      "lower": -0.009765625,
+      "upper": 0.008813476562499645,
+      "confidence": 0.975,
+      "draws": 5000,
+      "seed": 91304,
+      "unit": "whole episode after fixed-case averaging"
+    },
+    {
+      "endpoint": "acquire_dev_heldout",
+      "metric": "both_correct",
+      "contrast": "bounded-minus-literal adaptation",
+      "fixed_cases": 4,
+      "episodes": 128,
+      "estimate": 0.0,
+      "lower": -0.009765625,
+      "upper": 0.009765625,
+      "confidence": 0.975,
+      "draws": 5000,
+      "seed": 91304,
+      "unit": "whole episode after fixed-case averaging"
+    }
+  ],
+  "source_sha256": {
+    "audit_results.py": "3cf5f3082924f93f838d99fed6df5c545f7625ba2f4cd8ae4342123ae51c137e"
+  }
+}

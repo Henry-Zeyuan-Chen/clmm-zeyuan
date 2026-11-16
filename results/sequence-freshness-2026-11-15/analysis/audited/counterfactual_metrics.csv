@@ -1,0 +1,9 @@
+case,parent,segment,training_arm,metric,correct_count,arbitrary_relabel_prediction_change_rate,estimate,lower,upper,episodes,confidence,draws,seed
+68101-w128-periodic,68101,128,periodic,joint_four_answer_correct,0,0.15234375,0.0,0.0,0.0,128,0.95,5000,91304
+68101-w128-periodic_bounded,68101,128,periodic_bounded,joint_four_answer_correct,0,0.02734375,0.0,0.0,0.0,128,0.95,5000,91304
+68101-w32-periodic,68101,32,periodic,joint_four_answer_correct,0,0.12890625,0.0,0.0,0.0,128,0.95,5000,91304
+68101-w32-periodic_bounded,68101,32,periodic_bounded,joint_four_answer_correct,0,0.25,0.0,0.0,0.0,128,0.95,5000,91304
+68105-w128-periodic,68105,128,periodic,joint_four_answer_correct,0,0.12109375,0.0,0.0,0.0,128,0.95,5000,91304
+68105-w128-periodic_bounded,68105,128,periodic_bounded,joint_four_answer_correct,0,0.16796875,0.0,0.0,0.0,128,0.95,5000,91304
+68105-w32-periodic,68105,32,periodic,joint_four_answer_correct,0,0.24609375,0.0,0.0,0.0,128,0.95,5000,91304
+68105-w32-periodic_bounded,68105,32,periodic_bounded,joint_four_answer_correct,0,0.65625,0.0,0.0,0.0,128,0.95,5000,91304

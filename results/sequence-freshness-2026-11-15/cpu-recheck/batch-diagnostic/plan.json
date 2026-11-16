@@ -1,0 +1,8 @@
+{
+  "stage": "post-failure diagnostic",
+  "selection": "All original GPU resource batches containing selected rows over original logit/probability thresholds",
+  "maximum_seconds": 120,
+  "CPUs": 2,
+  "original_acceptance_thresholds_unchanged": true,
+  "no_GPU_or_training": true
+}

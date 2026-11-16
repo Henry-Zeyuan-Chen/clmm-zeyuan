@@ -1,5 +1,15 @@
 # Member C: shared training and evaluation
 
+## Latest: complete-sequence integration, failed acquisition
+
+November 15: the [sequence freshness pilot](SEQUENCE_FRESHNESS.md) is complete on executed source 95da595, branch `sequence-bounded-freshness`. The 839,248 registered parameters remain unchanged. Eight terminal models cross original 68101/68105 parents, independently trained 32/128 attention and literal/bounded periodic replay. Each receives 2,000 updates, 32,000 answer forks and 3,646,208 input bytes. Exact raw observation bytes pass through the complete transformer; this is a reference replay control, not A's final memory-only sleep or B's Hebbian replacement.
+
+All 24 acquisition gates fail. Fresh train and dev/heldout BOTH-correct counts are 0–2/128, compared with 103 required; all 8 models score 0/128 joint original+value-swap four-answer correctness. Individual-answer accuracy near 50% hides weak requested-key selection. Both aggregate bounded-minus-literal acquisition effects are 0 pp; adjusted 97.5% intervals are [−0.98,+0.88]pp train-seen and[−0.98,+0.98]pp dev-heldout. Every normal revision arm also scores 0/64 BOTH-correct. No sequence retention, sleep, biological superiority or model-size sufficiency claim follows.
+
+238 scoped tests, all 52,224 saved GPU scores, 12 checkpoints and 8 terminal optimizer states pass their saved-data/provenance checks. Coordinator independently verifies raw primary intervals/budgets. Actual CPU reload checks all 1,200 selected answers agree, but ten long revision rows exceed original logit/probability tolerances; numerical portability remains incomplete and the failed check is preserved. GPU allocation 13922356 is closed after 0.9078 allocated GPU hours; no jobs remain.
+
+C's deliverable is a reusable integration/evaluation and honest diagnostic checkpoints, not yet a qualified full-sequence baseline. Keep the existing admitted typed-memory reference available for A/B; next isolate sequence key/value binding at fixed resources before larger models or longer delays. The final proposal still requires memory-only sleep, intended Hebbian updates, full cache carry across sessions and buffer-exit/corruption tests. Team choices and source/data/CPU caveats are explicit in the study/handoff. All terminal models and failures are retained, with no outcome-based extra training. Current histories are consulted development data.
+
 ## Latest: bounded freshness repair
 
 November 15: [bounded replay freshness](BOUNDED_FRESHNESS.md) is complete on source `9ab3901860548d2d87a9afc61e8ce58f950a03ce`, retaining all twelve existing local-delta checkpoints, both initializers and all five random maps. Fresh seed 91223 has 128 paired worlds; no training is added. Both schedules use the current FIFO record for each sampled key when present, otherwise the original sample. Same draws, writes, FIFO8/snapshot4 and 64KiB trace capacity; no query oracle or growing version map. Default literal behavior/state compatibility is retained.

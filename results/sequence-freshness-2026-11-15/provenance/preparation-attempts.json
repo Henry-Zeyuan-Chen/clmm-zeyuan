@@ -1,0 +1,27 @@
+{
+  "original_packet": "packet",
+  "original_engineering": "engineering/packet",
+  "original_source": "d0b74557408a43a1609fd28308b9a455196ba5b3",
+  "failed_attempts": [
+    {
+      "path": "packet-executed",
+      "reason": "Requested shortened supplementary exclusion filename did not exist; preparation stopped before model training",
+      "model_training_used": false
+    },
+    {
+      "path": "engineering/packet-executed",
+      "reason": "Requested shortened supplementary exclusion filename did not exist; preparation stopped before model training",
+      "model_training_used": false
+    }
+  ],
+  "executed_main": "packet-final",
+  "executed_engineering": "engineering/packet-final",
+  "executed_source": "95da59531ccf5d5f3fe2729553e6d980da598352",
+  "preserved_logs": [
+    "launch/logs/prepare-executed.log",
+    "launch/logs/prepare-engineering-executed.log"
+  ],
+  "original_amendment_note": "source-amendment.json is a prospective note: its packet-executed wording names the failed preparation; final executed paths are explicitly indexed here",
+  "afterlaunch_coverage": "21CPU-smoke histories outside original outputs scan added to81326union. Wider81347union has zero main-eval overlap and regenerates all evaluation worlds identically. Launch packets unchanged.",
+  "independent_auditor_preparation": "Initial lazy-NPZ analysis attempt interrupted, caching adopted; complete saved-data audit subsequently passes. No model training/inference in reviewer phase."
+}

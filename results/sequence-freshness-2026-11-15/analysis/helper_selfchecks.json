@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "checks": [
+    "four raw templates independently parsed",
+    "four target-free query templates independently parsed",
+    "malformed raw payloads rejected",
+    "independent key namespace partition",
+    "144 independent reference schedules match policy on partial/full blocks and revisions",
+    "raw 256-logit score formulas checked at uniform distribution",
+    "nonfinite/wrong-vocabulary logits rejected",
+    "whole-episode paired bootstrap deterministic"
+  ],
+  "schedule_cases": 144,
+  "scope": "data/statistics helpers only; no model inference"
+}

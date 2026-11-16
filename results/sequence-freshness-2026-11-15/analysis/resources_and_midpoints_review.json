@@ -1,0 +1,89 @@
+{
+  "status": "passed",
+  "scope": "saved pipeline/CSV/tensor inspection only; no model execution",
+  "training_steps": 16000,
+  "training_answer_forks": 256000,
+  "training_input_bytes": 29169664,
+  "memory_nonzero_gradient_steps": 16000,
+  "main_evaluation_vectors": 52224,
+  "main_evaluation_input_bytes": 10269696,
+  "main_evaluation_resource_batches": 3264,
+  "initial_checkpoints": 4,
+  "terminal_checkpoints": 8,
+  "recovery_midpoints": 8,
+  "midpoints": [
+    {
+      "case": "68101-w32-periodic",
+      "steps": 1000,
+      "selection": "Recovery only; terminal2000 primary",
+      "checkpoint_sha256": "57af823c107793c9be4acdfa0d7993e72ce6b2150303945e07a432fb7929b9b1",
+      "optimizer_sha256": "ded8cc9cc2f8f1570f66319be488c6f63ea509b965342f5a8a31e1116de08bf3",
+      "all_finite": true
+    },
+    {
+      "case": "68101-w128-periodic",
+      "steps": 1000,
+      "selection": "Recovery only; terminal2000 primary",
+      "checkpoint_sha256": "516186d7f5d72dd6aa0fd633b9ecb94cace1ea69f9804a21cdbf541db7f96e29",
+      "optimizer_sha256": "25a6901936beea9e926a27de5f94cccb80e08501b7f9860ccca69c6179af0a59",
+      "all_finite": true
+    },
+    {
+      "case": "68101-w128-periodic_bounded",
+      "steps": 1000,
+      "selection": "Recovery only; terminal2000 primary",
+      "checkpoint_sha256": "bbc3bfd9e34c8cebd249c3c850221c4296b5f142132b25dd145d82dde7f34462",
+      "optimizer_sha256": "25a6901936beea9e926a27de5f94cccb80e08501b7f9860ccca69c6179af0a59",
+      "all_finite": true
+    },
+    {
+      "case": "68101-w32-periodic_bounded",
+      "steps": 1000,
+      "selection": "Recovery only; terminal2000 primary",
+      "checkpoint_sha256": "7f904848859d8ae6ad127e085cf48e58e1add986d1e35a4097a2486b3c61fe90",
+      "optimizer_sha256": "ded8cc9cc2f8f1570f66319be488c6f63ea509b965342f5a8a31e1116de08bf3",
+      "all_finite": true
+    },
+    {
+      "case": "68105-w128-periodic",
+      "steps": 1000,
+      "selection": "Recovery only; terminal2000 primary",
+      "checkpoint_sha256": "2e9bae50045186cfb760edeb06e02de9e9adb509facddf0e55f4c756d81e5fc0",
+      "optimizer_sha256": "1cd5a0b2c3f6cabbbc81d73c08eefd6b7363513b2ffc30b18595cad411df7b2f",
+      "all_finite": true
+    },
+    {
+      "case": "68105-w32-periodic",
+      "steps": 1000,
+      "selection": "Recovery only; terminal2000 primary",
+      "checkpoint_sha256": "7150d8e9e27d5edd2d9323f3ef17ed40c0259a2cf1b7f0604cb96d45fc96e04a",
+      "optimizer_sha256": "118c880230dd30a49dde0978cb65103a7fe5e454ce9a95d5000a6807b9371351",
+      "all_finite": true
+    },
+    {
+      "case": "68105-w128-periodic_bounded",
+      "steps": 1000,
+      "selection": "Recovery only; terminal2000 primary",
+      "checkpoint_sha256": "51d358976973cc0cc0cf0eae02350263888f78826bc5675cee1a3563ba48122f",
+      "optimizer_sha256": "1cd5a0b2c3f6cabbbc81d73c08eefd6b7363513b2ffc30b18595cad411df7b2f",
+      "all_finite": true
+    },
+    {
+      "case": "68105-w32-periodic_bounded",
+      "steps": 1000,
+      "selection": "Recovery only; terminal2000 primary",
+      "checkpoint_sha256": "1f12e662c25b2f51884e0b4bfbb05611a0d38d0a58da1817e362e34d9dbd10ab",
+      "optimizer_sha256": "118c880230dd30a49dde0978cb65103a7fe5e454ce9a95d5000a6807b9371351",
+      "all_finite": true
+    }
+  ],
+  "runtime_projection_seconds": 2821.6674887540285,
+  "main_elapsed_seconds": 1542.8670291900635,
+  "pipeline_elapsed_seconds": 1583.0393893529545,
+  "pipeline_hard_seconds": 5000,
+  "allocation_release_verified_by_this_script": false,
+  "allocation_note": "Coordinator owns scheduler accounting/release; pipeline completion is separately audited.",
+  "input_sha256": {
+    "pipeline.json": "6b1aecff7c02920fa3912115836fae8597802f56ad357372448f282910b5beb9"
+  }
+}

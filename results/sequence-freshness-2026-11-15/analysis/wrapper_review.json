@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "scope": "data-only wrapper review; no model import/inference",
+  "cases": 96,
+  "transition_resume_checks": 1032,
+  "rejected_corruptions": 8,
+  "max_retained_raw_records_observed": 8,
+  "bounded_source_refresh_examples": 51,
+  "checks": [
+    "all four raw grammars retained byte-for-byte",
+    "chronology matches independent raw reference",
+    "every transition resumes with identical emissions and state",
+    "partial blocks and repeated finish audited",
+    "live payload keys exactly equal deduplicated FIFO/snapshot sources",
+    "write budgets match real/postprime arrivals",
+    "bounded refresh cases exercised actual changed source payloads",
+    "malformed/schema/count/payload/future-source corruptions rejected atomically"
+  ],
+  "sources": {
+    "clmm\\pretrain\\kv_scheduler.py": "95546fddb2e5645a8f2f7fd23fb52de8ad50e1730adb2ba0ad080986e5e713e2",
+    "clmm\\pretrain\\sequence_replay.py": "fbd7432551e73e1062ad3e7cedd34456d9cce5fcb8c1bd6ab5fcbc16c955347b"
+  }
+}
