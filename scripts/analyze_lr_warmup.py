@@ -101,7 +101,7 @@ for arm,color in [('constant','#31688e'),('warmup','#d56a32')]:
     assert np.array_equal(rates,np.broadcast_to(rates[0],rates.shape))
     actual=rates[0];expected=np.full(6000,3e-4) if arm=='constant' else 3e-4*np.minimum(np.arange(1,6001)/500,1)
     assert np.allclose(actual,expected,rtol=0,atol=1e-18)
-    for ax,limit in zip(axes,[1000,6000]):ax.plot(np.arange(1,limit+1),actual[:limit]*1e4,label=arm,color=color)
+    for ax,limit in zip(axes,[1000,6000]):ax.plot(np.arange(1,limit+1),actual[:limit]*1e4,label=arm,color=color,linestyle='--' if arm=='warmup' else '-')
     lr_rows.extend(dict(arm=arm,update=j+1,learning_rate=float(rate)) for j,rate in enumerate(actual))
 for ax in axes:ax.set_xlabel('Optimizer update');ax.set_ylabel('Logged LR (×10⁻⁴)');ax.grid(alpha=.15)
 axes[0].set_title('Warm-up boundary');axes[1].set_title('Same 6k update budget');axes[0].legend(frameon=False)
