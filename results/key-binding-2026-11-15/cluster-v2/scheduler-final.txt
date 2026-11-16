@@ -1,0 +1,8 @@
+JobID|User|State|Elapsed|AllocTRES|ExitCode
+13926674|zc2819|CANCELLED by 564221|00:15:18|billing=8,cpu=8,gres/gpu:a6000=2,gres/gpu=2,mem=16G,node=1|0:0
+13926674.batch||CANCELLED|00:15:19|cpu=8,gres/gpu:a6000=2,gres/gpu=2,mem=16G,node=1|0:15
+13926674.extern||COMPLETED|00:15:20|billing=8,cpu=8,gres/gpu:a6000=2,gres/gpu=2,mem=16G,node=1|0:0
+13926674.0||COMPLETED|00:01:04|cpu=8,gres/gpu:a6000=2,gres/gpu=2,mem=16G,node=1|0:0
+13926674.1||COMPLETED|00:13:41|cpu=8,gres/gpu:a6000=2,gres/gpu=2,mem=16G,node=1|0:0
+13926674.2||COMPLETED|00:00:14|cpu=8,gres/gpu:a6000=2,gres/gpu=2,mem=16G,node=1|0:0
+13926674 COMPLETING clmm-binding 15:18 ins086

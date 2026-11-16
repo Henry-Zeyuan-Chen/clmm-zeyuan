@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "kind": "independent_saved_CPU_proof_artifact_audit",
+  "models_constructed": false,
+  "model_inference_by_reviewer": false,
+  "models": 8,
+  "queries": 2560,
+  "groups_per_model": [
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20
+  ],
+  "exact_original_GPU_batches": true,
+  "CPU_vectors_provenance_sha256": "7504af2a8104e72c3d74ed441bb36721c33655106589d2b79d876ab332a24304",
+  "GPU_vectors_provenance_sha256": "129a527f1b31aae6331d2cdc1bdff35fe904a7875130b835ec53ff81e49901d4",
+  "max_logit_error": 9.5367431640625e-06,
+  "max_probability_error": 2.282594288360862e-06,
+  "prediction_mismatches": 0,
+  "original_tolerances_unchanged": true,
+  "prelaunch_script_hash_exact": true,
+  "runtime_weight_rng_purity_assertions_present": true,
+  "scope": "Selected exact-batch CPU inference performed by coordinator, independently audited from saved vectors and source; not complete training reproduction"
+}

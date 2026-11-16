@@ -1,0 +1,34 @@
+{
+  "time_utc": "2026-11-16T04:21:59.396110+00:00",
+  "stage": "After runtime-only first calibration, before all main initial/final efficacy",
+  "reason": "One-GPU padded projection exceeds declared gate, initial allocation stopped as planned",
+  "original_job": 13926582,
+  "original_projection": 3940.0881821278017,
+  "original_threshold": 1800,
+  "original_main_updates": 0,
+  "change": "One explicit replacement45min2A6000/8CPU/16GiB allocation, two parent workers",
+  "new_projection": "1.25*(4*100*max(cal_training)+8*16*max(cal_eval))/2",
+  "new_threshold_seconds": 2300,
+  "new_pipeline_hard_seconds": 2400,
+  "max_total_allocations": 2,
+  "no_further_resource_escalation": true,
+  "unchanged": [
+    "All frozen packet bytes, source5e8c618, parents, model839248, optimizer, curriculum, main updates/forks/inputbytes, splits, metrics, selection and CPU tolerances"
+  ],
+  "preservation": "Original design.json and all original packets remain immutable. execution-amendment.json is separately hash-bound by the new launcher/pipeline. Original preflight outputs remain gpu-output; parallel main uses gpu-main and cluster-v2.",
+  "main_packet_metadata_sha256": "c00c6f8a17c8bf650d07bead383f07e8870540ff0cf861cd1c03a33b2319e190",
+  "preflight_runtime_rows": [
+    {
+      "encoding": "digits",
+      "elapsed_seconds": 83.41395995701896,
+      "training_seconds": 7.330630402022507,
+      "evaluation_seconds": 1.7173311319784261
+    },
+    {
+      "encoding": "atomic",
+      "elapsed_seconds": 7.575439315987751,
+      "training_seconds": 2.29169267200632,
+      "evaluation_seconds": 1.7072375509887934
+    }
+  ]
+}

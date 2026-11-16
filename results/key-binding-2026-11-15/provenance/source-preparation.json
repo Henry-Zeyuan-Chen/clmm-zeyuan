@@ -1,0 +1,11 @@
+{
+  "source_commit": "5e8c61829ff85ecea3c9314d4ccd8dfef3268b68",
+  "successful_checkout": "work/clmm-key-binding/source-frozen",
+  "source_bundle": "work/clmm-key-binding/protocol.bundle",
+  "failed_attempt": {
+    "command": "git clone --shared from Windows linked worktree",
+    "stage": "before any current model execution",
+    "error": "Git MSYS shell NtCreateDirectoryObject access denied; no model inference or training used failed checkout"
+  },
+  "resolution": "Native Git clone from local bundle, LF checkout of exact literal commit"
+}

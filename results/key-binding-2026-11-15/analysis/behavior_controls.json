@@ -1,0 +1,513 @@
+{
+  "status": "passed",
+  "scope": "Descriptive secondary analysis; no checkpoint selection or new efficacy claim",
+  "cases": [
+    {
+      "parent": 68101,
+      "encoding": "atomic",
+      "groups": [
+        {
+          "group": "acquire_train_seen",
+          "answers": 512,
+          "present_value_answers": 512,
+          "first_record_value_answers": 256,
+          "second_record_value_answers": 256,
+          "same_prediction_pairs": 256,
+          "key_change_pairs": 0,
+          "normal_vs_retrieval_zero_answer_changes": 55,
+          "normal_accuracy": 0.5,
+          "retrieval_zero_accuracy": 0.501953125
+        },
+        {
+          "group": "acquire_train_swapped",
+          "answers": 512,
+          "present_value_answers": 512,
+          "first_record_value_answers": 238,
+          "second_record_value_answers": 274,
+          "same_prediction_pairs": 256,
+          "key_change_pairs": 0,
+          "normal_vs_retrieval_zero_answer_changes": 56,
+          "normal_accuracy": 0.5,
+          "retrieval_zero_accuracy": 0.5
+        },
+        {
+          "group": "acquire_dev_seen",
+          "answers": 512,
+          "present_value_answers": 512,
+          "first_record_value_answers": 266,
+          "second_record_value_answers": 246,
+          "same_prediction_pairs": 256,
+          "key_change_pairs": 0,
+          "normal_vs_retrieval_zero_answer_changes": 67,
+          "normal_accuracy": 0.5,
+          "retrieval_zero_accuracy": 0.498046875
+        },
+        {
+          "group": "acquire_dev_swapped",
+          "answers": 512,
+          "present_value_answers": 512,
+          "first_record_value_answers": 266,
+          "second_record_value_answers": 246,
+          "same_prediction_pairs": 256,
+          "key_change_pairs": 0,
+          "normal_vs_retrieval_zero_answer_changes": 66,
+          "normal_accuracy": 0.5,
+          "retrieval_zero_accuracy": 0.5
+        },
+        {
+          "group": "acquire_dev_heldout",
+          "answers": 512,
+          "present_value_answers": 496,
+          "first_record_value_answers": 246,
+          "second_record_value_answers": 250,
+          "same_prediction_pairs": 256,
+          "key_change_pairs": 0,
+          "normal_vs_retrieval_zero_answer_changes": 72,
+          "normal_accuracy": 0.484375,
+          "retrieval_zero_accuracy": 0.49609375
+        },
+        {
+          "group": "acquire_dev_heldout_swapped",
+          "answers": 512,
+          "present_value_answers": 492,
+          "first_record_value_answers": 249,
+          "second_record_value_answers": 243,
+          "same_prediction_pairs": 255,
+          "key_change_pairs": 1,
+          "normal_vs_retrieval_zero_answer_changes": 89,
+          "normal_accuracy": 0.482421875,
+          "retrieval_zero_accuracy": 0.498046875
+        }
+      ],
+      "value_swap_responses": [
+        {
+          "original_group": "acquire_train_seen",
+          "swapped_group": "acquire_train_swapped",
+          "prediction_changes_across_value_swap": 46,
+          "answers": 512,
+          "scope": "A value-swap response alone is not requested-key binding; joint-four remains co-primary"
+        },
+        {
+          "original_group": "acquire_dev_seen",
+          "swapped_group": "acquire_dev_swapped",
+          "prediction_changes_across_value_swap": 64,
+          "answers": 512,
+          "scope": "A value-swap response alone is not requested-key binding; joint-four remains co-primary"
+        },
+        {
+          "original_group": "acquire_dev_heldout",
+          "swapped_group": "acquire_dev_heldout_swapped",
+          "prediction_changes_across_value_swap": 35,
+          "answers": 512,
+          "scope": "A value-swap response alone is not requested-key binding; joint-four remains co-primary"
+        }
+      ],
+      "training_windows": [
+        {
+          "window": "last32_K1",
+          "updates": 32,
+          "first_step": 225,
+          "last_step": 256,
+          "loss": 0.0068606684217229486,
+          "accuracy": 1.0,
+          "first_accuracy": 1.0,
+          "second_accuracy": 1.0,
+          "prediction_changes": 0.0
+        },
+        {
+          "window": "last100_K2",
+          "updates": 100,
+          "first_step": 1901,
+          "last_step": 2000,
+          "loss": 0.7318345993757248,
+          "accuracy": 0.500625,
+          "first_accuracy": 0.5025,
+          "second_accuracy": 0.49875,
+          "prediction_changes": 0.00125
+        }
+      ]
+    },
+    {
+      "parent": 68101,
+      "encoding": "digits",
+      "groups": [
+        {
+          "group": "acquire_train_seen",
+          "answers": 512,
+          "present_value_answers": 512,
+          "first_record_value_answers": 283,
+          "second_record_value_answers": 229,
+          "same_prediction_pairs": 253,
+          "key_change_pairs": 3,
+          "normal_vs_retrieval_zero_answer_changes": 129,
+          "normal_accuracy": 0.501953125,
+          "retrieval_zero_accuracy": 0.49609375
+        },
+        {
+          "group": "acquire_train_swapped",
+          "answers": 512,
+          "present_value_answers": 512,
+          "first_record_value_answers": 304,
+          "second_record_value_answers": 208,
+          "same_prediction_pairs": 256,
+          "key_change_pairs": 0,
+          "normal_vs_retrieval_zero_answer_changes": 129,
+          "normal_accuracy": 0.5,
+          "retrieval_zero_accuracy": 0.501953125
+        },
+        {
+          "group": "acquire_dev_seen",
+          "answers": 512,
+          "present_value_answers": 512,
+          "first_record_value_answers": 308,
+          "second_record_value_answers": 204,
+          "same_prediction_pairs": 256,
+          "key_change_pairs": 0,
+          "normal_vs_retrieval_zero_answer_changes": 124,
+          "normal_accuracy": 0.5,
+          "retrieval_zero_accuracy": 0.5
+        },
+        {
+          "group": "acquire_dev_swapped",
+          "answers": 512,
+          "present_value_answers": 512,
+          "first_record_value_answers": 277,
+          "second_record_value_answers": 235,
+          "same_prediction_pairs": 253,
+          "key_change_pairs": 3,
+          "normal_vs_retrieval_zero_answer_changes": 109,
+          "normal_accuracy": 0.498046875,
+          "retrieval_zero_accuracy": 0.5
+        },
+        {
+          "group": "acquire_dev_heldout",
+          "answers": 512,
+          "present_value_answers": 512,
+          "first_record_value_answers": 291,
+          "second_record_value_answers": 221,
+          "same_prediction_pairs": 253,
+          "key_change_pairs": 3,
+          "normal_vs_retrieval_zero_answer_changes": 88,
+          "normal_accuracy": 0.498046875,
+          "retrieval_zero_accuracy": 0.501953125
+        },
+        {
+          "group": "acquire_dev_heldout_swapped",
+          "answers": 512,
+          "present_value_answers": 512,
+          "first_record_value_answers": 284,
+          "second_record_value_answers": 228,
+          "same_prediction_pairs": 254,
+          "key_change_pairs": 2,
+          "normal_vs_retrieval_zero_answer_changes": 76,
+          "normal_accuracy": 0.50390625,
+          "retrieval_zero_accuracy": 0.5
+        }
+      ],
+      "value_swap_responses": [
+        {
+          "original_group": "acquire_train_seen",
+          "swapped_group": "acquire_train_swapped",
+          "prediction_changes_across_value_swap": 91,
+          "answers": 512,
+          "scope": "A value-swap response alone is not requested-key binding; joint-four remains co-primary"
+        },
+        {
+          "original_group": "acquire_dev_seen",
+          "swapped_group": "acquire_dev_swapped",
+          "prediction_changes_across_value_swap": 103,
+          "answers": 512,
+          "scope": "A value-swap response alone is not requested-key binding; joint-four remains co-primary"
+        },
+        {
+          "original_group": "acquire_dev_heldout",
+          "swapped_group": "acquire_dev_heldout_swapped",
+          "prediction_changes_across_value_swap": 65,
+          "answers": 512,
+          "scope": "A value-swap response alone is not requested-key binding; joint-four remains co-primary"
+        }
+      ],
+      "training_windows": [
+        {
+          "window": "last32_K1",
+          "updates": 32,
+          "first_step": 225,
+          "last_step": 256,
+          "loss": 0.007224309258162975,
+          "accuracy": 1.0,
+          "first_accuracy": 1.0,
+          "second_accuracy": 1.0,
+          "prediction_changes": 0.0
+        },
+        {
+          "window": "last100_K2",
+          "updates": 100,
+          "first_step": 1901,
+          "last_step": 2000,
+          "loss": 0.7321599972248077,
+          "accuracy": 0.498125,
+          "first_accuracy": 0.49,
+          "second_accuracy": 0.50625,
+          "prediction_changes": 0.00375
+        }
+      ]
+    },
+    {
+      "parent": 68105,
+      "encoding": "atomic",
+      "groups": [
+        {
+          "group": "acquire_train_seen",
+          "answers": 512,
+          "present_value_answers": 512,
+          "first_record_value_answers": 265,
+          "second_record_value_answers": 247,
+          "same_prediction_pairs": 255,
+          "key_change_pairs": 1,
+          "normal_vs_retrieval_zero_answer_changes": 91,
+          "normal_accuracy": 0.501953125,
+          "retrieval_zero_accuracy": 0.5
+        },
+        {
+          "group": "acquire_train_swapped",
+          "answers": 512,
+          "present_value_answers": 512,
+          "first_record_value_answers": 246,
+          "second_record_value_answers": 266,
+          "same_prediction_pairs": 256,
+          "key_change_pairs": 0,
+          "normal_vs_retrieval_zero_answer_changes": 89,
+          "normal_accuracy": 0.5,
+          "retrieval_zero_accuracy": 0.501953125
+        },
+        {
+          "group": "acquire_dev_seen",
+          "answers": 512,
+          "present_value_answers": 512,
+          "first_record_value_answers": 258,
+          "second_record_value_answers": 254,
+          "same_prediction_pairs": 256,
+          "key_change_pairs": 0,
+          "normal_vs_retrieval_zero_answer_changes": 106,
+          "normal_accuracy": 0.5,
+          "retrieval_zero_accuracy": 0.49609375
+        },
+        {
+          "group": "acquire_dev_swapped",
+          "answers": 512,
+          "present_value_answers": 512,
+          "first_record_value_answers": 264,
+          "second_record_value_answers": 248,
+          "same_prediction_pairs": 254,
+          "key_change_pairs": 2,
+          "normal_vs_retrieval_zero_answer_changes": 109,
+          "normal_accuracy": 0.50390625,
+          "retrieval_zero_accuracy": 0.498046875
+        },
+        {
+          "group": "acquire_dev_heldout",
+          "answers": 512,
+          "present_value_answers": 426,
+          "first_record_value_answers": 203,
+          "second_record_value_answers": 223,
+          "same_prediction_pairs": 255,
+          "key_change_pairs": 1,
+          "normal_vs_retrieval_zero_answer_changes": 93,
+          "normal_accuracy": 0.4140625,
+          "retrieval_zero_accuracy": 0.423828125
+        },
+        {
+          "group": "acquire_dev_heldout_swapped",
+          "answers": 512,
+          "present_value_answers": 426,
+          "first_record_value_answers": 234,
+          "second_record_value_answers": 192,
+          "same_prediction_pairs": 256,
+          "key_change_pairs": 0,
+          "normal_vs_retrieval_zero_answer_changes": 105,
+          "normal_accuracy": 0.416015625,
+          "retrieval_zero_accuracy": 0.423828125
+        }
+      ],
+      "value_swap_responses": [
+        {
+          "original_group": "acquire_train_seen",
+          "swapped_group": "acquire_train_swapped",
+          "prediction_changes_across_value_swap": 45,
+          "answers": 512,
+          "scope": "A value-swap response alone is not requested-key binding; joint-four remains co-primary"
+        },
+        {
+          "original_group": "acquire_dev_seen",
+          "swapped_group": "acquire_dev_swapped",
+          "prediction_changes_across_value_swap": 64,
+          "answers": 512,
+          "scope": "A value-swap response alone is not requested-key binding; joint-four remains co-primary"
+        },
+        {
+          "original_group": "acquire_dev_heldout",
+          "swapped_group": "acquire_dev_heldout_swapped",
+          "prediction_changes_across_value_swap": 23,
+          "answers": 512,
+          "scope": "A value-swap response alone is not requested-key binding; joint-four remains co-primary"
+        }
+      ],
+      "training_windows": [
+        {
+          "window": "last32_K1",
+          "updates": 32,
+          "first_step": 225,
+          "last_step": 256,
+          "loss": 0.008743074053199962,
+          "accuracy": 1.0,
+          "first_accuracy": 1.0,
+          "second_accuracy": 1.0,
+          "prediction_changes": 0.0
+        },
+        {
+          "window": "last100_K2",
+          "updates": 100,
+          "first_step": 1901,
+          "last_step": 2000,
+          "loss": 0.7311119019985199,
+          "accuracy": 0.499375,
+          "first_accuracy": 0.51375,
+          "second_accuracy": 0.485,
+          "prediction_changes": 0.00125
+        }
+      ]
+    },
+    {
+      "parent": 68105,
+      "encoding": "digits",
+      "groups": [
+        {
+          "group": "acquire_train_seen",
+          "answers": 512,
+          "present_value_answers": 512,
+          "first_record_value_answers": 271,
+          "second_record_value_answers": 241,
+          "same_prediction_pairs": 255,
+          "key_change_pairs": 1,
+          "normal_vs_retrieval_zero_answer_changes": 136,
+          "normal_accuracy": 0.501953125,
+          "retrieval_zero_accuracy": 0.501953125
+        },
+        {
+          "group": "acquire_train_swapped",
+          "answers": 512,
+          "present_value_answers": 512,
+          "first_record_value_answers": 251,
+          "second_record_value_answers": 261,
+          "same_prediction_pairs": 253,
+          "key_change_pairs": 3,
+          "normal_vs_retrieval_zero_answer_changes": 119,
+          "normal_accuracy": 0.501953125,
+          "retrieval_zero_accuracy": 0.5
+        },
+        {
+          "group": "acquire_dev_seen",
+          "answers": 512,
+          "present_value_answers": 512,
+          "first_record_value_answers": 259,
+          "second_record_value_answers": 253,
+          "same_prediction_pairs": 253,
+          "key_change_pairs": 3,
+          "normal_vs_retrieval_zero_answer_changes": 120,
+          "normal_accuracy": 0.498046875,
+          "retrieval_zero_accuracy": 0.498046875
+        },
+        {
+          "group": "acquire_dev_swapped",
+          "answers": 512,
+          "present_value_answers": 512,
+          "first_record_value_answers": 269,
+          "second_record_value_answers": 243,
+          "same_prediction_pairs": 253,
+          "key_change_pairs": 3,
+          "normal_vs_retrieval_zero_answer_changes": 118,
+          "normal_accuracy": 0.494140625,
+          "retrieval_zero_accuracy": 0.501953125
+        },
+        {
+          "group": "acquire_dev_heldout",
+          "answers": 512,
+          "present_value_answers": 392,
+          "first_record_value_answers": 181,
+          "second_record_value_answers": 211,
+          "same_prediction_pairs": 255,
+          "key_change_pairs": 1,
+          "normal_vs_retrieval_zero_answer_changes": 96,
+          "normal_accuracy": 0.384765625,
+          "retrieval_zero_accuracy": 0.40625
+        },
+        {
+          "group": "acquire_dev_heldout_swapped",
+          "answers": 512,
+          "present_value_answers": 394,
+          "first_record_value_answers": 227,
+          "second_record_value_answers": 167,
+          "same_prediction_pairs": 252,
+          "key_change_pairs": 4,
+          "normal_vs_retrieval_zero_answer_changes": 97,
+          "normal_accuracy": 0.3828125,
+          "retrieval_zero_accuracy": 0.40234375
+        }
+      ],
+      "value_swap_responses": [
+        {
+          "original_group": "acquire_train_seen",
+          "swapped_group": "acquire_train_swapped",
+          "prediction_changes_across_value_swap": 44,
+          "answers": 512,
+          "scope": "A value-swap response alone is not requested-key binding; joint-four remains co-primary"
+        },
+        {
+          "original_group": "acquire_dev_seen",
+          "swapped_group": "acquire_dev_swapped",
+          "prediction_changes_across_value_swap": 30,
+          "answers": 512,
+          "scope": "A value-swap response alone is not requested-key binding; joint-four remains co-primary"
+        },
+        {
+          "original_group": "acquire_dev_heldout",
+          "swapped_group": "acquire_dev_heldout_swapped",
+          "prediction_changes_across_value_swap": 59,
+          "answers": 512,
+          "scope": "A value-swap response alone is not requested-key binding; joint-four remains co-primary"
+        }
+      ],
+      "training_windows": [
+        {
+          "window": "last32_K1",
+          "updates": 32,
+          "first_step": 225,
+          "last_step": 256,
+          "loss": 0.008935402220231481,
+          "accuracy": 1.0,
+          "first_accuracy": 1.0,
+          "second_accuracy": 1.0,
+          "prediction_changes": 0.0
+        },
+        {
+          "window": "last100_K2",
+          "updates": 100,
+          "first_step": 1901,
+          "last_step": 2000,
+          "loss": 0.7432671070098877,
+          "accuracy": 0.49875,
+          "first_accuracy": 0.47625,
+          "second_accuracy": 0.52125,
+          "prediction_changes": 0.02
+        }
+      ]
+    }
+  ],
+  "codec_state": {
+    "serialized_bytes": 2978,
+    "sha256": "9a6cc58500f98e47429c9c4cc11d4a398845e71917ad10564d8778f18a15309b",
+    "key_identities": 128,
+    "aliases": 128,
+    "scope": "Fixed external input preprocessing state, separate from839248 registered model parameters"
+  }
+}

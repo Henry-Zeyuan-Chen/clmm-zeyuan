@@ -1,0 +1,88 @@
+[
+  {
+    "seed": 68101,
+    "path": "parents/68101.pt",
+    "sha256": "a07762534f0b6311ec68c08b0d9f9c0ce74ec71577138eb13279a4a5dffbb24d",
+    "state_sha256": "75b37a9c453ecb0ac5cf488a73efe7ec7f37290eee5d89579833f8ce089dec9c",
+    "config": {
+      "num_tokens": 256,
+      "dim": 128,
+      "depth": 2,
+      "dim_head": 32,
+      "heads": 4,
+      "ff_mult": 4.0,
+      "num_residual_streams": 1,
+      "segment_len": 32,
+      "num_persist_mem_tokens": 4,
+      "num_longterm_mem_tokens": 0,
+      "memory_layers": [
+        1,
+        2
+      ],
+      "memory_segment_len": 8,
+      "memory_batch_size": 32,
+      "memory_dim_head": 32,
+      "memory_heads": 4,
+      "memory_depth": 2,
+      "memory_expansion_factor": 2.0,
+      "momentum": true,
+      "qk_rmsnorm": true,
+      "max_inner_lr": 0.01,
+      "memory_norm_residual": true
+    },
+    "original_training": {
+      "init_seed": 68101,
+      "train_seed": 68102,
+      "dev_seed": 68103,
+      "steps": 400,
+      "predicted_bytes": 1638400,
+      "optimizer": "AdamW",
+      "lr": 0.0003,
+      "weight_decay": 0.01,
+      "selection": "Fixed final state; no dev-selected checkpoint. All failures retained."
+    }
+  },
+  {
+    "seed": 68105,
+    "path": "parents/68105.pt",
+    "sha256": "c3c4b5f49fa3116f348720b8215e2a97a8b166587d22c5c1c9ab1f72cccf8a55",
+    "state_sha256": "3801f168b07538e32c33ef47d36bb34fdf7cac023c24c195d178a4baf3ffcdb3",
+    "config": {
+      "num_tokens": 256,
+      "dim": 128,
+      "depth": 2,
+      "dim_head": 32,
+      "heads": 4,
+      "ff_mult": 4.0,
+      "num_residual_streams": 1,
+      "segment_len": 32,
+      "num_persist_mem_tokens": 4,
+      "num_longterm_mem_tokens": 0,
+      "memory_layers": [
+        1,
+        2
+      ],
+      "memory_segment_len": 8,
+      "memory_batch_size": 32,
+      "memory_dim_head": 32,
+      "memory_heads": 4,
+      "memory_depth": 2,
+      "memory_expansion_factor": 2.0,
+      "momentum": true,
+      "qk_rmsnorm": true,
+      "max_inner_lr": 0.01,
+      "memory_norm_residual": true
+    },
+    "original_training": {
+      "init_seed": 68105,
+      "train_seed": 68102,
+      "dev_seed": 68103,
+      "steps": 400,
+      "predicted_bytes": 1638400,
+      "optimizer": "AdamW",
+      "lr": 0.0003,
+      "weight_decay": 0.01,
+      "selection": "Fixed final state; no dev-selected checkpoint. All failures retained."
+    }
+  }
+]

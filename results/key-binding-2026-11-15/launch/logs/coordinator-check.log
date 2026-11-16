@@ -1,0 +1,220 @@
+{
+  "status": "passed",
+  "totals": {
+    "updates": 8000,
+    "forks": 128000,
+    "input_bytes": 11635712,
+    "score_vectors": 81920,
+    "memory_nonzero_gradient_steps": 8000
+  },
+  "primary": [
+    {
+      "group": "acquire_train_seen",
+      "estimate": 0.0,
+      "lower": 0.0,
+      "upper": 0.0
+    },
+    {
+      "group": "acquire_dev_heldout",
+      "estimate": 0.0,
+      "lower": 0.0,
+      "upper": 0.0
+    }
+  ],
+  "gates": [
+    {
+      "parent": 68101,
+      "encoding": "atomic",
+      "group": "acquire_train_seen",
+      "both_correct": 0,
+      "episodes": 256,
+      "passed": false
+    },
+    {
+      "parent": 68101,
+      "encoding": "atomic",
+      "group": "acquire_train_swapped",
+      "both_correct": 0,
+      "episodes": 256,
+      "passed": false
+    },
+    {
+      "parent": 68101,
+      "encoding": "atomic",
+      "group": "acquire_dev_seen",
+      "both_correct": 0,
+      "episodes": 256,
+      "passed": false
+    },
+    {
+      "parent": 68101,
+      "encoding": "atomic",
+      "group": "acquire_dev_swapped",
+      "both_correct": 0,
+      "episodes": 256,
+      "passed": false
+    },
+    {
+      "parent": 68101,
+      "encoding": "atomic",
+      "group": "acquire_dev_heldout",
+      "both_correct": 0,
+      "episodes": 256,
+      "passed": false
+    },
+    {
+      "parent": 68101,
+      "encoding": "atomic",
+      "group": "acquire_dev_heldout_swapped",
+      "both_correct": 1,
+      "episodes": 256,
+      "passed": false
+    },
+    {
+      "parent": 68101,
+      "encoding": "digits",
+      "group": "acquire_train_seen",
+      "both_correct": 2,
+      "episodes": 256,
+      "passed": false
+    },
+    {
+      "parent": 68101,
+      "encoding": "digits",
+      "group": "acquire_train_swapped",
+      "both_correct": 0,
+      "episodes": 256,
+      "passed": false
+    },
+    {
+      "parent": 68101,
+      "encoding": "digits",
+      "group": "acquire_dev_seen",
+      "both_correct": 0,
+      "episodes": 256,
+      "passed": false
+    },
+    {
+      "parent": 68101,
+      "encoding": "digits",
+      "group": "acquire_dev_swapped",
+      "both_correct": 1,
+      "episodes": 256,
+      "passed": false
+    },
+    {
+      "parent": 68101,
+      "encoding": "digits",
+      "group": "acquire_dev_heldout",
+      "both_correct": 1,
+      "episodes": 256,
+      "passed": false
+    },
+    {
+      "parent": 68101,
+      "encoding": "digits",
+      "group": "acquire_dev_heldout_swapped",
+      "both_correct": 2,
+      "episodes": 256,
+      "passed": false
+    },
+    {
+      "parent": 68105,
+      "encoding": "atomic",
+      "group": "acquire_train_seen",
+      "both_correct": 1,
+      "episodes": 256,
+      "passed": false
+    },
+    {
+      "parent": 68105,
+      "encoding": "atomic",
+      "group": "acquire_train_swapped",
+      "both_correct": 0,
+      "episodes": 256,
+      "passed": false
+    },
+    {
+      "parent": 68105,
+      "encoding": "atomic",
+      "group": "acquire_dev_seen",
+      "both_correct": 0,
+      "episodes": 256,
+      "passed": false
+    },
+    {
+      "parent": 68105,
+      "encoding": "atomic",
+      "group": "acquire_dev_swapped",
+      "both_correct": 2,
+      "episodes": 256,
+      "passed": false
+    },
+    {
+      "parent": 68105,
+      "encoding": "atomic",
+      "group": "acquire_dev_heldout",
+      "both_correct": 0,
+      "episodes": 256,
+      "passed": false
+    },
+    {
+      "parent": 68105,
+      "encoding": "atomic",
+      "group": "acquire_dev_heldout_swapped",
+      "both_correct": 0,
+      "episodes": 256,
+      "passed": false
+    },
+    {
+      "parent": 68105,
+      "encoding": "digits",
+      "group": "acquire_train_seen",
+      "both_correct": 1,
+      "episodes": 256,
+      "passed": false
+    },
+    {
+      "parent": 68105,
+      "encoding": "digits",
+      "group": "acquire_train_swapped",
+      "both_correct": 2,
+      "episodes": 256,
+      "passed": false
+    },
+    {
+      "parent": 68105,
+      "encoding": "digits",
+      "group": "acquire_dev_seen",
+      "both_correct": 1,
+      "episodes": 256,
+      "passed": false
+    },
+    {
+      "parent": 68105,
+      "encoding": "digits",
+      "group": "acquire_dev_swapped",
+      "both_correct": 0,
+      "episodes": 256,
+      "passed": false
+    },
+    {
+      "parent": 68105,
+      "encoding": "digits",
+      "group": "acquire_dev_heldout",
+      "both_correct": 1,
+      "episodes": 256,
+      "passed": false
+    },
+    {
+      "parent": 68105,
+      "encoding": "digits",
+      "group": "acquire_dev_heldout_swapped",
+      "both_correct": 0,
+      "episodes": 256,
+      "passed": false
+    }
+  ],
+  "passed_gate_cells": 0,
+  "script_sha256": "e0dafec5299be4ef30e4775cdaab2fce5956a27b99b810f6dd9bd56cf6809eb9"
+}

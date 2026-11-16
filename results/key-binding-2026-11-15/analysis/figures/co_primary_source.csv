@@ -1,0 +1,3 @@
+endpoint,atomic_minus_digits,ci97_5,worlds,fixed_parents,bootstrap_draws,seed,parent_effects,ci97_5_lower,ci97_5_upper
+train_seen,0.0,"[0.0, 0.0]",256,2,5000,91404,"[0.0, 0.0]",0.0,0.0
+dev_heldout,0.0,"[0.0, 0.0]",256,2,5000,91404,"[0.0, 0.0]",0.0,0.0

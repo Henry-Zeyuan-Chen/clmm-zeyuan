@@ -1,0 +1,13 @@
+{
+  "created_utc": "2026-11-16T04:28:22.986494+00:00",
+  "stage": "Before coordinator reads any main model efficacy",
+  "selection": "First saved originalGPUresource batch per group/condition in every initial/terminal case,320queries each",
+  "models": 8,
+  "expected_queries": 2560,
+  "absolute_logit_tolerance": 0.002,
+  "absolute_probability_tolerance": 0.0002,
+  "allowed_argmax_mismatches": 0,
+  "wall_limit_seconds": 240,
+  "script_sha256": "e789d4050d3dcaece31bebaaf199c2a498908591fa3655b9a3a7e713f39997e8",
+  "no_threshold_relaxation": true
+}

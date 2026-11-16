@@ -1,0 +1,31 @@
+{
+  "inputs": [
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-sequence-freshness-2026-11-15\\analysis\\future_exclusion_signatures.json",
+      "sha256": "99db2ebb75ccf49faad2fc3cd3a4bff9bb8ff42cc5e842063a695feba8d02a7b",
+      "histories": 85123
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-key-binding-2026-11-15\\engineering-cpu\\packet\\training_plan.json.gz",
+      "sha256": "ef25a500a242ccc9b2a6784aa2db4a39826c18f7792b5a9912fe3db8c8c6002b",
+      "histories": 16
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-key-binding-2026-11-15\\engineering-cpu\\packet\\episodes.json",
+      "sha256": "ed0b5087f032188ec208567dc5c0cd2d32a197587364fd045f6754cda0708bb6",
+      "histories": 8
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-key-binding-2026-11-15\\engineering\\packet\\training_plan.json.gz",
+      "sha256": "094a0d1740e99f1106e242a10c09e6b52cfdcde8b1cde5dd990af90c39ab811d",
+      "histories": 160
+    },
+    {
+      "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-key-binding-2026-11-15\\engineering\\packet\\episodes.json",
+      "sha256": "a8c76344d9a8866938f41ff142e19c11694a47d68de0088122b70e20e8823a62",
+      "histories": 64
+    }
+  ],
+  "current_training_unique": 15055,
+  "union_count": 99502
+}

@@ -1,0 +1,8 @@
+{
+  "job_id": 13926674,
+  "state": "CANCELLED by 564221",
+  "GPUs": 2,
+  "allocation_elapsed_seconds": 918,
+  "allocated_GPU_hours": 0.51,
+  "job_closed": true
+}

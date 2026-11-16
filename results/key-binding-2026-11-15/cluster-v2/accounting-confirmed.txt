@@ -1,0 +1,7 @@
+JobIDRaw|User|State|ElapsedRaw|AllocTRES|ExitCode
+13926674|zc2819|CANCELLED by 564221|918|billing=8,cpu=8,gres/gpu:a6000=2,gres/gpu=2,mem=16G,node=1|0:0
+13926674.batch||CANCELLED|919|cpu=8,gres/gpu:a6000=2,gres/gpu=2,mem=16G,node=1|0:15
+13926674.extern||COMPLETED|920|billing=8,cpu=8,gres/gpu:a6000=2,gres/gpu=2,mem=16G,node=1|0:0
+13926674.0||COMPLETED|64|cpu=8,gres/gpu:a6000=2,gres/gpu=2,mem=16G,node=1|0:0
+13926674.1||COMPLETED|821|cpu=8,gres/gpu:a6000=2,gres/gpu=2,mem=16G,node=1|0:0
+13926674.2||COMPLETED|14|cpu=8,gres/gpu:a6000=2,gres/gpu=2,mem=16G,node=1|0:0

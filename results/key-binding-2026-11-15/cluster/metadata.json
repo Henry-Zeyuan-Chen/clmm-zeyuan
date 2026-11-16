@@ -1,0 +1,300 @@
+{
+  "status": "preflight_only",
+  "job_id": "13926582",
+  "commands": [
+    {
+      "args": [
+        "C:\\Windows\\System32\\OpenSSH\\ssh.exe",
+        "-F",
+        "C:\\Users\\henry\\.ssh\\config",
+        "-o",
+        "BatchMode=yes",
+        "-o",
+        "ConnectTimeout=8",
+        "insomnia-login",
+        "mkdir -p /insomnia001/depts/edu/users/zc2819/clmm/key-binding-2026-11-15; hostname; insomnia status; insomnia resources; squeue -u zc2819 -h -o \"%i %T %j %M %R\""
+      ],
+      "exit_code": 0,
+      "stdout": "2402-login-002\nSelected desktop job: 13686886\nJOBID      STATE    PARTITION                   NAME       NODELIST    TIME_LEFT     NODELIST(REASON)\nAccount: edu. CPU: edu1. GPU: short / free_short. Current limits: up to 12h, 2 GPUs per user in this QOS.\nNODE | GPU RESOURCES | STATE (node state does not guarantee a free GPU)\nins035|gpu:l40:2|mix\nins036|gpu:l40:2|mix\nins037|gpu:l40:2|mix-\nins038|gpu:l40s:2|mix\nins039|gpu:l40s:2|mix\nins046|gpu:R6000:8|mix-\nins047|gpu:R6000:8|drng\nins048|gpu:h100:2|mix-\nins050|gpu:h100:2|mix-\nins056|gpu:l40s:2|mix-\nins057|gpu:l40s:2|mix-\nins058|gpu:l40s:2|drain*\nins059|gpu:l40s:2|mix-\nins060|gpu:l40s:2|mix-\nins061|gpu:l40s:2|mix\nins080|gpu:A6000:8|mix\nins081|gpu:A6000:8|mix\nins082|gpu:A6000:8|drain*\nins083|gpu:A6000:8|mix-\nins084|gpu:A6000:8|mix\nins085|gpu:A6000:8|mix-\nins086|gpu:A6000:8|mix-\nins087|gpu:A6000:8|mix-\nins088|gpu:A6000:8|mix-\nins089|gpu:A6000:8|mix\nins090|gpu:A6000:8|mix\nins091|gpu:A6000:8|mix-\nins092|gpu:A6000:8|mix\nins093|gpu:A6000:4|mix-\nins094|gpu:A6000:4|drain\n",
+      "stderr": "",
+      "elapsed_seconds": 0.7041373000247404
+    },
+    {
+      "args": [
+        "C:\\Windows\\System32\\OpenSSH\\scp.exe",
+        "-F",
+        "C:\\Users\\henry\\.ssh\\config",
+        "-o",
+        "BatchMode=yes",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-key-binding\\input-upload.tar.gz",
+        "insomnia-login:/insomnia001/depts/edu/users/zc2819/clmm/key-binding-2026-11-15/input-upload.tar.gz"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "elapsed_seconds": 2.6284191999584436
+    },
+    {
+      "args": [
+        "C:\\Windows\\System32\\OpenSSH\\ssh.exe",
+        "-F",
+        "C:\\Users\\henry\\.ssh\\config",
+        "-o",
+        "BatchMode=yes",
+        "-o",
+        "ConnectTimeout=8",
+        "insomnia-login",
+        "sha256sum /insomnia001/depts/edu/users/zc2819/clmm/key-binding-2026-11-15/input-upload.tar.gz"
+      ],
+      "exit_code": 0,
+      "stdout": "170e9a828f41af40bcef25d7d192cb0fe378451be403079f8f89f047a492365d  /insomnia001/depts/edu/users/zc2819/clmm/key-binding-2026-11-15/input-upload.tar.gz\n",
+      "stderr": "",
+      "elapsed_seconds": 0.4927732999785803
+    },
+    {
+      "args": [
+        "C:\\Windows\\System32\\OpenSSH\\ssh.exe",
+        "-F",
+        "C:\\Users\\henry\\.ssh\\config",
+        "-o",
+        "BatchMode=yes",
+        "-o",
+        "ConnectTimeout=8",
+        "insomnia-login",
+        "cd /insomnia001/depts/edu/users/zc2819/clmm/key-binding-2026-11-15 && tar -xzf input-upload.tar.gz && git -c core.autocrlf=false clone -q --no-checkout source.bundle source && git -c core.autocrlf=false -C source checkout -q --detach 5e8c61829ff85ecea3c9314d4ccd8dfef3268b68"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "hint: Using 'master' as the name for the initial branch. This default branch name\nhint: is subject to change. To configure the initial branch name to use in all\nhint: of your new repositories, which will suppress this warning, call:\nhint:\nhint: \tgit config --global init.defaultBranch <name>\nhint:\nhint: Names commonly chosen instead of 'master' are 'main', 'trunk' and\nhint: 'development'. The just-created branch can be renamed via this command:\nhint:\nhint: \tgit branch -m <name>\n",
+      "elapsed_seconds": 3.6462744000018574
+    },
+    {
+      "args": [
+        "C:\\Windows\\System32\\OpenSSH\\ssh.exe",
+        "-F",
+        "C:\\Users\\henry\\.ssh\\config",
+        "-o",
+        "BatchMode=yes",
+        "-o",
+        "ConnectTimeout=8",
+        "insomnia-login",
+        "sbatch --parsable -A edu -p short --qos=free_short -N1 -n1 -c4 --mem=16G --time=00:45:00 --gres=gpu:A6000:1 --exclude=ins081 --job-name=clmm-binding --output=/insomnia001/depts/edu/users/zc2819/clmm/key-binding-2026-11-15/allocation-%j.log --wrap=\"sleep 2700\""
+      ],
+      "exit_code": 0,
+      "stdout": "13926582\n",
+      "stderr": "",
+      "elapsed_seconds": 0.45178930001566187
+    },
+    {
+      "args": [
+        "C:\\Windows\\System32\\OpenSSH\\ssh.exe",
+        "-F",
+        "C:\\Users\\henry\\.ssh\\config",
+        "-o",
+        "BatchMode=yes",
+        "-o",
+        "ConnectTimeout=8",
+        "insomnia-login",
+        "squeue -j 13926582 -h -o \"%u %T %N\""
+      ],
+      "exit_code": 0,
+      "stdout": "zc2819 PENDING \n",
+      "stderr": "",
+      "elapsed_seconds": 0.42673170001944527
+    },
+    {
+      "args": [
+        "C:\\Windows\\System32\\OpenSSH\\ssh.exe",
+        "-F",
+        "C:\\Users\\henry\\.ssh\\config",
+        "-o",
+        "BatchMode=yes",
+        "-o",
+        "ConnectTimeout=8",
+        "insomnia-login",
+        "squeue -j 13926582 -h -o \"%u %T %N\""
+      ],
+      "exit_code": 0,
+      "stdout": "zc2819 RUNNING ins093\n",
+      "stderr": "",
+      "elapsed_seconds": 0.6126292999833822
+    },
+    {
+      "args": [
+        "C:\\Windows\\System32\\OpenSSH\\ssh.exe",
+        "-F",
+        "C:\\Users\\henry\\.ssh\\config",
+        "-o",
+        "BatchMode=yes",
+        "-o",
+        "ConnectTimeout=8",
+        "insomnia-login",
+        "scontrol show job -o 13926582"
+      ],
+      "exit_code": 0,
+      "stdout": "JobId=13926582 JobName=clmm-binding UserId=zc2819(564221) GroupId=user(500) MCS_label=N/A Priority=4786 Nice=0 Account=edu QOS=free JobState=RUNNING Reason=None Dependency=(null) Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=00:45:00 TimeMin=N/A SubmitTime=2026-11-15T23:14:47 EligibleTime=2026-11-15T23:14:47 AccrueTime=2026-11-15T23:14:47 StartTime=2026-11-15T23:14:58 EndTime=2026-11-15T23:59:58 Deadline=N/A PreemptEligibleTime=2026-11-15T23:44:58 PreemptTime=None SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-11-15T23:14:58 Scheduler=Main Partition=short AllocNode:Sid=2402-login-002:3915595 ReqNodeList=(null) ExcNodeList=ins081 NodeList=ins093 BatchHost=ins093 NumNodes=1 NumCPUs=4 NumTasks=1 CPUs/Task=4 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=4,mem=16G,node=1,billing=4,gres/gpu=1,gres/gpu:a6000=1 AllocTRES=cpu=4,mem=16G,node=1,billing=4,gres/gpu=1,gres/gpu:a6000=1 Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=4 MinMemoryNode=16G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null) Command=(null) WorkDir=/insomnia001/home/zc2819 StdErr=/insomnia001/depts/edu/users/zc2819/clmm/key-binding-2026-11-15/allocation-13926582.log StdIn=/dev/null StdOut=/insomnia001/depts/edu/users/zc2819/clmm/key-binding-2026-11-15/allocation-13926582.log TresPerNode=gres/gpu:A6000:1 TresPerTask=cpu=4 \n",
+      "stderr": "",
+      "elapsed_seconds": 0.4481134999659844
+    },
+    {
+      "args": [
+        "C:\\Windows\\System32\\OpenSSH\\ssh.exe",
+        "-F",
+        "C:\\Users\\henry\\.ssh\\config",
+        "-o",
+        "BatchMode=yes",
+        "-o",
+        "ConnectTimeout=8",
+        "insomnia-login",
+        "timeout --kill-after=10s 90s srun --input=/dev/null --jobid=13926582 --overlap -N1 -n1 -c4 /insomnia001/depts/edu/users/zc2819/clmm/replay-2026-11-12/venv/bin/python -u -B /insomnia001/depts/edu/users/zc2819/clmm/key-binding-2026-11-15/environment_probe.py 1 > /insomnia001/depts/edu/users/zc2819/clmm/key-binding-2026-11-15/import-probe.log 2>&1"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "elapsed_seconds": 51.2317941999645
+    },
+    {
+      "args": [
+        "C:\\Windows\\System32\\OpenSSH\\ssh.exe",
+        "-F",
+        "C:\\Users\\henry\\.ssh\\config",
+        "-o",
+        "BatchMode=yes",
+        "-o",
+        "ConnectTimeout=8",
+        "insomnia-login",
+        "timeout --kill-after=20s 2150s srun --input=/dev/null --jobid=13926582 --overlap -N1 -n1 -c4 /insomnia001/depts/edu/users/zc2819/clmm/replay-2026-11-12/venv/bin/python -u -B /insomnia001/depts/edu/users/zc2819/clmm/key-binding-2026-11-15/remote_pipeline.py > /insomnia001/depts/edu/users/zc2819/clmm/key-binding-2026-11-15/pipeline.log 2>&1"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "elapsed_seconds": 91.48580080003012
+    },
+    {
+      "args": [
+        "C:\\Windows\\System32\\OpenSSH\\ssh.exe",
+        "-F",
+        "C:\\Users\\henry\\.ssh\\config",
+        "-o",
+        "BatchMode=yes",
+        "-o",
+        "ConnectTimeout=8",
+        "insomnia-login",
+        "timeout --kill-after=10s 120s srun --input=/dev/null --jobid=13926582 --overlap -N1 -n1 -c4 tar -czf /insomnia001/depts/edu/users/zc2819/clmm/key-binding-2026-11-15/result.tar.gz -C /insomnia001/depts/edu/users/zc2819/clmm/key-binding-2026-11-15 result"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "elapsed_seconds": 1.2546796000096947
+    },
+    {
+      "args": [
+        "C:\\Windows\\System32\\OpenSSH\\ssh.exe",
+        "-F",
+        "C:\\Users\\henry\\.ssh\\config",
+        "-o",
+        "BatchMode=yes",
+        "-o",
+        "ConnectTimeout=8",
+        "insomnia-login",
+        "sha256sum /insomnia001/depts/edu/users/zc2819/clmm/key-binding-2026-11-15/result.tar.gz"
+      ],
+      "exit_code": 0,
+      "stdout": "b81be548efa5b9e4dcd339d51ff67b527e4ea008cd526b1fdbb4c2912d3674a9  /insomnia001/depts/edu/users/zc2819/clmm/key-binding-2026-11-15/result.tar.gz\n",
+      "stderr": "",
+      "elapsed_seconds": 0.46541240002261475
+    },
+    {
+      "args": [
+        "C:\\Windows\\System32\\OpenSSH\\scp.exe",
+        "-F",
+        "C:\\Users\\henry\\.ssh\\config",
+        "-o",
+        "BatchMode=yes",
+        "insomnia-login:/insomnia001/depts/edu/users/zc2819/clmm/key-binding-2026-11-15/result.tar.gz",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\work\\clmm-key-binding\\result-download.tar.gz"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "elapsed_seconds": 1.3497615999658592
+    },
+    {
+      "args": [
+        "C:\\Windows\\System32\\OpenSSH\\scp.exe",
+        "-F",
+        "C:\\Users\\henry\\.ssh\\config",
+        "-o",
+        "BatchMode=yes",
+        "insomnia-login:/insomnia001/depts/edu/users/zc2819/clmm/key-binding-2026-11-15/import-probe.log",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-key-binding-2026-11-15\\cluster\\import-probe.log"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "elapsed_seconds": 0.5094209999660961
+    },
+    {
+      "args": [
+        "C:\\Windows\\System32\\OpenSSH\\scp.exe",
+        "-F",
+        "C:\\Users\\henry\\.ssh\\config",
+        "-o",
+        "BatchMode=yes",
+        "insomnia-login:/insomnia001/depts/edu/users/zc2819/clmm/key-binding-2026-11-15/pipeline.log",
+        "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-key-binding-2026-11-15\\cluster\\pipeline.log"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "elapsed_seconds": 0.6008682000101544
+    },
+    {
+      "args": [
+        "C:\\Windows\\System32\\OpenSSH\\ssh.exe",
+        "-F",
+        "C:\\Users\\henry\\.ssh\\config",
+        "-o",
+        "BatchMode=yes",
+        "-o",
+        "ConnectTimeout=8",
+        "insomnia-login",
+        "scancel 13926582"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "elapsed_seconds": 0.46540120005374774
+    },
+    {
+      "args": [
+        "C:\\Windows\\System32\\OpenSSH\\ssh.exe",
+        "-F",
+        "C:\\Users\\henry\\.ssh\\config",
+        "-o",
+        "BatchMode=yes",
+        "-o",
+        "ConnectTimeout=8",
+        "insomnia-login",
+        "sacct -j 13926582 --format=JobID,User,State,Elapsed,AllocTRES,ExitCode -P; squeue -u zc2819 -h -o \"%i %T %j %M %R\""
+      ],
+      "exit_code": 0,
+      "stdout": "JobID|User|State|Elapsed|AllocTRES|ExitCode\n13926582|zc2819|CANCELLED by 564221|00:02:28|billing=4,cpu=4,gres/gpu:a6000=1,gres/gpu=1,mem=16G,node=1|0:0\n13926582.batch||CANCELLED|00:02:29|cpu=4,gres/gpu:a6000=1,gres/gpu=1,mem=16G,node=1|0:15\n13926582.extern||COMPLETED|00:02:29|billing=4,cpu=4,gres/gpu:a6000=1,gres/gpu=1,mem=16G,node=1|0:0\n13926582.0||COMPLETED|00:00:50|cpu=4,gres/gpu:a6000=1,gres/gpu=1,mem=16G,node=1|0:0\n13926582.1||COMPLETED|00:01:31|cpu=4,gres/gpu:a6000=1,gres/gpu=1,mem=16G,node=1|0:0\n13926582.2||COMPLETED|00:00:01|cpu=4,gres/gpu:a6000=1,gres/gpu=1,mem=16G,node=1|0:0\n13926582 COMPLETING clmm-binding 2:28 ins093\n",
+      "stderr": "",
+      "elapsed_seconds": 0.4311494999565184
+    }
+  ],
+  "started_epoch": 1794802477.5482802,
+  "pending_limit_seconds": 600,
+  "allocation_limit_seconds": 2700,
+  "no_renewal": true,
+  "upload_sha256": "170e9a828f41af40bcef25d7d192cb0fe378451be403079f8f89f047a492365d",
+  "upload_bytes": 71973409,
+  "verified_running": "zc2819 RUNNING ins093",
+  "running_epoch": 1794802499.9389663,
+  "phase": "retrieve",
+  "download_sha256": "b81be548efa5b9e4dcd339d51ff67b527e4ea008cd526b1fdbb4c2912d3674a9",
+  "pipeline_status": "preflight_only",
+  "cancel_requested": true,
+  "ended_epoch": 1794802650.5235744
+}

@@ -1,0 +1,374 @@
+{
+  "models": [
+    {
+      "name": "68101-atomic",
+      "path": "gpu-main\\result\\runs\\68101-atomic\\checkpoint.pt",
+      "encoding": "atomic",
+      "checkpoint_sha256": "fff1b5b3d54caabdc56006da210d500fc07581b018344d47c9df967016b4df1c",
+      "state_sha256": "860df199199298c463915ec8725a20c836dbb6a20780cec30ff60de3eef717ce",
+      "source_commit": "5e8c61829ff85ecea3c9314d4ccd8dfef3268b68",
+      "config": {
+        "num_tokens": 256,
+        "dim": 128,
+        "depth": 2,
+        "dim_head": 32,
+        "heads": 4,
+        "ff_mult": 4.0,
+        "num_residual_streams": 1,
+        "segment_len": 128,
+        "num_persist_mem_tokens": 4,
+        "num_longterm_mem_tokens": 0,
+        "memory_layers": [
+          1,
+          2
+        ],
+        "memory_segment_len": 8,
+        "memory_batch_size": 32,
+        "memory_dim_head": 32,
+        "memory_heads": 4,
+        "memory_depth": 2,
+        "memory_expansion_factor": 2.0,
+        "momentum": true,
+        "qk_rmsnorm": true,
+        "max_inner_lr": 0.01,
+        "memory_norm_residual": true
+      },
+      "codec_path": "packet/key_codec.json",
+      "codec_sha256": "9a6cc58500f98e47429c9c4cc11d4a398845e71917ad10564d8778f18a15309b",
+      "registered_parameters": 839248,
+      "completed_updates": 2000,
+      "selection": "Fixed terminal, no checkpoint selection",
+      "acquisition_gates": [
+        {
+          "parent": 68101,
+          "encoding": "atomic",
+          "group": "acquire_train_seen",
+          "both_correct": 0,
+          "episodes": 256,
+          "passed": false
+        },
+        {
+          "parent": 68101,
+          "encoding": "atomic",
+          "group": "acquire_train_swapped",
+          "both_correct": 0,
+          "episodes": 256,
+          "passed": false
+        },
+        {
+          "parent": 68101,
+          "encoding": "atomic",
+          "group": "acquire_dev_seen",
+          "both_correct": 0,
+          "episodes": 256,
+          "passed": false
+        },
+        {
+          "parent": 68101,
+          "encoding": "atomic",
+          "group": "acquire_dev_swapped",
+          "both_correct": 0,
+          "episodes": 256,
+          "passed": false
+        },
+        {
+          "parent": 68101,
+          "encoding": "atomic",
+          "group": "acquire_dev_heldout",
+          "both_correct": 0,
+          "episodes": 256,
+          "passed": false
+        },
+        {
+          "parent": 68101,
+          "encoding": "atomic",
+          "group": "acquire_dev_heldout_swapped",
+          "both_correct": 1,
+          "episodes": 256,
+          "passed": false
+        }
+      ],
+      "all_six_acquisition_gates_pass": false,
+      "retention_qualified": false,
+      "scope": "Controlled key encoding only; no native32, delayed, cross-session, replay or biological qualification"
+    },
+    {
+      "name": "68101-digits",
+      "path": "gpu-main\\result\\runs\\68101-digits\\checkpoint.pt",
+      "encoding": "digits",
+      "checkpoint_sha256": "1ca9c69443290770863024f862e917a61b5f86427f85c758e173bcb6ad88ab33",
+      "state_sha256": "e154113669ef16f649c7e1915fcf99710b34a354550ea6e563a44536f248c996",
+      "source_commit": "5e8c61829ff85ecea3c9314d4ccd8dfef3268b68",
+      "config": {
+        "num_tokens": 256,
+        "dim": 128,
+        "depth": 2,
+        "dim_head": 32,
+        "heads": 4,
+        "ff_mult": 4.0,
+        "num_residual_streams": 1,
+        "segment_len": 128,
+        "num_persist_mem_tokens": 4,
+        "num_longterm_mem_tokens": 0,
+        "memory_layers": [
+          1,
+          2
+        ],
+        "memory_segment_len": 8,
+        "memory_batch_size": 32,
+        "memory_dim_head": 32,
+        "memory_heads": 4,
+        "memory_depth": 2,
+        "memory_expansion_factor": 2.0,
+        "momentum": true,
+        "qk_rmsnorm": true,
+        "max_inner_lr": 0.01,
+        "memory_norm_residual": true
+      },
+      "codec_path": "packet/key_codec.json",
+      "codec_sha256": "9a6cc58500f98e47429c9c4cc11d4a398845e71917ad10564d8778f18a15309b",
+      "registered_parameters": 839248,
+      "completed_updates": 2000,
+      "selection": "Fixed terminal, no checkpoint selection",
+      "acquisition_gates": [
+        {
+          "parent": 68101,
+          "encoding": "digits",
+          "group": "acquire_train_seen",
+          "both_correct": 2,
+          "episodes": 256,
+          "passed": false
+        },
+        {
+          "parent": 68101,
+          "encoding": "digits",
+          "group": "acquire_train_swapped",
+          "both_correct": 0,
+          "episodes": 256,
+          "passed": false
+        },
+        {
+          "parent": 68101,
+          "encoding": "digits",
+          "group": "acquire_dev_seen",
+          "both_correct": 0,
+          "episodes": 256,
+          "passed": false
+        },
+        {
+          "parent": 68101,
+          "encoding": "digits",
+          "group": "acquire_dev_swapped",
+          "both_correct": 1,
+          "episodes": 256,
+          "passed": false
+        },
+        {
+          "parent": 68101,
+          "encoding": "digits",
+          "group": "acquire_dev_heldout",
+          "both_correct": 1,
+          "episodes": 256,
+          "passed": false
+        },
+        {
+          "parent": 68101,
+          "encoding": "digits",
+          "group": "acquire_dev_heldout_swapped",
+          "both_correct": 2,
+          "episodes": 256,
+          "passed": false
+        }
+      ],
+      "all_six_acquisition_gates_pass": false,
+      "retention_qualified": false,
+      "scope": "Controlled key encoding only; no native32, delayed, cross-session, replay or biological qualification"
+    },
+    {
+      "name": "68105-atomic",
+      "path": "gpu-main\\result\\runs\\68105-atomic\\checkpoint.pt",
+      "encoding": "atomic",
+      "checkpoint_sha256": "0451e69c688ecdc5b0e22930eebb458bf8c8ba96150319b96abb014c71e2fa66",
+      "state_sha256": "0eec0baedfae7e9ab4083f5b0367856056ce6112085696bbc29b4b4bf4cbed06",
+      "source_commit": "5e8c61829ff85ecea3c9314d4ccd8dfef3268b68",
+      "config": {
+        "num_tokens": 256,
+        "dim": 128,
+        "depth": 2,
+        "dim_head": 32,
+        "heads": 4,
+        "ff_mult": 4.0,
+        "num_residual_streams": 1,
+        "segment_len": 128,
+        "num_persist_mem_tokens": 4,
+        "num_longterm_mem_tokens": 0,
+        "memory_layers": [
+          1,
+          2
+        ],
+        "memory_segment_len": 8,
+        "memory_batch_size": 32,
+        "memory_dim_head": 32,
+        "memory_heads": 4,
+        "memory_depth": 2,
+        "memory_expansion_factor": 2.0,
+        "momentum": true,
+        "qk_rmsnorm": true,
+        "max_inner_lr": 0.01,
+        "memory_norm_residual": true
+      },
+      "codec_path": "packet/key_codec.json",
+      "codec_sha256": "9a6cc58500f98e47429c9c4cc11d4a398845e71917ad10564d8778f18a15309b",
+      "registered_parameters": 839248,
+      "completed_updates": 2000,
+      "selection": "Fixed terminal, no checkpoint selection",
+      "acquisition_gates": [
+        {
+          "parent": 68105,
+          "encoding": "atomic",
+          "group": "acquire_train_seen",
+          "both_correct": 1,
+          "episodes": 256,
+          "passed": false
+        },
+        {
+          "parent": 68105,
+          "encoding": "atomic",
+          "group": "acquire_train_swapped",
+          "both_correct": 0,
+          "episodes": 256,
+          "passed": false
+        },
+        {
+          "parent": 68105,
+          "encoding": "atomic",
+          "group": "acquire_dev_seen",
+          "both_correct": 0,
+          "episodes": 256,
+          "passed": false
+        },
+        {
+          "parent": 68105,
+          "encoding": "atomic",
+          "group": "acquire_dev_swapped",
+          "both_correct": 2,
+          "episodes": 256,
+          "passed": false
+        },
+        {
+          "parent": 68105,
+          "encoding": "atomic",
+          "group": "acquire_dev_heldout",
+          "both_correct": 0,
+          "episodes": 256,
+          "passed": false
+        },
+        {
+          "parent": 68105,
+          "encoding": "atomic",
+          "group": "acquire_dev_heldout_swapped",
+          "both_correct": 0,
+          "episodes": 256,
+          "passed": false
+        }
+      ],
+      "all_six_acquisition_gates_pass": false,
+      "retention_qualified": false,
+      "scope": "Controlled key encoding only; no native32, delayed, cross-session, replay or biological qualification"
+    },
+    {
+      "name": "68105-digits",
+      "path": "gpu-main\\result\\runs\\68105-digits\\checkpoint.pt",
+      "encoding": "digits",
+      "checkpoint_sha256": "65a49e3cd50f2d2e3b8118ea6e49ee23698dd7b0c7163a30094f78c56bcfb3e8",
+      "state_sha256": "92c039bd399164d6e3a1f4c78c717f26670448f5d64fa667fee41fa943195020",
+      "source_commit": "5e8c61829ff85ecea3c9314d4ccd8dfef3268b68",
+      "config": {
+        "num_tokens": 256,
+        "dim": 128,
+        "depth": 2,
+        "dim_head": 32,
+        "heads": 4,
+        "ff_mult": 4.0,
+        "num_residual_streams": 1,
+        "segment_len": 128,
+        "num_persist_mem_tokens": 4,
+        "num_longterm_mem_tokens": 0,
+        "memory_layers": [
+          1,
+          2
+        ],
+        "memory_segment_len": 8,
+        "memory_batch_size": 32,
+        "memory_dim_head": 32,
+        "memory_heads": 4,
+        "memory_depth": 2,
+        "memory_expansion_factor": 2.0,
+        "momentum": true,
+        "qk_rmsnorm": true,
+        "max_inner_lr": 0.01,
+        "memory_norm_residual": true
+      },
+      "codec_path": "packet/key_codec.json",
+      "codec_sha256": "9a6cc58500f98e47429c9c4cc11d4a398845e71917ad10564d8778f18a15309b",
+      "registered_parameters": 839248,
+      "completed_updates": 2000,
+      "selection": "Fixed terminal, no checkpoint selection",
+      "acquisition_gates": [
+        {
+          "parent": 68105,
+          "encoding": "digits",
+          "group": "acquire_train_seen",
+          "both_correct": 1,
+          "episodes": 256,
+          "passed": false
+        },
+        {
+          "parent": 68105,
+          "encoding": "digits",
+          "group": "acquire_train_swapped",
+          "both_correct": 2,
+          "episodes": 256,
+          "passed": false
+        },
+        {
+          "parent": 68105,
+          "encoding": "digits",
+          "group": "acquire_dev_seen",
+          "both_correct": 1,
+          "episodes": 256,
+          "passed": false
+        },
+        {
+          "parent": 68105,
+          "encoding": "digits",
+          "group": "acquire_dev_swapped",
+          "both_correct": 0,
+          "episodes": 256,
+          "passed": false
+        },
+        {
+          "parent": 68105,
+          "encoding": "digits",
+          "group": "acquire_dev_heldout",
+          "both_correct": 1,
+          "episodes": 256,
+          "passed": false
+        },
+        {
+          "parent": 68105,
+          "encoding": "digits",
+          "group": "acquire_dev_heldout_swapped",
+          "both_correct": 0,
+          "episodes": 256,
+          "passed": false
+        }
+      ],
+      "all_six_acquisition_gates_pass": false,
+      "retention_qualified": false,
+      "scope": "Controlled key encoding only; no native32, delayed, cross-session, replay or biological qualification"
+    }
+  ],
+  "static_codec_serialized_bytes": 2978,
+  "codec_is_external_preprocessing": true
+}

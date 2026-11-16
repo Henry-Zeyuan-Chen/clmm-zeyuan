@@ -1,0 +1,201 @@
+{
+  "status": "passed",
+  "kind": "separate_saved_engineering_raw_vector_tensor_optimizer_validity",
+  "models_constructed": false,
+  "model_inference": false,
+  "gpu_calibration_vectors": 2560,
+  "cpu_smoke_vectors": 80,
+  "total_vectors": 2640,
+  "records": [
+    {
+      "run": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-key-binding-2026-11-15\\engineering-cpu\\run",
+      "mode": "train",
+      "parent": 68101,
+      "encoding": "atomic",
+      "vectors": 80,
+      "raw_score_errors": {
+        "nll": 2.752774648229206e-07,
+        "forced_nll": 3.0127602013152455e-07,
+        "legal_probability_mass": 2.507936438522762e-07
+      },
+      "raw_hash_verified": true,
+      "predictions_exact": true,
+      "normal_reset_exact": true,
+      "resources_partition_exact": true,
+      "steps": 8,
+      "optimizer": {
+        "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-key-binding-2026-11-15\\engineering-cpu\\run\\optimizer.pt",
+        "sha256": "6cb20eee9f1ac3b7c54f032129e14b55bd45148011fed25a783db28859cb0dfb",
+        "steps_exact": 8,
+        "states": 72,
+        "registered_optimizer_ids": 80,
+        "inactive_names": [
+          "layers.0.4.memory_model.norm.gamma",
+          "layers.0.4.memory_model.model.weights.0",
+          "layers.0.4.memory_model.model.weights.1",
+          "layers.0.5.rotary_emb.freqs",
+          "layers.1.4.memory_model.norm.gamma",
+          "layers.1.4.memory_model.model.weights.0",
+          "layers.1.4.memory_model.model.weights.1",
+          "layers.1.5.rotary_emb.freqs"
+        ],
+        "tensor_elements": 830960,
+        "finite": true
+      },
+      "tensor_state_sha256": "821274d379f554f4309bebe5dc64ae1e745a4a8a7409862897d0c5535016a878",
+      "scope": "engineering validity only; no efficacy selection"
+    },
+    {
+      "run": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-key-binding-2026-11-15\\gpu-output\\result\\engineering\\digits",
+      "mode": "preflight",
+      "parent": 68101,
+      "encoding": "digits",
+      "vectors": 640,
+      "raw_score_errors": {
+        "nll": 3.9568792153943377e-07,
+        "forced_nll": 2.296630166043201e-07,
+        "legal_probability_mass": 1.9693106179108355e-07
+      },
+      "raw_hash_verified": true,
+      "predictions_exact": true,
+      "normal_reset_exact": true,
+      "resources_partition_exact": true,
+      "steps": 20,
+      "optimizer": {
+        "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-key-binding-2026-11-15\\gpu-output\\result\\engineering\\digits\\optimizer.pt",
+        "sha256": "df4293ac10df1d80a9fd364bc7f35659439b9b6a79ab171b9a23ba0858052651",
+        "steps_exact": 20,
+        "states": 72,
+        "registered_optimizer_ids": 80,
+        "inactive_names": [
+          "layers.0.4.memory_model.norm.gamma",
+          "layers.0.4.memory_model.model.weights.0",
+          "layers.0.4.memory_model.model.weights.1",
+          "layers.0.5.rotary_emb.freqs",
+          "layers.1.4.memory_model.norm.gamma",
+          "layers.1.4.memory_model.model.weights.0",
+          "layers.1.4.memory_model.model.weights.1",
+          "layers.1.5.rotary_emb.freqs"
+        ],
+        "tensor_elements": 830960,
+        "finite": true
+      },
+      "tensor_state_sha256": "6081cb519b3eb898ef6713c8b9784e469883c288932b377ea871c4c9c8c92e83",
+      "scope": "engineering validity only; no efficacy selection"
+    },
+    {
+      "run": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-key-binding-2026-11-15\\gpu-output\\result\\engineering\\atomic",
+      "mode": "preflight",
+      "parent": 68101,
+      "encoding": "atomic",
+      "vectors": 640,
+      "raw_score_errors": {
+        "nll": 4.4452971792452445e-07,
+        "forced_nll": 2.4489627392654256e-07,
+        "legal_probability_mass": 2.581619512609379e-07
+      },
+      "raw_hash_verified": true,
+      "predictions_exact": true,
+      "normal_reset_exact": true,
+      "resources_partition_exact": true,
+      "steps": 20,
+      "optimizer": {
+        "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-key-binding-2026-11-15\\gpu-output\\result\\engineering\\atomic\\optimizer.pt",
+        "sha256": "5f40c5a9d4395cb2998318ca41608b5bb4a2c816fb1cf362416f4c4461ce846f",
+        "steps_exact": 20,
+        "states": 72,
+        "registered_optimizer_ids": 80,
+        "inactive_names": [
+          "layers.0.4.memory_model.norm.gamma",
+          "layers.0.4.memory_model.model.weights.0",
+          "layers.0.4.memory_model.model.weights.1",
+          "layers.0.5.rotary_emb.freqs",
+          "layers.1.4.memory_model.norm.gamma",
+          "layers.1.4.memory_model.model.weights.0",
+          "layers.1.4.memory_model.model.weights.1",
+          "layers.1.5.rotary_emb.freqs"
+        ],
+        "tensor_elements": 830960,
+        "finite": true
+      },
+      "tensor_state_sha256": "8e25bcc6ff841c5e0d3c6201180192a6ade7023fd10519274dd407b74849777f",
+      "scope": "engineering validity only; no efficacy selection"
+    },
+    {
+      "run": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-key-binding-2026-11-15\\gpu-main\\result\\engineering\\digits",
+      "mode": "preflight",
+      "parent": 68101,
+      "encoding": "digits",
+      "vectors": 640,
+      "raw_score_errors": {
+        "nll": 3.9568792153943377e-07,
+        "forced_nll": 2.296630166043201e-07,
+        "legal_probability_mass": 1.9693106179108355e-07
+      },
+      "raw_hash_verified": true,
+      "predictions_exact": true,
+      "normal_reset_exact": true,
+      "resources_partition_exact": true,
+      "steps": 20,
+      "optimizer": {
+        "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-key-binding-2026-11-15\\gpu-main\\result\\engineering\\digits\\optimizer.pt",
+        "sha256": "df4293ac10df1d80a9fd364bc7f35659439b9b6a79ab171b9a23ba0858052651",
+        "steps_exact": 20,
+        "states": 72,
+        "registered_optimizer_ids": 80,
+        "inactive_names": [
+          "layers.0.4.memory_model.norm.gamma",
+          "layers.0.4.memory_model.model.weights.0",
+          "layers.0.4.memory_model.model.weights.1",
+          "layers.0.5.rotary_emb.freqs",
+          "layers.1.4.memory_model.norm.gamma",
+          "layers.1.4.memory_model.model.weights.0",
+          "layers.1.4.memory_model.model.weights.1",
+          "layers.1.5.rotary_emb.freqs"
+        ],
+        "tensor_elements": 830960,
+        "finite": true
+      },
+      "tensor_state_sha256": "6081cb519b3eb898ef6713c8b9784e469883c288932b377ea871c4c9c8c92e83",
+      "scope": "engineering validity only; no efficacy selection"
+    },
+    {
+      "run": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-key-binding-2026-11-15\\gpu-main\\result\\engineering\\atomic",
+      "mode": "preflight",
+      "parent": 68101,
+      "encoding": "atomic",
+      "vectors": 640,
+      "raw_score_errors": {
+        "nll": 4.4452971792452445e-07,
+        "forced_nll": 2.4489627392654256e-07,
+        "legal_probability_mass": 2.581619512609379e-07
+      },
+      "raw_hash_verified": true,
+      "predictions_exact": true,
+      "normal_reset_exact": true,
+      "resources_partition_exact": true,
+      "steps": 20,
+      "optimizer": {
+        "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-key-binding-2026-11-15\\gpu-main\\result\\engineering\\atomic\\optimizer.pt",
+        "sha256": "d77ca9d43402f8ec13fcd4bab0b320795247a8c3bcd6f0d20843cdd8e1008778",
+        "steps_exact": 20,
+        "states": 72,
+        "registered_optimizer_ids": 80,
+        "inactive_names": [
+          "layers.0.4.memory_model.norm.gamma",
+          "layers.0.4.memory_model.model.weights.0",
+          "layers.0.4.memory_model.model.weights.1",
+          "layers.0.5.rotary_emb.freqs",
+          "layers.1.4.memory_model.norm.gamma",
+          "layers.1.4.memory_model.model.weights.0",
+          "layers.1.4.memory_model.model.weights.1",
+          "layers.1.5.rotary_emb.freqs"
+        ],
+        "tensor_elements": 830960,
+        "finite": true
+      },
+      "tensor_state_sha256": "8e25bcc6ff841c5e0d3c6201180192a6ade7023fd10519274dd407b74849777f",
+      "scope": "engineering validity only; no efficacy selection"
+    }
+  ]
+}

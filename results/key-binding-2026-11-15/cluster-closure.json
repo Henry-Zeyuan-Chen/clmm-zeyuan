@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "our_allocations_closed": true,
+  "no_active_user_jobs": true,
+  "unrelated_active_jobs": [],
+  "jobs": [
+    {
+      "job_id": 13926582,
+      "state": "CANCELLED by 564221",
+      "GPUs": 1,
+      "allocation_elapsed_seconds": 148,
+      "allocated_GPU_hours": 0.04111111111111111,
+      "job_closed": true
+    },
+    {
+      "job_id": 13926674,
+      "state": "CANCELLED by 564221",
+      "GPUs": 2,
+      "allocation_elapsed_seconds": 918,
+      "allocated_GPU_hours": 0.51,
+      "job_closed": true
+    }
+  ],
+  "total_allocated_GPU_hours": 0.5511111111111111,
+  "no_helper_selection_change": true,
+  "no_time_limit_extension": true
+}

@@ -1,0 +1,9 @@
+{"projected_main_seconds": 2273.0922125058714, "proceed": true}
+{"mode": "initial", "completed": "68105-digits", "seconds": 53.299373119021766}
+{"mode": "initial", "completed": "68101-digits", "seconds": 53.366418355028145}
+{"mode": "initial", "completed": "68105-atomic", "seconds": 51.073403290996794}
+{"mode": "initial", "completed": "68101-atomic", "seconds": 51.20516527298605}
+{"mode": "train", "completed": "68101-digits", "seconds": 300.6463725870126}
+{"mode": "train", "completed": "68105-digits", "seconds": 303.28991907596355}
+{"mode": "train", "completed": "68101-atomic", "seconds": 307.9529010480037}
+{"mode": "train", "completed": "68105-atomic", "seconds": 307.9949196430389}

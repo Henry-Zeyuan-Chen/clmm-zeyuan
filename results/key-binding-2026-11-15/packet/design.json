@@ -1,0 +1,48 @@
+{
+  "experiment": "key-binding-encoding-v1",
+  "stage": "prospective before any current model efficacy",
+  "question": "Does a one-byte key identity representation repair reusable key-conditioned value selection in the fixed-size sequence baseline?",
+  "hypothesis": "The atomic encoding increases original-plus-value-swap joint-four correctness relative to digits; heldout key/template admission is separately required.",
+  "model": {"registered_parameters":839248,"parents":[68101,68105],"trained_segment":128,"terminal_cases":4,"initial_conditions":4,"architecture_changes":false,"vocabulary":256,"answer_head":"unchanged full256 value-byte classification"},
+  "representations": {
+    "digits":"Original three ASCII digit key field",
+    "atomic":"One fixed byte alias followed by two spaces, replacing only that three-byte field",
+    "codec_seed":91401,"train_keys":96,"dev_keys":32,"key_selection":"First96hashed original train keys and first32hashed original dev keys",
+    "aliases":"Fixed PCG64 permutation of128..255 over all128keys; no target-dependent mapping",
+    "pairing":"All semantic histories, query wording, labels, positions, lengths, ordering, parent tensors and training budgets shared across encodings",
+    "scope":"Encoding bundle includes key segmentation, token identities and their prior exposure; not a pure tokenizer mechanism proof. Provided lookup is preprocessing only. Atomic bytes are never decoded/re-encoded as UTF8."
+  },
+  "training": {
+    "seed":91402,"steps":2000,"contexts_per_update":8,"forks_per_context":2,
+    "curriculum":"256K1 followed by1744K2 acquisition updates, both encodings; K1 duplicates its one query to retain16forks/update",
+    "per_case":{"updates":2000,"answer_forks":32000,"input_bytes":2908928},
+    "all4":{"updates":8000,"answer_forks":128000,"input_bytes":11635712},
+    "lengths":{"K1":63,"K2":95},"storage_padding":"95wide storage only, slice actual length before forward",
+    "optimizer":"AdamW lr0.0003 wd0.01 clip1, float32, TF32false, deterministic algorithms",
+    "selection":"Terminal2000only; midpoint1000recovery-only. No best seed/checkpoint, extension, scale change or conditional native32 follow-up this session",
+    "limits":"Common smaller key pool and acquisition-only curriculum differ from the prior freshness study in both current arms; old-versus-new gains cannot be attributed solely to encoding"
+  },
+  "evaluation": {
+    "seed":91423,"worlds":256,
+    "groups":["train_seen","train_swapped","dev_seen","dev_swapped","dev_heldout","dev_heldout_swapped"],
+    "pairing":"Same train/dev base worlds, exact value swaps, dev wording clones, two identical queries apart from key, distinct current values",
+    "exclusions":"Previous future-only85123semantic/presented-history union plus actual current main training and both engineering/smoke training/evaluation histories; reject original/swap jointly; preserve launch manifests",
+    "conditions":["normal","reset_memory","retrieval_zero"],
+    "condition_scope":"Segment reset is parity-only since95<128, not memory-independence evidence. Retrieval zero preserves writes but changes downstream activations; not a separately trained attention-only baseline",
+    "query_only":"Train/dev seen normal only, target not interpolated",
+    "vectors_each":10240,"initial_and_terminal_vectors":81920,
+    "primary":"Atomic-minus-digits JOINT FOUR (both original and swapped pairs entirely correct), train-seen and dev-heldout",
+    "uncertainty":"5000PCG64whole-world paired bootstrap draws91404, average fixedtwo-parent differences perworld, two97.5percent intervals Bonferroni2. Fixed-model history uncertainty only",
+    "admission":"Per-terminal full256 BOTH-correct>=0.8 on all6normal original/swapped groups (>=205/256each). Joint4 and query-switch not substitutes for admission",
+    "secondary":"Both-correct, per-rank accuracy, full256 NLL/legal mass, present-value and same-prediction rates, query-only and retrieval-zero contrasts, normal/reset exact parity, initial controls; nominal95descriptive",
+    "interpretation":"If atomic passes only training keys, no reusable unseen-key baseline claim. If both fail, do not infer parameter insufficiency or run unplanned extra training. No retention/sleep/Hebbian efficacy or deployed cache persistence claim"
+  },
+  "execution": {
+    "allocation":"One45minute1A6000/4CPU/16GiB allocation, no helper selection change or renewal, exclude ins081",
+    "preflight":"Two20-step encoding runs on parent68101,N16, seed91403 training/91413evaluation; only runtime/resources/finite/reload/source/data validity consulted",
+    "projection":"1.25*(4*(2000/20)*max(calibration_training_seconds)+8*(256/16)*max(calibration_evaluation_seconds))<=1800seconds",
+    "hard_pipeline_seconds":2100,"pending_wait_seconds":600,"workers":1,
+    "CPU_recheck":"Selected exact saved GPU batches from every main initial/final case/group/condition. Original absolute maxlogit0.002/maxprobability0.0002 and argmax equality, weight/RNG purity. Preserve failures, no threshold relaxation"
+  },
+  "team_scope":"Member C shared training/evaluation. Existing qualified typed component remains available for A/B. No replay in this binding diagnostic; existing digit-only SequenceReplay parser does not accept atomic records. No claim of completed A/B adapter integration."
+}

@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "analysis_files": 42,
+  "inventory_sha256": "2b0c259cdbacd2d52d4d34ce5a70ac8dbd76224027166d81a58595281cd8a219",
+  "all_numeric_image_and_table_hashes_unchanged": true,
+  "metadata_only_refresh": {
+    "reason": "Reviewer added visual_QA metadata after coordinator viewed figures; all9actualimageexports andsourceCSVhashesremainunchanged",
+    "previous_metadata_sha256": "5eb9da5490eef3a312f43db590f5393df3df1486933bc1266603a374def79eee",
+    "final_metadata_sha256": "5a0bed6b70b97819bc3d828e20c701836af120589245abeb7bd2004809a27a42"
+  }
+}

@@ -1,0 +1,265 @@
+{
+  "status": "passed",
+  "kind": "tensor_only_checkpoint_optimizer_audit",
+  "models_constructed": false,
+  "model_inference": false,
+  "source_commit": "5e8c61829ff85ecea3c9314d4ccd8dfef3268b68",
+  "initial_checkpoints": 4,
+  "terminal_checkpoints": 4,
+  "recovery_midpoints": 4,
+  "optimizer_states": 8,
+  "records": [
+    {
+      "run": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-key-binding-2026-11-15\\gpu-main\\result\\initial\\68101-atomic",
+      "mode": "initial",
+      "parent": 68101,
+      "encoding": "atomic",
+      "parameters": 839248,
+      "state_sha256": "75b37a9c453ecb0ac5cf488a73efe7ec7f37290eee5d89579833f8ce089dec9c",
+      "checkpoint_sha256": "d05cae9ff6af119b4e8476f8586b46981302ee21bf3f93a5b006309369b41481",
+      "finite": true,
+      "optimizers": []
+    },
+    {
+      "run": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-key-binding-2026-11-15\\gpu-main\\result\\initial\\68101-digits",
+      "mode": "initial",
+      "parent": 68101,
+      "encoding": "digits",
+      "parameters": 839248,
+      "state_sha256": "75b37a9c453ecb0ac5cf488a73efe7ec7f37290eee5d89579833f8ce089dec9c",
+      "checkpoint_sha256": "200873ef56f19fd1b7b8692dfd6237efe188c3ff6133172af73582fa90158457",
+      "finite": true,
+      "optimizers": []
+    },
+    {
+      "run": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-key-binding-2026-11-15\\gpu-main\\result\\initial\\68105-atomic",
+      "mode": "initial",
+      "parent": 68105,
+      "encoding": "atomic",
+      "parameters": 839248,
+      "state_sha256": "3801f168b07538e32c33ef47d36bb34fdf7cac023c24c195d178a4baf3ffcdb3",
+      "checkpoint_sha256": "36625adea686d4bf34c65f1a9805a63bc37804ddd1ac7b4013f90bef99ce4136",
+      "finite": true,
+      "optimizers": []
+    },
+    {
+      "run": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-key-binding-2026-11-15\\gpu-main\\result\\initial\\68105-digits",
+      "mode": "initial",
+      "parent": 68105,
+      "encoding": "digits",
+      "parameters": 839248,
+      "state_sha256": "3801f168b07538e32c33ef47d36bb34fdf7cac023c24c195d178a4baf3ffcdb3",
+      "checkpoint_sha256": "60e3115f3202fedb8298323eabbde4b1364e3b1bf87efc903a03c6fb500a0b89",
+      "finite": true,
+      "optimizers": []
+    },
+    {
+      "run": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-key-binding-2026-11-15\\gpu-main\\result\\runs\\68101-atomic",
+      "mode": "train",
+      "parent": 68101,
+      "encoding": "atomic",
+      "parameters": 839248,
+      "state_sha256": "860df199199298c463915ec8725a20c836dbb6a20780cec30ff60de3eef717ce",
+      "checkpoint_sha256": "fff1b5b3d54caabdc56006da210d500fc07581b018344d47c9df967016b4df1c",
+      "finite": true,
+      "optimizers": [
+        {
+          "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-key-binding-2026-11-15\\gpu-main\\result\\runs\\68101-atomic\\optimizer.pt",
+          "sha256": "faef312f72b501e8f95162d11216d38134ad5305ee3bd1eb9c2570a3b27be9d7",
+          "steps_exact": 2000,
+          "states": 72,
+          "registered_optimizer_ids": 80,
+          "inactive_names": [
+            "layers.0.4.memory_model.norm.gamma",
+            "layers.0.4.memory_model.model.weights.0",
+            "layers.0.4.memory_model.model.weights.1",
+            "layers.0.5.rotary_emb.freqs",
+            "layers.1.4.memory_model.norm.gamma",
+            "layers.1.4.memory_model.model.weights.0",
+            "layers.1.4.memory_model.model.weights.1",
+            "layers.1.5.rotary_emb.freqs"
+          ],
+          "tensor_elements": 830960,
+          "finite": true
+        },
+        {
+          "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-key-binding-2026-11-15\\gpu-main\\result\\runs\\68101-atomic\\midpoint-optimizer.pt",
+          "sha256": "bdf4419ab18d39c5aa563e5d27c79e002cf98fd7e705d475123503e0faea4e58",
+          "steps_exact": 1000,
+          "states": 72,
+          "registered_optimizer_ids": 80,
+          "inactive_names": [
+            "layers.0.4.memory_model.norm.gamma",
+            "layers.0.4.memory_model.model.weights.0",
+            "layers.0.4.memory_model.model.weights.1",
+            "layers.0.5.rotary_emb.freqs",
+            "layers.1.4.memory_model.norm.gamma",
+            "layers.1.4.memory_model.model.weights.0",
+            "layers.1.4.memory_model.model.weights.1",
+            "layers.1.5.rotary_emb.freqs"
+          ],
+          "tensor_elements": 830960,
+          "finite": true
+        }
+      ],
+      "midpoint_sha256": "e3679de8d648784049385fb762f7ac6919cb65e5e647b3697d6ba8c613d59063",
+      "midpoint_state_sha256": "26a53e2817b1d6f9456335ad2a7a1771cef8d35cd197ca9eeb2261a357bd5ce6"
+    },
+    {
+      "run": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-key-binding-2026-11-15\\gpu-main\\result\\runs\\68101-digits",
+      "mode": "train",
+      "parent": 68101,
+      "encoding": "digits",
+      "parameters": 839248,
+      "state_sha256": "e154113669ef16f649c7e1915fcf99710b34a354550ea6e563a44536f248c996",
+      "checkpoint_sha256": "1ca9c69443290770863024f862e917a61b5f86427f85c758e173bcb6ad88ab33",
+      "finite": true,
+      "optimizers": [
+        {
+          "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-key-binding-2026-11-15\\gpu-main\\result\\runs\\68101-digits\\optimizer.pt",
+          "sha256": "e0861c9d41b6ca792e99f259d08a8839eed0c574578eb70cdc5da8aa8f33a9ae",
+          "steps_exact": 2000,
+          "states": 72,
+          "registered_optimizer_ids": 80,
+          "inactive_names": [
+            "layers.0.4.memory_model.norm.gamma",
+            "layers.0.4.memory_model.model.weights.0",
+            "layers.0.4.memory_model.model.weights.1",
+            "layers.0.5.rotary_emb.freqs",
+            "layers.1.4.memory_model.norm.gamma",
+            "layers.1.4.memory_model.model.weights.0",
+            "layers.1.4.memory_model.model.weights.1",
+            "layers.1.5.rotary_emb.freqs"
+          ],
+          "tensor_elements": 830960,
+          "finite": true
+        },
+        {
+          "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-key-binding-2026-11-15\\gpu-main\\result\\runs\\68101-digits\\midpoint-optimizer.pt",
+          "sha256": "5f26ee84027755e5fccd9ffd7ba8d50a55aa9bbc7182e0a924b7adb1bf7ff468",
+          "steps_exact": 1000,
+          "states": 72,
+          "registered_optimizer_ids": 80,
+          "inactive_names": [
+            "layers.0.4.memory_model.norm.gamma",
+            "layers.0.4.memory_model.model.weights.0",
+            "layers.0.4.memory_model.model.weights.1",
+            "layers.0.5.rotary_emb.freqs",
+            "layers.1.4.memory_model.norm.gamma",
+            "layers.1.4.memory_model.model.weights.0",
+            "layers.1.4.memory_model.model.weights.1",
+            "layers.1.5.rotary_emb.freqs"
+          ],
+          "tensor_elements": 830960,
+          "finite": true
+        }
+      ],
+      "midpoint_sha256": "8dea5ac5bfe7b60950e89203901516d3a1d4be2461e68805238139d216e8f269",
+      "midpoint_state_sha256": "8c1481b729a42a921b0d84b658789341372dafda4166d08db78631332d8e7c11"
+    },
+    {
+      "run": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-key-binding-2026-11-15\\gpu-main\\result\\runs\\68105-atomic",
+      "mode": "train",
+      "parent": 68105,
+      "encoding": "atomic",
+      "parameters": 839248,
+      "state_sha256": "0eec0baedfae7e9ab4083f5b0367856056ce6112085696bbc29b4b4bf4cbed06",
+      "checkpoint_sha256": "0451e69c688ecdc5b0e22930eebb458bf8c8ba96150319b96abb014c71e2fa66",
+      "finite": true,
+      "optimizers": [
+        {
+          "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-key-binding-2026-11-15\\gpu-main\\result\\runs\\68105-atomic\\optimizer.pt",
+          "sha256": "a74a86ad4234044826fae60e6e1c241d78e9b578f07f7b43fb330f04c807ace7",
+          "steps_exact": 2000,
+          "states": 72,
+          "registered_optimizer_ids": 80,
+          "inactive_names": [
+            "layers.0.4.memory_model.norm.gamma",
+            "layers.0.4.memory_model.model.weights.0",
+            "layers.0.4.memory_model.model.weights.1",
+            "layers.0.5.rotary_emb.freqs",
+            "layers.1.4.memory_model.norm.gamma",
+            "layers.1.4.memory_model.model.weights.0",
+            "layers.1.4.memory_model.model.weights.1",
+            "layers.1.5.rotary_emb.freqs"
+          ],
+          "tensor_elements": 830960,
+          "finite": true
+        },
+        {
+          "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-key-binding-2026-11-15\\gpu-main\\result\\runs\\68105-atomic\\midpoint-optimizer.pt",
+          "sha256": "9f7fc7d56f33516c553226bde6b3cb23b65061c2e956165bdc02beee039b0b9f",
+          "steps_exact": 1000,
+          "states": 72,
+          "registered_optimizer_ids": 80,
+          "inactive_names": [
+            "layers.0.4.memory_model.norm.gamma",
+            "layers.0.4.memory_model.model.weights.0",
+            "layers.0.4.memory_model.model.weights.1",
+            "layers.0.5.rotary_emb.freqs",
+            "layers.1.4.memory_model.norm.gamma",
+            "layers.1.4.memory_model.model.weights.0",
+            "layers.1.4.memory_model.model.weights.1",
+            "layers.1.5.rotary_emb.freqs"
+          ],
+          "tensor_elements": 830960,
+          "finite": true
+        }
+      ],
+      "midpoint_sha256": "d583a8e75cf8c833c337d44cd6a92fadd0344c6238d6397401b0a59925e53610",
+      "midpoint_state_sha256": "64ae2b0d3b45eacbea3269e4f297880f1baa3050eae251e9322aa059a931f4e0"
+    },
+    {
+      "run": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-key-binding-2026-11-15\\gpu-main\\result\\runs\\68105-digits",
+      "mode": "train",
+      "parent": 68105,
+      "encoding": "digits",
+      "parameters": 839248,
+      "state_sha256": "92c039bd399164d6e3a1f4c78c717f26670448f5d64fa667fee41fa943195020",
+      "checkpoint_sha256": "65a49e3cd50f2d2e3b8118ea6e49ee23698dd7b0c7163a30094f78c56bcfb3e8",
+      "finite": true,
+      "optimizers": [
+        {
+          "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-key-binding-2026-11-15\\gpu-main\\result\\runs\\68105-digits\\optimizer.pt",
+          "sha256": "373564ed28e356d117478f83cecf34574a424cc1dfefd312bf7595794a175831",
+          "steps_exact": 2000,
+          "states": 72,
+          "registered_optimizer_ids": 80,
+          "inactive_names": [
+            "layers.0.4.memory_model.norm.gamma",
+            "layers.0.4.memory_model.model.weights.0",
+            "layers.0.4.memory_model.model.weights.1",
+            "layers.0.5.rotary_emb.freqs",
+            "layers.1.4.memory_model.norm.gamma",
+            "layers.1.4.memory_model.model.weights.0",
+            "layers.1.4.memory_model.model.weights.1",
+            "layers.1.5.rotary_emb.freqs"
+          ],
+          "tensor_elements": 830960,
+          "finite": true
+        },
+        {
+          "path": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-key-binding-2026-11-15\\gpu-main\\result\\runs\\68105-digits\\midpoint-optimizer.pt",
+          "sha256": "ec515b74462f040a1f61343a4d0b2abe01cd2de1e5d92d7455f0fdc11cf5aabb",
+          "steps_exact": 1000,
+          "states": 72,
+          "registered_optimizer_ids": 80,
+          "inactive_names": [
+            "layers.0.4.memory_model.norm.gamma",
+            "layers.0.4.memory_model.model.weights.0",
+            "layers.0.4.memory_model.model.weights.1",
+            "layers.0.5.rotary_emb.freqs",
+            "layers.1.4.memory_model.norm.gamma",
+            "layers.1.4.memory_model.model.weights.0",
+            "layers.1.4.memory_model.model.weights.1",
+            "layers.1.5.rotary_emb.freqs"
+          ],
+          "tensor_elements": 830960,
+          "finite": true
+        }
+      ],
+      "midpoint_sha256": "9d874f7b50f15cc1e89bf3be3ee195bac1661a5fe73839c3c0ac22b7ebb25ea8",
+      "midpoint_state_sha256": "26a817bdd60f4ceb6907ba96401ec15109d05c40d47d203a3f5fc9c301553897"
+    }
+  ]
+}

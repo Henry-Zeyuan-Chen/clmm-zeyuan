@@ -1,0 +1,9 @@
+{
+  "selection": "First saved GPU resource batch for every group/condition in every initial/terminal case",
+  "maximum_seconds": 240,
+  "max_logit_error": 0.002,
+  "max_probability_error": 0.0002,
+  "prediction_mismatches_allowed": 0,
+  "threads": 2,
+  "scope": "Selected exact-batch inference, not full training reproduction"
+}

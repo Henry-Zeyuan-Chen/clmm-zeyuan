@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "kind": "pure_cpu_rendering_and_artifact_inspection",
+  "constructed_models": false,
+  "template_span_checks": 8000,
+  "all_original_record_lengths": 32,
+  "all_original_query_lengths": 31,
+  "atomic_span_transform": "replace exactly one 3-byte ASCII key with aliasbyte+space+space; prefix/suffix and inverse preserved",
+  "key_subset_count": {
+    "train": 96,
+    "dev": 32
+  },
+  "key_subset_note": "first96/32 proposal only; does not freeze coordinator mapping RNG",
+  "prior_future_exclusion_union_count": 85123,
+  "prior_future_exclusion_sha256": "99db2ebb75ccf49faad2fc3cd3a4bff9bb8ff42cc5e842063a695feba8d02a7b",
+  "protected_user_doc_sha256": "d8d69a9c6872ae86859bf6952814d06cc8d7b43f841f5993d5be1ef30335f26c",
+  "source_sha256": {
+    "clmm/pretrain/fact_streams.py": "32637fe0388ffa132b061ce1d8dab4e9a7e64324606e9ade49d29024214ac7f3",
+    "clmm/pretrain/byte_lm.py": "b41de6f729bb4bc18f1d17ce6a449deb4c90eafea550271d32f01866f3b4feea",
+    "titans_pytorch/mac_transformer.py": "e879c0d830fc2a3daef31aaea3966f5af9bb214ab7f84f7ae816ab239cf0487e",
+    "titans_pytorch/neural_memory.py": "f32bba441df47d79379d2b1831ac012d4f268b35257e3e828119cea814519483"
+  },
+  "reset_control": "for lengths31,63,95 and wide128, one memory chunk: parity check only",
+  "no_structural_bug_identified_in": "source inspection of final-next-byte extraction, rendering, answer exclusion, segment attention, and config state transfer; no numerical/model test performed"
+}

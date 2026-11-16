@@ -1,0 +1,18 @@
+{
+  "run": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-key-binding-2026-11-15\\engineering-cpu\\run",
+  "mode": "train",
+  "parent": 68101,
+  "encoding": "atomic",
+  "vectors": 80,
+  "raw_score_errors": {
+    "nll": 2.752774648229206e-07,
+    "forced_nll": 3.0127602013152455e-07,
+    "legal_probability_mass": 2.507936438522762e-07
+  },
+  "raw_hash_verified": true,
+  "predictions_exact": true,
+  "normal_reset_exact": true,
+  "resources_partition_exact": true,
+  "steps": 8,
+  "scope": "engineering validity only; no efficacy admission/selection"
+}

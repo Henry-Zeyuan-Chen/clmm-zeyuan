@@ -1,0 +1,17 @@
+{
+  "status": "preflight_only",
+  "job_id": "13926582",
+  "started_epoch": 1794802477.5482802,
+  "pending_limit_seconds": 600,
+  "allocation_limit_seconds": 2700,
+  "no_renewal": true,
+  "upload_sha256": "170e9a828f41af40bcef25d7d192cb0fe378451be403079f8f89f047a492365d",
+  "upload_bytes": 71973409,
+  "verified_running": "zc2819 RUNNING ins093",
+  "running_epoch": 1794802499.9389663,
+  "phase": "retrieve",
+  "download_sha256": "b81be548efa5b9e4dcd339d51ff67b527e4ea008cd526b1fdbb4c2912d3674a9",
+  "pipeline_status": "preflight_only",
+  "cancel_requested": true,
+  "ended_epoch": 1794802650.5235744
+}

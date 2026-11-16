@@ -1,0 +1,11 @@
+# Independent review of execution-only amendment
+
+The replacement launch is clear to proceed. Original calibration implies a padded one-GPU main projection of3940.088182s, above the1800s gate. The saved original pipeline is preflight_only, with exactly two engineering cases, empty initial/cases lists, no main directories and no main-start timestamp. Later accounting confirms job13926582 CANCELLED after148 allocated seconds with one GPU; closure.json records that the live queue was empty at confirmation. No main training or main evaluation was executed in that attempt.
+
+The amendment explicitly changes execution to one replacement45-minute allocation with two A6000s,8CPUs,16GiB and two workers, one fixed parent perGPU. It retains the frozen scientific packets, source5e8c618, initialization tensors, full256 answer head, optimizer,2000steps perterminal case, all input/answer budgets, endpoints, terminal-only selection and CPU tolerances. Original packet/file/source hashes still verify. The immutable original design is preserved; the separate amendment is SHA-bound into launcher and pipeline metadata.
+
+Independent arithmetic gives1970.044091s by halving the old conservative projection, below the amended2300s gate. This is a feasibility estimate only. The replacement pipeline must run its own two parallel engineering cases and independently satisfy the declared formula before main starts. The hard pipeline cap is2400s, allocation45minutes, maximum total allocations two, with no further escalation.
+
+Review found two launcher path errors before execution: an unintended sibling output root and a status read from the first attempt. Both were corrected. The final inspected launcher uses the original OUT root, extracts and reads gpu-main/result, preserves original raw tar files via distinct parallel names, asserts the first attempt stopped before main, and verifies the main packet metadata SHA against the amendment. Both launcher sources parse successfully. The remote pipeline retains the fixed two-parent/two-GPU assignment and unchanged format order.
+
+Machine evidence and reviewed source hashes are in execution_amendment_review.json; rerun with audit_execution_amendment.py. No model was constructed or executed, and no SSH was used by the reviewer. No efficacy conclusion was drawn from engineering output.

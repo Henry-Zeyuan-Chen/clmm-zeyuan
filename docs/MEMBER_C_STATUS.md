@@ -1,5 +1,15 @@
 # Member C: shared training and evaluation
 
+## Latest: atomic-key control also fails binding
+
+November 15: [KEY_BINDING.md](KEY_BINDING.md) records the completed fixed-size diagnostic on source `5e8c618`, local branch `sequence-key-binding`. Four terminal models use two original language parents and digit/one-token key representations, all at attention segment 128 with 839,248 registered parameters unchanged. Inputs, labels and budgets are paired: 2,000 updates, 32,000 forks and 2,908,928 input bytes each. The common smaller key pool and acquisition-only curriculum differ from the preceding study in both arms; only the current encoding contrast is controlled.
+
+All 24 admission cells fail, with 0–2/256 both-correct; all four joint original-plus-swap endpoints are 0/256 on both primary groups. Atomic-minus-digits is 0 pp at an empirical floor; degenerate [0,0] bootstrap intervals are not equivalence evidence. Training reaches 100% in the single-fact stage but stays near 50% on two-fact batches. Fresh-context predictions always choose an observed value yet give the same answer for both keys in 253–256/256 worlds. One-token keys alone do not repair this recipe. The necessity of larger models and the specific architectural/optimization cause remain unproven.
+
+109 scoped tests, 81,920 main plus 2,640 engineering/smoke score vectors, checkpoint/optimizer/source/data audits, coordinator raw statistics and three figures are saved. Actual CPU inference checks all 2,560 selected answers and score tolerances (max logit 9.54e-6, probability 2.28e-6). The first single-GPU runtime gate stopped before main; a documented resource-only two-GPU replacement completed every condition. Both jobs are closed: 0.55111 allocated GPU hours total. No failure or terminal condition was dropped.
+
+C supplies a diagnostic checkpoint registry, codec and shared evaluator, with an explicit acquisition failure. Next separate selecting the matching record from decoding its value under controlled extra supervision, retaining the full-value task as comparator. Keep qualified typed-memory controls available for A/B. The proposal's intended biological/sleep modules, native-memory persistence, delayed recall and corruption tests remain open. Atomic records do not yet pass the digit-only replay parser. Future experiments should use the 100,526-history exclusion union; current histories are consulted development data.
+
 ## Latest: complete-sequence integration, failed acquisition
 
 November 15: the [sequence freshness pilot](SEQUENCE_FRESHNESS.md) is complete on executed source 95da595, branch `sequence-bounded-freshness`. The 839,248 registered parameters remain unchanged. Eight terminal models cross original 68101/68105 parents, independently trained 32/128 attention and literal/bounded periodic replay. Each receives 2,000 updates, 32,000 answer forks and 3,646,208 input bytes. Exact raw observation bytes pass through the complete transformer; this is a reference replay control, not A's final memory-only sleep or B's Hebbian replacement.

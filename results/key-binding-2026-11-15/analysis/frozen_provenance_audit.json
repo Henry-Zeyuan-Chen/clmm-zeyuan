@@ -1,0 +1,77 @@
+{
+  "status": "passed",
+  "kind": "git_blob_source_and_tensor_only_parent_inspection",
+  "source_commit": "5e8c61829ff85ecea3c9314d4ccd8dfef3268b68",
+  "models_constructed": false,
+  "model_inference": false,
+  "torch": "2.10.0+cpu",
+  "packets": [
+    {
+      "packet": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-key-binding-2026-11-15\\engineering-cpu\\packet",
+      "source_files_exact_git_blobs": 50,
+      "parents": [
+        {
+          "seed": 68101,
+          "tensor_elements": 839248,
+          "state_sha256": "75b37a9c453ecb0ac5cf488a73efe7ec7f37290eee5d89579833f8ce089dec9c",
+          "checkpoint_sha256": "a07762534f0b6311ec68c08b0d9f9c0ce74ec71577138eb13279a4a5dffbb24d",
+          "task_unadapted": true
+        },
+        {
+          "seed": 68105,
+          "tensor_elements": 839248,
+          "state_sha256": "3801f168b07538e32c33ef47d36bb34fdf7cac023c24c195d178a4baf3ffcdb3",
+          "checkpoint_sha256": "c3c4b5f49fa3116f348720b8215e2a97a8b166587d22c5c1c9ab1f72cccf8a55",
+          "task_unadapted": true
+        }
+      ],
+      "design_hash_bound": true
+    },
+    {
+      "packet": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-key-binding-2026-11-15\\engineering\\packet",
+      "source_files_exact_git_blobs": 50,
+      "parents": [
+        {
+          "seed": 68101,
+          "tensor_elements": 839248,
+          "state_sha256": "75b37a9c453ecb0ac5cf488a73efe7ec7f37290eee5d89579833f8ce089dec9c",
+          "checkpoint_sha256": "a07762534f0b6311ec68c08b0d9f9c0ce74ec71577138eb13279a4a5dffbb24d",
+          "task_unadapted": true
+        },
+        {
+          "seed": 68105,
+          "tensor_elements": 839248,
+          "state_sha256": "3801f168b07538e32c33ef47d36bb34fdf7cac023c24c195d178a4baf3ffcdb3",
+          "checkpoint_sha256": "c3c4b5f49fa3116f348720b8215e2a97a8b166587d22c5c1c9ab1f72cccf8a55",
+          "task_unadapted": true
+        }
+      ],
+      "design_hash_bound": true
+    },
+    {
+      "packet": "C:\\Users\\henry\\Documents\\Codex\\2026-10-22\\i\\outputs\\clmm-key-binding-2026-11-15\\packet",
+      "source_files_exact_git_blobs": 50,
+      "parents": [
+        {
+          "seed": 68101,
+          "tensor_elements": 839248,
+          "state_sha256": "75b37a9c453ecb0ac5cf488a73efe7ec7f37290eee5d89579833f8ce089dec9c",
+          "checkpoint_sha256": "a07762534f0b6311ec68c08b0d9f9c0ce74ec71577138eb13279a4a5dffbb24d",
+          "task_unadapted": true
+        },
+        {
+          "seed": 68105,
+          "tensor_elements": 839248,
+          "state_sha256": "3801f168b07538e32c33ef47d36bb34fdf7cac023c24c195d178a4baf3ffcdb3",
+          "checkpoint_sha256": "c3c4b5f49fa3116f348720b8215e2a97a8b166587d22c5c1c9ab1f72cccf8a55",
+          "task_unadapted": true
+        }
+      ],
+      "design_hash_bound": true
+    }
+  ],
+  "test_source_git_exact": true,
+  "reported_scoped_tests_passed": 109,
+  "tests_log_sha256": "3eb11b9a7bee2e842d9163154b2fbba525d0d69b998ecafad6068c4bded25437",
+  "protected_user_doc_sha256": "d8d69a9c6872ae86859bf6952814d06cc8d7b43f841f5993d5be1ef30335f26c"
+}

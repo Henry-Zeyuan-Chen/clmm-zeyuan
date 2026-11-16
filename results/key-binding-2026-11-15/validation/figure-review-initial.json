@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "reviewer": "coordinator",
+  "figures": 3,
+  "scope": "ActualPNGvisualinspection: readablelabels/legends, explicitfloor/zoom/paritycaveats, nooverlap/clipping",
+  "files_sha256": {
+    "analysis\\figures\\binding_acquisition_and_primary.pdf": "c1eb4f2b9fbbc112791085205086f76d1d2f13b764a6564cc76406030d6f1943",
+    "analysis\\figures\\binding_acquisition_and_primary.png": "fce52701053d4cc1e223f23f9542f719e2cc024f1389bc1aa5127b7b14cb18cb",
+    "analysis\\figures\\binding_acquisition_and_primary.svg": "4ea029bebdd182d979f6ca89b7436471df7b39050a2ed5b875e2fdf4264b1ea3",
+    "analysis\\figures\\binding_controls.pdf": "1d22abc635a2a30e953f95e5da61bd14c67a518925445fd02e798157a02135be",
+    "analysis\\figures\\binding_controls.png": "9cbdf7e31d96fa3354069f9c5f6f0b436aee063a91ec1fabd30114925272c461",
+    "analysis\\figures\\binding_controls.svg": "0b84af94009ce5c8f63c4e0998dab43efdae37d06377de2af496c88bc3070394",
+    "analysis\\figures\\binding_training_curves.pdf": "a34e4b092ce5aec05e69363238beea583a1242080dadca243e1b26ce09580838",
+    "analysis\\figures\\binding_training_curves.png": "8cc145787d9f61dc098e9cbee5c3b0628ae51204a1a8716e23a1fcc7abf512e3",
+    "analysis\\figures\\binding_training_curves.svg": "ec82b6f9cd5c8d6e400bb18200a8976bc23ca7f2788076c22082436d7f5dbfa3",
+    "analysis\\figures\\co_primary_source.csv": "31c30ede279c0618d4a7b8490ea27a12cb2373fee154679d6c5d8a37a1d64bd1",
+    "analysis\\figures\\figure_manifest.json": "5eb9da5490eef3a312f43db590f5393df3df1486933bc1266603a374def79eee",
+    "analysis\\figures\\metric_source.csv": "04f3db26b26f6a1689f64edf16ecc00754c6b3435c8d90efa258f9280bdf067c",
+    "analysis\\figures\\training_curve_source.csv": "ef9b0bffa4d060dd281cdf0d07834f495c521c86ea367b0cca615885ea3a6a58"
+  }
+}
