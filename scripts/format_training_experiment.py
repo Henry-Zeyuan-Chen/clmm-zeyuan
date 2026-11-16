@@ -9,7 +9,7 @@ import numpy as np
 import torch
 import torch.nn.functional as F
 from clmm.pretrain import load_checkpoint,save_checkpoint
-from clmm.pretrain.format_training import fresh_training,training_arrays,evaluation_samples,templates,validate_confirmation_lock
+from clmm.pretrain.format_training import fresh_training,training_arrays,evaluation_samples,templates,validate_confirmation_lock,learning_rate
 from clmm.pretrain.format_factorial import fresh_worlds
 from clmm.pretrain.record_selection import make_codec,collect_variant_signatures
 from scripts.selection_experiment import score_logits
@@ -66,38 +66,44 @@ def get_initializer(packet,parent,encoding):return next(c for c in read(packet/'
 
 def train(a):
     packet=verify(a.packet);a.out.mkdir(parents=True,exist_ok=False);start=time.perf_counter();deadline=start+a.max_seconds
+    assert a.arm in read(a.packet/'protocol.json')['arms'],'Arm does not belong to frozen study'
     init=get_initializer(a.packet,a.parent,a.encoding);model,cfg,payload=load_checkpoint(a.packet/init['checkpoint'],map_location=a.device)
     assert state_sha(model)==init['state_sha256'] and cfg.segment_len==128 and sum(p.numel() for p in model.parameters())==839248
     steps=64 if a.dataset=='engineering' else 6000
-    with np.load(a.packet/f'{a.dataset}_training.npz') as f:xplan=f[f'{a.arm}_{a.encoding}'];yplan=f['targets']
+    schedule=a.arm if a.arm in ('constant','warmup') else 'constant'
+    input_arm='mixed' if a.arm in ('constant','warmup') else a.arm
+    with np.load(a.packet/f'{a.dataset}_training.npz') as f:xplan=f[f'{input_arm}_{a.encoding}'];yplan=f['targets']
     assert xplan.shape==(steps,16,95) and yplan.shape==(steps,16)
     opt=torch.optim.AdamW(model.parameters(),lr=.0003,weight_decay=.01);assert not opt.state
     meta=dict(status='running',started_utc=utc(),source_commit=packet['source_commit'],packet_metadata_sha256=sha(a.packet/'metadata.json'),initializer=init,arm=a.arm,
-        dataset=a.dataset,steps_planned=steps,completed_steps=0,registered_parameters=839248,optimizer_reset=True,command=[sys.executable,*sys.argv],
+        dataset=a.dataset,steps_planned=steps,completed_steps=0,registered_parameters=839248,optimizer_reset=True,lr_schedule=schedule,warmup_steps=500 if schedule=='warmup' else 0,input_arm=input_arm,command=[sys.executable,*sys.argv],
         environment=dict(python=sys.version,torch=str(torch.__version__),numpy=np.__version__,device=a.device,device_name=torch.cuda.get_device_name(a.device),threads=a.threads,dtype='float32',TF32=False,deterministic=True))
-    write(a.out/'metadata.json',meta);durations=[];nonzero=0
+    write(a.out/'metadata.json',meta);durations=[];nonzero=0;lr_sum=0.
     with (a.out/'training.csv').open('w',newline='',encoding='utf8') as f:
         writer=None
         try:
             for step in range(steps):
                 if time.perf_counter()>deadline:raise TimeoutError('Training deadline')
-                tick=time.perf_counter();x=torch.tensor(xplan[step].astype(np.int64),device=a.device);y=torch.tensor(yplan[step].astype(np.int64),device=a.device)
+                tick=time.perf_counter();lr=learning_rate(step+1,schedule)
+                for group in opt.param_groups:group['lr']=lr
+                x=torch.tensor(xplan[step].astype(np.int64),device=a.device);y=torch.tensor(yplan[step].astype(np.int64),device=a.device)
                 model.train();opt.zero_grad(set_to_none=True);logits=model(x)[:,-1];loss=F.cross_entropy(logits,y)
+                if step==0:np.save(a.out/'first_logits.npy',logits.detach().cpu().numpy())
                 assert torch.isfinite(loss);loss.backward()
                 grads=[p.grad.detach().float().square().sum() for n,p in model.named_parameters() if n.startswith('layers.') and '.4.' in n and p.grad is not None]
                 memory_norm=torch.stack(grads).sum().sqrt() if grads else loss.new_tensor(0.);assert torch.isfinite(memory_norm)
                 norm=torch.nn.utils.clip_grad_norm_(model.parameters(),1.,error_if_nonfinite=True);opt.step();torch.cuda.synchronize(a.device)
-                seconds=time.perf_counter()-tick;durations.append(seconds);nonzero+=float(memory_norm)>0
+                seconds=time.perf_counter()-tick;durations.append(seconds);nonzero+=float(memory_norm)>0;lr_sum+=lr
                 correct=logits.detach().argmax(-1)==y
                 row=dict(step=step+1,loss=float(loss.detach()),accuracy=float(correct.float().mean()),both_correct=float(correct.reshape(8,2).all(1).float().mean()),
-                    gradient_norm=float(norm),memory_gradient_norm=float(memory_norm),answers=16,input_bytes=1520,step_seconds=seconds)
+                    gradient_norm=float(norm),memory_gradient_norm=float(memory_norm),answers=16,input_bytes=1520,step_seconds=seconds,learning_rate=lr)
                 if writer is None:writer=csv.DictWriter(f,fieldnames=list(row));writer.writeheader()
                 writer.writerow(row)
                 if step==0 or (step+1)%100==0:f.flush();print(json.dumps(row),flush=True)
                 if (step+1)%100==0:meta.update(completed_steps=step+1);write(a.out/'metadata.json',meta)
             assert nonzero>0
             digest=save_checkpoint(a.out/'model.pt',model,cfg,source_info=dict(source_commit=packet['source_commit'],source_sha256=packet['source_sha256']),
-                training_info=dict(task='value',phase='format_training',arm=a.arm,steps=steps,parent_init_seed=a.parent,encoding=a.encoding,inherited_selector_updates=20000,init_checkpoint_sha256=init['checkpoint_sha256'],init_state_sha256=init['state_sha256'],optimizer_reset=True))
+                training_info=dict(task='value',phase='format_training',arm=a.arm,lr_schedule=schedule,warmup_steps=500 if schedule=='warmup' else 0,steps=steps,parent_init_seed=a.parent,encoding=a.encoding,inherited_selector_updates=20000,init_checkpoint_sha256=init['checkpoint_sha256'],init_state_sha256=init['state_sha256'],optimizer_reset=True))
             torch.save(opt.state_dict(),a.out/'optimizer.pt')
             # Familiar engineering observation only; reserved wording is never used here.
             row=next(r for r in read(a.packet/'engineering_samples.json.gz') if r['encoding']==a.encoding)
@@ -111,7 +117,7 @@ def train(a):
             meta.update(status='failed',traceback=traceback.format_exc());raise
         finally:
             meta.update(completed_steps=len(durations),ended_utc=utc(),elapsed_seconds=time.perf_counter()-start,training_seconds=sum(durations),warm_step_seconds=float(np.mean(durations[8:] or durations)),
-                supervised_answers=len(durations)*16,training_input_bytes=len(durations)*1520,memory_nonzero_gradient_steps=nonzero,peak_cuda_allocated_bytes=torch.cuda.max_memory_allocated(a.device))
+                nominal_learning_rate_sum=lr_sum,first_logits_sha256=sha(a.out/'first_logits.npy') if (a.out/'first_logits.npy').exists() else None,supervised_answers=len(durations)*16,training_input_bytes=len(durations)*1520,memory_nonzero_gradient_steps=nonzero,peak_cuda_allocated_bytes=torch.cuda.max_memory_allocated(a.device))
             write(a.out/'metadata.json',meta)
 
 
@@ -119,7 +125,7 @@ def train(a):
 def evaluate(a):
     packet=verify(a.packet);start=time.perf_counter();deadline=start+a.max_seconds;checkpoint_digest=sha(a.checkpoint)
     if a.dataset=='confirmation':
-        lock=read(a.decision_lock);validate_confirmation_lock(lock,sha(a.packet/'metadata.json'),checkpoint_digest)
+        lock=read(a.decision_lock);validate_confirmation_lock(lock,sha(a.packet/'metadata.json'),checkpoint_digest,arms=read(a.packet/'protocol.json')['arms'])
         assert lock['created_utc']<=utc()
     model,cfg,payload=load_checkpoint(a.checkpoint,map_location=a.device);assert cfg.segment_len==128 and sum(p.numel() for p in model.parameters())==839248
     model.eval();before=state_sha(model);rng=torch.random.get_rng_state().clone();cuda_rng=torch.cuda.get_rng_state(a.device).clone()
@@ -147,8 +153,10 @@ def evaluate(a):
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('mode',choices=['prepare','train','evaluate']);p.add_argument('--out',type=Path,required=True)
     for n in ['packet','protocol','prior-packet','exclusions','checkpoint','decision-lock']:p.add_argument('--'+n,type=Path)
-    p.add_argument('--parent',type=int,default=68101);p.add_argument('--encoding',choices=['digits','atomic'],default='digits');p.add_argument('--arm',choices=['familiar','mixed'],default='familiar')
+    p.add_argument('--parent',type=int,default=68101);p.add_argument('--encoding',choices=['digits','atomic'],default='digits');p.add_argument('--arm',choices=['familiar','mixed','constant','warmup'],default='familiar')
     p.add_argument('--dataset',choices=['engineering','main','confirmation'],default='main');p.add_argument('--case');p.add_argument('--device',default='cuda:0');p.add_argument('--threads',type=int,default=2);p.add_argument('--max-seconds',type=int,default=13000)
-    a=p.parse_args();torch.set_num_threads(a.threads);torch.set_num_interop_threads(1);torch.manual_seed(92007);torch.use_deterministic_algorithms(True)
+    a=p.parse_args();torch.set_num_threads(a.threads);torch.set_num_interop_threads(1)
+    model_seed=read(a.packet/'protocol.json').get('seeds',{}).get('model_rng',92007) if a.packet else 92007
+    torch.manual_seed(model_seed);torch.use_deterministic_algorithms(True)
     torch.backends.cuda.matmul.allow_tf32=False;torch.backends.cudnn.allow_tf32=False
     {'prepare':prepare,'train':train,'evaluate':evaluate}[a.mode](a)
