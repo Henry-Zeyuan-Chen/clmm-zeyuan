@@ -39,3 +39,29 @@ def test_router_topk():
     selected = torch.zeros_like(nonzero).scatter(-1, top_indices, True)  # (b, n, M)
 
     assert (nonzero == selected).all()
+
+# read
+
+def test_read_shape():
+    mem = make_memory(num_read_tokens = 3)
+    state = mem.init_state(2)
+
+    summary = torch.zeros(2, 8, dtype = torch.float64)                   # (b, dim)
+
+    assert mem.read(summary, state).shape == (2, 3, 8)
+
+def test_read_ignores_state_when_alpha_zero():
+    mem = make_memory()
+
+    with torch.no_grad():
+        mem.alpha.zero_()
+
+    with torch.random.fork_rng():
+        torch.manual_seed(0)
+        summary = torch.randn(2, 8, dtype = torch.float64)               # (b, dim)
+        traces = torch.randn(2, 4, 4, 4, dtype = torch.float64)          # (b, M, e, e)
+
+    zero_state = mem.init_state(2)
+    random_state = zero_state._replace(traces = traces)
+
+    assert diff(mem.read(summary, zero_state), mem.read(summary, random_state)) == 0.
