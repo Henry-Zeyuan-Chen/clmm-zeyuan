@@ -19,7 +19,8 @@
 !/data/enwik8.gz
 
 !/docs/
-!/docs/*.md
+!/docs/ambiguity-register.md
+!/docs/ROADMAP.md
 
 !/results/
 !/results/**/
