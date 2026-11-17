@@ -65,3 +65,35 @@ def test_read_ignores_state_when_alpha_zero():
     random_state = zero_state._replace(traces = traces)
 
     assert diff(mem.read(summary, zero_state), mem.read(summary, random_state)) == 0.
+
+# recall
+
+def test_recall_shape():
+    mem = make_memory()
+    state = mem.init_state(2)
+
+    x = torch.zeros(2, 5, 8, dtype = torch.float64)                      # (b, n, dim)
+
+    assert mem.recall(x, state).shape == (2, 5, 8)
+
+def test_recall_zero_traces_is_base_only():
+    # with zero traces the plastic term vanishes, so recall equals the base-weights-only path
+
+    mem = make_memory()
+
+    with torch.random.fork_rng():
+        torch.manual_seed(0)
+        x = torch.randn(2, 5, 8, dtype = torch.float64)                  # (b, n, dim)
+        traces = torch.randn(2, 4, 4, 4, dtype = torch.float64)          # (b, M, e, e)
+
+    zero_state = mem.init_state(2)
+    random_state = zero_state._replace(traces = traces)
+
+    with_zero_traces = mem.recall(x, zero_state)
+
+    assert diff(with_zero_traces, mem.recall(x, random_state)) > 1e-6    # traces do reach the output
+
+    with torch.no_grad():
+        mem.alpha.zero_()
+
+    assert diff(with_zero_traces, mem.recall(x, random_state)) == 0.
