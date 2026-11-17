@@ -128,6 +128,14 @@ class HebbianMemory(Module):
         """
         queries = self.read_queries + self.summary_to_query(summary).unsqueeze(1)   # (b, r, dim)
 
+        return self._associate(queries, state)
+
+    def _associate(self, queries, state):
+        """Route queries, pass their keys through the plastic layer, decode.
+
+        queries: (b, r, dim)
+        returns: (b, r, dim)
+        """
         gates, _ = self.router(queries)                                             # (b, r, M)
 
         keys = self._encode(queries, self.enc_k_w1, self.enc_k_w2)                  # (b, r, M, e)
