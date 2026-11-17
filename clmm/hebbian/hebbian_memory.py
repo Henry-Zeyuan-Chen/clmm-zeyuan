@@ -148,6 +148,14 @@ class HebbianMemory(Module):
 
         return torch.einsum('b r m, b r m d -> b r d', gates, decoded)
 
+    def recall(self, x, state):
+        """Per-token content-addressed read: each token queries the store with itself.
+
+        x: (b, n, dim)
+        returns: (b, n, dim)
+        """
+        return self._associate(x, state)
+
     def write(self, x, state, mask = None):
         """Fold a segment of observations into the traces of the routed modules.
 
