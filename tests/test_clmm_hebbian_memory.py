@@ -1,4 +1,5 @@
 import torch
+import torch.nn.functional as F
 
 from clmm.hebbian.hebbian_memory import HebbianMemory
 from clmm.hebbian.router import ContentRouter
@@ -97,3 +98,41 @@ def test_recall_zero_traces_is_base_only():
         mem.alpha.zero_()
 
     assert diff(with_zero_traces, mem.recall(x, random_state)) == 0.
+
+# write
+
+def encode_by_hand(x, w1, w2):
+    """x: (dim,), one module's (dim, h) and (h, e) weights -> unit-norm code (e,)"""
+    return F.normalize(F.gelu(x @ w1) @ w2, dim = -1)
+
+def test_write_formula():
+    # one (key, value) pair, so each selected module's target is exactly value_m key_m^T
+
+    mem = make_memory()
+
+    with torch.random.fork_rng():
+        torch.manual_seed(0)
+        a = torch.randn(8, dtype = torch.float64)                        # (dim,) key token
+        b = torch.randn(8, dtype = torch.float64)                        # (dim,) value token
+        traces = torch.randn(1, 4, 4, 4, dtype = torch.float64)          # (b, M, e, e)
+
+    state = mem.init_state(1)._replace(traces = traces)
+    next_state = mem.write(a.view(1, 1, 8), b.view(1, 1, 8), state)
+
+    gates, _ = mem.router(a)                                             # (M,)
+    eta = mem.eta_logit.sigmoid()                                        # (M,)
+
+    assert (gates > 0.).sum() == 2 and (gates < 1.).all()
+
+    for m in range(4):
+        key = encode_by_hand(a, mem.enc_k_w1[m], mem.enc_k_w2[m])        # (e,)
+        value = encode_by_hand(b, mem.enc_v_w1[m], mem.enc_v_w2[m])      # (e,)
+
+        target = torch.outer(value, key) if gates[m] > 0. else torch.zeros(4, 4, dtype = torch.float64)
+        rate = eta[m] * gates[m]                                         # activity = gate, one pair
+
+        expected = traces[0, m] + rate * (target - traces[0, m])         # (e, e)
+
+        assert diff(next_state.traces[0, m], expected) < 1e-12
+
+    assert next_state.seq_index == 1
