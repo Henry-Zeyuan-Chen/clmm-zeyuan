@@ -1,7 +1,9 @@
+import pytest
+
 import torch
 import torch.nn.functional as F
 
-from clmm.hebbian.config import Config
+from clmm.hebbian.config import Config, CHOICES, PRESETS
 from clmm.hebbian.hebbian_memory import HebbianMemory, HebbianMemState, hebbian_state_detach
 from clmm.hebbian.router import ContentRouter
 
@@ -326,6 +328,35 @@ def test_gradcheck_write_then_recall():
     assert torch.autograd.gradcheck(write_then_read, (keys_x, values_x, query_x, summary, *params))
 
 # config
+
+def test_config_validation():
+    for preset in PRESETS.values():
+        preset()
+
+    # every allowed value constructs
+
+    for name, choices in CHOICES.items():
+        for choice in choices:
+            assert getattr(Config(**{name: choice}), name) == choice
+
+    Config(depth = 2, memory_after_block = 0)
+    Config(depth = 2, memory_after_block = 2)
+    Config(num_modules = 8, topk = 8)
+
+    bad = [
+        dict(persist_mode = 'plastic'),
+        dict(longterm_mode = 'hebbian'),
+        dict(hebbian_read = 'none'),
+        dict(memory_source = 'embedding'),
+        dict(depth = 2, memory_after_block = 3),
+        dict(memory_after_block = -1),
+        dict(num_modules = 8, topk = 9),
+        dict(topk = 0),
+    ]
+
+    for kwargs in bad:
+        with pytest.raises(ValueError):
+            Config(**kwargs)
 
 def test_hebbian_kwargs_construct():
     config = Config(alpha_init = 0.3)
