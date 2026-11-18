@@ -156,23 +156,26 @@ class HebbianMemory(Module):
         """
         return self._associate(x, state)
 
-    def write(self, x, state, mask = None):
-        """Fold a segment of observations into the traces of the routed modules.
+    def write(self, keys_x, values_x, state, mask = None):
+        """Fold a segment of (key, value) pairs into the traces of the routed modules.
 
-        x: (b, n, dim) token embeddings; mask: (b, n) bool, False = ignore (padding)
+        keys_x, values_x: (b, n, dim), pair i binds keys_x[:, i] -> values_x[:, i];
+        modules are routed by the key. mask: (b, n) bool over pairs, False = ignore (padding)
         """
-        b, n, _ = x.shape
+        assert keys_x.shape == values_x.shape
 
-        gates, _ = self.router(x)                                                   # (b, n, M)
+        b, n, _ = keys_x.shape
+
+        gates, _ = self.router(keys_x)                                              # (b, n, M)
 
         if mask is not None:
             gates = gates * mask.to(gates.dtype).unsqueeze(-1)
             num_valid = mask.to(gates.dtype).sum(dim = -1).clamp(min = 1.)          # (b,)
         else:
-            num_valid = torch.full((b,), float(n), device = x.device, dtype = gates.dtype)
+            num_valid = torch.full((b,), float(n), device = keys_x.device, dtype = gates.dtype)
 
-        keys = self._encode(x, self.enc_k_w1, self.enc_k_w2)                        # (b, n, M, e)
-        values = self._encode(x, self.enc_v_w1, self.enc_v_w2)
+        keys = self._encode(keys_x, self.enc_k_w1, self.enc_k_w2)                   # (b, n, M, e)
+        values = self._encode(values_x, self.enc_v_w1, self.enc_v_w2)               # (b, n, M, e)
 
         outer_sum = torch.einsum('b n m, b n m f, b n m e -> b m f e', gates, values, keys)
         gate_sum = gates.sum(dim = 1)                                               # (b, M)
@@ -193,5 +196,5 @@ class HebbianMemory(Module):
     def forward(self, x, summary, state, mask = None):
         """Read with the incoming traces, then write the current segment."""
         read_tokens = self.read(summary, state)
-        next_state = self.write(x, state, mask = mask)
+        next_state = self.write(x, x, state, mask = mask)
         return read_tokens, next_state
