@@ -45,6 +45,11 @@ HebbianMemState = namedtuple('HebbianMemState', [
 ])
 
 
+def hebbian_state_detach(state):
+    """cut the graph at a session / truncation boundary, keeping trace values and seq_index"""
+    return state._replace(traces = state.traces.detach())
+
+
 def l2norm(t):
     return F.normalize(t, dim = -1)
 
