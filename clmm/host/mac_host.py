@@ -98,3 +98,47 @@ class SegmentAttention(Module):
         out = rearrange(out, 'b h n d -> b n (h d)')
 
         return self.to_out(out)                                             # (b, n, dim)
+
+
+class FeedForward(Module):
+    """Pre-norm two-layer MLP"""
+
+    def __init__(
+        self,
+        dim,
+        mult = 4
+    ):
+        super().__init__()
+
+        self.net = nn.Sequential(
+            nn.RMSNorm(dim),
+            nn.Linear(dim, dim * mult),
+            nn.GELU(),
+            nn.Linear(dim * mult, dim),
+        )
+
+    def forward(self, x):
+        """x: (b, n, dim) -> (b, n, dim)"""
+        return self.net(x)
+
+
+class Block(Module):
+    """Attention residual, then feed-forward residual"""
+
+    def __init__(
+        self,
+        dim,
+        heads,
+        ff_mult = 4
+    ):
+        super().__init__()
+
+        self.attn = SegmentAttention(dim, heads)
+        self.ff = FeedForward(dim, ff_mult)
+
+    def forward(self, x, ctx, mask):
+        """x: (b, n, dim), ctx: (b, c, dim) or None (the same tensor at every block), mask: (b, 1, n, c + n)"""
+        x = x + self.attn(x, ctx, mask)
+        x = x + self.ff(x)
+
+        return x                                                            # (b, n, dim)

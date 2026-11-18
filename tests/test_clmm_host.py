@@ -6,6 +6,8 @@ from clmm.host.mac_host import (
     pad_to_multiple,
     segment_attention_mask,
     SegmentAttention,
+    FeedForward,
+    Block,
 )
 
 # helpers
@@ -138,3 +140,47 @@ def test_segment_attention_context_has_no_position():
     mask = segment_attention_mask(torch.ones(2, 6, dtype = torch.bool), num_ctx = 3)
 
     assert diff(attn(x, ctx, mask), attn(x, ctx.flip(dims = (1,)), mask)) < 1e-12
+
+# feed-forward and block
+
+def test_feedforward_shape():
+    ff = seeded(lambda: FeedForward(dim = 8, mult = 4)).double()
+    x, _ = make_attention_inputs()
+
+    assert ff.net[1].out_features == 32
+    assert ff(x).shape == (2, 6, 8)
+
+def test_block_shape():
+    block = seeded(lambda: Block(dim = 8, heads = 2, ff_mult = 4)).double()
+    x, ctx = make_attention_inputs()
+
+    valid = torch.ones(2, 6, dtype = torch.bool)                         # (b, n)
+
+    assert block(x, ctx, segment_attention_mask(valid, num_ctx = 3)).shape == (2, 6, 8)
+    assert block(x, None, segment_attention_mask(valid, num_ctx = 0)).shape == (2, 6, 8)
+
+def test_block_is_two_residuals():
+    block = seeded(lambda: Block(dim = 8, heads = 2)).double()
+    x, ctx = make_attention_inputs()
+
+    mask = segment_attention_mask(torch.ones(2, 6, dtype = torch.bool), num_ctx = 3)
+
+    after_attn = x + block.attn(x, ctx, mask)                            # (b, n, dim)
+    expected = after_attn + block.ff(after_attn)                         # (b, n, dim)
+
+    assert diff(block(x, ctx, mask), expected) == 0.
+
+@pytest.mark.parametrize('j', [0, 3, 5])
+def test_block_causal(j):
+    block = seeded(lambda: Block(dim = 8, heads = 2)).double()
+    x, ctx = make_attention_inputs()
+
+    mask = segment_attention_mask(torch.ones(2, 6, dtype = torch.bool), num_ctx = 3)
+
+    perturbed = x.clone()
+    perturbed[:, j] += 1.
+
+    out, out_perturbed = block(x, ctx, mask), block(perturbed, ctx, mask)   # (b, n, dim) each
+
+    assert out[:, :j].numel() == 0 or diff(out[:, :j], out_perturbed[:, :j]) == 0.
+    assert (out[:, j:] != out_perturbed[:, j:]).flatten(2).any(dim = -1).all()
