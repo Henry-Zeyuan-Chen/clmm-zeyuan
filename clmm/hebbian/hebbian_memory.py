@@ -193,8 +193,8 @@ class HebbianMemory(Module):
 
         return HebbianMemState(state.seq_index + n, traces)
 
-    def forward(self, x, summary, state, mask = None):
-        """Read with the incoming traces, then write the current segment."""
+    def forward(self, keys_x, values_x, summary, state, mask = None):
+        """Read with the incoming traces, then write the current segment's pairs."""
         read_tokens = self.read(summary, state)
-        next_state = self.write(x, x, state, mask = mask)
+        next_state = self.write(keys_x, values_x, state, mask = mask)
         return read_tokens, next_state
