@@ -2,7 +2,22 @@ import pytest
 
 import torch
 
-from clmm.hebbian.mac_host import pad_to_multiple, segment_attention_mask
+from clmm.hebbian.mac_host import (
+    pad_to_multiple,
+    segment_attention_mask,
+    SegmentAttention,
+)
+
+# helpers
+
+def diff(x, y):
+    return (x - y).abs().amax()
+
+def seeded(fn, seed = 0):
+    """run fn under a fixed seed, global rng left untouched"""
+    with torch.random.fork_rng():
+        torch.manual_seed(seed)
+        return fn()
 
 # padding
 
@@ -57,3 +72,69 @@ def test_segment_attention_mask_no_context():
 
     assert mask.shape == (3, 1, 5, 5)
     assert torch.equal(mask, torch.ones(5, 5, dtype = torch.bool).tril().expand(3, 1, 5, 5))
+
+# attention
+
+def make_attention_inputs(b = 2, n = 6, c = 3, dim = 8):
+    x = seeded(lambda: torch.randn(b, n, dim, dtype = torch.float64))       # (b, n, dim)
+    ctx = seeded(lambda: torch.randn(b, c, dim, dtype = torch.float64), 1)  # (b, c, dim)
+    return x, ctx
+
+def test_segment_attention_shape():
+    attn = seeded(lambda: SegmentAttention(dim = 8, heads = 2)).double()
+    x, ctx = make_attention_inputs()
+
+    valid = torch.ones(2, 6, dtype = torch.bool)                         # (b, n)
+
+    assert attn(x, ctx, segment_attention_mask(valid, num_ctx = 3)).shape == (2, 6, 8)
+    assert attn(x, None, segment_attention_mask(valid, num_ctx = 0)).shape == (2, 6, 8)
+
+@pytest.mark.parametrize('j', [0, 3, 5])
+def test_segment_attention_causal(j):
+    attn = seeded(lambda: SegmentAttention(dim = 8, heads = 2)).double()
+    x, ctx = make_attention_inputs()
+
+    mask = segment_attention_mask(torch.ones(2, 6, dtype = torch.bool), num_ctx = 3)
+
+    perturbed = x.clone()
+    perturbed[:, j] += 1.
+
+    out, out_perturbed = attn(x, ctx, mask), attn(perturbed, ctx, mask)  # (b, n, dim) each
+
+    assert out[:, :j].numel() == 0 or diff(out[:, :j], out_perturbed[:, :j]) == 0.
+
+    changed = (out[:, j:] != out_perturbed[:, j:]).flatten(2).any(dim = -1)   # (b, n - j)
+
+    assert changed.all()
+
+def test_segment_attention_reads_context():
+    attn = seeded(lambda: SegmentAttention(dim = 8, heads = 2)).double()
+    x, ctx = make_attention_inputs()
+
+    mask = segment_attention_mask(torch.ones(2, 6, dtype = torch.bool), num_ctx = 3)
+
+    changed = (attn(x, ctx, mask) != attn(x, ctx + 1., mask)).flatten(2).any(dim = -1)   # (b, n)
+
+    assert changed.all()
+
+def test_segment_attention_all_pad_row_is_finite():
+    attn = seeded(lambda: SegmentAttention(dim = 8, heads = 2)).double()
+    x, ctx = make_attention_inputs()
+
+    valid = torch.ones(2, 6, dtype = torch.bool)                         # (b, n)
+    valid[0] = False
+
+    for context, num_ctx in ((ctx, 3), (None, 0)):
+        out = attn(x, context, segment_attention_mask(valid, num_ctx = num_ctx))
+
+        assert out.isfinite().all()
+
+def test_segment_attention_context_has_no_position():
+    # context keys are not rotated, so reordering the context tokens changes nothing
+
+    attn = seeded(lambda: SegmentAttention(dim = 8, heads = 2)).double()
+    x, ctx = make_attention_inputs()
+
+    mask = segment_attention_mask(torch.ones(2, 6, dtype = torch.bool), num_ctx = 3)
+
+    assert diff(attn(x, ctx, mask), attn(x, ctx.flip(dims = (1,)), mask)) < 1e-12
