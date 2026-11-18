@@ -2,6 +2,26 @@
 
 ## Resume here
 
+**Team sync at `fbb267e`.** Team main includes the Hebbian memory, routing,
+config, segment padding and causal attention mask. The MAC forward pass and
+memory switching are the next integration pieces. In the current design,
+Hebbian traces adapt the persistent context slots. The vendored neural
+long-term memory still uses its gradient-based update.
+
+The component carry/resume test saves the cursor and traces after a masked
+write. A resumed second segment matches the uninterrupted read and next
+traces exactly. Erasing just the traces at the same cursor changes the second
+read. This demonstrates component state transfer. The next host test should
+keep the query, position and attention conditions fixed while swapping the
+carry policy, then measure delayed answer accuracy once acquisition works.
+
+Use ordinary fixed persistent slots as the vanilla comparator and add a
+trace-disabled control within the Hebbian architecture. Keep the neural
+long-term memory path fixed in both comparisons and count learned parameters
+and carried bytes for each system. The byte-model bridge needs an explicit
+valid mask or a reserved pad ID because byte zero is a valid vocabulary item.
+See [the sync note](MEMBER_C_HEBBIAN_SYNC.md) for the verified contract.
+
 **Priority update: TA feedback, November 16.**
 Read [TA_FEEDBACK_2026-11-16.md](TA_FEEDBACK_2026-11-16.md). The supplied email
 endorses investigating memory update rules but asks for explicit state carry
