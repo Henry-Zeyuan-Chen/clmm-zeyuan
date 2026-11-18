@@ -1,7 +1,13 @@
 """Compact segment-wise transformer host for the persistent-memory comparison."""
 
 import torch
+from torch import nn
 import torch.nn.functional as F
+from torch.nn import Module
+
+from einops import rearrange
+
+from rotary_embedding_torch import RotaryEmbedding
 
 
 def pad_to_multiple(ids, multiple, pad_id):
@@ -38,3 +44,57 @@ def segment_attention_mask(valid, num_ctx):
     mask = torch.cat((context, segment), dim = -1)                          # (b, n, num_ctx + n)
 
     return mask[:, None]                                                    # (b, 1, n, num_ctx + n)
+
+
+class SegmentAttention(Module):
+    """Causal self-attention over one segment, with context tokens prepended to the keys and values.
+
+    Pre-norm. Rotary positions go on the queries and the segment keys only, so context tokens carry
+    no position and nothing outside attention ever sees one.
+    """
+
+    def __init__(
+        self,
+        dim,
+        heads
+    ):
+        super().__init__()
+        assert dim % heads == 0
+
+        dim_head = dim // heads
+        assert dim_head % 2 == 0, 'rotary embedding needs an even head dimension'
+
+        self.heads = heads
+
+        self.norm = nn.RMSNorm(dim)
+
+        self.to_q = nn.Linear(dim, dim, bias = False)
+        self.to_kv = nn.Linear(dim, dim * 2, bias = False)
+        self.to_out = nn.Linear(dim, dim, bias = False)
+
+        self.rotary = RotaryEmbedding(dim_head)
+
+    def split_heads(self, t):
+        return rearrange(t, 'b n (h d) -> b h n d', h = self.heads)
+
+    def forward(self, x, ctx, mask):
+        """x: (b, n, dim), ctx: (b, c, dim) or None, mask: (b, 1, n, c + n) bool, True = may attend"""
+        n = x.shape[1]
+
+        if ctx is not None:
+            x = torch.cat((ctx, x), dim = 1)                                # (b, c + n, dim)
+
+        x = self.norm(x)
+
+        q = self.split_heads(self.to_q(x[:, -n:]))                          # (b, h, n, d)
+        k, v = map(self.split_heads, self.to_kv(x).chunk(2, dim = -1))      # (b, h, c + n, d) each
+
+        q = self.rotary.rotate_queries_or_keys(q)
+
+        k_ctx, k_seg = k[..., :-n, :], k[..., -n:, :]                       # (b, h, c, d), (b, h, n, d)
+        k = torch.cat((k_ctx, self.rotary.rotate_queries_or_keys(k_seg)), dim = -2)
+
+        out = F.scaled_dot_product_attention(q, k, v, attn_mask = mask)     # (b, h, n, d)
+        out = rearrange(out, 'b h n d -> b n (h d)')
+
+        return self.to_out(out)                                             # (b, n, dim)
