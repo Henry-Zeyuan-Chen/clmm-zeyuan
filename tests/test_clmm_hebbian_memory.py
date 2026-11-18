@@ -1,7 +1,7 @@
 import torch
 import torch.nn.functional as F
 
-from clmm.hebbian.hebbian_memory import HebbianMemory
+from clmm.hebbian.hebbian_memory import HebbianMemory, HebbianMemState, hebbian_state_detach
 from clmm.hebbian.router import ContentRouter
 
 # helpers
@@ -269,3 +269,22 @@ def test_forward_reads_before_writes():
 
     assert torch.equal(next_state.traces, written.traces)
     assert next_state.seq_index == written.seq_index == 6
+
+# state
+
+def test_state_detach():
+    mem = make_memory()
+
+    with torch.random.fork_rng():
+        torch.manual_seed(0)
+        x = torch.randn(2, 6, 8, dtype = torch.float64)                  # (b, n, dim)
+
+    state = mem.write(x, x, mem.init_state(2))
+    detached = hebbian_state_detach(state)
+
+    assert state.traces.grad_fn is not None                              # written traces carry a graph
+    assert detached.traces.grad_fn is None and not detached.traces.requires_grad
+
+    assert isinstance(detached, HebbianMemState)
+    assert torch.equal(detached.traces, state.traces)
+    assert detached.seq_index == state.seq_index == 6
