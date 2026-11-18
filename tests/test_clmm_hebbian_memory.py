@@ -386,3 +386,36 @@ def test_neural_kwargs_defaults_and_override():
     )
 
     assert config.neural_memory_kwargs == dict(chunk_size = 4, momentum = False)
+
+def test_config_dict_round_trip():
+    import json
+
+    config = Config(
+        dim = 128,
+        persist_mode = 'frozen',
+        memory_source = 'next_token',
+        alpha_init = 0.3,
+        neural_memory_kwargs = dict(momentum = False),
+    )
+
+    d = config.to_dict()
+
+    assert Config.from_dict(d) == config
+    assert Config.from_dict(json.loads(json.dumps(d))) == config         # survives a result / checkpoint file
+
+    # the dict is a copy, editing it leaves the config alone
+
+    d['dim'] = 1
+    d['neural_memory_kwargs']['momentum'] = True
+
+    assert config.dim == 128 and config.neural_memory_kwargs == dict(momentum = False)
+
+    # missing keys take their defaults, unknown keys raise
+
+    assert Config.from_dict(dict(dim = 128)) == Config(dim = 128)
+
+    try:
+        Config.from_dict(dict(not_a_field = 1))
+        raise AssertionError('unknown key was accepted')
+    except TypeError:
+        pass

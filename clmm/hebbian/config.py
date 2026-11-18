@@ -4,7 +4,7 @@
 `small` targets a single workstation GPU.
 """
 
-from dataclasses import dataclass, field
+from dataclasses import asdict, dataclass, field
 
 # allowed values of the string-valued fields
 
@@ -76,6 +76,15 @@ class Config:
             eta_init = self.eta_init,
             alpha_init = self.alpha_init,
         )
+
+    def to_dict(self):
+        """plain, JSON-serializable dict for checkpoints and result files"""
+        return asdict(self)
+
+    @classmethod
+    def from_dict(cls, d):
+        """inverse of `to_dict`; missing keys take their defaults, unknown keys raise"""
+        return cls(**d)
 
 
 def tiny() -> Config:
