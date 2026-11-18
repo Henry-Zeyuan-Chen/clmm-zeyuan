@@ -6,6 +6,15 @@
 
 from dataclasses import dataclass, field
 
+# allowed values of the string-valued fields
+
+CHOICES = dict(
+    persist_mode = ('hebbian', 'static', 'frozen', 'none'),
+    longterm_mode = ('neural', 'none'),
+    hebbian_read = ('token', 'context', 'both'),
+    memory_source = ('contextual', 'next_token'),
+)
+
 
 @dataclass
 class Config:
@@ -15,7 +24,7 @@ class Config:
     heads: int = 4
     segment_len: int = 16
     ff_mult: int = 4
-    persist_mode: str = 'hebbian'    # 'hebbian' | 'frozen' | 'none'
+    persist_mode: str = 'hebbian'    # 'hebbian' | 'static' (hebbian module, writes off) | 'frozen' | 'none'
     longterm_mode: str = 'neural'    # 'neural' | 'none'
     num_persist_tokens: int = 4      # context tokens for the frozen arm
     memory_source: str = 'contextual'    # 'contextual' (hidden states after the lower blocks) | 'next_token' (embeddings, key t -> value t+1)
@@ -33,6 +42,19 @@ class Config:
 
     # adaptive long-term memory (lucidrains NeuralMemory, used unchanged)
     neural_memory_kwargs: dict = field(default_factory=dict)
+
+    def __post_init__(self):
+        for name, choices in CHOICES.items():
+            value = getattr(self, name)
+
+            if value not in choices:
+                raise ValueError(f'{name} must be one of {choices}, got {value!r}')
+
+        if not 0 <= self.memory_after_block <= self.depth:
+            raise ValueError(f'memory_after_block must be in [0, depth = {self.depth}], got {self.memory_after_block}')
+
+        if not 0 < self.topk <= self.num_modules:
+            raise ValueError(f'topk must be in [1, num_modules = {self.num_modules}], got {self.topk}')
 
     def neural_kwargs(self):
         """NeuralMemory kwargs: one chunk and one weight update per segment; `neural_memory_kwargs` overrides"""
