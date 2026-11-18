@@ -70,7 +70,8 @@ class HebbianMemory(Module):
         topk = 2,
         num_read_tokens = 4,
         dim_hidden = 64,
-        eta_init = 0.1
+        eta_init = 0.1,
+        alpha_init = 0.1
     ):
         super().__init__()
         M, e, h = num_modules, dim_assoc, dim_hidden
@@ -96,7 +97,7 @@ class HebbianMemory(Module):
         # plastic associative layer: base weights, plastic coefficients, write rate
 
         self.base = Parameter(torch.randn(M, e, e) * e ** -0.5)
-        self.alpha = Parameter(torch.full((M, e, e), 0.1))
+        self.alpha = Parameter(torch.full((M, e, e), alpha_init))
 
         eta_logit = torch.logit(torch.tensor(eta_init))
         self.eta_logit = Parameter(torch.full((M,), eta_logit.item()))

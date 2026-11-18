@@ -1,6 +1,7 @@
 import torch
 import torch.nn.functional as F
 
+from clmm.hebbian.config import Config
 from clmm.hebbian.hebbian_memory import HebbianMemory, HebbianMemState, hebbian_state_detach
 from clmm.hebbian.router import ContentRouter
 
@@ -288,3 +289,69 @@ def test_state_detach():
     assert isinstance(detached, HebbianMemState)
     assert torch.equal(detached.traces, state.traces)
     assert detached.seq_index == state.seq_index == 6
+
+# gradients
+
+def test_gradcheck_write_then_recall():
+    # topk = num_modules, so no module can enter or leave the top-k under perturbation
+
+    mem = make_memory(topk = 4, alpha_init = 0.5)
+
+    assert (mem.alpha == 0.5).all()
+
+    with torch.no_grad():
+        mem.summary_to_query.weight.normal_()                            # zero-init, make the summary matter
+
+    with torch.random.fork_rng():
+        torch.manual_seed(0)
+        keys_x = torch.randn(1, 3, 8, dtype = torch.float64, requires_grad = True)     # (b, n, dim)
+        values_x = torch.randn(1, 3, 8, dtype = torch.float64, requires_grad = True)   # (b, n, dim)
+        query_x = torch.randn(1, 2, 8, dtype = torch.float64, requires_grad = True)    # (b, q, dim)
+        summary = torch.randn(1, 8, dtype = torch.float64, requires_grad = True)       # (b, dim)
+        traces = torch.randn(1, 4, 4, 4, dtype = torch.float64)                        # (b, M, e, e)
+
+    state = HebbianMemState(0, traces)
+
+    # gradcheck perturbs its inputs in place, so the module's own parameters can be passed as inputs
+
+    params = tuple(mem.parameters())
+
+    def write_then_read(keys_x, values_x, query_x, summary, *_):
+        next_state = mem.write(keys_x, values_x, state)
+
+        # recall covers the write and associative path, read adds the read-query parameters
+
+        return mem.recall(query_x, next_state), mem.read(summary, next_state)
+
+    assert torch.autograd.gradcheck(write_then_read, (keys_x, values_x, query_x, summary, *params))
+
+# config
+
+def test_hebbian_kwargs_construct():
+    config = Config(alpha_init = 0.3)
+    mem = HebbianMemory(config.dim, **config.hebbian_kwargs())
+
+    assert mem.alpha.shape == (config.num_modules, config.dim_assoc, config.dim_assoc)
+    assert (mem.alpha == 0.3).all()
+
+def test_neural_kwargs_defaults_and_override():
+    assert Config().neural_kwargs() == dict(
+        chunk_size = 16,
+        batch_size = 16,
+        store_with_lookahead_value = False,
+    )
+
+    assert Config(memory_source = 'next_token').neural_kwargs()['store_with_lookahead_value']
+
+    # entries in neural_memory_kwargs win over the defaults and extra ones pass through
+
+    config = Config(segment_len = 32, neural_memory_kwargs = dict(chunk_size = 4, momentum = False))
+
+    assert config.neural_kwargs() == dict(
+        chunk_size = 4,
+        batch_size = 32,
+        store_with_lookahead_value = False,
+        momentum = False,
+    )
+
+    assert config.neural_memory_kwargs == dict(chunk_size = 4, momentum = False)
