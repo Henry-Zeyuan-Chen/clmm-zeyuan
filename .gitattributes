@@ -1,0 +1,2 @@
+# Preserve git format-patch output, including diff context and mail trailers.
+*.patch -text whitespace=-blank-at-eol,-blank-at-eof
