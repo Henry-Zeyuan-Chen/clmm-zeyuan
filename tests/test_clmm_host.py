@@ -2,12 +2,17 @@ import pytest
 
 import torch
 
+from titans_pytorch import NeuralMemory
+
+from clmm.hebbian.hebbian_memory import HebbianMemory
 from clmm.host.mac_host import (
     pad_to_multiple,
     segment_attention_mask,
     SegmentAttention,
     FeedForward,
     Block,
+    HostState,
+    host_state_detach,
 )
 
 # helpers
@@ -184,3 +189,90 @@ def test_block_causal(j):
 
     assert out[:, :j].numel() == 0 or diff(out[:, :j], out_perturbed[:, :j]) == 0.
     assert (out[:, j:] != out_perturbed[:, j:]).flatten(2).any(dim = -1).all()
+
+# state
+
+def has_graph(t):
+    return t.requires_grad or t.grad_fn is not None
+
+def test_host_state_detach():
+    hebbian = seeded(lambda: HebbianMemory(dim = 8, num_modules = 4, dim_assoc = 4, dim_hidden = 8))
+    neural = seeded(lambda: NeuralMemory(dim = 8, chunk_size = 4, batch_size = 4))
+
+    x = seeded(lambda: torch.randn(2, 8, 8)).requires_grad_()            # (b, n, dim)
+
+    _, neural_state = neural(x)
+    hebbian_state = hebbian.write(x, x, hebbian.init_state(2))
+
+    state = HostState(
+        hebbian = hebbian_state,
+        neural = neural_state,
+        summary_sum = x.sum(dim = 1),                                    # (b, dim)
+        summary_count = torch.full((2, 1), 8.),                          # (b, 1)
+    )
+
+    assert has_graph(state.hebbian.traces) and has_graph(state.summary_sum)
+    assert all(has_graph(t) for t in state.neural.weights.values())
+    assert state.neural.updates is not None
+
+    detached = host_state_detach(state)
+
+    assert isinstance(detached, HostState)
+
+    # hebbian and summary: same values, no graph
+
+    assert not has_graph(detached.hebbian.traces)
+    assert torch.equal(detached.hebbian.traces, state.hebbian.traces)
+    assert detached.hebbian.seq_index == state.hebbian.seq_index
+
+    assert not has_graph(detached.summary_sum) and not has_graph(detached.summary_count)
+    assert torch.equal(detached.summary_sum, state.summary_sum)
+    assert torch.equal(detached.summary_count, state.summary_count)
+
+    # neural: updates dropped, weights and momentum states keep their values, no graph
+
+    assert detached.neural.updates is None
+    assert detached.neural.seq_index == state.neural.seq_index
+
+    last_update, last_momentum = state.neural.states
+    detached_update, detached_momentum = detached.neural.states
+
+    for kept, original in ((detached.neural.weights, state.neural.weights), (detached_update, last_update), (detached_momentum, last_momentum)):
+        assert set(kept.keys()) == set(original.keys())
+
+        for name in original.keys():
+            assert not has_graph(kept[name])
+            assert torch.equal(kept[name], original[name])
+
+    # the original state is left as it was
+
+    assert has_graph(state.hebbian.traces) and state.neural.updates is not None
+
+def test_host_state_detach_does_not_change_the_next_segment():
+    # dropping `updates` is safe: the next forward gives the same retrieval and the same weights
+
+    neural = seeded(lambda: NeuralMemory(dim = 8, chunk_size = 4, batch_size = 4))
+
+    x = seeded(lambda: torch.randn(2, 8, 8))                             # (b, n, dim)
+    x_next = seeded(lambda: torch.randn(2, 8, 8), 1)                     # (b, n, dim)
+
+    _, neural_state = neural(x)
+
+    state = HostState(None, neural_state, torch.zeros(2, 8), torch.zeros(2, 1))
+    detached = host_state_detach(state)
+
+    retrieved, next_state = neural(x_next, state = state.neural)
+    retrieved_detached, next_state_detached = neural(x_next, state = detached.neural)
+
+    assert diff(retrieved, retrieved_detached) == 0.
+
+    for name in next_state.weights.keys():
+        assert torch.equal(next_state.weights[name], next_state_detached.weights[name])
+
+def test_host_state_detach_with_memories_off():
+    state = HostState(None, None, torch.zeros(2, 8, requires_grad = True) * 2., torch.zeros(2, 1))
+
+    detached = host_state_detach(state)
+
+    assert detached.hebbian is None and detached.neural is None
+    assert not has_graph(detached.summary_sum)

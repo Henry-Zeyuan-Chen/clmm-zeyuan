@@ -1,5 +1,7 @@
 """Compact segment-wise transformer host for the persistent-memory comparison."""
 
+from collections import namedtuple
+
 import torch
 from torch import nn
 import torch.nn.functional as F
@@ -8,6 +10,36 @@ from torch.nn import Module
 from einops import rearrange
 
 from rotary_embedding_torch import RotaryEmbedding
+
+from titans_pytorch import mem_state_detach
+
+from clmm.hebbian.hebbian_memory import hebbian_state_detach
+
+# state carried across segments and sessions
+
+HostState = namedtuple('HostState', [
+    'hebbian',         # HebbianMemState, or None when the persistent slot has no traces
+    'neural',          # titans NeuralMemState, or None before the first segment / when switched off
+    'summary_sum',     # (batch, dim) running sum of what the memories have read
+    'summary_count',   # (batch, 1) number of valid tokens in that sum
+])
+
+
+def host_state_detach(state):
+    """Cut the graph at a session / truncation boundary, keeping every value.
+
+    The neural state's `updates` are dropped: NeuralMemory.forward discards the incoming ones,
+    and they hold one set of weights per chunk.
+    """
+    hebbian, neural, summary_sum, summary_count = state
+
+    if hebbian is not None:
+        hebbian = hebbian_state_detach(hebbian)
+
+    if neural is not None:
+        neural = mem_state_detach(neural._replace(updates = None))
+
+    return HostState(hebbian, neural, summary_sum.detach(), summary_count.detach())
 
 
 def pad_to_multiple(ids, multiple, pad_id):
