@@ -288,3 +288,38 @@ def test_state_detach():
     assert isinstance(detached, HebbianMemState)
     assert torch.equal(detached.traces, state.traces)
     assert detached.seq_index == state.seq_index == 6
+
+# gradients
+
+def test_gradcheck_write_then_recall():
+    # topk = num_modules, so no module can enter or leave the top-k under perturbation
+
+    mem = make_memory(topk = 4, alpha_init = 0.5)
+
+    assert (mem.alpha == 0.5).all()
+
+    with torch.no_grad():
+        mem.summary_to_query.weight.normal_()                            # zero-init, make the summary matter
+
+    with torch.random.fork_rng():
+        torch.manual_seed(0)
+        keys_x = torch.randn(1, 3, 8, dtype = torch.float64, requires_grad = True)     # (b, n, dim)
+        values_x = torch.randn(1, 3, 8, dtype = torch.float64, requires_grad = True)   # (b, n, dim)
+        query_x = torch.randn(1, 2, 8, dtype = torch.float64, requires_grad = True)    # (b, q, dim)
+        summary = torch.randn(1, 8, dtype = torch.float64, requires_grad = True)       # (b, dim)
+        traces = torch.randn(1, 4, 4, 4, dtype = torch.float64)                        # (b, M, e, e)
+
+    state = HebbianMemState(0, traces)
+
+    # gradcheck perturbs its inputs in place, so the module's own parameters can be passed as inputs
+
+    params = tuple(mem.parameters())
+
+    def write_then_read(keys_x, values_x, query_x, summary, *_):
+        next_state = mem.write(keys_x, values_x, state)
+
+        # recall covers the write and associative path, read adds the read-query parameters
+
+        return mem.recall(query_x, next_state), mem.read(summary, next_state)
+
+    assert torch.autograd.gradcheck(write_then_read, (keys_x, values_x, query_x, summary, *params))
