@@ -2,7 +2,7 @@ import pytest
 
 import torch
 
-from clmm.hebbian.mac_host import (
+from clmm.host.mac_host import (
     pad_to_multiple,
     segment_attention_mask,
     SegmentAttention,
