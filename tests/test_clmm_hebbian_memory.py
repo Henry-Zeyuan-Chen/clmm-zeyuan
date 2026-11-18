@@ -238,3 +238,34 @@ def test_binding():
         assert retrieved.norm() > 0.
         assert F.cosine_similarity(retrieved, value_b, dim = -1) > 0.99
         assert F.cosine_similarity(retrieved, value_a, dim = -1) < 0.99
+
+# forward
+
+def test_forward_reads_before_writes():
+    mem = make_memory()
+
+    with torch.no_grad():
+        mem.summary_to_query.weight.normal_()                            # zero-init, make the summary matter
+
+    with torch.random.fork_rng():
+        torch.manual_seed(0)
+        keys_x = torch.randn(2, 6, 8, dtype = torch.float64)             # (b, n, dim)
+        values_x = torch.randn(2, 6, 8, dtype = torch.float64)           # (b, n, dim)
+        summary = torch.randn(2, 8, dtype = torch.float64)               # (b, dim)
+        traces = torch.randn(2, 4, 4, 4, dtype = torch.float64)          # (b, M, e, e)
+
+    mask = torch.ones(2, 6, dtype = torch.bool)                          # (b, n)
+    mask[0, 4:] = False
+
+    state = mem.init_state(2)._replace(traces = traces)
+
+    read_tokens, next_state = mem(keys_x, values_x, summary, state, mask = mask)
+    written = mem.write(keys_x, values_x, state, mask = mask)
+
+    # read tokens come from the incoming state, not the one this segment produces
+
+    assert diff(read_tokens, mem.read(summary, state)) == 0.
+    assert diff(read_tokens, mem.read(summary, next_state)) > 1e-6
+
+    assert torch.equal(next_state.traces, written.traces)
+    assert next_state.seq_index == written.seq_index == 6
