@@ -136,3 +136,105 @@ def test_write_formula():
         assert diff(next_state.traces[0, m], expected) < 1e-12
 
     assert next_state.seq_index == 1
+
+def test_write_selectivity():
+    # 3 keys with topk = 1 touch at most 3 of 8 modules, the rest must be bitwise untouched
+
+    mem = make_memory(num_modules = 8, topk = 1)
+
+    with torch.random.fork_rng():
+        torch.manual_seed(0)
+        keys_x = torch.randn(2, 3, 8, dtype = torch.float64)             # (b, n, dim)
+        values_x = torch.randn(2, 3, 8, dtype = torch.float64)           # (b, n, dim)
+        traces = torch.randn(2, 8, 4, 4, dtype = torch.float64)          # (b, M, e, e)
+
+    state = mem.init_state(2)._replace(traces = traces)
+    next_state = mem.write(keys_x, values_x, state)
+
+    _, top_indices = mem.router(keys_x)                                  # (b, n, k)
+
+    selected = torch.zeros(2, 8, dtype = torch.bool)                     # (b, M)
+    selected.scatter_(-1, top_indices.flatten(1), True)
+
+    changed = (next_state.traces != traces).flatten(2).any(dim = -1)     # (b, M)
+
+    assert selected.any() and not selected.all()
+    assert (changed == selected).all()
+    assert torch.equal(next_state.traces[~selected], traces[~selected])
+
+def test_write_masked_is_noop():
+    mem = make_memory()
+
+    with torch.random.fork_rng():
+        torch.manual_seed(0)
+        keys_x = torch.randn(2, 6, 8, dtype = torch.float64)             # (b, n, dim)
+        values_x = torch.randn(2, 6, 8, dtype = torch.float64)           # (b, n, dim)
+        traces = torch.randn(2, 4, 4, 4, dtype = torch.float64)          # (b, M, e, e)
+
+    state = mem.init_state(2)._replace(traces = traces)
+
+    # every pair masked: traces bitwise unchanged
+
+    none_valid = torch.zeros(2, 6, dtype = torch.bool)                   # (b, n)
+    next_state = mem.write(keys_x, values_x, state, mask = none_valid)
+
+    assert torch.equal(next_state.traces, traces)
+
+    # last two pairs masked: same traces as writing the first four pairs alone
+
+    mask = torch.ones(2, 6, dtype = torch.bool)                          # (b, n)
+    mask[:, 4:] = False
+
+    masked = mem.write(keys_x, values_x, state, mask = mask)
+    truncated = mem.write(keys_x[:, :4], values_x[:, :4], state)
+
+    assert diff(masked.traces, truncated.traces) < 1e-12
+
+def test_trace_bounded():
+    # each target is a convex combination of unit-norm outer products and the update is a lerp
+
+    mem = make_memory(eta_init = 0.5)
+    state = mem.init_state(2)
+
+    with torch.random.fork_rng():
+        torch.manual_seed(0)
+
+        with torch.no_grad():
+            for _ in range(500):
+                keys_x = torch.randn(2, 6, 8, dtype = torch.float64)     # (b, n, dim)
+                values_x = torch.randn(2, 6, 8, dtype = torch.float64)   # (b, n, dim)
+                state = mem.write(keys_x, values_x, state)
+
+    norms = state.traces.flatten(2).norm(dim = -1)                       # (b, M)
+
+    assert state.traces.isfinite().all()
+    assert (norms <= 1. + 1e-9).all()
+    assert (norms > 0.).all()
+
+def test_binding():
+    # acceptance test for separate key / value inputs: after writing the pair (a, b),
+    # querying a selected module's trace with a's key returns b's value, not a's
+
+    mem = make_memory()
+
+    with torch.random.fork_rng():
+        torch.manual_seed(0)
+        a = torch.randn(8, dtype = torch.float64)                        # (dim,) key token
+        b = torch.randn(8, dtype = torch.float64)                        # (dim,) value token
+
+    state = mem.write(a.view(1, 1, 8), b.view(1, 1, 8), mem.init_state(1))
+
+    _, top_indices = mem.router(a)                                       # (k,)
+
+    assert top_indices.numel() == 2
+
+    for m in top_indices.tolist():
+        key_a = encode_by_hand(a, mem.enc_k_w1[m], mem.enc_k_w2[m])      # (e,)
+        value_a = encode_by_hand(a, mem.enc_v_w1[m], mem.enc_v_w2[m])    # (e,)
+        value_b = encode_by_hand(b, mem.enc_v_w1[m], mem.enc_v_w2[m])    # (e,)
+
+        retrieved = state.traces[0, m] @ key_a                           # (e,)
+
+        assert retrieved.norm() > 0.
+        assert F.cosine_similarity(retrieved, value_b, dim = -1) > 0.99
+        assert F.cosine_similarity(retrieved, value_a, dim = -1) < 0.99
