@@ -4,7 +4,7 @@
 
 The [November16 TA feedback plan](TA_FEEDBACK_2026-11-16.md) puts explicit
 cross-segment state persistence, benchmark-backed evaluation and a same-size
-vanilla Titans comparator ahead of another optimizer sweep. C owns the shared
+vanilla Titans comparator ahead of another optimizer sweep. Zeyuan owns the shared
 streaming state/evaluation harness and vanilla baseline; A/B retain ownership
 of their intended update rules. Recent95-byte/attention128 results are useful
 acquisition diagnostics, with no sequence-retention qualification implied.
@@ -37,7 +37,7 @@ updates then5500 all-weight updates versus6000 all-weight updates, fixed size,
 all four initializers, constant LR and matched examples. This is not yet run.
 Do not assume the mechanism is established or start retention claims from
 unqualified sequence weights. Qualified typed components remain available for
-A/B. Native32 and stateful retention remain separate C work; team primary
+A/B. Zeyuan will handle native32 and stateful retention separately. The team’s primary
 scope must precede any changed qualification policy. No report was drafted.
 
 ## Complete: eight matched familiar/mixed continuations
@@ -116,7 +116,7 @@ controls with facts visible inside128-byte attention, not retention baselines.
 distributions and two12,544-query CPU proofs pass. Both Slurmjobs are closed;
 recovery ZIP/hash, compact artifacts and final figures are in the handoff.
 
-Next C work: robust ordinary formats and a same-size separately trained native32
+Zeyuan’s next work covers robust ordinary formats and a same-size separately trained native32
 baseline, followed by stateful delay/revision/corruption after context/buffer
 exit. Keep the qualified typed-memory controls available for A/B's method
 work. Scope and inference-format choices are team decisions, not gates waived
@@ -131,7 +131,7 @@ All 24 admission cells fail, with 0–2/256 both-correct; all four joint origina
 
 109 scoped tests, 81,920 main plus 2,640 engineering/smoke score vectors, checkpoint/optimizer/source/data audits, coordinator raw statistics and three figures are saved. Actual CPU inference checks all 2,560 selected answers and score tolerances (max logit 9.54e-6, probability 2.28e-6). The first single-GPU runtime gate stopped before main; a documented resource-only two-GPU replacement completed every condition. Both jobs are closed: 0.55111 allocated GPU hours total. No failure or terminal condition was dropped.
 
-C supplies a diagnostic checkpoint registry, codec and shared evaluator, with an explicit acquisition failure. Next separate selecting the matching record from decoding its value under controlled extra supervision, retaining the full-value task as comparator. Keep qualified typed-memory controls available for A/B. The proposal's intended biological/sleep modules, native-memory persistence, delayed recall and corruption tests remain open. Atomic records do not yet pass the digit-only replay parser. Future experiments should use the 100,526-history exclusion union; current histories are consulted development data.
+Zeyuan supplies a diagnostic checkpoint registry, codec and shared evaluator, with an explicit acquisition failure. Next separate selecting the matching record from decoding its value under controlled extra supervision, retaining the full-value task as comparator. Keep qualified typed-memory controls available for A/B. The proposal's intended biological/sleep modules, native-memory persistence, delayed recall and corruption tests remain open. Atomic records do not yet pass the digit-only replay parser. Future experiments should use the 100,526-history exclusion union; current histories are consulted development data.
 
 ## Latest: complete-sequence integration, failed acquisition
 

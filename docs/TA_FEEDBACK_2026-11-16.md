@@ -143,12 +143,12 @@ leaderboard score. Hidden supporting-fact labels stay in evaluation metadata.
 
 ## Concrete priority order and team choices
 
-1. C: inspect/validate streaming state, implement carry/reset diagnostics, and
-   qualify a short learnable baseline using the vanilla update.
-2. C: pin a RULER-derived retrieval pilot and a short BABILong acquisition
-   subset; record all adaptation and metric changes before training.
-3. A/B+C: integrate the intended sleep/plastic modules behind that interface;
-   run matched vanilla comparisons once the acquisition task is learnable.
+1. Zeyuan will validate streaming state, implement carry and reset checks,
+   and qualify a short learnable baseline using the vanilla update.
+2. Zeyuan will pin a RULER-derived retrieval pilot and a short BABILong
+   acquisition subset and record protocol changes before training.
+3. The team will integrate the intended sleep and plastic modules and run
+   matched vanilla comparisons once the acquisition task is learnable.
 4. Extend delays, interference and genuine revisions; use the result to decide
    whether a broader benchmark or a larger pretrained model is justified.
 
