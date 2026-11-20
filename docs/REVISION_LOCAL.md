@@ -98,7 +98,7 @@ All24 cases finish in351.51s CPU under the600s limit. Raw audit checks156672scor
 
 Driver `work/clmm-revision-local/revision_stress.py` is preserved as `stress/driver_snapshot.py`, SHA `f7162bbf3d86be1da4dd663e52c2ca97d1434c1087e380ffc1876c35556a8ab3`, alongside the frozen c9 core. See `analysis/stress/README.md`, design, interpretation and figures. Main plus follow-up total795648audited vectors and4408320evaluation writes. The original trained joint primary remains **not met**.
 
-## Next Member C milestone and team choices
+## Zeyuan’s next milestone and team choices
 
 Use qualified local-delta weights and EMA comparators as shared component baselines for A/B, retaining both initializers and random controls. Next test intended adapters on multiple genuine revisions and admitted K16 pressure with identical checkpoints, routing, replay budgets and explicit forgetting clocks. Simple short revisions are at a ceiling; the reinforced-old-value fixture provides a useful harder diagnostic. Consulted90823/90923/91023 are development sets, not untouched final tests.
 

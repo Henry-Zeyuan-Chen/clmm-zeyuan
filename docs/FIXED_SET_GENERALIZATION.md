@@ -1,6 +1,6 @@
 # Fixed-set fitting and assignment transfer
 
-This experiment supports [Member C's shared training/evaluation role](MEMBER_C_STATUS.md). It follows the failed two-key acquisition tests and asks whether the complete model can fit a finite set of associations, then use the requested key under novel assignments. It is a prerequisite diagnostic for the sleep and selective Hebbian comparisons, not a new project contribution claim.
+This experiment supports [Zeyuan’s shared training/evaluation role](ZEYUAN_STATUS.md). It follows the failed two-key acquisition tests and asks whether the complete model can fit a finite set of associations, then use the requested key under novel assignments. It is a prerequisite diagnostic for the sleep and selective Hebbian comparisons, not a new project contribution claim.
 
 ## Fixed protocol
 
@@ -66,10 +66,10 @@ The 98-test scoped suite passes: 32 data tests, 6 runner tests and 60 existing f
 
 A same-environment GPU reload check exactly reproduces all saved logits for 192 selected final-checkpoint answers across the six models and ordinary/reset conditions. Figures are generated from audited tables and exported as PNG/PDF. Allocation 13912639 on an RTX A6000 at ins089 was released deliberately after work and retrieval; accounting records 37 minutes 22 seconds (about 0.62 GPU-hours). No allocation renewal or desktop-target change occurred.
 
-### Handoff and next Member C work
+### Handoff and next Zeyuan work
 
 `checkpoint_admission.json` records each model's measured scope and unresolved requirements. These checkpoints are fitting/transfer controls; none is admitted to a project retention comparison. The original language parents remain available. The full artifact root is `C:/Users/henry/Documents/Codex/2026-10-22/i/outputs/clmm-fixed-set-2026-11-14`; the adjacent verified ZIP contains source history, all checkpoints/optimizers, raw prefixes/logits, data and analysis.
 
-This diagnostic has answered its question, so another pressure sweep or indefinite fixed-bank training is not the next useful use of compute. Member C's next baseline work should target the key/value representation and reusable association-learning objective, with this fitting/novel-assignment suite retained as a regression check. A controlled shared key/value encoding is a useful next positive control for the two memory update mechanisms; it must be labeled separately from the byte-language model. A stronger sequence encoder or training recipe then needs its own bounded comparison before the same retention claims are made.
+This diagnostic has answered its question, so another pressure sweep or indefinite fixed-bank training is not the next useful use of compute. Zeyuan’s next baseline work should target the key/value representation and reusable association-learning objective, with this fitting/novel-assignment suite retained as a regression check. A controlled shared key/value encoding is a useful next positive control for the two memory update mechanisms; it must be labeled separately from the byte-language model. A stronger sequence encoder or training recipe then needs its own bounded comparison before the same retention claims are made.
 
-In parallel with that baseline choice, the common method interface still needs explicit persistent state, write/read/reset semantics, frozen outer weights and revision validation. Member A and Member B can continue their independent implementations against the existing controlled memory testbed and shared data contract, while the full-sequence acquisition gap is exposed rather than hidden. See [Member C status](MEMBER_C_STATUS.md) for how this supports the proposal's sleep-timing and selective-Hebbian aims.
+In parallel with that baseline choice, the common method interface still needs explicit persistent state, write/read/reset semantics, frozen outer weights and revision validation. Member A and Member B can continue their independent implementations against the existing controlled memory testbed and shared data contract, while the full-sequence acquisition gap is exposed rather than hidden. See [Zeyuan status](ZEYUAN_STATUS.md) for how this supports the proposal's sleep-timing and selective-Hebbian aims.

@@ -122,7 +122,7 @@ numerical transfers passed SHA/CRC checks. The raw ZIP predates Windows proof,
 final figures/docs; the final handoff supplement supplies them. Original local
 packet caches were trimmed only after verified remote copies.
 
-Next Member C work: ordinary-format robustness and a separately trained
+Zeyuan’s next work: ordinary-format robustness and a separately trained
 native32 acquisition baseline at the same model size, followed by explicit
 stateful delay/revision/corruption tests after facts leave attention/buffers.
 Current95<128 controls cannot establish retention. Team choices remain the
@@ -133,7 +133,7 @@ inside this frozen study.
 
 ## Original prospective plan (preserved)
 
-Member C's next diagnostic splits the two-record failure into record selection
+Zeyuan’s next diagnostic splits the two-record failure into record selection
 and given-index value decoding, keeping all 839,248 registered parameters and
 the full 256-byte output head. The run uses both original language parents,
 digit and atomic key encodings, and four matched-update objectives: natural

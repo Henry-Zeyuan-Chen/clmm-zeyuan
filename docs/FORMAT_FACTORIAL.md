@@ -75,7 +75,7 @@ fresh assignments, order/value swaps, erasure controls and initial controls.
 Use a bounded GPU runtime preflight when Insomnia is available. This training
 has not been run as part of the frozen-weight diagnostic.
 
-This remains Member C's acquisition qualification. Keep the already qualified
+This remains Zeyuan’s acquisition qualification. Keep the already qualified
 typed-memory reference available for A/B. Robust ordinary sequence reading
 must precede a separately trained native-32 baseline and stateful retention,
 revision and corruption after context/buffer exit. Neither attention-128
@@ -85,7 +85,7 @@ the main project claim, which A/B adapters are final, and the retention task.
 
 ## Frozen prospective design
 
-Member C's next diagnostic separates the two changes confounded in the
+Zeyuan’s next diagnostic separates the two changes confounded in the
 previous held-out condition. Each frozen checkpoint sees the same fresh
 histories in F0Q0(original fact/query families), F0Q1(query change only),
 F1Q0(fact change only), and F1Q1(both). These template families have already

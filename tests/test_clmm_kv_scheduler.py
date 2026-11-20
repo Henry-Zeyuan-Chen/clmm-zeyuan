@@ -16,7 +16,8 @@ from clmm.pretrain.kv_scheduler import StreamingReplay
 
 @pytest.fixture(scope="module")
 def streams():
-    repo = Path(os.environ.get("CLMM_FROZEN_REPO", Path.home() / "Documents/Codex/clmm-replay")).resolve()
+    checkout = Path(__file__).resolve().parents[1]
+    repo = Path(os.environ.get("CLMM_FROZEN_REPO", checkout)).resolve()
     sys.path.insert(0, str(repo))
     module = importlib.import_module("clmm.pretrain.kv_streams")
     assert Path(module.__file__).resolve() == repo / "clmm/pretrain/kv_streams.py"

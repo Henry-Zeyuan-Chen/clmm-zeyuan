@@ -1,6 +1,6 @@
 # Shared fact, revision and distractor evaluation
 
-Zeyuan explicitly clarified on November 14 that he is **Member C: Pre-training & Evaluation**. Member A owns the sleep mechanism and Member B the biologically inspired/Hebbian module. This branch supplies common data, reusable baseline weights, reference replay schedules and measurements that both method tracks can use. It does not assign either teammate a new task or present the reference scheduler as their finished method.
+Zeyuan explicitly clarified on November 14 that he is **Zeyuan: Pre-training & Evaluation**. Member A owns the sleep mechanism and Member B the biologically inspired/Hebbian module. This branch supplies common data, reusable baseline weights, reference replay schedules and measurements that both method tracks can use. It does not assign either teammate a new task or present the reference scheduler as their finished method.
 
 ## Why the shared checkpoint uses bytes
 
@@ -87,14 +87,14 @@ A separate CPU check keeps the same 32 predicted answers but fails its predeclar
 
 Allocation 13911359 was cancelled deliberately after all work and output retrieval; accounting records show 55 minutes 19 seconds allocated and an empty user queue afterwards. The main and supplemental execution steps completed successfully. The prior allocation 13905404 is now confirmed timed out, and its bounded auxiliary diagnostic completed before the previous SSH disconnect; its metrics are not part of this experiment. No automatic allocation renewal occurred.
 
-### Next Member C implementation
+### Next Zeyuan implementation
 
 1. Diagnose **key-conditioned acquisition** before expanding replay experiments. Keep the current serialization fixed initially; require changing the queried key to change the answer when the two facts have different values. Report accuracy separately for the first and second fact and compare with always-first/always-last-value rules. A model that emits a seen value without using the key is not a valid retention baseline.
 2. Use a bounded K1/K2 curriculum with paired query supervision, explicit stage-end checkpoints and fixed development checks at each stage. Save every declared checkpoint, retain a final-step primary result and report stage trajectories; do not select a convenient checkpoint after inspecting the pressure outcomes. Compare any changed curriculum against the current one under a declared training budget.
 3. Once both fixed parents pass K2 acquisition and revision checks, rerun the existing matched continuous/periodic/repeat-current protocol. Preserve the stable-fact primary outcome. Settle version handling before interpreting revised facts, because stale unmarked replay is conflicting evidence.
 4. In parallel with method integration, measure a train-only 2K/4K subword tokenizer on a versioned language sample, document bytes-per-token and throughput, and train new compatible shared weights only after selecting the budget. This is a separate language-baseline track; it should not silently change the current controlled experiment.
 
-Team choices to record are the ultimate tokenizer/corpus, the target state/read/write interface, version-aware versus unmarked replay, and the exact Hebbian/sleep adapters. These do not prevent Member C from repairing and validating common acquisition now.
+Team choices to record are the ultimate tokenizer/corpus, the target state/read/write interface, version-aware versus unmarked replay, and the exact Hebbian/sleep adapters. These do not prevent Zeyuan from repairing and validating common acquisition now.
 
 **Follow-up:** The [paired-key acquisition diagnostic](PAIRED_ACQUISITION.md) has now run both-query supervision against a matched duplicate-query control for both original parents, with fixed stage checkpoints and a wide-attention auxiliary. Single-fact recall and revisions work under the narrower recipe, but key-specific two-fact recall remains unqualified. The proposed curriculum diagnostic above was tested; it did not establish a successful multi-key baseline.
 
@@ -102,4 +102,4 @@ Team choices to record are the ultimate tokenizer/corpus, the target state/read/
 
 Member A can replace the reference replay execution with its memory-only sleep implementation while consuming the saved causal stream and selection plan. Member B can use the same prompts, queries, parent/adapted checkpoints and metrics with an explicitly compatible memory adapter. Frozen replacement measures transfer; a fair learned-method comparison also needs matched adaptation. Neither track should silently change label visibility, query context, replay exposure or checkpoint-selection budget.
 
-The next shared-baseline priorities are successful acquisition before larger retention claims, a tokenization/corpus choice for the language-scale pilot, and an explicit state/read/write interface for persistent evaluation. These are Member C deliverables supporting the two method tracks.
+The next shared-baseline priorities are successful acquisition before larger retention claims, a tokenization/corpus choice for the language-scale pilot, and an explicit state/read/write interface for persistent evaluation. These are Zeyuan deliverables supporting the two method tracks.

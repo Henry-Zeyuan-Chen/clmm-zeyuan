@@ -72,7 +72,7 @@ The shared sequence contract must specify:
 
 ## First milestone: prove the state path, then measure retention
 
-Member C owns the common harness and evidence; A/B own their intended update
+Zeyuan owns the common harness and evidence; A/B own their intended update
 implementations. No GPU allocation is started by this planning update.
 
 1. Audit vanilla streaming and introduce the same interface for adapters.

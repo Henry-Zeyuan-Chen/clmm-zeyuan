@@ -1,6 +1,6 @@
 # K16 replay timing under multiple genuine revisions
 
-Status: complete November 15, 2026, on `sleep-k16-multirevision`. Executable source: `06c0a35b543c25437659765128b81718e5bfa1c5`. This is Member C's shared evaluation of reference sleep and Hebbian components. It does not qualify the full Titans sequence model or establish biological novelty.
+Status: complete November 15, 2026, on `sleep-k16-multirevision`. Executable source: `06c0a35b543c25437659765128b81718e5bfa1c5`. This is Zeyuan’s shared evaluation of reference sleep and Hebbian components. It does not qualify the full Titans sequence model or establish biological novelty.
 
 ## Results
 

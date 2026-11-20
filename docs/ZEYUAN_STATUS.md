@@ -1,4 +1,4 @@
-# Member C: shared training and evaluation
+# Zeyuan’s shared training and evaluation
 
 ## Priority update from TA feedback
 
@@ -151,7 +151,7 @@ At D128, bounded-minus-literal revised accuracy is +10.47pp, adjusted 97.5% inte
 
 All 417 tests, 433,152 saved scores/13,192,704 writes and a separate exact 9,216-score CPU/resume check pass. The handoff includes an actual bounded pause state with exact checkpoint hash. The broader exclusion audit found one old verification-embedded history omitted by the launch file collector; main and engineering splits remain disjoint and regenerate exactly under the expanded union. Original packets stay immutable; the additive audit is disclosed.
 
-Model-size decision: retain the 81,921-parameter component for this mechanism comparison. Its neutral acquisition is 100%; increasing size is not the demonstrated repair. Reuse the existing 839,248-parameter complete sequence path, integrate the chosen method and qualify held-out assignments/templates before enlarging it. Full-model generalization, corruption recovery and biological-method claims remain open. Member C owns shared weights/evaluation; A/B own the intended method implementations.
+Model-size decision: retain the 81,921-parameter component for this mechanism comparison. Its neutral acquisition is 100%; increasing size is not the demonstrated repair. Reuse the existing 839,248-parameter complete sequence path, integrate the chosen method and qualify held-out assignments/templates before enlarging it. Full-model generalization, corruption recovery and biological-method claims remain open. Zeyuan owns shared weights/evaluation; A/B own the intended method implementations.
 
 ## Previous: K16 with three genuine revisions per key
 
@@ -159,7 +159,7 @@ November 15: all twelve existing local-delta checkpoints evaluated on fresh seed
 
 At D128, stable/revised accuracy is 84.88/93.89% online and repeat-current, 83.31/84.22% continuous, and 83.08/81.76% periodic. The primary periodic-minus-continuous revised difference is −2.46pp adjusted97.5%[−4.05,−1.04]; stable −0.23pp[−0.47,−0.02]. Both reference replay policies trail the equal-write repeat control. Every checkpoint passes short/neutral acquisition, but both replay policies fail their own D0 replacement gate; interpret revision/interference, not admitted retention. No cases are dropped.
 
-This advances Member C's shared evaluation and checkpoint handoff. Member A can use the observed stale-snapshot problem to design a causal bounded freshness control; Member B can retain local-delta/random-routing controls while supplying the intended biological rule. A freshness intervention must declare changed replay content and preserve write/storage budgets, without querying future labels. The current split is now consulted development data. Full Titans/MAC and byte-model fresh-assignment acquisition remain separate work.
+This advances Zeyuan’s shared evaluation and checkpoint handoff. Member A can use the observed stale-snapshot problem to design a causal bounded freshness control; Member B can retain local-delta/random-routing controls while supplying the intended biological rule. A freshness intervention must declare changed replay content and preserve write/storage budgets, without querying future labels. The current split is now consulted development data. Full Titans/MAC and byte-model fresh-assignment acquisition remain separate work.
 
 Updated November 15, 2026. Zeyuan owns pretraining feasibility, reusable baseline weights and common evaluation. Member A owns sleep consolidation; Member B owns selective Hebbian/neural-memory updates. The proposal asks whether those interventions improve new-association acquisition, unchanged-fact retention and genuine revisions. Sleep timing needs matched replay budgets. The Hebbian track must distinguish its update rule from selective routing.
 
@@ -169,7 +169,7 @@ The [revision study](REVISION_LOCAL.md) adds local erasure/projection, a frozen 
 
 Existing dense-trained checkpoints improve from about 93% short revision to 100%, while late stable recall reaches 90–92%. With matched new training, local delta reaches 95.51% content/97.07% random versus EMA's 24.02%/28.52%. Both start and finish at 100% on short revisions, so the trained joint primary claim fails revision superiority at a ceiling. The admitted stable gain remains substantial. Initial controls show the rule already works before training; training adds a smaller 5–7-point late gain, while EMA has no established late gain.
 
-All initial and terminal conditions pass short and K8/K16D0 gates. There are 96 audited weightsets, 638,976 scores and 24 optimizer states; 181 relevant tests pass. Selected GPU/WindowsCPU checks each cover 10,752 queries/all 96 weightsets. The GPU allocation is released. Member C now has reusable initial/final weights, data, loaders, state contracts and evaluation for A/B's intended adapters. Next use stronger revision/pressure and matched replay, retaining random controls. This delta-style reference is not biological novelty or full Titans.
+All initial and terminal conditions pass short and K8/K16D0 gates. There are 96 audited weightsets, 638,976 scores and 24 optimizer states; 181 relevant tests pass. Selected GPU/WindowsCPU checks each cover 10,752 queries/all 96 weightsets. The GPU allocation is released. Zeyuan now has reusable initial/final weights, data, loaders, state contracts and evaluation for A/B's intended adapters. Next use stronger revision/pressure and matched replay, retaining random controls. This delta-style reference is not biological novelty or full Titans.
 
 A separately declared exploratory follow-up reinforces old facts16times before one genuine revision. At64distractors, revised recall is99.61%/98.87% local versus.39%/2.03% EMA, and stable recall96.68%/97.58% versus18.36%/22.46% (content/random). All24 saved checkpoints are reused without training/GPU;156672extra scorevectors and1920selected CPU predictions are checked. EMA fails immediate reinforced revision atD0, so these are exploratory revision/interference diagnostics. The original primary remains unmet. This harder fixture is available for the shared evaluation.
 
@@ -179,7 +179,7 @@ The [48-condition factorial](ROUTING_DECAY.md) freezes four dense-trained parent
 
 Cosine routing has no demonstrated advantage. In the admitted gradient comparison, inactive protection raises K8D64 stable accuracy from5.47% to41.02%; fixed random/protected averages48.32%. Hebbian content scores4.69% global versus33.40% protected, but its co-primary comparisons are diagnostics: four protected conditions miss short revision admission, including one content parent. Exploratory content revision analysis shows92.19% protected versus99.22% global, with obsolete-answer errors. Stability and genuine revisions must be evaluated together.
 
-All48models and raw319,488scores are audited;110relevant tests pass. GPU/WindowsCPU selected reloads each check5,376queries across every condition and all predictions match. The one allocation is released. Checkpoint registry, histories, gates, costs, four figures, source and recovery bundle are saved. Member C should next qualify intended A/B methods on revisions before replay comparisons; do not tune this consulted split or call frozen transfers equally retrained efficacy.
+All48models and raw319,488scores are audited;110relevant tests pass. GPU/WindowsCPU selected reloads each check5,376queries across every condition and all predictions match. The one allocation is released. Checkpoint registry, histories, gates, costs, four figures, source and recovery bundle are saved. Zeyuan should next qualify intended A/B methods on revisions before replay comparisons; do not tune this consulted split or call frozen transfers equally retrained efficacy.
 
 ## Prior reference adapter pilot
 
@@ -204,7 +204,7 @@ The [fixed-set fitting and assignment-transfer diagnostic](FIXED_SET_GENERALIZAT
 3. **Replay:** continuous and periodic must see the same eight-pair FIFO, same frozen samples and same number/order of extra writes, differing only in timing. Report repeat-current and lower-budget online anchors. Record actual adaptive tensor storage, slow parameters, replay pairs and update opportunities separately; equal writes are not necessarily equal compute or nonzero gradients.
 4. **Hebbian comparisons:** implement the update rule behind the same API first, then add selective routing as an ablation. Expose extra slow training, state tensors or representations rather than calling unlike resources matched.
 
-## Next Member C milestone
+## Zeyuan’s next milestone
 
 Maintain the shared checkpoint/state/evaluation contract while A/B replace the explicitly reference methods with their intended mechanisms. Before a biological claim, separate update rule from access/decay exposure and independently trained representations. Before broader language claims, repair the complete sequence model's acquisition/generalization gap.
 

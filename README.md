@@ -6,65 +6,7 @@ We build on lucidrains' [titans-pytorch](https://github.com/lucidrains/titans-py
 
 ## Status
 
-The [eight matched LR runs](docs/LR_WARMUP.md) complete6k updates each at
-839,248 parameters. A500-step warm-up improves familiar-wording mean recall
-by5.27pp on development keys but reduces new-wording mean recall by6.64pp.
-The result varies by initializer; the weak atomic pair stays near floor.
-**0/8 terminals pass full admission.** Keep constant LR as the reference.
-All raw/tensor/statistical checks and14,592 selectedCPUqueries pass; the GPU
-job is closed. [Five figures and source tables](results/lr_warmup_2026-11-16)
-retain all cases. Member C's proposed next diagnostic separates value-head
-alignment from later representation adaptation at fixed registered size.
-A/B can continue using the qualified typed-memory components.
-
-The [eight matched format-training runs](docs/FORMAT_TRAINING.md) finish 6k
-updates each at 839,248 parameters. Mixed wording improves the fixed-case mean
-on three reserved-wording endpoints by 16–20 pp, while familiar recall falls
-10.74 pp. Digit pairs improve; atomic failures/regressions prevent a uniform
-gain. **0/8 terminals pass full acquisition qualification.** All checkpoints
-are retained as diagnostics. Independent score/tensor audits and 14,592 selected
-CPU answers pass; the GPU job is closed. [Four figures and source tables](results/format_training_2026-11-16)
-show every case. Fitting stability, native-32 and true retention remain Member C
-work; A/B can use the qualified typed-memory reference.
-
-The [fact/query format diagnostic](docs/FORMAT_FACTORIAL.md) completes 24
-frozen-weight capability evaluations with 839,248 parameters unchanged.
-Ordinary value recall averages 72.07% joint success on familiar wording,
-24.61% after changing only facts and 36.72% after changing only queries.
-Keep all four V cases and their heterogeneity; given-index decoding stays
-strong. Independent raw-score/statistical audits and the 13,824-query exact
-CPU reload pass. [Figures and source tables](results/format_factorial_2026-11-16)
-support the next matched familiar-only versus mixed-format training study.
-Native-32/stateful retention and the final A/B sequence adapters remain open.
-
-
-The [record-selection and decoding study](docs/RECORD_SELECTION.md) completes16 matched20k adaptations and8 paired6k continuations with839,248 parameters unchanged. All4 main given-index decoders pass full admission; natural selection is strong on familiar formats but fails combined fact/query format transfer. Ordinary key-to-value and composed continuations remain unqualified. The bridge has no uniform gain. Independent raw/data/tensor audits,165 tests and12,544-query CPU proofs pass. [Figures and source tables](results/record_selection_2026-11-16) are ready; use the qualified typed-memory reference for A/B while Member C qualifies full-sequence transfer and native32 acquisition.
-
-The [key-binding encoding diagnostic](docs/KEY_BINDING.md) compares digits with one-token keys in four matched adaptations of the unchanged 839,248-parameter model. Both formats fail: 0–2/256 both-correct per acquisition cell and 0/256 joint original-plus-swap success on both primary groups. Atomic keys are not a sufficient repair under this recipe. All 109 scoped tests, saved-score audits and the selected 2,560-query CPU proof pass. Member C's next diagnostic separates record selection from value decoding before scaling; qualified typed-memory controls remain available for A/B.
-
-The [complete-sequence freshness pilot](docs/SEQUENCE_FRESHNESS.md) integrates bounded raw-record replay into the unchanged 839,248-parameter byte model and completes eight matched adaptations on Insomnia. All 24 fresh assignment/template acquisition gates fail (0–2/128 both-correct); bounded versus literal training has 0 ppaggregate effect on both primary acquisition endpoints. Keep the qualified component baseline for method work; fix sequence key-conditioned reading before scaling or claiming retention. Full saved-GPU audits pass; selected CPU answers match, with disclosed score-tolerance failures on longer revision probes.
-
-The [bounded freshness control](docs/BOUNDED_FRESHNESS.md) fixes stale replay using only the existing FIFO, with candidate draws, writes and retained records matched. Across twelve fixed checkpoints on fresh K16 multiple-revision histories, D128 revised accuracy improves by 10.47 percentage points over literal replay, with no clear stable change. Both bounded schedules pass D0 revision admission, but do not beat repeat-current overall. This repairs a reference baseline; full Titans/sequence-model efficacy remains separate.
-
-The [K16 multiple-revision replay comparison](docs/SLEEP_MULTIREVISION.md) evaluates all twelve shared local-delta checkpoints with exact matched continuous/periodic samples and write budgets. At D128, revised accuracy is 84.22% continuous, 81.76% periodic, versus 93.89% repeat-current/online. All checkpoints pass neutral acquisition, but both replay schedules damage replacement at D0. This is a controlled revision/interference result and motivates testing replay freshness rather than claiming a sleep benefit.
-
-The latest [key-local revision study](docs/REVISION_LOCAL.md) repairs existing-checkpoint revisions and supplies 24 matched training runs with initial controls. Trained local delta reaches 95.5–97.1% late stable accuracy versus EMA's 24.0–28.5%; both solve short revisions at 100%. These qualified component baselines retain fixed random routing controls and distinguish the ceiling-limited revision test from the stable gain.
-
-The latest [routing/decay factorial](docs/ROUTING_DECAY.md) freezes four dense-trained parents across48 conditions. Inactive-trace protection strongly changes late stable scores, while cosine allocation has no advantage over matched fixed random maps. Hebbian revision failures expose a stability/revision tradeoff; the gradient replication passes admission.
-
-The local [reference adapter integration](docs/ADAPTER_INTEGRATION.md) connects bounded sleep sessions and Hebbian/gradient associative components to the shared correlated-key baseline, with persistent checkpoints, a common evaluator and a finite four-system pilot. Selective access helps in the component study, while the Hebbian rule does not beat its matched gradient control. These are reference modules; full Titans/sequence-model and teammate-final method integration remain separate.
-
 We are working through [docs/ROADMAP.md](docs/ROADMAP.md). Until the `paper-baseline-v1` tag exists, the paper-style models are in progress.
-
-Local exploratory evidence on this branch: [memory-pressure experiments](docs/MEMORY_PRESSURE.md) extend the [replay pilot](docs/REPLAY_PILOT.md) with matched update budgets, three training seeds, and longer retention delays. These experiments do not mark the paper-style baseline complete.
-
-Following the group sync, [shared pretraining](docs/SHARED_PRETRAIN.md) adds a compact sequence model, common checkpoint format, disjoint data splits, and memory-context diagnostics under `clmm/pretrain`.
-
-Member C's [fact/revision evaluation](docs/FACT_REVISION.md) adapts the shared checkpoints and compares causal continuous/periodic replay schedules with matched record budgets, alongside acquisition and revision diagnostics. Both main adaptations fail the acquisition gate; the saved results motivate fixing key-specific recall before drawing retention conclusions.
-
-The follow-up [paired-key acquisition diagnostic](docs/PAIRED_ACQUISITION.md) tests balanced supervision against a matched duplicate-query control and saves fixed curriculum-stage checkpoints for both shared parents. Single-fact recall and revisions succeed, while two-key selection remains unresolved even with the wider attention control.
-
-[Fixed-set fitting and transfer](docs/FIXED_SET_GENERALIZATION.md) establishes perfect fitting of 32 contexts but failed transfer to new values, including a bounded fresh-assignment follow-up with a training-disjoint probe. [Member C status](docs/MEMBER_C_STATUS.md) connects these controls, checkpoint qualifications and remaining baseline work to the sleep and Hebbian project tracks.
 
 ## Getting started
 
@@ -105,3 +47,13 @@ If you use this work, cite the Titans paper:
   year    = {2024}
 }
 ```
+
+## Zeyuan’s research contributions
+
+This private copy combines the team’s branch through PR #26 with Zeyuan’s
+reference implementation, experiment code, tests and tracked results.
+The `team-main` branch points to the team’s exact commit `855f9a4`.
+
+- [Research update](docs/ZEYUAN_UPDATE.md) summarizes the experiments and the next sequence evaluation.
+- [Training and evaluation status](docs/ZEYUAN_STATUS.md) links to results and records the scope of each comparison.
+- [Hebbian state and MAC host sync](docs/ZEYUAN_HEBBIAN_SYNC.md) describes the component state check and the host interface.

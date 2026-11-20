@@ -1,6 +1,6 @@
 # Shared key/value memory control
 
-Completed November 15, 2026 on local branch `kv-representation-control`. Zeyuan's Member C deliverable is a common representation, reusable memory initializers and a persistent evaluation interface for the sleep and Hebbian tracks. This is a **memory-component positive control**. The complete byte-model association-transfer failure in [FIXED_SET_GENERALIZATION.md](FIXED_SET_GENERALIZATION.md) remains unresolved.
+Completed November 15, 2026 on local branch `kv-representation-control`. Zeyuan's Zeyuan deliverable is a common representation, reusable memory initializers and a persistent evaluation interface for the sleep and Hebbian tracks. This is a **memory-component positive control**. The complete byte-model association-transfer failure in [FIXED_SET_GENERALIZATION.md](FIXED_SET_GENERALIZATION.md) remains unresolved.
 
 ## Results and decision
 
@@ -130,7 +130,7 @@ Insomnia allocation 13914162 on ins093 was released after 15m55s (about 0.265 al
 
 ## Next shared milestone and team choices
 
-1. **Member C:** integrate correlated/capacity-limited representations into the nonlinear adapter at a small declared configuration budget. Keep short acquisition and per-K D0 gates; freeze one useful pressure setting before evaluating teammate methods. The current dense control identifies a feasible interference regime but does not select a trained neural baseline. Include an untrained initializer anchor so outer-training value remains measurable.
+1. **Zeyuan:** integrate correlated/capacity-limited representations into the nonlinear adapter at a small declared configuration budget. Keep short acquisition and per-K D0 gates; freeze one useful pressure setting before evaluating teammate methods. The current dense control identifies a feasible interference regime but does not select a trained neural baseline. Include an untrained initializer anchor so outer-training value remains measurable.
 2. **Member A:** connect the sleep update to the adapter and live scheduler; compare against continuous replay using identical observed histories, buffer, sampled records, extra writes and gating. Record any change from this snapshot schedule before interpreting results.
 3. **Member B:** connect the Hebbian state/update behind the same API. Evaluate the update rule alone and selective routing separately. Log actual tensor storage, number of updates and any extra slow training rather than calling unlike resources matched.
 4. **Team decision:** adopt this typed component suite as the common mechanism test while keeping the full-sequence baseline a separate milestone; settle the pressure representation/capacity, and whether the main comparison matches write opportunities, memory bytes or measured compute. Report whichever budgets remain unequal. These are decisions to record, not reasons to block adapter work.

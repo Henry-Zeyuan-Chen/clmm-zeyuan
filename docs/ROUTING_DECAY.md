@@ -77,7 +77,7 @@ To reproduce, clone the package bundle, check out6121228, set up the recorded en
 
 ## Next shared-baseline work and team choices
 
-Member C should qualify A/B's intended methods on acquisition **and revisions**, then compare continuous/periodic replay with identical routing, decay and replay budgets. Keep fixed random routing as a control. Do not select a favorable map or tune eta on the consulted90723 histories.
+Zeyuan should qualify A/B's intended methods on acquisition **and revisions**, then compare continuous/periodic replay with identical routing, decay and replay budgets. Keep fixed random routing as a control. Do not select a favorable map or tune eta on the consulted90723 histories.
 
 Agree whether inactive decay is global/protected, what forgetting clock the intended method uses, and how its local rule replaces conflicting values without a revision/query-label oracle. Implement those choices behind the functional write/read/session API. A new declared-budget training comparison needs initializers and fresh histories before claiming equally trained routing efficacy. No such training was launched here.
 

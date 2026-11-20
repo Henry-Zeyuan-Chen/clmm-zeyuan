@@ -1,6 +1,6 @@
 # Bounded replay freshness
 
-Status: complete November 15, 2026. Branch `sleep-bounded-freshness`; executable source `9ab3901860548d2d87a9afc61e8ce58f950a03ce`. This is Member C's shared component evaluation for the sleep/Hebbian tracks, following [the literal replay comparison](SLEEP_MULTIREVISION.md).
+Status: complete November 15, 2026. Branch `sleep-bounded-freshness`; executable source `9ab3901860548d2d87a9afc61e8ce58f950a03ce`. This is Zeyuan’s shared component evaluation for the sleep/Hebbian tracks, following [the literal replay comparison](SLEEP_MULTIREVISION.md).
 
 ## Results
 

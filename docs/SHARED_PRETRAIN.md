@@ -2,7 +2,7 @@
 
 The transcript received on November 14 supports a smaller common baseline for both proposals: retain the working lucidrains implementation, develop sleep and Hebbian modifications separately, and share training and evaluation infrastructure. The team's latest `main` commit, `1e8de19`, adds `clmm/pretrain`, `clmm/sleep`, and `clmm/hebbian`; this local branch incorporates it. The transcript has no reliable speaker labels, so it does not establish individual task ownership. Its discussion of a changed report deadline is also unverified.
 
-The user subsequently clarified that Zeyuan is **Member C: Pre-training & Evaluation**. The follow-up [fact/revision evaluation](FACT_REVISION.md) implements common evaluation and reference replay schedules in that role; Member A and Member B own the separate sleep and Hebbian method tracks.
+The user subsequently clarified that Zeyuan is **Zeyuan: Pre-training & Evaluation**. The follow-up [fact/revision evaluation](FACT_REVISION.md) implements common evaluation and reference replay schedules in that role; Member A and Member B own the separate sleep and Hebbian method tracks.
 
 ## Scope decision
 

@@ -2,11 +2,12 @@
 
 ## Resume here
 
-**Team sync at `fbb267e`.** Team main includes the Hebbian memory, routing,
-config, segment padding and causal attention mask. The MAC forward pass and
-memory switching are the next integration pieces. In the current design,
-Hebbian traces adapt the persistent context slots. The vendored neural
-long-term memory still uses its gradient-based update.
+**Team sync at `855f9a4` (PR #26).** Team main includes the Hebbian memory,
+routing, shared configuration, segment attention, feed-forward and block
+layers, and host state with detachment. The full MAC forward pass and memory
+switch are the next integration pieces. In the current design, Hebbian
+traces adapt the persistent context slots. The vendored neural long-term
+memory still uses its gradient-based update.
 
 The component carry/resume test saves the cursor and traces after a masked
 write. A resumed second segment matches the uninterrupted read and next
@@ -20,7 +21,7 @@ trace-disabled control within the Hebbian architecture. Keep the neural
 long-term memory path fixed in both comparisons and count learned parameters
 and carried bytes for each system. The byte-model bridge needs an explicit
 valid mask or a reserved pad ID because byte zero is a valid vocabulary item.
-See [the sync note](MEMBER_C_HEBBIAN_SYNC.md) for the verified contract.
+See [the sync note](ZEYUAN_HEBBIAN_SYNC.md) for the verified contract.
 
 **Priority update: TA feedback, November 16.**
 Read [TA_FEEDBACK_2026-11-16.md](TA_FEEDBACK_2026-11-16.md). The supplied email
@@ -202,7 +203,7 @@ packet caches are intentionally incomplete after verified duplicate cleanup.
 Use existing SSH `-J aics` if direct Insomnia route times out. Disk/launcher and
 observer outages did not restart the bounded independent batch run.
 
-Member C next: same-size format-robust ordinary V and separately trained native32
+Zeyuan next: same-size format-robust ordinary V and separately trained native32
 acquisition, then stateful delay/revision/corruption. Keep qualified typed-memory
 controls for A/B. Team scope choices: component/full sequence, format-transfer
 gate, and two-call deployment protocol. No push, Google Doc edit, teammate
@@ -240,7 +241,7 @@ Additive history audit includes 21 additional CPU smoke histories outside the or
 
 Replay is exact raw-record input through the complete transformer, with at most 12 raw records/384 B retained by the policy plus metadata (temporary 13/416 B). The fixed parser recognizes provided fact grammars; neural model sees unchanged raw wording and receives no parsed IDs/query labels from the controller. This is a sequence replay reference, not memory-only sleep or full paper-MAC. Cross-session complete cache persistence is not claimed by these in-prefix acquisition tests. Below are historical completed component studies.
 
-Next: preserve the qualified typed-memory baseline for A/B while Member C isolates sequence key/value binding at fixed resources, using fresh assignment, original/swap joint correctness and heldout wording gates. Do not immediately enlarge this model or run harder retention; failed wide 128 acquisition does not isolate a memory-capacity cause. Team choices: intended memory-only sleep and biological adapters versus these reference controls; byte/explicit-key representation diagnostic; latest-observation authority under noise. Current assumptions are known parser/latest truth/original-sample eviction fallback. All current histories are consulted development data. Pre-existing SLEEP_MULTIREVISION.md edit remains byte-for-byte and excluded from commits; no GoogleDoc edits, teammate messages, push/PR/merge or tag move. Root owns integrated evidence, reviewer only analysis.
+Next: preserve the qualified typed-memory baseline for A/B while Zeyuan isolates sequence key/value binding at fixed resources, using fresh assignment, original/swap joint correctness and heldout wording gates. Do not immediately enlarge this model or run harder retention; failed wide 128 acquisition does not isolate a memory-capacity cause. Team choices: intended memory-only sleep and biological adapters versus these reference controls; byte/explicit-key representation diagnostic; latest-observation authority under noise. Current assumptions are known parser/latest truth/original-sample eviction fallback. All current histories are consulted development data. Pre-existing SLEEP_MULTIREVISION.md edit remains byte-for-byte and excluded from commits; no GoogleDoc edits, teammate messages, push/PR/merge or tag move. Root owns integrated evidence, reviewer only analysis.
 
 **Bounded freshness comparison COMPLETE, November 15.** Branch `sleep-bounded-freshness`, frozen executable source `9ab3901860548d2d87a9afc61e8ce58f950a03ce`; read [BOUNDED_FRESHNESS.md](BOUNDED_FRESHNESS.md). All twelve existing terminal local-delta weights remain fixed, with both initializers/content/all five random maps included. No optimizer steps. Six pressure arms on fresh seed 91223/N128, phases0/2, tails0/64/128. Main CPU evaluation 1683.96s; full engineering/prepare/main pipeline1850.62s under4200. No experiment or inference process remains; no new cluster allocation was created.
 
@@ -284,9 +285,9 @@ Next team choice: keep literal frozen replay as the documented control, and test
 
 **Reinforcement follow-up also COMPLETE:** all24 terminal weights evaluated on fresh91023, R1/4/16 ×D0/64, no new training/GPU.351.51s CPU under600s. Original trained joint primary remains false; the additional stress result is exploratory. No active local inference remains.
 
-**Completed November 15, 2026: key-local revision and matched training.** Branch `hebbian-revision-local`; executable source `c9f5c153f786f1b82ac383d01c1d18c6c595946b`, parent handoff a98c849. Start with [REVISION_LOCAL.md](REVISION_LOCAL.md), [MEMBER_C_STATUS.md](MEMBER_C_STATUS.md), and `results/revision-local-2026-11-15`. No active task process, allocation or monitoring remains.
+**Completed November 15, 2026: key-local revision and matched training.** Branch `hebbian-revision-local`; executable source `c9f5c153f786f1b82ac383d01c1d18c6c595946b`, parent handoff a98c849. Start with [REVISION_LOCAL.md](REVISION_LOCAL.md), [ZEYUAN_STATUS.md](ZEYUAN_STATUS.md), and `results/revision-local-2026-11-15`. No active task process, allocation or monitoring remains.
 
-Zeyuan is Member C: shared pretraining, weights and evaluation. A owns sleep; B owns Hebbian/routing. Last fetched team main1e8de19 had empty method folders, so these are working REFERENCE components. Full Titans/MAC, paper-faithful roadmap and byte-model fresh-assignment transfer remain separate.
+Zeyuan leads shared pretraining, weights and evaluation. A owns sleep; B owns Hebbian/routing. Last fetched team main1e8de19 had empty method folders, so these are working REFERENCE components. Full Titans/MAC, paper-faithful roadmap and byte-model fresh-assignment transfer remain separate.
 
 ## Implementation and contract
 
@@ -330,7 +331,7 @@ CPUjob13919399 cancelled PENDING/Resources with zero elapsed/allocation after mu
 
 GPUjob13919414(ins080,A6000,4CPU/16G) explicitlyCANCELLED after23m01s,0.3836allocatedGPUh includingCPUeval/checks/transfers. Tasksteps COMPLETEDexit0; wrappercancel intentional. Frozen upload/trained download hashes match; tar exits0. No active userjobs, helperselection change, renewal or unrelated cancellation. scheduler-final.txt/cluster-closeout.json authoritative. Previous13918985,13918002cancelled and13914782TIMEOUT remain resolved.
 
-## Next Member C work / team choices
+## Zeyuan’s next work / team choices
 
 Use qualified local-delta weights and EMA comparators for intended A/B adapters, retaining both initializers and fixed random controls. Reinforcement diagnostic is now available; next test multiple genuine changes and admitted K16pressure, then continuous/periodic replay with identical weights/routing/decay and matched extra writes. Simple short revision is at ceiling. Do not tune consulted90823/90923/91023 or choose favorable maps.
 

@@ -126,7 +126,7 @@ declared before launch. Their policy/selection files were saved during
 engineering/main, before confirmation; file creation is not claimed to predate
 all neural execution. Original failure and timing disclosure are retained.
 
-## Member C handoff and next step
+## Zeyuan handoff and next step
 
 The registry retains every final model/optimizer, source/state/initializer
 hash and failed gate with archive-relative recovery paths. This remains

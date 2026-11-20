@@ -1,6 +1,6 @@
 # Paired-key acquisition diagnostic
 
-This is Zeyuan's Member C pretraining/evaluation work. The previous [fact/revision experiment](FACT_REVISION.md) failed its acquisition gate. A separate simpler control returned observed values but did not change its answer in any of 29 development pairs where only the requested key changed. This diagnostic tests whether supervising both keys in each context improves that behavior.
+This is Zeyuan's Zeyuan pretraining/evaluation work. The previous [fact/revision experiment](FACT_REVISION.md) failed its acquisition gate. A separate simpler control returned observed values but did not change its answer in any of 29 development pairs where only the requested key changed. This diagnostic tests whether supervising both keys in each context improves that behavior.
 
 ## Fixed comparison
 
@@ -55,7 +55,7 @@ Allocation 13911789 on ins083 was cancelled deliberately after completion, GPU c
 
 The next useful diagnostic is **trainability versus generalization**, before another replay sweep. Use a tiny fixed set of two-fact contexts with both queries and a declared finite overfit budget; compare training-set both-correct with fresh assignments on the same keys and on heldout keys. Require a direct-attention positive control first. If that model cannot fit the fixed examples, inspect optimization/representation/model capacity. If it fits them but fails fresh assignments, the main gap is learning a reusable key-matching rule. This is a proposed next diagnostic, not an experiment already run.
 
-Keep the current byte format and single-key checkpoints available for the sleep/Hebbian tracks, but label the two-key baseline unqualified. Tokenization/corpus choices and a stronger language-pretraining baseline remain separate Member C decisions; no paper-faithful Titans reproduction or sleep benefit is established here.
+Keep the current byte format and single-key checkpoints available for the sleep/Hebbian tracks, but label the two-key baseline unqualified. Tokenization/corpus choices and a stronger language-pretraining baseline remain separate Zeyuan decisions; no paper-faithful Titans reproduction or sleep benefit is established here.
 
 The prospective design, all successful/failed runs, full training arrays/plans, raw logits, independent artifact analysis and source snapshots are retained under `C:/Users/henry/Documents/Codex/2026-10-22/i/outputs/clmm-paired-acquisition-2026-11-14`. No report prose or teammate method module is required to run this diagnostic.
 

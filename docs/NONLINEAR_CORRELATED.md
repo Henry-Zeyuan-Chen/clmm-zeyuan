@@ -1,6 +1,6 @@
 # Nonlinear correlated-key shared baseline
 
-November 15, 2026. Branch `nonlinear-correlated-control`; frozen experiment source `b5f27ff4738ded4832538573d454d2461786d38b`, parent `ffaffed`. This continues Zeyuan's Member C work: reusable component initializers and a common state/evaluation contract for the sleep and Hebbian tracks. It does not qualify the complete byte model for language or fresh two-key transfer.
+November 15, 2026. Branch `nonlinear-correlated-control`; frozen experiment source `b5f27ff4738ded4832538573d454d2461786d38b`, parent `ffaffed`. This continues Zeyuan's Zeyuan work: reusable component initializers and a common state/evaluation contract for the sleep and Hebbian tracks. It does not qualify the complete byte model for language or fresh two-key transfer.
 
 ## Calibration and scope
 

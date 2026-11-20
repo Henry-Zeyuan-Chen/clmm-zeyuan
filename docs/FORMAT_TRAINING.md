@@ -95,7 +95,7 @@ manifests. The future consulted-history union contains **985,652** signatures.
 New family2 wording is now consulted evidence; it cannot be reused as an
 untouched wording confirmation in later adaptive studies.
 
-## Next Member C decision
+## Next Zeyuan decision
 
 Keep the qualified typed-memory reference available to A/B. Before harder
 sequence retention or enlargement, test fitting stability at this same size:
@@ -115,7 +115,7 @@ remain unqualified. No report, GitHub push or Google Doc edit is made here.
 
 ## Frozen prospective plan
 
-Member C compares familiar-only versus mixed fact/query wording at the same
+Zeyuan compares familiar-only versus mixed fact/query wording at the same
 839,248 parameters and attention length 128. All four exact 20k natural-selector
 checkpoints (68101/68105, digit/atomic keys) initialize both arms. Each arm gets
 6,000 new ordinary-value updates, AdamW 3e-4 / weight decay .01, clipping 1,
