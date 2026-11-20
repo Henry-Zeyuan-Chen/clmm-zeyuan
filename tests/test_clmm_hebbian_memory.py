@@ -3,7 +3,7 @@ import pytest
 import torch
 import torch.nn.functional as F
 
-from clmm.hebbian.config import Config, CHOICES, PRESETS
+from clmm.config import Config, CHOICES, PRESETS
 from clmm.hebbian.hebbian_memory import HebbianMemory, HebbianMemState, hebbian_state_detach
 from clmm.hebbian.router import ContentRouter
 

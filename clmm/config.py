@@ -1,4 +1,8 @@
-"""Size presets for the selective-Hebbian-memory experiment.
+"""Model configuration shared by every memory variant, and its size presets.
+
+One `Config` describes the compact host and each memory it can carry. The mode fields
+(`persist_mode`, `longterm_mode`) choose which memories are built; the settings of a memory
+that is switched off are ignored.
 
 `tiny` runs on CPU in minutes and is the development / test preset.
 `small` targets a single workstation GPU.
